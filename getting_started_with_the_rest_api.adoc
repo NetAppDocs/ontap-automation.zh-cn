@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: getting_started_with_the_rest_api.html 
+keywords:  
+summary:  
+---
+= REST API 入门
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以快速开始使用 ONTAP REST API 。在准备并了解基本的请求响应流之后，您可以使用 curl 对一个简单的调用进行问题描述处理。这样可以提供在实时系统上对更复杂的工作流使用之前所需的简介和视角。

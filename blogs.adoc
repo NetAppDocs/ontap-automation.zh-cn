@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: blogs.html 
+keywords:  
+summary:  
+---
+= 有关 ONTAP 自动化的博客
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+我们提供了多篇博客文章，可帮助您更好地了解 ONTAP 自动化的不同技术和方法。
+
+
+
+===== ONTAPI 到 REST 的映射
+
+NetApp 支持从专有的 ONTAPI （以前称为 Zephyr ） API 迁移到更强大的新 ONTAP REST API 。
+
+https://netapp.io/2020/12/17/ontapi-to-rest-mapping/["netapp.io/2020/12/17/ontapi-rest-mapping"^]
+
+
+
+===== 将专用命令行界面直通与 ONTAP REST API 结合使用
+
+CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。
+
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api"^]
+
+
+
+===== NetApp 和 Ansible 入门：安装 Ansible
+
+如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。
+
+https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["netapp.io/2018/10/08/Getting Start-With NetApp-and-Ansible install-Ansible"]

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: rest_implementation_details.html 
+keywords:  
+summary:  
+---
+= REST 实施详细信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+REST 可建立一组通用的技术和最佳实践，但每个 API 的详细信息可能因开发期间所做的选择而异。在将 ONTAP REST API 用于实时部署之前，您应了解其设计特征。

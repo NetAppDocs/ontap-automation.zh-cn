@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+summary: 欢迎使用 ONTAP 自动化文档门户。 
+---
+= ONTAP 自动化
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API 为所有各种自动化技术奠定了基础。
+
+
+
+== 了解新功能
+
+* link:new_ontap_automation.html["ONTAP 9.9.1 自动化的新增功能"]
+
+
+
+
+== 获取更多信息并与同行保持联系
+
+* link:get_more_information.html["如何获取更多信息"]
+

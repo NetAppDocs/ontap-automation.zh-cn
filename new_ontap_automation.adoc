@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: new_ontap_automation.html 
+keywords: new features 
+summary: 在当前版本的 ONTAP 中，有几项新增的和更改的自动化功能。 
+---
+= ONTAP 9.9.1 自动化的新增功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+当前 ONTAP 版本提供了几项新增的和变更的自动化功能。
+
+
+
+=== ONTAP 9.9.1 REST API
+
+ONTAP 9.9.1 将继续扩展 ONTAP REST API 的功能。现有 ONTAP 功能具有新的 API 端点，包括 SAN 端口集和 SVM 文件目录安全性。此外，还添加了端点来支持新的 ONTAP 9.9.1 功能和增强功能。相关文档也进行了改进。下面简要介绍了这些增强功能。
+
+将 ONTAPI 映射到 ONTAP 9 REST API:: 为了帮助您将 ONTAP 自动化代码过渡到 REST API ， NetApp 提供了 API 映射文档。此参考包括 ONTAPI 调用列表以及每个调用的 REST API 等效项。此映射文档已进行更新，以包含新的 ONTAP 9.9.1 API 端点。请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2876895["ONTAPI 到 REST API 映射信息"^] 有关详细信息 ...
+API 端点，用于新的 ONTAP 9.9.1 核心功能:: REST API 中增加了对通过 ONTAPI 不可用的新 ONTAP 9.9.1 功能的支持。其中包括对嵌套 igroup 和 Google Cloud 密钥管理服务的支持。
+改进了从 ONTAPI 过渡到 REST 的支持:: 现在，更多传统 ONTAPI 调用都具有相应的 REST API 等效项。其中包括本地 Unix 用户和组，无需客户端即可管理 NTFS 文件安全性， SAN 端口集以及卷空间属性。更新后的 ONTAPI to REST 映射文档也会包含这些更改。
+增强的联机文档:: 现在， ONTAP 联机文档参考页面包含一些标签，用于指示引入每个 REST 端点或参数时的 ONTAP 版本，包括 ONTAP 9.1.1 中的新端点或参数。
+

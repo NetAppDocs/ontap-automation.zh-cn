@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="f8bedbdd0c328c354d2e8ba4e389bae1" category="summary">自动部署和管理 ONTAP 存储系统有多种选择。</block>
+  <block id="fb8c53704b9be84a63935f13314dd084" category="doc">ONTAP 自动化选项</block>
+  <block id="09b61c4c135233e31eb7b12d4a296b18" category="paragraph">从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。您可以直接或通过 NetApp Python 客户端库访问 REST API 。此外， NetApp 还支持使用 Ansible 以及其他高级软件抽象技术实现 ONTAP 自动化。</block>
+  <block id="7510bbb3e3ce7994c1993c8698e3169e" category="admonition">ONTAPI （也称为网络易管理性 SDK 或 ZAPI ）是一种传统技术，用于以编程方式访问和管理 ONTAP 存储系统。ONTAP REST API 现已成为一项战略技术，应尽可能选择它。</block>
+  <block id="15e78d6a83c3d71d5182a7da2df9e39e" category="section-title">本机访问 ONTAP REST API</block>
+  <block id="17332aa1fd5861b55b1cfe91240e73d1" category="inline-link-macro">REST API 入门</block>
+  <block id="9675e4e9d7e7a5efd235ec42f63df5a0" category="paragraph">您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。您应首先查看此站点上的文档，包括 <block ref="c5f49f26ea7a9d0f0254f751fd98a1f8" category="inline-link-macro-rx"></block>。</block>
+  <block id="e0a486c1db61aeef50827b2a95dbb216" category="section-title">调整原有 ONTAPI 代码以使用 REST</block>
+  <block id="ec99af624b0dd923250ecbec162bcc59" category="inline-link">ONTAPI 到 REST API 映射信息</block>
+  <block id="1196428278d120618fa84329bbb2319f" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见<block ref="08f41e4498b955cf38a155de6ba4e72b" category="inline-link-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
+  <block id="8d7959a7c68ad22c23c0308240cea7ad" category="section-title">使用 NetApp Python 客户端库</block>
+  <block id="365c8dec8255a8a164436c71a2611920" category="inline-link-macro">使用 Python</block>
+  <block id="e98db109a98c49e78366bb19a0919a95" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。您应首先查看此站点上的文档，包括 <block ref="7a4d1c301c11fc58979340d85dad9018" category="inline-link-macro-rx"></block>。</block>
+  <block id="47139a5580026883093b61e1de623719" category="section-title">使用 Ansible</block>
+  <block id="a8f88f602880c7c7c74079d3f99ff931" category="inline-link-macro">ONTAP 和 Ansible 自动化</block>
+  <block id="cb5477f6941e1f91a5df315b28cf5c1e" category="paragraph">Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。您应首先查看此站点上的文档，包括 <block ref="07fc169cf48e41e5494204d6571e6a95" category="inline-link-macro-rx"></block>。</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
+  <block id="da55f8e3a8d2b6d37d992c104b3eda18" category="doc">REST 资源类别摘要</block>
+  <block id="b2169c6a3a0ae080710868637b995ad7" category="paragraph">通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。下面简要介绍了每个资源的问题描述以及基本资源路径，并在适当情况下提供了其他使用注意事项。</block>
+  <block id="1d1927ef8ecb65f8a47a28bdaad73c8d" category="paragraph">本节介绍最新版本产品的 REST 资源。如果您需要了解对先前版本所做的更改，请参见 _Release Notes_。</block>
+  <block id="d828aac2af8d57c06b48e251182e288b" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。</block>
+  <block id="6466e024da1551df00c27d6d57939447" category="inline-link-macro">使用 REST API 时的其他注意事项</block>
+  <block id="4a1650d48d341f5ca29608cba42c06c0" category="paragraph"><block ref="4a1650d48d341f5ca29608cba42c06c0" category="inline-link-macro-rx"></block></block>
+  <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
+  <block id="f8e4b13da6e177d5a9fd74904a1802ee" category="paragraph"><block ref="f8e4b13da6e177d5a9fd74904a1802ee" category="inline-link-macro-rx"></block></block>
+  <block id="efe451bd1c5b374a05e7d5178bb06987" category="inline-link">《 ONTAP 9 发行说明》</block>
+  <block id="8c7363fa08db0aee7dfb4aab5550b972" category="paragraph"><block ref="8c7363fa08db0aee7dfb4aab5550b972" category="inline-link-rx"></block></block>
+  <block id="304fa665f99f878936481a1b73afc744" category="doc">准备使用工作流进程</block>
+  <block id="cdbbcb4acb019584472990be1e68660f" category="paragraph">在使用工作流流程之前，您应做好准备。</block>
+  <block id="4e9340308dca4d4fa10ce0a1c9d5c96a" category="section-title">了解工作流中使用的 API 调用</block>
+  <block id="ee7a9ae73028cfda6ec52c2a5e7c84f0" category="paragraph">ONTAP API 联机文档页面包含每个 REST API 调用的详细信息。工作流示例中使用的每个 API 调用都仅包含在文档页面上查找此调用所需的信息，而不是在此处重复这些详细信息。找到特定 API 调用后，您可以查看该调用的完整详细信息，包括输入参数，输出格式， HTTP 状态代码和请求处理类型。</block>
+  <block id="457726be17407daf1c955d43ea661695" category="paragraph">工作流中的每个 API 调用都包含以下信息，以帮助您在文档页面上查找此调用：</block>
+  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="list-text">类别</block>
+  <block id="765304ffcf8618a62227ccee634b1d12" category="paragraph">API 调用会在文档页面上按功能相关的区域或类别进行组织。要查找特定的 API 调用，请滚动到页面底部，然后单击相应的 API 类别。</block>
+  <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="list-text">HTTP 方法</block>
+  <block id="94e58690c162ba826800973567ad1063" category="paragraph">HTTP 方法用于标识对资源执行的操作。每个 API 调用都通过一种 HTTP 方法执行。</block>
+  <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">路径</block>
+  <block id="0564266fb62d9d7133097f1bae879dde" category="paragraph">路径用于确定在执行调用时操作适用场景所使用的特定资源。路径字符串会附加到核心 URL 中，以形成用于标识资源的完整 URL 。</block>
+  <block id="3af7790bee98254ae139d4927f1bb354" category="section-title">构建 URL 以直接访问 REST API</block>
+  <block id="cb9e0022deebe15c9fcf226449b0ffca" category="paragraph">除了 ONTAP 文档页面之外，您还可以通过 Python 等编程语言直接访问 ONTAP REST API 。在这种情况下，核心 URL 与访问联机文档页面时使用的 URL 稍有不同。直接访问 API 时，必须将 ` /API` 附加到域和端口字符串中。例如： `https://ontap.mycompany.com/api`</block>
+  <block id="29fe0e3b021fed4ff52a274326d05c86" category="inline-link-macro">如何访问 ONTAP API</block>
+  <block id="16a0b2e27dcb7288cba9d831b056dfa8" category="paragraph"><block ref="16a0b2e27dcb7288cba9d831b056dfa8" category="inline-link-macro-rx"></block></block>
+  <block id="316c5da896e339da48e689b7d2bd63d6" category="paragraph"><block ref="316c5da896e339da48e689b7d2bd63d6" category="inline-link-macro-rx"></block></block>
+  <block id="f9423483f907b342ce1d6b2a5646580f" category="doc">基本操作特征</block>
+  <block id="d9ea677ef356bfa08eea805869f9eded" category="paragraph">虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。</block>
+  <block id="fc068ae597c9019f5d61b19badc39991" category="section-title">请求和响应 API 事务</block>
+  <block id="52cbf28bd4927df9cf59c3544b5ae581" category="paragraph">每个 REST API 调用都作为 HTTP 请求执行给 ONTAP 系统，该系统会向客户端生成关联的响应。此请求 / 响应对被视为 API 事务。在使用 API 之前，您应熟悉可用于控制请求的输入变量以及响应输出的内容。</block>
+  <block id="1548c883ffc13bf8f014216dd31bce6d" category="section-title">支持 CRUD 操作</block>
+  <block id="47bcad78eda58775cc7e5722f848076b" category="paragraph">通过 ONTAP REST API 提供的每个资源均可根据 CRUD 模型进行访问：</block>
+  <block id="686e697538050e4664636337cc3b834f" category="list-text">创建</block>
+  <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="list-text">读取</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="list-text">更新</block>
+  <block id="f2a6c498fb90ee345d997f888fce3b18" category="list-text">删除</block>
+  <block id="f77c2a1d73d98ae14b40ff85e97c4e64" category="paragraph">对于某些资源，仅支持部分操作。有关每个资源的详细信息，您应查看 ONTAP 集群上的 ONTAP API 文档页面。</block>
+  <block id="7f65a5bae7570e7d2a9cc75be01898fc" category="section-title">对象标识符</block>
+  <block id="0111d5a8b14c92fa83ed3c67ea078e6b" category="paragraph">创建每个资源实例或对象时，系统会为其分配一个唯一标识符。在大多数情况下，标识符为 128 位 UUID 。这些标识符在特定 ONTAP 集群中具有全局唯一性。发出创建新对象实例的 API 调用后，将在 HTTP 响应的位置标题中向调用方返回一个具有关联 ID 值的 URL 。在引用资源实例时，您可以提取此标识符并在后续调用中使用它。</block>
+  <block id="83e21aa294744cfc75cee4862af31f56" category="admonition">对象标识符的内容和内部结构可以随时更改。仅当引用关联对象时，才应根据需要在适用的 API 调用上使用标识符。</block>
+  <block id="9836668105a34d676a62c3504a8f922d" category="section-title">对象实例和集合</block>
+  <block id="b46274acc570b55dd2a12d8b7c4550d2" category="paragraph">根据资源路径和 HTTP 方法， API 调用可以应用于特定对象实例或对象集合。</block>
+  <block id="5b57fad34c2bf967374b0061c6901da7" category="section-title">同步和异步操作</block>
+  <block id="a335c41d0ba63f4ef96fea6dd4186477" category="paragraph">ONTAP 可通过两种方式执行从客户端收到的 HTTP 请求。</block>
+  <block id="feb4904f6f50abf811a7763ed6efc659" category="list-text">同步处理</block>
+  <block id="890eb969fdd1ce4246bc3681e3987268" category="list-text">ONTAP 会立即执行此请求，如果成功，则会使用 HTTP 状态代码 200 或 201 进行响应。</block>
+  <block id="2d6550072cd57d4135b675b28f95808e" category="paragraph">使用 GET ， HEAD 和 OPTIONS 方法的每个请求始终会同步执行。此外，如果使用 POST ，修补和删除的请求预计在两秒内完成，则这些请求会同步运行。</block>
+  <block id="97fc3d9385e39e5a8a5a53f93c073517" category="list-text">异步处理</block>
+  <block id="7191f1887421328b513e89d8e5db7cf6" category="list-text">如果异步请求有效， ONTAP 将创建一个后台任务来处理此请求，并创建一个作业对象来锁定此任务。202 HTTP 状态将与作业对象一起返回给调用程序。要确定最终成功还是失败，您必须检索作业的状态。</block>
+  <block id="026d032072959df5e7c61af10bdc9924" category="paragraph">如果使用 POST ，修补和删除方法的请求预计需要超过两秒才能完成，则这些请求会异步运行。</block>
+  <block id="48d8b5f7a9deedfd0fd5dd40310c83a5" category="admonition">`return_timeout` query 参数可用于异步 API 调用，并且可以将异步调用同步转换为完成。有关详细信息，请参见 `如何使用作业对象进行异步处理` 。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">安全性</block>
+  <block id="a0c340ff7c895ce6a1d571f1f55df890" category="paragraph">REST API 提供的安全性主要基于 ONTAP 提供的现有安全功能。API 使用以下安全性：</block>
+  <block id="14a55e8a26db2705a0ffd20ba0427338" category="list-text">传输层安全性</block>
+  <block id="efe99011e665b49448af280693e74e6c" category="paragraph">ONTAP LIF 与客户端之间通过网络发送的所有流量通常会根据 ONTAP 配置设置使用 TLS 进行加密。</block>
+  <block id="234b7702b17d750d0199947820d83481" category="list-text">客户端身份验证</block>
+  <block id="e3f07bfd552c9d40285bc289e8e95e1a" category="paragraph">ONTAP System Manager 和网络易管理性 SDK 提供的相同身份验证选项也可用于 ONTAP REST API 。</block>
+  <block id="b19cfdc6ba6a94190ea654a5c325673c" category="list-text">HTTP 身份验证</block>
+  <block id="fba54022e3b47aa328af3bc5b2fd6c5b" category="paragraph">在 HTTP 级别， API 事务使用基本身份验证。每个请求都会添加一个 HTTP 标头，其中用户名和密码包含在 base64 字符串中。</block>
+  <block id="022958270d2e89acef5cfe895ac4a5a4" category="list-text">ONTAP 授权</block>
+  <block id="ecada31be49896665065d57659291715" category="paragraph">ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。</block>
+  <block id="1eff307bdee34970a4f1fba8b03f2362" category="inline-link-macro">使用 RBAC 实现安全性</block>
+  <block id="46c2a957c1f02e81b9096c86660e0264" category="paragraph"><block ref="46c2a957c1f02e81b9096c86660e0264" category="inline-link-macro-rx"></block></block>
+  <block id="aae155889087fca42368d9fab8b54ee6" category="doc">NDMP</block>
+  <block id="ddcc73c0369a0b65c748dc3e5194759a" category="paragraph">网络数据管理协议为备份 NAS 设备提供了一个标准。您可以使用这些 API 调用来管理 NDMP 服务。</block>
+  <block id="9250e564d64f55011e433f17ac824f44" category="section-title">NDMP 模式</block>
+  <block id="e78d7ab79adaa44183fd6bddec381b9e" category="paragraph">NDMP 操作模式可以是 SVM 范围或节点范围。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="c69526c8ce76ad278f888adee538f04e" category="section-title">NDMP 节点</block>
+  <block id="e2c8cf4362fd8da934b960c0838f7f52" category="paragraph">您可以管理节点的 NDMP 配置。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="59b9883b4ec82d64efbe374d16d050a1" category="section-title">NDMP 会话</block>
+  <block id="9dfd95a51120838c5f0411955b6b8ee0" category="paragraph">您可以检索和删除特定 SVM 或节点的 NDMP 会话详细信息。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="d6c90b0f4204e92a3f329aaf4ce9e01c" category="section-title">NDMP SVM</block>
+  <block id="abb764733c7f995370e6d297ff1c5dbd" category="paragraph">您可以管理 SVM 的 NDMP 配置。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="26588e848f6effc048fa7260c0143fb6" category="section-title">NDMP SVM 用户密码</block>
+  <block id="69e5d40b354916efb315e4d7da2c3224" category="paragraph">您可以在 SVM 内容中为特定 NDMP 用户生成和检索密码。此资源类型是在 ONTAP 9.8 REST API 中引入的，并在 ONTAP 9.9 中进行了增强。</block>
+  <block id="e393851263b97103e1b16673bad43724" category="doc">对象引用和访问</block>
+  <block id="3b98e5cd1805cb4fd2c7b8d86d331550" category="paragraph">通过 ONTAP REST API 公开的资源实例或对象可以通过多种不同的方式进行引用和访问。</block>
+  <block id="f9ba85f66ecf10329f937eb9a888ebc2" category="section-title">对象访问路径</block>
+  <block id="590d9821cd6209eb8347ef35da9289df" category="paragraph">总体而言，访问对象时有两种路径类型：</block>
+  <block id="074de7e7c226d5c60f8af14c20725352" category="list-text">主卷</block>
+  <block id="fe005fa1e43bf097315b336aa7455358" category="paragraph">对象是 API 调用的主目标或直接目标。</block>
+  <block id="fec70ebbc6f88c7be94808968447168f" category="list-text">外部</block>
+  <block id="decdc4a3e16e328b73d0f86fa39dbe81" category="paragraph">此对象不是 API 调用的主要引用，而是从主对象链接到。因此，它是一个外部或下游对象，并通过主对象中的字段进行引用。</block>
+  <block id="8bccaa334a303a564fb35cdc17e6edb2" category="section-title">使用 UUID 访问对象</block>
+  <block id="224015dbd27932e7e23f227bf25ab6b9" category="paragraph">创建每个对象时，系统会为其分配一个唯一标识符，在大多数情况下，此标识符为 128 位 UUID 。分配的 UUID 值是不可更改的，在 ONTAP 内部使用这些值来访问和管理资源。因此， UUID 通常可提供最快，最稳定的对象访问方式。</block>
+  <block id="296bead235e4f03b068c49fe1f138243" category="paragraph">对于许多资源类型，可以在 URL 中的路径密钥中提供 UUID 值来访问特定对象。例如，您可以使用以下命令访问节点实例： `` /cluster/nodes/｛ uuid ｝`</block>
+  <block id="52da342872b7cfd5755a4a18c4a131ba" category="section-title">使用对象属性访问对象</block>
+  <block id="0ae7bfb306f0d8bd367fc3e3d5ca2a22" category="paragraph">除了 UUID 之外，您还可以使用对象属性访问对象。在大多数情况下，使用 name 属性非常方便。例如，您可以在 URL 字符串中使用以下查询参数来按名称访问节点实例： ` /cluster/nodes ？ name=node_one` 。除了查询参数之外，还可以通过主对象中的属性访问外部对象。</block>
+  <block id="016e25c50283e53f24e0f2f5e5549f7f" category="paragraph">虽然您可以使用名称或其他属性来访问对象，而不是 UUID ，但可能存在以下几个缺点：</block>
+  <block id="b8c720f68ef790c0a72313d1e0103a0e" category="list-text">名称字段不可更改，可以更改。如果在访问对象之前更改了某个对象的名称，则返回的对象将不正确，或者对象访问错误将失败。</block>
+  <block id="a99339d948d4eae9c76225755a2070da" category="admonition">此问题描述可以在外部对象上使用 POST 或修补方法，也可以在主对象上使用 GET 方法。</block>
+  <block id="5c4d76b1365dbed06d75968c3bfb1c05" category="list-text">ONTAP 必须将名称字段转换为相应的 UUID 。这是一种间接访问，可以成为性能问题描述。</block>
+  <block id="70f9db80c05580b3f3eac884c37ad9fb" category="paragraph">特别是，如果满足以下一项或多项条件，则性能可能会下降：</block>
+  <block id="432d4977c534da13f9690476228c6e94" category="list-text">使用 GET 方法</block>
+  <block id="c6bf428cdeaf4bf048bd6f8a0ba3b083" category="list-text">访问大量对象</block>
+  <block id="889e1029116c8905ca56fdfa98e11f6f" category="list-text">使用复杂或精细的查询</block>
+  <block id="ad8ef764efca0f0de9058aa1ec46026d" category="section-title">集群与 SVM 环境</block>
+  <block id="60f7985ebb6e64768380e903d262bce0" category="paragraph">有多个 REST 端点同时支持集群和 SVM 。使用其中一个端点时，您可以通过 `sCOP=[SVM| 集群 ]` 值指示 API 调用的上下文。支持双环境的端点示例包括 IP 接口和安全角色。</block>
+  <block id="c73fde36f81c21090b2713e29c537039" category="admonition">范围值基于为每个 API 调用提供的属性具有默认值。</block>
+  <block id="9cee0a41eba695b9da10985e41816e0c" category="section-title">对一组对象使用修补程序和删除</block>
+  <block id="f8aa6a58caed1e1d2c9ccbbdbe6f091a" category="paragraph">在资源实例上支持修补或删除的每个 REST 端点也支持对一组对象使用相同的方法。唯一的要求是，必须通过 URL 字符串中的查询参数至少提供一个字段。在对集合发出修补程序或进行删除时，这相当于在内部执行以下操作：</block>
+  <block id="99efb2d280df5dfb88ff3974d6ba377a" category="list-text">基于查询的 GET 以检索收集</block>
+  <block id="b493da72818f74a4523850f1316fabdc" category="list-text">对集合中的每个对象执行的修补或删除调用的序列</block>
+  <block id="d42ef5aeeeac3bae2faf89cff30ba1b2" category="paragraph">操作超时可通过 `return_timeout` 设置，默认值为 15 秒。如果在超时之前未完成，则响应将包含指向下一个对象的链接。您必须使用下一个链接重新发出相同的 HTTP 方法才能继续此操作。</block>
+  <block id="f820c3830ab123b8422eb4a89ffeb2e6" category="paragraph">您可以通过多种资源了解如何使用 Ansible 自动部署和管理 ONTAP 存储资源。</block>
+  <block id="554cfab3938e21d9270bd6b75931f96f" category="section-title">视频</block>
+  <block id="039792ff8ff6ac357ed8f4a13b3345c2" category="inline-link-macro">Ansible 认证模块</block>
+  <block id="b9604383a9491878c8331801e487f3e0" category="paragraph">您也可以通过 NetApp TV 获取上述视频，网址为 <block ref="0fbd1fba292ef7e8dc7c843e65ec1153" category="inline-link-macro-rx"></block>。</block>
+  <block id="10cb31045b1e0319cad9e10cb17e7d7f" category="section-title">开发人员资源</block>
+  <block id="488449a83a7af94bacba6d31023a0ace" category="inline-link-macro">NetApp Ansible DevOps 解决方案</block>
+  <block id="8b328188cce263fb3b3c747dfca835f3" category="paragraph">请参见 <block ref="0edd4b40b713849ac51dc73d6ee2b46b" category="inline-link-macro-rx"></block> 帮助您在 DevOps 环境中开始使用 Ansible 。</block>
+  <block id="42a4074843d4a69faa8c790fcb72ca0a" category="doc">ONTAPI 和 ONTAP 命令行界面的用户</block>
+  <block id="18aadc11d3c5f40e8c8474e03cf706af" category="paragraph">ONTAPI 是通过网络易管理性 SDK 提供的一组 API 调用，可用于管理 ONTAP 存储系统。REST API 和 ONTAPI 调用之间以及 REST API 和 ONTAP 命令行界面之间存在差异。在生产环境中使用 REST API 之前，您应了解这些差异。</block>
+  <block id="1b3d9b05305989cf6898b061409738ed" category="section-title">一般设计差异</block>
+  <block id="ee083ff11ffc430b7230624e8985e88c" category="inline-link-macro">控制 API 请求的输入变量</block>
+  <block id="1e3ba92aa53b0bb884b6743749deafee" category="paragraph">ONTAP REST API 和命令行界面的设计截然不同。CLI 命令和参数不会直接映射到 REST API 调用。即使存在相似之处，输入参数的详细信息也可能有所不同。例如，可以使用字节或后缀（例如 KB ）来指定数字单位。您应查看 <block ref="12011a5aedf3809016f62721a9cfa872" category="inline-link-macro-rx"></block> 以及<block ref="f8e4b13da6e177d5a9fd74904a1802ee" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="0f659373042725afb9f92bda18229d9e" category="section-title">通过 REST API 公开的数据 SVM</block>
+  <block id="f01d65d87efa9315f7d78fee0755d570" category="paragraph">ONTAP 支持多种类型的 Storage Virtual Machine （ SVM ）。但是，只有数据 SVM 才会通过 ONTAP REST API 直接公开。描述集群和节点的配置信息可通过 REST API 获得，但集群和节点不会被视为单独的 SVM 。</block>
+  <block id="389a48ede65b8854e63d5d655a7dd311" category="section-title">从 ONTAPI 迁移到 REST</block>
+  <block id="c1d42d663da10febd47133f541b8941c" category="paragraph">REST API 是自动化 ONTAP 系统管理的主要战略选择。如果您当前正在使用 ONTAPI ，则应考虑迁移到 REST API 。NetApp 提供了映射文档，可帮助您从 ONTAPI 迁移到 REST 。</block>
+  <block id="12011a5aedf3809016f62721a9cfa872" category="paragraph"><block ref="12011a5aedf3809016f62721a9cfa872" category="inline-link-macro-rx"></block></block>
+  <block id="0397590f45c22e78e7a319dbcf71cb53" category="paragraph"><block ref="0397590f45c22e78e7a319dbcf71cb53" category="inline-link-rx"></block></block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="doc">NAS</block>
+  <block id="7e70a3f5fe5680525cb2b864b84dd895" category="paragraph">您可以使用这些 API 调用来管理集群和 SVM 的 CIFS 和 NFS 设置。</block>
+  <block id="5694877f9acb80427bb084dc540bff58" category="section-title">审核日志重定向</block>
+  <block id="7f10c6261c4b6c29a47a7c3f7a01e279" category="paragraph">您可以将 NAS 审核事件重定向到特定 SVM 。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="section-title">Audit</block>
+  <block id="966e21f100dbe85ef8662bb918080be7" category="paragraph">可以为 SVM 记录某些 CIFS 和 NFS 事件，这有助于提高安全性。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="ae8f54c516c1e697ca7e99fc7d868bda" category="section-title">CIFS 主目录搜索路径</block>
+  <block id="8e6ea104d132bd3ac592317ab098eb8b" category="paragraph">可以在 CIFS 服务器上为 SMB 用户创建主目录，而无需为每个用户创建单独的 SMB 共享。主目录搜索路径是从 SVM 根目录开始的一组绝对路径。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="b4aed1589395fdc65c17587b27f7bb8c" category="section-title">CIFS 服务</block>
+  <block id="55b828992334f8fd2faac07a1d3c6e1e" category="paragraph">CIFS 服务器的核心配置。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="bc60013b8245b6824eb1f7867b61b741" category="section-title">CIFS 会话</block>
+  <block id="71a26588e1c1d8e12094fdd21dc0d287" category="paragraph">您可以使用此 API 检索有关 CIFS 会话的详细信息。此资源类型是在 ONTAP 9.8 REST API 中引入的，并在 ONTAP 9.9 中进行了增强。</block>
+  <block id="6bd56802bbe66c487b39108b4e4b3f2e" category="section-title">CIFS 共享</block>
+  <block id="d5f4fec8a6c653ca7e90ff237d4a4316" category="paragraph">在 CIFS 服务器上定义的 SMB 共享。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="064575167733ca9bd85e0b4b367d1ca9" category="section-title">CIFS 共享 ACL</block>
+  <block id="f0f651567e26868dafe0ee9cc161686c" category="paragraph">访问控制列表（ ACL ）用于控制对 CIFS 共享上的文件夹和文件的访问。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2fc8aeb9ce1675007558f9a4a074f9c3" category="section-title">CIFS UNIX 符号链接映射</block>
+  <block id="4b80e635bedb2121ad330680ea44b192" category="paragraph">CIFS 和 UNIX 客户端均可访问同一数据存储库。当 UNIX 客户端创建符号链接时，这些映射会引用其他文件或文件夹来支持 CIFS 客户端。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="e99032409deaffcf7a867a648155dc5d" category="section-title">文件访问跟踪</block>
+  <block id="0e4b06b0058fdbacdf88073fd79121e1" category="paragraph">您可以使用这些 API 调用来跟踪对特定文件的访问。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="81584289d536a476e74f5bc4906831af" category="section-title">文件安全权限</block>
+  <block id="fcec747a1dc241bef6344882e6ae9843" category="paragraph">您可以使用这些 API 调用来显示为 Windows 或 Unix 用户授予的特定文件或文件夹的有效权限。您还可以管理 NTFS 文件安全性和审核策略。此资源类型是在 ONTAP 9.8 REST API 中引入的，并在 ONTAP 9.9 中得到了显著增强。</block>
+  <block id="1a0f4bec43cf474af35c9e77aa8c28af" category="section-title">fpolicy</block>
+  <block id="8596c9ab6bb5d2f478817a1caec93cb9" category="paragraph">FPolicy 是一个文件访问通知框架，用于监控和管理 SVM 上的文件访问事件。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="371f109f46145b3f27492990eb0a9113" category="section-title">FPolicy 引擎</block>
+  <block id="122ff0ce49c4f38afa14758549e568d5" category="paragraph">通过 FPolicy 引擎，您可以确定接收文件访问通知的外部服务器。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="3bd9fd6d8026d51bcd37c5f3db077df7" category="section-title">FPolicy 事件</block>
+  <block id="03b1d8e8ff974db009222575c8272446" category="paragraph">用于确定如何监控文件访问以及生成哪些事件的配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="cc0e7740c7c0f284b16f9a531a2fb567" category="section-title">FPolicy 策略</block>
+  <block id="b0360b82f5e5e81032b52f6277974c5a" category="paragraph">FPolicy 框架要素的容器，包括 FPolicy 引擎和事件。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="4e4e0f527af77484c5cbf5196e421a3d" category="section-title">NFS 连接的客户端</block>
+  <block id="5b9e40af6e6a77e9d9451375cfc0a9b7" category="paragraph">您可以显示已连接客户端的列表及其连接详细信息。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="5e02bcf13960addb442383f8370c14f1" category="section-title">NFS 导出策略</block>
+  <block id="bfeb5028a4eb91a06394c3b6e69e6843" category="paragraph">包含用于描述 NFS 导出的规则的策略。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="6aa53caebe4b6ae8c4c8f34880b6d95d" category="section-title">NFS Kerberos 接口</block>
+  <block id="3afad2708eee4dd712bb3209aed66314" category="paragraph">Kerberos 接口的配置设置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="a925a741511b2b8f933ad6404892439b" category="section-title">NFS Kerberos 域</block>
+  <block id="6e6a672cb006cae7c7f795db9567f05a" category="paragraph">Kerberos 域的配置设置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2af5a2ae61f951c7a5e94ca007df0d15" category="section-title">NFS 服务</block>
+  <block id="dfd8f44648780896a0502d4dca1cf245" category="paragraph">NFS 服务器的核心配置。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="58799a9de037b62a01e5ef1453837248" category="section-title">Vscan</block>
+  <block id="8d7b8bae5e0de7390b46a9e4b8e7d7cd" category="paragraph">一种安全功能，用于保护您的数据免受病毒和其他恶意代码的影响。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="794e647721bb174bd33eddbe2e97da3d" category="section-title">Vscan 实时策略</block>
+  <block id="bc6432862ecb3075c79ab1b849350e67" category="paragraph">Vscan 策略允许在客户端访问时主动扫描文件对象。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="67f19b53fb829d6ea610820aab8ecc04" category="section-title">Vscan 按需策略</block>
+  <block id="5f6f9da8cb335b242fa16ae86bdd0b2d" category="paragraph">Vscan 策略允许根据需要或设置的计划立即扫描文件对象。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="4974caee8c34d629bb161cdea414869a" category="section-title">Vscan 扫描程序池</block>
+  <block id="611195abdbd7da41ddc1c888f9f1885e" category="paragraph">一组属性，用于管理 ONTAP 与外部病毒扫描服务器之间的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2cf615c2df2664a7f35487c706d47001" category="section-title">Vscan 服务器状态</block>
+  <block id="c63c72a4f34ffdf5a780e1fc0e879ca8" category="paragraph">外部病毒扫描服务器的状态。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="89a63df60ff51ecd284dbabc7f893d79" category="doc">用于检索集群配置的脚本</block>
+  <block id="954b2e160c60b05e0b5bcd88116d6dee" category="paragraph">以下脚本提供了一个简单的示例，用于说明如何使用 Python 客户端库。您可以在命令行界面中使用 Python 3 运行此脚本，以检索 ONTAP 集群配置。</block>
+  <block id="302a7652c673b7007125aa7c0508a837" category="doc">通过 REST API 访问 ONTAP 命令行界面</block>
+  <block id="b16b005167b4cc2f06dc1e1acd755f91" category="paragraph">为了帮助命令行界面和 ONTAPI 用户过渡到 ONTAP REST API ， ONTAP 提供了一个 REST 端点来访问命令行界面。您可以使用此直通功能执行任何命令行界面命令。REST 端点的使用情况会在 AutoSupport 数据中返回，因此 NetApp 可以确定 REST API 中的差距，并在未来版本中进行改进。</block>
+  <block id="af112349f35f3d8adc945b2dc23535c5" category="paragraph">要对命令行界面命令执行问题描述操作，您必须根据以下规则进行正确格式的 REST API 调用：</block>
+  <block id="9ec3f506845187b11b0f4c9a2b129777" category="list-text">资源路径</block>
+  <block id="ef2eef77980dfb726eee7566523a9f55" category="list-text">字段名称</block>
+  <block id="957a8c35c28e967701ff975f1d7182d5" category="list-text">HTTP 方法</block>
+  <block id="22f09f8242749472617c2605cfe68fef" category="paragraph">用于 CLI 访问的基本资源路径为 ` /private/CLI` 。有关通过 REST API 访问命令行界面的详细信息，请参见 ONTAP API 联机文档页面。</block>
+  <block id="3c2ec0a807110f1719364376d4921734" category="admonition">NetApp 维护一个 GitHub 存储库，其中包含代码示例和其他有用信息。您可以访问存储库，以获取有关如何使用 CLI 直通工具的示例。</block>
+  <block id="d8225434898f45be37a5aecc2ae6627b" category="inline-link">ONTAP REST Python GitHub 存储库— CLI 直通示例</block>
+  <block id="3c676a780a447c272e1d87565dcc8822" category="paragraph"><block ref="3c676a780a447c272e1d87565dcc8822" category="inline-link-rx"></block></block>
+  <block id="e6b088db24ebe67ed0e9567d309387ec" category="doc">工作流</block>
+  <block id="1a7e76cf965125295f60d602ab9b7a61" category="paragraph">您可以使用 ONTAP REST API 管理 ONTAP 系统并执行其他存储管理任务。每个任务都使用一个由一个或多个 API 调用组成的工作流过程进行说明。</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="doc">存储</block>
+  <block id="5d715f632f7a3e61ffcbef7a0fab4e08" category="paragraph">您可以使用这些 API 调用来管理物理和逻辑存储。</block>
+  <block id="d5350d8759b1ec84607e47908809058e" category="section-title">聚合</block>
+  <block id="ad3f50e1f14f54f3c331c20f8fe3bb1d" category="paragraph">聚合包含一个或多个 RAID 组。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="0823e490e6bba6fc21a38adab6d7a963" category="section-title">聚合丛</block>
+  <block id="047c7e41b8c756eddd17b5648fe92f42" category="paragraph">聚合中 WAFL 存储的物理副本。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="9ae13d2c1be8f54b085efa704ea4d7ee" category="section-title">聚合指标</block>
+  <block id="11ef5f9828b3bc010c9ca7626ca89c36" category="paragraph">您可以检索特定聚合的历史指标数据。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="b60c0d4d7e79d2d9eb6b397ca8529c4c" category="section-title">网桥</block>
+  <block id="0e0bc638aefadb39816902d5da83fa4d" category="paragraph">您可以检索集群中的网桥。此资源类型是在 ONTAP 9.9 中引入的。</block>
+  <block id="2d4aef30a49a581a6ed89ce840054235" category="section-title">Disks</block>
+  <block id="000d956158860eb60225484bae0cbb4a" category="paragraph">集群中的物理磁盘。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 和 9.8 中进行了更新。</block>
+  <block id="a379e76d3566a5a19a97674312f30c22" category="section-title">FlexCache.</block>
+  <block id="d53d395c26cc1120919a40cf2bb3bcc0" category="paragraph">此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="12b9060463c7d0d9fd882b398f4b6426" category="section-title">FlexCache 起源</block>
+  <block id="11f88b423dd71668044f4d32239e38bc" category="paragraph">FlexCache 是原始卷的永久性缓存。此资源类型最初是在 ONTAP 9.6 中推出的。ONTAP 9.9 REST API 增强了支持，支持通过 HTTP 修补方法进行修改。</block>
+  <block id="f5520ac447b7ce4cc60a84b00fe90b91" category="section-title">受监控的文件</block>
+  <block id="16750416870169f8a547b041c15fb9ca" category="paragraph">您可以指定特定文件以进行额外监控。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="407c4e9fac86b98147da49acd4fa0d01" category="section-title">端口</block>
+  <block id="a7ed048576f99b28a7ac7d127a048121" category="paragraph">集群的存储端口。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="9ab8fc3354a61f6ad2350f17305fc866" category="section-title">QoS 策略</block>
+  <block id="8719f60286ad321c9136cdebcda6779b" category="paragraph">服务质量策略配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="48b9817af3fdae7035b6862c98196584" category="section-title">qtree</block>
+  <block id="f46974aa6acf92306910967155e721fd" category="paragraph">您可以使用这些 API 调用来管理 qtree ， qtree 是一种按逻辑划分的文件系统。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="bb1c10ea5234afcb091a28054d68573b" category="section-title">配额报告</block>
+  <block id="13ac41c0f5b92c0695d1031496644111" category="paragraph">报告配额，这是一种用于限制或跟踪文件或空间使用量的技术。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="b9104e60761a7668c71846e0def23f3a" category="section-title">配额规则</block>
+  <block id="3d2b6a6ce4f64b7fe85f62253d8f24dc" category="paragraph">用于强制实施配额的规则。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="bb53c62475a4f28295dfd71302a53a3d" category="section-title">磁盘架</block>
+  <block id="0fdd859e13285f0b588a3a1c1a944ff1" category="paragraph">集群中的磁盘架。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="623fb58af5512173351f2a5e63dd6d85" category="section-title">Snapshot 策略</block>
+  <block id="8ef47f0b39d18608f0fb9ff542a85d30" category="paragraph">快照是根据策略创建的。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2a3d38eca452a2699cd2b11129719514" category="section-title">Snapshot 计划</block>
+  <block id="37a1c3e03252e951f2b7b6f459b3bc21" category="paragraph">您可以控制快照计划。此资源类型在 ONTAP 9.8 中进行了新的重新设计。</block>
+  <block id="0052efad5d260a806d52bfcfe640936f" category="section-title">交换机</block>
+  <block id="e7d94a62c027b853f0db823acc6113d8" category="paragraph">您可以检索集群中的交换机。此资源类型是在 ONTAP 9.9 中引入的。</block>
+  <block id="5fa1f27a4db085455efad8586d12878b" category="section-title">磁带设备</block>
+  <block id="90e266ad3e10e1435b856e7f8c7998ca" category="paragraph">您可以检索集群中的磁带设备。此资源类型是在 ONTAP 9.9 中引入的。</block>
+  <block id="a3e42b640d5ce90ec9ccf40644a7beb2" category="section-title">卷效率策略</block>
+  <block id="f3822b87f60b51928fef4d239475d31e" category="paragraph">您可以使用这些 API 调用来配置应用于整个卷的效率。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="c6f01c78bfe0a0a495cb5d3ed77824a9" category="section-title">Volumes</block>
+  <block id="c2b3f5e16089ee9d9af58cbb5c2cbd06" category="paragraph">逻辑容器用于向客户端提供数据。此资源类型最初是在 ONTAP 9.6 REST API 中引入的。在 ONTAP 9.9 中， API 中使用的许多参数值都得到了显著扩展，包括用于空间管理的参数值。</block>
+  <block id="17d828c8326ae52c5d2a5bd801e5a59b" category="section-title">卷文件</block>
+  <block id="88df77acac312e5edd7fce693cdcaa37" category="paragraph">您可以检索卷上特定目录的文件和目录列表。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="e5a3f41cd596ffa6c5340d3d92b4b3e8" category="section-title">卷快照</block>
+  <block id="87098ebfbdf9f76cfa6a8b400124cecc" category="paragraph">卷的快照。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="fc004b0a2e525fdc279e93342807a662" category="paragraph">您可以通过 HTTP 请求中设置的参数和变量来控制 API 调用的处理方式。</block>
+  <block id="1ca197be3e0d7fcd720e84d7a6a700e2" category="paragraph">下表显示了 ONTAP REST API 支持的 HTTP 方法。</block>
+  <block id="658f0f20a452278b19514e37e5349877" category="admonition">并非所有 HTTP 方法都可在每个 REST 端点使用。此外，修补程序和删除都可以用于集合。有关详细信息，请参见 _Object 引用和访问权限 _ 。</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Description</block>
+  <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">获取</block>
+  <block id="0decd4a1f47d9c9f9601109afe0d9a4e" category="cell">检索资源实例或集合上的对象属性。</block>
+  <block id="a02439ec229d8be0e74b0c1602392310" category="cell">发布</block>
+  <block id="fb9e1a48a4257dee6289fcb9c187cc7d" category="cell">根据提供的输入创建新的资源实例。</block>
+  <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">patch</block>
+  <block id="3dd2f0938d95c74bc5663d1d4f9ef2d7" category="cell">根据提供的输入更新现有资源实例。</block>
+  <block id="32f68a60cef40faedbc6af20298c1a1e" category="cell">删除</block>
+  <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">删除现有资源实例。</block>
+  <block id="e15e216fc1c639f787b1231ecdfa1bf8" category="cell">标题</block>
+  <block id="94c333a66ce4419d14f1e38f68a75c9b" category="cell">有效发出 GET 请求，但仅返回 HTTP 标头。</block>
+  <block id="164dd62adb30ca051b5289672a572f9b" category="cell">选项</block>
+  <block id="edcba56ceac51e771d54e51d44cdfa11" category="cell">确定特定端点支持哪些 HTTP 方法。</block>
+  <block id="736943e80c16e2be98d8595e6376e4ee" category="section-title">请求标题</block>
+  <block id="a40021b61208de981e605608cd09946d" category="paragraph">您必须在 HTTP 请求中包含多个标头。</block>
+  <block id="f64aadb713838867dd5f6cb3d02558a0" category="list-text">内容类型</block>
+  <block id="3d0bca9825bd7eb98bae10bbb86e76d4" category="list-text">如果请求正文包含 JSON ，则必须将此标头设置为 `application/json` 。</block>
+  <block id="c4408d335012a56ff58937d78050efad" category="list-text">接受</block>
+  <block id="43e5eac57fb1fee548fbabb2345d61d5" category="list-text">此标头应设置为 `application/hal+json` 。如果将其设置为 `application/json` ，则除了检索下一批记录所需的链接之外，不会返回任何 HAL 链接。如果标头与这两个值不同，则响应中的 `content-type` 标头的默认值将为 `application/hal+json` 。</block>
+  <block id="9cd8a2455b1839ff98ef70c05b9b5983" category="list-text">Authorization</block>
+  <block id="1ef8df17a9442d1f08a0df818861c5e5" category="list-text">必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。</block>
+  <block id="a3ba8461439f7d0176ef3944696ea2ac" category="section-title">请求正文</block>
+  <block id="973ab3cad185dec8eac7662330e49f1c" category="paragraph">请求正文的内容因具体调用而异。HTTP 请求正文包含以下内容之一：</block>
+  <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">包含输入变量的 JSON 对象</block>
+  <block id="dc51df2cdcd7759fe85ea304591b7327" category="list-text">空 JSON 对象</block>
+  <block id="ac860c2e604ebd01436860da72828954" category="section-title">筛选对象</block>
+  <block id="0438b035fcfcfd3b3c333dd8d993e532" category="paragraph">发出使用 GET 的 API 调用时，您可以根据任何属性限制或筛选返回的对象。例如，您可以指定一个要匹配的精确值：</block>
+  <block id="1fc998fba92eac6c354078a63d749232" category="paragraph">` &lt;field&gt;=&lt; 查询值 &gt;`</block>
+  <block id="7d306d43ad9025b540f138ad516bc09f" category="paragraph">除了精确匹配之外，还可以使用其他运算符返回一组值范围内的对象。ONTAP REST API 支持下表所示的筛选运算符。</block>
+  <block id="e1b3ec89ead7f83a9245ed5c9cacfdbf" category="cell">运算符</block>
+  <block id="43ec3e5dee6e706af7766fffea512721" category="cell">=</block>
+  <block id="495c04002891bebf41bc3b56507f6d6b" category="cell">等于</block>
+  <block id="524a50782178998021a88b8cd4c8dcd8" category="cell">&lt;</block>
+  <block id="ad647e4ae904c7ed54ee93040d8298c7" category="cell">小于</block>
+  <block id="cedf8da05466bb54708268b3c694a78f" category="cell">&gt;</block>
+  <block id="05824b7be006782aaefd1fdb97c71e06" category="cell">大于</block>
+  <block id="a7eeaea90b4e8312b88abcd178019929" category="cell">&lt;=</block>
+  <block id="28d1141142e2cbb29e657b69a044ddf4" category="cell">小于或等于</block>
+  <block id="3a1e9b87c94b54dec1202b5ca6539806" category="cell">&gt;=</block>
+  <block id="798fe01fcb2754a295b6937ed885a69a" category="cell">大于或等于</block>
+  <block id="15a8022d0ed9cd9c2a2e756822703eb4" category="cell">更新</block>
+  <block id="3a2d5fe857d8f9541136a124c2edec6c" category="cell">或</block>
+  <block id="9033e0e305f247c0c3c80d0c7848c8b3" category="cell">！</block>
+  <block id="9bc7de899cf1c0d3ada046cd81f96aff" category="cell">不等于</block>
+  <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
+  <block id="05a8a074dcf1a74c3e6c55d4f730a475" category="cell">贪婪的通配符</block>
+  <block id="ec90f26336d0c5d5491d8f83f9c0d5a0" category="paragraph">此外，您还可以在查询中使用 `null` 关键字或其否定 ` ！ null` 来根据是否设置了特定字段返回一组对象。</block>
+  <block id="5260f8fe460e79195a4c88c011e51342" category="admonition">未设置的任何字段通常会从匹配查询中排除。</block>
+  <block id="6d8c6f6bd33a2c5ad3268242ca5ff59b" category="section-title">请求特定对象字段</block>
+  <block id="18053bbe41d54f9a3bd7a74b9e91941c" category="paragraph">默认情况下，使用 GET 发出 API 调用时，只会返回唯一标识一个或多个对象的属性以及 HAL 自链接。这组最小的字段可用作每个对象的密钥，并因对象类型而异。您可以通过以下方式使用 `fields` query 参数选择其他对象属性：</block>
+  <block id="c679b8eaf3069c4f7bffc461e34b95fb" category="list-text">通用字段或标准字段</block>
+  <block id="766cc68d20d5ecccaff42f964b0d5009" category="paragraph">指定 `fields=*`` 以检索最常用的对象字段。这些字段通常保留在本地服务器内存中，或者几乎不需要处理即可访问。这些属性与使用带有 URL 路径密钥（ UUID ）的 GET 后为对象返回的属性相同。</block>
+  <block id="36579447315838f79ada095ab26bf693" category="list-text">所有字段</block>
+  <block id="17a3ef8b97ca69ffa9e72fc5dae88b4e" category="paragraph">指定 `fields=*` 可检索所有对象字段，包括需要额外服务器处理才能访问的字段。</block>
+  <block id="a686d83a73b66e60196ab98b2632e7da" category="list-text">自定义字段选择</block>
+  <block id="56fadb8635732364aeee84efcb78f2ba" category="paragraph">使用 `fields=&lt;field_name&gt;` 指定所需的确切字段。请求多个字段时，必须使用逗号分隔值，不能包含空格。</block>
+  <block id="8f7a3293e759b9a149775c5dcaae5cf6" category="admonition">作为最佳实践，您应始终确定所需的特定字段。您只能在需要时检索一组通用字段或所有字段。哪些字段归类为通用字段，并使用 `fields=*` 返回，由 NetApp 根据内部性能分析确定。字段的分类可能会在未来版本中发生变化。</block>
+  <block id="8b9514b4e7a0d660f91152d4a5baf424" category="section-title">对输出集中的对象进行排序</block>
+  <block id="760ed1003f95d4d8f38b6a7862a1fcd6" category="paragraph">资源收集中的记录将按对象定义的默认顺序返回。您可以使用 `order_by` 查询参数以及字段名称和排序方向更改顺序，如下所示：</block>
+  <block id="42ac83dab536d4c72f5e57b001e9d1b7" category="paragraph">`order_by-=&lt; 字段名称 &gt; asc=desc`</block>
+  <block id="ec8ebedbd75e137e3d60f61956a459a3" category="paragraph">例如，您可以按降序对类型字段排序，然后按升序对 ID 排序：</block>
+  <block id="ae95344c2bcf9d6ce4630f98e0438896" category="paragraph">`order_by-type desc ， id asc`</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">请注意以下事项：</block>
+  <block id="8b2e720a58accc143187322487b6638a" category="list-text">如果指定了排序字段，但未提供方向，则这些值将按升序排序。</block>
+  <block id="35f47ff7e3cab9069eae76509c43183a" category="list-text">如果包含多个参数，则必须使用逗号分隔各个字段。</block>
+  <block id="245272e0c4968634df98eb3e43fe7188" category="section-title">检索集合中的对象时分页</block>
+  <block id="dc509c391146df8e9a9de44e0a0d97b0" category="paragraph">使用 GET 发出 API 调用以访问同一类型的一组对象时， ONTAP 会根据两个限制尝试返回尽可能多的对象。您可以对请求使用其他查询参数来控制其中的每个限制。特定 GET 请求达到的第一个限制将终止该请求，因此会限制返回的记录数。</block>
+  <block id="77f9234bccd7df3df5de9766fc1ee88a" category="admonition">如果请求在迭代所有对象之前结束，则响应将包含检索下一批记录所需的链接。</block>
+  <block id="9b694e5a19d32713635e80d596a204af" category="list-text">限制对象数量</block>
+  <block id="9495391a0bd527b86b989c35cf92b08d" category="list-text">默认情况下， ONTAP 最多为 GET 请求返回 10 ， 000 个对象。您可以使用 `max_records` query 参数更改此限制。例如：</block>
+  <block id="ca70aeac050e5deeb2d294566c856b35" category="paragraph">`max_records=20`</block>
+  <block id="6a0a3434834e0b30becf7f97dc2459a7" category="paragraph">根据相关时间限制以及系统中的对象总数，实际返回的对象数可以小于有效的最大数量。</block>
+  <block id="cec4fc9be41c96cfd5b0d11b548d1a5e" category="list-text">限制检索对象所用的时间</block>
+  <block id="3804251270ace919f78aea7fb71b7140" category="list-text">默认情况下， ONTAP 会在获取请求允许的时间内返回尽可能多的对象。默认超时为 15 秒。您可以使用 `return_timeout` query 参数更改此限制。例如：</block>
+  <block id="4f2ca89743f0c1642129bde507459575" category="paragraph">`return_timeout=5`</block>
+  <block id="d803d2dd2f39605b0bc879d0532fc5ba" category="paragraph">实际返回的对象数量可以小于有效的最大数量，具体取决于对对象数量以及系统中对象总数的相关限制。</block>
+  <block id="2dadc767979da8ab1576ee0aa8da5e21" category="list-text">缩小结果集的范围</block>
+  <block id="317480d31248a2b7b399c7ddbecbf74a" category="list-text">如果需要，您可以将这两个参数与其他查询参数结合使用，以缩小结果集的范围。例如，以下内容最多返回在指定时间之后生成的 10 个 EMS 事件：</block>
+  <block id="89163f6e2498a9f894e7813e6de46b08" category="paragraph">`time=&gt;2018-04-04T15 ： 41 ： 29.140265Z&amp;max_records=10`</block>
+  <block id="5394a0e51a0e30e195e0299ede162a02" category="paragraph">您可以通过问题描述发送多个请求来浏览各个对象。后续的每个 API 调用应根据最后一个结果集中的最新事件使用一个新的时间值。</block>
+  <block id="050a8c11f48cd555f6e5e6bab96225d6" category="section-title">大小属性</block>
+  <block id="721165b216d0f852ad3d9fd6e430dbe1" category="paragraph">某些 API 调用以及某些查询参数使用的输入值为数字。您可以选择使用下表所示的后缀，而不是提供以字节为单位的整数。</block>
+  <block id="56e6ddd1cb6cec596b433440dfb21c17" category="cell">后缀</block>
+  <block id="ab57fd0432e25d5b3013133a1c910d56" category="cell">知识库</block>
+  <block id="9664b7d53f6c3f95743d9d5e1e03e0f6" category="cell">KB 千字节（ 1024 字节）或千字节</block>
+  <block id="8d8fcc1abd550c5f25dbfaa57d59cb67" category="cell">MB</block>
+  <block id="1bfdb499a2daaef53342602344b219d2" category="cell">MB 兆字节（ KB x 1024 字节）或兆字节</block>
+  <block id="79cba1185463850dedba31f172f1dc5b" category="cell">GB</block>
+  <block id="9a19cb477310ba69217d25ed9ca7c242" category="cell">GB 千兆字节（ MB x 1024 字节）或吉字节</block>
+  <block id="ff88442a425c06d961f97bccb11ddf5d" category="cell">TB</block>
+  <block id="0c626e6c47ae0120c9962e031c65a1a8" category="cell">TB TB TB TB TB （ GB x 1024 字节）或 TB</block>
+  <block id="cd203ccd68b84de1c5df8fd890e104e0" category="cell">PB</block>
+  <block id="e96c6ce30fc02655f5156ad7f43abeb2" category="cell">PB PB PB PB （ TB x 1024 字节）或对等字节</block>
+  <block id="4d89f3083454f3531f41ee418943d490" category="paragraph"><block ref="4d89f3083454f3531f41ee418943d490" category="inline-link-macro-rx"></block></block>
+  <block id="5b601547f8aa3a93b2be784742d56f50" category="paragraph">这些 API 调用可用于管理集群和 SVM 安全设置。</block>
+  <block id="3031b41cbb19093d814e6930f3e56570" category="section-title">集群安全性</block>
+  <block id="73466d1f59642e03b8c81d0b1875b437" category="paragraph">您可以检索集群范围安全性的详细信息并更新某些参数。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="9b945efebb006547a94415eadaa12921" category="section-title">—帐户</block>
+  <block id="24e7cd4ec777036322f32b55a87d5bce" category="paragraph">集群和 SVM 有一组用户帐户。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="5a5fb6684999bac1ca581809abbd53ad" category="section-title">帐户名称</block>
+  <block id="ec3e5f0707efe5d62c929bd9fd725078" category="paragraph">范围内的用户帐户的配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="97140b7fab1bb651b5fc8173a48e9824" category="paragraph">用于确定审核日志文件中记录的内容的设置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="f260003a35e4d85e558fddca87a44bc3" category="section-title">审核目标</block>
+  <block id="355af35bea1f9a472b4aee466d9acada" category="paragraph">这些设置控制将审核日志信息转发到远程系统或 Splunk 服务器的方式。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="f553cd67933721b76f9ccab00ac4a892" category="section-title">审核消息</block>
+  <block id="128e41ee771b7497af81a9dab1ca20ec" category="paragraph">您可以检索审核日志消息。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="187f8868291bfb72a7e033dd667af916" category="section-title">Active Directory 代理</block>
+  <block id="5bfa71d20e72cfa3885c1399635e02fe" category="paragraph">您可以在 Active Directory 服务器上管理 SVM 帐户信息。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="a49c9c380ec2e13191e995f949a1c440" category="section-title">LDAP 身份验证</block>
+  <block id="6c6082904240c6ec5957f81a0fbb1d62" category="paragraph">这些 API 调用用于检索和管理集群 LDAP 服务器配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="6a36d99c2ac30ed84aa720f045f9fb79" category="section-title">NIS 身份验证</block>
+  <block id="0435d401767ed66c66ec6b98940edb55" category="paragraph">这些设置用于检索和管理集群 NIS 服务器配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="9097811650a92eb8b7172820dc0a2722" category="section-title">SAML 服务提供程序</block>
+  <block id="387eced4e75b45bde2bc33ce86181e16" category="paragraph">您可以显示和管理 SAML 服务提供程序的配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="22df0a92ffce80c2c0b94f54238b8ec0" category="section-title">密码身份验证</block>
+  <block id="5a2049402058b884646ba056f5eb32b6" category="paragraph">这包括用于更改用户帐户密码的 API 调用。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="28885526cbecfb56bee4aca9d16e4280" category="section-title">公有密钥身份验证</block>
+  <block id="7db7ebca58c159f027efcd52eaaecd90" category="paragraph">您可以使用这些 API 调用为用户帐户配置公有密钥。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="69500631fd60fd52ad3d029cb8aa50e0" category="section-title">AWS KMS</block>
+  <block id="db2f22ea891f2ac95aba2f82a4352ae0" category="paragraph">通过这组 API 调用，您可以使用 Amazon Web Services 密钥管理服务来存储 ONTAP 加密密钥。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="69e4f9faea00db8647cdf1c81c23c6d8" category="section-title">Azure 密钥存储</block>
+  <block id="adf1c22aa54eb7f2cce2db93dc9c061c" category="paragraph">通过这组 API 调用，您可以使用 Azure 密钥存储来存储 ONTAP 加密密钥。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="5a6c0d2579b31142130f20104fa58ea6" category="section-title">证书</block>
+  <block id="2e0ee80929bfbc4dd08313ae001e7f52" category="paragraph">API 调用可用于安装，显示和删除 ONTAP 使用的证书。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="de7a4b58aa20c707a993012c821ffcae" category="section-title">GCP KMS</block>
+  <block id="ad9b161528b083800d5054d4feb9ec8a" category="paragraph">通过这组 API 调用，您可以使用 Google 云平台密钥管理服务来存储和管理 ONTAP 加密密钥。此资源类型最初是在 ONTAP 9.8 REST API 中引入的。但是，此功能已经过重新设计，因此在 ONTAP 9.9 中被视为新增资源类型。</block>
+  <block id="99a98e067af6b09e64f3740767096c96" category="section-title">IPsec</block>
+  <block id="c78f0d76ddea2a641c1fd047b64d3b75" category="paragraph">Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协议，可通过底层 IP 网络在两个端点之间提供安全性。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="edc104bcf18fda8f2113e04baac67d3f" category="section-title">IPsec 策略</block>
+  <block id="28ce73d536ecffee09317e2b063905dc" category="paragraph">您可以使用这组 API 调用来管理对 IPsec 部署有效的策略。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="3d2b68c7bdb9f30e1ccfb464eeb00966" category="section-title">IPsec 安全关联</block>
+  <block id="ef19ac6a1e5ee7e640a48a20d2ea90d2" category="paragraph">您可以使用这组 API 调用来管理对 IPsec 部署有效的安全关联。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="5e2f9eab3699a50f20260789850a272c" category="section-title">密钥管理器</block>
+  <block id="cf7e0e9fe8835740b4490dd285c70e4e" category="paragraph">密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。</block>
+  <block id="8c4bb3ded6662bac8e6e9acbf843524d" category="section-title">登录消息</block>
+  <block id="71a48cbb31530fcbeefc8897151884fc" category="paragraph">用于显示和管理 ONTAP 使用的登录消息。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="a5cd3ed116608dac017f14c046ea56bf" category="section-title">角色</block>
+  <block id="73f3c293e004a376520d3734e8e0476f" category="paragraph">这些角色提供了一种向用户帐户分配权限的方法。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="74fa3a518ab1198e0b6ab902e54e3958" category="section-title">角色实例</block>
+  <block id="ee0b0b92be7dced35b0607c73807d3ea" category="paragraph">角色的特定实例。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="7ceacf64cc5732c8c39d8622d4e2d44c" category="section-title">角色实例的特权</block>
+  <block id="726766d18432f47239ac755ac8fce078" category="paragraph">管理特定角色的特权。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="section-title">SSH</block>
+  <block id="77c81798920a42ea55801b67d1902e16" category="paragraph">通过这些调用，您可以设置 SSH 配置。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="645796c14f90a49c10fe89ef0d9036f0" category="doc">ONTAP REST API 版本控制</block>
+  <block id="a131529b4b9e76bc39353ef1aa209dd9" category="paragraph">ONTAP 9 附带的 REST API 分配有一个版本号，该版本号与 ONTAP 版本号无关。您应了解您的 ONTAP 版本附带的 API 版本，以及此版本可能会对您的 API 使用产生何种影响。</block>
+  <block id="8797a71e8a89cb9c915f588f435aa882" category="admonition">所有版本的 ONTAP 9 都使用相同版本的 REST API 。</block>
+  <block id="82c9ef2430669db6fa98b4ea17d9e6c5" category="list-text">ONTAP 9.6 到 ONTAP 9.9.1</block>
+  <block id="d4b36e25c7ff304278d8f8203382ad65" category="list-text">版本 1</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">开始之前</block>
+  <block id="b3d01b53079f4b9fbda29e6a55f54947" category="paragraph">要准备使用 ONTAP REST API ，您应执行几个步骤。</block>
+  <block id="59382e918ffb6e6d1580a8b17e6e1e2c" category="section-title">ONTAP 9 的使用经验</block>
+  <block id="edca3acbd939d4adbc6fd1775e2aa7d0" category="inline-link">ONTAP 9 概念</block>
+  <block id="7f22baf1d1c4dbcf7e51a6ce50ea7bcb" category="paragraph">您应具备使用 ONTAP 9 的经验。其中包括了解基本概念和术语，以及在系统管理方面的一些经验。请参见<block ref="fe839e5e9dcf42e7a7beb586cd30f140" category="inline-link-rx"></block> 开始使用。</block>
+  <block id="0182974655f974e8429fb64bb3d15eb2" category="section-title">查看 REST 概念和实施</block>
+  <block id="8ceec3260a787be9ab7b1aca06205f16" category="inline-link-macro">了解 ONTAP REST API</block>
+  <block id="91db590abe4fca193a718998e7fb66b5" category="paragraph">请务必查看 <block ref="df714aa83c650303eaf8fe51edfe9d80" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 ONTAP REST API 的详细信息。</block>
+  <block id="848c9ae1e7e981016f6df28d16d2cedd" category="section-title">软件开发背景</block>
+  <block id="a02beec7b8a899e8a4e50ec1d2df453e" category="paragraph">在软件开发技术和流程方面拥有一些经验非常有用，包括一种或多种编程语言以及一些通用实用程序，例如 curl 。</block>
+  <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="section-title">获取更多信息</block>
+  <block id="98321719efaaa92dd29b848db8bd720f" category="paragraph">您应了解中建议的追加信息资源 <block ref="a1231e85a4671172bad70df5e72464d2" category="inline-link-macro-rx"></block>。</block>
+  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="doc">NVMe</block>
+  <block id="26480427f609b5d339095df99aa09f7c" category="paragraph">您可以使用这些 API 调用来管理支持非易失性内存快速（ NVMe ）的资源。</block>
+  <block id="11b0f3090bfc7e369a36e9cc90c4f582" category="section-title">光纤通道登录</block>
+  <block id="2935855efa69a27eefb72573bc4066e1" category="paragraph">光纤通道登录表示由登录到 ONTAP 的光纤通道启动程序构成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="65c280309cb16c4db0a31c86b28b804c" category="section-title">NVMe 接口</block>
+  <block id="574ab269e7caa83c4f904627c177d111" category="paragraph">NVMe 接口是指配置为支持基于网络结构的 NVMe （ NVMe-oF ）协议的网络接口。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="0845ef772913e6fb6b0cbb8ad6dae1d0" category="section-title">NVMe 服务</block>
+  <block id="d7135e19354e1577f81ff90fca13afcd" category="paragraph">NVMe 服务定义 SVM 的 NVMe 控制器目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="60f0443ad11fd726953afc1b7f16c188" category="section-title">NVMe 子系统控制器</block>
+  <block id="055c2c82f5f90d21db7da7a6ed60c13e" category="paragraph">NVMe 子系统控制器表示主机与存储解决方案之间的动态连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="433ced2138f5d40b7adbfa80ca0f3e16" category="section-title">NVMe 子系统映射</block>
+  <block id="816c0720f92a2711cb0cd082d1076aa6" category="paragraph">NVMe 子系统映射是 NVMe 命名空间与 NVMe 子系统的关联。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="1361b47201058431e29c4f4e3cab651c" category="section-title">NVMe 子系统</block>
+  <block id="fb8f24dc4fe86e198d8b55ea44102fe4" category="paragraph">NVMe 子系统可为一组连接 NVMe 的主机维护配置状态和命名空间访问控制。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="13d28e8dfc702e3456e0767dff9a128a" category="section-title">命名空间</block>
+  <block id="ce9f5c2bc40cd88e3ff682c6b88a8186" category="paragraph">NVMe 命名空间是一组可寻址逻辑块，这些逻辑块提供给使用基于网络结构的 NVMe 协议连接到 SVM 的主机。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="db5eb84117d06047c97c9a0191b5fffe" category="doc">支持</block>
+  <block id="19e28f133d3f6f61397443b9a434bda8" category="paragraph">您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。</block>
+  <block id="6645e0ebb53d4b6e68be7936af3a8039" category="section-title">AutoSupport</block>
+  <block id="f0d5ad06fbd80e449410ccfbaa33addd" category="paragraph">AutoSupport 会收集配置和状态详细信息以及错误，并向 NetApp 报告这些信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="c232c3e85ee1366820a448bc348281f4" category="section-title">AutoSupport 消息</block>
+  <block id="5522bdbec44062de52fbbabadd62cf9a" category="paragraph">每个节点都会维护可生成和检索的 AutoSupport 消息。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="c72a28b1b443b9f22b75ff4529e4b636" category="section-title">配置备份</block>
+  <block id="3506658d5cf5065b7ffa16fd3cef2140" category="paragraph">您可以使用这些 API 检索和更新当前备份设置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="d2b5de1cf6ae99abd7206c9547256b80" category="section-title">配置备份操作</block>
+  <block id="77dcd58a6b64031a5ee1ff93d8bcebcf" category="paragraph">您可以创建，检索和删除配置备份文件。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="2a942848121349f87fa5e6d09b4c0232" category="section-title">EMS</block>
+  <block id="17fd4a0ef48b8b4d4bb164c383edef90" category="paragraph">事件管理系统（ EMS ）收集事件并向一个或多个目标发送通知。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="24db2db65660162c9cae9ae2b55718ea" category="section-title">EMS 目标</block>
+  <block id="1e41d5cb71bc9df0ed8a068602666bc1" category="paragraph">EMS 目标可确定通知的发送方式和发送位置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="88386e1cec5fbbeb2091685054c5c411" category="section-title">EMS 目标实例</block>
+  <block id="584e730a66345b9ec98cdcdad19129a9" category="paragraph">EMS 目标实例按类型和位置定义。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="a631a01c80e3de0135e4ab5fa80a3501" category="section-title">EMS 事件</block>
+  <block id="9da55d7f0afa2a45da614995dd22f9d9" category="paragraph">这是集群的实时系统事件集合。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="d1f48be46780b4da8fc3bc7cdd279568" category="section-title">EMS 筛选器</block>
+  <block id="958762edbcb92f83ef353032a702db62" category="paragraph">EMS 筛选器可共同识别需要额外处理的事件。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="43892382daa7fe80f6f1a0c10c47b27c" category="section-title">EMS 筛选实例</block>
+  <block id="b32cbc34620cb1c8e6e3c04c7cd84ea6" category="paragraph">EMS 筛选器实例是应用于事件的规则的集合。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="ecd2dc08fe228d4f0f3210bdc9b6c90a" category="section-title">筛选器实例的 EMS 规则</block>
+  <block id="e292f6535bbde80538aaf44d4a29f929" category="paragraph">可以为 EMS 筛选器的特定实例管理规则列表。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="245d4f1f6d25ca75b13988e60faba80f" category="section-title">筛选器实例的 EMS 规则实例</block>
+  <block id="58d17198c3d3a389072585844a168044" category="paragraph">EMS 筛选器的特定实例的单个规则。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="c70dd9bf7100bb0727e205edece2fe65" category="section-title">EMS 消息</block>
+  <block id="3214c401b746a3c3a353deaffe421701" category="paragraph">可用于访问 EMS 事件目录。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="305af65222ed3fff91f5c8bcdfe17162" category="section-title">SNMP</block>
+  <block id="3f7136cad28b177ed253f0b3d73c84c9" category="paragraph">您可以为集群启用和禁用 SNMP 和陷阱操作。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="19b833b71103b9973103a10d4028c114" category="section-title">SNMP 陷阱主机</block>
+  <block id="5769fecce260b4a846cf5c56a6499898" category="paragraph">SNMP 陷阱主机是一个配置为从 ONTAP 接收 SNMP 陷阱的系统。您可以检索和定义主机。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="7e02da6e354a94f76d34d87e880bd155" category="section-title">SNMP 陷阱主机实例</block>
+  <block id="b26d022aeb288cb83538385118383ca5" category="paragraph">您可以管理特定的 SNMP 陷阱主机。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="e77de590cd71a55fe09a65e34442907d" category="section-title">SNMP 用户</block>
+  <block id="c3b7775b2eccd350a3b590c2c1c7e7a3" category="paragraph">您可以定义和管理 SNMP 用户。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="d66fa3e0a64d351d586f8ca04deebad7" category="section-title">SNMP 用户实例</block>
+  <block id="b6fc3f4cebfd4495ccd03b001112b524" category="paragraph">您可以管理引擎 ID 与管理 SVM 或数据 SVM 关联的特定 SNMP 用户。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="6d9e60d71e6ca21dbbaae6a56595b33f" category="doc">异步处理如何使用作业对象</block>
+  <block id="f8645777304498f78534eb91dd733f91" category="paragraph">发出设计为异步运行的 API 请求后，始终会创建一个作业对象并将其返回给调用方。作业将描述并固定处理请求的后台任务。根据 HTTP 状态代码，您必须检索作业状态以确定请求是否成功。</block>
+  <block id="d3788811628070b6b8030c6ef7b82ef1" category="paragraph">请参见 <block ref="f8e4b13da6e177d5a9fd74904a1802ee" category="inline-link-macro-rx"></block> 确定要异步执行的 API 调用。</block>
+  <block id="a8309049942086c2cb34d06b79f3e1f8" category="section-title">控制请求的处理方式</block>
+  <block id="1084d62a8185c09b35a498111328338e" category="paragraph">您可以使用 `return_timeout` query 参数控制异步 API 调用的处理方式。使用此参数可能会产生两种结果。</block>
+  <block id="79c9e2bc343687ace96848830a1b7ef5" category="list-text">计时器将在请求完成之前过期</block>
+  <block id="5297088497336f28245812f751dc1442" category="list-text">对于有效请求， ONTAP 将返回 202 HTTP 状态代码以及作业对象。您必须检索作业状态以确定请求是否成功完成。</block>
+  <block id="eb1e85425716b64be6784d892532a723" category="list-text">请求在计时器过期之前完成</block>
+  <block id="0c71d100c3dd501b43051aba4ee308a8" category="list-text">如果此请求有效并在该时间到期之前成功完成，则 ONTAP 将返回 200 HTTP 状态代码以及作业对象。由于请求已同步完成，如 200 所示，因此您无需检索作业状态。</block>
+  <block id="315d4aa16a7d0c4be58fc477cefe016f" category="admonition">`return_timeout` 参数的默认值为零秒。因此，如果不包含参数，则始终会为有效请求返回 202 HTTP 状态代码。</block>
+  <block id="0b59094893d51f7145a2630314a487ad" category="section-title">正在查询与 API 请求关联的作业对象</block>
+  <block id="49ae4b3e87a30f19cb084a67d672b82f" category="paragraph">HTTP 响应中返回的作业对象包含多个属性。您可以在后续 API 调用中查询 state 属性，以确定请求是否成功完成。作业对象始终处于以下状态之一：</block>
+  <block id="6ac451bf60fd238cbad3c65d72492af4" category="list-text">非终端状态</block>
+  <block id="7b2f31b90fe1c2cc33a52233c1925df3" category="list-text">已排队</block>
+  <block id="5bda814c4aedb126839228f1a3d92f09" category="list-text">正在运行</block>
+  <block id="e99180abf47a8b3a856e0bcb2656990a" category="list-text">已暂停</block>
+  <block id="b98a176698c2de9a2b4f71b184ca82f9" category="list-text">终端状态</block>
+  <block id="505a83f220c02df2f85c3810cd9ceb38" category="list-text">success</block>
+  <block id="e139a585510a502bbf1841cf589f5086" category="list-text">失败</block>
+  <block id="6bf66c95880dec487d135a49bd2f166f" category="section-title">用于发出异步请求的常规操作步骤</block>
+  <block id="8b38da21ed7969442cd1cc0e38f03a3b" category="paragraph">您可以使用以下高级操作步骤完成异步 API 调用。此示例假设未使用 `return_timeout` 参数，或者此时间已到后台作业完成之前。</block>
+  <block id="0deabf644e722c81f85e31df84cbe22d" category="list-text">问题描述一种设计为异步执行的 API 调用。</block>
+  <block id="f6d52fde097d143df856d93a9014f85e" category="list-text">接收 HTTP 响应 202 ，指示接受有效请求。</block>
+  <block id="c14204fc561259d66fa2aef5b4314029" category="list-text">从响应正文中提取作业对象的标识符。</block>
+  <block id="d7a138c57b8dc6d35621f54e72488bf9" category="list-text">在一个定时环路中，在每个周期中执行以下操作：</block>
+  <block id="51c033a34d63a2d1737e1b6bdf842d1f" category="list-text">获取作业的当前状态。</block>
+  <block id="b281ec87e30bc1058b3173012f46c637" category="list-text">如果作业处于非终端状态，请重新执行环路。</block>
+  <block id="6caaacff3c8abae5d9b2e02a5e4d0829" category="list-text">当作业达到终端状态（成功，失败）时停止。</block>
+  <block id="13d76f06d267496e8846be9e378c6df8" category="inline-link-macro">工作流 1 ：更新集群联系人并检查作业状态</block>
+  <block id="c0116766bf5527bac2fa14169891d4d3" category="paragraph"><block ref="c0116766bf5527bac2fa14169891d4d3" category="inline-link-macro-rx"></block></block>
+  <block id="f09943979dc3457d406cfb7e8205a032" category="paragraph">您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。</block>
+  <block id="f372ae3b2fda116fe4b7463cbac902c0" category="section-title">ONTAP 9 资源</block>
+  <block id="774a065cb3548cc61fb0ec3bc1494fbe" category="inline-link">ONTAP 9 文档中心</block>
+  <block id="04b0bb6aae6dc41149097cc24034df97" category="list-text"><block ref="04b0bb6aae6dc41149097cc24034df97" category="inline-link-rx"></block></block>
+  <block id="e5046d1a2eb3a4ac58813056e012053b" category="paragraph">提供了 ONTAP 9 的所有文档。</block>
+  <block id="8574bd76a1428c3bf08d97dadd4ae77c" category="inline-link">ONTAP 和 ONTAP System Manager 资源</block>
+  <block id="ef6786259f693365fcfb0cc5f63f3f4e" category="list-text"><block ref="ef6786259f693365fcfb0cc5f63f3f4e" category="inline-link-rx"></block></block>
+  <block id="d36ee6fe6aa657c937857a18101e0782" category="paragraph">提供规划，管理和支持 ONTAP 9 所需的文档和其他有用链接。</block>
+  <block id="1d5be002ec12a8cee5e18879d77b8f22" category="section-title">ONTAP 9 开发人员资源</block>
+  <block id="71b777e6ebcd5f4a2bc1afc0b0e9cdd2" category="list-text"><block ref="71b777e6ebcd5f4a2bc1afc0b0e9cdd2" category="inline-link-rx"></block></block>
+  <block id="4afcca23062e18db41a227f2c2299716" category="paragraph">提供关键 ONTAPI 调用以及与等效 REST API 调用的映射。</block>
+  <block id="b597994ba1223810c3ac8977cffacb37" category="inline-link">NetApp 开发人员网络： ONTAP RESTful API</block>
+  <block id="efd29339cf836e327db5767ec23fa108" category="list-text"><block ref="efd29339cf836e327db5767ec23fa108" category="inline-link-rx"></block></block>
+  <block id="851a3f787680b56a5580f460ad9424f3" category="paragraph">提供使用 ONTAP REST API 所需的资源和文档，包括 ONTAP Python 客户端库。</block>
+  <block id="e6d9d2044073b02a5ea64a67b46c528d" category="inline-link">NetApp ONTAP Python 客户端库入门</block>
+  <block id="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="list-text"><block ref="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="inline-link-rx"></block></block>
+  <block id="1016adf11e3bfe1329073f40bbc1f5b8" category="paragraph">很好地介绍了 NetApp Python 客户端库以及如何开始使用该库编写代码。</block>
+  <block id="ed08ca4078374e76c6df3f1999af7274" category="section-title">NetApp 资源</block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">NetApp 支持</block>
+  <block id="6f62101e13e498d87bf2ae6b69c1f323" category="list-text"><block ref="6f62101e13e498d87bf2ae6b69c1f323" category="inline-link-rx"></block></block>
+  <block id="3d32fc1a126e880a8ed715ad4b9c42f5" category="paragraph">访问故障排除工具，文档和技术支持帮助。</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
+  <block id="29c81145f8df4c302d2a5db797d28b64" category="list-text"><block ref="29c81145f8df4c302d2a5db797d28b64" category="inline-link-rx"></block></block>
+  <block id="f921b580843ecb0435df878ae2c6c51e" category="paragraph">与使用 ONTAP 9 和 ONTAP REST API 相关的访问要求和兼容性信息。</block>
+  <block id="5528d45d676e7b5e4b5f82591b52d795" category="inline-link">NetApp 技术报告和白皮书库</block>
+  <block id="8d4056bb7e1987655b2aad3e78b46bc4" category="list-text"><block ref="8d4056bb7e1987655b2aad3e78b46bc4" category="inline-link-rx"></block></block>
+  <block id="e996b4c3d79a1e2689fba6ba27c0372f" category="paragraph">访问技术报告，白皮书和其他文档。</block>
+  <block id="62e19745c2e31bc4e7e9e3351516716c" category="summary">欢迎使用 ONTAP 自动化文档门户。</block>
+  <block id="391aea2b8a642f755fa9fc56deaf7f9d" category="doc">ONTAP 自动化</block>
+  <block id="09c6f2a5a82ad068a97583300dc23e8e" category="paragraph">您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API 为所有各种自动化技术奠定了基础。</block>
+  <block id="1fde0727b387439572ade83eecff4f68" category="section-title">了解新功能</block>
+  <block id="0ae3ca9f8ae30c01ee330973e5478ca9" category="inline-link-macro">ONTAP 9.9.1 自动化的新增功能</block>
+  <block id="1074fe904a670e0208d4e546e21ad2ae" category="list-text"><block ref="1074fe904a670e0208d4e546e21ad2ae" category="inline-link-macro-rx"></block></block>
+  <block id="a753bf5f3b9313fdceb106b5c3e89d3f" category="section-title">获取更多信息并与同行保持联系</block>
+  <block id="5683b07c266ff7369d1d391fd7f3a01e" category="inline-link-macro">如何获取更多信息</block>
+  <block id="9f2815f977729243eea43c592aeb8ea0" category="list-text"><block ref="9f2815f977729243eea43c592aeb8ea0" category="inline-link-macro-rx"></block></block>
+  <block id="e498749f3c42246d50b15c81c101d988" category="doc">应用程序</block>
+  <block id="e126569377e0b2c42e1f2b3f1f4a111c" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 应用程序资源。</block>
+  <block id="1ddf333c6654f7f89c739dddfb4cc429" category="section-title">应用程序</block>
+  <block id="6c5dba7ca23cbe6a8f7fba0f3ffae13c" category="paragraph">ONTAP 应用程序按类型进行排列，包括模板，应用程序，组件和 Snapshot 副本。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="53407aeec220be7474e15c2a9f182a5a" category="section-title">应用程序快照</block>
+  <block id="d82ec776cd833da582973d01b1875122" category="paragraph">应用程序支持 Snapshot 副本，可以随时创建或还原这些副本。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="b574a0948409b74965fbab15779e289d" category="paragraph">您可以快速开始使用 ONTAP REST API 。在准备并了解基本的请求响应流之后，您可以使用 curl 对一个简单的调用进行问题描述处理。这样可以提供在实时系统上对更复杂的工作流使用之前所需的简介和视角。</block>
+  <block id="57416e369db3fa6709c6114a5d28e38f" category="doc">正在检索集群软件版本</block>
+  <block id="f6207a6668d08d8fc8c0fd8d02772db8" category="paragraph">每个 API 事务都包含一个 HTTP 请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。</block>
+  <block id="15fc2d856a08b9dcaa71e500a1ab83c5" category="inline-image-macro">简单 REST API 调用的图示</block>
+  <block id="902052a0ca25bce54cba73bea386b28e" category="paragraph"><block ref="902052a0ca25bce54cba73bea386b28e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e2a3074658911bf1de23b5d225e3e531" category="paragraph">从客户端发送到服务器的请求包括以下内容：</block>
+  <block id="5ad6712125e855f87f1f57ee8955d5bb" category="list-text">GET 动词</block>
+  <block id="35e7396d97125d13fced8d76841411fd" category="list-text">集群的 URL 路径</block>
+  <block id="7f2e65d10a1cd8eefbde52258df207ca" category="list-text">查询参数（字段）</block>
+  <block id="f675460059eeb768ec47e105e889b153" category="list-text">请求标头，包括授权</block>
+  <block id="5a4bc8c2caa05fbd9176234fdb066497" category="paragraph">从服务器发送到客户端的响应包括以下内容：</block>
+  <block id="1b2a1d97817dee4df7fa73df2277fe55" category="list-text">状态代码 200</block>
+  <block id="56ecb97c626815b7f982c04e736f624b" category="list-text">响应标头</block>
+  <block id="4494efe174ad9e4c83bc75af384574e0" category="list-text">包含集群软件版本的响应正文</block>
+  <block id="18b4b706d794eaf9349903da4fc0390f" category="paragraph">使用 ONTAP 时， REST API 可扩展基于角色的访问控制（ Role-Based Access Control ， RBAC ）功能。您可以创建具有自定义角色的用户帐户，以限制对 REST 端点的访问。</block>
+  <block id="b74460ea0e79c18a13e8aaf7ba6b5575" category="section-title">为 REST 端点创建角色</block>
+  <block id="6a4ac1ce41cb9afd36c8a1b4345eb15a" category="paragraph">REST 角色是通过一组或多个权限定义的。每个权限都包含一个指向 REST 端点的路径以及关联的访问级别。每个端点的访问权限分为三个级别之一，用于确定可用于资源的 HTTP 方法。访问级别包括：</block>
+  <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="list-text">全部</block>
+  <block id="0525ebcee9d40246b4c3fe60fa9dffdf" category="paragraph">可以使用所有 HTTP 方法</block>
+  <block id="d8bd6e60adcc01ce20f509ea6800de8f" category="list-text">只读</block>
+  <block id="38c8b11da703697447ae0e841de8ff94" category="paragraph">只能使用 GET</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="list-text">无</block>
+  <block id="e170b518f0b1211531e4d6a5dc28bd24" category="paragraph">不允许访问</block>
+  <block id="46c2882c6847f54514352d1885b51de6" category="paragraph">以下是可分配给 REST 角色的两个特权的示例：</block>
+  <block id="4fb0f5d620d25bedf9de124abeecb3dd" category="list-text">`access="readonly" ， path="/apI/storage/volumes"`</block>
+  <block id="a6c54762c776264191d718908cc8793a" category="list-text">`access="none" ， path="/apI/snapmirror/policies"`</block>
+  <block id="fc2e8f1e6bdb078d903709febae2f81c" category="section-title">创建具有自定义角色的用户帐户</block>
+  <block id="efce0b822abdb6a64b62590d47b2243d" category="paragraph">总体而言，您可以按如下所示创建具有自定义 REST 角色的帐户：</block>
+  <block id="5cbfeffa3e5b9da20fef5c63f1ade205" category="list-text">创建可访问 HTTP 管理协议的用户帐户。</block>
+  <block id="388dcc6806f032ea576d4bf906f82f93" category="list-text">创建具有所需权限的 REST 角色。</block>
+  <block id="54f15799e869b562c4b17306f16e44af" category="list-text">将用户帐户与角色关联。</block>
+  <block id="1ef5c995db2292c818d9f9e8bba7c9e4" category="doc">对象存储</block>
+  <block id="7ccaa0673dcbf1129469d5f4407e7b74" category="paragraph">您可以使用这些 API 调用访问基于 S3 的对象存储。</block>
+  <block id="62254758dcfe975098fab22609c8aa79" category="section-title">存储分段</block>
+  <block id="51bd7d165e8c40b2785e7cc20641c92e" category="paragraph">存储分段是一个对象容器，使用对象名称空间进行结构化。每个 S3 对象服务器可以有多个分段。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="992a0f0542384f1ee5ef51b7cf4ae6c4" category="section-title">服务</block>
+  <block id="0ce533be2fabb323cea3390612055d60" category="paragraph">您可以创建和管理 ONTAP S3 配置，包括服务器和存储分段配置。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="bd96d411ebb8705b0ef857c4d7b8c9c9" category="section-title">服务分段</block>
+  <block id="fb6c989652f69df6c8547cd9dfd4fcf4" category="paragraph">存储分段是一个对象容器，使用对象名称空间进行结构化。您可以管理特定 S3 服务器的存储分段。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="8acc0dc5cdc4a547b0826578b2a98b48" category="section-title">S3 组</block>
+  <block id="e45e8737cd6cf0e48b59cefd68229fc8" category="paragraph">您可以创建 S3 用户组并在组级别管理访问控制。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="29c67008363344d9ca92cd75f29fe2c9" category="section-title">S3 策略</block>
+  <block id="d294313e121bfbd45fa5b55ca0e3324d" category="paragraph">您可以创建 S3 策略并将其与资源关联以定义各种权限。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="section-title">用户</block>
+  <block id="fcb4876473d3ad9e68e00cb94089cd42" category="paragraph">S3 用户帐户在 S3 服务器上维护。用户帐户基于一对密钥，并与其控制的存储分段相关联。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="5b588205bbe49d54e5a0303fd962d449" category="doc">有关 ONTAP 自动化的博客</block>
+  <block id="c99ca37e36a22c30020b03f2ea8e7938" category="paragraph">我们提供了多篇博客文章，可帮助您更好地了解 ONTAP 自动化的不同技术和方法。</block>
+  <block id="2e02e4fcb54e6e1277182e7dcc734294" category="section-title">ONTAPI 到 REST 的映射</block>
+  <block id="396362dbb23440630e9d742429d0eb0e" category="paragraph">NetApp 支持从专有的 ONTAPI （以前称为 Zephyr ） API 迁移到更强大的新 ONTAP REST API 。</block>
+  <block id="66678bc28616cb8b07e14e87fe993fc3" category="inline-link">netapp.io/2020/12/17/ontapi-rest-mapping</block>
+  <block id="62bed9184b42d07dbb453a2b1a516b44" category="paragraph"><block ref="62bed9184b42d07dbb453a2b1a516b44" category="inline-link-rx"></block></block>
+  <block id="bc00f7a5406f8f98848784d25ca2e573" category="section-title">将专用命令行界面直通与 ONTAP REST API 结合使用</block>
+  <block id="4561b01a73d4a9676d22f56757f49ab2" category="paragraph">CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。</block>
+  <block id="ec141cf04dfb48ccacaa7a20c45d7195" category="inline-link">netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api</block>
+  <block id="b87866cc7b2f4d3bca6b529f08021191" category="paragraph"><block ref="b87866cc7b2f4d3bca6b529f08021191" category="inline-link-rx"></block></block>
+  <block id="f4a4d3f8e378d11233851c0c7c1aeda7" category="section-title">NetApp 和 Ansible 入门：安装 Ansible</block>
+  <block id="3232acac3eec8e3d87880c5b41ab690d" category="paragraph">如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。</block>
+  <block id="b1ed8990c321e2a215dff03bbacc2765" category="inline-link">netapp.io/2018/10/08/Getting Start-With NetApp-and-Ansible install-Ansible</block>
+  <block id="152f81f627d712d24b8acdfdd3016fc7" category="paragraph"><block ref="152f81f627d712d24b8acdfdd3016fc7" category="inline-link-rx"></block></block>
+  <block id="c51932c28f2d865cc8b2b0211769ca8f" category="paragraph">您可以访问所有 ONTAP REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。</block>
+  <block id="765005864f316ffe6cd14a5468133456" category="admonition">您可以在本地 ONTAP 系统或 NetApp 开发人员网络网站上访问 API 参考内容。</block>
+  <block id="a4f0be5f112e58994f4b5192c8d95aa9" category="section-title">访问 ONTAP API 文档页面</block>
+  <block id="6630ebbabec7748c444af084a44d2b3a" category="paragraph">您可以在本地 ONTAP 系统上访问 ONTAP API 联机文档页面。</block>
+  <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
+  <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">ONTAP 集群管理 LIF 的 IP 地址或主机名</block>
+  <block id="4c00680cb601dcd1be164318ed4c2a88" category="list-text">有权访问 ONTAP REST API 的帐户的用户名和密码</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
+  <block id="2bc3d06698b6c0a0cff5dd4519390843" category="list-text">在浏览器中键入 URL 并按 * 输入 * ：</block>
+  <block id="b112c8c17f296b55ffc035363cc1cac3" category="paragraph">`https://&lt;ip_address&gt;/docs/api`</block>
+  <block id="86537fad07b98a84cd28189507075143" category="list-text">使用 ONTAP 帐户登录。</block>
+  <block id="4a7f5568d4707b4e4a381d4a753ed791" category="paragraph">此时将显示 ONTAP API 文档页面，其中 API 调用会按主要资源类别组织在底部。</block>
+  <block id="b7998fdfa579757468dfd6407b7df0e3" category="list-text">作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。</block>
+  <block id="978a2aa1798744f46fda712831f51350" category="section-title">访问 NetApp DevNet 上的参考内容</block>
+  <block id="c94bdeb8a782c72386767d4c7becc162" category="paragraph">您可以从 ONTAP 开发人员网络网站访问 NetApp REST API 参考文档。</block>
+  <block id="b91bc699a905879f81b6d1321e652cbd" category="list-text">导航到 ONTAP 开发人员网络网站上的 * NetApp REST APi* 页面：</block>
+  <block id="6a63b53f3b2aa312b323d97ef5f8c1ee" category="inline-link">NetApp DevNet ： ONTAP REST API</block>
+  <block id="3ed5229516b6cbe9a83c3af31dfe7e8f" category="paragraph"><block ref="3ed5229516b6cbe9a83c3af31dfe7e8f" category="inline-link-rx"></block></block>
+  <block id="efb08c83b1593d6a73a8ac4f456e4247" category="list-text">向下滚动并在 * 联机 REST API 参考 * 下单击相应 ONTAP 版本的链接。</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="doc">SAN</block>
+  <block id="d026d48ac10030a378a0074cde689bc7" category="paragraph">您可以使用这些 API 调用来管理存储区域网络（ Storage Area Networking ， SAN ）资源。</block>
+  <block id="21b818347e867034bff06df47c6638ed" category="paragraph">光纤通道登录表示已登录到 ONTAP 的光纤通道启动程序所形成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="362aaf53838180aef26894961e18a234" category="section-title">光纤通道 WWPN 别名</block>
+  <block id="bec2206da79fc1b03bfc7f4f6c7bda42" category="paragraph">全球通用端口名称（ WWPN ）是一个 64 位值，用于唯一标识光纤通道端口。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="6c1e0dfe5a404cce67f1db281a50ea76" category="section-title">光纤通道协议服务</block>
+  <block id="b125a3961f250d22b3eed929040d8e9a" category="paragraph">光纤通道协议（ FCP ）服务定义 SVM 的光纤通道目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="58f3779afe9da9ffdc085dc3064306f7" category="section-title">igroup</block>
+  <block id="68c0fd93c2b023ed4f45e053c2c0475e" category="paragraph">启动程序组（ igroup ）是一组光纤通道 WWPN （全球通用端口名称）， iSCSI IQN （限定名称）和 iSCSI EUI （扩展唯一标识符），用于标识主机启动程序。此资源类型最初是在 ONTAP 9.6 中推出的。</block>
+  <block id="ed3e987dd36be028b08d2f926d2d2d81" category="paragraph">嵌套 igroup 是 ONTAP 9.9.1 中的一项新功能，也已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
+  <block id="631b740ef1e6620839e8143382936b10" category="section-title">iSCSI 凭据</block>
+  <block id="ff405aa42851c6e5daf11546e79e3980" category="paragraph">iSCSI 凭据对象包含启动程序和 ONTAP 使用的身份验证凭据。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="0ce9193c4743638434ef94331f17def2" category="section-title">iSCSI 服务</block>
+  <block id="1dfd42e3c5ed950e1ad51c88566f0777" category="paragraph">iSCSI 服务定义 SVM 的 iSCSI 目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="401ea405ada422dc57c71ecc462575ab" category="section-title">iSCSI 会话</block>
+  <block id="4ec7a22296b883954f318da87ad08cf3" category="paragraph">iSCSI 会话是指将 iSCSI 启动程序与 iSCSI 目标链接在一起的一个或多个 TCP 连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2bcfa5513eb7e40b556060fcb5df869d" category="section-title">LUN 映射</block>
+  <block id="c1899d8ac0f131825213c510da4ad1d1" category="paragraph">LUN 映射是指 LUN 与启动程序组之间的关联。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="7b3c6a2d089eb1b6f8959e7e61a50c07" category="section-title">LUN</block>
+  <block id="cf304f8d071581c8a16443a669547c31" category="paragraph">LUN 是存储区域网络（ SAN ）中存储的逻辑表示形式。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
+  <block id="f094fdd1ff33d53f9180e4e35ace68f1" category="section-title">端口集</block>
+  <block id="5d3a296c76ec21766a0b62dfec5b3611" category="paragraph">端口集是与 _portset_ Storage VM 关联的一组光纤通道或 iSCSI 网络接口。虽然先前版本的 ONTAP 中已存在此功能，但现在已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
+  <block id="0b7e67b6cdcf0432b624d53588d520fb" category="doc">SVM</block>
+  <block id="5782655b9fc988fc3096ea1fe0953ee6" category="paragraph">您可以使用这些 API 调用来管理 Storage Virtual Machine （ SVM ）。</block>
+  <block id="20b974944bd89d74b6906ef955914c75" category="section-title">对等权限</block>
+  <block id="df8234ad9243e2442684ae38b139385c" category="paragraph">可以分配对等权限以启用 SVM 对等关系。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="20a07d06a4b1bc423793cd5bc530bb3d" category="section-title">peers</block>
+  <block id="cfb6c2e3fe9889f322f94cc8d50809b1" category="paragraph">对等关系可在 SVM 之间建立连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="642223473862db290604321fe2ebe763" category="section-title">svms</block>
+  <block id="96586887fdfb43d20f718252d1593e59" category="paragraph">您可以管理绑定到集群的 SVM 。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="4a16b99eaec5c66ddc0509638e1cf2bf" category="paragraph">Python 是一种受欢迎的编程语言，尤其适用于数据中心自动化。您可以使用 Python 的原生功能或通过 ONTAP Python 客户端库访问 NetApp REST API 。</block>
+  <block id="3c09024082538b393ae85161883b78ab" category="paragraph">您可以通过多种不同方式访问 ONTAP REST API 。</block>
+  <block id="1391ec09425a9a140a4aef306e42d0cb" category="section-title">网络注意事项</block>
+  <block id="480df78a66061b5c3b61f69d89342d23" category="paragraph">您可以通过以下接口连接到 REST API ：</block>
+  <block id="15a4d902a9e2eeb56724bdb94f9d1977" category="list-text">集群管理 LIF</block>
+  <block id="e2578ec54f85b5b6333c94364b756a1c" category="list-text">节点管理 LIF</block>
+  <block id="a954bd55e944d7b65a02512356ab0177" category="list-text">SVM 管理 LIF</block>
+  <block id="3869128f90019baba527314ae533f075" category="paragraph">您选择使用的 LIF 必须配置为支持 HTTPS 管理协议。此外，网络中的防火墙配置必须允许 HTTPS 流量。</block>
+  <block id="45959e4341735c410aac6dadf11dd966" category="admonition">您应始终使用集群管理 LIF 。这样可以在所有节点之间对 API 请求进行负载平衡，并避免出现脱机或连接问题的节点。</block>
+  <block id="649819179ab6bae8f5294207b4462523" category="section-title">ONTAP API 联机文档页面</block>
+  <block id="087d099f57d218967e0c8c07c7e81673" category="paragraph">使用 Web 浏览器时， ONTAP API 联机文档页面提供了一个访问点。除了提供直接执行单个 API 调用的方法之外，此页面还包括 API 的详细问题描述，包括每个调用的输入参数和其他选项。API 调用按功能类别进行组织。请参见 <block ref="00860205e4d958b92bdfaf0f3e3b5586" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="af945751c0efb1d33830b48e2e17c2e6" category="paragraph">用于访问最新版本 API 的文档页面的 URL 格式为：</block>
+  <block id="5577746582bcb9358092e3471e9dbcbb" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/docs/api`</block>
+  <block id="26af4f060203125bc0739a38e9ddfa2b" category="section-title">自定义软件和工具</block>
+  <block id="6e70b7cc1cd3e6a65b37dbcdde8ecd4a" category="paragraph">您可以使用多种不同的编程语言和工具访问 ONTAP API 。常见选项包括 Python ， Java ， Curl 和 PowerShell 。使用 API 的程序，脚本或工具充当 REST Web 服务客户端。使用编程语言可以加深对 API 的了解，并提供自动化 ONTAP 管理的机会。</block>
+  <block id="9670d5b867b93341fdec8b7aadfdba79" category="paragraph">用于直接访问最新版本 API 的基本 URL 格式为：</block>
+  <block id="eb58b311b3cd61c57c1148d0c5ba0129" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/api`</block>
+  <block id="433c12a33fdba27dd646123b380a2c4e" category="paragraph">要访问支持多个版本的特定 API 版本， URL 的格式为：</block>
+  <block id="8b27cc8fdbb4b1dea164580b7fa49b37" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/api/v1`</block>
+  <block id="249694a485fc5d3289c38986b4f8e887" category="doc">集群</block>
+  <block id="53cb0643f3f1046c67b92faf9e6e0cf3" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 集群和相关资源。</block>
+  <block id="3824ce9b3abc70c7c5c21eda0ab912d0" category="section-title">容量池</block>
+  <block id="c374efd8a5043c884177979a9179dd43" category="paragraph">通过容量池许可模式，您可以从共享池中为每个集群节点授予存储容量许可。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="51bdc8bf999c93768e182fae54e64934" category="section-title">机箱</block>
+  <block id="99b820b11503d1ddcde3fda74f356736" category="paragraph">机箱是支持集群的硬件框架。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="9b99bf7d2bfd4b09363304c166832734" category="section-title">集群</block>
+  <block id="e3b0a47831aef1054eb5f4066ce35fb9" category="paragraph">ONTAP 集群包含一个或多个节点以及用于定义存储系统的相关配置设置。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="a940a548ba41bc988f99d51fd02f21de" category="section-title">固件</block>
+  <block id="871834a540368bdf84b4395990e29ca9" category="paragraph">您可以检索固件更新请求的历史记录。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="12ceff2290bb9039beaa8f36d5dec226" category="section-title">作业</block>
+  <block id="904697e660d4cbfdd62c3a59759bc4df" category="paragraph">异步 REST API 请求使用由作业锁定的后台任务执行。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="05f5893732f0ae263d259d7a6d53ef55" category="section-title">许可证管理器</block>
+  <block id="b369b16e92f996e00351db6e130a541d" category="paragraph">您可以管理与 ONTAP 集群关联的每个许可证管理器实例相关的配置和其他信息。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="section-title">licenses</block>
+  <block id="0d600f41a8266499c57370c6800ad857" category="paragraph">通过这些许可证，您可以实施特定的 ONTAP 特性和功能。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="e1fb647d9c9ac78261c2aa60b4cac7b5" category="section-title">许可证实例</block>
+  <block id="71b47385ee618a2fae2664a10e7b792e" category="paragraph">每个许可证都可以作为一个单独的软件包进行管理。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2e97b5e5f53687c2edc46f6cfe0a5451" category="section-title">调解器</block>
+  <block id="daa83199ce876d3906471f4305486d9b" category="paragraph">您可以管理与 MetroCluster 关联的调解器，包括添加或删除调解器实例。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="1749d12df3df2319d3eee218a277ff83" category="section-title">MetroCluster</block>
+  <block id="331f16c67bfb37015af72877c3a297fb" category="paragraph">您可以创建和管理 MetroCluster 部署，包括执行切换或切回操作。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="7b5585e8b5e62fe2683b466045870056" category="section-title">MetroCluster 诊断</block>
+  <block id="a9137e9b0f9b61df9e234a600351501e" category="paragraph">您可以对 MetroCluster 部署执行诊断操作并检索结果。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="1a866229c550618dfa1ff7b2bbca3d93" category="section-title">MetroCluster DR 组</block>
+  <block id="1ee7729933ef643d54d0e99b88ecb1be" category="paragraph">您可以执行与 MetroCluster DR 组相关的操作。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="ffad460970904ec2c9c9af099e0391f8" category="section-title">MetroCluster 互连</block>
+  <block id="6e9a92f1a47bed9d13132a992dd338e0" category="paragraph">您可以检索 MetroCluster 互连状态。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="cf8683a46a9fce46da2b0e7bac364b41" category="section-title">MetroCluster 节点</block>
+  <block id="4ec82023640bc5601dde6e6d89b314d7" category="paragraph">您可以检索 MetroCluster 部署中各个节点的状态。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="4bc6b7be3ed7ef45661c92ef64ef7e57" category="section-title">MetroCluster 操作</block>
+  <block id="0a13542ee64f2d946239d0a9a6209e97" category="paragraph">您可以检索 MetroCluster 配置的最近执行的操作列表。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="187c6ad3a74cc93ac6c2229d398e383e" category="section-title">节点</block>
+  <block id="6948f5672b15a5beb2cb0e185c900849" category="paragraph">ONTAP 集群由一个或多个节点组成。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="b137167e861629d461972de6fa2c4574" category="section-title">NTP keys</block>
+  <block id="027c387eedd276acbd377127cf756b7f" category="paragraph">可以将网络时间协议（ NTP ）配置为在 ONTAP 和可信外部 NTP 时间服务器之间使用共享私钥。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="7e68cdae9094c04d3db96fce117b064c" category="section-title">NTP 服务器</block>
+  <block id="7e92cad37d54932d7be472286c10dad7" category="paragraph">您可以使用这些 API 调用来配置 ONTAP 网络时间协议设置，包括外部 NTP 服务器和密钥。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="1478901a98af45e1095839fa3df30322" category="paragraph">对等对象表示端点并支持集群对等关系。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="ccdb7bf9d93e5652b57cabcc8c41e061" category="section-title">Schedules</block>
+  <block id="62ab609b605a05f43f98599818f46170" category="paragraph">计划可用于自动执行任务。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="719d067b229178f03bcfa1da4ac4dede" category="section-title">软件</block>
+  <block id="cb32862c2302b4cbb3b8a44e2226df17" category="paragraph">ONTAP 集群包括集群软件配置文件，软件包收集和软件历史记录收集。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="acdc6b4f6edd40f37bce01247a32ff86" category="doc">SnapLock</block>
+  <block id="b4ad45acb73dc252050e525d981a2d6d" category="paragraph">SnapLock 是一种基于存储的传统 WORM （一次写入，多次读取）光纤解决方案实施方案，可长期保留数据。您可以使用这些 API 调用来管理 SnapLock 功能。</block>
+  <block id="ce0be71e33226e4c1db2bcea5959f16b" category="section-title">日志</block>
+  <block id="03aaf72a36d8a4b49208da200f94b4cf" category="paragraph">SnapLock 日志结构基于包含日志记录的特定卷上的目录和文件。日志文件将根据最大日志大小进行填充和归档。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="1d4022cc69557a9759f903689e5c6337" category="section-title">合规时钟</block>
+  <block id="02c81912a7634089043ac791429c0c06" category="paragraph">Compliance 时钟用于确定 SnapLock 对象的到期时间。时钟必须在 REST API 之外进行初始化，并且无法更改。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="90cf707e60635de8b651c0d98ae0973e" category="section-title">事件保留</block>
+  <block id="21632c1548a44b25024b7b882a17cac7" category="paragraph">您可以使用 SnapLock 基于事件的保留（ EBR ）功能定义事件发生后文件的保留时间。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="45c59e56e0fe071dfc474240e10a2bff" category="section-title">文件保留和特权删除</block>
+  <block id="dc72092dda0c282c5ff09f3938ea287f" category="paragraph">您可以管理 SnapLock 创建的文件的保留时间。如果需要，您还可以删除 SnapLock 企业卷上未过期的 WORM 文件。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="fb00578ec9d3fa400747c530aa16a46b" category="admonition">唯一有权执行删除操作的内置角色是 vsadmin-SnapLock 。</block>
+  <block id="fed16d3aa6b063ea96e275143a07ccb9" category="section-title">文件指纹</block>
+  <block id="bbada9713c694fc554c600df104fea52" category="paragraph">您可以查看和管理描述文件和卷的核心信息，例如类型和到期日期。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="1e3a85ebb1c233113bf042fe963e7cf5" category="section-title">合法保留</block>
+  <block id="c8affb4b638fb272e9f0ea2b1c6af6fe" category="paragraph">您可以使用这些 API 调用来管理属于诉讼流程的文件。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="32bab1cda6687d8af3648df1b3e2f763" category="doc">解释 API 响应</block>
+  <block id="6fc21adbf0e55cc3da583314e4540308" category="paragraph">每个 API 请求都会生成对客户端的响应。您应检查响应以确定其是否成功，并根据需要检索其他数据。</block>
+  <block id="0a289f551402f1b0bba7f13be5d7fdc4" category="section-title">HTTP 状态代码</block>
+  <block id="9cc7f2c4c4cb3a083eaa0fa002427217" category="paragraph">下面介绍了 ONTAP REST API 使用的 HTTP 状态代码。</block>
+  <block id="ca0dbad92a874b2f69b549293387925e" category="cell">代码</block>
+  <block id="bd41d562c332d24641812d2291c46936" category="cell">原因短语</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
+  <block id="e0aa021e21dddbd6d8cecec71e9cf564" category="cell">确定</block>
+  <block id="22dde4592ecf1a0346899f4796ac6a71" category="cell">表示未创建新对象的调用成功。</block>
+  <block id="757b505cfd34c64c85ca5b5690ee5293" category="cell">201</block>
+  <block id="0eceeb45861f9585dd7a97a3e36f85c6" category="cell">已创建</block>
+  <block id="96d8c2608803b60683fc0850d3051379" category="cell">已成功创建对象。响应中的位置标头包括对象的唯一标识符。</block>
+  <block id="854d6fae5ee42911677c739ee1734486" category="cell">202</block>
+  <block id="382ab522931673c11e398ead1b7b1678" category="cell">已接受</block>
+  <block id="8d8ad608d254874736ca41087ea93b4b" category="cell">已启动后台作业以执行请求，但尚未完成。</block>
+  <block id="18d8042386b79e2c279fd162df0205c8" category="cell">400</block>
+  <block id="0fc30646d5cf22910283967bf24ebf66" category="cell">请求错误</block>
+  <block id="d61713af1a9c56d51f7fb3873bed7e92" category="cell">此请求输入无法识别或不适当。</block>
+  <block id="816b112c6105b3ebd537828a39af4818" category="cell">401</block>
+  <block id="e06d1ba70f1331e9f9a113cc2f887d3f" category="cell">未授权</block>
+  <block id="3b182148c9c0009822cea2178fd99584" category="cell">用户身份验证失败。</block>
+  <block id="bbf94b34eb32268ada57a3be5062fe7d" category="cell">403</block>
+  <block id="722969577a96ca3953e84e3d949dee81" category="cell">已禁止</block>
+  <block id="832bcd57b678ba711a9e21562156a359" category="cell">由于授权（ RBAC ）错误，访问被拒绝。</block>
+  <block id="4f4adcbf8c6f66dcfc8a3282ac2bf10a" category="cell">404</block>
+  <block id="9e076f5885f5cc16a4b5aeb8de4adff5" category="cell">未找到</block>
+  <block id="24ff0a9484d837d82e7f8f8218e196b6" category="cell">请求中引用的资源不存在。</block>
+  <block id="bbcbff5c1f1ded46c25d28119a85c6c2" category="cell">405.</block>
+  <block id="e84e55d186de7883e285e32fc32bfa7c" category="cell">不允许使用此方法</block>
+  <block id="1d3cb250993a8d280152a1df96b9bd78" category="cell">此资源不支持请求中的 HTTP 方法。</block>
+  <block id="a96b65a721e561e1e3de768ac819ffbb" category="cell">409</block>
+  <block id="f1d4ac54357cc0932f385d56814ba7e4" category="cell">冲突</block>
+  <block id="bd584224ee6719b30d3d8e436e005a6a" category="cell">尝试创建对象失败，因为必须先创建另一个对象或请求的对象已存在。</block>
+  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
+  <block id="8f8913c1f755436db84ae169e37c61f9" category="cell">内部错误</block>
+  <block id="03f0e0f686ebd5f796ca9febd1723676" category="cell">服务器发生一般内部错误。</block>
+  <block id="04f98fbfd3c51a57a87539381fd8a213" category="paragraph">ONTAP 生成的 HTTP 响应包含多个标头。</block>
+  <block id="ce5bf551379459c1c61d2a204061c455" category="list-text">位置</block>
+  <block id="38515ce918c3b6af061a519ef0eac4b3" category="list-text">创建对象时，位置标头包含新对象的完整 URL ，包括分配给该对象的唯一标识符。</block>
+  <block id="ba07bca510e34abceaf29718956f302d" category="list-text">通常为 `application/hal+json` 。</block>
+  <block id="38eee230c1573327fd210b5c3dda7e19" category="section-title">响应正文</block>
+  <block id="e6c6c92dc547d386d241bcd550116b15" category="paragraph">API 请求生成的响应正文内容因对象，处理类型以及请求的成功或失败而异。响应始终在 JSON 中呈现。</block>
+  <block id="57d0d9ea2a98e5c26333523b1d8467c3" category="list-text">单个对象</block>
+  <block id="3cc50ef9b6d082ac8e12c2c3779c073b" category="paragraph">可以根据请求返回一个对象并显示一组字段。例如，您可以使用 GET 使用唯一标识符检索集群的选定属性。</block>
+  <block id="4e46d77705b2969e287dd5755715eb0a" category="list-text">多个对象</block>
+  <block id="515356f0f2f7c12627510739771d70ca" category="paragraph">可以从一个资源收集返回多个对象。在所有情况下，都会使用一致的格式，其中 `num_records` 表示包含对象实例数组的记录和记录的数量。例如，您可以检索特定集群中定义的节点。</block>
+  <block id="a7b616ec1be656c2c3ef33dfd78bdb0c" category="list-text">作业对象</block>
+  <block id="5e64c3bf2bc1f6387e5e57c5f9384ee8" category="paragraph">如果异步处理 API 调用，则会返回作业对象，用于将后台任务固定。例如，用于更新集群配置的修补程序请求会异步处理并返回一个作业对象。</block>
+  <block id="05f8eaafeb8ced9dd4a19a6b3785c4cd" category="list-text">错误对象</block>
+  <block id="341a54c08b1ed842fe5f4e080f824b06" category="paragraph">如果发生错误，则始终返回 Error 对象。例如，在尝试更改未为集群定义的字段时，您将收到错误消息。</block>
+  <block id="3b98d27d5cd1c9b8f2b850732e9feb05" category="paragraph">在某些情况下，不会返回任何数据，并且响应正文包含一个空的 JSON 对象。</block>
+  <block id="7f209a3b605b3cca82065ef1edcb3e42" category="section-title">HAL 链接</block>
+  <block id="8de2d085db23c7f30c07f0a7cf4b124a" category="paragraph">ONTAP REST API 使用 HAL 作为机制来支持将 Hypermedia 作为应用程序状态引擎（ HATEOAS ）。返回用于标识特定资源的对象或属性时，还会包含一个 HAL 编码的链接，您可以轻松地找到并确定有关该资源的其他详细信息。</block>
+  <block id="5ef0c737746fae2ca90e66c39333f8f6" category="section-title">errors</block>
+  <block id="9e0438d724c3072c813dcb7e50a35d3e" category="paragraph">如果发生错误，响应正文将返回一个错误对象。</block>
+  <block id="520d0db389f362bf79ef56ca0af3dcab" category="list-text">格式。</block>
+  <block id="3ad7e7f974ec3138f1d8868d33366ea8" category="list-text">错误对象的格式如下：</block>
+  <block id="5677dc31e892945a7390c90bd26de63e" category="paragraph">您可以使用代码值确定常规错误类型或类别，并使用消息确定特定错误。如果可用，目标字段将包含与错误关联的特定用户输入。</block>
+  <block id="44a7d933609e3ddb1b012707ab8a0571" category="list-text">常见错误代码</block>
+  <block id="53758348abd1452f2d76174cfd379951" category="list-text">下表介绍了常见错误代码。特定 API 调用可能包括其他错误代码。</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1.</block>
+  <block id="25bc3f662d04d0340ecbe8ac08e412bb" category="cell">具有相同标识符的对象已存在。</block>
+  <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2.</block>
+  <block id="ad2fe83bdaf727e636add5c81c3617bf" category="cell">字段的值无效或缺失，或者提供了额外的字段。</block>
+  <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="cell">3.</block>
+  <block id="3fbed032f77ccf31061e41ecee1f109d" category="cell">不支持此操作。</block>
+  <block id="a87ff679a2f3e71d9181a67b7542122c" category="cell">4.</block>
+  <block id="77c5562c34464df7f828c6ab55b571fb" category="cell">找不到具有指定标识符的对象。</block>
+  <block id="1679091c5a880faf6fb5e6087eb1b2dc" category="cell">6.</block>
+  <block id="5e952c79470abe484528aaaf836add9e" category="cell">拒绝执行请求的权限。</block>
+  <block id="c9f0f895fb98ab9159f51fd0297e236d" category="cell">8.</block>
+  <block id="cdb0d512cc3fdc0adc8795b79f91c40f" category="cell">资源正在使用中。</block>
+  <block id="bbab0623a5b6881d75d27609f3915456" category="doc">正在准备使用 Python 客户端库</block>
+  <block id="2bd79d6acb3653385bb4bcf89818b61a" category="paragraph">在使用 Python 客户端库之前，您应准备好环境。</block>
+  <block id="56aa3ed9dba484ac641c5247a15b1ed6" category="section-title">基本要求</block>
+  <block id="6b7a8efcc6df45bbea2b4aa419b1787c" category="paragraph">您必须使用 Python 3.5 或更高版本。此外，还需要以下软件包：</block>
+  <block id="7a7a2588855c417f37bd7fd01abaeddb" category="list-text">请求 2.22.1 或更高版本</block>
+  <block id="3e257ffb35bcf31e076fe4e166d80a61" category="list-text">requests-toolbelt 0.9.1 或更高版本</block>
+  <block id="eb93ca3be958adb37c694d6232204f5b" category="list-text">marshmallow 3.2.1 或更高版本</block>
+  <block id="11593a40313671a88f29e6475859f238" category="section-title">软件包名称和版本</block>
+  <block id="364c42d2725eeecf011214a366b6186d" category="paragraph">Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的 ONTAP 主要版本号和次要版本号的组合，以及 ONTAP 版本中客户端的次要版本。例如，有效版本号包括： 9.2.1 ， 9.6.2 和 9.1.1 。</block>
+  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">安装</block>
+  <block id="85ca39724867fb05bf4fd74b5fcac448" category="paragraph">您必须使用 pip 从 Python Package Index （ Pypi ）网站安装 NetApp_ONTAP 软件包。</block>
+  <block id="9526c4af8cb7f4cacf6131573eda8be8" category="section-title">文档和其他资源</block>
+  <block id="eed64ccdcc26c24adc6af0459bcbd582" category="paragraph">有关文档和其他资源的链接，请参见 _NetApp 开发人员网络 _ 。</block>
+  <block id="6228139d56297e6f87b517feae45bc99" category="paragraph"><block ref="6228139d56297e6f87b517feae45bc99" category="inline-link-rx"></block></block>
+  <block id="9a75a764744466f6a93adfd21b36c6af" category="doc">NetApp ONTAP Python 客户端库</block>
+  <block id="62d9ca2fe651fae37328aad210b89e08" category="paragraph">从 ONTAP 9.6 开始，您可以选择使用 Python 客户端库访问 ONTAP REST API 。该库可为客户端开发环境提供多种基础服务，例如连接管理，异步处理，异常处理和错误消息。下载并安装 ONTAP Python 客户端库软件包后，您可以快速创建强大的 Python 脚本，以支持 ONTAP 部署的自动化。</block>
+  <block id="6353689d5872d03a15424fcc44ff9a38" category="admonition">NetApp 维护一个 GitHub 存储库，其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。</block>
+  <block id="e5a1747d44133108641b2ef511e802b0" category="inline-link">ONTAP REST Python GitHub 存储库</block>
+  <block id="62277cb84205b149ab77912513497f3a" category="paragraph"><block ref="62277cb84205b149ab77912513497f3a" category="inline-link-rx"></block></block>
+  <block id="8d0112d6a5db058f8e4fb8edd2db0b30" category="summary">在当前版本的 ONTAP 中，有几项新增的和更改的自动化功能。</block>
+  <block id="6d20c0b38e6314ec11b5102c31c7bfed" category="doc">ONTAP 9.9.1 自动化的新增功能</block>
+  <block id="93d5057736fd3ff85ccf65d0ce905678" category="paragraph">当前 ONTAP 版本提供了几项新增的和变更的自动化功能。</block>
+  <block id="267cf368bd2e630458d6a5e946c110ec" category="section-title">ONTAP 9.9.1 REST API</block>
+  <block id="1f7985593e5704e04af94c0a90805b17" category="paragraph">ONTAP 9.9.1 将继续扩展 ONTAP REST API 的功能。现有 ONTAP 功能具有新的 API 端点，包括 SAN 端口集和 SVM 文件目录安全性。此外，还添加了端点来支持新的 ONTAP 9.9.1 功能和增强功能。相关文档也进行了改进。下面简要介绍了这些增强功能。</block>
+  <block id="154f94956201de1d51f6ff61e84ae944" category="list-text">将 ONTAPI 映射到 ONTAP 9 REST API</block>
+  <block id="10300380e897315c95d2c9a2331fb255" category="list-text">为了帮助您将 ONTAP 自动化代码过渡到 REST API ， NetApp 提供了 API 映射文档。此参考包括 ONTAPI 调用列表以及每个调用的 REST API 等效项。此映射文档已进行更新，以包含新的 ONTAP 9.9.1 API 端点。请参见<block ref="08f41e4498b955cf38a155de6ba4e72b" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="5a3b858ecd9ec9c186ad254f07cd1d33" category="list-text">API 端点，用于新的 ONTAP 9.9.1 核心功能</block>
+  <block id="07e5c3418b383cfa2bebed08d44aefc3" category="list-text">REST API 中增加了对通过 ONTAPI 不可用的新 ONTAP 9.9.1 功能的支持。其中包括对嵌套 igroup 和 Google Cloud 密钥管理服务的支持。</block>
+  <block id="d621c5d40a054b36a3f1e180f7fc170d" category="list-text">改进了从 ONTAPI 过渡到 REST 的支持</block>
+  <block id="192cf409001c19f48a695ad558e612f6" category="list-text">现在，更多传统 ONTAPI 调用都具有相应的 REST API 等效项。其中包括本地 Unix 用户和组，无需客户端即可管理 NTFS 文件安全性， SAN 端口集以及卷空间属性。更新后的 ONTAPI to REST 映射文档也会包含这些更改。</block>
+  <block id="88b1c796bb089f48a24b20aea93fb18e" category="list-text">增强的联机文档</block>
+  <block id="ddd51e3a52a14385d0b60fcaf5dfe038" category="list-text">现在， ONTAP 联机文档参考页面包含一些标签，用于指示引入每个 REST 端点或参数时的 ONTAP 版本，包括 ONTAP 9.1.1 中的新端点或参数。</block>
+  <block id="8ed6428212b41847f33c5db651c2aa70" category="doc">REST Web 服务基础</block>
+  <block id="a08b42e2e2ef0c8e1f9e6ca49a2862ba" category="paragraph">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术和最佳实践，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。</block>
+  <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="section-title">资源和状态表示</block>
+  <block id="d2d07b32aecf22c6a25dc91e4b898e5e" category="paragraph">资源是基于 Web 的系统的基本组件。创建 REST Web 服务应用程序时，早期设计任务包括：</block>
+  <block id="c73e999111ecc4cc9c48709542105db9" category="list-text">识别系统或基于服务器的资源</block>
+  <block id="0400993c35912a6c4e281a903a66400e" category="paragraph">每个系统都使用和维护资源。资源可以是文件，业务事务，流程或管理实体。在设计基于 REST Web 服务的应用程序时，首先要完成的任务之一是识别资源。</block>
+  <block id="082f61fd927dc840d6a4c2daa3a8d76d" category="list-text">资源状态和关联状态操作的定义</block>
+  <block id="5f4e63d9846190edae863ef33879f410" category="paragraph">资源始终处于数量有限的状态之一。必须明确定义状态以及用于影响状态更改的关联操作。</block>
+  <block id="6e9ee433459bf14a5380c1e7371232a9" category="section-title">URI 端点</block>
+  <block id="64c51063277c11a48be48ec3446f5087" category="paragraph">必须使用定义明确的寻址方案定义和提供每个 REST 资源。资源所在的端点和标识的端点使用统一资源标识符（ Uniform Resource Identifier ， URI ）。URI 提供了一个通用框架，用于为网络中的每个资源创建唯一名称。统一资源定位器（ Uniform Resource Locator ， URL ）是一种用于 Web 服务的 URI 类型，用于标识和访问资源。资源通常以类似于文件目录的分层结构公开。</block>
+  <block id="34d23bd6dd51b3238872241264de74bf" category="section-title">HTTP 消息</block>
+  <block id="19f05b47f4b958662678fc11fd0ce414" category="paragraph">超文本传输协议（ HTTP ）是 Web 服务客户端和服务器用来交换有关资源的请求和响应消息的协议。在设计 Web 服务应用程序时， HTTP 方法会映射到资源以及相应的状态管理操作。HTTP 为无状态。因此，要将一组相关请求和响应关联为一个事务的一部分，必须将追加信息包含在随请求和响应数据流一起提供的 HTTP 标头中。</block>
+  <block id="bd4c8bbdccbcb7826a3bc4ae421c0604" category="section-title">JSON 格式化</block>
+  <block id="171bf5afc5734ab1982f0d1e37b2b5e9" category="paragraph">虽然可以通过多种方式在 Web 服务客户端和服务器之间构建和传输信息，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。JSON 是一种行业标准，用于以纯文本形式表示简单数据结构，并用于传输描述资源的状态信息。ONTAP REST API 使用 JSON 格式化每个 HTTP 请求和响应正文中包含的数据。</block>
+  <block id="a5fa5746370b608090b994a97b49e98b" category="doc">网络</block>
+  <block id="25bc31920c0cb35661551d04296e539d" category="paragraph">您可以使用这些 API 调用来管理与集群一起使用的物理和逻辑网络资源。</block>
+  <block id="d89e657dbcb29d1b725fae1a012c3573" category="section-title">以太网广播域</block>
+  <block id="c16737a4e599bb09d061c55a7ecad532" category="paragraph">以太网广播域是一组物理端口，这些端口似乎属于同一物理网络。当从域中的一个端口广播时，所有端口都会收到一个数据包。每个广播域都属于一个 IP 空间。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="34b8a9807da64737f07ac9e419c9f546" category="section-title">以太网端口</block>
+  <block id="af23f5cf37eca36a088ece4df6d53de0" category="paragraph">以太网端口是物理或虚拟网络端点。这些端口可以组合成链路聚合组（ Link Aggregate Group ， LAG ），也可以使用虚拟 LAN （ Virtual LAN ， VLAN ）进行分隔。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="e325fff9585fc408988fbbc8bc5f44b8" category="section-title">以太网交换机端口</block>
+  <block id="9d47789045e3c6c4eea55da48da63763" category="paragraph">您可以检索以太网交换机的端口信息。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="d5475e63e438a4a7c94c131d28345b80" category="section-title">以太网交换机</block>
+  <block id="773987a8838f6b882339b536359bdac5" category="paragraph">您可以检索或修改用于 ONTAP 集群或存储网络的以太网交换机的配置。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="9f5cdc1f5a4f26490d6217f7d1030e32" category="section-title">光纤通道接口</block>
+  <block id="1fbb0cc82af906c09c88b2ff07a9af6b" category="paragraph">光纤通道接口是与 SVM 关联的逻辑端点。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="a5745ae7b8ab4ab67a6ba9a615ced665" category="section-title">光纤通道端口</block>
+  <block id="9491a7372139acacd450acd17119ed0a" category="paragraph">光纤通道端口是 ONTAP 节点上用于连接到光纤通道网络的物理适配器。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="08f9a2efa94b3c5213c47c4eeb5ba2fd" category="section-title">HTTP 代理</block>
+  <block id="75bbbcd48175f605a8ab4e577fb5834d" category="paragraph">您可以为 SVM 或集群 IP 空间配置 HTTP 代理。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="2bf344088245c441fd4af9e89e2513c1" category="section-title">BGP 对等组</block>
+  <block id="59ebb6ef1a0a1fc8f946c90ef14db7ae" category="paragraph">您可以创建和管理边界网关协议对等组。此资源类型是在 ONTAP 9.7 中引入的。</block>
+  <block id="2509615af9bbdb5fbb73b349c029291a" category="section-title">IP 接口</block>
+  <block id="3db65e1e11eace7de9f98bf448ab6551" category="paragraph">逻辑接口（ LIF ）是一个具有其他配置属性的 IP 地址。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="fd4c92e6709b093e5c4f8085fb79e919" category="section-title">IP 路由</block>
+  <block id="25ca85e84eff0554f0f56f3bab46f56f" category="paragraph">路由表是用于将流量转发到其目标的一组 IP 路由。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="7a8bb34f7474b39291c18680a8e2fcec" category="section-title">IP 服务策略</block>
+  <block id="e975796826e53ec2250961610abb5553" category="paragraph">IP 服务策略用于定义特定 LIF 上可用的服务。可以在 SVM 或 IP 空间的上下文中配置服务策略。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
+  <block id="d686186657dc867241ca2a0f2a61422f" category="section-title">IP 空间</block>
+  <block id="0e73635ba64bf30abe23d6c9ccc20453" category="paragraph">IP 空间会创建一个网络空间来支持一个或多个 SVM 。IP 空间可以彼此隔离，从而提供安全和隐私保护。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="c35c6b298132393506d42dcd9dfe34af" category="paragraph">从 9.6 版开始， ONTAP 包括一个 REST Web 服务 API 。您可以使用 REST API 部署和管理 ONTAP 存储资源。在使用 API 之前，您应了解其设计，架构组件和限制。</block>
+  <block id="e78273b83daaaecb5744859fa531181b" category="doc">REST 实施详细信息</block>
+  <block id="2e7030b3ea3ba948738ba10c8dfe4391" category="paragraph">REST 可建立一组通用的技术和最佳实践，但每个 API 的详细信息可能因开发期间所做的选择而异。在将 ONTAP REST API 用于实时部署之前，您应了解其设计特征。</block>
+  <block id="6d31ddf9df6e179d368f131772a6e7ad" category="paragraph">ONTAP REST API 的多个特征会影响其操作和使用。在发出 API 调用之前，您应了解这些注意事项。</block>
+  <block id="2775df5f77f64bf8298450aab25c3b6b" category="paragraph">您应查看通过 API 公开的资源。</block>
+  <block id="00860205e4d958b92bdfaf0f3e3b5586" category="paragraph"><block ref="00860205e4d958b92bdfaf0f3e3b5586" category="inline-link-macro-rx"></block></block>
+  <block id="c8e2277ecfb1427838c488c217f99466" category="doc">云</block>
+  <block id="309e7aa37e1bfea74efcababb5902309" category="paragraph">您可以使用这些 API 调用管理与云中对象存储资源的连接。</block>
+  <block id="91fadc5613280f76b916f1fd236e43e9" category="section-title">目标</block>
+  <block id="42505ed890a81cb2bef8c94c82effedf" category="paragraph">目标表示云中的对象存储资源。每个目标都包含连接到存储资源所需的配置信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="3e25960a79dbc69b674cd4ec67a72c62" category="doc">大家好</block>
+  <block id="a30f2db6f9a8c5629dc89b408b5d97e4" category="paragraph">您可以在命令行界面上问题描述一个简单的 cURL 命令，开始使用 ONTAP REST API 并确认其可用性。</block>
+  <block id="f1d5e3ebc77f66e2befb5941d10019ee" category="paragraph">您的工作站必须具有 cURL 实用程序。此外，您还必须具备以下条件：</block>
+  <block id="ec4f05f95246e64e1875be5ee79905b2" category="list-text">有权访问 ONTAP REST API （集群资源）的帐户的用户名和密码。</block>
+  <block id="da932131b500d8e907961663d8ef346b" category="admonition">如果您的凭据包含特殊字符，则您需要根据所使用的 shell 以 Curl 可接受的格式设置这些凭据。例如，您可以在每个特殊字符之前插入反斜杠，或者将整个 `username ： password` 字符串用单引号括起来。</block>
+  <block id="58866791801e443554927396816c827c" category="list-text">在本地工作站的命令行界面中，检索 ONTAP 软件的版本：</block>
+  <block id="8a35977a6f21dff949427e42cf6d3999" category="paragraph">`cURL -X get -u username ： password -k <block ref="1f92f5c8813ca60ee841c4440a7f8600" category="inline-link-rx"></block></block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 示例 *</block>
+  <block id="8f16ff6e69de104981a3a1310efeec43" category="paragraph">`cURL -X get -u admin ： password -k "<block ref="b4fca2fe6e3fd6a6068dfacae02b2532" category="inline-link-rx"></block></block>
+  <block id="42ac9c1cc1752704f9d6980ce41b7ba3" category="paragraph">ONTAP 版本信息以 JSON 格式显示。</block>
+  <block id="a4273e3e312edbc9d5bd7c188aecc370" category="doc">名称服务</block>
+  <block id="4cbf67c663a0aa1becab1170ca932173" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。</block>
+  <block id="b075b481f21fbb627e5042d98a2e27c9" category="section-title">DDNS</block>
+  <block id="83df374f1b14e7e892413b9679071d0f" category="paragraph">您可以显示动态 DNS （ DDNS ）信息并管理 DDNS 子系统。此资源类型是 ONTAP 9.8 的新增功能。</block>
+  <block id="ed5f2bdecbd4bd349d09412d1ff6a6fb" category="section-title">DNS</block>
+  <block id="f97bb8cb9c33354ac4515053dad458e0" category="paragraph">DNS 支持将 ONTAP 集群集成到网络中。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="2363dee608bcd9f6ce7f980bfdad5789" category="section-title">LDAP</block>
+  <block id="bf174dc4f6f36d6d0f560f114ed35af0" category="paragraph">LDAP 服务器可用于维护用户信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="82efbf64272cb17196c4e27b3694cadb" category="section-title">名称映射</block>
+  <block id="8de221752bd6a162ef831c894ff99445" category="paragraph">通过名称映射，您可以将身份从一个名称域映射到另一个名称域。例如，您可以将身份从 CIFS 映射到 UNIX ，将 Kerberos 映射到 UNIX ，将 UNIX 映射到 CIFS 。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="214d81d8672097921e223fb3e62fa879" category="section-title">NIS</block>
+  <block id="29d694e39bf428e6908248736cf6c34b" category="paragraph">NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="69191005b4ee9f6b5f263cb192e44de2" category="section-title">UNIX 用户和组</block>
+  <block id="b7e582f26b0b273eb0f367ab4f2a9180" category="paragraph">本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的</block>
+  <block id="cae712fa1badd396170b95946efaaab8" category="doc">存储资源的性能指标</block>
+  <block id="fb561ab31583e301eb08f35a50a87c44" category="paragraph">ONTAP 收集有关选定 SVM 存储对象和协议的性能指标，并通过 REST API 报告此信息。您可以使用此数据监控 ONTAP 系统的性能。</block>
+  <block id="59bd18a80f293dee3954f314ed6e11af" category="paragraph">对于给定的存储对象或协议，性能数据分为三类：</block>
+  <block id="79073619fba8242703524f16870ff858" category="list-text">IOPS</block>
+  <block id="26ae7bdd1d6fb8c4886e6fde8d12601c" category="list-text">延迟</block>
+  <block id="0b85467ebafa7ca3c47e82dc38184484" category="list-text">吞吐量</block>
+  <block id="fc13a8ad35d492292d26c7c232494a69" category="paragraph">在每个类别中，可以使用以下一种或多种类型的数据：</block>
+  <block id="b17f69722718b85419b1b7c729f83d96" category="list-text">读取（ R ）</block>
+  <block id="6c105af65b1a03e10e37b946944a4ec1" category="list-text">写入（ W ）</block>
+  <block id="7290aa89bc380a7a4a4cdb96d88b0423" category="list-text">其他（ O ）</block>
+  <block id="fe0f4026da92fad05ee2d529195feaf9" category="list-text">总计（ T ）</block>
+  <block id="dc15b7ace633327d1f713d234ebbf2ab" category="paragraph">下表汇总了通过 ONTAP REST API 提供的性能数据，包括添加此 API 时的版本。有关详细信息，请参见 ONTAP 系统上的 REST API 联机文档页面。</block>
+  <block id="35177f50714da7582167be83201595f1" category="cell">存储对象或协议</block>
+  <block id="6f5d65265f83dc677b44095a40b11f53" category="cell">ONTAP 版本</block>
+  <block id="3a6bb7bfc19c244ca6d1bf0f937e19c6" category="cell">以太网端口</block>
+  <block id="e681a3b45989b468533c4b90ee960bf9" category="cell">不适用</block>
+  <block id="fed7366b19d657c70bf220617392d574" category="cell">RWT</block>
+  <block id="4f7dd0fe0940df4a5fda327a4ee4ddbd" category="cell">9.8</block>
+  <block id="2ffa082e74e8a66a4dbfceb8340c8c97" category="cell">FC 端口</block>
+  <block id="f0b14c187f50696f3487da69d6b99f91" category="cell">RWOT</block>
+  <block id="211512e9d4808b015cdd15578678496c" category="cell">IP 接口</block>
+  <block id="ed2a617f42b9ef0f10fda0a2bd39cef0" category="cell">FC 接口</block>
+  <block id="f0e0d9619a10d780bb68e23aa0e76b3f" category="cell">NVMe 命名空间</block>
+  <block id="ce4c5bf7c240dbd400c2c9fc79afb6a8" category="cell">qtree 统计信息</block>
+  <block id="f29710dd87bb6441d8f24a754198bb4f" category="cell">原始 RWOT</block>
+  <block id="56ee29a4b66dde93ebaa3e77a1c33cf5" category="cell">卷 FlexCache</block>
+  <block id="3c247f0cb9af1be3cdae716c8d2f546a" category="cell">节点—进程利用率</block>
+  <block id="610d53c2dcf08f07c8fb8821961fca83" category="cell">进程利用率作为一个数值</block>
+  <block id="ca4315a948c678855d213254cd6a293d" category="cell">云卷</block>
+  <block id="1993d9efb38e23403848e9f9ec71c633" category="cell">不适用</block>
+  <block id="f82f50748d06cc9643330a4a8297ba43" category="cell">9.7</block>
+  <block id="b26e74ed6e2892c7e2bb95e414d460c6" category="cell">LUN</block>
+  <block id="2ee34178bb8415b7d7234cd27b83aed6" category="cell">聚合</block>
+  <block id="dac7fec7fb0c23f851e1cdc7d45db404" category="cell">SVM NFS 协议</block>
+  <block id="bd872f5bb9653c5ec22001d577d9a556" category="cell">SVM CIFS 协议</block>
+  <block id="1e4bc2049e99e1dba3e6f915fc7f568f" category="cell">SVM FCP 协议</block>
+  <block id="982b599888f90ebfbaf2ff013ca5d6b6" category="cell">SVM iSCSI 协议</block>
+  <block id="95a02cab92aa50cc8b3fa691276c0382" category="cell">SVM NVMe 协议</block>
+  <block id="eaf2f97729e8d5e4d205672da8afc9a5" category="cell">9.6</block>
+  <block id="794cb725c5631ad99b5b7c000307f0df" category="doc">SnapMirror</block>
+  <block id="2c938210904a3ccb2bb466c75aae25b4" category="paragraph">您可以使用这些 API 调用来管理 SnapMirror 数据保护技术。</block>
+  <block id="9e476387322a5c250893cf9c5c4ce78c" category="section-title">策略</block>
+  <block id="74f525d06ddb24dba72494718d6a778f" category="paragraph">SnapMirror 策略将应用于关系，并控制每个关系的配置属性和行为。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="ea96be9e75d8d3d690aedae5040edf2f" category="section-title">relationships</block>
+  <block id="6051810223d7d640e8104859ac825bf3" category="paragraph">异步和同步关系可建立所需的连接传输数据。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="8221f97d1274e16b57c726f05dfc3ea7" category="section-title">关系传输</block>
+  <block id="c76837312025a879c77fbb723b7e215e" category="paragraph">您可以通过现有 SnapMirror 关系管理 SnapMirror 传输。此资源类型是在 ONTAP 9.6 中引入的。</block>
+  <block id="7de269085c4e23e4ff26c31b7122144d" category="paragraph">此工作流将更新集群联系信息。由于此请求是异步处理的，因此它还说明了如何确定后台作业是否成功完成。</block>
+  <block id="530cddf0f41aa70491fa5a19e26768cb" category="section-title">1. 更新集群的联系信息</block>
+  <block id="4a79b9839f0a471eb4a2d3d7f2bf76f9" category="paragraph">您可以通过问题描述调用来更新联系信息。由于此请求异步运行，因此您必须确认关联作业是否成功。</block>
+  <block id="e95402dceacd5260b74e758bf2e748ef" category="cell">集群</block>
+  <block id="288aae25bc408055f50c21c991903a44" category="paragraph">异步</block>
+  <block id="66b29b9f2bdc949a7545046fbe59fcef" category="listing-title">卷曲</block>
+  <block id="8f2622c34a0d14fa4c9c3a13011b9b6c" category="paragraph">返回具有关联标识符的作业对象。</block>
+  <block id="6f5089fd2df9f1fabec1177bfdc6290f" category="section-title">2. 检索作业状态</block>
+  <block id="82437d3826cc31eff7495baa268e454c" category="paragraph">您必须检索作业状态以确定异步请求是否已成功完成。</block>
+  <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/cluster/Jobs/ ｛ uuid ｝</block>
+  <block id="2fe4167817733fec8e6ba1afddf78f1b" category="paragraph">同步</block>
+  <block id="50ccf1eac00654a4ac10e12d843b2025" category="paragraph">返回状态为和其他字段的作业对象。</block>
+  <block id="ab4ba9eb6009a89b125b55a74519d604" category="sidebar">ONTAP 自动化 9.9.1 文档</block>
+  <block id="f4e160ea26107615e4033f710d587db2" category="sidebar">工作流 1 更新集群联系人并检查作业状态</block>
+  <block id="fa3072c5dcc3c24dc044383b1ee6e52d" category="sidebar">ONTAP 和 Ansible</block>
+  <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
+</blocks>

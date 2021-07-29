@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: application.html 
+keywords:  
+summary:  
+---
+= 应用程序
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用这些 API 调用来管理 ONTAP 应用程序资源。
+
+
+
+==== 应用程序
+
+ONTAP 应用程序按类型进行排列，包括模板，应用程序，组件和 Snapshot 副本。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== 应用程序快照
+
+应用程序支持 Snapshot 副本，可以随时创建或还原这些副本。此资源类型是在 ONTAP 9.6 中引入的。

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: svm.html 
+keywords:  
+summary:  
+---
+= SVM
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用这些 API 调用来管理 Storage Virtual Machine （ SVM ）。
+
+
+
+==== 对等权限
+
+可以分配对等权限以启用 SVM 对等关系。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== peers
+
+对等关系可在 SVM 之间建立连接。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== svms
+
+您可以管理绑定到集群的 SVM 。此资源类型是在 ONTAP 9.6 中引入的。

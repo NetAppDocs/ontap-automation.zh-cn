@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: users_of_the_ontapi_api_and_ontap_cli.html 
+keywords:  
+summary:  
+---
+= ONTAPI 和 ONTAP 命令行界面的用户
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAPI 是通过网络易管理性 SDK 提供的一组 API 调用，可用于管理 ONTAP 存储系统。REST API 和 ONTAPI 调用之间以及 REST API 和 ONTAP 命令行界面之间存在差异。在生产环境中使用 REST API 之前，您应了解这些差异。
+
+
+
+=== 一般设计差异
+
+ONTAP REST API 和命令行界面的设计截然不同。CLI 命令和参数不会直接映射到 REST API 调用。即使存在相似之处，输入参数的详细信息也可能有所不同。例如，可以使用字节或后缀（例如 KB ）来指定数字单位。您应查看 link:input_variables_controlling_an_api_request.html["控制 API 请求的输入变量"] 以及 有关详细信息 ...
+
+
+
+=== 通过 REST API 公开的数据 SVM
+
+ONTAP 支持多种类型的 Storage Virtual Machine （ SVM ）。但是，只有数据 SVM 才会通过 ONTAP REST API 直接公开。描述集群和节点的配置信息可通过 REST API 获得，但集群和节点不会被视为单独的 SVM 。
+
+
+
+=== 从 ONTAPI 迁移到 REST
+
+REST API 是自动化 ONTAP 系统管理的主要战略选择。如果您当前正在使用 ONTAPI ，则应考虑迁移到 REST API 。NetApp 提供了映射文档，可帮助您从 ONTAPI 迁移到 REST 。
+
+link:input_variables_controlling_an_api_request.html["控制 API 请求的输入变量"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2874886["ONTAPI 到 REST API 映射信息"^]

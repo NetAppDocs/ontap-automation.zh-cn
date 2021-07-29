@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: summary_of_the_rest_resource_categories.html 
+keywords:  
+summary:  
+---
+= REST 资源类别摘要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。下面简要介绍了每个资源的问题描述以及基本资源路径，并在适当情况下提供了其他使用注意事项。
+
+本节介绍最新版本产品的 REST 资源。如果您需要了解对先前版本所做的更改，请参见 _Release Notes_。
+
+
+IMPORTANT: 对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。
+
+link:additional_considerations_when_using_the_rest_api.html["使用 REST API 时的其他注意事项"]
+
+link:api_reference.html["API 参考"]
+
+https://library.netapp.com/ecmdocs/ECMLP2492508/html/frameset.html["《 ONTAP 9 发行说明》"^]
