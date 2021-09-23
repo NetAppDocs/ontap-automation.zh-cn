@@ -1,0 +1,109 @@
+---
+sidebar:
+  entries:
+  - title: ONTAP 自动化 9.9.1 文档
+    url: "/index.html"
+  - title: ONTAP 自动化选项
+    url: "/options_for_ontap_automation.html"
+  - title: REST API 入门
+    url: "/getting_started_with_the_rest_api.html"
+    entries:
+    - title: 开始之前
+      url: "/getting_started_before.html"
+    - title: 正在检索集群软件版本
+      url: "/retrieving_the_cluster_software_version.html"
+    - title: 大家好
+      url: "/hello_world.html"
+  - title: 了解 ONTAP REST API
+    url: "/understanding_rest.html"
+    entries:
+    - title: REST 实施详细信息
+      url: "/rest_implementation_details.html"
+      entries:
+      - title: REST Web 服务基础
+        url: "/rest_web_services_foundation.html"
+      - title: ONTAP REST API 版本控制
+        url: "/ontap_rest_api_versioning.html"
+      - title: 如何访问 ONTAP API
+        url: "/how_to_access_the_ontap_api.html"
+      - title: 基本操作特征
+        url: "/basic_operational_characteristics.html"
+      - title: 控制 API 请求的输入变量
+        url: "/input_variables_controlling_an_api_request.html"
+      - title: 解释 API 响应
+        url: "/interpreting_an_api_response.html"
+      - title: 异步处理如何使用作业对象
+        url: "/how_asynchronous_processing_works_using_the_job_object.html"
+    - title: 使用 REST API 时的其他注意事项
+      url: "/additional_considerations_when_using_the_rest_api.html"
+      entries:
+      - title: 对象引用和访问
+        url: "/object_references_and_access.html"
+      - title: ONTAPI 和 ONTAP 命令行界面的用户
+        url: "/users_of_the_ontapi_api_and_ontap_cli.html"
+      - title: 通过 REST API 访问 ONTAP 命令行界面
+        url: "/accessing_the_ontap_cli_through_the_rest_api.html"
+      - title: 使用 RBAC 实现安全性
+        url: "/security_using_rbac.html"
+      - title: 存储资源的性能指标
+        url: "/performance_metrics_for_storage_resources.html"
+    - title: REST 资源类别摘要
+      url: "/summary_of_the_rest_resource_categories.html"
+      entries:
+      - title: 应用程序
+        url: "/application.html"
+      - title: 云
+        url: "/cloud.html"
+      - title: 集群
+        url: "/cluster.html"
+      - title: 名称服务
+        url: "/name_services.html"
+      - title: NAS
+        url: "/nas.html"
+      - title: NDMP
+        url: "/ndmp.html"
+      - title: 网络
+        url: "/networking.html"
+      - title: NVMe
+        url: "/nvme.html"
+      - title: 对象存储
+        url: "/object_store.html"
+      - title: SAN
+        url: "/san.html"
+      - title: 安全性
+        url: "/security.html"
+      - title: SnapLock
+        url: "/snaplock.html"
+      - title: SnapMirror
+        url: "/snapmirror.html"
+      - title: 存储
+        url: "/storage.html"
+      - title: 支持
+        url: "/support.html"
+      - title: SVM
+        url: "/svm.html"
+  - title: 工作流
+    url: "/workflows.html"
+    entries:
+    - title: 准备使用工作流进程
+      url: "/preparing_to_use_the_workflow_processes.html"
+    - title: 工作流 1 更新集群联系人并检查作业状态
+      url: "/workflow_1__updating_the_cluster_contact_and_checking_job_state.html"
+  - title: 使用 Python
+    url: "/using_python.html"
+    entries:
+    - title: NetApp ONTAP Python 客户端库
+      url: "/netapp_ontap_python_client_library.html"
+      entries:
+      - title: 正在准备使用 Python 客户端库
+        url: "/preparing_to_use_the_python_client_library.html"
+      - title: 用于检索集群配置的脚本
+        url: "/script_to_retrieve_the_cluster_configuration.html"
+  - title: API 参考
+    url: "/api_reference.html"
+  - title: ONTAP 和 Ansible
+    url: "/ontap_ansible.html"
+  - title: 自动化博客
+    url: "/blogs.html"
+  - title: 获取更多信息
+    url: "/get_more_information.html"
