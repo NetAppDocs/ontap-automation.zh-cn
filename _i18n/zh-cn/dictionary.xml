@@ -965,4 +965,7 @@
   <block id="f4e160ea26107615e4033f710d587db2" category="sidebar">工作流 1 更新集群联系人并检查作业状态</block>
   <block id="fa3072c5dcc3c24dc044383b1ee6e52d" category="sidebar">ONTAP 和 Ansible</block>
   <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
 </blocks>
