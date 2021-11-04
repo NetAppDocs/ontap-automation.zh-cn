@@ -9,7 +9,6 @@
   <block id="9675e4e9d7e7a5efd235ec42f63df5a0" category="paragraph">您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。您应首先查看此站点上的文档，包括 <block ref="c5f49f26ea7a9d0f0254f751fd98a1f8" category="inline-link-macro-rx"></block>。</block>
   <block id="e0a486c1db61aeef50827b2a95dbb216" category="section-title">调整原有 ONTAPI 代码以使用 REST</block>
   <block id="ec99af624b0dd923250ecbec162bcc59" category="inline-link">ONTAPI 到 REST API 映射信息</block>
-  <block id="1196428278d120618fa84329bbb2319f" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见<block ref="08f41e4498b955cf38a155de6ba4e72b" category="inline-link-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
   <block id="8d7959a7c68ad22c23c0308240cea7ad" category="section-title">使用 NetApp Python 客户端库</block>
   <block id="365c8dec8255a8a164436c71a2611920" category="inline-link-macro">使用 Python</block>
   <block id="e98db109a98c49e78366bb19a0919a95" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。您应首先查看此站点上的文档，包括 <block ref="7a4d1c301c11fc58979340d85dad9018" category="inline-link-macro-rx"></block>。</block>
@@ -215,7 +214,6 @@
   <block id="0e0bc638aefadb39816902d5da83fa4d" category="paragraph">您可以检索集群中的网桥。此资源类型是在 ONTAP 9.9 中引入的。</block>
   <block id="2d4aef30a49a581a6ed89ce840054235" category="section-title">Disks</block>
   <block id="000d956158860eb60225484bae0cbb4a" category="paragraph">集群中的物理磁盘。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 和 9.8 中进行了更新。</block>
-  <block id="a379e76d3566a5a19a97674312f30c22" category="section-title">FlexCache.</block>
   <block id="d53d395c26cc1120919a40cf2bb3bcc0" category="paragraph">此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
   <block id="12b9060463c7d0d9fd882b398f4b6426" category="section-title">FlexCache 起源</block>
   <block id="11f88b423dd71668044f4d32239e38bc" category="paragraph">FlexCache 是原始卷的永久性缓存。此资源类型最初是在 ONTAP 9.6 中推出的。ONTAP 9.9 REST API 增强了支持，支持通过 HTTP 修补方法进行修改。</block>
@@ -399,7 +397,6 @@
   <block id="645796c14f90a49c10fe89ef0d9036f0" category="doc">ONTAP REST API 版本控制</block>
   <block id="a131529b4b9e76bc39353ef1aa209dd9" category="paragraph">ONTAP 9 附带的 REST API 分配有一个版本号，该版本号与 ONTAP 版本号无关。您应了解您的 ONTAP 版本附带的 API 版本，以及此版本可能会对您的 API 使用产生何种影响。</block>
   <block id="8797a71e8a89cb9c915f588f435aa882" category="admonition">所有版本的 ONTAP 9 都使用相同版本的 REST API 。</block>
-  <block id="82c9ef2430669db6fa98b4ea17d9e6c5" category="list-text">ONTAP 9.6 到 ONTAP 9.9.1</block>
   <block id="d4b36e25c7ff304278d8f8203382ad65" category="list-text">版本 1</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">开始之前</block>
   <block id="b3d01b53079f4b9fbda29e6a55f54947" category="paragraph">要准备使用 ONTAP REST API ，您应执行几个步骤。</block>
@@ -465,7 +462,6 @@
   <block id="b26d022aeb288cb83538385118383ca5" category="paragraph">您可以管理特定的 SNMP 陷阱主机。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="e77de590cd71a55fe09a65e34442907d" category="section-title">SNMP 用户</block>
   <block id="c3b7775b2eccd350a3b590c2c1c7e7a3" category="paragraph">您可以定义和管理 SNMP 用户。此资源类型是在 ONTAP 9.7 中引入的。</block>
-  <block id="d66fa3e0a64d351d586f8ca04deebad7" category="section-title">SNMP 用户实例</block>
   <block id="b6fc3f4cebfd4495ccd03b001112b524" category="paragraph">您可以管理引擎 ID 与管理 SVM 或数据 SVM 关联的特定 SNMP 用户。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="6d9e60d71e6ca21dbbaae6a56595b33f" category="doc">异步处理如何使用作业对象</block>
   <block id="f8645777304498f78534eb91dd733f91" category="paragraph">发出设计为异步运行的 API 请求后，始终会创建一个作业对象并将其返回给调用方。作业将描述并固定处理请求的后台任务。根据 HTTP 状态代码，您必须检索作业状态以确定请求是否成功。</block>
@@ -501,22 +497,18 @@
   <block id="f372ae3b2fda116fe4b7463cbac902c0" category="section-title">ONTAP 9 资源</block>
   <block id="774a065cb3548cc61fb0ec3bc1494fbe" category="inline-link">ONTAP 9 文档中心</block>
   <block id="04b0bb6aae6dc41149097cc24034df97" category="list-text"><block ref="04b0bb6aae6dc41149097cc24034df97" category="inline-link-rx"></block></block>
-  <block id="e5046d1a2eb3a4ac58813056e012053b" category="paragraph">提供了 ONTAP 9 的所有文档。</block>
   <block id="8574bd76a1428c3bf08d97dadd4ae77c" category="inline-link">ONTAP 和 ONTAP System Manager 资源</block>
   <block id="ef6786259f693365fcfb0cc5f63f3f4e" category="list-text"><block ref="ef6786259f693365fcfb0cc5f63f3f4e" category="inline-link-rx"></block></block>
   <block id="d36ee6fe6aa657c937857a18101e0782" category="paragraph">提供规划，管理和支持 ONTAP 9 所需的文档和其他有用链接。</block>
   <block id="1d5be002ec12a8cee5e18879d77b8f22" category="section-title">ONTAP 9 开发人员资源</block>
-  <block id="71b777e6ebcd5f4a2bc1afc0b0e9cdd2" category="list-text"><block ref="71b777e6ebcd5f4a2bc1afc0b0e9cdd2" category="inline-link-rx"></block></block>
   <block id="4afcca23062e18db41a227f2c2299716" category="paragraph">提供关键 ONTAPI 调用以及与等效 REST API 调用的映射。</block>
   <block id="b597994ba1223810c3ac8977cffacb37" category="inline-link">NetApp 开发人员网络： ONTAP RESTful API</block>
-  <block id="efd29339cf836e327db5767ec23fa108" category="list-text"><block ref="efd29339cf836e327db5767ec23fa108" category="inline-link-rx"></block></block>
   <block id="851a3f787680b56a5580f460ad9424f3" category="paragraph">提供使用 ONTAP REST API 所需的资源和文档，包括 ONTAP Python 客户端库。</block>
   <block id="e6d9d2044073b02a5ea64a67b46c528d" category="inline-link">NetApp ONTAP Python 客户端库入门</block>
   <block id="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="list-text"><block ref="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="inline-link-rx"></block></block>
   <block id="1016adf11e3bfe1329073f40bbc1f5b8" category="paragraph">很好地介绍了 NetApp Python 客户端库以及如何开始使用该库编写代码。</block>
   <block id="ed08ca4078374e76c6df3f1999af7274" category="section-title">NetApp 资源</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">NetApp 支持</block>
-  <block id="6f62101e13e498d87bf2ae6b69c1f323" category="list-text"><block ref="6f62101e13e498d87bf2ae6b69c1f323" category="inline-link-rx"></block></block>
   <block id="3d32fc1a126e880a8ed715ad4b9c42f5" category="paragraph">访问故障排除工具，文档和技术支持帮助。</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
   <block id="29c81145f8df4c302d2a5db797d28b64" category="list-text"><block ref="29c81145f8df4c302d2a5db797d28b64" category="inline-link-rx"></block></block>
@@ -528,8 +520,6 @@
   <block id="391aea2b8a642f755fa9fc56deaf7f9d" category="doc">ONTAP 自动化</block>
   <block id="09c6f2a5a82ad068a97583300dc23e8e" category="paragraph">您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API 为所有各种自动化技术奠定了基础。</block>
   <block id="1fde0727b387439572ade83eecff4f68" category="section-title">了解新功能</block>
-  <block id="0ae3ca9f8ae30c01ee330973e5478ca9" category="inline-link-macro">ONTAP 9.9.1 自动化的新增功能</block>
-  <block id="1074fe904a670e0208d4e546e21ad2ae" category="list-text"><block ref="1074fe904a670e0208d4e546e21ad2ae" category="inline-link-macro-rx"></block></block>
   <block id="a753bf5f3b9313fdceb106b5c3e89d3f" category="section-title">获取更多信息并与同行保持联系</block>
   <block id="5683b07c266ff7369d1d391fd7f3a01e" category="inline-link-macro">如何获取更多信息</block>
   <block id="9f2815f977729243eea43c592aeb8ea0" category="list-text"><block ref="9f2815f977729243eea43c592aeb8ea0" category="inline-link-macro-rx"></block></block>
@@ -626,7 +616,6 @@
   <block id="b125a3961f250d22b3eed929040d8e9a" category="paragraph">光纤通道协议（ FCP ）服务定义 SVM 的光纤通道目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
   <block id="58f3779afe9da9ffdc085dc3064306f7" category="section-title">igroup</block>
   <block id="68c0fd93c2b023ed4f45e053c2c0475e" category="paragraph">启动程序组（ igroup ）是一组光纤通道 WWPN （全球通用端口名称）， iSCSI IQN （限定名称）和 iSCSI EUI （扩展唯一标识符），用于标识主机启动程序。此资源类型最初是在 ONTAP 9.6 中推出的。</block>
-  <block id="ed3e987dd36be028b08d2f926d2d2d81" category="paragraph">嵌套 igroup 是 ONTAP 9.9.1 中的一项新功能，也已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
   <block id="631b740ef1e6620839e8143382936b10" category="section-title">iSCSI 凭据</block>
   <block id="ff405aa42851c6e5daf11546e79e3980" category="paragraph">iSCSI 凭据对象包含启动程序和 ONTAP 使用的身份验证凭据。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="0ce9193c4743638434ef94331f17def2" category="section-title">iSCSI 服务</block>
@@ -816,18 +805,7 @@
   <block id="e5a1747d44133108641b2ef511e802b0" category="inline-link">ONTAP REST Python GitHub 存储库</block>
   <block id="62277cb84205b149ab77912513497f3a" category="paragraph"><block ref="62277cb84205b149ab77912513497f3a" category="inline-link-rx"></block></block>
   <block id="8d0112d6a5db058f8e4fb8edd2db0b30" category="summary">在当前版本的 ONTAP 中，有几项新增的和更改的自动化功能。</block>
-  <block id="6d20c0b38e6314ec11b5102c31c7bfed" category="doc">ONTAP 9.9.1 自动化的新增功能</block>
   <block id="93d5057736fd3ff85ccf65d0ce905678" category="paragraph">当前 ONTAP 版本提供了几项新增的和变更的自动化功能。</block>
-  <block id="267cf368bd2e630458d6a5e946c110ec" category="section-title">ONTAP 9.9.1 REST API</block>
-  <block id="1f7985593e5704e04af94c0a90805b17" category="paragraph">ONTAP 9.9.1 将继续扩展 ONTAP REST API 的功能。现有 ONTAP 功能具有新的 API 端点，包括 SAN 端口集和 SVM 文件目录安全性。此外，还添加了端点来支持新的 ONTAP 9.9.1 功能和增强功能。相关文档也进行了改进。下面简要介绍了这些增强功能。</block>
-  <block id="154f94956201de1d51f6ff61e84ae944" category="list-text">将 ONTAPI 映射到 ONTAP 9 REST API</block>
-  <block id="10300380e897315c95d2c9a2331fb255" category="list-text">为了帮助您将 ONTAP 自动化代码过渡到 REST API ， NetApp 提供了 API 映射文档。此参考包括 ONTAPI 调用列表以及每个调用的 REST API 等效项。此映射文档已进行更新，以包含新的 ONTAP 9.9.1 API 端点。请参见<block ref="08f41e4498b955cf38a155de6ba4e72b" category="inline-link-rx"></block> 有关详细信息 ...</block>
-  <block id="5a3b858ecd9ec9c186ad254f07cd1d33" category="list-text">API 端点，用于新的 ONTAP 9.9.1 核心功能</block>
-  <block id="07e5c3418b383cfa2bebed08d44aefc3" category="list-text">REST API 中增加了对通过 ONTAPI 不可用的新 ONTAP 9.9.1 功能的支持。其中包括对嵌套 igroup 和 Google Cloud 密钥管理服务的支持。</block>
-  <block id="d621c5d40a054b36a3f1e180f7fc170d" category="list-text">改进了从 ONTAPI 过渡到 REST 的支持</block>
-  <block id="192cf409001c19f48a695ad558e612f6" category="list-text">现在，更多传统 ONTAPI 调用都具有相应的 REST API 等效项。其中包括本地 Unix 用户和组，无需客户端即可管理 NTFS 文件安全性， SAN 端口集以及卷空间属性。更新后的 ONTAPI to REST 映射文档也会包含这些更改。</block>
-  <block id="88b1c796bb089f48a24b20aea93fb18e" category="list-text">增强的联机文档</block>
-  <block id="ddd51e3a52a14385d0b60fcaf5dfe038" category="list-text">现在， ONTAP 联机文档参考页面包含一些标签，用于指示引入每个 REST 端点或参数时的 ONTAP 版本，包括 ONTAP 9.1.1 中的新端点或参数。</block>
   <block id="8ed6428212b41847f33c5db651c2aa70" category="doc">REST Web 服务基础</block>
   <block id="a08b42e2e2ef0c8e1f9e6ca49a2862ba" category="paragraph">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术和最佳实践，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。</block>
   <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="section-title">资源和状态表示</block>
@@ -901,7 +879,6 @@
   <block id="214d81d8672097921e223fb3e62fa879" category="section-title">NIS</block>
   <block id="29d694e39bf428e6908248736cf6c34b" category="paragraph">NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="69191005b4ee9f6b5f263cb192e44de2" category="section-title">UNIX 用户和组</block>
-  <block id="b7e582f26b0b273eb0f367ab4f2a9180" category="paragraph">本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的</block>
   <block id="cae712fa1badd396170b95946efaaab8" category="doc">存储资源的性能指标</block>
   <block id="fb561ab31583e301eb08f35a50a87c44" category="paragraph">ONTAP 收集有关选定 SVM 存储对象和协议的性能指标，并通过 REST API 报告此信息。您可以使用此数据监控 ONTAP 系统的性能。</block>
   <block id="59bd18a80f293dee3954f314ed6e11af" category="paragraph">对于给定的存储对象或协议，性能数据分为三类：</block>
@@ -961,11 +938,100 @@
   <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/cluster/Jobs/ ｛ uuid ｝</block>
   <block id="2fe4167817733fec8e6ba1afddf78f1b" category="paragraph">同步</block>
   <block id="50ccf1eac00654a4ac10e12d843b2025" category="paragraph">返回状态为和其他字段的作业对象。</block>
-  <block id="ab4ba9eb6009a89b125b55a74519d604" category="sidebar">ONTAP 自动化 9.9.1 文档</block>
   <block id="f4e160ea26107615e4033f710d587db2" category="sidebar">工作流 1 更新集群联系人并检查作业状态</block>
   <block id="fa3072c5dcc3c24dc044383b1ee6e52d" category="sidebar">ONTAP 和 Ansible</block>
   <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="4c557aa1edc9db8b42f1265ae600f253" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见<block ref="3f8b8a296b98a2427cd0fe076ddc5c7d" category="inline-link-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
+  <block id="31e39608982442406853c159bf64d7ea" category="section-title">CIFS 域</block>
+  <block id="772ba71e6aaaa5e3a9d9cdecd907e2e2" category="paragraph">在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是 ONTAP 9.10 中的新增资源。</block>
+  <block id="396c3f48c117673117684dd56e4ea358" category="section-title">CIFS 本地组</block>
+  <block id="075f810b99d746a8b62911ab066db558" category="paragraph">在确定共享，文件和目录访问权限时， CIFS 服务器可以使用本地组进行授权。此资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中进行了显著扩展。</block>
+  <block id="c1746aa388178e56fc9071ad1d30c228" category="section-title">FPolicy 连接</block>
+  <block id="3f689cafff034d41de3da8f0516fe489" category="paragraph">通过这些端点，您可以显示和更新外部 FPolicy 服务器的连接状态信息。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="7f1fb7408267003fd39631c254d0d9ae" category="section-title">锁定</block>
+  <block id="239f703364a5564124a3d68e8344a9c2" category="paragraph">锁定是一种同步机制，用于对同时访问多个客户端同时访问同一文件的文件实施限制。您可以使用这些端点检索和删除锁定。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="d096166c57e2b6d919e03cce85418d64" category="paragraph">对 S3 事件的审核是一项安全改进，可用于跟踪和记录某些 S3 事件。可以为每个存储分段的每个 SVM 设置 S3 审核事件选择器。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="ae19a8684ec907889cac06096d90615b" category="section-title">文件克隆</block>
+  <block id="e7883f7cebee57d8be228644d145fe07" category="paragraph">您可以使用这些端点创建文件克隆，检索拆分状态以及管理拆分负载。文件克隆端点资源最初是在 ONTAP 9.6 中推出的，并在 ONTAP 9.8 中进行了扩展。它们在 ONTAP 9.10 中再次显著扩展。</block>
+  <block id="f24ce81f056d5acd59788df7f5ab36a1" category="section-title">FlexCache</block>
+  <block id="807c87dbc2a84cfb9ed828623f9216ac" category="section-title">QoS 工作负载</block>
+  <block id="40bfd79f754a21d30d27146e76e53e9a" category="paragraph">QoS 工作负载表示通过 QoS 跟踪的存储对象。您可以检索 QoS 工作流。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="161bf0559542afedb1ca0bf946c7ee93" category="section-title">首要指标</block>
+  <block id="45b52a0afc333164581afc6ff628dcfd" category="paragraph">您可以通过排名靠前的指标端点来确定按特定指标筛选的卷的活动。可以根据客户端，目录，文件和用户进行筛选。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="346f7f627d1a93bfbf315865554048c6" category="section-title">反勒索软件</block>
+  <block id="d7741d8eafdec4ae992161e15c2ae508" category="paragraph">ONTAP 会检测可能包含勒索软件威胁的文件。端点有多种类别。您可以检索这些可疑文件的列表并将其从卷中删除。此资源类型是在 ONTAP 9.10.1 中引入的。</block>
+  <block id="006138580199bd3b75b397daaf66da34" category="section-title">IPsec CA 证书</block>
+  <block id="49594609d9f640b0c454c45b305cb943" category="paragraph">您可以添加，删除和检索 IPsec CA 证书。此资源类型是 ONTAP 9.10 中的新增资源。</block>
+  <block id="a4c782a0e5bd7be239b96d4d35ffe4fb" category="section-title">密钥管理器配置</block>
+  <block id="c9fc87bcce85ba9b55c70c4a5a618d7b" category="paragraph">通过这些端点，您可以检索和更新密钥管理器的配置。此资源类型是 ONTAP 9.10 中的新增资源。</block>
+  <block id="afcd6712bee083e0a41753fd140a0495" category="section-title">密钥存储</block>
+  <block id="8e534dc2397390aadbe32ec748d96a3d" category="paragraph">密钥存储用于描述密钥管理器的类型。此资源类型是 ONTAP 9.10 中的新增资源。</block>
+  <block id="8d74e9b6f76905c251cac67ba143095e" category="section-title">SSH SVMs</block>
+  <block id="04da7052ae3148365ddf3af010db695e" category="paragraph">通过这些端点，您可以检索所有 SVM 的 SSH 安全配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="bfed0b768d4205be491cf9aab9ef5bf1" category="list-text">ONTAP 9.6 到 ONTAP 9.10.1</block>
+  <block id="3b6c41c1f8397d3d6c4a39586bfc97f7" category="section-title">自动更新</block>
+  <block id="6403a27a515eaf92633945f4270c6cc4" category="paragraph">自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="84a2b6436ddb40c75b8b3e5ad743656f" category="section-title">核心转储</block>
+  <block id="0ae2ed9e360218bc8a7361630749a37d" category="paragraph">您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="38c0177ff71717e4ebdead24f8237be5" category="section-title">SNMP 用户实例</block>
+  <block id="5358757de9216cc29d688612a3d72fe1" category="inline-link">ONTAP 9 文档</block>
+  <block id="7d1750eaf694ea55e3ed364bf2fc1139" category="list-text"><block ref="7d1750eaf694ea55e3ed364bf2fc1139" category="inline-link-rx"></block></block>
+  <block id="85e5e87731b3318f19ef33e2fb42f8b4" category="paragraph">提供了有关 ONTAP 9 的文档（命令行界面命令除外）。</block>
+  <block id="874bbaff78a1a5929b6a69396bce843d" category="paragraph">提供 ONTAP 9 命令行界面命令的文档。</block>
+  <block id="8159db13d1fb608175963a59674de159" category="list-text"><block ref="8159db13d1fb608175963a59674de159" category="inline-link-rx"></block></block>
+  <block id="09b968a9a3d2c3977d1e4ac1ccd11b75" category="inline-link">PyPI ： NetApp ONTAP 9.10.1</block>
+  <block id="4be092006953c35749a0846e4734167a" category="list-text"><block ref="4be092006953c35749a0846e4734167a" category="inline-link-rx"></block></block>
+  <block id="3c7d0c806ed3155c89dbd1e259689a6c" category="paragraph">PyPI 上的 NetApp Python Client Library 软件包。</block>
+  <block id="52c1911015b514cf96a78c24068ce96a" category="inline-link">适用于 9.10.1 的 NetApp PCL-文档</block>
+  <block id="dd0ebea31107f6302bac45e38cca3b1d" category="list-text"><block ref="dd0ebea31107f6302bac45e38cca3b1d" category="inline-link-rx"></block></block>
+  <block id="8f3b394b3596fb5977bc82383618f11f" category="paragraph">NetApp Python 客户端库的文档。</block>
+  <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
+  <block id="00373de567d09d815530c953536aeaeb" category="inline-link-macro">ONTAP 9.10.1 自动化的新增功能</block>
+  <block id="deb56900a05b8be962967650554ae689" category="list-text"><block ref="deb56900a05b8be962967650554ae689" category="inline-link-macro-rx"></block></block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="section-title">一致性组</block>
+  <block id="7d68becf2598a5efeb5b687dfe7bb035" category="paragraph">一致性组是指在执行快照等特定操作时组合在一起的一组卷。此功能可扩展单卷操作在一组卷中隐式的崩溃一致性和数据完整性。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="a3b7af87c74d80ecedac76f490bfc38a" category="section-title">一致性组快照</block>
+  <block id="000c4dd933d539d502d855e482ad30ed" category="paragraph">您可以使用这些端点复制，创建一致性组的快照，并对其进行清单编制和还原。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="2b77121b57a073f6a912696b1d7a31d8" category="paragraph">嵌套 igroup 是 ONTAP 9.9 的一项新功能，也已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
+  <block id="6f68434a65995c923defc360224ffecc" category="section-title">LUN 属性</block>
+  <block id="5863e0f99ad1402d808798b272c35423" category="paragraph">LUN 属性是由调用方定义的名称 / 值对，可以选择随 LUN 一起存储。属性可用于保存少量应用程序专用元数据，不会被 ONTAP 解释。通过这些端点，您可以创建，更新，删除和发现 LUN 的属性。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="304c5c7bce84cce1f1ab6cffef80fad8" category="section-title">LUN 映射报告节点</block>
+  <block id="602c3dee864ac1118043c79730115b22" category="paragraph">报告节点是指在 ONTAP 的选择性 LUN 映射（ SLM ）功能中使用 SAN 协议公布映射 LUN 的网络路径的集群节点。通过这些新端点，您可以添加，删除和发现 LUN 映射的报告节点。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="1fbd05569b3face9ed656a6b7e9ed6be" category="section-title">VVol 绑定</block>
+  <block id="1e8e78cbbbce338dff98fbe3933768e2" category="paragraph">VMware 虚拟卷（ VVol ）绑定是指类为 `protocol_endpoint` 的 LUN 与类为 `vvol` 的 LUN 之间的关联。您可以使用 VVol 绑定 REST API 创建，删除和发现 VVol 绑定。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="93735cd742fbfd0bc4709b8eab7b7a9c" category="section-title">迁移</block>
+  <block id="d92df4d35fd041e8f77172eda0a2a252" category="paragraph">您可以将 SVM 从源集群迁移到目标集群。新端点可提供完全控制，包括暂停，恢复，检索状态和中止迁移操作的功能。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="c6e190b284633c48e39e55049da3cce8" category="section-title">Web</block>
+  <block id="b06d186d36b68be654fee4adc22d7f69" category="paragraph">您可以使用这些端点更新和检索每个数据 SVM 的 Web 服务安全配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="45cd51d7dc9ee8cde1ea6dfb973f7002" category="paragraph">您可以使用这些端点更新 Web 服务配置并检索当前配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="d5723690c437b8f149a99083cb539847" category="doc">ONTAP 9.10.1 自动化的新增功能</block>
+  <block id="f26d16dfd99d477cecadefd2bb92726b" category="section-title">ONTAP 9.10.1 REST API</block>
+  <block id="f81a95c072d17e5d1b7da75eee2c5a50" category="paragraph">ONTAP 9.10.1 将继续扩展 ONTAP REST API 的功能。添加了 100 多个新端点，以支持新的 ONTAP 功能以及对现有功能的增强。下面简要介绍了 REST API 增强功能。</block>
+  <block id="b5742337dd1612713a73b81dd85f6519" category="list-text">应用程序一致性组</block>
+  <block id="89b60b7b18597a3fbf28c20a66d0554f" category="list-text">一致性组是指在执行快照等特定操作时组合在一起的一组卷。此功能可扩展单卷操作在一组卷中隐式的崩溃一致性和数据完整性。它对于大型多卷工作负载应用程序非常重要。</block>
+  <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 迁移</block>
+  <block id="e103f6a6d6929aea03e223a20faabfab" category="list-text">您可以将 SVM 从源集群迁移到目标集群。新端点可提供完全控制，包括暂停，恢复，检索状态和中止迁移操作的功能。</block>
+  <block id="28e2c87b206213f5c59cbe60508b1daa" category="list-text">文件克隆和管理</block>
+  <block id="aae9ea9b55ca978886bb3bcf67a7b7af" category="list-text">卷级文件克隆和管理已得到增强。新的 REST 端点支持文件移动，复制和拆分操作。</block>
+  <block id="cc043e804fab4c123d69e795b127d626" category="list-text">改进了 S3 审核</block>
+  <block id="9ec3cad9fe1af8b29e76301d0e04bc71" category="list-text">对 S3 事件的审核是一项安全改进，可用于跟踪和记录某些 S3 事件。可以为每个存储分段的每个 SVM 设置 S3 审核事件选择器。</block>
+  <block id="9b18962d74ca9f6ee86af2817f51fbf9" category="list-text">勒索软件防护</block>
+  <block id="0773024a39c43c78bcb987b8de6630ea" category="list-text">ONTAP 会检测可能包含勒索软件威胁的文件。您可以检索这些可疑文件的列表并将其从卷中删除。</block>
+  <block id="7b9c0bd1e9617dc71d6eca94ae15b1bc" category="list-text">其他安全增强功能</block>
+  <block id="8a3b352420c05c2377d15df3fdbf54d0" category="list-text">有几项常规的安全增强功能可扩展现有协议并引入新功能。已对 IPsec ，密钥管理， SSH 配置和文件权限进行了改进。</block>
+  <block id="b5914ff3e2405c26264348e71dfd4590" category="list-text">CIFS 域和本地组</block>
+  <block id="00f95d14ec52f3905a8ed85a9a48dcc2" category="list-text">已在集群和 SVM 级别添加对 CIFS 域的支持。您可以检索域配置以及创建和删除首选域控制器。</block>
+  <block id="cfe5635d91cfb6abed08c3ae78515315" category="list-text">扩展了卷分析</block>
+  <block id="6495a298c2a1a26b997ca9bbb99ef7ef" category="list-text">卷分析和指标已通过其他端点进行扩展，以支持顶级文件，目录和用户。</block>
+  <block id="faa07c048822900bcf8537b1c474345f" category="list-text">支持增强功能</block>
+  <block id="8c0d6517a0a1c4f8718164322e468757" category="list-text">通过多项新功能增强了支持。自动更新可以通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。您还可以检索和管理节点生成的内存核心转储。</block>
+  <block id="bd267bd12514496474e44b08af357845" category="section-title">主机记录</block>
+  <block id="47ef31c7170557cd8b99e608cdfb0001" category="paragraph">通过这些端点，您可以显示指定主机名的 IP 地址以及 IP 地址的主机名。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="98f8c716c137eebb477ab782d431477c" category="section-title">本地主机</block>
+  <block id="6d5bdff627ee96fb9a3d1ce46d18fe48" category="paragraph">您可以使用这些端点显示和管理主机名的本地映射。此资源类型是在 ONTAP 9.10 中引入的。</block>
+  <block id="b4e81f372193d464553e67bfc6e6a475" category="paragraph">本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。</block>
+  <block id="9c7b3a3b39e1a38aaf3dc71f864770f8" category="sidebar">ONTAP 自动化 9.10.1 文档</block>
 </blocks>

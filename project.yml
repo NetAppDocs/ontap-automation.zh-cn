@@ -9,7 +9,7 @@ settings:
     langs: zh-cn,us-en,ja-jp
 sidebar:
   entries:
-  - title: ONTAP 自动化 9.9.1 文档
+  - title: ONTAP 自动化 9.10.1 文档
     url: "/index.html"
   - title: ONTAP 自动化选项
     url: "/options_for_ontap_automation.html"

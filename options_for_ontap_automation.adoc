@@ -28,7 +28,7 @@ NOTE: ONTAPI （也称为网络易管理性 SDK 或 ZAPI ）是一种传统技�
 
 === 调整原有 ONTAPI 代码以使用 REST
 
-如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2876895["ONTAPI 到 REST API 映射信息"^] 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。
+如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^] 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。
 
 
 

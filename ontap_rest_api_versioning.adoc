@@ -18,7 +18,7 @@ ONTAP 9 附带的 REST API 分配有一个版本号，该版本号与 ONTAP 版�
 
 NOTE: 所有版本的 ONTAP 9 都使用相同版本的 REST API 。
 
-ONTAP 9.6 到 ONTAP 9.9.1:: 版本 1
+ONTAP 9.6 到 ONTAP 9.10.1:: 版本 1
 
 
 https://library.netapp.com/ecmdocs/ECMLP2492508/html/frameset.html["《 ONTAP 9 发行说明》"^]

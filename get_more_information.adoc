@@ -19,9 +19,13 @@ summary:
 
 === ONTAP 9 资源
 
+* https://docs.netapp.com/us-en/ontap/["ONTAP 9 文档"^]
++
+提供了有关 ONTAP 9 的文档（命令行界面命令除外）。
+
 * https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]
 +
-提供了 ONTAP 9 的所有文档。
+提供 ONTAP 9 命令行界面命令的文档。
 
 * https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["ONTAP 和 ONTAP System Manager 资源"^]
 +
@@ -33,11 +37,19 @@ summary:
 
 === ONTAP 9 开发人员资源
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2876895["ONTAPI 到 REST API 映射信息"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^]
 +
 提供关键 ONTAPI 调用以及与等效 REST API 调用的映射。
 
-* https://devnet.netapp.com/restapi.php["NetApp 开发人员网络： ONTAP RESTful API"]
+* https://pypi.org/project/netapp-ontap["PyPI ： NetApp ONTAP 9.10.1"^]
++
+PyPI 上的 NetApp Python Client Library 软件包。
+
+* https://library.netapp.com/ecmdocs/ECMLP2879970/html/index.html["适用于 9.10.1 的 NetApp PCL-文档"^]
++
+NetApp Python 客户端库的文档。
+
+* https://devnet.netapp.com/restapi.php["NetApp 开发人员网络： ONTAP RESTful API"^]
 +
 提供使用 ONTAP REST API 所需的资源和文档，包括 ONTAP Python 客户端库。
 
@@ -57,7 +69,7 @@ summary:
 
 === NetApp 资源
 
-* https://mysupport.netapp.com/["NetApp 支持"]
+* https://mysupport.netapp.com/["NetApp 支持"^]
 +
 访问故障排除工具，文档和技术支持帮助。
 
