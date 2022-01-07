@@ -5,8 +5,9 @@ settings:
     pdf_enabled: true
   prod:
     pdf_enabled: true
-    harmony_enabled: true
+    harmony_enabled: false
     langs: zh-cn,us-en,ja-jp
+  langs: zh-cn,us-en,ja-jp
 sidebar:
   entries:
   - title: ONTAP 自动化 9.10.1 文档
