@@ -89,6 +89,55 @@ dl dt {
    font-family: 'Source Sans Pro',sans-serif;
 }
 
+/* Collapsible Block */
+
+details{
+  margin-bottom: 24px;
+}
+
+.page-content details {
+  margin-left: 1rem;
+}
+
+.page-content details>summary {
+  display: block;
+  position: relative;
+  line-height: 1.6;
+  line-height: var(--doc-line-height);
+  margin-bottom: 0.5rem;
+}
+
+summary {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.page-content details>summary::before {
+   content: '\276f';
+   transform: rotate(90deg);
+   display: block;
+   position: absolute;
+   color: #444;
+   top: 0.5em;
+   top: calc((var(--doc-line-height)*0.5 - .3)*1em);
+   left: -1rem;
+   font-weight: normal;
+}
+
+.page-content details[open]>summary::before {
+   content: '\276f';
+   transform: rotate(270deg);
+   display: block;
+   position: absolute;
+   color: #444;
+   top: 0.5em;
+   top: calc((var(--doc-line-height)*0.5 - .3)*1em);
+   left: -1rem;
+}
+
 #toctitle {
   color: inherit;
 }
@@ -99,7 +148,11 @@ li.n-footer__language svg {
   vertical-align: inherit;
 }
 
-table.frame-all { border-width: 1px 0; }
+table.frame-all {
+  border-width: 1px 0;
+  display: inline-block;
+  overflow: auto;
+}
 
 /* Override */
 
@@ -377,16 +430,16 @@ time+span+span {
   position: fixed;
   top: 137px;
   z-index: 1;
+  bottom: 80px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /*pdf-ux*/
 .sidebar-nav-container {
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 57vh;
-  position: relative;
-  bottom: 80px;
-  top: 5px;
 }
 
 #mysidebar .active {
@@ -534,6 +587,11 @@ time+span+span {
   display: none;
 }
 /*pdf-ux*/
+
+.n-off-canvas-menu--open .n-off-canvas-menu__content-wrap,.n-off-canvas__wrapper-open .n-off-canvas-menu__content-wrap{
+  left: calc(100vw - 43px);
+  left: 89%;
+}
 
 .n-doc__component-detail-content {
   float: left;

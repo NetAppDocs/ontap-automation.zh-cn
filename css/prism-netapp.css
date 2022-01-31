@@ -1,14 +1,11 @@
 div.listingblock {
-  width: fit-content;
+  max-width: fit-content;
 }
 
 .listingblock *:before {
   display: none !important;
 }
 
-code[class*=language-], pre[class*=language-] {
-  white-space: pre-wrap
-}
 code[class*=language-] {
     padding: 12px 20px 2px;
     margin: 0px !important;

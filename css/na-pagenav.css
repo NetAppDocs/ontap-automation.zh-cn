@@ -150,9 +150,9 @@
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 75vh;
   top: 344px;
   position: fixed;
+  bottom: 100px;
 }
 
 .page-nav-inner {

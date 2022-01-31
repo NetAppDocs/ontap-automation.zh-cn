@@ -1,7 +1,7 @@
 .product-family-wrapper .n-off-canvas-menu__content-wrap{
   background:#f8f9fa !important;
   }
-  
+
 .product-family .n-band__content{
   display: unset;
   }
@@ -21,14 +21,14 @@ ul#product-family-links {
 }
 
 .product-family-linkheading {
-  margin-left: 0px; 
+  margin-left: 0px;
   font-weight: bold;
 }
-  
+
 .product-family-tile:hover .product-family-tile-title {
   text-decoration: underline;
 }
-    
+
 ul#product-family-links li.product-family-linkheading > a {
   color: #101820;
   font-weight: bold;
@@ -39,11 +39,17 @@ ul#product-family-links li.product-family-linkheading > a {
 text-decoration: underline;
 }
 
-  
+
 ul#product-family-links li a {
   color: #000;
   line-height: 32px;
   font-size: 13px;
+}
+
+ul#product-family-links li > a.product-family-space {
+  line-height: 1.15em;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .product-family .ie-feature-block__section {
@@ -94,7 +100,7 @@ ul#product-family-links li a:hover {
   text-decoration: none;
 }
 
-#selected-sidelink span{ 
+#selected-sidelink span{
   font-weight: bold;
 }
 
@@ -118,7 +124,7 @@ ul#product-family-links li a:hover {
 }
 
 .product-family .n-layout-flex__item:nth-child(7){
-  margin-left:0; 
+  margin-left:0;
   margin-right:0;
 }
 
@@ -145,6 +151,12 @@ ul#product-family-links li a:hover {
   max-width:1664px;
   display:flex;
   justify-content:center;
+}
+
+@media screen and (max-width: 767px){
+  .n-property-bar__menu-toggle{
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -180,7 +192,8 @@ ul#product-family-links li a:hover {
 	  margin-left: 0;
 	  float: left;
 	  width: 100%;
-	  margin-top: 80px;
+	  margin-top: 15px;
+          padding: 10px;
 	}
 
 	.product-family .col-md-3 {
@@ -188,7 +201,7 @@ ul#product-family-links li a:hover {
 	  margin:0;
 	  padding:0;
 	}
-	  
+
 	.product-family-linkheading {
 	  color:#fff;
 	  padding-left:7px;
@@ -206,7 +219,7 @@ ul#product-family-links li a:hover {
 	  margin-left:0;
 	  margin-top:0;
 	}
-	  
+
 	.product-family .n-band__section:not(.n-band__section--fc-module) p {
 	  margin: 0 0 12px;
 	}
@@ -223,11 +236,11 @@ ul#product-family-links li a:hover {
 	  margin-left: 0;
 	  margin-top: 50px;
 	}
-	  
+
 	div#selected-sidelink{
 	  margin-bottom: 10px;
 	}
-		
+
 	.product-family-linkheading{
 	  margin:0;
 	}
@@ -239,7 +252,7 @@ ul#product-family-links li a:hover {
 	.tile-container {
 	  width: calc(100% - 30%);
 	}
-} 
+}
 @media screen and (min-width: 1024px) {
 	.product-family-wrapper .n-breadcrumb{
 		height: 40px;
@@ -264,7 +277,3 @@ ul#product-family-links li a:hover {
 	  padding-top: 109px;
 	}
 }
-
-
-
-

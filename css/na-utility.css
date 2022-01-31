@@ -158,7 +158,7 @@ button.n-property-bar__search-toggle-button {
   position: relative;
   float: right;
   height: 32px;
-  top: 1px;
+  top: 2px;
   right: 5px;
 }
 
@@ -223,6 +223,12 @@ button.n-property-bar__search-toggle-button {
   fill: #0A0B09;
 }
 
+/* Search Icon Visibility */
+.n-property-bar__search-toggle-button.visually-hidden-btn{
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+
 @media (min-width: 48em) {
   .n-property-bar__search-toggle {
     padding: 15px;
@@ -282,7 +288,7 @@ button.n-property-bar__search-toggle-button {
   }
 
   button.n-property-bar__search-toggle-button {
-    height: 37px;
+    height: 34px;
   }
 
   .search div._Search_display_wrapper {
