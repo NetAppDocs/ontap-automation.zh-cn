@@ -1007,7 +1007,6 @@
   <block id="c6e190b284633c48e39e55049da3cce8" category="section-title">Web</block>
   <block id="b06d186d36b68be654fee4adc22d7f69" category="paragraph">您可以使用这些端点更新和检索每个数据 SVM 的 Web 服务安全配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="45cd51d7dc9ee8cde1ea6dfb973f7002" category="paragraph">您可以使用这些端点更新 Web 服务配置并检索当前配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
-  <block id="d5723690c437b8f149a99083cb539847" category="doc">ONTAP 9.10.1 自动化的新增功能</block>
   <block id="f26d16dfd99d477cecadefd2bb92726b" category="section-title">ONTAP 9.10.1 REST API</block>
   <block id="f81a95c072d17e5d1b7da75eee2c5a50" category="paragraph">ONTAP 9.10.1 将继续扩展 ONTAP REST API 的功能。添加了 100 多个新端点，以支持新的 ONTAP 功能以及对现有功能的增强。下面简要介绍了 REST API 增强功能。</block>
   <block id="b5742337dd1612713a73b81dd85f6519" category="list-text">应用程序一致性组</block>
@@ -1034,4 +1033,5 @@
   <block id="6d5bdff627ee96fb9a3d1ce46d18fe48" category="paragraph">您可以使用这些端点显示和管理主机名的本地映射。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="b4e81f372193d464553e67bfc6e6a475" category="paragraph">本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。</block>
   <block id="9c7b3a3b39e1a38aaf3dc71f864770f8" category="sidebar">ONTAP 自动化 9.10.1 文档</block>
+  <block id="58de557ede4c764122eb327304df680e" category="doc">ONTAP 9.10.1 自动化的新增功能</block>
 </blocks>
