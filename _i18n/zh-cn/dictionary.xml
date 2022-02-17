@@ -1034,4 +1034,11 @@
   <block id="b4e81f372193d464553e67bfc6e6a475" category="paragraph">本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。</block>
   <block id="9c7b3a3b39e1a38aaf3dc71f864770f8" category="sidebar">ONTAP 自动化 9.10.1 文档</block>
   <block id="58de557ede4c764122eb327304df680e" category="doc">ONTAP 9.10.1 自动化的新增功能</block>
+  <block id="4921daa1d1156e8a0f7fe7b45dfc92fb" category="section-title">在 ONTAPI 中更改 SnapDiff 可用性</block>
+  <block id="e5e32a25be86538826bb7ce943294815" category="paragraph">从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。</block>
+  <block id="d96bdb3acb68ad565307604365b57f70" category="paragraph">ONTAP 版本中的 SnapDiff API 可用性定义如下：</block>
+  <block id="c731207305059b4146b7b02e506607f9" category="list-text">ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）</block>
+  <block id="a7fc2881def06d9d5d2e90252bccd071" category="list-text">ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）</block>
+  <block id="1a7f82d18a27e10799e90edeb79d7ff5" category="list-text">ONTAP 9.10.1 ：仅限 v3 （仅限 REST API ）</block>
+  <block id="798181468fa815b909228f2f21549271" category="paragraph">有关详细信息，请参见<block ref="6e7f74aa9001f0524a965144f528bbc2" category="inline-link-rx"></block>。</block>
 </blocks>

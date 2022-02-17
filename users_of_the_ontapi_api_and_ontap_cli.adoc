@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: users_of_the_ontapi_api_and_ontap_cli.html 
-keywords:  
+keywords: snapdiff 
 summary:  
 ---
 = ONTAPI 和 ONTAP 命令行界面的用户
@@ -32,6 +32,21 @@ ONTAP 支持多种类型的 Storage Virtual Machine （ SVM ）。但是，只�
 === 从 ONTAPI 迁移到 REST
 
 REST API 是自动化 ONTAP 系统管理的主要战略选择。如果您当前正在使用 ONTAPI ，则应考虑迁移到 REST API 。NetApp 提供了映射文档，可帮助您从 ONTAPI 迁移到 REST 。
+
+
+
+=== 在 ONTAPI 中更改 SnapDiff 可用性
+
+从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。
+
+ONTAP 版本中的 SnapDiff API 可用性定义如下：
+
+* ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）
+* ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）
+* ONTAP 9.10.1 ：仅限 v3 （仅限 REST API ）
+
+
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 9 发行说明》"^]。
 
 link:input_variables_controlling_an_api_request.html["控制 API 请求的输入变量"]
 
