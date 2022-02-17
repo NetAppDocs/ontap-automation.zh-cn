@@ -19,7 +19,7 @@
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
   <meta name="description" content="">
-  <meta name="keywords" content=" ">
+  <meta name="keywords" content=" snapdiff">
   
   
 
@@ -822,7 +822,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 14:33:58 +0000">01/31/2022</time>
+    <time datetime="2022-02-17 23:37:55 +0000">02/17/2022</time>
     
   
 
@@ -864,6 +864,31 @@
 <h3 id="从-ontapi-迁移到-rest">从 ONTAPI 迁移到 REST</h3>
 <div class="paragraph">
 <p>REST API 是自动化 ONTAP 系统管理的主要战略选择。如果您当前正在使用 ONTAPI ，则应考虑迁移到 REST API 。NetApp 提供了映射文档，可帮助您从 ONTAPI 迁移到 REST 。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="在-ontapi-中更改-snapdiff-可用性">在 ONTAPI 中更改 SnapDiff 可用性</h3>
+<div class="paragraph">
+<p>从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP 版本中的 SnapDiff API 可用性定义如下：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）</p>
+</li>
+<li>
+<p>ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）</p>
+</li>
+<li>
+<p>ONTAP 9.10.1 ：仅限 v3 （仅限 REST API ）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>有关详细信息，请参见 <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508" target="_blank" rel="noopener">"《 ONTAP 9 发行说明》"</a>。</p>
 </div>
 <div class="paragraph">
 <p><a href="input_variables_controlling_an_api_request.html">"控制 API 请求的输入变量"</a></p>
