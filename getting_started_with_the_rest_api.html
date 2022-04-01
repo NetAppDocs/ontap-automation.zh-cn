@@ -16,20 +16,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="">
-  <meta name="keywords" content=" ">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -59,27 +50,11 @@
   
   <link rel="stylesheet" href="/zh-cn/ontap-automation/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/ontap-automation/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/ontap-automation/css/product-family.css' type="text/css">
-  
-
-  
-  <link rel='stylesheet' href='/zh-cn/ontap-automation/css/na-feature.css' type='text/css'>
-  
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel='stylesheet' href='/zh-cn/ontap-automation/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/ontap-automation/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/ontap-automation/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-automation/js/na-search.js'></script><script src='/zh-cn/ontap-automation/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism-netapp.css' type='text/css'>
 
 
@@ -97,9 +72,7 @@
   <script src='/zh-cn/ontap-automation/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/ontap-automation/js/toc.js'></script>
-  <script src='/zh-cn/ontap-automation/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/ontap-automation/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -158,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/ontap-automation/js/version-dropdown.js'></script>
-  <script src='/zh-cn/ontap-automation/js/product-family.js'></script>
   <script src='/zh-cn/ontap-automation/js/FileSaver.min.js'></script>
   <script src='/zh-cn/ontap-automation/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/ontap-automation/js/jszip.min.js'></script>
@@ -171,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[REST API 入门](https://docs.netapp.com/zh-cn/ontap-automation/getting_started_with_the_rest_api.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/getting_started_with_the_rest_api.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -342,10 +333,8 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
-        <a target="_blank" href="/zh-cn/ontap-automation/pdfs/fullsite-sidebar/ONTAP_自动化.pdf" >
+        <a target="_blank" href="/zh-cn/ontap-automation/pdfs/fullsite-sidebar/ONTAP_自动化文档.pdf" >
           <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
-
-
 
 
 
@@ -354,13 +343,41 @@
         <li class="pdf-ux-container">
           <a target="_blank" 
             
-              href="/zh-cn/ontap-automation/pdfs/sidebar/REST_API_入门.pdf" 
+              href="/zh-cn/ontap-automation/pdfs/sidebar/发行说明.pdf" 
             
           >
             <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-            REST API 入门
+            发行说明
           </a>
           
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/ontap-automation/pdfs/sidebar/入门.pdf" 
+            
+          >
+            <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
+            入门
+          </a>
+          
+
+
 
 
 
@@ -391,11 +408,11 @@
         <li class="pdf-ux-container">
           <a target="_blank" 
             
-              href="/zh-cn/ontap-automation/pdfs/sidebar/了解_ONTAP_REST_API.pdf" 
+              href="/zh-cn/ontap-automation/pdfs/sidebar/ONTAP_REST_API.pdf" 
             
           >
             <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-            了解 ONTAP REST API
+            ONTAP REST API
           </a>
           
 
@@ -440,11 +457,11 @@
         <li class="pdf-ux-container">
           <a target="_blank" 
             
-              href="/zh-cn/ontap-automation/pdfs/sidebar/使用_REST_API_时的其他注意事项.pdf" 
+              href="/zh-cn/ontap-automation/pdfs/sidebar/其他注意事项.pdf" 
             
           >
             <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-            使用 REST API 时的其他注意事项
+            其他注意事项
           </a>
           
 
@@ -472,13 +489,15 @@
         <li class="pdf-ux-container">
           <a target="_blank" 
             
-              href="/zh-cn/ontap-automation/pdfs/sidebar/REST_资源类别摘要.pdf" 
+              href="/zh-cn/ontap-automation/pdfs/sidebar/REST_资源摘要.pdf" 
             
           >
             <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-            REST 资源类别摘要
+            REST 资源摘要
           </a>
           
+
+
 
 
 
@@ -561,24 +580,41 @@
         <li class="pdf-ux-container">
           <a target="_blank" 
             
-              href="/zh-cn/ontap-automation/pdfs/sidebar/使用_Python.pdf" 
+              href="/zh-cn/ontap-automation/pdfs/sidebar/Python_客户端库.pdf" 
             
           >
             <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-            使用 Python
+            Python 客户端库
           </a>
           
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
 
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
           <a target="_blank" 
             
-              href="/zh-cn/ontap-automation/pdfs/sidebar/NetApp_ONTAP_Python_客户端库.pdf" 
+              href="/zh-cn/ontap-automation/pdfs/sidebar/自动化技术.pdf" 
             
           >
             <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-            NetApp ONTAP Python 客户端库
+            自动化技术
           </a>
           
 
@@ -592,21 +628,6 @@
     
 
   
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
-
-
-
 
 
 
@@ -651,110 +672,121 @@
   });
 </script><div class="sidebar-nav-container">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
-        ONTAP 自动化 9.10.1 文档
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/options_for_ontap_automation.html">
-        ONTAP 自动化选项
-      </a></li><li class="subfolders  active "><a href="/zh-cn/ontap-automation/getting_started_with_the_rest_api.html">
-        <div class="na-navbar-padding"> REST API 入门</div>
+        ONTAP 自动化文档
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 发行说明</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/getting_started_before.html">
-        开始之前
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/retrieving_the_cluster_software_version.html">
-        正在检索集群软件版本
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/hello_world.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rn/whats_new.html">
+        新增功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508">
+        《 ONTAP 发行说明》
+      </a></li></ul></li><li class="subfolders  active "><a href="/zh-cn/ontap-automation/getting_started_with_the_rest_api.html">
+        <div class="na-navbar-padding"> 入门</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/ontap_automation_options.html">
+        了解自动化选项
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/prepare.html">
+        准备使用 REST API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/retrieve_cluster_software_version.html">
+        检索集群软件版本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/hello_world.html">
         大家好
-      </a></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-automation/understanding_rest.html">
-        <div class="na-navbar-padding"> 了解 ONTAP REST API</div>
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP REST API</div>
       </a>
-      <ul><li class="subfolders "><a href="/zh-cn/ontap-automation/rest_implementation_details.html">
+      <ul><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> REST 实施详细信息</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest_web_services_foundation.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/rest_web_services_foundation.html">
         REST Web 服务基础
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/ontap_rest_api_versioning.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/rest_api_versioning.html">
         ONTAP REST API 版本控制
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/how_to_access_the_ontap_api.html">
-        如何访问 ONTAP API
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/basic_operational_characteristics.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/access_rest_api.html">
+        如何访问 REST API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/operational_characteristics.html">
         基本操作特征
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/input_variables_controlling_an_api_request.html">
-        控制 API 请求的输入变量
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/interpreting_an_api_response.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/input_variables.html">
+        输入变量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/interpret_api_response.html">
         解释 API 响应
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/how_asynchronous_processing_works_using_the_job_object.html">
-        异步处理如何使用作业对象
-      </a></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-automation/additional_considerations_when_using_the_rest_api.html">
-        <div class="na-navbar-padding"> 使用 REST API 时的其他注意事项</div>
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/asynchronous_processing.html">
+        使用作业对象进行异步处理
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 其他注意事项</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/object_references_and_access.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/object_references_and_access.html">
         对象引用和访问
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/users_of_the_ontapi_api_and_ontap_cli.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/users_ontapi_api_ontap_cli.html">
         ONTAPI 和 ONTAP 命令行界面的用户
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/accessing_the_ontap_cli_through_the_rest_api.html">
-        通过 REST API 访问 ONTAP 命令行界面
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/security_using_rbac.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/access_ontap_cli.html">
+        访问 ONTAP 命令行界面
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/security_using_rbac.html">
         使用 RBAC 实现安全性
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/performance_metrics_for_storage_resources.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/performance_metrics.html">
         存储资源的性能指标
-      </a></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-automation/summary_of_the_rest_resource_categories.html">
-        <div class="na-navbar-padding"> REST 资源类别摘要</div>
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> REST 资源摘要</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/application.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/overview_categories.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/application.html">
         应用程序
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/cloud.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/cloud.html">
         云
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/cluster.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/cluster.html">
         集群
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/name_services.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/name_services.html">
         名称服务
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/nas.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/nas.html">
         NAS
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/ndmp.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/ndmp.html">
         NDMP
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/networking.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/networking.html">
         网络
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/nvme.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/nvme.html">
         NVMe
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/object_store.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/object_store.html">
         对象存储
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/san.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/san.html">
         SAN
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/security.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/security.html">
         安全性
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/snaplock.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/snaplock.html">
         SnapLock
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/snapmirror.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/snapmirror.html">
         SnapMirror
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/storage.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/storage.html">
         存储
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/support.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/support.html">
         支持
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/svm.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/svm.html">
         SVM
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-automation/workflows.html">
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 工作流</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/preparing_to_use_the_workflow_processes.html">
-        准备使用工作流进程
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/workflow_1__updating_the_cluster_contact_and_checking_job_state.html">
-        工作流 1 更新集群联系人并检查作业状态
-      </a></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-automation/using_python.html">
-        <div class="na-navbar-padding"> 使用 Python</div>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/workflows/prepare_workflows.html">
+        准备使用这些工作流
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/workflows/wf_1_update_cluster_contact.html">
+        工作流 1 —更新集群联系人并检查状态
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Python 客户端库</div>
       </a>
-      <ul><li class="subfolders "><a href="/zh-cn/ontap-automation/netapp_ontap_python_client_library.html">
-        <div class="na-navbar-padding"> NetApp ONTAP Python 客户端库</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/preparing_to_use_the_python_client_library.html">
-        正在准备使用 Python 客户端库
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/script_to_retrieve_the_cluster_configuration.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/python/overview_pcl.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/python/prepare_pcl.html">
+        准备使用 Python 客户端库
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/python/script_retrieve_cluster_configuration.html">
         用于检索集群配置的脚本
-      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/api_reference.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/reference/api_reference.html">
         API 参考
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/ontap_ansible.html">
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 自动化技术</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/automate/ontap_ansible.html">
         ONTAP 和 Ansible
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/blogs.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/automate/blogs.html">
         自动化博客
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get_more_information.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/additional/get_more_information.html">
         获取更多信息
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/legal-notices.html">
         法律声明
@@ -774,26 +806,22 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/ontap-automation/">ONTAP&nbsp;Automation</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          REST API 入门
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -822,54 +850,22 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-17 23:37:55 +0000">02/17/2022</time>
+    <time datetime="2022-04-01 16:32:39 +0000">04/01/2022</time>
     
   
-
-<span>提供者
-  <a target="_blank" href="https://github.com/dmp-netapp">
-    <img  class="avatar avatar-small"
-          alt="dmp-netapp"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/50704017?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-</span>
 
 
 </p>
 
-
 <div class="paragraph lead">
-<p>您可以快速开始使用 ONTAP REST API 。在准备并了解基本的请求响应流之后，您可以使用 curl 对一个简单的调用进行问题描述处理。这样可以提供在实时系统上对更复杂的工作流使用之前所需的简介和视角。</p>
+<p>您可以快速开始使用 ONTAP REST API 和其他自动化技术。在准备并了解基本的请求响应流之后，您可以使用 curl 对简单的 API 调用进行问题描述 。此准备工作介绍了在实时系统上使用更复杂的工作流之前所需的简介和视角。</p>
 </div>
 
     </article>
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[REST API 入门](https://docs.netapp.com/zh-cn/ontap-automation/getting_started_with_the_rest_api.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/getting_started_with_the_rest_api.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -971,9 +967,7 @@
 </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/ontap-automation/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -988,7 +982,4 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>

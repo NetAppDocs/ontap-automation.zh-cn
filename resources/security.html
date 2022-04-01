@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>Search results</title>
+  <title>安全性</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Search results" />
+  <meta property="og:title" content="安全性" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/search.html" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/resources/security.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-automation/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" "><meta name="translate" content="false"/><!-- Icons -->
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -54,7 +54,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-automation/js/na-search.js'></script><script src='/zh-cn/ontap-automation/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism-netapp.css' type='text/css'>
 
 
@@ -144,6 +144,24 @@
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[安全性](https://docs.netapp.com/zh-cn/ontap-automation/resources/security.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/resources/security.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -216,6 +234,26 @@
       </div>
 
       
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/ontap-automation/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
     </div>
   </div>
   <div class="n-property-bar__toolbar">
@@ -234,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/security.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/security.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/security.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/security.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -471,6 +509,15 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/ontap-automation/pdfs/pages/resources/security.pdf" >
+    <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -702,7 +749,7 @@
         对象存储
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/san.html">
         SAN
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/security.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/security.html">
         安全性
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/snaplock.html">
         SnapLock
@@ -796,28 +843,207 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Search results</h1>
+  <h1 class="n-doc__component-detail-heading">安全性</h1>
 </div>
 
 
-<div id="search-demo-container" class="n-property-bar__search">
-  <div id="react-search" 
-  data-search-html="/zh-cn/ontap-automation/search.html"
-  data-type="page" 
-  data-placeholder="搜索文档" 
-  data-no-results-found="未找到与 {query} 匹配的结果。" 
-  data-did-you-mean="搜索 {suggestion}。" 
-  data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
-  data-results-found="找到 {hitCount} 个结果"
-  data-sk-es-pf-indexes=""></div>
-  <button class="search-all-icon n-property-bar__search-toggle-button" type="button">
-    <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
-      <title>search</title>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
-    </svg>
-  </button>
-</div>
+<p class="page-details">
+  
+    
+    <time datetime="2022-04-01 16:32:39 +0000">04/01/2022</time>
+    
+  
 
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>这些 API 调用可用于管理集群和 SVM 安全设置。</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="帐户">—帐户</h4>
+<div class="paragraph">
+<p>集群和 SVM 有一组用户帐户。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="帐户名称">帐户名称</h4>
+<div class="paragraph">
+<p>范围内的用户帐户的配置。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="active-directory-代理">Active Directory 代理</h4>
+<div class="paragraph">
+<p>您可以在 Active Directory 服务器上管理 SVM 帐户信息。此资源类型是在 ONTAP 9.7 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="反勒索软件">反勒索软件</h4>
+<div class="paragraph">
+<p>ONTAP 会检测可能包含勒索软件威胁的文件。端点有多种类别。您可以检索这些可疑文件的列表并将其从卷中删除。此资源类型是在 ONTAP 9.10.1 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="audit">Audit</h4>
+<div class="paragraph">
+<p>用于确定审核日志文件中记录的内容的设置。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="审核目标">审核目标</h4>
+<div class="paragraph">
+<p>这些设置控制将审核日志信息转发到远程系统或 Splunk 服务器的方式。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="审核消息">审核消息</h4>
+<div class="paragraph">
+<p>您可以检索审核日志消息。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aws-kms">AWS KMS</h4>
+<div class="paragraph">
+<p>通过这组 API 调用，您可以使用 Amazon Web Services 密钥管理服务来存储 ONTAP 加密密钥。此资源类型是 ONTAP 9.8 的新增功能。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="azure-密钥存储">Azure 密钥存储</h4>
+<div class="paragraph">
+<p>通过这组 API 调用，您可以使用 Azure 密钥存储来存储 ONTAP 加密密钥。此资源类型是 ONTAP 9.8 的新增功能。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="证书">证书</h4>
+<div class="paragraph">
+<p>API 调用可用于安装，显示和删除 ONTAP 使用的证书。此资源类型是在 ONTAP 9.7 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="集群安全性">集群安全性</h4>
+<div class="paragraph">
+<p>您可以检索集群范围安全性的详细信息并更新某些参数。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="gcp-kms">GCP KMS</h4>
+<div class="paragraph">
+<p>通过这组 API 调用，您可以使用 Google 云平台密钥管理服务来存储和管理 ONTAP 加密密钥。此资源类型最初是在 ONTAP 9.8 REST API 中引入的。但是，此功能已经过重新设计，因此在 ONTAP 9.9 中被视为新增资源类型。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ipsec">IPsec</h4>
+<div class="paragraph">
+<p>Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协议，可通过底层 IP 网络在两个端点之间提供安全性。此资源类型是 ONTAP 9.8 的新增功能。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ipsec-ca-证书">IPsec CA 证书</h4>
+<div class="paragraph">
+<p>您可以添加，删除和检索 IPsec CA 证书。此资源类型是 ONTAP 9.10 中的新增资源。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ipsec-策略">IPsec 策略</h4>
+<div class="paragraph">
+<p>您可以使用这组 API 调用来管理对 IPsec 部署有效的策略。此资源类型是 ONTAP 9.8 的新增功能。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ipsec-安全关联">IPsec 安全关联</h4>
+<div class="paragraph">
+<p>您可以使用这组 API 调用来管理对 IPsec 部署有效的安全关联。此资源类型是 ONTAP 9.8 的新增功能。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="密钥管理器配置">密钥管理器配置</h4>
+<div class="paragraph">
+<p>通过这些端点，您可以检索和更新密钥管理器的配置。此资源类型是 ONTAP 9.10 中的新增资源。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="密钥管理器">密钥管理器</h4>
+<div class="paragraph">
+<p>密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="密钥存储">密钥存储</h4>
+<div class="paragraph">
+<p>密钥存储用于描述密钥管理器的类型。此资源类型是 ONTAP 9.10 中的新增资源。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ldap-身份验证">LDAP 身份验证</h4>
+<div class="paragraph">
+<p>这些 API 调用用于检索和管理集群 LDAP 服务器配置。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="登录消息">登录消息</h4>
+<div class="paragraph">
+<p>用于显示和管理 ONTAP 使用的登录消息。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nis-身份验证">NIS 身份验证</h4>
+<div class="paragraph">
+<p>这些设置用于检索和管理集群 NIS 服务器配置。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="密码身份验证">密码身份验证</h4>
+<div class="paragraph">
+<p>这包括用于更改用户帐户密码的 API 调用。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="角色实例的特权">角色实例的特权</h4>
+<div class="paragraph">
+<p>管理特定角色的特权。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="公有密钥身份验证">公有密钥身份验证</h4>
+<div class="paragraph">
+<p>您可以使用这些 API 调用为用户帐户配置公有密钥。此资源类型是在 ONTAP 9.7 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="角色">角色</h4>
+<div class="paragraph">
+<p>这些角色提供了一种向用户帐户分配权限的方法。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="角色实例">角色实例</h4>
+<div class="paragraph">
+<p>角色的特定实例。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="saml-服务提供程序">SAML 服务提供程序</h4>
+<div class="paragraph">
+<p>您可以显示和管理 SAML 服务提供程序的配置。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ssh">SSH</h4>
+<div class="paragraph">
+<p>通过这些调用，您可以设置 SSH 配置。此资源类型是在 ONTAP 9.7 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ssh-svms">SSH SVMs</h4>
+<div class="paragraph">
+<p>通过这些端点，您可以检索所有 SVM 的 SSH 安全配置。此资源类型是在 ONTAP 9.10 中引入的。</p>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->
@@ -940,27 +1166,4 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
-  </body><script>
-      if(hasParameter(window.location.search,'q')) {
-        var queryString = decodeURI(getParameter(window.location.search, 'q'));
-        document.getElementsByClassName("sk-search-box__text")[0].setAttribute("value", queryString);
-      }
-
-      function getParameter(searchString,param) {
-        var params = searchString.split('?&');
-        for(var i=0;i<params.length;i++) {
-          var paramIndex = params[i].indexOf(param+"=");
-          if(paramIndex != -1) {
-            return params[i].substring(paramIndex+param.length+1);
-          }
-        }
-
-        return "";
-      }
-
-      function hasParameter(searchString,param) {
-        searchString = searchString || "";
-        param = param || "";
-        return (searchString.indexOf("?"+param+"=") != -1 || searchString.indexOf("&"+param+"=") != -1);
-      }
-  </script></html>
+  </body></html>

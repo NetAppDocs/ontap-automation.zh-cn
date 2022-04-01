@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>Search results</title>
+  <title>解释 API 响应</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Search results" />
+  <meta property="og:title" content="解释 API 响应" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/search.html" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/rest/interpret_api_response.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-automation/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" "><meta name="translate" content="false"/><!-- Icons -->
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -54,7 +54,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-automation/js/na-search.js'></script><script src='/zh-cn/ontap-automation/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism-netapp.css' type='text/css'>
 
 
@@ -144,6 +144,24 @@
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[解释 API 响应](https://docs.netapp.com/zh-cn/ontap-automation/rest/interpret_api_response.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/rest/interpret_api_response.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -216,6 +234,26 @@
       </div>
 
       
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/ontap-automation/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
     </div>
   </div>
   <div class="n-property-bar__toolbar">
@@ -234,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/rest/interpret_api_response.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-automation/rest/interpret_api_response.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/rest/interpret_api_response.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/rest/interpret_api_response.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -391,6 +429,15 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/ontap-automation/pdfs/pages/rest/interpret_api_response.pdf" >
+    <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -660,7 +707,7 @@
         基本操作特征
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/input_variables.html">
         输入变量
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/interpret_api_response.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/interpret_api_response.html">
         解释 API 响应
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/asynchronous_processing.html">
         使用作业对象进行异步处理
@@ -796,28 +843,247 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Search results</h1>
+  <h1 class="n-doc__component-detail-heading">解释 API 响应</h1>
 </div>
 
 
-<div id="search-demo-container" class="n-property-bar__search">
-  <div id="react-search" 
-  data-search-html="/zh-cn/ontap-automation/search.html"
-  data-type="page" 
-  data-placeholder="搜索文档" 
-  data-no-results-found="未找到与 {query} 匹配的结果。" 
-  data-did-you-mean="搜索 {suggestion}。" 
-  data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
-  data-results-found="找到 {hitCount} 个结果"
-  data-sk-es-pf-indexes=""></div>
-  <button class="search-all-icon n-property-bar__search-toggle-button" type="button">
-    <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
-      <title>search</title>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
-    </svg>
-  </button>
-</div>
+<p class="page-details">
+  
+    
+    <time datetime="2022-04-01 16:32:39 +0000">04/01/2022</time>
+    
+  
 
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>每个 API 请求都会生成对客户端的响应。您应检查响应以确定其是否成功，并根据需要检索其他数据。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="http-状态代码">HTTP 状态代码</h3>
+<div class="paragraph">
+<p>下面介绍了 ONTAP REST API 使用的 HTTP 状态代码。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 25%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">代码</th>
+<th class="tableblock halign-left valign-top">原因短语</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">确定</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">表示未创建新对象的调用成功。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已创建</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已成功创建对象。响应中的位置标头包括对象的唯一标识符。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">202</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已接受</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已启动后台作业以执行请求，但尚未完成。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">请求错误</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">此请求输入无法识别或不适当。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">未授权</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用户身份验证失败。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">已禁止</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">由于授权（ RBAC ）错误，访问被拒绝。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">未找到</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">请求中引用的资源不存在。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">405.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不允许使用此方法</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">此资源不支持请求中的 HTTP 方法。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">冲突</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">尝试创建对象失败，因为必须先创建另一个对象或请求的对象已存在。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">内部错误</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">服务器发生一般内部错误。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="响应标头">响应标头</h3>
+<div class="paragraph">
+<p>ONTAP 生成的 HTTP 响应包含多个标头。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">位置</dt>
+<dd>
+<p>创建对象时，位置标头包含新对象的完整 URL ，包括分配给该对象的唯一标识符。</p>
+</dd>
+<dt class="hdlist1">内容类型</dt>
+<dd>
+<p>通常为 <code>application/hal+json</code> 。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="响应正文">响应正文</h3>
+<div class="paragraph">
+<p>API 请求生成的响应正文内容因对象，处理类型以及请求的成功或失败而异。响应始终在 JSON 中呈现。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>单个对象</p>
+<div class="paragraph">
+<p>可以根据请求返回一个对象并显示一组字段。例如，您可以使用 GET 使用唯一标识符检索集群的选定属性。</p>
+</div>
+</li>
+<li>
+<p>多个对象</p>
+<div class="paragraph">
+<p>可以从一个资源收集返回多个对象。在所有情况下，都会使用一致的格式，其中 <code>num_records</code> 表示包含对象实例数组的记录和记录的数量。例如，您可以检索特定集群中定义的节点。</p>
+</div>
+</li>
+<li>
+<p>作业对象</p>
+<div class="paragraph">
+<p>如果异步处理 API 调用，则会返回作业对象，用于将后台任务固定。例如，用于更新集群配置的修补程序请求会异步处理并返回一个作业对象。</p>
+</div>
+</li>
+<li>
+<p>错误对象</p>
+<div class="paragraph">
+<p>如果发生错误，则始终返回 Error 对象。例如，在尝试更改未为集群定义的字段时，您将收到错误消息。</p>
+</div>
+</li>
+<li>
+<p>空 JSON 对象</p>
+<div class="paragraph">
+<p>在某些情况下，不会返回任何数据，并且响应正文包含一个空的 JSON 对象。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hal-链接">HAL 链接</h3>
+<div class="paragraph">
+<p>ONTAP REST API 使用 HAL 作为机制来支持将 Hypermedia 作为应用程序状态引擎（ HATEOAS ）。返回用于标识特定资源的对象或属性时，还会包含一个 HAL 编码的链接，您可以轻松地找到并确定有关该资源的其他详细信息。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="errors">errors</h3>
+<div class="paragraph">
+<p>如果发生错误，响应正文将返回一个错误对象。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">格式。</dt>
+<dd>
+<p>错误对象的格式如下：</p>
+<div class="openblock">
+<div class="content">
+<div class="literalblock">
+<div class="content">
+<pre>"error": {
+"message": "&lt;string&gt;",
+"code": &lt;integer&gt;[,
+"target": "&lt;string&gt;"]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您可以使用代码值确定常规错误类型或类别，并使用消息确定特定错误。如果可用，目标字段将包含与错误关联的特定用户输入。</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">常见错误代码</dt>
+<dd>
+<p>下表介绍了常见错误代码。特定 API 调用可能包括其他错误代码。</p>
+<div class="openblock">
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">代码</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">具有相同标识符的对象已存在。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">字段的值无效或缺失，或者提供了额外的字段。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不支持此操作。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">405.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">找不到具有指定标识符的对象。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">拒绝执行请求的权限。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">资源正在使用中。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->
@@ -940,27 +1206,4 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
-  </body><script>
-      if(hasParameter(window.location.search,'q')) {
-        var queryString = decodeURI(getParameter(window.location.search, 'q'));
-        document.getElementsByClassName("sk-search-box__text")[0].setAttribute("value", queryString);
-      }
-
-      function getParameter(searchString,param) {
-        var params = searchString.split('?&');
-        for(var i=0;i<params.length;i++) {
-          var paramIndex = params[i].indexOf(param+"=");
-          if(paramIndex != -1) {
-            return params[i].substring(paramIndex+param.length+1);
-          }
-        }
-
-        return "";
-      }
-
-      function hasParameter(searchString,param) {
-        searchString = searchString || "";
-        param = param || "";
-        return (searchString.indexOf("?"+param+"=") != -1 || searchString.indexOf("&"+param+"=") != -1);
-      }
-  </script></html>
+  </body></html>

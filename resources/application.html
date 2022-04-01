@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>Search results</title>
+  <title>应用程序</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Search results" />
+  <meta property="og:title" content="应用程序" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/search.html" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/resources/application.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-automation/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" "><meta name="translate" content="false"/><!-- Icons -->
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -54,7 +54,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-automation/js/na-search.js'></script><script src='/zh-cn/ontap-automation/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism-netapp.css' type='text/css'>
 
 
@@ -144,6 +144,24 @@
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[应用程序](https://docs.netapp.com/zh-cn/ontap-automation/resources/application.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/resources/application.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -216,6 +234,26 @@
       </div>
 
       
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/ontap-automation/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
     </div>
   </div>
   <div class="n-property-bar__toolbar">
@@ -234,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/application.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/application.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/application.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/application.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -451,6 +489,15 @@
           
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/ontap-automation/pdfs/pages/resources/application.pdf" >
+    <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -682,7 +729,7 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/overview_categories.html">
         概述
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/application.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/application.html">
         应用程序
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/cloud.html">
         云
@@ -796,28 +843,51 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Search results</h1>
+  <h1 class="n-doc__component-detail-heading">应用程序</h1>
 </div>
 
 
-<div id="search-demo-container" class="n-property-bar__search">
-  <div id="react-search" 
-  data-search-html="/zh-cn/ontap-automation/search.html"
-  data-type="page" 
-  data-placeholder="搜索文档" 
-  data-no-results-found="未找到与 {query} 匹配的结果。" 
-  data-did-you-mean="搜索 {suggestion}。" 
-  data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
-  data-results-found="找到 {hitCount} 个结果"
-  data-sk-es-pf-indexes=""></div>
-  <button class="search-all-icon n-property-bar__search-toggle-button" type="button">
-    <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
-      <title>search</title>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
-    </svg>
-  </button>
-</div>
+<p class="page-details">
+  
+    
+    <time datetime="2022-04-01 16:32:39 +0000">04/01/2022</time>
+    
+  
 
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>您可以使用这些 API 调用来管理 ONTAP 应用程序资源。</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="应用程序快照">应用程序快照</h4>
+<div class="paragraph">
+<p>应用程序支持 Snapshot 副本，可以随时创建或还原这些副本。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="应用程序">应用程序</h4>
+<div class="paragraph">
+<p>ONTAP 应用程序按类型进行排列，包括模板，应用程序，组件和 Snapshot 副本。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="一致性组">一致性组</h4>
+<div class="paragraph">
+<p>一致性组是指在执行快照等特定操作时组合在一起的一组卷。此功能可扩展单卷操作在一组卷中隐式的崩溃一致性和数据完整性。此资源类型是在 ONTAP 9.10 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="一致性组快照">一致性组快照</h4>
+<div class="paragraph">
+<p>您可以使用这些端点复制，创建一致性组的快照，并对其进行清单编制和还原。此资源类型是在 ONTAP 9.10 中引入的。</p>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->
@@ -940,27 +1010,4 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
-  </body><script>
-      if(hasParameter(window.location.search,'q')) {
-        var queryString = decodeURI(getParameter(window.location.search, 'q'));
-        document.getElementsByClassName("sk-search-box__text")[0].setAttribute("value", queryString);
-      }
-
-      function getParameter(searchString,param) {
-        var params = searchString.split('?&');
-        for(var i=0;i<params.length;i++) {
-          var paramIndex = params[i].indexOf(param+"=");
-          if(paramIndex != -1) {
-            return params[i].substring(paramIndex+param.length+1);
-          }
-        }
-
-        return "";
-      }
-
-      function hasParameter(searchString,param) {
-        searchString = searchString || "";
-        param = param || "";
-        return (searchString.indexOf("?"+param+"=") != -1 || searchString.indexOf("&"+param+"=") != -1);
-      }
-  </script></html>
+  </body></html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>Search results</title>
+  <title>基本操作特征</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Search results" />
+  <meta property="og:title" content="基本操作特征" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/search.html" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/rest/operational_characteristics.html" />
 	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-automation/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" "><meta name="translate" content="false"/><!-- Icons -->
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -54,7 +54,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-automation/js/na-search.js'></script><script src='/zh-cn/ontap-automation/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-automation/css/prism-netapp.css' type='text/css'>
 
 
@@ -144,6 +144,24 @@
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[基本操作特征](https://docs.netapp.com/zh-cn/ontap-automation/rest/operational_characteristics.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/rest/operational_characteristics.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -216,6 +234,26 @@
       </div>
 
       
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/ontap-automation/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
     </div>
   </div>
   <div class="n-property-bar__toolbar">
@@ -234,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/rest/operational_characteristics.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-automation/rest/operational_characteristics.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/rest/operational_characteristics.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation//search.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/rest/operational_characteristics.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -387,6 +425,15 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/ontap-automation/pdfs/pages/rest/operational_characteristics.pdf" >
+    <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -656,7 +703,7 @@
         ONTAP REST API 版本控制
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/access_rest_api.html">
         如何访问 REST API
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/operational_characteristics.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/operational_characteristics.html">
         基本操作特征
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/rest/input_variables.html">
         输入变量
@@ -796,28 +843,163 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Search results</h1>
+  <h1 class="n-doc__component-detail-heading">基本操作特征</h1>
 </div>
 
 
-<div id="search-demo-container" class="n-property-bar__search">
-  <div id="react-search" 
-  data-search-html="/zh-cn/ontap-automation/search.html"
-  data-type="page" 
-  data-placeholder="搜索文档" 
-  data-no-results-found="未找到与 {query} 匹配的结果。" 
-  data-did-you-mean="搜索 {suggestion}。" 
-  data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
-  data-results-found="找到 {hitCount} 个结果"
-  data-sk-es-pf-indexes=""></div>
-  <button class="search-all-icon n-property-bar__search-toggle-button" type="button">
-    <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
-      <title>search</title>
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#search"></use>
-    </svg>
-  </button>
-</div>
+<p class="page-details">
+  
+    
+    <time datetime="2022-04-01 16:32:39 +0000">04/01/2022</time>
+    
+  
 
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="请求和响应-api-事务">请求和响应 API 事务</h3>
+<div class="paragraph">
+<p>每个 REST API 调用都作为 HTTP 请求执行给 ONTAP 系统，该系统会向客户端生成关联的响应。此请求 / 响应对被视为 API 事务。在使用 API 之前，您应熟悉可用于控制请求的输入变量以及响应输出的内容。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="支持-crud-操作">支持 CRUD 操作</h3>
+<div class="paragraph">
+<p>通过 ONTAP REST API 提供的每个资源均可根据 CRUD 模型进行访问：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>创建</p>
+</li>
+<li>
+<p>读取</p>
+</li>
+<li>
+<p>更新</p>
+</li>
+<li>
+<p>删除</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对于某些资源，仅支持部分操作。有关每个资源的详细信息，您应查看 ONTAP 集群上的 ONTAP API 文档页面。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="对象标识符">对象标识符</h3>
+<div class="paragraph">
+<p>创建每个资源实例或对象时，系统会为其分配一个唯一标识符。在大多数情况下，标识符为 128 位 UUID 。这些标识符在特定 ONTAP 集群中具有全局唯一性。发出创建新对象实例的 API 调用后，将在 HTTP 响应的位置标题中向调用方返回一个具有关联 ID 值的 URL 。在引用资源实例时，您可以提取此标识符并在后续调用中使用它。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-automation/images/note.svg" alt="注">
+</td>
+<td class="content">
+对象标识符的内容和内部结构可以随时更改。仅当引用关联对象时，才应根据需要在适用的 API 调用上使用标识符。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="对象实例和集合">对象实例和集合</h3>
+<div class="paragraph">
+<p>根据资源路径和 HTTP 方法， API 调用可以应用于特定对象实例或对象集合。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="同步和异步操作">同步和异步操作</h3>
+<div class="paragraph">
+<p>ONTAP 可通过两种方式执行从客户端收到的 HTTP 请求。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">同步处理</dt>
+<dd>
+<p>ONTAP 会立即执行此请求，如果成功，则会使用 HTTP 状态代码 200 或 201 进行响应。</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>使用 GET ， HEAD 和 OPTIONS 方法的每个请求始终会同步执行。此外，如果使用 POST ，修补和删除的请求预计在两秒内完成，则这些请求会同步运行。</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">异步处理</dt>
+<dd>
+<p>如果异步请求有效， ONTAP 将创建一个后台任务来处理此请求，并创建一个作业对象来锁定此任务。202 HTTP 状态将与作业对象一起返回给调用程序。要确定最终成功还是失败，您必须检索作业的状态。</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>如果使用 POST ，修补和删除方法的请求预计需要超过两秒才能完成，则这些请求会异步运行。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-automation/images/note.svg" alt="注">
+</td>
+<td class="content">
+<code>return_timeout</code> query 参数可用于异步 API 调用，并且可以将异步调用同步转换为完成。有关详细信息，请参见 <code>如何使用作业对象进行异步处理</code> 。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="安全性">安全性</h3>
+<div class="paragraph">
+<p>REST API 提供的安全性主要基于 ONTAP 提供的现有安全功能。API 使用以下安全性：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>传输层安全性</p>
+<div class="paragraph">
+<p>ONTAP LIF 与客户端之间通过网络发送的所有流量通常会根据 ONTAP 配置设置使用 TLS 进行加密。</p>
+</div>
+</li>
+<li>
+<p>客户端身份验证</p>
+<div class="paragraph">
+<p>ONTAP System Manager 和网络易管理性 SDK 提供的相同身份验证选项也可用于 ONTAP REST API 。</p>
+</div>
+</li>
+<li>
+<p>HTTP 身份验证</p>
+<div class="paragraph">
+<p>在 HTTP 级别， API 事务使用基本身份验证。每个请求都会添加一个 HTTP 标头，其中用户名和密码包含在 base64 字符串中。</p>
+</div>
+</li>
+<li>
+<p>ONTAP 授权</p>
+<div class="paragraph">
+<p>ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="security_using_rbac.html">"使用 RBAC 实现安全性"</a></p>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->
@@ -940,27 +1122,4 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
-  </body><script>
-      if(hasParameter(window.location.search,'q')) {
-        var queryString = decodeURI(getParameter(window.location.search, 'q'));
-        document.getElementsByClassName("sk-search-box__text")[0].setAttribute("value", queryString);
-      }
-
-      function getParameter(searchString,param) {
-        var params = searchString.split('?&');
-        for(var i=0;i<params.length;i++) {
-          var paramIndex = params[i].indexOf(param+"=");
-          if(paramIndex != -1) {
-            return params[i].substring(paramIndex+param.length+1);
-          }
-        }
-
-        return "";
-      }
-
-      function hasParameter(searchString,param) {
-        searchString = searchString || "";
-        param = param || "";
-        return (searchString.indexOf("?"+param+"=") != -1 || searchString.indexOf("&"+param+"=") != -1);
-      }
-  </script></html>
+  </body></html>
