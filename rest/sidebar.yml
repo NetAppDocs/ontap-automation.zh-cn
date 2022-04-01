@@ -1,0 +1,33 @@
+---
+section: rest
+title: ONTAP REST API
+entries:
+- title: REST 实施详细信息
+  entries:
+  - title: REST Web 服务基础
+    url: "/rest/rest_web_services_foundation.html"
+  - title: ONTAP REST API 版本控制
+    url: "/rest/rest_api_versioning.html"
+  - title: 如何访问 REST API
+    url: "/rest/access_rest_api.html"
+  - title: 基本操作特征
+    url: "/rest/operational_characteristics.html"
+  - title: 输入变量
+    url: "/rest/input_variables.html"
+  - title: 解释 API 响应
+    url: "/rest/interpret_api_response.html"
+  - title: 使用作业对象进行异步处理
+    url: "/rest/asynchronous_processing.html"
+- title: 其他注意事项
+  entries:
+  - title: 对象引用和访问
+    url: "/rest/object_references_and_access.html"
+  - title: ONTAPI 和 ONTAP 命令行界面的用户
+    url: "/rest/users_ontapi_api_ontap_cli.html"
+  - title: 访问 ONTAP 命令行界面
+    url: "/rest/access_ontap_cli.html"
+  - title: 使用 RBAC 实现安全性
+    url: "/rest/security_using_rbac.html"
+  - title: 存储资源的性能指标
+    url: "/rest/performance_metrics.html"
+- section: resources

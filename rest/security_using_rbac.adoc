@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: rest/security_using_rbac.html 
+keywords:  
+summary:  
+---
+= 使用 RBAC 实现安全性
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用 ONTAP 时， REST API 可扩展基于角色的访问控制（ Role-Based Access Control ， RBAC ）功能。您可以创建具有自定义角色的用户帐户，以限制对 REST 端点的访问。
+
+
+
+=== 为 REST 端点创建角色
+
+REST 角色是通过一组或多个权限定义的。每个权限都包含一个指向 REST 端点的路径以及关联的访问级别。每个端点的访问权限分为三个级别之一，用于确定可用于资源的 HTTP 方法。访问级别包括：
+
+* 全部
++
+可以使用所有 HTTP 方法
+
+* 只读
++
+只能使用 GET
+
+* 无
++
+不允许访问
+
+
+
+以下是可分配给 REST 角色的两个特权的示例：
+
+* `access="readonly" ， path="/apI/storage/volumes"`
+* `access="none" ， path="/apI/snapmirror/policies"`
+
+
+
+
+=== 创建具有自定义角色的用户帐户
+
+总体而言，您可以按如下所示创建具有自定义 REST 角色的帐户：
+
+. 创建可访问 HTTP 管理协议的用户帐户。
+. 创建具有所需权限的 REST 角色。
+. 将用户帐户与角色关联。
+

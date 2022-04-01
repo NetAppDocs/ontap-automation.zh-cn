@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: resources/nvme.html 
+keywords:  
+summary:  
+---
+= NVMe
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用这些 API 调用来管理支持非易失性内存快速（ NVMe ）的资源。
+
+
+
+==== 光纤通道登录
+
+光纤通道登录表示由登录到 ONTAP 的光纤通道启动程序构成的连接。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== NVMe 接口
+
+NVMe 接口是指配置为支持基于网络结构的 NVMe （ NVMe-oF ）协议的网络接口。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== NVMe 服务
+
+NVMe 服务定义 SVM 的 NVMe 控制器目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。
+
+
+
+==== NVMe 子系统控制器
+
+NVMe 子系统控制器表示主机与存储解决方案之间的动态连接。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== NVMe 子系统映射
+
+NVMe 子系统映射是 NVMe 命名空间与 NVMe 子系统的关联。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== NVMe 子系统
+
+NVMe 子系统可为一组连接 NVMe 的主机维护配置状态和命名空间访问控制。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== 命名空间
+
+NVMe 命名空间是一组可寻址逻辑块，这些逻辑块提供给使用基于网络结构的 NVMe 协议连接到 SVM 的主机。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。

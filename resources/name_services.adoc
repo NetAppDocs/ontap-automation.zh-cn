@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: resources/name_services.html 
+keywords:  
+summary:  
+---
+= 名称服务
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。
+
+
+
+==== DDNS
+
+您可以显示动态 DNS （ DDNS ）信息并管理 DDNS 子系统。此资源类型是 ONTAP 9.8 的新增功能。
+
+
+
+==== DNS
+
+DNS 支持将 ONTAP 集群集成到网络中。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== 主机记录
+
+通过这些端点，您可以显示指定主机名的 IP 地址以及 IP 地址的主机名。此资源类型是在 ONTAP 9.10 中引入的。
+
+
+
+==== LDAP
+
+LDAP 服务器可用于维护用户信息。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== 本地主机
+
+您可以使用这些端点显示和管理主机名的本地映射。此资源类型是在 ONTAP 9.10 中引入的。
+
+
+
+==== 名称映射
+
+通过名称映射，您可以将身份从一个名称域映射到另一个名称域。例如，您可以将身份从 CIFS 映射到 UNIX ，将 Kerberos 映射到 UNIX ，将 UNIX 映射到 CIFS 。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== NIS
+
+NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。
+
+
+
+==== UNIX 用户和组
+
+本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。

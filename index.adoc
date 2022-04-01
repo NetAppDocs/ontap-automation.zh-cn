@@ -1,29 +1,15 @@
 ---
+layout: landing-page 
 sidebar: sidebar 
 permalink: index.html 
+lead: You can automate the deployment and administration of your ONTAP storage systems using one of several available options. The ONTAP REST API provides the foundation for all the automation technologies. 
 summary: 欢迎使用 ONTAP 自动化文档门户。 
 ---
-= ONTAP 自动化
+= ONTAP 自动化文档
 :hardbreaks:
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
 
-
-[role="lead"]
-您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API 为所有各种自动化技术奠定了基础。
-
-
-
-== 了解新功能
-
-* link:new_ontap_automation.html["ONTAP 9.10.1 自动化的新增功能"]
-
-
-
-
-== 获取更多信息并与同行保持联系
-
-* link:get_more_information.html["如何获取更多信息"]
 

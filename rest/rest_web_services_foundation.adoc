@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: rest/rest_web_services_foundation.html 
+keywords:  
+summary:  
+---
+= REST Web 服务基础
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。
+
+
+NOTE: 虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因开发期间所做的选择而异。在将 ONTAP REST API 用于实时部署之前，您应了解其设计特征。
+
+
+
+=== 资源和状态表示
+
+资源是基于 Web 的系统的基本组件。创建 REST Web 服务应用程序时，早期设计任务包括：
+
+* 识别系统或基于服务器的资源
++
+每个系统都使用和维护资源。资源可以是文件，业务事务，流程或管理实体。在设计基于 REST Web 服务的应用程序时，首先要完成的任务之一是识别资源。
+
+* 资源状态和关联状态操作的定义
++
+资源始终处于数量有限的状态之一。必须明确定义状态以及用于影响状态更改的关联操作。
+
+
+
+
+
+=== URI 端点
+
+必须使用定义明确的寻址方案定义和提供每个 REST 资源。资源所在的端点和标识的端点使用统一资源标识符（ Uniform Resource Identifier ， URI ）。URI 提供了一个通用框架，用于为网络中的每个资源创建唯一名称。统一资源定位器（ Uniform Resource Locator ， URL ）是一种用于 Web 服务的 URI 类型，用于标识和访问资源。资源通常以类似于文件目录的分层结构公开。
+
+
+
+=== HTTP 消息
+
+超文本传输协议（ HTTP ）是 Web 服务客户端和服务器用来交换有关资源的请求和响应消息的协议。在设计 Web 服务应用程序时， HTTP 方法会映射到资源以及相应的状态管理操作。HTTP 为无状态。因此，要将一组相关请求和响应关联为一个事务的一部分，必须将追加信息包含在随请求和响应数据流一起提供的 HTTP 标头中。
+
+
+
+=== JSON 格式化
+
+虽然可以通过多种方式在 Web 服务客户端和服务器之间构建和传输信息，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。JSON 是一种行业标准，用于以纯文本形式表示简单数据结构，并用于传输描述资源的状态信息。ONTAP REST API 使用 JSON 格式化每个 HTTP 请求和响应正文中包含的数据。

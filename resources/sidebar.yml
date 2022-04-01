@@ -1,0 +1,38 @@
+---
+section: resources
+title: REST 资源摘要
+entries:
+- title: 概述
+  url: "/resources/overview_categories.html"
+- title: 应用程序
+  url: "/resources/application.html"
+- title: 云
+  url: "/resources/cloud.html"
+- title: 集群
+  url: "/resources/cluster.html"
+- title: 名称服务
+  url: "/resources/name_services.html"
+- title: NAS
+  url: "/resources/nas.html"
+- title: NDMP
+  url: "/resources/ndmp.html"
+- title: 网络
+  url: "/resources/networking.html"
+- title: NVMe
+  url: "/resources/nvme.html"
+- title: 对象存储
+  url: "/resources/object_store.html"
+- title: SAN
+  url: "/resources/san.html"
+- title: 安全性
+  url: "/resources/security.html"
+- title: SnapLock
+  url: "/resources/snaplock.html"
+- title: SnapMirror
+  url: "/resources/snapmirror.html"
+- title: 存储
+  url: "/resources/storage.html"
+- title: 支持
+  url: "/resources/support.html"
+- title: SVM
+  url: "/resources/svm.html"

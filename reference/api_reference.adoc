@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: reference/api_reference.html 
+keywords:  
+summary:  
+---
+= API 参考
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以访问所有 ONTAP REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
+
+
+NOTE: 您可以在本地 ONTAP 系统或 NetApp 开发人员网络网站上访问 API 参考内容。
+
+
+
+== 访问 ONTAP API 文档页面
+
+[role="lead"]
+您可以在本地 ONTAP 系统上访问 ONTAP API 联机文档页面。
+
+您必须具备以下条件：
+
+* ONTAP 集群管理 LIF 的 IP 地址或主机名
+* 有权访问 ONTAP REST API 的帐户的用户名和密码
+
+
+.步骤
+. 在浏览器中键入 URL 并按 * 输入 * ：
++
+`https://<ip_address>/docs/api`
+
+. 使用 ONTAP 帐户登录。
++
+此时将显示 ONTAP API 文档页面，其中 API 调用会按主要资源类别组织在底部。
+
+. 作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。
+
+
+
+
+== 访问 NetApp DevNet 上的参考内容
+
+[role="lead"]
+您可以从 ONTAP 开发人员网络网站访问 NetApp REST API 参考文档。
+
+.步骤
+. 导航到 ONTAP 开发人员网络网站上的 * NetApp REST APi* 页面：
++
+https://devnet.netapp.com/restapi.php["NetApp DevNet ： ONTAP REST API"^]
+
+. 向下滚动并在 * 联机 REST API 参考 * 下单击相应 ONTAP 版本的链接。
++
+此时将显示 ONTAP API 文档页面，其中 API 调用会按主要资源类别组织在底部。
+
+. 作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。
+

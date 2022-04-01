@@ -1,0 +1,10 @@
+---
+section: python
+title: Python 客户端库
+entries:
+- title: 概述
+  url: "/python/overview_pcl.html"
+- title: 准备使用 Python 客户端库
+  url: "/python/prepare_pcl.html"
+- title: 用于检索集群配置的脚本
+  url: "/python/script_retrieve_cluster_configuration.html"

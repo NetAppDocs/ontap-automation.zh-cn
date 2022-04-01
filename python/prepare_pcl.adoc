@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: python/prepare_pcl.html 
+keywords:  
+summary:  
+---
+= 准备使用 Python 客户端库
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在使用 Python 客户端库之前，您应准备好环境。
+
+
+
+=== 基本要求
+
+您必须使用 Python 3.5 或更高版本。此外，还需要以下软件包：
+
+* 请求 2.22.1 或更高版本
+* requests-toolbelt 0.9.1 或更高版本
+* marshmallow 3.2.1 或更高版本
+
+
+
+
+=== 软件包名称和版本
+
+Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的 ONTAP 主要版本号和次要版本号的组合，以及 ONTAP 版本中客户端的次要版本。例如，有效版本号包括： 9.2.1 ， 9.6.2 和 9.1.1 。
+
+
+
+=== 安装
+
+您必须使用 pip 从 Python Package Index （ Pypi ）网站安装 NetApp_ONTAP 软件包。
+
+
+
+=== 文档和其他资源
+
+有关文档和其他资源的链接，请参见 _NetApp 开发人员网络 _ 。
+
+https://pypi.org/project/netapp-ontap["PyPI ： NetApp ONTAP 9.10.1"^]
+
+https://library.netapp.com/ecmdocs/ECMLP2879970/html/index.html["适用于 9.10.1 的 NetApp PCL-文档"^]
+
+https://devnet.netapp.com/restapi.php["NetApp 开发人员网络： ONTAP RESTful API"^]

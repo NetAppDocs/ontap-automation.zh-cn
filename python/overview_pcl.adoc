@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: python/overview_pcl.html 
+keywords:  
+summary:  
+---
+= Python 客户端库概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+NetApp ONTAP Python 客户端库是一个软件包，您可以安装该软件包并使用它来编写访问 ONTAP REST API 的脚本。它支持多种底层服务，包括连接管理，异步处理，异常处理和错误消息。通过使用 Python 客户端库，您可以快速开发强大的代码来支持 ONTAP 部署的自动化。
+
+[role="lead"]
+从 ONTAP 9.6 开始，您可以选择使用 Python 客户端库访问 ONTAP REST API 。该库可为客户端开发环境提供多种基础服务，例如连接管理，异步处理，异常处理和错误消息。下载并安装 ONTAP Python 客户端库软件包后，您可以快速创建强大的 Python 脚本，以支持 ONTAP 部署的自动化。
+
+
+NOTE: NetApp 维护一个 GitHub 存储库，其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。
+
+https://github.com/NetApp/ontap-rest-python["ONTAP REST Python GitHub 存储库"^]

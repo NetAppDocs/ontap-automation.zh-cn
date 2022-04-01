@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: workflows/prepare_workflows.html 
+keywords:  
+summary:  
+---
+= 准备使用这些工作流
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在使用工作流流程之前，您应做好准备。
+
+
+
+=== 了解工作流中使用的 API 调用
+
+ONTAP API 联机文档页面包含每个 REST API 调用的详细信息。工作流示例中使用的每个 API 调用都仅包含在文档页面上查找此调用所需的信息，而不是在此处重复这些详细信息。找到特定 API 调用后，您可以查看该调用的完整详细信息，包括输入参数，输出格式， HTTP 状态代码和请求处理类型。
+
+工作流中的每个 API 调用都包含以下信息，以帮助您在文档页面上查找此调用：
+
+* 类别
++
+API 调用会在文档页面上按功能相关的区域或类别进行组织。要查找特定的 API 调用，请滚动到页面底部，然后单击相应的 API 类别。
+
+* HTTP 方法
++
+HTTP 方法用于标识对资源执行的操作。每个 API 调用都通过一种 HTTP 方法执行。
+
+* 路径
++
+路径用于确定在执行调用时操作适用场景所使用的特定资源。路径字符串会附加到核心 URL 中，以形成用于标识资源的完整 URL 。
+
+
+
+
+
+=== 构建 URL 以直接访问 REST API
+
+除了 ONTAP 文档页面之外，您还可以通过 Python 等编程语言直接访问 ONTAP REST API 。在这种情况下，核心 URL 与访问联机文档页面时使用的 URL 稍有不同。直接访问 API 时，必须将 ` /API` 附加到域和端口字符串中。例如： `https://ontap.mycompany.com/api`
+
+.相关链接
+* link:../rest/access_rest_api.html["如何访问 ONTAP API"]
+* link:../resources/overview_categories.html["REST 资源摘要"]
+
