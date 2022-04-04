@@ -6,6 +6,7 @@ summary:
 ---
 = 通过 REST API 访问 ONTAP 命令行界面
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

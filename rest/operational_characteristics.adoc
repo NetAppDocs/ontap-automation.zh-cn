@@ -6,6 +6,7 @@ summary:
 ---
 = 基本操作特征
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

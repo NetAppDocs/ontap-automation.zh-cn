@@ -6,6 +6,7 @@ summary:
 ---
 = 准备使用这些工作流
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 自动部署和管理 ONTAP 存储系统有多种选择。
 ---
 = 了解 ONTAP 自动化选项
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = 使用作业对象进行异步处理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

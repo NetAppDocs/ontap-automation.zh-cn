@@ -6,6 +6,7 @@ summary:
 ---
 = 有关 ONTAP 自动化的博客
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

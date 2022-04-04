@@ -6,6 +6,7 @@ summary:
 ---
 = 获取更多信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = 存储资源的性能指标
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = ONTAPI 和 ONTAP 命令行界面的用户
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

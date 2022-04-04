@@ -6,6 +6,7 @@ summary:
 ---
 = 对象引用和访问
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

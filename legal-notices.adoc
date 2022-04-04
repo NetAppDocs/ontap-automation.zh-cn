@@ -6,11 +6,40 @@ summary: 法律声明提供对版权声明、商标、专利等的访问。
 ---
 = 法律声明
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
 
 
-[role="lead"]
-link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-legal-notices.adoc[""]
+[role="lead lead"]
+法律声明提供对版权声明、商标、专利等的访问。
+
+
+
+== 版权
+
+http://www.netapp.com/us/legal/copyright.aspx[]
+
+
+
+== 商标
+
+NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。
+
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
+
+
+
+== 专利
+
+有关 NetApp 拥有的专利的最新列表，请访问：
+
+https://www.netapp.com/us/media/patents-page.pdf[]
+
+
+
+== 隐私政策
+
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]

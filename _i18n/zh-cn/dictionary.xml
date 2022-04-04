@@ -895,7 +895,6 @@
   <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
-  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
   <block id="4c557aa1edc9db8b42f1265ae600f253" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见<block ref="3f8b8a296b98a2427cd0fe076ddc5c7d" category="inline-link-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
   <block id="31e39608982442406853c159bf64d7ea" category="section-title">CIFS 域</block>
   <block id="772ba71e6aaaa5e3a9d9cdecd907e2e2" category="paragraph">在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是 ONTAP 9.10 中的新增资源。</block>
@@ -1087,4 +1086,14 @@
   <block id="d8be01b779b72fb7ad353d45426e7fe3" category="list-text">性能监控</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="list-text">数据保护</block>
   <block id="4d3eb4b74688cbcce2793e7fa6452654" category="list-text">应用程序感知型数据管理</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
 </blocks>

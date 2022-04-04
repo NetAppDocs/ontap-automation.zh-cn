@@ -7,6 +7,7 @@ summary: 欢迎使用 ONTAP 自动化文档门户。
 ---
 = ONTAP 自动化文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

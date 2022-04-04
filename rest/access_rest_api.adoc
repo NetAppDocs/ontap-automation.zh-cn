@@ -6,6 +6,7 @@ summary:
 ---
 = 如何访问 ONTAP API
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

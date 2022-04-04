@@ -6,6 +6,7 @@ summary:
 ---
 = 控制 API 请求的输入变量
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

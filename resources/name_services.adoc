@@ -6,6 +6,7 @@ summary:
 ---
 = 名称服务
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

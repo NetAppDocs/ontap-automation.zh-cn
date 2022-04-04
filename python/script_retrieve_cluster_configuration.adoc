@@ -6,6 +6,7 @@ summary:
 ---
 = 用于检索集群配置的脚本
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

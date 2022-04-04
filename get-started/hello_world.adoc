@@ -6,6 +6,7 @@ summary:
 ---
 = 大家好
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

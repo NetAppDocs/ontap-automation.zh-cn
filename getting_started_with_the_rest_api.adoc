@@ -6,6 +6,7 @@ summary:
 ---
 = REST API 入门
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

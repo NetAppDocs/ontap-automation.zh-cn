@@ -6,6 +6,7 @@ summary:
 ---
 = Python 客户端库概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = 解释 API 响应
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

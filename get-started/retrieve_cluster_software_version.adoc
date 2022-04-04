@@ -6,6 +6,7 @@ summary:
 ---
 = 正在检索集群软件版本
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
