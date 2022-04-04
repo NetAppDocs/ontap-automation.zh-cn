@@ -1047,4 +1047,44 @@
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="sidebar">解释 API 响应</block>
   <block id="8f4fc3addf595e93ce580272da612827" category="sidebar">使用作业对象进行异步处理</block>
   <block id="a9fc82c0b447e076647e2d844f9a70f3" category="sidebar">访问 ONTAP 命令行界面</block>
+  <block id="cfe5635d91cfb6abed08c3ae78515315" category="list-text">扩展了卷分析</block>
+  <block id="6495a298c2a1a26b997ca9bbb99ef7ef" category="list-text">卷分析和指标已通过其他端点进行扩展，以支持顶级文件，目录和用户。</block>
+  <block id="faa07c048822900bcf8537b1c474345f" category="list-text">支持增强功能</block>
+  <block id="8c0d6517a0a1c4f8718164322e468757" category="list-text">通过多项新功能增强了支持。自动更新可以通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。您还可以检索和管理节点生成的内存核心转储。</block>
+  <block id="74eb178224c5fa701fbcd96998feaafe" category="section-title">ONTAP 9.9.1</block>
+  <block id="789933b01aa01335db4e573eb0fdfea6" category="paragraph">ONTAP 9.9.1 将继续扩展 ONTAP REST API 的功能。现有 ONTAP 功能具有新的 API 端点，包括 SAN 端口集和 SVM 文件目录安全性。此外，还添加了端点来支持新的 ONTAP 9.9.1 功能和增强功能。相关文档也进行了改进。下面简要介绍了这些增强功能。</block>
+  <block id="154f94956201de1d51f6ff61e84ae944" category="list-text">将 ONTAPI 映射到 ONTAP 9 REST API</block>
+  <block id="d15c7ef669111b1c40233338c66dfc44" category="inline-link">ONTAPI 到 REST API 映射</block>
+  <block id="5576a121543ddb1cc6d1fd0dd6bbc8ce" category="list-text">为了帮助您将 ONTAP 自动化代码过渡到 REST API ， NetApp 提供了 API 映射文档。此参考包括 ONTAPI 调用列表以及每个调用的 REST API 等效项。此映射文档已进行更新，以包含新的 ONTAP 9.9.1 API 端点。请参见<block ref="5dba316c85ac11066d0b9336552c6287" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="5a3b858ecd9ec9c186ad254f07cd1d33" category="list-text">API 端点，用于新的 ONTAP 9.9.1 核心功能</block>
+  <block id="07e5c3418b383cfa2bebed08d44aefc3" category="list-text">REST API 中增加了对通过 ONTAPI 不可用的新 ONTAP 9.9.1 功能的支持。其中包括对嵌套 igroup 和 Google Cloud 密钥管理服务的支持。</block>
+  <block id="d621c5d40a054b36a3f1e180f7fc170d" category="list-text">改进了从 ONTAPI 过渡到 REST 的支持</block>
+  <block id="192cf409001c19f48a695ad558e612f6" category="list-text">现在，更多传统 ONTAPI 调用都具有相应的 REST API 等效项。其中包括本地 Unix 用户和组，无需客户端即可管理 NTFS 文件安全性， SAN 端口集以及卷空间属性。更新后的 ONTAPI to REST 映射文档也会包含这些更改。</block>
+  <block id="88b1c796bb089f48a24b20aea93fb18e" category="list-text">增强的联机文档</block>
+  <block id="ddd51e3a52a14385d0b60fcaf5dfe038" category="list-text">现在， ONTAP 联机文档参考页面包含一些标签，用于指示引入每个 REST 端点或参数时的 ONTAP 版本，包括 ONTAP 9.1.1 中的新端点或参数。</block>
+  <block id="2abfff2974f589f7a217325f304e0ec5" category="section-title">ONTAP 9.8</block>
+  <block id="67c4467b9d90249efeb3de541a9cc553" category="paragraph">ONTAP 9.8 极大地扩展了 ONTAP REST API 的广度和深度。它包括多项新功能，可增强您自动部署和管理 ONTAP 存储系统的能力。此外，我们还改进了对帮助从原有 ONTAPI 过渡到 REST 的支持。</block>
+  <block id="0f1777fe9d7503978fa560d01dc6f49a" category="list-text">为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见<block ref="b7822a036760b0668f0d2b8313956600" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="abdf317b8f58236a4195d452834d45c9" category="list-text">API 端点，用于新的 ONTAP 9.8 核心功能</block>
+  <block id="cf1724d8d3131e94ad854521ae7d4f4a" category="list-text">REST API 中增加了对通过 ONTAPI 无法提供的新核心 ONTAP 9.8 功能的支持。其中包括对 ONTAP S3 分段和服务， SnapMirror 业务连续性和文件系统分析的 REST API 支持。</block>
+  <block id="35d207b2ca355b3e7e3a5d74f2b2afe4" category="list-text">扩展了对增强安全性的支持</block>
+  <block id="464aebcdd9770cb945a307d7eac64f0b" category="list-text">通过支持 Azure 密钥存储， Google Cloud 密钥管理服务， IPsec 和证书签名请求等多种服务和协议，安全性得到了增强。</block>
+  <block id="d94d27f597c0934bda8dbb95acf619c3" category="list-text">增强功能可提高精简性</block>
+  <block id="31001cec0e2a7aa1674330c54c5cf6c3" category="list-text">ONTAP 9.8 可使用 REST API 提供更高效，更现代化的工作流。例如，现在可以对多种不同类型的固件进行一次性固件更新。</block>
+  <block id="c66e346c00fb27a786c7ab8aab00e61b" category="list-text">现在， ONTAP 联机文档页面包含一些标签，用于指示引入了每个 REST 端点或参数的 ONTAP 版本，包括 9.8 中的新版本。</block>
+  <block id="1482f7989113f72ca0be0b6011b2a73e" category="list-text">现在，更多传统 ONTAPI 调用具有相应的 REST API 等效项。此外，我们还提供了一些文档来帮助您确定应使用哪个 REST 端点来取代现有的 ONTAPI 调用。</block>
+  <block id="7b877f8f81aaeb44b31dd25569c45deb" category="list-text">扩展了性能指标</block>
+  <block id="f8ad546722fba29d7bec9c27636f94a1" category="list-text">REST API 的性能指标已扩展，包括多个新的存储和网络对象。</block>
+  <block id="3447b91e516e4fc6b5dba827fcb68bee" category="section-title">ONTAP 9.7</block>
+  <block id="233202a320ee56fd791ddbaed5bf3fda" category="paragraph">ONTAP 9.7 通过引入三个新的资源类别来扩展 ONTAP REST API 的功能范围，每个资源类别都有多个 REST 端点：</block>
+  <block id="5e7e332dddfb791231951b893494c932" category="paragraph">ONTAP 9.7 还会在多个现有资源类别中引入一个或多个新的 REST 端点：</block>
+  <block id="7dd2a92fd3f41a5334edf46f95d77e71" category="section-title">ONTAP 9.6</block>
+  <block id="047d1d8fe1b5e3b9705cbf62a3148908" category="paragraph">ONTAP 9.6 极大地扩展了最初在 ONTAP 9.4 中引入的 REST API 支持。ONTAP 9.6 REST API 支持大多数 ONTAP 配置和管理任务。</block>
+  <block id="93c7e2d3efdd24270657a920554979a5" category="paragraph">ONTAP 9.6 中的 REST API 包括以下关键方面以及更多方面：</block>
+  <block id="e710f9addfdf1e48c1320d497696c4fc" category="list-text">集群设置</block>
+  <block id="5440df0c2e9178ddecf7c9d671322af7" category="list-text">协议配置</block>
+  <block id="89c3bcf0ecc1114f8d19734d9156cb40" category="list-text">配置</block>
+  <block id="d8be01b779b72fb7ad353d45426e7fe3" category="list-text">性能监控</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="list-text">数据保护</block>
+  <block id="4d3eb4b74688cbcce2793e7fa6452654" category="list-text">应用程序感知型数据管理</block>
 </blocks>
