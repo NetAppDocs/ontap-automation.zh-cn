@@ -1096,4 +1096,81 @@
   <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c8d653c789443dfa6dd7b54e86148f7c" category="summary">使用 ONTAP REST API 管理 DACL 和 SACL 文件权限。</block>
+  <block id="c50ee9e545662286884e42e140649f09" category="doc">使用 ONTAP REST API 管理 DACL 和 SACL 文件权限</block>
+  <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">此处</block>
+  <block id="7d455208ee42ecd7867fb39b027bcf1c" category="paragraph">ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从 ONTAP 9.1.1 开始， ONTAP REST API 包括用于为文件分配 SACL 和 DACL 权限以及自动执行文件安全权限的端点。（您可以了解有关在 ONTAP 9.9.1 之前自动执行 SACL 和 DACL 权限的选项的更多信息<block ref="9cac8aefabbfb93ff43b7791e34383b9" category="inline-link-rx"></block>）。</block>
+  <block id="bf2066acabfd343a809da20949dc54e0" category="paragraph">从 ONTAP 9.1.1 开始，您可以使用单个 REST API 调用来代替多个 CLI 命令或 ONTAPI 调用。以下示例显示了如何使用 ONTAP REST API 处理文件权限。在每个示例中，请务必在所示位置用方括号 &lt;&gt; 提供信息值。</block>
+  <block id="1099d399c75060b79e3ad383bf9aaaca" category="inline-link">Python 脚本</block>
+  <block id="52c2a6d4c018d7d1bf8a8eb602e46e7e" category="paragraph">您也可以引用示例<block ref="0177ee26baf5ba4c15becf2582f3ab08" category="inline-link-rx"></block> 该演示了如何自动执行许多与 SACL 和 DACL 相关的活动。</block>
+  <block id="19f7b4a4dbcb6361568e48dfa0435a6c" category="section-title">查看有效权限</block>
+  <block id="428084c0000a04b8e91d28436016ef1a" category="paragraph">使用 `get /protocols/file-security/effective-permissions/` API 调用，您可以检索特定文件或目录的当前权限。</block>
+  <block id="20090a7c19d3f16ea7ce066b8b9f031e" category="listing-title">请求示例：</block>
+  <block id="8b395980037bcca82c69c1da89a28918" category="listing-title">响应示例</block>
+  <block id="ebc2d9d98f6a4f7b344429c8411e0dab" category="section-title">查看所有审核信息</block>
+  <block id="d2a0c57c327ad35c037b4e63fc912893" category="paragraph">使用 `get /protocols/file-security/permissions/` API 调用，您可以检索特定文件或目录的所有审核信息。</block>
+  <block id="62119ab02b7f5c5c6d8698c4ec962f3e" category="section-title">应用新权限</block>
+  <block id="d56a84695518a1643241bb70bcfd22dc" category="paragraph">使用 `POST /protocols/file-security/permissions/` API 调用，您可以将新的安全描述符应用于文件或目录。</block>
+  <block id="6f76c699e041eacfac4485d0f16323e1" category="listing-title">请求示例</block>
+  <block id="7d986aa6827f53816cefdf1f0049c38b" category="section-title">更新安全描述符信息</block>
+  <block id="0b22253d9f6241bf0350ec66f24bfa31" category="paragraph">使用 `patch /protocols/file-security/permissions/` API 调用，您可以更新文件或目录的特定安全描述符信息，例如主所有者，组或控制标志。</block>
+  <block id="50c9441280e27d3ff54a612e499e063b" category="section-title">删除现有 SACL/DACL 访问控制条目（ ACE ）</block>
+  <block id="d33bccaf67eae3c8f65c012f20973eba" category="paragraph">使用 `Delete /protocols/file-security/permissions/` API 调用，您可以从目录的文件中删除现有 ACE 。此示例将此更改传播到任何子对象。</block>
+  <block id="411009bbd509e2b00a1f4543b3c1ca74" category="section-title">ONTAP REST API 与 ONTAP 命令行界面命令</block>
+  <block id="931f6691d15d77b0e0fe9fc70de2b615" category="paragraph">与 ONTAP 命令行界面相比， ONTAP REST API 可以使用更少的命令自动执行许多任务。例如，您可以使用一种 POST API 方法来修改文件的安全描述符，而不是使用多个 CLI 命令。下表显示了完成常见文件系统权限任务与相应的 REST API 调用所需的命令行界面命令：</block>
+  <block id="de134183bea5df515a6756a539ce6f18" category="cell">ONTAP 命令行界面</block>
+  <block id="f778c6da6bf9a458b710a39182352949" category="cell">`get /protocols/file-security/effective-permissions/`</block>
+  <block id="5f7113a4943de281bc5047f65e391330" category="paragraph">`vserver security file-directory show-effective-permissions`</block>
+  <block id="f40f7b5338aed8818a9fcf853a0ee22a" category="cell">`POST /protocols/file-security/permissions/`</block>
+  <block id="aa107cbea70d6c241798c9a9d00592e8" category="list-text">`vserver security file-directory ntfs create`</block>
+  <block id="797ea0cd6b9101634027df062146beaa" category="list-text">`vserver security file-directory ntfs dacl add`</block>
+  <block id="eed72d452a46e4df789597794672512f" category="list-text">`vserver security file-directory ntfs sacl add`</block>
+  <block id="421a920288f4b435b433e11f31611cd4" category="list-text">`vserver security file-directory policy create`</block>
+  <block id="04e4fcd87af1d9e6c37efc8fbec5165f" category="list-text">`vserver security file-directory policy task add`</block>
+  <block id="d608fe77c8f3415819d5f89e2f46e862" category="list-text">`Vserver security file-directory apply`</block>
+  <block id="be1918482fc8de757bc6a0c9475602c7" category="cell">`patch /protocols/file-security/permissions/`</block>
+  <block id="bc8edb1a4258ae50e5280eb11c7f6a5c" category="paragraph">`vserver security file-directory ntfs modify`</block>
+  <block id="94e1cc167c8b21e2dee8ae6449422dc8" category="cell">`delete /protocols/file-security/permissions/`</block>
+  <block id="9a85c4ed4aea58b5cf2264e55823074c" category="list-text">`vserver security file-directory ntfs dacl remove`</block>
+  <block id="7faf05b9e4d90529c54562f216bfb2d6" category="list-text">`vserver security file-directory ntfs sacl remove`</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="section-title">相关信息</block>
+  <block id="be37d97521654067f502ca21542fc23e" category="inline-link">ONTAP REST API DACL/SACL 权限示例 Python 脚本</block>
+  <block id="5085ad1bbb70dc377ddd4434496cf250" category="list-text"><block ref="5085ad1bbb70dc377ddd4434496cf250" category="inline-link-rx"></block></block>
+  <block id="673cd1c7bc219dafd3ab44f7789c7963" category="inline-link">使用 ONTAP REST API 简化文件安全权限的管理</block>
+  <block id="6f49384b8a99fec44a7cd1d6ed52add4" category="list-text"><block ref="6f49384b8a99fec44a7cd1d6ed52add4" category="inline-link-rx"></block></block>
+  <block id="e27a275b9610ff6148df553179ccf77f" category="inline-link">将专用命令行界面直通与 ONTAP REST API 结合使用（适用于 ONTAP 9.1.1 之前的版本）</block>
+  <block id="194ed1689d54a84f11e8266e9e92d197" category="list-text"><block ref="194ed1689d54a84f11e8266e9e92d197" category="inline-link-rx"></block></block>
+  <block id="1517c8d2b9873d41e7190a1ac6ff93cc" category="summary">使用 REST API 管理 EMS 配置。</block>
+  <block id="5b4f03d6bb02bf1a4943d2fd721bca50" category="doc">使用 ONTAP REST API 管理 EMS 事件通知</block>
+  <block id="7ae7146ab14a911070a9b67bb88d3193" category="paragraph">您可以使用 ONTAP REST API 配置向您发送事件管理系统（ EMS ）事件通知的重要性，以及检索所有 EMS 消息或具有特定属性的特定消息。您可以使用 REST API 帮助自动执行与 EMS 相关的任务，与其他处理 EMS 消息的方法相比，可以节省时间。</block>
+  <block id="619a84d9c14dd4e8431c29139707919c" category="paragraph">以下示例显示了如何使用 ONTAP REST API 处理 EMS 消息。在每个示例中，请务必在所示位置用方括号 &lt;&gt; 提供信息值。您也可以引用示例<block ref="93282e4588c19699b4435477b6d0187b" category="inline-link-rx"></block> 这展示了如何自动化执行许多与 EMS 相关的活动。</block>
+  <block id="c25e3541a8e8d23fbd7bc417366e087a" category="section-title">查看特定事件日志</block>
+  <block id="53d5e5ab3f1018d37b93775c447bf8c5" category="paragraph">使用 `GET /support/EMS/Events` API 调用，您可以检索特定事件消息，例如最新消息，包含特定文本的消息或具有特定严重性的消息。</block>
+  <block id="f615b69d52993b779bce7b1c6728c21d" category="listing-title">示例请求：检索最新消息</block>
+  <block id="ce82b9076790e11cac5d1aa3bcd41aa5" category="listing-title">示例请求：检索包含特定文本和严重性的消息</block>
+  <block id="0cc4ccc760bba90b3392a98e6a6ec9e5" category="section-title">查看现有 EMS 配置</block>
+  <block id="11bd634909ab0002d27896579c235553" category="paragraph">使用 `get /support/EMS/` API 调用，您可以检索有关现有 EMS 通知配置的信息。</block>
+  <block id="5415ddffb113099234fe3c0d76f7749a" category="section-title">创建新的 EMS 通知配置</block>
+  <block id="9bf42ad17c089dd9891c431d5a1c5c2f" category="paragraph">您可以同时使用多个 API 调用来创建新的 EMS 配置，以自定义接收消息的方式和时间。</block>
+  <block id="2b24417cd71c7c073f9c43c6702b281e" category="list-text">配置系统范围的电子邮件设置。例如：</block>
+  <block id="d6a7eb66a65f3937689937ed206de56a" category="list-text">定义使用特定规则与特定消息匹配的筛选器。例如：</block>
+  <block id="4d3eb0a7fcad51868e2c47187c83128f" category="list-text">为消息创建目标。例如：</block>
+  <block id="304905cae974c3b05217421398eee9f1" category="paragraph">与 ONTAP 命令行界面相比， ONTAP REST API 可以使用更少的命令自动执行许多任务。例如，您可以使用一个 POST API 方法来创建筛选器，而不是使用多个 CLI 命令。下表显示了完成常见 EMS 任务与相应的 REST API 调用所需的命令行界面命令：</block>
+  <block id="2368af484e43b6e0fc7814eb71cba236" category="cell">`GET /support/EMS`</block>
+  <block id="8b64f73d0c930b953467d71771168fcb" category="cell">`event config show`</block>
+  <block id="9f14a0e7f948d7c4687191b2963b4b88" category="cell">`POST /support/EMS/destinations`</block>
+  <block id="2130e4445c18121e61a0496381717d89" category="list-text">`事件通知目标创建`</block>
+  <block id="b0f540062794ffac7297b2f00a005457" category="list-text">`事件通知创建`</block>
+  <block id="67263db3668d1ed303c86b613bbb802c" category="cell">`GET /support/EMS/Events`</block>
+  <block id="3eb95dd087771082d8d97c1dfe80b359" category="cell">`事件日志显示`</block>
+  <block id="7f1ea7967a4a624ec172c4dbad038d5a" category="cell">`POST /support/EMS/filters`</block>
+  <block id="9b8f1b89d54261f317c44e8ccd1c91cd" category="list-text">`event filter create -filter-name &lt;FilterName&gt;`</block>
+  <block id="42d9b7d3455dfaa83fb3e81bad6cce7c" category="list-text">`event filter rule add -filter-name &lt;FilterName&gt;`</block>
+  <block id="3b580ecb7e3414e24089f175032dabf3" category="inline-link">ONTAP REST API EMS Python 脚本示例</block>
+  <block id="acfce8bc71a552130aa0ccb8784fe895" category="list-text"><block ref="acfce8bc71a552130aa0ccb8784fe895" category="inline-link-rx"></block></block>
+  <block id="04a23c4efdbd2046f23f7897eaf905ba" category="inline-link">ONTAP REST API ：自动通知高严重性事件</block>
+  <block id="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="list-text"><block ref="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="inline-link-rx"></block></block>
+  <block id="f543ca5c2e4e8371b14327b0c907dce3" category="sidebar">使用 REST API 管理 ONTAP</block>
+  <block id="f719347e95688149977dfc1399128cfd" category="sidebar">EMS 事件通知</block>
+  <block id="31be5a65a5bd0c7e64b5cc0f6b8790c7" category="sidebar">DACL 和 SACL 权限</block>
 </blocks>

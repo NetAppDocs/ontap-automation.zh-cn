@@ -15,6 +15,7 @@ sidebar:
   - section: get-started
   - section: rest
   - section: workflows
+  - section: manage
   - section: python
   - section: reference
   - section: automate

@@ -1,0 +1,198 @@
+---
+permalink: manage/ems-rest-api.html 
+sidebar: sidebar 
+keywords: ems, configuration, workflow 
+summary: 使用 REST API 管理 EMS 配置。 
+---
+= 使用 ONTAP REST API 管理 EMS 事件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 ONTAP REST API 配置向您发送事件管理系统（ EMS ）事件通知的重要性，以及检索所有 EMS 消息或具有特定属性的特定消息。您可以使用 REST API 帮助自动执行与 EMS 相关的任务，与其他处理 EMS 消息的方法相比，可以节省时间。
+
+以下示例显示了如何使用 ONTAP REST API 处理 EMS 消息。在每个示例中，请务必在所示位置用方括号 <> 提供信息值。您也可以引用示例 https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py["Python 脚本"^] 这展示了如何自动化执行许多与 EMS 相关的活动。
+
+
+
+== 查看特定事件日志
+
+使用 `GET /support/EMS/Events` API 调用，您可以检索特定事件消息，例如最新消息，包含特定文本的消息或具有特定严重性的消息。
+
+.示例请求：检索最新消息
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems/events?fields=message.name&max_records=1'
+----
+.响应示例
+[source, json]
+----
+"records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 6260,
+      "message": {
+        "name": "netinet6.rtr.high.mtu"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/6260"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?fields=message.name&max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-22T10%3A28%3A29-04%3A00&start.node.name=malha-vsim1&start.index=6260&fields=message.name&max_records=1"
+    }
+  }
+}
+----
+.示例请求：检索包含特定文本和严重性的消息
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems/events?log_message=*disk*&message.severity=alert'
+----
+.响应示例
+[source, json]
+----
+"records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 4602,
+      "time": "2022-03-18T06:37:46-04:00",
+      "message": {
+        "severity": "alert",
+        "name": "raid.autoPart.disabled"
+      },
+      "log_message": "raid.autoPart.disabled: Disk auto-partitioning is disabled on this system: the system needs a minimum of 4 usable internal hard disks.",
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/4602"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?log_message=*disk*&message.severity=alert&max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-18T06%3A37%3A46-04%3A00&start.node.name=malha-vsim1&start.index=4602&log_message=*disk*&message.severity=alert"
+    }
+  }
+}
+----
+
+
+== 查看现有 EMS 配置
+
+使用 `get /support/EMS/` API 调用，您可以检索有关现有 EMS 通知配置的信息。
+
+.请求示例
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems/'
+----
+.响应示例
+[source, json]
+----
+{
+  "proxy_url": "https://proxyserver.mycompany.com",
+  "proxy_user": "proxy_user",
+  "mail_server": "mail@mycompany.com",
+  "_links": {
+    "self": {
+      "href": "/api/resourcelink"
+    }
+  },
+  "pubsub_enabled": "1",
+  "mail_from": "administrator@mycompany.com"
+}
+----
+
+
+== 创建新的 EMS 通知配置
+
+您可以同时使用多个 API 调用来创建新的 EMS 配置，以自定义接收消息的方式和时间。
+
+.步骤
+. 配置系统范围的电子邮件设置。例如：
++
+[source, curl]
+----
+curl -X PATCH -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems?mail_from=administrator@mycompany.com&mail_server=mail@mycompany.com'
+----
+. 定义使用特定规则与特定消息匹配的筛选器。例如：
++
+[source, curl]
+----
+curl -u admin:<PASSWORD> -X POST -d '{"name": "test-filter", "rules.type": ["include"], "rules.message_criteria.severities": ["emergency"]}' -k 'https://<IP_ADDRESS>/api/support/ems/filters/'
+----
+. 为消息创建目标。例如：
++
+[source, curl]
+----
+curl -u admin:<PASSWORD> -X POST -d '{"name": "test-destination", "type": "email", "destination": "administrator@mycompany.com", "filters.name": ["important-events"]}' -k 'https://<IP_ADDRESS>/api/support/ems/destinations/'
+----
+
+
+
+
+== ONTAP REST API 与 ONTAP 命令行界面命令
+
+与 ONTAP 命令行界面相比， ONTAP REST API 可以使用更少的命令自动执行许多任务。例如，您可以使用一个 POST API 方法来创建筛选器，而不是使用多个 CLI 命令。下表显示了完成常见 EMS 任务与相应的 REST API 调用所需的命令行界面命令：
+
+|===
+| ONTAP REST API | ONTAP 命令行界面 
+
+
+| `GET /support/EMS` | `event config show` 
+
+
+| `POST /support/EMS/destinations`  a| 
+. `事件通知目标创建`
+. `事件通知创建`
+
+
+
+
+| `GET /support/EMS/Events` | `事件日志显示` 
+
+
+| `POST /support/EMS/filters`  a| 
+. `event filter create -filter-name <FilterName>`
+. `event filter rule add -filter-name <FilterName>`
+
+
+|===
+
+
+== 相关信息
+
+* https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py["ONTAP REST API EMS Python 脚本示例"^]
+* https://blog.netapp.com/ontap-rest-apis-automate-notification["ONTAP REST API ：自动通知高严重性事件"^]
+

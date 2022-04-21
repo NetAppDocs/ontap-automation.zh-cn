@@ -1,0 +1,8 @@
+---
+section: manage
+title: 使用 REST API 管理 ONTAP
+entries:
+- title: EMS 事件通知
+  url: "/manage/ems-rest-api.html"
+- title: DACL 和 SACL 权限
+  url: "/manage/dacl-sacl-rest-api.html"
