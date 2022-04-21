@@ -69,6 +69,20 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/ontap-automation/manage/dacl-sacl-rest-api.html</loc>
+      
+      <lastmod>2022-04-21T17:02:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-cn/ontap-automation/manage/ems-rest-api.html</loc>
+      
+      <lastmod>2022-04-21T17:02:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/ontap-automation/additional/get_more_information.html</loc>
       
       <lastmod>2022-04-18T06:19:09+00:00</lastmod>
@@ -267,7 +281,7 @@
     <url>
       <loc>https://docs.netapp.com/zh-cn/ontap-automation//search.html</loc>
       
-      <lastmod>2022-04-18T06:19:24+00:00</lastmod>
+      <lastmod>2022-04-21T17:02:49+00:00</lastmod>
       
     </url>
   

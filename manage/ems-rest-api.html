@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>准备使用 ONTAP REST API</title>
+  <title>使用 ONTAP REST API 管理 EMS 事件通知</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="准备使用 ONTAP REST API" />
+  <meta property="og:title" content="使用 ONTAP REST API 管理 EMS 事件通知" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/get-started/prepare.html" />
-	<meta property="og:description" content="" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/manage/ems-rest-api.html" />
+	<meta property="og:description" content="使用 REST API 管理 EMS 配置。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-automation/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" "><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="使用 REST API 管理 EMS 配置。">
+  <meta name="keywords" content=" ems, configuration, workflow"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[准备使用 ONTAP REST API](https://docs.netapp.com/zh-cn/ontap-automation/get-started/prepare.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/get-started/prepare.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[使用 ONTAP REST API 管理 EMS 事件通知](https://docs.netapp.com/zh-cn/ontap-automation/manage/ems-rest-api.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/manage/ems-rest-api.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -292,13 +292,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/get-started/prepare.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/manage/ems-rest-api.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/get-started/prepare.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-automation/manage/ems-rest-api.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/get-started/prepare.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/manage/ems-rest-api.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/get-started/prepare.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/manage/ems-rest-api.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -407,15 +407,6 @@
           
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/zh-cn/ontap-automation/pdfs/pages/get-started/prepare.pdf" >
-    <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -634,6 +625,15 @@
             使用 REST API 管理 ONTAP
           </a>
           
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/ontap-automation/pdfs/pages/manage/ems-rest-api.pdf" >
+    <img src="/zh-cn/ontap-automation/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -764,7 +764,7 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/ontap_automation_options.html">
         了解自动化选项
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/prepare.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/prepare.html">
         准备使用 REST API
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/get-started/retrieve_cluster_software_version.html">
         检索集群软件版本
@@ -850,7 +850,7 @@
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 使用 REST API 管理 ONTAP</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/manage/ems-rest-api.html">
+      <ul><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/manage/ems-rest-api.html">
         EMS 事件通知
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/manage/dacl-sacl-rest-api.html">
         DACL 和 SACL 权限
@@ -930,14 +930,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">准备使用 ONTAP REST API</h1>
+  <h1 class="n-doc__component-detail-heading">使用 ONTAP REST API 管理 EMS 事件通知</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:19:09 +0000">04/18/2022</time>
+    <time datetime="2022-04-21 17:02:33 +0000">04/21/2022</time>
     
   
 
@@ -947,32 +947,247 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>要准备使用 ONTAP REST API ，您应执行几个步骤。</p>
+<p>您可以使用 ONTAP REST API 配置向您发送事件管理系统（ EMS ）事件通知的重要性，以及检索所有 EMS 消息或具有特定属性的特定消息。您可以使用 REST API 帮助自动执行与 EMS 相关的任务，与其他处理 EMS 消息的方法相比，可以节省时间。</p>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="ontap-9-的使用经验">ONTAP 9 的使用经验</h5>
 <div class="paragraph">
-<p>您应具备使用 ONTAP 9 的经验。其中包括了解基本概念和术语，以及在系统管理方面的一些经验。请参见 <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-concepts/home.html" target="_blank" rel="noopener">"ONTAP 9 概念"</a> 开始使用。</p>
+<p>以下示例显示了如何使用 ONTAP REST API 处理 EMS 消息。在每个示例中，请务必在所示位置用方括号 &lt;&gt; 提供信息值。您也可以引用示例 <a href="https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py" target="_blank" rel="noopener">"Python 脚本"</a> 这展示了如何自动化执行许多与 EMS 相关的活动。</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="查看-rest-概念和实施">查看 REST 概念和实施</h5>
+</div>
+<div class="sect1">
+<h2 id="查看特定事件日志">查看特定事件日志</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>请务必查看 <a href="../rest/rest_web_services_foundation.html">"ONTAP REST API"</a> 有关 REST 概念的信息以及有关如何设计 ONTAP REST API 的详细信息。</p>
+<p>使用 <code>GET /support/EMS/Events</code> API 调用，您可以检索特定事件消息，例如最新消息，包含特定文本的消息或具有特定严重性的消息。</p>
+</div>
+<div class="listingblock">
+<div class="title">示例请求：检索最新消息</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;IP_ADDRESS&gt;/api/support/ems/events?fields=message.name&amp;max_records=1'</code></pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="软件开发背景">软件开发背景</h5>
+<div class="listingblock">
+<div class="title">响应示例</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 6260,
+      "message": {
+        "name": "netinet6.rtr.high.mtu"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/6260"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?fields=message.name&amp;max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-22T10%3A28%3A29-04%3A00&amp;start.node.name=malha-vsim1&amp;start.index=6260&amp;fields=message.name&amp;max_records=1"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">示例请求：检索包含特定文本和严重性的消息</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;IP_ADDRESS&gt;/api/support/ems/events?log_message=*disk*&amp;message.severity=alert'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">响应示例</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 4602,
+      "time": "2022-03-18T06:37:46-04:00",
+      "message": {
+        "severity": "alert",
+        "name": "raid.autoPart.disabled"
+      },
+      "log_message": "raid.autoPart.disabled: Disk auto-partitioning is disabled on this system: the system needs a minimum of 4 usable internal hard disks.",
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/4602"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?log_message=*disk*&amp;message.severity=alert&amp;max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-18T06%3A37%3A46-04%3A00&amp;start.node.name=malha-vsim1&amp;start.index=4602&amp;log_message=*disk*&amp;message.severity=alert"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="查看现有-ems-配置">查看现有 EMS 配置</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>在软件开发技术和流程方面拥有一些经验非常有用，包括一种或多种编程语言以及一些通用实用程序，例如 curl 。</p>
+<p>使用 <code>get /support/EMS/</code> API 调用，您可以检索有关现有 EMS 通知配置的信息。</p>
+</div>
+<div class="listingblock">
+<div class="title">请求示例</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;IP_ADDRESS&gt;/api/support/ems/'</code></pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="获取更多信息">获取更多信息</h5>
+<div class="listingblock">
+<div class="title">响应示例</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "proxy_url": "https://proxyserver.mycompany.com",
+  "proxy_user": "proxy_user",
+  "mail_server": "mail@mycompany.com",
+  "_links": {
+    "self": {
+      "href": "/api/resourcelink"
+    }
+  },
+  "pubsub_enabled": "1",
+  "mail_from": "administrator@mycompany.com"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="创建新的-ems-通知配置">创建新的 EMS 通知配置</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>您应了解中建议的追加信息资源 <a href="../additional/get_more_information.html">"获取更多信息"</a>。</p>
+<p>您可以同时使用多个 API 调用来创建新的 EMS 配置，以自定义接收消息的方式和时间。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>配置系统范围的电子邮件设置。例如：</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X PATCH -u admin:&lt;PASSWORD&gt; -k 'https://&lt;IP_ADDRESS&gt;/api/support/ems?mail_from=administrator@mycompany.com&amp;mail_server=mail@mycompany.com'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>定义使用特定规则与特定消息匹配的筛选器。例如：</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -u admin:&lt;PASSWORD&gt; -X POST -d '{"name": "test-filter", "rules.type": ["include"], "rules.message_criteria.severities": ["emergency"]}' -k 'https://&lt;IP_ADDRESS&gt;/api/support/ems/filters/'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>为消息创建目标。例如：</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -u admin:&lt;PASSWORD&gt; -X POST -d '{"name": "test-destination", "type": "email", "destination": "administrator@mycompany.com", "filters.name": ["important-events"]}' -k 'https://&lt;IP_ADDRESS&gt;/api/support/ems/destinations/'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ontap-rest-api-与-ontap-命令行界面命令">ONTAP REST API 与 ONTAP 命令行界面命令</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>与 ONTAP 命令行界面相比， ONTAP REST API 可以使用更少的命令自动执行许多任务。例如，您可以使用一个 POST API 方法来创建筛选器，而不是使用多个 CLI 命令。下表显示了完成常见 EMS 任务与相应的 REST API 调用所需的命令行界面命令：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ONTAP REST API</th>
+<th class="tableblock halign-left valign-top">ONTAP 命令行界面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GET /support/EMS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event config show</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>POST /support/EMS/destinations</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>事件通知目标创建</code></p>
+</li>
+<li>
+<p><code>事件通知创建</code></p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GET /support/EMS/Events</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>事件日志显示</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>POST /support/EMS/filters</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>event filter create -filter-name &lt;FilterName&gt;</code></p>
+</li>
+<li>
+<p><code>event filter rule add -filter-name &lt;FilterName&gt;</code></p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="相关信息">相关信息</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py" target="_blank" rel="noopener">"ONTAP REST API EMS Python 脚本示例"</a></p>
+</li>
+<li>
+<p><a href="https://blog.netapp.com/ontap-rest-apis-automate-notification" target="_blank" rel="noopener">"ONTAP REST API ：自动通知高严重性事件"</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
