@@ -6,7 +6,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
-  langs: zh-cn,us-en,ja-jp,ko-kr
+  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
 sidebar:
   entries:
   - title: ONTAP 自动化文档
