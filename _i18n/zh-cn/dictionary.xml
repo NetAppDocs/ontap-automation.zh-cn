@@ -201,7 +201,6 @@
   <block id="f5520ac447b7ce4cc60a84b00fe90b91" category="section-title">受监控的文件</block>
   <block id="16750416870169f8a547b041c15fb9ca" category="paragraph">您可以指定特定文件以进行额外监控。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="407c4e9fac86b98147da49acd4fa0d01" category="section-title">端口</block>
-  <block id="a7ed048576f99b28a7ac7d127a048121" category="paragraph">集群的存储端口。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="9ab8fc3354a61f6ad2350f17305fc866" category="section-title">QoS 策略</block>
   <block id="8719f60286ad321c9136cdebcda6779b" category="paragraph">服务质量策略配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="48b9817af3fdae7035b6862c98196584" category="section-title">qtree</block>
@@ -473,7 +472,6 @@
   <block id="04b0bb6aae6dc41149097cc24034df97" category="list-text"><block ref="04b0bb6aae6dc41149097cc24034df97" category="inline-link-rx"></block></block>
   <block id="8574bd76a1428c3bf08d97dadd4ae77c" category="inline-link">ONTAP 和 ONTAP System Manager 资源</block>
   <block id="ef6786259f693365fcfb0cc5f63f3f4e" category="list-text"><block ref="ef6786259f693365fcfb0cc5f63f3f4e" category="inline-link-rx"></block></block>
-  <block id="d36ee6fe6aa657c937857a18101e0782" category="paragraph">提供规划，管理和支持 ONTAP 9 所需的文档和其他有用链接。</block>
   <block id="1d5be002ec12a8cee5e18879d77b8f22" category="section-title">ONTAP 9 开发人员资源</block>
   <block id="4afcca23062e18db41a227f2c2299716" category="paragraph">提供关键 ONTAPI 调用以及与等效 REST API 调用的映射。</block>
   <block id="b597994ba1223810c3ac8977cffacb37" category="inline-link">NetApp 开发人员网络： ONTAP RESTful API</block>
@@ -899,7 +897,6 @@
   <block id="31e39608982442406853c159bf64d7ea" category="section-title">CIFS 域</block>
   <block id="772ba71e6aaaa5e3a9d9cdecd907e2e2" category="paragraph">在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是 ONTAP 9.10 中的新增资源。</block>
   <block id="396c3f48c117673117684dd56e4ea358" category="section-title">CIFS 本地组</block>
-  <block id="075f810b99d746a8b62911ab066db558" category="paragraph">在确定共享，文件和目录访问权限时， CIFS 服务器可以使用本地组进行授权。此资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中进行了显著扩展。</block>
   <block id="c1746aa388178e56fc9071ad1d30c228" category="section-title">FPolicy 连接</block>
   <block id="3f689cafff034d41de3da8f0516fe489" category="paragraph">通过这些端点，您可以显示和更新外部 FPolicy 服务器的连接状态信息。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="7f1fb7408267003fd39631c254d0d9ae" category="section-title">锁定</block>
@@ -931,7 +928,6 @@
   <block id="5358757de9216cc29d688612a3d72fe1" category="inline-link">ONTAP 9 文档</block>
   <block id="7d1750eaf694ea55e3ed364bf2fc1139" category="list-text"><block ref="7d1750eaf694ea55e3ed364bf2fc1139" category="inline-link-rx"></block></block>
   <block id="85e5e87731b3318f19ef33e2fb42f8b4" category="paragraph">提供了有关 ONTAP 9 的文档（命令行界面命令除外）。</block>
-  <block id="874bbaff78a1a5929b6a69396bce843d" category="paragraph">提供 ONTAP 9 命令行界面命令的文档。</block>
   <block id="8159db13d1fb608175963a59674de159" category="list-text"><block ref="8159db13d1fb608175963a59674de159" category="inline-link-rx"></block></block>
   <block id="09b968a9a3d2c3977d1e4ac1ccd11b75" category="inline-link">PyPI ： NetApp ONTAP 9.10.1</block>
   <block id="4be092006953c35749a0846e4734167a" category="list-text"><block ref="4be092006953c35749a0846e4734167a" category="inline-link-rx"></block></block>
@@ -1173,4 +1169,70 @@
   <block id="f543ca5c2e4e8371b14327b0c907dce3" category="sidebar">使用 REST API 管理 ONTAP</block>
   <block id="f719347e95688149977dfc1399128cfd" category="sidebar">EMS 事件通知</block>
   <block id="31be5a65a5bd0c7e64b5cc0f6b8790c7" category="sidebar">DACL 和 SACL 权限</block>
+  <block id="54614c33cd18b45a05af04b2ab151311" category="paragraph">提供了有关ONTAP 9命令行界面命令的文档。</block>
+  <block id="7f96f0bc5330ed5d9909cdd2f6f0d480" category="paragraph">包括规划、管理和支持ONTAP 9所需的文档和其他有用链接。</block>
+  <block id="623d61e11a58f706cc63211cbeef400b" category="inline-link">ONTAP 9 产品库</block>
+  <block id="c2d5813d8be4192f243cf259ee486461" category="list-text"><block ref="c2d5813d8be4192f243cf259ee486461" category="inline-link-rx"></block></block>
+  <block id="314c9b4dff5f24c292fa071348953ece" category="paragraph">访问先前ONTAP 版本的发行说明和其他文档。</block>
+  <block id="b59cced8914a5ae4b2997c54c8cfeb8d" category="section-title">ONTAP 9.11.1</block>
+  <block id="fed998214be47115214a92dcb94e441c" category="paragraph">ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。</block>
+  <block id="d6e857e52e070e2d7dc74670d30f4681" category="list-text">粒度RBAC</block>
+  <block id="abc796662cfaf549fac897b99e75df46" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要使用传统角色或创建新角色。每个角色都可以与一个或多个访问定义相关联、每个定义可标识一个命令或REST API调用以及所需的访问级别。此外、还提供了新的访问权限、例如`read_create`和`read_modify`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。</block>
+  <block id="a3139937e50cf495467ef74d1e2841ff" category="list-text">性能计数器</block>
+  <block id="654266e542ab86fb9663ace26fddbb0a" category="list-text">先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。管理员或自动化流程可以访问数据以确定系统性能。计数器管理器子系统维护的统计信息以数据库格式使用表和行显示。此增强功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。</block>
+  <block id="13a73a2c197166eea31c701558811cf4" category="list-text">聚合管理</block>
+  <block id="208620b0414871fca67f3c1e66a5d1f3" category="list-text">ONTAP 存储聚合的管理已得到增强。您可以使用更新后的REST端点联机和脱机移动聚合、以及管理备用磁盘。</block>
+  <block id="2da073b1bbcf0d975fb958ca55de6a07" category="list-text">IP子网功能</block>
+  <block id="5397339ae64eef12a3fbbe9af0ab8470" category="list-text">ONTAP 网络功能已扩展、包括对IP子网的支持。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。</block>
+  <block id="92b25ca356d0711c23fa00a11a838f16" category="list-text">多个管理员验证</block>
+  <block id="e7d8af28980ef8f99ebba710f535c906" category="list-text">多管理员验证功能提供了一个灵活的授权框架、用于保护对ONTAP 命令或操作的访问。您可以定义用于标识受限命令的规则。当用户请求访问特定命令时、可以根据需要由多个ONTAP 管理员授予批准权限。</block>
+  <block id="4f254b5768d1e18364bedb0b2402d10a" category="list-text">SnapMirror增强功能</block>
+  <block id="5f3e5b310eaf255b1da217cd7d703fc7" category="list-text">SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。</block>
+  <block id="46c5fd81e1ba5f738d2c1dd0ae4cabdc" category="list-text">名称服务缓存支持</block>
+  <block id="fe82f3320d7dc6994f70bf750ba7e784" category="list-text">ONTAP 名称服务已得到增强、可支持缓存、从而提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。</block>
+  <block id="6c0d25ee401578483c4dfffa365b9ea0" category="section-title">光纤通道网络结构</block>
+  <block id="392cdf2ebad4890343218b2779c17ff3" category="paragraph">您可以使用光纤通道(FC)光纤REST API端点检索有关FC网络的信息。其中包括ONTAP 集群与FC网络结构之间的连接、构成网络结构的交换机以及活动区域集的分区。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="0e7eec875e1f37460a721166947e4e8e" category="section-title">IP子网</block>
+  <block id="5a09483804ff20be38e6c855da808ed2" category="paragraph">ONTAP 网络连接功能已进行扩展、可支持IP子网。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="751e4e85711e2518633cee5b9da90a2f" category="paragraph">您可以访问特定SVM实例的其他性能指标数据。有四个列表可用、每个列表提供ONTAP FlexVol 和FlexGroup 卷的前几个I/O活动。这些列表包括：</block>
+  <block id="0f558243fbf45f1cd840fff01957f57b" category="list-text">客户端</block>
+  <block id="f60bce136c62f7ab3c73aa4f0d5fcae9" category="list-text">目录</block>
+  <block id="91f3a2c0e4424c87689525da44c4db11" category="list-text">文件</block>
+  <block id="bfff97f6c83321c8784e8850db2da12f" category="paragraph">这些资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="dd1cc17036adbbdb0074432af6a7a58b" category="section-title">MetroCluster SVM</block>
+  <block id="06a467722471a55dde81911330523907" category="paragraph">您可以检索有关MetroCluster 配置中所有SVM对的信息。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="67e3defb688be7685ce637d90e158565" category="paragraph">先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。此功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="af29aa178ae43211319e28f627e96590" category="section-title">传感器</block>
+  <block id="a7eb63cda27c2652ccce4025d6971e7d" category="paragraph">您可以使用这些端点检索有关所有平台环境传感器的详细信息。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="d870fba37d68752041265a286259efaf" category="section-title">应用程序日志</block>
+  <block id="4b3884b394eaf8adab98582dbe5a979d" category="paragraph">独立应用程序可以通过发出POST请求在ONTAP 系统上记录EMS事件以及可选生成的AutoSupport 软件包。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="ab0cf104f39708eabd07b8cb67e149ba" category="section-title">缓存</block>
+  <block id="9565a5f8023ba13977b682ff9926c605" category="paragraph">ONTAP 名称服务支持缓存、可提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="4c885663da9566f7ff78e30b5c49bd30" category="section-title">LDAP模式</block>
+  <block id="a56273e0ba8ea7b3936e2c23836bce15" category="paragraph">您可以创建、修改和列出ONTAP 使用的LDAP模式。其中包括四个默认架构。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="146af53866e72090bed5ee8202fb16a6" category="section-title">网络组文件</block>
+  <block id="519958cfc29f20a2cea0438ac050e8bd" category="paragraph">您可以检索网络组文件详细信息并删除SVM的文件。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="f2be2bb6f022a2ec208f7b9ce6a2c155" category="section-title">CIFS连接</block>
+  <block id="292b052ce2719671eb57c58f83562861" category="paragraph">您可以检索已建立的CIFS连接的列表。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="4d6ac2d984cc413aff1fe87f7e0fa660" category="paragraph">在确定共享，文件和目录访问权限时， CIFS 服务器可以使用本地组进行授权。此资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中进行了显著扩展。</block>
+  <block id="494abb7dd5b763270d790ff3ee48084d" category="section-title">CIFS NetBIOS</block>
+  <block id="c775568e4d8c67f72b663a73cb197aba" category="paragraph">您可以显示有关集群的NetBIOS连接的信息。详细信息包括IP地址和已注册的NetBIOS名称。此信息可帮助您解决名称解析问题。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="ef5c06085d29fcbcb6138c9c185bda09" category="section-title">CIFS会话文件</block>
+  <block id="7c652b32ce4519406f03f09a9ce29110" category="paragraph">您可以根据多个筛选选项检索CIFS会话的打开文件列表。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="94a2d8f06ad95f4f574506a5f9b95aa7" category="section-title">CIFS卷影副本</block>
+  <block id="7adcc24f3e21384d34551c471bc32af6" category="paragraph">Microsoft远程卷影复制服务是现有Microsoft VSS功能的扩展。它扩展了VSS功能、支持SMB共享的卷影复制。此功能现在可通过ONTAP REST API来使用。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="6fd52b48358df3c671bb7b3860da8a55" category="section-title">CIFS用户和组批量导入</block>
+  <block id="63f4ee6b7fd934fe707edb4b8c4d57dc" category="paragraph">您可以使用新的REST API端点批量导入CIFS本地用户、组和组成员资格信息、并监控请求的状态。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="1deaf7cba2dce61080af964b90af69c6" category="section-title">NFS连接的客户端映射</block>
+  <block id="dd286c6ea02dd70eb8505c2eae2a0f20" category="paragraph">已连接客户端的NFS映射信息可通过新端点访问。您可以检索有关节点、SVM和IP地址的详细信息。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="88882495c6bab93dd3c2b495093552f5" category="section-title">文件移动</block>
+  <block id="372394bf9fc945311be3935c83ca5258" category="paragraph">您可以使用这些REST API端点在两个FlexVol 卷之间或FlexGroup 卷内移动文件。接受请求后、您可以监控进度和状态。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="283176e6feb211f8532b2c7c9263cd08" category="section-title">池</block>
+  <block id="d15846f45a1f4b49fe2803b2a7f9a82d" category="paragraph">您可以创建共享存储池并检索集群中的存储池。此资源类型是在ONTAP 9.11.1中引入的。</block>
+  <block id="e6349d14d4601aa8ecdd1040b495f453" category="paragraph">集群的存储端口。此资源类型是在ONTAP 9.6中推出的、并在ONTAP 9.11.1中进行了增强。</block>
+  <block id="192e7108f5ecb3d6c9efb673e84c4942" category="paragraph">多管理员验证功能提供了一个灵活的授权框架、用于保护对ONTAP 命令或操作的访问。在以下方面、有17个新端点支持定义、请求和批准访问：</block>
+  <block id="1f4da964f8eab62e96e8cfe406e44364" category="list-text">rules</block>
+  <block id="b134a801a1a3888498968fc4ea760cf7" category="list-text">请求</block>
+  <block id="3d2e7e9224f83f4694b1be45b9e158ba" category="list-text">批准组</block>
+  <block id="91c9a56d680aaaf645cf6a17c6a57626" category="paragraph">为多个管理员提供批准访问的选项可提高ONTAP 和IT环境的安全性。这些资源类型是在ONTAP 9.11.1中引入的。</block>
 </blocks>
