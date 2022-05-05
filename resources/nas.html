@@ -939,7 +939,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:19:09 +0000">04/18/2022</time>
+    <time datetime="2022-05-05 12:22:04 +0000">05/05/2022</time>
     
   
 
@@ -966,6 +966,12 @@
 </div>
 </div>
 <div class="sect3">
+<h4 id="cifs连接">CIFS连接</h4>
+<div class="paragraph">
+<p>您可以检索已建立的CIFS连接的列表。此资源类型是在ONTAP 9.11.1中引入的。</p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="cifs-域">CIFS 域</h4>
 <div class="paragraph">
 <p>在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是 ONTAP 9.10 中的新增资源。</p>
@@ -984,15 +990,33 @@
 </div>
 </div>
 <div class="sect3">
+<h4 id="cifs-netbios">CIFS NetBIOS</h4>
+<div class="paragraph">
+<p>您可以显示有关集群的NetBIOS连接的信息。详细信息包括IP地址和已注册的NetBIOS名称。此信息可帮助您解决名称解析问题。此资源类型是在ONTAP 9.11.1中引入的。</p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="cifs-服务">CIFS 服务</h4>
 <div class="paragraph">
 <p>CIFS 服务器的核心配置。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
 </div>
 </div>
 <div class="sect3">
+<h4 id="cifs会话文件">CIFS会话文件</h4>
+<div class="paragraph">
+<p>您可以根据多个筛选选项检索CIFS会话的打开文件列表。此资源类型是在ONTAP 9.11.1中引入的。</p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="cifs-会话">CIFS 会话</h4>
 <div class="paragraph">
 <p>您可以使用此 API 检索有关 CIFS 会话的详细信息。此资源类型是在 ONTAP 9.8 REST API 中引入的，并在 ONTAP 9.9 中进行了增强。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cifs卷影副本">CIFS卷影副本</h4>
+<div class="paragraph">
+<p>Microsoft远程卷影复制服务是现有Microsoft VSS功能的扩展。它扩展了VSS功能、支持SMB共享的卷影复制。此功能现在可通过ONTAP REST API来使用。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
 </div>
 <div class="sect3">
@@ -1011,6 +1035,12 @@
 <h4 id="cifs-unix-符号链接映射">CIFS UNIX 符号链接映射</h4>
 <div class="paragraph">
 <p>CIFS 和 UNIX 客户端均可访问同一数据存储库。当 UNIX 客户端创建符号链接时，这些映射会引用其他文件或文件夹来支持 CIFS 客户端。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cifs用户和组批量导入">CIFS用户和组批量导入</h4>
+<div class="paragraph">
+<p>您可以使用新的REST API端点批量导入CIFS本地用户、组和组成员资格信息、并监控请求的状态。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
 </div>
 <div class="sect3">
@@ -1059,6 +1089,12 @@
 <h4 id="锁定">锁定</h4>
 <div class="paragraph">
 <p>锁定是一种同步机制，用于对同时访问多个客户端同时访问同一文件的文件实施限制。您可以使用这些端点检索和删除锁定。此资源类型是在 ONTAP 9.10 中引入的。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nfs连接的客户端映射">NFS连接的客户端映射</h4>
+<div class="paragraph">
+<p>已连接客户端的NFS映射信息可通过新端点访问。您可以检索有关节点、SVM和IP地址的详细信息。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
 </div>
 <div class="sect3">
