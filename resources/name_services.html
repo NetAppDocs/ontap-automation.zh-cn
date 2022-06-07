@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/name_services.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/name_services.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/name_services.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/name_services.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/name_services.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,85 +931,48 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 12:22:04 +0000">05/05/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="缓存">缓存</h4>
 <div class="paragraph">
 <p>ONTAP 名称服务支持缓存、可提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ddns">DDNS</h4>
 <div class="paragraph">
 <p>您可以显示动态 DNS （ DDNS ）信息并管理 DDNS 子系统。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="dns">DNS</h4>
 <div class="paragraph">
 <p>DNS 支持将 ONTAP 集群集成到网络中。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="主机记录">主机记录</h4>
 <div class="paragraph">
 <p>通过这些端点，您可以显示指定主机名的 IP 地址以及 IP 地址的主机名。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ldap">LDAP</h4>
 <div class="paragraph">
 <p>LDAP 服务器可用于维护用户信息。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ldap模式">LDAP模式</h4>
 <div class="paragraph">
 <p>您可以创建、修改和列出ONTAP 使用的LDAP模式。其中包括四个默认架构。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="本地主机">本地主机</h4>
 <div class="paragraph">
 <p>您可以使用这些端点显示和管理主机名的本地映射。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="名称映射">名称映射</h4>
 <div class="paragraph">
 <p>通过名称映射，您可以将身份从一个名称域映射到另一个名称域。例如，您可以将身份从 CIFS 映射到 UNIX ，将 Kerberos 映射到 UNIX ，将 UNIX 映射到 CIFS 。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="网络组文件">网络组文件</h4>
 <div class="paragraph">
 <p>您可以检索网络组文件详细信息并删除SVM的文件。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="nis">NIS</h4>
 <div class="paragraph">
 <p>NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="unix-用户和组">UNIX 用户和组</h4>
 <div class="paragraph">
 <p>本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。</p>
-</div>
 </div>
 
     </article>
@@ -1165,4 +1120,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

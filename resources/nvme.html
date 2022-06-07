@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/nvme.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/nvme.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/nvme.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/nvme.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/nvme.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/nvme.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/nvme.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/nvme.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/nvme.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/nvme.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,61 +931,36 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:19:09 +0000">04/18/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以使用这些 API 调用来管理支持非易失性内存快速（ NVMe ）的资源。</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="光纤通道登录">光纤通道登录</h4>
 <div class="paragraph">
 <p>光纤通道登录表示由登录到 ONTAP 的光纤通道启动程序构成的连接。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="nvme-接口">NVMe 接口</h4>
-<div class="paragraph">
-<p>NVMe 接口是指配置为支持基于网络结构的 NVMe （ NVMe-oF ）协议的网络接口。此资源类型是在 ONTAP 9.6 中引入的。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nvme-服务">NVMe 服务</h4>
-<div class="paragraph">
-<p>NVMe 服务定义 SVM 的 NVMe 控制器目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nvme-子系统控制器">NVMe 子系统控制器</h4>
-<div class="paragraph">
-<p>NVMe 子系统控制器表示主机与存储解决方案之间的动态连接。此资源类型是在 ONTAP 9.6 中引入的。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nvme-子系统映射">NVMe 子系统映射</h4>
-<div class="paragraph">
-<p>NVMe 子系统映射是 NVMe 命名空间与 NVMe 子系统的关联。此资源类型是在 ONTAP 9.6 中引入的。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nvme-子系统">NVMe 子系统</h4>
-<div class="paragraph">
-<p>NVMe 子系统可为一组连接 NVMe 的主机维护配置状态和命名空间访问控制。此资源类型是在 ONTAP 9.6 中引入的。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="命名空间">命名空间</h4>
 <div class="paragraph">
 <p>NVMe 命名空间是一组可寻址逻辑块，这些逻辑块提供给使用基于网络结构的 NVMe 协议连接到 SVM 的主机。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</p>
 </div>
+<div class="paragraph">
+<p>NVMe 接口是指配置为支持基于网络结构的 NVMe （ NVMe-oF ）协议的网络接口。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+<div class="paragraph">
+<p>NVMe 服务定义 SVM 的 NVMe 控制器目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
+</div>
+<div class="paragraph">
+<p>NVMe 子系统控制器表示主机与存储解决方案之间的动态连接。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+<div class="paragraph">
+<p>NVMe 子系统映射是 NVMe 命名空间与 NVMe 子系统的关联。此资源类型是在 ONTAP 9.6 中引入的。</p>
+</div>
+<div class="paragraph">
+<p>NVMe 子系统可为一组连接 NVMe 的主机维护配置状态和命名空间访问控制。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
 
     </article>
@@ -1141,4 +1108,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

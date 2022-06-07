@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/support.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/support.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/support.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/support.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/support.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/support.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/support.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/support.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/support.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/support.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,145 +931,78 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 12:22:04 +0000">05/05/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="应用程序日志">应用程序日志</h4>
 <div class="paragraph">
 <p>独立应用程序可以通过发出POST请求在ONTAP 系统上记录EMS事件以及可选生成的AutoSupport 软件包。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="自动更新">自动更新</h4>
 <div class="paragraph">
 <p>自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="autosupport">AutoSupport</h4>
 <div class="paragraph">
 <p>AutoSupport 会收集配置和状态详细信息以及错误，并向 NetApp 报告这些信息。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="autosupport-消息">AutoSupport 消息</h4>
 <div class="paragraph">
 <p>每个节点都会维护可生成和检索的 AutoSupport 消息。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="配置备份">配置备份</h4>
 <div class="paragraph">
 <p>您可以使用这些 API 检索和更新当前备份设置。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="配置备份操作">配置备份操作</h4>
 <div class="paragraph">
 <p>您可以创建，检索和删除配置备份文件。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="核心转储">核心转储</h4>
 <div class="paragraph">
 <p>您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems">EMS</h4>
 <div class="paragraph">
 <p>事件管理系统（ EMS ）收集事件并向一个或多个目标发送通知。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems-目标">EMS 目标</h4>
 <div class="paragraph">
 <p>EMS 目标可确定通知的发送方式和发送位置。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems-目标实例">EMS 目标实例</h4>
 <div class="paragraph">
 <p>EMS 目标实例按类型和位置定义。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems-事件">EMS 事件</h4>
 <div class="paragraph">
 <p>这是集群的实时系统事件集合。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems-筛选器">EMS 筛选器</h4>
 <div class="paragraph">
 <p>EMS 筛选器可共同识别需要额外处理的事件。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems-筛选实例">EMS 筛选实例</h4>
 <div class="paragraph">
 <p>EMS 筛选器实例是应用于事件的规则的集合。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ems-消息">EMS 消息</h4>
 <div class="paragraph">
 <p>可用于访问 EMS 事件目录。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="筛选器实例的-ems-规则">筛选器实例的 EMS 规则</h4>
 <div class="paragraph">
 <p>可以为 EMS 筛选器的特定实例管理规则列表。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="筛选器实例的-ems-规则实例">筛选器实例的 EMS 规则实例</h4>
 <div class="paragraph">
 <p>EMS 筛选器的特定实例的单个规则。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snmp">SNMP</h4>
 <div class="paragraph">
 <p>您可以为集群启用和禁用 SNMP 和陷阱操作。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snmp-陷阱主机">SNMP 陷阱主机</h4>
 <div class="paragraph">
 <p>SNMP 陷阱主机是一个配置为从 ONTAP 接收 SNMP 陷阱的系统。您可以检索和定义主机。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snmp-陷阱主机实例">SNMP 陷阱主机实例</h4>
 <div class="paragraph">
 <p>您可以管理特定的 SNMP 陷阱主机。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snmp-用户">SNMP 用户</h4>
 <div class="paragraph">
 <p>您可以定义和管理 SNMP 用户。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snmp-用户实例">SNMP 用户实例</h4>
 <div class="paragraph">
 <p>您可以管理引擎 ID 与管理 SVM 或数据 SVM 关联的特定 SNMP 用户。此资源类型是在 ONTAP 9.7 中引入的。</p>
-</div>
 </div>
 
     </article>
@@ -1225,4 +1150,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

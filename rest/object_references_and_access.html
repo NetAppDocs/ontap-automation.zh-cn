@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/rest/object_references_and_access.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/rest/object_references_and_access.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/rest/object_references_and_access.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/rest/object_references_and_access.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/rest/object_references_and_access.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/rest/object_references_and_access.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/rest/object_references_and_access.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/rest/object_references_and_access.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/rest/object_references_and_access.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/rest/object_references_and_access.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,7 +931,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:19:09 +0000">04/18/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
@@ -953,8 +945,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="对象访问路径">对象访问路径</h3>
+<div class="sect1">
+<h2 id="对象访问路径">对象访问路径</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>总体而言，访问对象时有两种路径类型：</p>
 </div>
@@ -975,6 +968,7 @@
 </ul>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="使用-uuid-访问对象">使用 UUID 访问对象</h2>
 <div class="sectionbody">
@@ -984,8 +978,11 @@
 <div class="paragraph">
 <p>对于许多资源类型，可以在 URL 中的路径密钥中提供 UUID 值来访问特定对象。例如，您可以使用以下命令访问节点实例： <code>` /cluster/nodes/｛ uuid ｝</code></p>
 </div>
-<div class="sect2">
-<h3 id="使用对象属性访问对象">使用对象属性访问对象</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用对象属性访问对象">使用对象属性访问对象</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>除了 UUID 之外，您还可以使用对象属性访问对象。在大多数情况下，使用 name 属性非常方便。例如，您可以在 URL 字符串中使用以下查询参数来按名称访问节点实例： ` /cluster/nodes ？ name=node_one` 。除了查询参数之外，还可以通过主对象中的属性访问外部对象。</p>
 </div>
@@ -1031,8 +1028,10 @@
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="集群与-svm-环境">集群与 SVM 环境</h3>
+</div>
+<div class="sect1">
+<h2 id="集群与-svm-环境">集群与 SVM 环境</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>有多个 REST 端点同时支持集群和 SVM 。使用其中一个端点时，您可以通过 <code>sCOP=[SVM| 集群 ]</code> 值指示 API 调用的上下文。支持双环境的端点示例包括 IP 接口和安全角色。</p>
 </div>
@@ -1049,8 +1048,10 @@
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="对一组对象使用修补程序和删除">对一组对象使用修补程序和删除</h3>
+</div>
+<div class="sect1">
+<h2 id="对一组对象使用修补程序和删除">对一组对象使用修补程序和删除</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>在资源实例上支持修补或删除的每个 REST 端点也支持对一组对象使用相同的方法。唯一的要求是，必须通过 URL 字符串中的查询参数至少提供一个字段。在对集合发出修补程序或进行删除时，这相当于在内部执行以下操作：</p>
 </div>
@@ -1066,7 +1067,6 @@
 </div>
 <div class="paragraph">
 <p>操作超时可通过 <code>return_timeout</code> 设置，默认值为 15 秒。如果在超时之前未完成，则响应将包含指向下一个对象的链接。您必须使用下一个链接重新发出相同的 HTTP 方法才能继续此操作。</p>
-</div>
 </div>
 </div>
 </div>
@@ -1216,4 +1216,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

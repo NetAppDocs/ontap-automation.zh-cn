@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/san.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/san.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/san.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/san.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/san.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/san.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/san.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/san.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/san.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/san.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,100 +931,57 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:19:09 +0000">04/18/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以使用这些 API 调用来管理存储区域网络（ Storage Area Networking ， SAN ）资源。</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="光纤通道登录">光纤通道登录</h4>
 <div class="paragraph">
 <p>光纤通道登录表示已登录到 ONTAP 的光纤通道启动程序所形成的连接。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="光纤通道协议服务">光纤通道协议服务</h4>
 <div class="paragraph">
 <p>光纤通道协议（ FCP ）服务定义 SVM 的光纤通道目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="光纤通道-wwpn-别名">光纤通道 WWPN 别名</h4>
 <div class="paragraph">
 <p>全球通用端口名称（ WWPN ）是一个 64 位值，用于唯一标识光纤通道端口。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="igroup">igroup</h4>
 <div class="paragraph">
 <p>启动程序组（ igroup ）是一组光纤通道 WWPN （全球通用端口名称）， iSCSI IQN （限定名称）和 iSCSI EUI （扩展唯一标识符），用于标识主机启动程序。此资源类型最初是在 ONTAP 9.6 中推出的。</p>
 </div>
 <div class="paragraph">
 <p>嵌套 igroup 是 ONTAP 9.9 的一项新功能，也已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="iscsi-凭据">iSCSI 凭据</h4>
 <div class="paragraph">
 <p>iSCSI 凭据对象包含启动程序和 ONTAP 使用的身份验证凭据。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="iscsi-服务">iSCSI 服务</h4>
 <div class="paragraph">
 <p>iSCSI 服务定义 SVM 的 iSCSI 目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="iscsi-会话">iSCSI 会话</h4>
 <div class="paragraph">
 <p>iSCSI 会话是指将 iSCSI 启动程序与 iSCSI 目标链接在一起的一个或多个 TCP 连接。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="lun-属性">LUN 属性</h4>
 <div class="paragraph">
 <p>LUN 属性是由调用方定义的名称 / 值对，可以选择随 LUN 一起存储。属性可用于保存少量应用程序专用元数据，不会被 ONTAP 解释。通过这些端点，您可以创建，更新，删除和发现 LUN 的属性。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="lun-映射">LUN 映射</h4>
 <div class="paragraph">
 <p>LUN 映射是指 LUN 与启动程序组之间的关联。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="lun-映射报告节点">LUN 映射报告节点</h4>
 <div class="paragraph">
 <p>报告节点是指在 ONTAP 的选择性 LUN 映射（ SLM ）功能中使用 SAN 协议公布映射 LUN 的网络路径的集群节点。通过这些新端点，您可以添加，删除和发现 LUN 映射的报告节点。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="lun">LUN</h4>
 <div class="paragraph">
 <p>LUN 是存储区域网络（ SAN ）中存储的逻辑表示形式。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="端口集">端口集</h4>
 <div class="paragraph">
 <p>端口集是与 <em>portset</em> Storage VM 关联的一组光纤通道或 iSCSI 网络接口。虽然先前版本的 ONTAP 中已存在此功能，但现在已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="vvol-绑定">VVol 绑定</h4>
 <div class="paragraph">
 <p>VMware 虚拟卷（ VVol ）绑定是指类为 <code>protocol_endpoint</code> 的 LUN 与类为 <code>vvol</code> 的 LUN 之间的关联。您可以使用 VVol 绑定 REST API 创建，删除和发现 VVol 绑定。此资源类型是在 ONTAP 9.10 中引入的。</p>
-</div>
 </div>
 
     </article>
@@ -1180,4 +1129,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

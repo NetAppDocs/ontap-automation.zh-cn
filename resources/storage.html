@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/storage.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/storage.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/storage.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/storage.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/storage.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/storage.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/storage.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/storage.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/storage.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/storage.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,181 +931,96 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 12:22:04 +0000">05/05/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以使用这些 API 调用来管理物理和逻辑存储。</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="聚合指标">聚合指标</h4>
 <div class="paragraph">
 <p>您可以检索特定聚合的历史指标数据。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="聚合丛">聚合丛</h4>
 <div class="paragraph">
 <p>聚合中 WAFL 存储的物理副本。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="聚合">聚合</h4>
 <div class="paragraph">
 <p>聚合包含一个或多个 RAID 组。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="网桥">网桥</h4>
 <div class="paragraph">
 <p>您可以检索集群中的网桥。此资源类型是在 ONTAP 9.9 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="disks">Disks</h4>
 <div class="paragraph">
 <p>集群中的物理磁盘。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 和 9.8 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="文件克隆">文件克隆</h4>
 <div class="paragraph">
 <p>您可以使用这些端点创建文件克隆，检索拆分状态以及管理拆分负载。文件克隆端点资源最初是在 ONTAP 9.6 中推出的，并在 ONTAP 9.8 中进行了扩展。它们在 ONTAP 9.10 中再次显著扩展。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="文件移动">文件移动</h4>
 <div class="paragraph">
 <p>您可以使用这些REST API端点在两个FlexVol 卷之间或FlexGroup 卷内移动文件。接受请求后、您可以监控进度和状态。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="flexcache">FlexCache</h4>
 <div class="paragraph">
 <p>此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="flexcache-起源">FlexCache 起源</h4>
 <div class="paragraph">
 <p>FlexCache 是原始卷的永久性缓存。此资源类型最初是在 ONTAP 9.6 中推出的。ONTAP 9.9 REST API 增强了支持，支持通过 HTTP 修补方法进行修改。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="受监控的文件">受监控的文件</h4>
 <div class="paragraph">
 <p>您可以指定特定文件以进行额外监控。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="池">池</h4>
 <div class="paragraph">
 <p>您可以创建共享存储池并检索集群中的存储池。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="端口">端口</h4>
 <div class="paragraph">
 <p>集群的存储端口。此资源类型是在ONTAP 9.6中推出的、并在ONTAP 9.11.1中进行了增强。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="qos-策略">QoS 策略</h4>
 <div class="paragraph">
 <p>服务质量策略配置。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="qos-工作负载">QoS 工作负载</h4>
 <div class="paragraph">
 <p>QoS 工作负载表示通过 QoS 跟踪的存储对象。您可以检索 QoS 工作流。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="qtree">qtree</h4>
 <div class="paragraph">
 <p>您可以使用这些 API 调用来管理 qtree ， qtree 是一种按逻辑划分的文件系统。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="配额报告">配额报告</h4>
 <div class="paragraph">
 <p>报告配额，这是一种用于限制或跟踪文件或空间使用量的技术。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="配额规则">配额规则</h4>
 <div class="paragraph">
 <p>用于强制实施配额的规则。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="磁盘架">磁盘架</h4>
 <div class="paragraph">
 <p>集群中的磁盘架。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snapshot-策略">Snapshot 策略</h4>
 <div class="paragraph">
 <p>快照是根据策略创建的。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="snapshot-计划">Snapshot 计划</h4>
 <div class="paragraph">
 <p>您可以控制快照计划。此资源类型在 ONTAP 9.8 中进行了新的重新设计。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="交换机">交换机</h4>
 <div class="paragraph">
 <p>您可以检索集群中的交换机。此资源类型是在 ONTAP 9.9 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="磁带设备">磁带设备</h4>
 <div class="paragraph">
 <p>您可以检索集群中的磁带设备。此资源类型是在 ONTAP 9.9 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="首要指标">首要指标</h4>
 <div class="paragraph">
 <p>您可以通过排名靠前的指标端点来确定按特定指标筛选的卷的活动。可以根据客户端，目录，文件和用户进行筛选。此资源类型是在 ONTAP 9.10 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="卷效率策略">卷效率策略</h4>
 <div class="paragraph">
 <p>您可以使用这些 API 调用来配置应用于整个卷的效率。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="volumes">Volumes</h4>
 <div class="paragraph">
 <p>逻辑容器用于向客户端提供数据。此资源类型最初是在 ONTAP 9.6 REST API 中引入的。在 ONTAP 9.9 中， API 中使用的许多参数值都得到了显著扩展，包括用于空间管理的参数值。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="卷文件">卷文件</h4>
 <div class="paragraph">
 <p>您可以检索卷上特定目录的文件和目录列表。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="卷快照">卷快照</h4>
 <div class="paragraph">
 <p>卷的快照。此资源类型是在 ONTAP 9.6 中引入的。</p>
-</div>
 </div>
 
     </article>
@@ -1261,4 +1168,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

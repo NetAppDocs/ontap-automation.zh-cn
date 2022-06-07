@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/automate/blogs.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/automate/blogs.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/automate/blogs.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/automate/blogs.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/automate/blogs.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/automate/blogs.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/automate/blogs.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/automate/blogs.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/automate/blogs.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/automate/blogs.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,46 +931,33 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-18 06:19:09 +0000">04/18/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>我们提供了多篇博客文章，可帮助您更好地了解 ONTAP 自动化的不同技术和方法。</p>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="ontapi-到-rest-的映射">ONTAPI 到 REST 的映射</h5>
 <div class="paragraph">
 <p>NetApp 支持从专有的 ONTAPI （以前称为 Zephyr ） API 迁移到更强大的新 ONTAP REST API 。</p>
 </div>
 <div class="paragraph">
 <p><a href="https://netapp.io/2020/12/17/ontapi-to-rest-mapping/" target="_blank" rel="noopener">"netapp.io/2020/12/17/ontapi-rest-mapping"</a></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="将专用命令行界面直通与-ontap-rest-api-结合使用">将专用命令行界面直通与 ONTAP REST API 结合使用</h5>
 <div class="paragraph">
 <p>CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。</p>
 </div>
 <div class="paragraph">
 <p><a href="https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/" target="_blank" rel="noopener">"netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api"</a></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="netapp-和-ansible-入门安装-ansible">NetApp 和 Ansible 入门：安装 Ansible</h5>
 <div class="paragraph">
 <p>如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。</p>
 </div>
 <div class="paragraph">
 <p><a href="https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible">"netapp.io/2018/10/08/Getting Start-With NetApp-and-Ansible install-Ansible"</a></p>
-</div>
 </div>
 
     </article>
@@ -1126,4 +1105,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>

@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-automation/resources/cluster.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/cluster.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/cluster.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/cluster.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/cluster.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/cluster.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/cluster.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/cluster.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/cluster.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/cluster.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -751,7 +743,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/index.html">
         ONTAP 自动化文档
       </a></li><li class="subfolders "><a href="#">
@@ -939,169 +931,90 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 12:22:04 +0000">05/05/2022</time>
+    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以使用这些 API 调用来管理 ONTAP 集群和相关资源。</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="容量池">容量池</h4>
 <div class="paragraph">
 <p>通过容量池许可模式，您可以从共享池中为每个集群节点授予存储容量许可。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="机箱">机箱</h4>
 <div class="paragraph">
 <p>机箱是支持集群的硬件框架。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="集群">集群</h4>
 <div class="paragraph">
 <p>ONTAP 集群包含一个或多个节点以及用于定义存储系统的相关配置设置。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="固件">固件</h4>
 <div class="paragraph">
 <p>您可以检索固件更新请求的历史记录。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="作业">作业</h4>
 <div class="paragraph">
 <p>异步 REST API 请求使用由作业锁定的后台任务执行。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="许可证实例">许可证实例</h4>
 <div class="paragraph">
 <p>每个许可证都可以作为一个单独的软件包进行管理。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="许可证管理器">许可证管理器</h4>
 <div class="paragraph">
 <p>您可以管理与 ONTAP 集群关联的每个许可证管理器实例相关的配置和其他信息。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="licenses">licenses</h4>
 <div class="paragraph">
 <p>通过这些许可证，您可以实施特定的 ONTAP 特性和功能。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="调解器">调解器</h4>
 <div class="paragraph">
 <p>您可以管理与 MetroCluster 关联的调解器，包括添加或删除调解器实例。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster">MetroCluster</h4>
 <div class="paragraph">
 <p>您可以创建和管理 MetroCluster 部署，包括执行切换或切回操作。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster-诊断">MetroCluster 诊断</h4>
 <div class="paragraph">
 <p>您可以对 MetroCluster 部署执行诊断操作并检索结果。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster-dr-组">MetroCluster DR 组</h4>
 <div class="paragraph">
 <p>您可以执行与 MetroCluster DR 组相关的操作。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster-互连">MetroCluster 互连</h4>
 <div class="paragraph">
 <p>您可以检索 MetroCluster 互连状态。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster-节点">MetroCluster 节点</h4>
 <div class="paragraph">
 <p>您可以检索 MetroCluster 部署中各个节点的状态。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster-操作">MetroCluster 操作</h4>
 <div class="paragraph">
 <p>您可以检索 MetroCluster 配置的最近执行的操作列表。此资源类型是 ONTAP 9.8 的新增功能。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="metrocluster-svm">MetroCluster SVM</h4>
 <div class="paragraph">
 <p>您可以检索有关MetroCluster 配置中所有SVM对的信息。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="节点">节点</h4>
 <div class="paragraph">
 <p>ONTAP 集群由一个或多个节点组成。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ntp-keys">NTP keys</h4>
 <div class="paragraph">
 <p>可以将网络时间协议（ NTP ）配置为在 ONTAP 和可信外部 NTP 时间服务器之间使用共享私钥。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="ntp-服务器">NTP 服务器</h4>
 <div class="paragraph">
 <p>您可以使用这些 API 调用来配置 ONTAP 网络时间协议设置，包括外部 NTP 服务器和密钥。此资源类型是在 ONTAP 9.7 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="peers">peers</h4>
 <div class="paragraph">
 <p>对等对象表示端点并支持集群对等关系。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="性能计数器">性能计数器</h4>
 <div class="paragraph">
 <p>先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。此功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="schedules">Schedules</h4>
 <div class="paragraph">
 <p>计划可用于自动执行任务。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="传感器">传感器</h4>
 <div class="paragraph">
 <p>您可以使用这些端点检索有关所有平台环境传感器的详细信息。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="软件">软件</h4>
 <div class="paragraph">
 <p>ONTAP 集群包括集群软件配置文件，软件包收集和软件历史记录收集。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="web">Web</h4>
 <div class="paragraph">
 <p>您可以使用这些端点更新 Web 服务配置并检索当前配置。此资源类型是在 ONTAP 9.10 中引入的。</p>
-</div>
 </div>
 
     </article>
@@ -1249,4 +1162,5 @@
     </script>
     <script src='/zh-cn/ontap-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/ontap-automation/js/sidebar.js'></script>
   </body></html>
