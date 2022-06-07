@@ -18,7 +18,7 @@ summary:
 
 
 
-=== ONTAP 9 资源
+== ONTAP 9 资源
 
 * https://docs.netapp.com/us-en/ontap/["ONTAP 9 文档"^]
 +
@@ -40,7 +40,7 @@ summary:
 
 
 
-=== ONTAP 9 开发人员资源
+== ONTAP 9 开发人员资源
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^]
 +
@@ -62,7 +62,7 @@ NetApp Python 客户端库的文档。
 
 
 
-=== 视频
+== 视频
 
 * https://www.youtube.com/watch?v=Wws3SB5d9Ss["NetApp ONTAP Python 客户端库入门"^]
 +
@@ -72,7 +72,7 @@ NetApp Python 客户端库的文档。
 
 
 
-=== NetApp 资源
+== NetApp 资源
 
 * https://mysupport.netapp.com/["NetApp 支持"^]
 +

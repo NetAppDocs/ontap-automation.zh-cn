@@ -21,7 +21,7 @@ summary:
 
 TIP: 对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。
 
-.相关链接
+.相关信息
 * link:../rest/object_references_and_access.html["其他 REST 注意事项"]
 * link:../reference/api_reference.html["API 参考"]
 * link:../rn/whats_new.html["《 ONTAP 发行说明》"]

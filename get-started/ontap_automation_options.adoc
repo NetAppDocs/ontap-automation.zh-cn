@@ -21,24 +21,24 @@ NOTE: ONTAPI （也称为网络易管理性 SDK 或 ZAPI ）是一种传统技�
 
 
 
-=== 本机访问 ONTAP REST API
+== 本机访问 ONTAP REST API
 
 您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。您应首先查看此站点上的所有文档。
 
 
 
-=== 调整原有 ONTAPI 代码以使用 REST
+== 调整原有 ONTAPI 代码以使用 REST
 
 如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^] 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。
 
 
 
-=== 使用 NetApp Python 客户端库
+== 使用 NetApp Python 客户端库
 
 Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。您应首先查看此站点上的文档，包括 link:../python/overview_pcl.html["Python 客户端库"]。
 
 
 
-=== 使用 Ansible
+== 使用 Ansible
 
 Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。您应首先查看此站点上的文档，包括 link:../automate/ontap_ansible.html["ONTAP 和 Ansible 自动化"]。

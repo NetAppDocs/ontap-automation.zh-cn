@@ -16,20 +16,8 @@ summary:
 [role="lead"]
 您可以使用这些 API 调用来管理 SnapMirror 数据保护技术。
 
-
-
-==== 策略
-
 SnapMirror 策略将应用于关系，并控制每个关系的配置属性和行为。此资源类型是在 ONTAP 9.6 中引入的。
 
-
-
-==== relationships
-
 异步和同步关系可建立所需的连接传输数据。此资源类型是在 ONTAP 9.6 中引入的。
-
-
-
-==== 关系传输
 
 您可以通过现有 SnapMirror 关系管理 SnapMirror 传输。此资源类型是在 ONTAP 9.6 中引入的。

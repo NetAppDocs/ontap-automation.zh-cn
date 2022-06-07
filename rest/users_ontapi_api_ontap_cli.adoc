@@ -18,25 +18,25 @@ ONTAPI 是通过网络易管理性 SDK 提供的一组 API 调用，可用于管
 
 
 
-=== 一般设计差异
+== 一般设计差异
 
 ONTAP REST API 和命令行界面的设计截然不同。CLI 命令和参数不会直接映射到 REST API 调用。即使存在相似之处，输入参数的详细信息也可能有所不同。例如，可以使用字节或后缀（例如 KB ）来指定数字单位。您应查看 link:input_variables.html["控制 API 请求的输入变量"] 以及 link:../reference/api_reference.html["API 参考"] 有关详细信息 ...
 
 
 
-=== 通过 REST API 公开的数据 SVM
+== 通过 REST API 公开的数据 SVM
 
 ONTAP 支持多种类型的 Storage Virtual Machine （ SVM ）。但是，只有数据 SVM 才会通过 ONTAP REST API 直接公开。描述集群和节点的配置信息可通过 REST API 获得，但集群和节点不会被视为单独的 SVM 。
 
 
 
-=== 从 ONTAPI 迁移到 REST
+== 从 ONTAPI 迁移到 REST
 
 REST API 是自动化 ONTAP 系统管理的主要战略选择。如果您当前正在使用 ONTAPI ，则应考虑迁移到 REST API 。NetApp 提供了映射文档，可帮助您从 ONTAPI 迁移到 REST 。
 
 
 
-=== 在 ONTAPI 中更改 SnapDiff 可用性
+== 在 ONTAPI 中更改 SnapDiff 可用性
 
 从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。
 
@@ -49,6 +49,7 @@ ONTAP 版本中的 SnapDiff API 可用性定义如下：
 
 有关详细信息，请参见 link:../rn/whats_new.html["《 ONTAP 发行说明》"]。
 
-link:../rest/input_variables.html["控制 API 请求的输入变量"]
+.相关信息
+* link:../rest/input_variables.html["控制 API 请求的输入变量"]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^]
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^]
