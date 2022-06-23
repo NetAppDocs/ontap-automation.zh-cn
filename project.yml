@@ -19,6 +19,7 @@ sidebar:
   - section: python
   - section: reference
   - section: automate
+  - section: migrate
   - section: additional
   - title: 法律声明
     url: "/legal-notices.html"

@@ -1,0 +1,10 @@
+---
+section: migrate
+title: 迁移到REST API
+entries:
+- title: 概述
+  url: "/migrate/overview.html"
+- title: ONTAPI到REST映射
+  url: "/migrate/mapping.html"
+- title: 博客
+  url: "/migrate/blogs.html"

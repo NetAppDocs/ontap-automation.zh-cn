@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: migrate/blogs.html 
+keywords:  
+summary:  
+---
+= 有关迁移到ONTAP REST API的博客
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+有几篇博客文章可帮助您更好地了解如何从ONTAPI迁移到ONTAP REST API。
+
+NetApp支持通过映射文档从专有的ONTAPI迁移到ONTAP REST API。
+
+https://netapp.io/2020/12/17/ontapi-to-rest-mapping/["netapp.io/2020/12/17/ontapi-rest-mapping"^]
+
+有几种技术可帮助您基于REST API实现ONTAP 自动化环境转型。
+
+https://www.netapp.com/blog/transform-automation-ontap-rest-api/["www.netapp.com/blog/transform-automation-ontap-rest-api"^]
+
+NetApp提供了一个工具、可帮助客户和合作伙伴过渡到ONTAP REST API。
+
+https://netapp.io/2022/03/21/transitioning-from-ontapizapi-using-ontapi-usage-reporting-tool/["netapp.io/2022/21/Sovering-from-ontapizapi-using-ontapi-use-reporting-tool"^]
