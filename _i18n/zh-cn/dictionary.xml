@@ -1039,4 +1039,38 @@
   <block id="6e6432511bc053d1916f5f8f0915598d" category="sidebar">迁移到REST API</block>
   <block id="9e7684bc06c1628bc838239d69633ef1" category="sidebar">ONTAPI到REST映射</block>
   <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">博客</block>
+  <block id="e8f0cbec7d559a5ded4ddfdaa7f21a88" category="summary">从ONTAPI过渡到ONTAP REST API以访问ONTAP 性能计数器。</block>
+  <block id="ad369f52b331d56f93a85b89efe98c46" category="paragraph">通过ONTAP 计数器管理器、ONTAP 用户可以访问性能计数器信息并导出许多不同的ONTAP 性能计数器指标。</block>
+  <block id="d2fe6ca70e862256ec5db4361e09d5b1" category="paragraph">在ONTAP 9.11.1之前的版本中、对全套ONTAP 计数器管理器对象的访问仅限于ONTAP 命令行界面和ONTAPI接口。</block>
+  <block id="36989422b5cc9879d4b033aff909b8d0" category="paragraph">从ONTAP 9.11.1开始、ONTAP 用户可以使用ONTAP REST API访问计数器管理器对象段。将自动化脚本从ONTAPI迁移到ONTAP REST API的用户需要了解如何向ONTAPI提供性能计数器数据与如何向REST API提供数据之间的差异。</block>
+  <block id="d61221b86306255b9a48df30bfcf7c44" category="inline-link">ONTAP 9.11.1 ONTAPI到REST计数器管理器映射</block>
+  <block id="e927c87bfa41a93d4bafcd563d1490f8" category="paragraph">请参见<block ref="01d9ddfa039589f3660f3e87ae07b925" category="inline-link-rx"></block> 有关ONTAP 9.11.1中REST API可用的一组ONTAP 计数器的文档、以及有关ONTAPI和REST API使用量之间的计数器差异的信息。</block>
+  <block id="caf3ee040de28e9f6d46988870dece28" category="section-title">使用ONTAPI访问性能计数器</block>
+  <block id="acb7e7db7dc26e2ee7f0a6ca7889fc0e" category="paragraph">在ONTAPI使用时、性能计数器数据会分组到对象中。例如、在具有四个磁盘的节点中、磁盘性能计数器数据会分组为一个对象。系统中的每个物理磁盘都代表该对象的一个实例、您可以使用ONTAPI访问单个磁盘实例的各个性能计数器。</block>
+  <block id="3786be7650bb73d3aca4f15ae8918df6" category="section-title">使用ONTAP REST API访问性能计数器</block>
+  <block id="25a6f074faebcb689360e5a8ed4cb46d" category="paragraph">使用ONTAP REST API、您可以通过表(例如、`disk`)访问计数器管理器对象。这意味着、每个计数器管理器对象都表示为自己的表、而该计数器管理器对象的实例(例如系统中的各个磁盘)则可作为该表中的一行进行访问。每行都包含该实例的多个性能计数器。您可以将实例的单个性能计数器作为该表行中的一个字段来访问。</block>
+  <block id="b624cb182b45b8cd771b55f340bd48db" category="paragraph">在以下示例中、`host_adapter` counter manager对象以表格式表示、用于说明如何使用ONTAP REST API访问每个性能计数器。系统中有多个主机适配器、每个主机适配器都有自己的性能计数器：</block>
+  <block id="8306b094d2e16f41079e29117db4bb23" category="cell">Instance name</block>
+  <block id="fbec7db93c11926b216977db525ae3ab" category="cell">REST计数器</block>
+  <block id="f74fb34c9f03e41b8c43158d192c2d00" category="cell">host_adapter_1</block>
+  <block id="d8a7543b7dce739012bd345b5a03eccb" category="cell">总读取操作数</block>
+  <block id="e27bc9a2caed78fe1b2b968b85b1dfd9" category="cell">total_write_ops</block>
+  <block id="31057b5059a47701f78ecd9a1f74a071" category="cell">bytes_read</block>
+  <block id="477dba04d73005ccb3c67063b3a38723" category="cell">bytes_written</block>
+  <block id="cf0e377beaa1e7766c218fd657cbbbd2" category="cell">max_link_data_rate</block>
+  <block id="e1fe7012a83d918a6018ad433c5911c6" category="cell">RSCN_count</block>
+  <block id="5179155001c9f520ffb99f72e2b20b26" category="cell">host_adapter_2</block>
+  <block id="e963b19eb0f4d2b1cf056e63183513d8" category="cell">host_adapter_3.</block>
+  <block id="b8e21401d171e2074defa8652af924bd" category="section-title">使用REST API示例了解此结构</block>
+  <block id="31e2f56402a33c38bb51a024fb126484" category="paragraph">使用以下REST API示例帮助了解计数器管理器表的结构。这些示例还向您展示了如何使用REST API发现可用的端点、并使用它们深入了解系统的性能。这些示例将浏览`host_adapter` counter manager对象、并逐步显示有关该对象及其包含的计数器值的更详细信息。如果您在系统上尝试这些示例、请务必在所示位置用方括号&lt;&gt;提供相关信息的值。</block>
+  <block id="bec1d0d2213e6c86ce1d238db29c19d4" category="section-title">发现可用的性能计数器表</block>
+  <block id="f277ad098d40e91b5eb2ab7a35f6508e" category="paragraph">您可以使用此REST API调用来发现可以查询的所有计数器管理器表：</block>
+  <block id="5e15906e971267826a4f4e09b907e18d" category="listing-title">示例响应(截断以缩短时间)：</block>
+  <block id="50932c8d3176ea01109499bc172117ea" category="section-title">查询单个性能计数器表</block>
+  <block id="987e44df4701f85b99bed446c53704d0" category="paragraph">您可以使用此REST API调用查看一个特定表(计数器管理器对象)的问题描述 和元数据。输出说明了该表的用途、并说明了该表中每个性能计数器记录的信息类型。在此示例中、我们查询`host_adapter`表：</block>
+  <block id="8a651b733e43788e6c813c286a2ed976" category="listing-title">示例响应：</block>
+  <block id="76f44ea931b02455d8f2c37f92aafe27" category="section-title">查看性能计数器表中的行</block>
+  <block id="445271c2961902f1af016fe036a233ca" category="paragraph">您可以使用此REST API调用查看表中的行、该调用会告知您存在哪些计数器管理器对象实例：</block>
+  <block id="48cea788f1e546862ce3c6b34e79dd3d" category="section-title">查询特定的计数器管理器实例</block>
+  <block id="3fae5b493cbf17e185ee077370c17c3c" category="paragraph">您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、我们请求提供系统中某个电源的性能计数器信息：</block>
 </blocks>

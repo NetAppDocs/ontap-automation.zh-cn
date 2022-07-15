@@ -6,5 +6,7 @@ entries:
   url: "/migrate/overview.html"
 - title: ONTAPI到REST映射
   url: "/migrate/mapping.html"
+- title: 性能计数器
+  url: "/migrate/performance-counters.html"
 - title: 博客
   url: "/migrate/blogs.html"
