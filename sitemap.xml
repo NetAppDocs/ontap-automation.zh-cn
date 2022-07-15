@@ -48,14 +48,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/ontap-automation/automate/blogs.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/ontap-automation/migrate/blogs.html</loc>
       
       <lastmod>2022-06-23T01:13:45+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-cn/ontap-automation/migrate/blogs.html</loc>
+      <loc>https://docs.netapp.com/zh-cn/ontap-automation/automate/blogs.html</loc>
       
       <lastmod>2022-06-23T01:13:45+00:00</lastmod>
       
@@ -237,6 +237,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/ontap-automation/migrate/performance-counters.html</loc>
+      
+      <lastmod>2022-07-15T22:32:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/ontap-automation/rest/performance_metrics.html</loc>
       
       <lastmod>2022-04-18T06:19:09+00:00</lastmod>
@@ -302,7 +309,7 @@
     <url>
       <loc>https://docs.netapp.com/zh-cn/ontap-automation//search.html</loc>
       
-      <lastmod>2022-06-23T01:14:02+00:00</lastmod>
+      <lastmod>2022-07-15T22:32:33+00:00</lastmod>
       
     </url>
   

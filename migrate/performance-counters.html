@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>名称服务</title>
+  <title>性能计数器</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="名称服务" />
+  <meta property="og:title" content="性能计数器" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/resources/name_services.html" />
-	<meta property="og:description" content="" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-automation/migrate/performance-counters.html" />
+	<meta property="og:description" content="从ONTAPI过渡到ONTAP REST API以访问ONTAP 性能计数器。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-automation/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="从ONTAPI过渡到ONTAP REST API以访问ONTAP 性能计数器。">
   <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-automation/images/favicon.ico" type="image/x-icon">
 
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[名称服务](https://docs.netapp.com/zh-cn/ontap-automation/resources/name_services.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/resources/name_services.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/issues/new?body=Page%3A%20[性能计数器](https://docs.netapp.com/zh-cn/ontap-automation/migrate/performance-counters.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-automation/blob/main/migrate/performance-counters.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-automation/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-automation/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -290,15 +290,15 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/zh-cn/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/ontap-automation/migrate/performance-counters.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/ontap-automation/migrate/performance-counters.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/ontap-automation/migrate/performance-counters.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/ontap-automation/migrate/performance-counters.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/ontap-automation/resources/name_services.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/ontap-automation/migrate/performance-counters.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -524,8 +524,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
 
@@ -698,6 +696,8 @@
 
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -813,7 +813,7 @@
         云
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/cluster.html">
         集群
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/name_services.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/name_services.html">
         名称服务
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/resources/nas.html">
         NAS
@@ -878,7 +878,7 @@
         概述
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/migrate/mapping.html">
         ONTAPI到REST映射
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/migrate/performance-counters.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/migrate/performance-counters.html">
         性能计数器
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-automation/migrate/blogs.html">
         博客
@@ -940,55 +940,357 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">名称服务</h1>
+  <h1 class="n-doc__component-detail-heading">性能计数器</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-06-07 16:06:33 +0000">06/07/2022</time>
+    <time datetime="2022-07-15 22:32:10 +0000">07/15/2022</time>
     
   
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。</p>
+<p>通过ONTAP 计数器管理器、ONTAP 用户可以访问性能计数器信息并导出许多不同的ONTAP 性能计数器指标。</p>
 </div>
 <div class="paragraph">
-<p>ONTAP 名称服务支持缓存、可提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。此资源类型是在ONTAP 9.11.1中引入的。</p>
+<p>在ONTAP 9.11.1之前的版本中、对全套ONTAP 计数器管理器对象的访问仅限于ONTAP 命令行界面和ONTAPI接口。</p>
 </div>
 <div class="paragraph">
-<p>您可以显示动态 DNS （ DDNS ）信息并管理 DDNS 子系统。此资源类型是 ONTAP 9.8 的新增功能。</p>
+<p>从ONTAP 9.11.1开始、ONTAP 用户可以使用ONTAP REST API访问计数器管理器对象段。将自动化脚本从ONTAPI迁移到ONTAP REST API的用户需要了解如何向ONTAPI提供性能计数器数据与如何向REST API提供数据之间的差异。</p>
 </div>
 <div class="paragraph">
-<p>DNS 支持将 ONTAP 集群集成到网络中。此资源类型是在 ONTAP 9.6 中引入的。</p>
+<p>请参见 <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2883449" target="_blank" rel="noopener">"ONTAP 9.11.1 ONTAPI到REST计数器管理器映射"</a> 有关ONTAP 9.11.1中REST API可用的一组ONTAP 计数器的文档、以及有关ONTAPI和REST API使用量之间的计数器差异的信息。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用ontapi访问性能计数器">使用ONTAPI访问性能计数器</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在ONTAPI使用时、性能计数器数据会分组到对象中。例如、在具有四个磁盘的节点中、磁盘性能计数器数据会分组为一个对象。系统中的每个物理磁盘都代表该对象的一个实例、您可以使用ONTAPI访问单个磁盘实例的各个性能计数器。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用ontap-rest-api访问性能计数器">使用ONTAP REST API访问性能计数器</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>使用ONTAP REST API、您可以通过表(例如、<code>disk</code>)访问计数器管理器对象。这意味着、每个计数器管理器对象都表示为自己的表、而该计数器管理器对象的实例(例如系统中的各个磁盘)则可作为该表中的一行进行访问。每行都包含该实例的多个性能计数器。您可以将实例的单个性能计数器作为该表行中的一个字段来访问。</p>
 </div>
 <div class="paragraph">
-<p>通过这些端点，您可以显示指定主机名的 IP 地址以及 IP 地址的主机名。此资源类型是在 ONTAP 9.10 中引入的。</p>
+<p>在以下示例中、<code>host_adapter</code> counter manager对象以表格式表示、用于说明如何使用ONTAP REST API访问每个性能计数器。系统中有多个主机适配器、每个主机适配器都有自己的性能计数器：</p>
 </div>
-<div class="paragraph">
-<p>LDAP 服务器可用于维护用户信息。此资源类型是在 ONTAP 9.6 中引入的。</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance name</th>
+<th class="tableblock halign-left valign-top" colspan="6">REST计数器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">host_adapter_1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">总读取操作数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">total_write_ops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes_read</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes_written</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">max_link_data_rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RSCN_count</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">host_adapter_2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">总读取操作数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">total_write_ops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes_read</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes_written</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">max_link_data_rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RSCN_count</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">host_adapter_3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">总读取操作数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">total_write_ops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes_read</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes_written</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">max_link_data_rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RSCN_count</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p>您可以创建、修改和列出ONTAP 使用的LDAP模式。其中包括四个默认架构。此资源类型是在ONTAP 9.11.1中引入的。</p>
 </div>
+<div class="sect1">
+<h2 id="使用rest-api示例了解此结构">使用REST API示例了解此结构</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>您可以使用这些端点显示和管理主机名的本地映射。此资源类型是在 ONTAP 9.10 中引入的。</p>
+<p>使用以下REST API示例帮助了解计数器管理器表的结构。这些示例还向您展示了如何使用REST API发现可用的端点、并使用它们深入了解系统的性能。这些示例将浏览`host_adapter` counter manager对象、并逐步显示有关该对象及其包含的计数器值的更详细信息。如果您在系统上尝试这些示例、请务必在所示位置用方括号&lt;&gt;提供相关信息的值。</p>
 </div>
+<div class="sect2">
+<h3 id="发现可用的性能计数器表">发现可用的性能计数器表</h3>
 <div class="paragraph">
-<p>通过名称映射，您可以将身份从一个名称域映射到另一个名称域。例如，您可以将身份从 CIFS 映射到 UNIX ，将 Kerberos 映射到 UNIX ，将 UNIX 映射到 CIFS 。此资源类型是在 ONTAP 9.6 中引入的。</p>
+<p>您可以使用此REST API调用来发现可以查询的所有计数器管理器表：</p>
 </div>
-<div class="paragraph">
-<p>您可以检索网络组文件详细信息并删除SVM的文件。此资源类型是在ONTAP 9.11.1中引入的。</p>
+<div class="listingblock">
+<div class="title">请求示例：</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;ONTAP_IP_ADDRESS&gt;/api/cluster/counter/tables'</code></pre>
 </div>
-<div class="paragraph">
-<p>NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。</p>
 </div>
+<div class="listingblock">
+<div class="title">示例响应(截断以缩短时间)：</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "records": [
+    {
+      "name": "copy_manager",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/copy_manager"
+        }
+      }
+    },
+    {
+      "name": "copy_manager:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/copy_manager%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "disk",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/disk"
+        }
+      }
+    },
+    {
+      "name": "host_adapter",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter"
+        }
+      }
+    }
+    ...
+  ],
+  "num_records": 68,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="查询单个性能计数器表">查询单个性能计数器表</h3>
 <div class="paragraph">
-<p>本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。</p>
+<p>您可以使用此REST API调用查看一个特定表(计数器管理器对象)的问题描述 和元数据。输出说明了该表的用途、并说明了该表中每个性能计数器记录的信息类型。在此示例中、我们查询`host_adapter`表：</p>
+</div>
+<div class="listingblock">
+<div class="title">请求示例：</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;ONTAP_IP_ADDRESS&gt;/api/cluster/counter/tables/host_adapter'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">示例响应：</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "name": "host_adapter",
+  "description": "The host_adapter table reports activity on the Fibre Channel, Serial Attached SCSI, and parallel SCSI Host Adapters the storage system uses to connect to disks and tape drives.",
+  "counter_schemas": [
+    {
+      "name": "bytes_read",
+      "description": "Bytes read via Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "bytes_written",
+      "description": "Bytes written via Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "max_link_data_rate",
+      "description": "Max link data rate in Kilobytes per second for Host Adapter",
+      "type": "raw",
+      "unit": "kb_per_sec"
+    },
+    {
+      "name": "node.name",
+      "description": "System node name",
+      "type": "string",
+      "unit": "none"
+    },
+    {
+      "name": "rscn_count",
+      "description": "Number of RSCN(s) received by the FC HBA",
+      "type": "raw",
+      "unit": "none"
+    },
+    {
+      "name": "total_read_ops",
+      "description": "Total number of reads on Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "total_write_ops",
+      "description": "Total number of writes on Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="查看性能计数器表中的行">查看性能计数器表中的行</h3>
+<div class="paragraph">
+<p>您可以使用此REST API调用查看表中的行、该调用会告知您存在哪些计数器管理器对象实例：</p>
+</div>
+<div class="listingblock">
+<div class="title">请求示例：</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;ONTAP_IP_ADDRESS&gt;/api/cluster/counter/tables/host_adapter/rows'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">示例响应：</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "records": [
+    {
+      "id": "power-01:0b",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0b"
+        }
+      }
+    },
+    {
+      "id": "power-01:0c",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0c"
+        }
+      }
+    },
+    {
+      "id": "power-01:0d",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0d"
+        }
+      }
+    },
+    {
+      "id": "power-01:0e",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0e"
+        }
+      }
+    }
+  ],
+  "num_records": 4,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter/rows"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="查询特定的计数器管理器实例">查询特定的计数器管理器实例</h3>
+<div class="paragraph">
+<p>您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、我们请求提供系统中某个电源的性能计数器信息：</p>
+</div>
+<div class="listingblock">
+<div class="title">请求示例：</div>
+<div class="content">
+<pre class="highlight"><code class="language-curl" data-lang="curl">curl -X GET -u admin:&lt;PASSWORD&gt; -k 'https://&lt;ONTAP_IP_ADDRESS&gt;/api/cluster/counter/tables/host_adapter/rows/power-01:0b'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">示例响应：</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "counter_table": {
+    "name": "host_adapter"
+  },
+  "id": "power-01:0b",
+  "properties": [
+    {
+      "name": "node.name",
+      "value": "power-01"
+    }
+  ],
+  "counters": [
+    {
+      "name": "total_read_ops",
+      "value": 3600516
+    },
+    {
+      "name": "total_write_ops",
+      "value": 3591536
+    },
+    {
+      "name": "bytes_read",
+      "value": 86354320000
+    },
+    {
+      "name": "bytes_written",
+      "value": 480863081920
+    },
+    {
+      "name": "max_link_data_rate",
+      "value": 375000
+    },
+    {
+      "name": "rscn_count",
+      "value": 0
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter/rows/power-01:0b"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     </article>
