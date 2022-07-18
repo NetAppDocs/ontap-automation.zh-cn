@@ -1073,4 +1073,12 @@
   <block id="445271c2961902f1af016fe036a233ca" category="paragraph">您可以使用此REST API调用查看表中的行、该调用会告知您存在哪些计数器管理器对象实例：</block>
   <block id="48cea788f1e546862ce3c6b34e79dd3d" category="section-title">查询特定的计数器管理器实例</block>
   <block id="3fae5b493cbf17e185ee077370c17c3c" category="paragraph">您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、我们请求提供系统中某个电源的性能计数器信息：</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
+  <block id="b5ec85c168694921a9de5eadfa6243a8" category="paragraph">ONTAP REST API具有某些限制、可能会影响您对API的使用和自动化代码的开发。下面介绍了这些限制。通常、每个适用场景 都支持REST API的所有ONTAP 版本。有关ONTAP 详细信息、请参见_RAID releases_字段。</block>
+  <block id="3428b552896ca875d0afc0a87f353a49" category="admonition">REST API首次随ONTAP 9.6一起提供。</block>
+  <block id="3a7bd150a3b127f640a55f3e4295ae12" category="paragraph">ONTAP 版本：所有受支持的版本</block>
+  <block id="3806b2980e70701200d32d0a7249795f" category="paragraph">ONTAP 会收到每个REST API客户端请求、并将其置于输入队列中、然后再进行处理。在到达率极高的情况下、保留这些API请求的输入等待队列可能会暂时填满。如果发生这种情况、则会拒绝每个额外的溢出请求。在这些情况下：</block>
+  <block id="b313d34412fbec083537488efb6a7265" category="list-text">ONTAP 会识别传入连接超过等待队列深度、并记录一条消息、指出其连接失败。</block>
+  <block id="b497355f60941f025ea8887fd49f2692" category="list-text">REST客户端会观察到连接失败、但具体行为可能取决于客户端。例如、对于NMSDK客户端、将显示消息"Failed to connect to SSL"。</block>
+  <block id="ba9b38c8f7abd73c0e9a44d75391a449" category="paragraph">REST API输入等待队列填充是一个极少的事件。但是、拒绝多余的请求可以防止受到DOS攻击。</block>
 </blocks>
