@@ -132,6 +132,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-cn/ontap-automation/rn/known_limitations.html</loc>
+      
+      <lastmod>2022-07-18T23:50:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-cn/ontap-automation/legal-notices.html</loc>
       
       <lastmod>2022-04-18T06:19:09+00:00</lastmod>
@@ -309,7 +316,7 @@
     <url>
       <loc>https://docs.netapp.com/zh-cn/ontap-automation//search.html</loc>
       
-      <lastmod>2022-07-15T22:32:33+00:00</lastmod>
+      <lastmod>2022-07-18T23:50:17+00:00</lastmod>
       
     </url>
   
