@@ -27,8 +27,9 @@ ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。
 聚合管理:: ONTAP 存储聚合的管理已得到增强。您可以使用更新后的REST端点联机和脱机移动聚合、以及管理备用磁盘。
 IP子网功能:: ONTAP 网络功能已扩展、包括对IP子网的支持。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。
 多个管理员验证:: 多管理员验证功能提供了一个灵活的授权框架、用于保护对ONTAP 命令或操作的访问。您可以定义用于标识受限命令的规则。当用户请求访问特定命令时、可以根据需要由多个ONTAP 管理员授予批准权限。
-SnapMirror增强功能:: SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。
+SnapMirror增强功能:: SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。
 名称服务缓存支持:: ONTAP 名称服务已得到增强、可支持缓存、从而提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。
+ONTAPI报告工具:: ONTAPI报告工具可帮助客户和合作伙伴确定其环境中的ONTAPI使用情况。除了Python软件之外、NetApp Lab on Demand还提供视频和不断发展的支持。在从ONTAPI迁移到ONTAP REST API时、此工具可提供另一种资源。
 
 
 

@@ -97,7 +97,3 @@ ONTAP System Manager 和网络易管理性 SDK 提供的相同身份验证选项
 ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。
 
 
-
-.相关信息
-* link:security_using_rbac.html["使用 RBAC 实现安全性"]
-

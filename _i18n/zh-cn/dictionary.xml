@@ -63,8 +63,6 @@
   <block id="fba54022e3b47aa328af3bc5b2fd6c5b" category="paragraph">在 HTTP 级别， API 事务使用基本身份验证。每个请求都会添加一个 HTTP 标头，其中用户名和密码包含在 base64 字符串中。</block>
   <block id="022958270d2e89acef5cfe895ac4a5a4" category="list-text">ONTAP 授权</block>
   <block id="ecada31be49896665065d57659291715" category="paragraph">ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。</block>
-  <block id="1eff307bdee34970a4f1fba8b03f2362" category="inline-link-macro">使用 RBAC 实现安全性</block>
-  <block id="46c2a957c1f02e81b9096c86660e0264" category="paragraph"><block ref="46c2a957c1f02e81b9096c86660e0264" category="inline-link-macro-rx"></block></block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="doc">NDMP</block>
   <block id="ddcc73c0369a0b65c748dc3e5194759a" category="paragraph">网络数据管理协议为备份 NAS 设备提供了一个标准。您可以使用这些 API 调用来管理 NDMP 服务。</block>
   <block id="e78d7ab79adaa44183fd6bddec381b9e" category="paragraph">NDMP 操作模式可以是 SVM 范围或节点范围。此资源类型是在 ONTAP 9.7 中引入的。</block>
@@ -406,23 +404,6 @@
   <block id="1b2a1d97817dee4df7fa73df2277fe55" category="list-text">状态代码 200</block>
   <block id="56ecb97c626815b7f982c04e736f624b" category="list-text">响应标头</block>
   <block id="4494efe174ad9e4c83bc75af384574e0" category="list-text">包含集群软件版本的响应正文</block>
-  <block id="18b4b706d794eaf9349903da4fc0390f" category="paragraph">使用 ONTAP 时， REST API 可扩展基于角色的访问控制（ Role-Based Access Control ， RBAC ）功能。您可以创建具有自定义角色的用户帐户，以限制对 REST 端点的访问。</block>
-  <block id="b74460ea0e79c18a13e8aaf7ba6b5575" category="section-title">为 REST 端点创建角色</block>
-  <block id="6a4ac1ce41cb9afd36c8a1b4345eb15a" category="paragraph">REST 角色是通过一组或多个权限定义的。每个权限都包含一个指向 REST 端点的路径以及关联的访问级别。每个端点的访问权限分为三个级别之一，用于确定可用于资源的 HTTP 方法。访问级别包括：</block>
-  <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="list-text">全部</block>
-  <block id="0525ebcee9d40246b4c3fe60fa9dffdf" category="paragraph">可以使用所有 HTTP 方法</block>
-  <block id="d8bd6e60adcc01ce20f509ea6800de8f" category="list-text">只读</block>
-  <block id="38c8b11da703697447ae0e841de8ff94" category="paragraph">只能使用 GET</block>
-  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="list-text">无</block>
-  <block id="e170b518f0b1211531e4d6a5dc28bd24" category="paragraph">不允许访问</block>
-  <block id="46c2882c6847f54514352d1885b51de6" category="paragraph">以下是可分配给 REST 角色的两个特权的示例：</block>
-  <block id="4fb0f5d620d25bedf9de124abeecb3dd" category="list-text">`access="readonly" ， path="/apI/storage/volumes"`</block>
-  <block id="a6c54762c776264191d718908cc8793a" category="list-text">`access="none" ， path="/apI/snapmirror/policies"`</block>
-  <block id="fc2e8f1e6bdb078d903709febae2f81c" category="section-title">创建具有自定义角色的用户帐户</block>
-  <block id="efce0b822abdb6a64b62590d47b2243d" category="paragraph">总体而言，您可以按如下所示创建具有自定义 REST 角色的帐户：</block>
-  <block id="5cbfeffa3e5b9da20fef5c63f1ade205" category="list-text">创建可访问 HTTP 管理协议的用户帐户。</block>
-  <block id="388dcc6806f032ea576d4bf906f82f93" category="list-text">创建具有所需权限的 REST 角色。</block>
-  <block id="54f15799e869b562c4b17306f16e44af" category="list-text">将用户帐户与角色关联。</block>
   <block id="1ef5c995db2292c818d9f9e8bba7c9e4" category="doc">对象存储</block>
   <block id="7ccaa0673dcbf1129469d5f4407e7b74" category="paragraph">您可以使用这些 API 调用访问基于 S3 的对象存储。</block>
   <block id="51bd7d165e8c40b2785e7cc20641c92e" category="paragraph">存储分段是一个对象容器，使用对象名称空间进行结构化。每个 S3 对象服务器可以有多个分段。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
@@ -547,7 +528,6 @@
   <block id="3b182148c9c0009822cea2178fd99584" category="cell">用户身份验证失败。</block>
   <block id="bbf94b34eb32268ada57a3be5062fe7d" category="cell">403</block>
   <block id="722969577a96ca3953e84e3d949dee81" category="cell">已禁止</block>
-  <block id="832bcd57b678ba711a9e21562156a359" category="cell">由于授权（ RBAC ）错误，访问被拒绝。</block>
   <block id="4f4adcbf8c6f66dcfc8a3282ac2bf10a" category="cell">404</block>
   <block id="9e076f5885f5cc16a4b5aeb8de4adff5" category="cell">未找到</block>
   <block id="24ff0a9484d837d82e7f8f8218e196b6" category="cell">请求中引用的资源不存在。</block>
@@ -986,7 +966,6 @@
   <block id="92b25ca356d0711c23fa00a11a838f16" category="list-text">多个管理员验证</block>
   <block id="e7d8af28980ef8f99ebba710f535c906" category="list-text">多管理员验证功能提供了一个灵活的授权框架、用于保护对ONTAP 命令或操作的访问。您可以定义用于标识受限命令的规则。当用户请求访问特定命令时、可以根据需要由多个ONTAP 管理员授予批准权限。</block>
   <block id="4f254b5768d1e18364bedb0b2402d10a" category="list-text">SnapMirror增强功能</block>
-  <block id="5f3e5b310eaf255b1da217cd7d703fc7" category="list-text">SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。</block>
   <block id="46c5fd81e1ba5f738d2c1dd0ae4cabdc" category="list-text">名称服务缓存支持</block>
   <block id="fe82f3320d7dc6994f70bf750ba7e784" category="list-text">ONTAP 名称服务已得到增强、可支持缓存、从而提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。</block>
   <block id="392cdf2ebad4890343218b2779c17ff3" category="paragraph">您可以使用光纤通道(FC)光纤REST API端点检索有关FC网络的信息。其中包括ONTAP 集群与FC网络结构之间的连接、构成网络结构的交换机以及活动区域集的分区。此资源类型是在ONTAP 9.11.1中引入的。</block>
@@ -1081,4 +1060,8 @@
   <block id="b313d34412fbec083537488efb6a7265" category="list-text">ONTAP 会识别传入连接超过等待队列深度、并记录一条消息、指出其连接失败。</block>
   <block id="b497355f60941f025ea8887fd49f2692" category="list-text">REST客户端会观察到连接失败、但具体行为可能取决于客户端。例如、对于NMSDK客户端、将显示消息"Failed to connect to SSL"。</block>
   <block id="ba9b38c8f7abd73c0e9a44d75391a449" category="paragraph">REST API输入等待队列填充是一个极少的事件。但是、拒绝多余的请求可以防止受到DOS攻击。</block>
+  <block id="8df9e8f24b204c91ad0a9031f9c09a16" category="cell">由于授权错误，访问被拒绝。</block>
+  <block id="806c6eb26fec67050c86278775f0a3ff" category="list-text">SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。</block>
+  <block id="9047fe19c5c01912bf0c89c78bd42103" category="list-text">ONTAPI报告工具</block>
+  <block id="bc17bb7b3d848d1ecddda052e3af0ca2" category="list-text">ONTAPI报告工具可帮助客户和合作伙伴确定其环境中的ONTAPI使用情况。除了Python软件之外、NetApp Lab on Demand还提供视频和不断发展的支持。在从ONTAPI迁移到ONTAP REST API时、此工具可提供另一种资源。</block>
 </blocks>

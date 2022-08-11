@@ -26,8 +26,6 @@ entries:
     url: "/rest/users_ontapi_api_ontap_cli.html"
   - title: 访问 ONTAP 命令行界面
     url: "/rest/access_ontap_cli.html"
-  - title: 使用 RBAC 实现安全性
-    url: "/rest/security_using_rbac.html"
   - title: 存储资源的性能指标
     url: "/rest/performance_metrics.html"
 - section: resources
