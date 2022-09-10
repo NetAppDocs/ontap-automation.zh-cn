@@ -22,7 +22,7 @@ NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和
 
 ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。
 
-粒度RBAC:: ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要使用传统角色或创建新角色。每个角色都可以与一个或多个访问定义相关联、每个定义可标识一个命令或REST API调用以及所需的访问级别。此外、还提供了新的访问权限、例如`read_create`和`read_modify`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。
+粒度RBAC:: ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 link:../rest/rbac_overview.html["RBAC安全性概述"] 有关详细信息 ...
 性能计数器:: 先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。管理员或自动化流程可以访问数据以确定系统性能。计数器管理器子系统维护的统计信息以数据库格式使用表和行显示。此增强功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。
 聚合管理:: ONTAP 存储聚合的管理已得到增强。您可以使用更新后的REST端点联机和脱机移动聚合、以及管理备用磁盘。
 IP子网功能:: ONTAP 网络功能已扩展、包括对IP子网的支持。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。

@@ -956,7 +956,6 @@
   <block id="b59cced8914a5ae4b2997c54c8cfeb8d" category="section-title">ONTAP 9.11.1</block>
   <block id="fed998214be47115214a92dcb94e441c" category="paragraph">ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。</block>
   <block id="d6e857e52e070e2d7dc74670d30f4681" category="list-text">粒度RBAC</block>
-  <block id="abc796662cfaf549fac897b99e75df46" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要使用传统角色或创建新角色。每个角色都可以与一个或多个访问定义相关联、每个定义可标识一个命令或REST API调用以及所需的访问级别。此外、还提供了新的访问权限、例如`read_create`和`read_modify`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。</block>
   <block id="a3139937e50cf495467ef74d1e2841ff" category="list-text">性能计数器</block>
   <block id="654266e542ab86fb9663ace26fddbb0a" category="list-text">先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。管理员或自动化流程可以访问数据以确定系统性能。计数器管理器子系统维护的统计信息以数据库格式使用表和行显示。此增强功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。</block>
   <block id="13a73a2c197166eea31c701558811cf4" category="list-text">聚合管理</block>
@@ -1064,4 +1063,200 @@
   <block id="806c6eb26fec67050c86278775f0a3ff" category="list-text">SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。</block>
   <block id="9047fe19c5c01912bf0c89c78bd42103" category="list-text">ONTAPI报告工具</block>
   <block id="bc17bb7b3d848d1ecddda052e3af0ca2" category="list-text">ONTAPI报告工具可帮助客户和合作伙伴确定其环境中的ONTAPI使用情况。除了Python软件之外、NetApp Lab on Demand还提供视频和不断发展的支持。在从ONTAPI迁移到ONTAP REST API时、此工具可提供另一种资源。</block>
+  <block id="40631aef1c7a95be86710dae30e73e3d" category="doc">RBAC安全性概述</block>
+  <block id="58722e059e2f5bb0441a986407122c33" category="paragraph">ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Based Access Control、RBAC)功能。您可以为每个帐户分配不同的角色、以控制用户对通过REST API和CLI公开的资源的访问。这些角色为各种ONTAP 用户定义了不同的管理访问级别。</block>
+  <block id="fb40fe81e6f182515c987233a6044be5" category="inline-link-macro">RBAC演变概述</block>
+  <block id="d5aca3da13a8a09efdea7a75347a5805" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1中得到了显著增强。请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="5c7637441553bbdd364a0c84153850ad" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="8964641d12d0ef111bd01efe34f212c2" category="section-title">ONTAP 角色</block>
+  <block id="9929e2b53efd5ebe9b5548b705552bf0" category="paragraph">角色是一组特权、这些特权共同定义了用户可以执行的操作。每个权限都标识一个特定访问路径以及关联的访问级别。角色会分配给用户帐户、并由ONTAP 在做出访问控制决策时应用。</block>
+  <block id="062c6b1332887634d0f4ba9bb07e2408" category="section-title">角色类型</block>
+  <block id="b0ad3654895321cb1caaae438045af81" category="paragraph">角色有两种类型。随着ONTAP 的发展、它们会针对不同的环境进行介绍和定制。</block>
+  <block id="506d78eb05f037a1ad45a240957b6c58" category="inline-link-macro">比较角色类型</block>
+  <block id="91298b899ea8ab62f0d96df3023adad0" category="admonition">使用每种类型的角色都有优缺点。请参见 <block ref="5d8cc8a3f0f5fa94fdd14f3d1499ea30" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Type</block>
+  <block id="50780f47f6839d47d60bc4555ee00c3f" category="cell">REST</block>
+  <block id="411937541f9b6022414480ec98e9755c" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。随后、它们也逐渐发展为支持CLI访问。</block>
+  <block id="1bfbcce75c3c9a52a464d4cb0984488a" category="cell">传统</block>
+  <block id="4d43d1a54808136d96375f219fc0dcb2" category="cell">这些角色是ONTAP 9.6之前的旧角色。它们是为ONTAP 命令行界面环境引入的、并且仍然是RBAC安全性的基础。</block>
+  <block id="5d113f2038d289f391614c39043629e8" category="section-title">范围</block>
+  <block id="4d3e5f58358b9c29b97affd5e8434a1e" category="paragraph">每个角色都有一个定义和应用该角色的范围或环境。范围用于确定特定角色的使用位置和使用方式。</block>
+  <block id="8d577cc9e0b9e9935efe5ffbcde09c72" category="admonition">ONTAP 用户帐户也具有类似的范围、用于确定用户的定义和使用方式。</block>
+  <block id="e2e4827c9c3b7cf3083d73d425e1d919" category="cell">具有集群范围的角色在ONTAP 集群级别定义。它们与集群级别的用户帐户关联。</block>
+  <block id="10b210703eb6d8918b4120232efd44e2" category="cell">具有SVM范围的角色是为特定数据SVM定义的。它们会分配给同一SVM中的用户帐户。</block>
+  <block id="7ca07e19b9186cffe90862b73501f251" category="section-title">角色定义的来源</block>
+  <block id="3095c79bd4dca87b8e93803274e9088e" category="paragraph">可以通过两种方式定义ONTAP 角色。</block>
+  <block id="e93f79ace029c06aa372cd006dcd9ac3" category="cell">角色源</block>
+  <block id="90589c47f06eb971d548591f23c285af" category="cell">自定义</block>
+  <block id="6598f0c7620a42efbd140fa0b869d765" category="cell">ONTAP 管理员可以创建自定义角色。这些角色可以根据特定环境和安全要求进行定制。</block>
+  <block id="f09090e6eca8bb5cc1a878687719625a" category="cell">内置</block>
+  <block id="f350fe2d14470302a201ce653aef6dc7" category="cell">虽然自定义角色可提供更大的灵活性、但集群和SVM级别也提供了一组内置角色。这些角色是预定义的、可用于执行许多常见的管理任务。</block>
+  <block id="62448716698cd3dee76278ec04325dc0" category="section-title">角色映射和ONTAP 处理</block>
+  <block id="4d2de6f7accbd1a26f13c3928218104e" category="paragraph">根据所使用的ONTAP 版本、所有或几乎所有REST API调用都会映射到一个或多个命令行界面命令。创建REST角色时、也会创建传统或传统角色。此*映射*传统角色基于相应的CLI命令、不能操作或更改。</block>
+  <block id="de9e9db15eb710d5170182ee39732a06" category="admonition">不支持反向角色映射。也就是说、创建传统角色不会创建相应的REST角色。</block>
+  <block id="ca0078e4d54742b869eb7b6591aa6af5" category="paragraph">所有ONTAP 9版本都包含传统角色。其余角色稍后介绍、并按如下所述进行了改进。</block>
+  <block id="7648ead63da8c6fc6b7fe57fb62e4522" category="paragraph">REST API是在ONTAP 9.6中推出的。此版本还包括其余角色。此外、创建REST角色时、还会创建相应的传统角色。</block>
+  <block id="6a62a58ede22637d91633cdd7ff505cb" category="paragraph">从9.7到9.10.1的每个ONTAP 版本都对REST API进行了增强。例如、每个版本都添加了其他REST端点。但是、这两种角色类型的创建和管理仍然是分开的。此外、ONTAP 9.10.1还为快照REST端点`/apI/storage/volumes/｛vol.uuid｝/snapshots`添加了REST RBAC支持、该端点是一个符合资源条件的端点。</block>
+  <block id="3b2cef6b36a025e216ad35dbd14c61d9" category="paragraph">此版本增加了使用REST API配置和管理传统角色的功能。此外、还为REST角色添加了其他访问级别。</block>
+  <block id="61d21be565a36251bbca59c0ffb7571d" category="doc">使用角色和用户</block>
+  <block id="27aa538dd8ea48453b7b9cda60cec170" category="paragraph">了解基本RBAC功能后、您可以开始使用ONTAP 角色和用户。</block>
+  <block id="a3aaf0e2a971f7f48ed580f3315dca1c" category="section-title">管理访问</block>
+  <block id="8cf982806ff9edbe00ff4b0b3bf7d35a" category="paragraph">您可以通过REST API或命令行界面创建和管理ONTAP 角色。访问详细信息如下所述。</block>
+  <block id="aba3d4b49c454e1974970e7b5514b001" category="section-title">REST API</block>
+  <block id="eeba57b75c93ed3bdf549a9f1fe3a9d9" category="paragraph">使用RBAC角色和用户帐户时、可以使用多个端点。表中的前四个用于创建和管理角色。最后两个用于创建和管理用户帐户。</block>
+  <block id="6463a333fcb15c8030c87eb9b29fbbda" category="admonition">请联机查看ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关更多详细信息，请参见相关文档。</block>
+  <block id="2a6ba72e93aa7fa676d07973ed2716bb" category="cell">端点</block>
+  <block id="674137167efaa07fbce7a0d3970c747e" category="cell">`安全性/角色`</block>
+  <block id="0d0d537aabf360d3d02a985805096459" category="cell">使用此端点可以创建新的REST角色。从ONTAP 9.11.1开始、您还可以创建传统角色。在这种情况下、ONTAP 会根据输入参数确定角色类型。您还可以检索已定义角色的列表。</block>
+  <block id="384efb63fbd15e4529c0409042dd0a1a" category="cell">`安全性/角色/｛owner.UUID｝/｛name｝`</block>
+  <block id="4523dd66271b63b7a5edc75d6632702b" category="cell">您可以检索或删除特定集群或SVM范围的角色。UUID值用于标识定义角色的SVM (集群或数据SVM)。name值是角色的名称。</block>
+  <block id="b4baf00a357ccbdd857541fc36a0f872" category="cell">`安全性/角色/｛owner.UUID｝/｛name｝/权限`</block>
+  <block id="6f6460bb3399f7f6d49821ddce2e477f" category="cell">使用此端点可以为特定角色配置特权。可以检索内置角色、但不能更新。有关详细信息、请参见适用于您的ONTAP 版本的API参考文档。</block>
+  <block id="dcdf4cd9d3ea33d7d01f5a89aeea75e2" category="cell">`安全性/角色/｛owner.UUID｝/｛name｝/privileges/[path]`</block>
+  <block id="6673535977490c777d23ca9e8a45a486" category="cell">您可以检索、修改和删除特定权限的访问级别和可选查询值。有关详细信息、请参见适用于您的ONTAP 版本的API参考文档。</block>
+  <block id="4cc3d3a2aa5bfe51d0d2792c655b67ad" category="cell">`安全性/帐户`</block>
+  <block id="2f3b2ba46152562542ab04259b7a8171" category="cell">使用此端点可以创建新的集群或SVM范围的用户帐户。在帐户正常运行之前、必须包含或随后添加多种类型的信息。您还可以检索已定义的用户帐户列表。</block>
+  <block id="d1f3dc7907acc82b71574af1080a6310" category="cell">`/security/accouns/｛owner.UUID｝/｛name｝`</block>
+  <block id="c27ceb88f7a8fe225b51dff15ba4b354" category="cell">您可以检索、修改和删除特定集群或SVM范围的用户帐户。UUID值用于标识定义用户的SVM (集群或数据SVM)。name值是帐户的名称。</block>
+  <block id="31581907c3d44270d8d9879f8e2de965" category="section-title">命令行界面</block>
+  <block id="981e9692e99502c9afcf28db73e6c2b1" category="paragraph">下面介绍了相关的ONTAP 命令行界面命令。所有命令均通过管理员帐户在集群级别访问。</block>
+  <block id="ee97be03cb04119af45014d815621ce1" category="cell">命令</block>
+  <block id="ca9dd55dcbb8b938f26b7f8dd22f6cca" category="cell">`s安全性登录`</block>
+  <block id="5f15585a7cb8838549c55b2ec1de4896" category="cell">此目录包含创建和管理用户登录所需的命令。</block>
+  <block id="7ed3c6fc57f3b9c9d3312883a677fc0c" category="cell">`s安全性登录REST角色`</block>
+  <block id="49b69c82be3726b8d023f845613b6155" category="cell">此目录包含创建和管理与用户登录关联的REST角色所需的命令。</block>
+  <block id="fd4ee23a0bf3ca82533e1f7a7de27772" category="cell">`s安全登录角色`</block>
+  <block id="acc4309a3b8e25c32803f433c0a190c0" category="cell">此目录包含创建和管理与用户登录关联的传统角色所需的命令。</block>
+  <block id="4decfe07f6af497a150cb2dd84ce7618" category="section-title">角色定义</block>
+  <block id="46d0a023573398c2cfe398ea504c5b5f" category="paragraph">其余角色和传统角色通过一组属性进行定义。</block>
+  <block id="1d1608988a11a1204e12efd22bd6a146" category="paragraph">角色可以归ONTAP 集群或集群中的特定数据SVM所有。所有者还隐式确定角色的范围。</block>
+  <block id="b434eb8af08e5c94b9271b86a8217879" category="paragraph">每个角色在其范围内都必须具有唯一的名称。集群角色的名称在ONTAP 集群级别必须是唯一的、而SVM角色在特定SVM中必须是唯一的。</block>
+  <block id="fd8b8935b85c9f617a16997d45f93c94" category="admonition">新的REST角色的名称必须在REST角色和传统角色之间是唯一的。这是因为、创建REST角色还会导致使用相同名称的新传统_MAPPING角色。</block>
+  <block id="77a2d605b3b7705d7936fcfb6e80b036" category="paragraph">每个角色都包含一组或多个权限。每个权限可标识特定资源或命令以及关联的访问级别。</block>
+  <block id="d4613ce1ce58f0172e8a4a07c9582cdf" category="section-title">特权</block>
+  <block id="71513b4ed1acfdfc0134e001c3c70459" category="paragraph">一个角色可以包含一个或多个权限。每个权限定义都是一个元组、用于建立对特定资源或操作的访问级别。</block>
+  <block id="2fc537b9f7b2c95f698a1e045c1ca8c7" category="section-title">资源路径</block>
+  <block id="8d7997d983e5c291ac67b4bdcb361dc9" category="paragraph">资源路径标识为REST端点或CLI命令/命令目录路径。</block>
+  <block id="3ef6a048d1b6066d71370555293feb27" category="paragraph">API端点确定了REST角色的目标资源。</block>
+  <block id="d48e991ebf782fddce90ac99f9825722" category="paragraph">CLI命令用于标识传统角色的目标。此外、还可以指定命令目录、该目录将包括ONTAP 命令行界面层次结构中的所有下游命令。</block>
+  <block id="72eb6abf9272757a5494f0d1f1c91658" category="section-title">访问级别</block>
+  <block id="c11c543be73418de845a17c9b23ab220" category="paragraph">访问级别定义了角色对特定资源路径或命令的访问类型。访问级别通过一组预定义的关键字来标识。ONTAP 9.6引入了三种访问级别。它们既可用于传统角色、也可用于REST角色。此外、ONTAP 9.11.1增加了三个新的访问级别。这些新访问级别只能用于REST角色。</block>
+  <block id="fc803f5069796fe61307ff5fe676cbd7" category="admonition">访问级别遵循CRUD模式。使用REST时、此方法基于主要HTTP方法(POST、GET、PATCH、DELETE)。相应的CLI操作通常会映射到REST操作(create、show、modify、delete)。</block>
+  <block id="8efae7831e5c5b931fbd0fdffa6a02f5" category="cell">其他基本功能</block>
+  <block id="f29ddbfb905eb2593fdcdfb243f9af85" category="cell">已添加</block>
+  <block id="d597461843a93eb451872eca25dae055" category="cell">仅限REST角色</block>
+  <block id="334c4a4c42fdb79d7ebc3e73b517e6f8" category="cell">无</block>
+  <block id="274b68192b056e268f128ff63bfcd4a4" category="cell">不适用</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">否</block>
+  <block id="336ebbb2179beaa7340a4f1620f3af40" category="cell">-readonly</block>
+  <block id="a181a603769c1f98ad927e7367c7aa51" category="cell">全部</block>
+  <block id="fe6f3c75abb1936e6f7ac02fee7ec329" category="cell">获取、发布、修补、删除</block>
+  <block id="c7bde91eb70d1a5e9e14857d8570759d" category="cell">read_create</block>
+  <block id="af8dda82b9815d5e5e88fc39daf443ac" category="cell">获取、发布</block>
+  <block id="11efa46f237387b311e6ed482756ac49" category="cell">9.11.1</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">是的。</block>
+  <block id="76d9af335b2ebd589c08f1c7042aed22" category="cell">read_modify</block>
+  <block id="8bf293a5352209dafeeda452e47463e1" category="cell">获取、修补</block>
+  <block id="cd9413b7609c715cd2ea04f2ad78bf07" category="cell">read_create_modify</block>
+  <block id="be049207447aee4b3b964fcfdf13d4c4" category="cell">获取、发布、修补</block>
+  <block id="884dcd887ad4e373c1d3a4843dfe42bb" category="section-title">可选查询</block>
+  <block id="96efb45b521e9456d4b68ca329418f93" category="paragraph">创建传统角色时、您可以选择包含*查询*值、以确定命令或命令目录的适用对象子集。</block>
+  <block id="9dfb279034f147e1a6d63e6df7793b7c" category="section-title">内置角色摘要</block>
+  <block id="688e7d719580c276f3323a08e90e074e" category="paragraph">ONTAP 中包含多个预定义角色、您可以在集群或SVM级别使用这些角色。</block>
+  <block id="e9a5880d5af5c216a45ea5f482ebbdc6" category="section-title">集群范围的角色</block>
+  <block id="a29d1e32baa8510ee732b38714ca436e" category="paragraph">集群范围内提供了多个内置角色。</block>
+  <block id="a67eb817d69ac81f9679cbb5fb772e86" category="inline-link">集群管理员的预定义角色</block>
+  <block id="f4165272712eca730fd025c8be99cc24" category="paragraph">请参见<block ref="fc79fcd5682ae6f93050b7c7772fcdc4" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">Role</block>
+  <block id="21232f297a57a5a743894a0e4a801fc3" category="cell">管理员</block>
+  <block id="592f5f8969ec3d75bac5b8ab43c79097" category="cell">具有此角色的管理员拥有不受限制的权限、可以在ONTAP 系统中执行任何操作。他们可以配置所有集群级别和SVM级别的资源。</block>
+  <block id="ee64de1ad50d8209e64ee58b23e27986" category="cell">AutoSupport</block>
+  <block id="57bd9642e847a3b29211122e0607a60a" category="cell">这是为AutoSupport 帐户量身定制的一个特殊角色。</block>
+  <block id="402051f4be0cc3aad33bcf3ac3d6532b" category="cell">backup</block>
+  <block id="b127829b975c13f09f53fae0cc997578" category="cell">此特殊角色适用于需要备份系统的备份软件。</block>
+  <block id="a3d27fe59690195da71747f727cc65de" category="cell">SnapLock</block>
+  <block id="1dc67e09233e3a4da066ebfbaf219403" category="cell">这是为SnapLock 帐户量身定制的一个特殊角色。</block>
+  <block id="427bb4b4da498a5963f3dadc25e8c46c" category="cell">具有此角色的管理员可以查看集群级别的所有内容、但无法进行任何更改。</block>
+  <block id="638949f35c40add2880f18f9302e4cd9" category="cell">不提供任何管理功能。</block>
+  <block id="0bdc09efa4845da531fb801a6242d2e2" category="section-title">SVM范围的角色</block>
+  <block id="baf3f4818ac4234a3e911a4bbf33d866" category="paragraph">SVM范围内提供了多个内置角色。通过* vsadmin*、您可以访问最通用且功能最强大的功能。还有几个针对特定管理任务量身定制的其他角色、其中包括：</block>
+  <block id="862e66b2a82906e827d8f6ecf55928ca" category="list-text">vsadmin-volume</block>
+  <block id="bdcf8208941906ed506ccfdeee8a8211" category="list-text">vsadmin-protocol</block>
+  <block id="e3244459d95a89c8d3d2255d7628a49f" category="list-text">vsadmin-backup</block>
+  <block id="6d3098c9699f5313e341af5e26f13a37" category="list-text">vsadmin-SnapLock</block>
+  <block id="92722ebe2f2d5895840edfd23a43a5f2" category="list-text">vsadmin-readonly</block>
+  <block id="49f1ce8717c68bd5f2a0c919ca67c63f" category="inline-link">SVM 管理员的预定义角色</block>
+  <block id="9a10e6e952f6eacc1e795338f4d02b34" category="paragraph">请参见<block ref="378f776a29927b3c872739179bbda5a6" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="2ed6aabe86be78148516f843c72470e4" category="paragraph">在选择"Rest"角色或"*传统"角色之前、您应了解这些差异。下面介绍了比较这两种角色类型的一些方法。</block>
+  <block id="14345879670a88a286296097e0a7ba5b" category="admonition">对于更高级或更复杂的RBAC使用情形、通常应使用传统角色。</block>
+  <block id="841222ae8bb7318a3ac2ae4505738eb9" category="section-title">用户如何访问ONTAP</block>
+  <block id="104b04e4a630ab0030959f939359f627" category="paragraph">在创建角色之前、请务必了解用户将如何访问ONTAP 系统。可以根据此情况确定角色类型。</block>
+  <block id="bf733d8a933c1601697f364223fc7ecb" category="cell">访问</block>
+  <block id="3c66403d927509420d4b147cb8c66782" category="cell">建议的类型</block>
+  <block id="ada2222aadb87abcf8162506247ab367" category="cell">仅限REST API</block>
+  <block id="0f6c9ece3d84da1b6fa6a02b7ad0dbfb" category="cell">REST角色设计为与REST API结合使用。</block>
+  <block id="65d8407bbdbc42f3e1b2ec50e9b22e87" category="cell">REST API和CLI</block>
+  <block id="5bc31a66525a874bda1e5c4ad3bc3ceb" category="cell">您可以定义一个REST角色、此角色也会创建相应的传统角色。</block>
+  <block id="78c5b05328e214f8a2434b93f47d5f55" category="cell">仅限CLI</block>
+  <block id="51a9e3c779f1be0a43354b1da5831ba0" category="cell">您可以创建传统角色。</block>
+  <block id="2dcd39fd89691d20d107d37e822309c0" category="section-title">访问路径的精度</block>
+  <block id="8dcea28ae0e36ecb9fb7a7682e6c8323" category="paragraph">为REST角色定义的访问路径基于REST端点。传统角色的访问路径基于命令行界面命令或命令目录。此外、您还可以包括具有传统角色的可选查询参数、以便根据命令参数值进一步限制访问。</block>
+  <block id="1fbfc491e444abd15b879cf0b296f868" category="doc">角色定义示例</block>
+  <block id="ca10180cdf4edf15996acffd8fddb307" category="paragraph">根据您的环境、ONTAP RBAC功能可以采用不同的方式使用。下面介绍了一些常见情形。在每种情况下、重点关注特定的安全和管理目标、并提供相应角色定义的示例。</block>
+  <block id="c1489037f7a15d27fe055dbc42244578" category="admonition">所有示例均使用`/API/security/roles`和派生的REST端点创建和修改角色。为清晰起见、每个cURL命令都引用一个单独的JSON输入文件。</block>
+  <block id="6e4ad51ed0c9f59ca29ccce216f868b1" category="section-title">限制对SVM卷操作的访问</block>
+  <block id="ceb8d53ccfbc6f286a28418188fb0b36" category="paragraph">您可能希望限制SVM中的存储卷管理。下面的示例说明了这一点、其中一个角色首先创建、然后根据需要进行更新。</block>
+  <block id="b63872fa53e17ff08ed6b0991c97a083" category="section-title">创建初始角色</block>
+  <block id="e01c59d9614a8f8bfe415754e544d4c2" category="paragraph">创建了一个传统角色、最初允许访问除克隆之外的所有主要卷管理功能。下面介绍的角色具有以下特定特征：</block>
+  <block id="44b825cf5bc9349a15a7ed51954ce076" category="list-text">能够执行所有CRUD卷操作、包括获取、创建、修改和删除</block>
+  <block id="0a98788f622c9b8a786424f59d6f073f" category="list-text">无法创建卷克隆</block>
+  <block id="dc9f2e350dc3b2372ce00503e56fe71d" category="listing-title">curl 示例</block>
+  <block id="0577bbabd0439eea401a8ec18491d1a6" category="listing-title">JSON 输入示例</block>
+  <block id="65c74070d0b2394b81c796bb60240324" category="section-title">更新角色</block>
+  <block id="add6cb38f2c78e28a0302df3df6de165" category="paragraph">可以修改同一角色、以便用户也可以创建卷克隆。</block>
+  <block id="7f8d84e7d0adb2682a7102214e49dee2" category="section-title">数据保护管理</block>
+  <block id="b3698327f3342304d1a28edbf87cf3d4" category="paragraph">在某些情况下、您可能希望为用户提供有限的数据保护功能。下面介绍的传统角色具有以下特征：</block>
+  <block id="91b8fb1bf628880e8b9a3976c3a032ab" category="list-text">能够创建和删除快照以及更新SnapMirror关系</block>
+  <block id="76a4694d3323882a13252de3b8c66853" category="list-text">无法创建或修改更高级别的对象、例如卷或SVM</block>
+  <block id="b36e61796997ee2c786f4fa3ed101f1c" category="section-title">生成ONTAP 报告</block>
+  <block id="b35f8291d357a94153e63c0665fa6521" category="paragraph">您可以创建REST角色、使用户能够生成ONTAP 报告。下面介绍的角色具有以下特征：</block>
+  <block id="3afdfc4bb62414921598f2f4531aaca1" category="list-text">能够检索与容量和性能相关的所有存储对象信息(例如卷、qtree、LUN、聚合、节点、 和SnapMirror关系)</block>
+  <block id="9a97a4c8ef433f35c821ef57f10aa45d" category="list-text">无法创建或修改更高级别的对象(例如卷或SVM)</block>
+  <block id="7341eaad1796dcd6268b71a308240243" category="doc">创建具有角色的用户</block>
+  <block id="80f5621e734bd116c58617e6c799fd18" category="paragraph">您可以使用下面所述的工作流创建具有关联REST角色的用户。在查看工作流之前、您应熟悉一般准备步骤。</block>
+  <block id="4615b675487f476dd46329e196d46e0b" category="section-title">准备创建具有已分配角色的ONTAP 用户</block>
+  <block id="d725670416fda4a95c9a41cae84b3730" category="paragraph">在创建角色并将其分配给ONTAP 用户帐户之前、您应先查看主要安全要求和选项来做好准备。</block>
+  <block id="379385ed06cff6b981e905026b8488d8" category="paragraph">ONTAP 版本可确定可用的REST端点和RBAC功能。</block>
+  <block id="7a1d01c8bf21e8d2524e97aacc31c321" category="paragraph">您需要确定要保护的资源或命令以及范围(集群或SVM)。</block>
+  <block id="6d1c7815a7f642c3359cf36570ffac64" category="paragraph">确定资源和范围后、您需要确定要授予的访问级别。</block>
+  <block id="6748cc799bdab9dd5cc6400176d66cda" category="paragraph">用户可以通过REST API或CLI访问ONTAP 、也可以同时使用这两者。</block>
+  <block id="cd749c0b40175f0f7a3e7f752af73d13" category="paragraph">使用现有内置角色更方便、但您可以根据需要创建新的自定义角色。</block>
+  <block id="e3a373c3aac05fcefd1b150a9d565c2a" category="paragraph">根据安全要求和ONTAP 访问、您需要选择是创建REST角色还是传统角色。</block>
+  <block id="b09037a5d82613adb22bd86bae1b60d5" category="section-title">创建具有自定义角色的用户</block>
+  <block id="3182bd07058520c0846c3336ad09822d" category="paragraph">下面介绍的工作流包括创建自定义REST角色并将其与新用户帐户关联所需的典型步骤。用户和角色都具有SVM范围、并与特定数据SVM关联。</block>
+  <block id="004e30de2ba3d00309416614b821bc90" category="admonition">此工作流旨在说明整个过程。某些步骤可能是可选的、也可能需要根据您的环境进行更改。</block>
+  <block id="c8a5cb28fdf2598f85711cd98aaf6739" category="section-title">1.列出集群中的数据SVM</block>
+  <block id="c67d7f573196794910d284fa2b59abec" category="paragraph">执行以下REST API调用以列出集群中的SVM。输出中提供了每个SVM的UUID和名称。</block>
+  <block id="9c52661d131f07face38ff3baa271d09" category="cell">/apI/SVM/SVM</block>
+  <block id="65dc659f4320656f47afc3226f3349b1" category="paragraph">从要创建新用户和角色的列表中选择所需的SVM。</block>
+  <block id="77dc514382ed988f07bcd3331cb777ce" category="section-title">2.列出为SVM定义的用户</block>
+  <block id="545f01dc5fb27b5a00252c1ab276b8f4" category="paragraph">执行以下REST API调用以列出在选定SVM中定义的用户。您可以通过owner参数来标识SVM。</block>
+  <block id="137ef7229d434ea827c18ad48fbf2401" category="cell">/api/安全性/帐户</block>
+  <block id="d28041a03685d6dbdc892dce400d3d28" category="paragraph">根据SVM中已定义的用户、为新用户选择一个唯一名称。</block>
+  <block id="5f992f28a3b95601a69cc4fd3acdef79" category="section-title">3.列出为SVM定义的REST角色</block>
+  <block id="79848c3f39849323eb07dde9ce0b5b68" category="paragraph">执行以下REST API调用以列出在选定SVM中定义的角色。您可以通过owner参数来标识SVM。</block>
+  <block id="d2163229a8bdac1e61c4788472dbacd3" category="cell">/api/安全性/角色</block>
+  <block id="f8b939ec213ead9efd60e86f833e8fbf" category="paragraph">根据SVM中已定义的角色、为新角色选择一个唯一名称。</block>
+  <block id="28e273c48ad039c702e69f06f8455422" category="section-title">4.创建自定义REST角色</block>
+  <block id="55fe93e61e9a7bd2f633f326a5e96290" category="paragraph">对SVM中的创建自定义REST角色执行以下REST API调用。此角色最初只有一个权限、用于建立默认访问权限*无*、以拒绝所有访问。</block>
+  <block id="13914e64af0bb44e86cd3e7e8a6db903" category="paragraph">(可选)再次执行步骤3以显示新角色。您还可以在ONTAP 命令行界面中显示角色。</block>
+  <block id="9f47490b035163018ad57664ebd4231e" category="section-title">5.通过添加更多权限来更新角色</block>
+  <block id="3556b68f25f496c1b49d7a04a2b8db5a" category="paragraph">执行以下REST API调用、以便根据需要添加权限来修改角色。</block>
+  <block id="44616b081f16df6bb249edd608d22f26" category="cell">/api/安全性/角色/｛owner.uuid｝/｛name｝/权限</block>
+  <block id="425449fc9249e100beb709a52ce09d93" category="section-title">6.创建用户</block>
+  <block id="ddb5039e238e533f2698aca2a0cad69a" category="paragraph">对创建用户帐户执行以下REST API调用。上述创建的角色`dprole1`与新用户关联。</block>
+  <block id="41840c66a2790635e8d2e99b8901a85e" category="admonition">您可以包括没有角色的用户。在这种情况下、您需要修改用户以分配角色。</block>
+  <block id="1836147908927f819bbfefefacc2bf08" category="paragraph">您可以使用新用户的凭据登录到SVM管理界面。</block>
+  <block id="e8d3ba2faa2de68a783129c5654b8806" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="9bad86383b422495c8d6e881b6b0084b" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="2496b3f288a81c8c923f8c9c19fe6ed4" category="sidebar">RBAC 安全性</block>
+  <block id="80164c28762060fa56d042df66e7553d" category="sidebar">创建具有角色的用户</block>
 </blocks>

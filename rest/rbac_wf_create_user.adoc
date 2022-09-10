@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: rest/rbac_wf_create_user.html 
+keywords:  
+summary:  
+---
+= 创建具有角色的用户
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用下面所述的工作流创建具有关联REST角色的用户。在查看工作流之前、您应熟悉一般准备步骤。
+
+
+
+== 准备创建具有已分配角色的ONTAP 用户
+
+在创建角色并将其分配给ONTAP 用户帐户之前、您应先查看主要安全要求和选项来做好准备。
+
+ONTAP 版本可确定可用的REST端点和RBAC功能。
+
+您需要确定要保护的资源或命令以及范围(集群或SVM)。
+
+确定资源和范围后、您需要确定要授予的访问级别。
+
+用户可以通过REST API或CLI访问ONTAP 、也可以同时使用这两者。
+
+使用现有内置角色更方便、但您可以根据需要创建新的自定义角色。
+
+根据安全要求和ONTAP 访问、您需要选择是创建REST角色还是传统角色。
+
+
+
+== 创建具有自定义角色的用户
+
+下面介绍的工作流包括创建自定义REST角色并将其与新用户帐户关联所需的典型步骤。用户和角色都具有SVM范围、并与特定数据SVM关联。
+
+
+NOTE: 此工作流旨在说明整个过程。某些步骤可能是可选的、也可能需要根据您的环境进行更改。
+
+
+
+=== 1.列出集群中的数据SVM
+
+执行以下REST API调用以列出集群中的SVM。输出中提供了每个SVM的UUID和名称。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /apI/SVM/SVM 
+|===
+.curl 示例
+[source, curl]
+----
+curl --location -i --request GET 'https://10.222.81.101/api/svm/svms?order_by=name' -u admin:password -k --header 'Accept: */*'
+----
+从要创建新用户和角色的列表中选择所需的SVM。
+
+
+
+=== 2.列出为SVM定义的用户
+
+执行以下REST API调用以列出在选定SVM中定义的用户。您可以通过owner参数来标识SVM。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /api/安全性/帐户 
+|===
+.curl 示例
+[source, curl]
+----
+curl --location -i --request GET 'https://10.222.81.101/api/security/accounts/?owner.name=dmp' -u admin:password -k --header 'Accept: */*'
+----
+根据SVM中已定义的用户、为新用户选择一个唯一名称。
+
+
+
+=== 3.列出为SVM定义的REST角色
+
+执行以下REST API调用以列出在选定SVM中定义的角色。您可以通过owner参数来标识SVM。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /api/安全性/角色 
+|===
+.curl 示例
+[source, curl]
+----
+curl --location -i --request GET 'https://10.222.81.101/api/security/roles/?owner.name=dmp' -u admin:password -k --header 'Accept: */*'
+----
+根据SVM中已定义的角色、为新角色选择一个唯一名称。
+
+
+
+=== 4.创建自定义REST角色
+
+对SVM中的创建自定义REST角色执行以下REST API调用。此角色最初只有一个权限、用于建立默认访问权限*无*、以拒绝所有访问。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /api/安全性/角色 
+|===
+.JSON 输入示例
+[source, json]
+----
+{
+  "name": "dprole1",
+  "owner": {
+    "name": "dmp",
+    "uuid": "752d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      {"path": "/api", "access": "none"},
+  ]
+}
+----
+.curl 示例
+[source, curl]
+----
+curl --location -i --request POST 'https://10.222.81.101/api/security/roles' --data @JSONinput -u admin:password -k --header 'Accept: */*'
+----
+(可选)再次执行步骤3以显示新角色。您还可以在ONTAP 命令行界面中显示角色。
+
+
+
+=== 5.通过添加更多权限来更新角色
+
+执行以下REST API调用、以便根据需要添加权限来修改角色。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /api/安全性/角色/｛owner.uuid｝/｛name｝/权限 
+|===
+.JSON 输入示例
+[source, json]
+----
+{
+  "path": "/api/storage/volumes", "access": "readonly"}
+}
+----
+.curl 示例
+[source, curl]
+----
+curl --location -i --request POST 'https://10.222.81.101/api/security/roles/752d96be-f17c-11ec-9d19-005056bbad91/dprole1/privileges' --data @JSONinput -u admin:password -k --header 'Accept: */*'
+----
+(可选)再次执行步骤3以显示新角色。您还可以在ONTAP 命令行界面中显示角色。
+
+
+
+=== 6.创建用户
+
+对创建用户帐户执行以下REST API调用。上述创建的角色`dprole1`与新用户关联。
+
+
+TIP: 您可以包括没有角色的用户。在这种情况下、您需要修改用户以分配角色。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /api/安全性/帐户 
+|===
+.JSON 输入示例
+[source, json]
+----
+{
+  "owner": {"uuid":"daf84055-248f-11ed-a23d-005056ac4fe6"},
+  "name": "david",
+  "applications": [
+      {"application":"ssh",
+       "authentication_methods":["password"],
+       "second_authentication_method":"none"}
+  ],
+  "role":"dprole1",
+  "password":"netapp123"
+}
+----
+.curl 示例
+[source, curl]
+----
+curl --location -i --request POST 'https://10.222.81.101/api/security/accounts' --data @JSONinput -u admin:password -k --header 'Accept: */*'
+----
+您可以使用新用户的凭据登录到SVM管理界面。

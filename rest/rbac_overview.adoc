@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: rest/rbac_overview.html 
+keywords:  
+summary:  
+---
+= RBAC安全性概述
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Based Access Control、RBAC)功能。您可以为每个帐户分配不同的角色、以控制用户对通过REST API和CLI公开的资源的访问。这些角色为各种ONTAP 用户定义了不同的管理访问级别。
+
+
+NOTE: ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1中得到了显著增强。请参见 link:../rest/rbac_overview.html#summary-of-rbac-evolution["RBAC演变概述"] 和 link:../rn/whats_new.html["ONTAP REST API 和自动化的新增功能"] 有关详细信息 ...
+
+
+
+== ONTAP 角色
+
+角色是一组特权、这些特权共同定义了用户可以执行的操作。每个权限都标识一个特定访问路径以及关联的访问级别。角色会分配给用户帐户、并由ONTAP 在做出访问控制决策时应用。
+
+
+
+=== 角色类型
+
+角色有两种类型。随着ONTAP 的发展、它们会针对不同的环境进行介绍和定制。
+
+
+NOTE: 使用每种类型的角色都有优缺点。请参见 link:../rest/work_roles_users.html#comparing-the-role-types["比较角色类型"] 有关详细信息 ...
+
+[cols="20,80"]
+|===
+| Type | Description 
+
+
+| REST | REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。随后、它们也逐渐发展为支持CLI访问。 
+
+
+| 传统 | 这些角色是ONTAP 9.6之前的旧角色。它们是为ONTAP 命令行界面环境引入的、并且仍然是RBAC安全性的基础。 
+|===
+
+
+=== 范围
+
+每个角色都有一个定义和应用该角色的范围或环境。范围用于确定特定角色的使用位置和使用方式。
+
+
+NOTE: ONTAP 用户帐户也具有类似的范围、用于确定用户的定义和使用方式。
+
+[cols="20,80"]
+|===
+| 范围 | Description 
+
+
+| 集群 | 具有集群范围的角色在ONTAP 集群级别定义。它们与集群级别的用户帐户关联。 
+
+
+| SVM | 具有SVM范围的角色是为特定数据SVM定义的。它们会分配给同一SVM中的用户帐户。 
+|===
+
+
+=== 角色定义的来源
+
+可以通过两种方式定义ONTAP 角色。
+
+[cols="20,80"]
+|===
+| 角色源 | Description 
+
+
+| 自定义 | ONTAP 管理员可以创建自定义角色。这些角色可以根据特定环境和安全要求进行定制。 
+
+
+| 内置 | 虽然自定义角色可提供更大的灵活性、但集群和SVM级别也提供了一组内置角色。这些角色是预定义的、可用于执行许多常见的管理任务。 
+|===
+
+
+== 角色映射和ONTAP 处理
+
+根据所使用的ONTAP 版本、所有或几乎所有REST API调用都会映射到一个或多个命令行界面命令。创建REST角色时、也会创建传统或传统角色。此*映射*传统角色基于相应的CLI命令、不能操作或更改。
+
+
+NOTE: 不支持反向角色映射。也就是说、创建传统角色不会创建相应的REST角色。
+
+
+
+== RBAC演变概述
+
+所有ONTAP 9版本都包含传统角色。其余角色稍后介绍、并按如下所述进行了改进。
+
+REST API是在ONTAP 9.6中推出的。此版本还包括其余角色。此外、创建REST角色时、还会创建相应的传统角色。
+
+从9.7到9.10.1的每个ONTAP 版本都对REST API进行了增强。例如、每个版本都添加了其他REST端点。但是、这两种角色类型的创建和管理仍然是分开的。此外、ONTAP 9.10.1还为快照REST端点`/apI/storage/volumes/｛vol.uuid｝/snapshots`添加了REST RBAC支持、该端点是一个符合资源条件的端点。
+
+此版本增加了使用REST API配置和管理传统角色的功能。此外、还为REST角色添加了其他访问级别。
