@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rest/rbac_sample_roles.html 
 keywords:  
-summary:  
+summary: 根据您的环境、ONTAP RBAC功能可以采用不同的方式使用。下面介绍了一些常见情形。在每种情况下、重点关注特定的安全和管理目标、并提供相应角色定义的示例。 
 ---
 = 角色定义示例
 :hardbreaks:

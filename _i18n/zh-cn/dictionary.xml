@@ -423,7 +423,6 @@
   <block id="3232acac3eec8e3d87880c5b41ab690d" category="paragraph">如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。</block>
   <block id="b1ed8990c321e2a215dff03bbacc2765" category="inline-link">netapp.io/2018/10/08/Getting Start-With NetApp-and-Ansible install-Ansible</block>
   <block id="c51932c28f2d865cc8b2b0211769ca8f" category="paragraph">您可以访问所有 ONTAP REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。</block>
-  <block id="765005864f316ffe6cd14a5468133456" category="admonition">您可以在本地 ONTAP 系统或 NetApp 开发人员网络网站上访问 API 参考内容。</block>
   <block id="6630ebbabec7748c444af084a44d2b3a" category="paragraph">您可以在本地 ONTAP 系统上访问 ONTAP API 联机文档页面。</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
   <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">ONTAP 集群管理 LIF 的 IP 地址或主机名</block>
@@ -434,11 +433,8 @@
   <block id="86537fad07b98a84cd28189507075143" category="list-text">使用 ONTAP 帐户登录。</block>
   <block id="4a7f5568d4707b4e4a381d4a753ed791" category="paragraph">此时将显示 ONTAP API 文档页面，其中 API 调用会按主要资源类别组织在底部。</block>
   <block id="b7998fdfa579757468dfd6407b7df0e3" category="list-text">作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。</block>
-  <block id="c94bdeb8a782c72386767d4c7becc162" category="paragraph">您可以从 ONTAP 开发人员网络网站访问 NetApp REST API 参考文档。</block>
-  <block id="b91bc699a905879f81b6d1321e652cbd" category="list-text">导航到 ONTAP 开发人员网络网站上的 * NetApp REST APi* 页面：</block>
   <block id="6a63b53f3b2aa312b323d97ef5f8c1ee" category="inline-link">NetApp DevNet ： ONTAP REST API</block>
   <block id="3ed5229516b6cbe9a83c3af31dfe7e8f" category="paragraph"><block ref="3ed5229516b6cbe9a83c3af31dfe7e8f" category="inline-link-rx"></block></block>
-  <block id="efb08c83b1593d6a73a8ac4f456e4247" category="list-text">向下滚动并在 * 联机 REST API 参考 * 下单击相应 ONTAP 版本的链接。</block>
   <block id="62a0282d39568be094470486eaf70c4f" category="doc">SAN</block>
   <block id="d026d48ac10030a378a0074cde689bc7" category="paragraph">您可以使用这些 API 调用来管理存储区域网络（ Storage Area Networking ， SAN ）资源。</block>
   <block id="21b818347e867034bff06df47c6638ed" category="paragraph">光纤通道登录表示已登录到 ONTAP 的光纤通道启动程序所形成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -767,7 +763,6 @@
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">REST 资源摘要</block>
   <block id="b04c0c0415c8329423a4dc5d04335c63" category="list-text"><block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block></block>
   <block id="64b6ec9f9d366c873d08fe8bc6ed4cff" category="section-title">访问 ONTAP API 文档页面</block>
-  <block id="9d8a954ab180ff9153df9280ac9c3c7f" category="section-title">访问 NetApp DevNet 上的参考内容</block>
   <block id="1273c6d3912948b5c61164da6ba4c3ab" category="paragraph">您可以快速开始使用 ONTAP REST API 和其他自动化技术。在准备并了解基本的请求响应流之后，您可以使用 curl 对简单的 API 调用进行问题描述 。此准备工作介绍了在实时系统上使用更复杂的工作流之前所需的简介和视角。</block>
   <block id="625c92078d49d59bd332d26752459a1c" category="doc">准备使用 ONTAP REST API</block>
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="inline-link-macro">ONTAP REST API</block>
@@ -1075,7 +1070,6 @@
   <block id="91298b899ea8ab62f0d96df3023adad0" category="admonition">使用每种类型的角色都有优缺点。请参见 <block ref="5d8cc8a3f0f5fa94fdd14f3d1499ea30" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Type</block>
   <block id="50780f47f6839d47d60bc4555ee00c3f" category="cell">REST</block>
-  <block id="411937541f9b6022414480ec98e9755c" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。随后、它们也逐渐发展为支持CLI访问。</block>
   <block id="1bfbcce75c3c9a52a464d4cb0984488a" category="cell">传统</block>
   <block id="4d43d1a54808136d96375f219fc0dcb2" category="cell">这些角色是ONTAP 9.6之前的旧角色。它们是为ONTAP 命令行界面环境引入的、并且仍然是RBAC安全性的基础。</block>
   <block id="5d113f2038d289f391614c39043629e8" category="section-title">范围</block>
@@ -1103,7 +1097,6 @@
   <block id="8cf982806ff9edbe00ff4b0b3bf7d35a" category="paragraph">您可以通过REST API或命令行界面创建和管理ONTAP 角色。访问详细信息如下所述。</block>
   <block id="aba3d4b49c454e1974970e7b5514b001" category="section-title">REST API</block>
   <block id="eeba57b75c93ed3bdf549a9f1fe3a9d9" category="paragraph">使用RBAC角色和用户帐户时、可以使用多个端点。表中的前四个用于创建和管理角色。最后两个用于创建和管理用户帐户。</block>
-  <block id="6463a333fcb15c8030c87eb9b29fbbda" category="admonition">请联机查看ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关更多详细信息，请参见相关文档。</block>
   <block id="2a6ba72e93aa7fa676d07973ed2716bb" category="cell">端点</block>
   <block id="674137167efaa07fbce7a0d3970c747e" category="cell">`安全性/角色`</block>
   <block id="0d0d537aabf360d3d02a985805096459" category="cell">使用此端点可以创建新的REST角色。从ONTAP 9.11.1开始、您还可以创建传统角色。在这种情况下、ONTAP 会根据输入参数确定角色类型。您还可以检索已定义角色的列表。</block>
@@ -1256,7 +1249,18 @@
   <block id="ddb5039e238e533f2698aca2a0cad69a" category="paragraph">对创建用户帐户执行以下REST API调用。上述创建的角色`dprole1`与新用户关联。</block>
   <block id="41840c66a2790635e8d2e99b8901a85e" category="admonition">您可以包括没有角色的用户。在这种情况下、您需要修改用户以分配角色。</block>
   <block id="1836147908927f819bbfefefacc2bf08" category="paragraph">您可以使用新用户的凭据登录到SVM管理界面。</block>
-  <block id="e8d3ba2faa2de68a783129c5654b8806" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="9bad86383b422495c8d6e881b6b0084b" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="2496b3f288a81c8c923f8c9c19fe6ed4" category="sidebar">RBAC 安全性</block>
   <block id="80164c28762060fa56d042df66e7553d" category="sidebar">创建具有角色的用户</block>
+  <block id="485855357f10b438740d2ed039caaa84" category="admonition">您可以在本地ONTAP 系统上访问联机API参考内容、也可以访问NetApp维护的文档的静态副本。</block>
+  <block id="308a46df03e8f034edfbfa1c4085e95d" category="section-title">访问ONTAP REST API参考文档的副本</block>
+  <block id="3796c63d5f5eb6188d8856f65563d4a4" category="paragraph">您可以通过以下链接访问ONTAP REST API参考文档的副本。API参考文档由ONTAP 版本维护。</block>
+  <block id="dabf3cc81191d48460fa3508e371a53c" category="list-text"><block ref="dabf3cc81191d48460fa3508e371a53c" category="inline-link-rx"></block></block>
+  <block id="c0076edc80c1407ceda2d5911e6d288b" category="list-text"><block ref="c0076edc80c1407ceda2d5911e6d288b" category="inline-link-rx"></block></block>
+  <block id="e12d5fae570ab26cdfadd64c30e4ae21" category="list-text"><block ref="e12d5fae570ab26cdfadd64c30e4ae21" category="inline-link-rx"></block></block>
+  <block id="f7c5a1bcb357ec457e5da54b44ff52d8" category="list-text"><block ref="f7c5a1bcb357ec457e5da54b44ff52d8" category="inline-link-rx"></block></block>
+  <block id="87a1e5bb26fa6c8f049bab63283cd932" category="list-text"><block ref="87a1e5bb26fa6c8f049bab63283cd932" category="inline-link-rx"></block></block>
+  <block id="92ecf2461519a0850a03fefd557a9caa" category="list-text"><block ref="92ecf2461519a0850a03fefd557a9caa" category="inline-link-rx"></block></block>
+  <block id="57ffddb99e11d6096024019ec78a7294" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。创建REST角色会自动创建传统的_MAPPING角色。</block>
+  <block id="9c72cbdda2c8bbec859c44a2f9ca219c" category="admonition">您可以联机访问ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息的文档、包括如何使用API的示例。</block>
+  <block id="0fdbfb1fe714496cb439bf652e454595" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="cf7871643c6e047cdf46579054e4d5c1" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
 </blocks>

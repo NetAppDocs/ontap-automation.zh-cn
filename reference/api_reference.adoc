@@ -17,7 +17,7 @@ summary:
 您可以访问所有 ONTAP REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
 
 
-NOTE: 您可以在本地 ONTAP 系统或 NetApp 开发人员网络网站上访问 API 参考内容。
+NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以访问NetApp维护的文档的静态副本。
 
 
 
@@ -46,19 +46,17 @@ NOTE: 您可以在本地 ONTAP 系统或 NetApp 开发人员网络网站上访�
 
 
 
-== 访问 NetApp DevNet 上的参考内容
+== 访问ONTAP REST API参考文档的副本
 
 [role="lead"]
-您可以从 ONTAP 开发人员网络网站访问 NetApp REST API 参考文档。
+您可以通过以下链接访问ONTAP REST API参考文档的副本。API参考文档由ONTAP 版本维护。
 
-.步骤
-. 导航到 ONTAP 开发人员网络网站上的 * NetApp REST APi* 页面：
-+
+* https://library.netapp.com/ecmdocs/ECMLP2882307/html/["ONTAP 9.11.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2879871/html/["ONTAP 9.10.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2876964/html/["ONTAP 9.9.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2874708/html/["ONTAP 9.8"^]
+* https://library.netapp.com/ecmdocs/ECMLP2862544/html/["ONTAP 9.7"^]
+* https://library.netapp.com/ecmdocs/ECMLP2856304/html/["ONTAP 9.6"^]
+
+
 https://devnet.netapp.com/restapi.php["NetApp DevNet ： ONTAP REST API"^]
-
-. 向下滚动并在 * 联机 REST API 参考 * 下单击相应 ONTAP 版本的链接。
-+
-此时将显示 ONTAP API 文档页面，其中 API 调用会按主要资源类别组织在底部。
-
-. 作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。
-

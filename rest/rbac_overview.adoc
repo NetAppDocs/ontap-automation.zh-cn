@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rest/rbac_overview.html 
 keywords:  
-summary:  
+summary: 'ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Based Access Control、RBAC)功能。您可以为每个帐户分配不同的角色、以控制用户对通过REST API和CLI公开的资源的访问。这些角色为各种ONTAP 用户定义了不同的管理访问级别。' 
 ---
 = RBAC安全性概述
 :hardbreaks:
@@ -39,7 +39,7 @@ NOTE: 使用每种类型的角色都有优缺点。请参见 link:../rest/work_r
 | Type | Description 
 
 
-| REST | REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。随后、它们也逐渐发展为支持CLI访问。 
+| REST | REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。创建REST角色会自动创建传统的_MAPPING角色。 
 
 
 | 传统 | 这些角色是ONTAP 9.6之前的旧角色。它们是为ONTAP 命令行界面环境引入的、并且仍然是RBAC安全性的基础。 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rest/rbac_roles_users.html 
 keywords:  
-summary:  
+summary: 了解基本RBAC功能后、您可以开始使用ONTAP 角色和用户。 
 ---
 = 使用角色和用户
 :hardbreaks:
@@ -29,7 +29,7 @@ summary:
 使用RBAC角色和用户帐户时、可以使用多个端点。表中的前四个用于创建和管理角色。最后两个用于创建和管理用户帐户。
 
 
-TIP: 请联机查看ONTAP link:../reference/api_reference.html["API 参考"] 有关更多详细信息，请参见相关文档。
+TIP: 您可以联机访问ONTAP link:../reference/api_reference.html["API 参考"] 有关详细信息的文档、包括如何使用API的示例。
 
 [cols="35,65"]
 |===
