@@ -63,3 +63,7 @@ homepage:
       url: https://docs.netapp.com/us-en/ontap/
     - title: ONTAP Select 文档
       url: https://docs.netapp.com/us-en/ontap-select/
+product-family:
+  name: ONTAP
+  repo: ontap-family
+  sidebar_label: All ONTAP product documentation
