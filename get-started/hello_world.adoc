@@ -34,7 +34,7 @@ NOTE: 如果您的凭据包含特殊字符，则您需要根据所使用的 shel
 * 示例 *
 
 +
-`cURL -X get -u admin ： password -k "'https://10.222.81.101/api/cluster?fields=version"`[]
+`cURL -X get -u admin：password -k "https://10.222.81.101/api/cluster?fields=version"`[]
 
 
 

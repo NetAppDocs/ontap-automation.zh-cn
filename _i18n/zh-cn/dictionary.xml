@@ -624,7 +624,6 @@
   <block id="58866791801e443554927396816c827c" category="list-text">在本地工作站的命令行界面中，检索 ONTAP 软件的版本：</block>
   <block id="8a35977a6f21dff949427e42cf6d3999" category="paragraph">`cURL -X get -u username ： password -k <block ref="1f92f5c8813ca60ee841c4440a7f8600" category="inline-link-rx"></block></block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 示例 *</block>
-  <block id="8f16ff6e69de104981a3a1310efeec43" category="paragraph">`cURL -X get -u admin ： password -k "<block ref="b4fca2fe6e3fd6a6068dfacae02b2532" category="inline-link-rx"></block></block>
   <block id="42ac9c1cc1752704f9d6980ce41b7ba3" category="paragraph">ONTAP 版本信息以 JSON 格式显示。</block>
   <block id="a4273e3e312edbc9d5bd7c188aecc370" category="doc">名称服务</block>
   <block id="4cbf67c663a0aa1becab1170ca932173" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。</block>
@@ -1263,4 +1262,6 @@
   <block id="57ffddb99e11d6096024019ec78a7294" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。创建REST角色会自动创建传统的_MAPPING角色。</block>
   <block id="9c72cbdda2c8bbec859c44a2f9ca219c" category="admonition">您可以联机访问ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息的文档、包括如何使用API的示例。</block>
   <block id="0fdbfb1fe714496cb439bf652e454595" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="cf7871643c6e047cdf46579054e4d5c1" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="1620bfae18b24c9aeb26299384e3355d" category="paragraph">`cURL -X get -u admin：password -k <block ref="9b818800381d633e2ed9a126d3941682" category="inline-link-rx"></block></block>
+  <block id="d1b92a4930d50c6ed1038655db0d2684" category="sidebar">所有ONTAP 产品文档</block>
 </blocks>
