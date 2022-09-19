@@ -1264,4 +1264,9 @@
   <block id="0fdbfb1fe714496cb439bf652e454595" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="cf7871643c6e047cdf46579054e4d5c1" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="1620bfae18b24c9aeb26299384e3355d" category="paragraph">`cURL -X get -u admin：password -k <block ref="9b818800381d633e2ed9a126d3941682" category="inline-link-rx"></block></block>
   <block id="d1b92a4930d50c6ed1038655db0d2684" category="sidebar">所有ONTAP 产品文档</block>
+  <block id="a20d3f23c78756d0956a4a3bd47646ab" category="list-text"><block ref="a20d3f23c78756d0956a4a3bd47646ab" category="inline-link-rx"></block></block>
+  <block id="33a07a0afe4c29ca167bde428e9fb425" category="inline-link">PyPI：NetApp ONTAP 9.11.1</block>
+  <block id="611f39e7dbbbe260d0696b2afbc53c08" category="list-text"><block ref="611f39e7dbbbe260d0696b2afbc53c08" category="inline-link-rx"></block></block>
+  <block id="f7767badbb46d1a4a4915155353f9c42" category="inline-link">适用于9.11.1的NetApp PCL-文档</block>
+  <block id="7b01c72e488a8e4ff65c413ac0e94286" category="list-text"><block ref="7b01c72e488a8e4ff65c413ac0e94286" category="inline-link-rx"></block></block>
 </blocks>
