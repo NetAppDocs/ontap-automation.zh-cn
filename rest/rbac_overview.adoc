@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rest/rbac_overview.html 
-keywords:  
+keywords: rbac, rbac security, rbac overview, roles, scope, role mapping 
 summary: 'ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Based Access Control、RBAC)功能。您可以为每个帐户分配不同的角色、以控制用户对通过REST API和CLI公开的资源的访问。这些角色为各种ONTAP 用户定义了不同的管理访问级别。' 
 ---
 = RBAC安全性概述

@@ -366,8 +366,6 @@
   <block id="13d76f06d267496e8846be9e378c6df8" category="inline-link-macro">工作流 1 ：更新集群联系人并检查作业状态</block>
   <block id="f09943979dc3457d406cfb7e8205a032" category="paragraph">您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。</block>
   <block id="f372ae3b2fda116fe4b7463cbac902c0" category="section-title">ONTAP 9 资源</block>
-  <block id="774a065cb3548cc61fb0ec3bc1494fbe" category="inline-link">ONTAP 9 文档中心</block>
-  <block id="04b0bb6aae6dc41149097cc24034df97" category="list-text"><block ref="04b0bb6aae6dc41149097cc24034df97" category="inline-link-rx"></block></block>
   <block id="8574bd76a1428c3bf08d97dadd4ae77c" category="inline-link">ONTAP 和 ONTAP System Manager 资源</block>
   <block id="ef6786259f693365fcfb0cc5f63f3f4e" category="list-text"><block ref="ef6786259f693365fcfb0cc5f63f3f4e" category="inline-link-rx"></block></block>
   <block id="1d5be002ec12a8cee5e18879d77b8f22" category="section-title">ONTAP 9 开发人员资源</block>
@@ -708,9 +706,6 @@
   <block id="bfed0b768d4205be491cf9aab9ef5bf1" category="list-text">ONTAP 9.6 到 ONTAP 9.10.1</block>
   <block id="6403a27a515eaf92633945f4270c6cc4" category="paragraph">自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="0ae2ed9e360218bc8a7361630749a37d" category="paragraph">您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</block>
-  <block id="5358757de9216cc29d688612a3d72fe1" category="inline-link">ONTAP 9 文档</block>
-  <block id="7d1750eaf694ea55e3ed364bf2fc1139" category="list-text"><block ref="7d1750eaf694ea55e3ed364bf2fc1139" category="inline-link-rx"></block></block>
-  <block id="85e5e87731b3318f19ef33e2fb42f8b4" category="paragraph">提供了有关 ONTAP 9 的文档（命令行界面命令除外）。</block>
   <block id="8159db13d1fb608175963a59674de159" category="list-text"><block ref="8159db13d1fb608175963a59674de159" category="inline-link-rx"></block></block>
   <block id="09b968a9a3d2c3977d1e4ac1ccd11b75" category="inline-link">PyPI ： NetApp ONTAP 9.10.1</block>
   <block id="4be092006953c35749a0846e4734167a" category="list-text"><block ref="4be092006953c35749a0846e4734167a" category="inline-link-rx"></block></block>
@@ -942,7 +937,6 @@
   <block id="f543ca5c2e4e8371b14327b0c907dce3" category="sidebar">使用 REST API 管理 ONTAP</block>
   <block id="f719347e95688149977dfc1399128cfd" category="sidebar">EMS 事件通知</block>
   <block id="31be5a65a5bd0c7e64b5cc0f6b8790c7" category="sidebar">DACL 和 SACL 权限</block>
-  <block id="54614c33cd18b45a05af04b2ab151311" category="paragraph">提供了有关ONTAP 9命令行界面命令的文档。</block>
   <block id="7f96f0bc5330ed5d9909cdd2f6f0d480" category="paragraph">包括规划、管理和支持ONTAP 9所需的文档和其他有用链接。</block>
   <block id="623d61e11a58f706cc63211cbeef400b" category="inline-link">ONTAP 9 产品库</block>
   <block id="c2d5813d8be4192f243cf259ee486461" category="list-text"><block ref="c2d5813d8be4192f243cf259ee486461" category="inline-link-rx"></block></block>
@@ -1264,9 +1258,12 @@
   <block id="0fdbfb1fe714496cb439bf652e454595" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="cf7871643c6e047cdf46579054e4d5c1" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="1620bfae18b24c9aeb26299384e3355d" category="paragraph">`cURL -X get -u admin：password -k <block ref="9b818800381d633e2ed9a126d3941682" category="inline-link-rx"></block></block>
   <block id="d1b92a4930d50c6ed1038655db0d2684" category="sidebar">所有ONTAP 产品文档</block>
-  <block id="a20d3f23c78756d0956a4a3bd47646ab" category="list-text"><block ref="a20d3f23c78756d0956a4a3bd47646ab" category="inline-link-rx"></block></block>
   <block id="33a07a0afe4c29ca167bde428e9fb425" category="inline-link">PyPI：NetApp ONTAP 9.11.1</block>
   <block id="611f39e7dbbbe260d0696b2afbc53c08" category="list-text"><block ref="611f39e7dbbbe260d0696b2afbc53c08" category="inline-link-rx"></block></block>
   <block id="f7767badbb46d1a4a4915155353f9c42" category="inline-link">适用于9.11.1的NetApp PCL-文档</block>
   <block id="7b01c72e488a8e4ff65c413ac0e94286" category="list-text"><block ref="7b01c72e488a8e4ff65c413ac0e94286" category="inline-link-rx"></block></block>
+  <block id="476bf6fc5e4a2d37b00403ec863106ac" category="inline-link">ONTAP 9产品文档</block>
+  <block id="ea13735c00bcda944bfcad2caa280467" category="list-text"><block ref="ea13735c00bcda944bfcad2caa280467" category="inline-link-rx"></block></block>
+  <block id="c68677933ee8c7cbe8b88c055e440e45" category="paragraph">提供ONTAP 9产品系列的文档。</block>
+  <block id="b758498efbf36cda0a88237632f16bc9" category="list-text"><block ref="b758498efbf36cda0a88237632f16bc9" category="inline-link-rx"></block></block>
 </blocks>

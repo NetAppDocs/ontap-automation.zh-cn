@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rest/rbac_roles_users.html 
-keywords:  
+keywords: rbac, roles, users, rest endpoints, cli, privileges, access level, cluster, svm 
 summary: 了解基本RBAC功能后、您可以开始使用ONTAP 角色和用户。 
 ---
 = 使用角色和用户

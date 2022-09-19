@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rest/rbac_wf_create_user.html 
-keywords:  
+keywords: rbac, workflow, create role, create user 
 summary: 您可以使用下面所述的工作流创建具有关联REST角色的用户。在查看工作流之前、您应熟悉一般准备步骤。 
 ---
 = 创建具有角色的用户

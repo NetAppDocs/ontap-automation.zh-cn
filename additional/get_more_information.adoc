@@ -20,13 +20,9 @@ summary:
 
 == ONTAP 9 资源
 
-* https://docs.netapp.com/us-en/ontap/["ONTAP 9 文档"^]
+* https://docs.netapp.com/us-en/ontap-family/["ONTAP 9产品文档"^]
 +
-提供了有关 ONTAP 9 的文档（命令行界面命令除外）。
-
-* https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]
-+
-提供了有关ONTAP 9命令行界面命令的文档。
+提供ONTAP 9产品系列的文档。
 
 * https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["ONTAP 和 ONTAP System Manager 资源"^]
 +
@@ -42,7 +38,7 @@ summary:
 
 == ONTAP 9 开发人员资源
 
-* https://library.netapp.com/ecmdocs/ECMLP2882307/html/index.html["ONTAPI 到 REST API 映射信息"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882104["ONTAPI 到 REST API 映射信息"^]
 +
 提供关键 ONTAPI 调用以及与等效 REST API 调用的映射。
 
