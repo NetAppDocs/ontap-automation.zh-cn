@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/snaplock.html 
-keywords:  
-summary:  
+keywords: snaplock resources 
+summary: 您可以使用这些 API 调用来管理 SnapLock 功能。 
 ---
 = SnapLock
 :hardbreaks:

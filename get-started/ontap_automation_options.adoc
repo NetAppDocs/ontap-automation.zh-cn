@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/ontap_automation_options.html 
-keywords: ontap, ontap automation, rest, ontap rest api, python client library, ontap ansible 
-summary: 自动部署和管理 ONTAP 存储系统有多种选择。 
+keywords: ontap automation, rest rest api, python client library, ansible 
+summary: 从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。您可以直接或通过 NetApp Python 客户端库访问 REST API 。 
 ---
 = 了解 ONTAP 自动化选项
 :hardbreaks:

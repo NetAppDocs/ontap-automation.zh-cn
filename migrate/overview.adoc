@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/overview.html 
-keywords:  
-summary:  
+keywords: ONTAPI, migrate, migrate to REST API 
+summary: 如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。 
 ---
 = 概述
 :hardbreaks:
@@ -14,6 +14,7 @@ summary:
 
 
 [role="lead"]
-NetApp首次在ONTAP 9.6中推出了REST API。自此之后、API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它是早期ONTAPI的首选战略替代方案。
-
 如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。本节介绍可用资源、并重点介绍支持迁移的有用功能和工具。
+
+
+NOTE: NetApp首次在ONTAP 9.6中推出了REST API。自此之后、API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它是ONTAPI的首选战略替代方案。

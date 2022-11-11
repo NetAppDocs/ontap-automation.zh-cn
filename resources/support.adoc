@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/support.html 
-keywords:  
-summary:  
+keywords: support resources 
+summary: 您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。 
 ---
 = 支持
 :hardbreaks:
@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。
 
-独立应用程序可以通过发出POST请求在ONTAP 系统上记录EMS事件以及可选生成的AutoSupport 软件包。此资源类型是在ONTAP 9.11.1中引入的。
+独立应用程序可以通过发出POST请求在ONTAP 系统上记录EMS事件以及可选生成的AutoSupport 软件包。此资源类型是在ONTAP 9.11.1中引入的
 
 自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。
 

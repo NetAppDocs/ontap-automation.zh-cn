@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/get_more_information.html 
-keywords:  
-summary:  
+keywords: more information, additional resources 
+summary: 您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。 
 ---
 = 获取更多信息
 :hardbreaks:
@@ -38,15 +38,15 @@ summary:
 
 == ONTAP 9 开发人员资源
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882104["ONTAPI 到 REST API 映射信息"^]
+* link:../migrate/mapping.html["ONTAPI 到 REST API 映射"]
 +
-提供关键 ONTAPI 调用以及与等效 REST API 调用的映射。
+提供关键ONTAPI调用以及与等效REST API调用的映射。选择相应的ONTAP 版本。
 
-* https://pypi.org/project/netapp-ontap["PyPI：NetApp ONTAP 9.11.1"^]
+* https://pypi.org/project/netapp-ontap["PyPI：NetApp ONTAP"^]
 +
 PyPI 上的 NetApp Python Client Library 软件包。
 
-* https://library.netapp.com/ecmdocs/ECMLP2882316/html/index.html["适用于9.11.1的NetApp PCL-文档"^]
+* https://library.netapp.com/ecmdocs/ECMLP2884819/html/index.html["适用于9.12.1的NetApp PCL-文档"^]
 +
 NetApp Python 客户端库的文档。
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: automate/ontap_ansible.html 
-keywords:  
-summary:  
+keywords: ansible, automation resources 
+summary: 您可以通过多种资源了解如何使用 Ansible 自动部署和管理 ONTAP 存储资源。 
 ---
 = ONTAP 和 Ansible 自动化
 :hardbreaks:

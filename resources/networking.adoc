@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/networking.html 
-keywords:  
-summary:  
+keywords: networking resources 
+summary: 您可以使用这些 API 调用来管理与集群一起使用的物理和逻辑网络资源。 
 ---
 = 网络
 :hardbreaks:
@@ -24,9 +24,9 @@ summary:
 
 您可以检索以太网交换机的端口信息。此资源类型是 ONTAP 9.8 的新增功能。
 
-您可以检索或修改用于 ONTAP 集群或存储网络的以太网交换机的配置。此资源类型是 ONTAP 9.8 的新增功能。
+您可以检索或修改用于 ONTAP 集群或存储网络的以太网交换机的配置。此资源类型是ONTAP 9.8中的新增资源、更新为9.11。
 
-您可以使用光纤通道(FC)光纤REST API端点检索有关FC网络的信息。其中包括ONTAP 集群与FC网络结构之间的连接、构成网络结构的交换机以及活动区域集的分区。此资源类型是在ONTAP 9.11.1中引入的。
+您可以使用光纤通道(FC)光纤REST API端点检索有关FC网络的信息。其中包括ONTAP 集群与FC网络结构之间的连接、构成网络结构的交换机以及活动区域集的分区。此资源类型是在ONTAP 9.11中引入的。
 
 光纤通道接口是与 SVM 关联的逻辑端点。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。
 
@@ -40,6 +40,6 @@ summary:
 
 IP 服务策略用于定义特定 LIF 上可用的服务。可以在 SVM 或 IP 空间的上下文中配置服务策略。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。
 
-ONTAP 网络连接功能已进行扩展、可支持IP子网。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。此资源类型是在ONTAP 9.11.1中引入的。
+ONTAP 网络连接功能已进行扩展、可支持IP子网。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。此资源类型是在ONTAP 9.11中引入的。
 
 IP 空间会创建一个网络空间来支持一个或多个 SVM 。IP 空间可以彼此隔离，从而提供安全和隐私保护。此资源类型是在 ONTAP 9.6 中引入的。

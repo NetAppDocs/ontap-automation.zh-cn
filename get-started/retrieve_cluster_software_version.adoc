@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/retrieve_cluster_software_version.html 
-keywords:  
-summary:  
+keywords: transaction, API transaction, request, response 
+summary: 每个API事务都包含一个HTTP请求和关联的响应。 
 ---
 = 正在检索集群软件版本
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-每个 API 事务都包含一个 HTTP 请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。
+每个API事务都包含一个HTTP请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。
 
 image:rest_call_01.png["简单 REST API 调用的图示"]
 

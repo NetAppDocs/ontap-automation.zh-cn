@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/snapmirror.html 
-keywords:  
-summary:  
+keywords: snapmirror resources 
+summary: 您可以使用这些 API 调用来管理 SnapMirror 数据保护技术。 
 ---
 = SnapMirror
 :hardbreaks:

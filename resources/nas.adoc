@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/nas.html 
-keywords:  
-summary:  
+keywords: nas resources 
+summary: 您可以使用这些 API 调用来管理集群和 SVM 的 CIFS 和 NFS 设置。 
 ---
 = NAS
 :hardbreaks:
@@ -16,6 +16,8 @@ summary:
 [role="lead"]
 您可以使用这些 API 调用来管理集群和 SVM 的 CIFS 和 NFS 设置。
 
+您可以管理为ONTAP 集群定义的Active Directory帐户。其中包括创建新帐户以及显示、更新和删除帐户。ONTAP 9.12增加了此支持。
+
 可以为 SVM 记录某些 CIFS 和 NFS 事件，这有助于提高安全性。此资源类型是在 ONTAP 9.6 中引入的。
 
 您可以将 NAS 审核事件重定向到特定 SVM 。此资源类型是 ONTAP 9.8 的新增功能。
@@ -23,6 +25,8 @@ summary:
 您可以检索已建立的CIFS连接的列表。此资源类型是在ONTAP 9.11.1中引入的。
 
 在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是 ONTAP 9.10 中的新增资源。
+
+添加了端点、以支持创建和管理CIFS组策略。配置信息可通过应用于所有或特定SVM的组策略对象进行访问和管理。ONTAP 9.12增加了此支持。
 
 可以在 CIFS 服务器上为 SMB 用户创建主目录，而无需为每个用户创建单独的 SMB 共享。主目录搜索路径是从 SVM 根目录开始的一组绝对路径。此资源类型是在 ONTAP 9.6 中引入的。
 

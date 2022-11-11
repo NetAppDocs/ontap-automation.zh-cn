@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rn/whats_new.html 
-keywords:  
-summary:  
+keywords: new features, new in release 
+summary: NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。 
 ---
 = ONTAP REST API 和自动化的新增功能
 :hardbreaks:
@@ -18,6 +18,17 @@ NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和
 
 
 
+== ONTAP 9.12.1
+
+ONTAP 9.12.1继续扩展ONTAP REST API的功能、新增了40多个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点介绍了安全性和NAS功能的改进。
+
+安全性增强功能:: Amazon Web Services包括一项密钥管理服务、可为密钥和其他机密提供安全存储。您可以通过REST API访问此服务、以使ONTAP 能够将其加密密钥安全地存储在云中。此外、您还可以创建和列出用于NetApp存储加密的身份验证密钥。
+Active Directory:: 您可以管理为ONTAP 集群定义的Active Directory帐户。其中包括创建新帐户以及显示、更新和删除帐户。
+CIFS组策略:: REST API已进行了增强、可支持创建和管理CIFS组策略。配置信息可通过应用于所有或特定SVM的组策略对象进行访问和管理。
+
+
+
+
 == ONTAP 9.11.1
 
 ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。
@@ -28,6 +39,7 @@ ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。
 IP子网功能:: ONTAP 网络功能已扩展、包括对IP子网的支持。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。
 多个管理员验证:: 多管理员验证功能提供了一个灵活的授权框架、用于保护对ONTAP 命令或操作的访问。您可以定义用于标识受限命令的规则。当用户请求访问特定命令时、可以根据需要由多个ONTAP 管理员授予批准权限。
 SnapMirror增强功能:: SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。
+存储池:: 添加了多个端点、用于访问ONTAP 存储池。支持在集群中创建和列出存储池、以及按ID更新和删除特定池。
 名称服务缓存支持:: ONTAP 名称服务已得到增强、可支持缓存、从而提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。
 ONTAPI报告工具:: ONTAPI报告工具可帮助客户和合作伙伴确定其环境中的ONTAPI使用情况。除了Python软件之外、NetApp Lab on Demand还提供视频和不断发展的支持。在从ONTAPI迁移到ONTAP REST API时、此工具可提供另一种资源。
 

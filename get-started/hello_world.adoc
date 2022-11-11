@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/hello_world.html 
-keywords:  
-summary:  
+keywords: simple API call 
+summary: 您可以在命令行界面上问题描述一个简单的 cURL 命令，开始使用 ONTAP REST API 并确认其可用性。 
 ---
 = 大家好
 :hardbreaks:

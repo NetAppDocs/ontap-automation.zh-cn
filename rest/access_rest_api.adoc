@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: rest/access_rest_api.html 
-keywords:  
-summary:  
+keywords: accessing the rest api, lif 
+summary: 您可以通过多种不同方式访问 ONTAP REST API 。 
 ---
-= 如何访问 ONTAP API
+= 如何访问ONTAP REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

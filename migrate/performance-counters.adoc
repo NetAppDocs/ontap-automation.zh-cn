@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/performance-counters.html 
-keywords:  
-summary: 从ONTAPI过渡到ONTAP REST API以访问ONTAP 性能计数器。 
+keywords: performance, performance counters 
+summary: 通过ONTAP 计数器管理器、ONTAP 用户可以访问性能计数器信息并导出许多不同的ONTAP 性能计数器指标。 
 ---
 = 性能计数器
 :hardbreaks:
@@ -20,7 +20,7 @@ summary: 从ONTAPI过渡到ONTAP REST API以访问ONTAP 性能计数器。
 
 从ONTAP 9.11.1开始、ONTAP 用户可以使用ONTAP REST API访问计数器管理器对象段。将自动化脚本从ONTAPI迁移到ONTAP REST API的用户需要了解如何向ONTAPI提供性能计数器数据与如何向REST API提供数据之间的差异。
 
-请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883449["ONTAP 9.11.1 ONTAPI到REST计数器管理器映射"^] 有关ONTAP 9.11.1中REST API可用的一组ONTAP 计数器的文档、以及有关ONTAPI和REST API使用量之间的计数器差异的信息。
+请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885053["ONTAP 9.12.1 ONTAPI到REST计数器管理器映射"^] 有关ONTAP 9.11.1中REST API可用的一组ONTAP 计数器的文档、以及有关ONTAPI和REST API使用量之间的计数器差异的信息。
 
 
 

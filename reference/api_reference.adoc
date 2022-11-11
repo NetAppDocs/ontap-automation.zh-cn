@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference/api_reference.html 
-keywords:  
-summary:  
+keywords: reference, API reference, ONTAP API documentation 
+summary: API参考包含有关所有ONTAP REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。 
 ---
 = API 参考
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-您可以访问所有 ONTAP REST API 调用的详细信息，包括 HTTP 方法，输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
+API参考包含有关所有ONTAP REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
 
 
 NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以访问NetApp维护的文档的静态副本。
@@ -51,6 +51,7 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 [role="lead"]
 您可以通过以下链接访问ONTAP REST API参考文档的副本。API参考文档由ONTAP 版本维护。
 
+* https://library.netapp.com/ecmdocs/ECMLP2884821/html/["ONTAP 9.12.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP2882307/html/["ONTAP 9.11.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP2879871/html/["ONTAP 9.10.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP2876964/html/["ONTAP 9.9.1"^]

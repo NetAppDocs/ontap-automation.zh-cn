@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows/wf_1_update_cluster_contact.html 
-keywords:  
-summary:  
+keywords: workflow 
+summary: 此工作流将更新集群联系信息。由于此请求是异步处理的，因此它还说明了如何确定后台作业是否成功完成。 
 ---
 = 工作流 1 ：更新集群联系人并检查作业状态
 :hardbreaks:

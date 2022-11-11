@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/mapping.html 
-keywords:  
-summary:  
+keywords: ONTAPI, REST API, mapping, mapping documentation 
+summary: NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。 
 ---
 = ONTAPI 到 REST API 映射
 :hardbreaks:
@@ -18,8 +18,9 @@ ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供
 
 API映射文档取决于ONTAP 版本：
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2874886["ONTAP 9.8"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2876895["ONTAP 9.9.1"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAP 9.10.1"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882104["ONTAP 9.11.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9121["ONTAP 9.12.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9111["ONTAP 9.11.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9101["ONTAP 9.10.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-991["ONTAP 9.9.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-98["ONTAP 9.8"^]
 

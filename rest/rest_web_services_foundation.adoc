@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest/rest_web_services_foundation.html 
-keywords:  
-summary:  
+keywords: REST, web services 
+summary: 表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。 
 ---
 = REST Web 服务基础
 :hardbreaks:

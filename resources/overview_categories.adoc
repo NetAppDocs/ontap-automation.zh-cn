@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/overview_categories.html 
-keywords:  
-summary:  
+keywords: resources, resource categories 
+summary: 通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。 
 ---
 = 资源类别概述
 :hardbreaks:

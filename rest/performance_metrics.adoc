@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest/performance_metrics.html 
-keywords:  
-summary:  
+keywords: performance, performance metrics 
+summary: ONTAP 收集有关选定 SVM 存储对象和协议的性能指标，并通过 REST API 报告此信息。您可以使用此数据监控 ONTAP 系统的性能。 
 ---
 = 存储资源的性能指标
 :hardbreaks:

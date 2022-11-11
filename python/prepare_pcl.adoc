@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: python/prepare_pcl.html 
-keywords:  
-summary:  
+keywords: python client library, prepare, pcl 
+summary: 在使用Python客户端库之前、您应准备本地运行时环境。 
 ---
 = 准备使用 Python 客户端库
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-在使用 Python 客户端库之前，您应准备好环境。
+在使用Python客户端库之前、您应准备本地运行时环境。
 
 您必须使用 Python 3.5 或更高版本。此外，还需要以下软件包：
 

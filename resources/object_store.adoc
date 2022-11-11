@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/object_store.html 
-keywords:  
-summary:  
+keywords: object store resources 
+summary: 您可以使用这些 API 调用访问基于 S3 的对象存储。 
 ---
 = 对象存储
 :hardbreaks:

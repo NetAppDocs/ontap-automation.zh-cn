@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: automate/blogs.html 
-keywords:  
-summary:  
+keywords: automation, automation blogs 
+summary: 有几篇博客文章可帮助您更好地了解自动化ONTAP 部署时的不同技术和方法。 
 ---
 = 有关 ONTAP 自动化的博客
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-我们提供了多篇博客文章，可帮助您更好地了解 ONTAP 自动化的不同技术和方法。
+有几篇博客文章可帮助您更好地了解自动化ONTAP 部署时的不同技术和方法。
 
 CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/cloud.html 
-keywords:  
-summary:  
+keywords: cloud resources 
+summary: 您可以使用这些 API 调用管理与云中对象存储资源的连接。 
 ---
 = 云
 :hardbreaks:

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows/prepare_workflows.html 
-keywords:  
-summary:  
+keywords: workflows, preparation, prepare to use workflows 
+summary: 在使用工作流流程之前，您应做好准备。 
 ---
 = 准备使用这些工作流
 :hardbreaks:

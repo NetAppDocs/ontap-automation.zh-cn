@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rn/known_limitations.html 
-keywords:  
-summary:  
+keywords: limitations, known limitations 
+summary: ONTAP REST API具有某些限制、可能会影响您对API的使用和自动化代码的开发。 
 ---
 = 已知限制
 :hardbreaks:

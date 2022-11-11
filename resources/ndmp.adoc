@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/ndmp.html 
-keywords:  
-summary:  
+keywords: ndmp resources 
+summary: 您可以使用这些 API 调用来管理 NDMP 服务。 
 ---
 = NDMP
 :hardbreaks:

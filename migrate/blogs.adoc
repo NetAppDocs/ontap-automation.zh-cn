@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/blogs.html 
-keywords:  
-summary:  
+keywords: blogs, blog articles 
+summary: 有几篇博客文章可帮助您更好地了解如何从ONTAPI迁移到ONTAP REST API。 
 ---
 = 有关迁移到ONTAP REST API的博客
 :hardbreaks:
