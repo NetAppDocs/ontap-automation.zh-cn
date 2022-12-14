@@ -16,10 +16,12 @@ summary: 有几篇博客文章可帮助您更好地了解自动化ONTAP 部署�
 [role="lead"]
 有几篇博客文章可帮助您更好地了解自动化ONTAP 部署时的不同技术和方法。
 
+.将专用命令行界面直通与 ONTAP REST API 结合使用
 CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。
 
 https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api"^]
 
+.NetApp 和 Ansible 入门：安装 Ansible
 如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。
 
 https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["netapp.io/2018/10/08/Getting Start-With NetApp-and-Ansible install-Ansible"^]

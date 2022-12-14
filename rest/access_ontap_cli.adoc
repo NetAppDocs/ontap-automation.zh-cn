@@ -28,4 +28,5 @@ summary: 为了帮助命令行界面和 ONTAPI 用户过渡到 ONTAP REST API �
 
 NOTE: NetApp 维护一个 GitHub 存储库，其中包含代码示例和其他有用信息。您可以访问存储库，以获取有关如何使用 CLI 直通工具的示例。
 
+.相关链接
 https://github.com/NetApp/ontap-rest-python/tree/master/examples/rest_api/cli_passthrough_samples["ONTAP REST Python GitHub 存储库— CLI 直通示例"^]

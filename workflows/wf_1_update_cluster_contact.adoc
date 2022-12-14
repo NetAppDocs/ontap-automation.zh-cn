@@ -28,6 +28,7 @@ summary: 此工作流将更新集群联系信息。由于此请求是异步处�
 
 | 集群 | patch | 集群 
 |===
+.处理类型
 异步
 
 .卷曲
@@ -38,6 +39,7 @@ curl -X PATCH -H 'Content-Type: application/json' -u admin:password -k -d @step0
   "contact": "support@company-demo.com"
 }
 ----
+.JSON输出
 返回具有关联标识符的作业对象。
 
 [source, json]
@@ -64,6 +66,7 @@ curl -X PATCH -H 'Content-Type: application/json' -u admin:password -k -d @step0
 
 | 集群 | 获取 | /cluster/Jobs/ ｛ uuid ｝ 
 |===
+.处理类型
 同步
 
 .卷曲
@@ -71,6 +74,7 @@ curl -X PATCH -H 'Content-Type: application/json' -u admin:password -k -d @step0
 ----
 curl -X GET -H 'Content-Type: application/json' -u admin:password -k 'https:// 10.222.81.101/api/cluster/jobs/*uuid*'
 ----
+.输出
 返回状态为和其他字段的作业对象。
 
 [source, json]

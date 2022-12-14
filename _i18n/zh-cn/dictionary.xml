@@ -1296,4 +1296,242 @@
   <block id="1559c80340a3552e982d5443b26cb658" category="summary">通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。</block>
   <block id="0242de1421b2dbbb8285300eae69f9fc" category="summary">您可以使用这些API调用来管理支持NVMe的资源。</block>
   <block id="50f3a24b94f9f178410d7708def5ebde" category="summary">您可以使用这些 API 调用来管理 SnapLock 功能。</block>
+  <block id="9250e564d64f55011e433f17ac824f44" category="paragraph-title">NDMP 模式</block>
+  <block id="c69526c8ce76ad278f888adee538f04e" category="paragraph-title">NDMP 节点</block>
+  <block id="59b9883b4ec82d64efbe374d16d050a1" category="paragraph-title">NDMP 会话</block>
+  <block id="d6c90b0f4204e92a3f329aaf4ce9e01c" category="paragraph-title">NDMP SVM</block>
+  <block id="26588e848f6effc048fa7260c0143fb6" category="paragraph-title">NDMP SVM 用户密码</block>
+  <block id="ab0cf104f39708eabd07b8cb67e149ba" category="paragraph-title">缓存</block>
+  <block id="b075b481f21fbb627e5042d98a2e27c9" category="paragraph-title">DDNS</block>
+  <block id="ed5f2bdecbd4bd349d09412d1ff6a6fb" category="paragraph-title">DNS</block>
+  <block id="bd267bd12514496474e44b08af357845" category="paragraph-title">主机记录</block>
+  <block id="2363dee608bcd9f6ce7f980bfdad5789" category="paragraph-title">LDAP</block>
+  <block id="4c885663da9566f7ff78e30b5c49bd30" category="paragraph-title">LDAP模式</block>
+  <block id="98f8c716c137eebb477ab782d431477c" category="paragraph-title">本地主机</block>
+  <block id="82efbf64272cb17196c4e27b3694cadb" category="paragraph-title">名称映射</block>
+  <block id="146af53866e72090bed5ee8202fb16a6" category="paragraph-title">网络组文件</block>
+  <block id="214d81d8672097921e223fb3e62fa879" category="paragraph-title">NIS</block>
+  <block id="69191005b4ee9f6b5f263cb192e44de2" category="paragraph-title">UNIX 用户和组</block>
+  <block id="d870fba37d68752041265a286259efaf" category="paragraph-title">应用程序日志</block>
+  <block id="3b6c41c1f8397d3d6c4a39586bfc97f7" category="paragraph-title">自动更新</block>
+  <block id="6645e0ebb53d4b6e68be7936af3a8039" category="paragraph-title">AutoSupport</block>
+  <block id="c232c3e85ee1366820a448bc348281f4" category="paragraph-title">AutoSupport 消息</block>
+  <block id="c72a28b1b443b9f22b75ff4529e4b636" category="paragraph-title">配置备份</block>
+  <block id="d2b5de1cf6ae99abd7206c9547256b80" category="paragraph-title">配置备份操作</block>
+  <block id="84a2b6436ddb40c75b8b3e5ad743656f" category="paragraph-title">核心转储</block>
+  <block id="2a942848121349f87fa5e6d09b4c0232" category="paragraph-title">EMS</block>
+  <block id="24db2db65660162c9cae9ae2b55718ea" category="paragraph-title">EMS 目标</block>
+  <block id="88386e1cec5fbbeb2091685054c5c411" category="paragraph-title">EMS 目标实例</block>
+  <block id="a631a01c80e3de0135e4ab5fa80a3501" category="paragraph-title">EMS 事件</block>
+  <block id="d1f48be46780b4da8fc3bc7cdd279568" category="paragraph-title">EMS 筛选器</block>
+  <block id="43892382daa7fe80f6f1a0c10c47b27c" category="paragraph-title">EMS 筛选实例</block>
+  <block id="c70dd9bf7100bb0727e205edece2fe65" category="paragraph-title">EMS 消息</block>
+  <block id="ecd2dc08fe228d4f0f3210bdc9b6c90a" category="paragraph-title">筛选器实例的 EMS 规则</block>
+  <block id="245d4f1f6d25ca75b13988e60faba80f" category="paragraph-title">筛选器实例的 EMS 规则实例</block>
+  <block id="305af65222ed3fff91f5c8bcdfe17162" category="paragraph-title">SNMP</block>
+  <block id="19b833b71103b9973103a10d4028c114" category="paragraph-title">SNMP 陷阱主机</block>
+  <block id="7e02da6e354a94f76d34d87e880bd155" category="paragraph-title">SNMP 陷阱主机实例</block>
+  <block id="e77de590cd71a55fe09a65e34442907d" category="paragraph-title">SNMP 用户</block>
+  <block id="38c0177ff71717e4ebdead24f8237be5" category="paragraph-title">SNMP 用户实例</block>
+  <block id="9ae13d2c1be8f54b085efa704ea4d7ee" category="paragraph-title">聚合指标</block>
+  <block id="0823e490e6bba6fc21a38adab6d7a963" category="paragraph-title">聚合丛</block>
+  <block id="d5350d8759b1ec84607e47908809058e" category="paragraph-title">聚合</block>
+  <block id="b60c0d4d7e79d2d9eb6b397ca8529c4c" category="paragraph-title">网桥</block>
+  <block id="2d4aef30a49a581a6ed89ce840054235" category="paragraph-title">Disks</block>
+  <block id="ae19a8684ec907889cac06096d90615b" category="paragraph-title">文件克隆</block>
+  <block id="88882495c6bab93dd3c2b495093552f5" category="paragraph-title">文件移动</block>
+  <block id="f24ce81f056d5acd59788df7f5ab36a1" category="paragraph-title">FlexCache</block>
+  <block id="12b9060463c7d0d9fd882b398f4b6426" category="paragraph-title">FlexCache 起源</block>
+  <block id="f5520ac447b7ce4cc60a84b00fe90b91" category="paragraph-title">受监控的文件</block>
+  <block id="283176e6feb211f8532b2c7c9263cd08" category="paragraph-title">池</block>
+  <block id="407c4e9fac86b98147da49acd4fa0d01" category="paragraph-title">端口</block>
+  <block id="9ab8fc3354a61f6ad2350f17305fc866" category="paragraph-title">QoS 策略</block>
+  <block id="807c87dbc2a84cfb9ed828623f9216ac" category="paragraph-title">QoS 工作负载</block>
+  <block id="48b9817af3fdae7035b6862c98196584" category="paragraph-title">qtree</block>
+  <block id="bb1c10ea5234afcb091a28054d68573b" category="paragraph-title">配额报告</block>
+  <block id="b9104e60761a7668c71846e0def23f3a" category="paragraph-title">配额规则</block>
+  <block id="bb53c62475a4f28295dfd71302a53a3d" category="paragraph-title">磁盘架</block>
+  <block id="623fb58af5512173351f2a5e63dd6d85" category="paragraph-title">Snapshot 策略</block>
+  <block id="2a3d38eca452a2699cd2b11129719514" category="paragraph-title">Snapshot 计划</block>
+  <block id="0052efad5d260a806d52bfcfe640936f" category="paragraph-title">交换机</block>
+  <block id="5fa1f27a4db085455efad8586d12878b" category="paragraph-title">磁带设备</block>
+  <block id="161bf0559542afedb1ca0bf946c7ee93" category="paragraph-title">首要指标</block>
+  <block id="a3e42b640d5ce90ec9ccf40644a7beb2" category="paragraph-title">卷效率策略</block>
+  <block id="17d828c8326ae52c5d2a5bd801e5a59b" category="paragraph-title">卷文件</block>
+  <block id="e5a3f41cd596ffa6c5340d3d92b4b3e8" category="paragraph-title">卷快照</block>
+  <block id="91fadc5613280f76b916f1fd236e43e9" category="paragraph-title">目标</block>
+  <block id="11b0f3090bfc7e369a36e9cc90c4f582" category="paragraph-title">光纤通道登录</block>
+  <block id="13d28e8dfc702e3456e0767dff9a128a" category="paragraph-title">命名空间</block>
+  <block id="65c280309cb16c4db0a31c86b28b804c" category="paragraph-title">NVMe 接口</block>
+  <block id="0845ef772913e6fb6b0cbb8ad6dae1d0" category="paragraph-title">NVMe 服务</block>
+  <block id="60f0443ad11fd726953afc1b7f16c188" category="paragraph-title">NVMe 子系统控制器</block>
+  <block id="433ced2138f5d40b7adbfa80ca0f3e16" category="paragraph-title">NVMe 子系统映射</block>
+  <block id="1361b47201058431e29c4f4e3cab651c" category="paragraph-title">NVMe 子系统</block>
+  <block id="9e476387322a5c250893cf9c5c4ce78c" category="paragraph-title">策略</block>
+  <block id="ea96be9e75d8d3d690aedae5040edf2f" category="paragraph-title">relationships</block>
+  <block id="8221f97d1274e16b57c726f05dfc3ea7" category="paragraph-title">关系传输</block>
+  <block id="3824ce9b3abc70c7c5c21eda0ab912d0" category="paragraph-title">容量池</block>
+  <block id="51bdc8bf999c93768e182fae54e64934" category="paragraph-title">机箱</block>
+  <block id="9b99bf7d2bfd4b09363304c166832734" category="paragraph-title">集群</block>
+  <block id="061ccdcf80b51c459a6a48dd35ed9aa2" category="paragraph-title">计数器表</block>
+  <block id="a940a548ba41bc988f99d51fd02f21de" category="paragraph-title">固件</block>
+  <block id="12ceff2290bb9039beaa8f36d5dec226" category="paragraph-title">作业</block>
+  <block id="e1fb647d9c9ac78261c2aa60b4cac7b5" category="paragraph-title">许可证实例</block>
+  <block id="05f5893732f0ae263d259d7a6d53ef55" category="paragraph-title">许可证管理器</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="paragraph-title">licenses</block>
+  <block id="2e97b5e5f53687c2edc46f6cfe0a5451" category="paragraph-title">调解器</block>
+  <block id="1749d12df3df2319d3eee218a277ff83" category="paragraph-title">MetroCluster</block>
+  <block id="7b5585e8b5e62fe2683b466045870056" category="paragraph-title">MetroCluster 诊断</block>
+  <block id="1a866229c550618dfa1ff7b2bbca3d93" category="paragraph-title">MetroCluster DR 组</block>
+  <block id="ffad460970904ec2c9c9af099e0391f8" category="paragraph-title">MetroCluster 互连</block>
+  <block id="cf8683a46a9fce46da2b0e7bac364b41" category="paragraph-title">MetroCluster 节点</block>
+  <block id="4bc6b7be3ed7ef45661c92ef64ef7e57" category="paragraph-title">MetroCluster 操作</block>
+  <block id="dd1cc17036adbbdb0074432af6a7a58b" category="paragraph-title">MetroCluster SVM</block>
+  <block id="187c6ad3a74cc93ac6c2229d398e383e" category="paragraph-title">节点</block>
+  <block id="b137167e861629d461972de6fa2c4574" category="paragraph-title">NTP keys</block>
+  <block id="7e68cdae9094c04d3db96fce117b064c" category="paragraph-title">NTP 服务器</block>
+  <block id="20a07d06a4b1bc423793cd5bc530bb3d" category="paragraph-title">peers</block>
+  <block id="ccdb7bf9d93e5652b57cabcc8c41e061" category="paragraph-title">Schedules</block>
+  <block id="af29aa178ae43211319e28f627e96590" category="paragraph-title">传感器</block>
+  <block id="719d067b229178f03bcfa1da4ac4dede" category="paragraph-title">软件</block>
+  <block id="c6e190b284633c48e39e55049da3cce8" category="paragraph-title">Web</block>
+  <block id="53407aeec220be7474e15c2a9f182a5a" category="paragraph-title">应用程序快照</block>
+  <block id="1ddf333c6654f7f89c739dddfb4cc429" category="paragraph-title">应用程序</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="paragraph-title">一致性组</block>
+  <block id="a3b7af87c74d80ecedac76f490bfc38a" category="paragraph-title">一致性组快照</block>
+  <block id="ce0be71e33226e4c1db2bcea5959f16b" category="paragraph-title">日志</block>
+  <block id="1d4022cc69557a9759f903689e5c6337" category="paragraph-title">合规时钟</block>
+  <block id="90cf707e60635de8b651c0d98ae0973e" category="paragraph-title">事件保留</block>
+  <block id="45c59e56e0fe071dfc474240e10a2bff" category="paragraph-title">文件保留和特权删除</block>
+  <block id="fed16d3aa6b063ea96e275143a07ccb9" category="paragraph-title">文件指纹</block>
+  <block id="1e3a85ebb1c233113bf042fe963e7cf5" category="paragraph-title">合法保留</block>
+  <block id="2bf344088245c441fd4af9e89e2513c1" category="paragraph-title">BGP 对等组</block>
+  <block id="d89e657dbcb29d1b725fae1a012c3573" category="paragraph-title">以太网广播域</block>
+  <block id="34b8a9807da64737f07ac9e419c9f546" category="paragraph-title">以太网端口</block>
+  <block id="e325fff9585fc408988fbbc8bc5f44b8" category="paragraph-title">以太网交换机端口</block>
+  <block id="d5475e63e438a4a7c94c131d28345b80" category="paragraph-title">以太网交换机</block>
+  <block id="6c0d25ee401578483c4dfffa365b9ea0" category="paragraph-title">光纤通道网络结构</block>
+  <block id="9f5cdc1f5a4f26490d6217f7d1030e32" category="paragraph-title">光纤通道接口</block>
+  <block id="a5745ae7b8ab4ab67a6ba9a615ced665" category="paragraph-title">光纤通道端口</block>
+  <block id="08f9a2efa94b3c5213c47c4eeb5ba2fd" category="paragraph-title">HTTP 代理</block>
+  <block id="2509615af9bbdb5fbb73b349c029291a" category="paragraph-title">IP 接口</block>
+  <block id="fd4c92e6709b093e5c4f8085fb79e919" category="paragraph-title">IP 路由</block>
+  <block id="7a8bb34f7474b39291c18680a8e2fcec" category="paragraph-title">IP 服务策略</block>
+  <block id="0e7eec875e1f37460a721166947e4e8e" category="paragraph-title">IP子网</block>
+  <block id="d686186657dc867241ca2a0f2a61422f" category="paragraph-title">IP 空间</block>
+  <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="paragraph-title">Audit</block>
+  <block id="5694877f9acb80427bb084dc540bff58" category="paragraph-title">审核日志重定向</block>
+  <block id="f2be2bb6f022a2ec208f7b9ce6a2c155" category="paragraph-title">CIFS连接</block>
+  <block id="31e39608982442406853c159bf64d7ea" category="paragraph-title">CIFS 域</block>
+  <block id="ae8f54c516c1e697ca7e99fc7d868bda" category="paragraph-title">CIFS 主目录搜索路径</block>
+  <block id="396c3f48c117673117684dd56e4ea358" category="paragraph-title">CIFS 本地组</block>
+  <block id="494abb7dd5b763270d790ff3ee48084d" category="paragraph-title">CIFS NetBIOS</block>
+  <block id="b4aed1589395fdc65c17587b27f7bb8c" category="paragraph-title">CIFS 服务</block>
+  <block id="ef5c06085d29fcbcb6138c9c185bda09" category="paragraph-title">CIFS会话文件</block>
+  <block id="bc60013b8245b6824eb1f7867b61b741" category="paragraph-title">CIFS 会话</block>
+  <block id="94a2d8f06ad95f4f574506a5f9b95aa7" category="paragraph-title">CIFS卷影副本</block>
+  <block id="6bd56802bbe66c487b39108b4e4b3f2e" category="paragraph-title">CIFS 共享</block>
+  <block id="064575167733ca9bd85e0b4b367d1ca9" category="paragraph-title">CIFS 共享 ACL</block>
+  <block id="2fc8aeb9ce1675007558f9a4a074f9c3" category="paragraph-title">CIFS UNIX 符号链接映射</block>
+  <block id="6fd52b48358df3c671bb7b3860da8a55" category="paragraph-title">CIFS用户和组批量导入</block>
+  <block id="e99032409deaffcf7a867a648155dc5d" category="paragraph-title">文件访问跟踪</block>
+  <block id="81584289d536a476e74f5bc4906831af" category="paragraph-title">文件安全权限</block>
+  <block id="1a0f4bec43cf474af35c9e77aa8c28af" category="paragraph-title">fpolicy</block>
+  <block id="c1746aa388178e56fc9071ad1d30c228" category="paragraph-title">FPolicy 连接</block>
+  <block id="371f109f46145b3f27492990eb0a9113" category="paragraph-title">FPolicy 引擎</block>
+  <block id="3bd9fd6d8026d51bcd37c5f3db077df7" category="paragraph-title">FPolicy 事件</block>
+  <block id="cc0e7740c7c0f284b16f9a531a2fb567" category="paragraph-title">FPolicy 策略</block>
+  <block id="7f1fb7408267003fd39631c254d0d9ae" category="paragraph-title">锁定</block>
+  <block id="1deaf7cba2dce61080af964b90af69c6" category="paragraph-title">NFS连接的客户端映射</block>
+  <block id="4e4e0f527af77484c5cbf5196e421a3d" category="paragraph-title">NFS 连接的客户端</block>
+  <block id="5e02bcf13960addb442383f8370c14f1" category="paragraph-title">NFS 导出策略</block>
+  <block id="6aa53caebe4b6ae8c4c8f34880b6d95d" category="paragraph-title">NFS Kerberos 接口</block>
+  <block id="a925a741511b2b8f933ad6404892439b" category="paragraph-title">NFS Kerberos 域</block>
+  <block id="2af5a2ae61f951c7a5e94ca007df0d15" category="paragraph-title">NFS 服务</block>
+  <block id="58799a9de037b62a01e5ef1453837248" category="paragraph-title">Vscan</block>
+  <block id="794e647721bb174bd33eddbe2e97da3d" category="paragraph-title">Vscan 实时策略</block>
+  <block id="67f19b53fb829d6ea610820aab8ecc04" category="paragraph-title">Vscan 按需策略</block>
+  <block id="4974caee8c34d629bb161cdea414869a" category="paragraph-title">Vscan 扫描程序池</block>
+  <block id="2cf615c2df2664a7f35487c706d47001" category="paragraph-title">Vscan 服务器状态</block>
+  <block id="93735cd742fbfd0bc4709b8eab7b7a9c" category="paragraph-title">迁移</block>
+  <block id="20b974944bd89d74b6906ef955914c75" category="paragraph-title">对等权限</block>
+  <block id="642223473862db290604321fe2ebe763" category="paragraph-title">svms</block>
+  <block id="9b945efebb006547a94415eadaa12921" category="paragraph-title">—帐户</block>
+  <block id="5a5fb6684999bac1ca581809abbd53ad" category="paragraph-title">帐户名称</block>
+  <block id="187f8868291bfb72a7e033dd667af916" category="paragraph-title">Active Directory 代理</block>
+  <block id="346f7f627d1a93bfbf315865554048c6" category="paragraph-title">反勒索软件</block>
+  <block id="f260003a35e4d85e558fddca87a44bc3" category="paragraph-title">审核目标</block>
+  <block id="f553cd67933721b76f9ccab00ac4a892" category="paragraph-title">审核消息</block>
+  <block id="69500631fd60fd52ad3d029cb8aa50e0" category="paragraph-title">AWS KMS</block>
+  <block id="69e4f9faea00db8647cdf1c81c23c6d8" category="paragraph-title">Azure 密钥存储</block>
+  <block id="5a6c0d2579b31142130f20104fa58ea6" category="paragraph-title">证书</block>
+  <block id="3031b41cbb19093d814e6930f3e56570" category="paragraph-title">集群安全性</block>
+  <block id="de7a4b58aa20c707a993012c821ffcae" category="paragraph-title">GCP KMS</block>
+  <block id="99a98e067af6b09e64f3740767096c96" category="paragraph-title">IPsec</block>
+  <block id="006138580199bd3b75b397daaf66da34" category="paragraph-title">IPsec CA 证书</block>
+  <block id="edc104bcf18fda8f2113e04baac67d3f" category="paragraph-title">IPsec 策略</block>
+  <block id="3d2b68c7bdb9f30e1ccfb464eeb00966" category="paragraph-title">IPsec 安全关联</block>
+  <block id="a4c782a0e5bd7be239b96d4d35ffe4fb" category="paragraph-title">密钥管理器配置</block>
+  <block id="5e2f9eab3699a50f20260789850a272c" category="paragraph-title">密钥管理器</block>
+  <block id="afcd6712bee083e0a41753fd140a0495" category="paragraph-title">密钥存储</block>
+  <block id="a49c9c380ec2e13191e995f949a1c440" category="paragraph-title">LDAP 身份验证</block>
+  <block id="8c4bb3ded6662bac8e6e9acbf843524d" category="paragraph-title">登录消息</block>
+  <block id="6a36d99c2ac30ed84aa720f045f9fb79" category="paragraph-title">NIS 身份验证</block>
+  <block id="22df0a92ffce80c2c0b94f54238b8ec0" category="paragraph-title">密码身份验证</block>
+  <block id="7ceacf64cc5732c8c39d8622d4e2d44c" category="paragraph-title">角色实例的特权</block>
+  <block id="28885526cbecfb56bee4aca9d16e4280" category="paragraph-title">公有密钥身份验证</block>
+  <block id="a5cd3ed116608dac017f14c046ea56bf" category="paragraph-title">角色</block>
+  <block id="74fa3a518ab1198e0b6ab902e54e3958" category="paragraph-title">角色实例</block>
+  <block id="9097811650a92eb8b7172820dc0a2722" category="paragraph-title">SAML 服务提供程序</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="paragraph-title">SSH</block>
+  <block id="8d74e9b6f76905c251cac67ba143095e" category="paragraph-title">SSH SVMs</block>
+  <block id="6c1e0dfe5a404cce67f1db281a50ea76" category="paragraph-title">光纤通道协议服务</block>
+  <block id="362aaf53838180aef26894961e18a234" category="paragraph-title">光纤通道 WWPN 别名</block>
+  <block id="58f3779afe9da9ffdc085dc3064306f7" category="paragraph-title">igroup</block>
+  <block id="631b740ef1e6620839e8143382936b10" category="paragraph-title">iSCSI 凭据</block>
+  <block id="0ce9193c4743638434ef94331f17def2" category="paragraph-title">iSCSI 服务</block>
+  <block id="401ea405ada422dc57c71ecc462575ab" category="paragraph-title">iSCSI 会话</block>
+  <block id="6f68434a65995c923defc360224ffecc" category="paragraph-title">LUN 属性</block>
+  <block id="2bcfa5513eb7e40b556060fcb5df869d" category="paragraph-title">LUN 映射</block>
+  <block id="304c5c7bce84cce1f1ab6cffef80fad8" category="paragraph-title">LUN 映射报告节点</block>
+  <block id="7b3c6a2d089eb1b6f8959e7e61a50c07" category="paragraph-title">LUN</block>
+  <block id="f094fdd1ff33d53f9180e4e35ace68f1" category="paragraph-title">端口集</block>
+  <block id="1fbd05569b3face9ed656a6b7e9ed6be" category="paragraph-title">VVol 绑定</block>
+  <block id="62254758dcfe975098fab22609c8aa79" category="paragraph-title">存储分段</block>
+  <block id="992a0f0542384f1ee5ef51b7cf4ae6c4" category="paragraph-title">服务</block>
+  <block id="bd96d411ebb8705b0ef857c4d7b8c9c9" category="paragraph-title">服务分段</block>
+  <block id="8acc0dc5cdc4a547b0826578b2a98b48" category="paragraph-title">S3 组</block>
+  <block id="29c67008363344d9ca92cd75f29fe2c9" category="paragraph-title">S3 策略</block>
+  <block id="bc00f7a5406f8f98848784d25ca2e573" category="paragraph-title">将专用命令行界面直通与 ONTAP REST API 结合使用</block>
+  <block id="f4a4d3f8e378d11233851c0c7c1aeda7" category="paragraph-title">NetApp 和 Ansible 入门：安装 Ansible</block>
+  <block id="34aebac80a78170f96dfd325c4320501" category="paragraph-title">HTTP请求</block>
+  <block id="0d5a371e0c92f43305354a7ca5481105" category="paragraph-title">HTTP响应</block>
+  <block id="59382e918ffb6e6d1580a8b17e6e1e2c" category="paragraph-title">ONTAP 9 的使用经验</block>
+  <block id="0182974655f974e8429fb64bb3d15eb2" category="paragraph-title">查看 REST 概念和实施</block>
+  <block id="848c9ae1e7e981016f6df28d16d2cedd" category="paragraph-title">软件开发背景</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">完成后</block>
+  <block id="a4ed418f7517459e684626971cd74fba" category="paragraph-title">ONTAP 9.7到9.10.1</block>
+  <block id="b7c35d8ede94054b7692537b058c5b46" category="paragraph-title">所有者和范围</block>
+  <block id="76aeab63a36298ab54940aa1b9114b6a" category="paragraph-title">唯一名称</block>
+  <block id="be3ff25d37468b06e67fe41b257114b5" category="paragraph-title">一组权限</block>
+  <block id="d5a57aa300472d64ca2f101c95bc3ace" category="paragraph-title">REST端点</block>
+  <block id="8fd1235a1416afe3d9fa3dad760179ff" category="paragraph-title">CLI 命令</block>
+  <block id="6215c70dd9ed027468957f47be27bee7" category="paragraph-title">您使用的是哪个ONTAP 版本？</block>
+  <block id="1dd5dc2d82e64f070277b01c3a7d2fb8" category="paragraph-title">确定受保护的资源和范围</block>
+  <block id="2141cad14145f8887d823e45da860c83" category="paragraph-title">用户应具有哪些访问权限？</block>
+  <block id="7736c40b92c489577362a6e1a68cf65b" category="paragraph-title">用户将如何访问ONTAP ？</block>
+  <block id="0a783c3ce00e8d3af4931704ca629ba3" category="paragraph-title">内置角色之一是否足以满足要求、或者是否需要自定义角色？</block>
+  <block id="531201515c1ec0bfadb1f37e57c2222d" category="paragraph-title">需要什么类型的角色？</block>
+  <block id="11678e3d67c685db9322ab4433f227a6" category="paragraph-title">处理类型</block>
+  <block id="11a1b77794af7e7ad738c9603dcf8730" category="paragraph-title">JSON输出</block>
+  <block id="29c2c02a361c9d7028472e5d92cd4a54" category="paragraph-title">输出</block>
+  <block id="56aa3ed9dba484ac641c5247a15b1ed6" category="paragraph-title">基本要求</block>
+  <block id="11593a40313671a88f29e6475859f238" category="paragraph-title">软件包名称和版本</block>
+  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="paragraph-title">安装</block>
+  <block id="9526c4af8cb7f4cacf6131573eda8be8" category="paragraph-title">文档和其他资源</block>
+  <block id="2e02e4fcb54e6e1277182e7dcc734294" category="paragraph-title">ONTAPI 到 REST 的映射</block>
+  <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">从ONTAPI将自动化转变为ONTAP REST API</block>
+  <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
+  <block id="21aec37d095265f9895a6901a6c9b4be" category="paragraph-title">输入队列已满时、REST API请求被拒绝</block>
 </blocks>

@@ -26,6 +26,7 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 [role="lead"]
 您可以在本地 ONTAP 系统上访问 ONTAP API 联机文档页面。
 
+.开始之前
 您必须具备以下条件：
 
 * ONTAP 集群管理 LIF 的 IP 地址或主机名
@@ -60,4 +61,5 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 * https://library.netapp.com/ecmdocs/ECMLP2856304/html/["ONTAP 9.6"^]
 
 
+.相关信息
 https://devnet.netapp.com/restapi.php["NetApp DevNet ： ONTAP REST API"^]

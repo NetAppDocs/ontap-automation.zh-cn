@@ -16,10 +16,14 @@ summary: 要准备使用 ONTAP REST API ，您应执行几个步骤。
 [role="lead"]
 要准备使用 ONTAP REST API ，您应执行几个步骤。
 
+.ONTAP 9 的使用经验
 您应具备使用 ONTAP 9 的经验。其中包括了解基本概念和术语，以及在系统管理方面的一些经验。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-concepts/home.html["ONTAP 9 概念"^] 开始使用。
 
+.查看 REST 概念和实施
 请务必查看 link:../rest/rest_web_services_foundation.html["ONTAP REST API"] 有关 REST 概念的信息以及有关如何设计 ONTAP REST API 的详细信息。
 
+.软件开发背景
 在软件开发技术和流程方面拥有一些经验非常有用，包括一种或多种编程语言以及一些通用实用程序，例如 curl 。
 
+.获取更多信息
 您应了解中建议的追加信息资源 link:../additional/get_more_information.html["获取更多信息"]。
