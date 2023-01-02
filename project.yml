@@ -33,8 +33,8 @@ homepage:
       url: "/get-started/ontap_automation_options.html"
     - title: 准备使用 REST API
       url: "/get-started/prepare.html"
-    - title: 大家好
-      url: "/get-started/hello_world.html"
+    - title: 您的第一次API调用
+      url: "/get-started/first_call.html"
   - title: ONTAP REST API
     links:
     - title: REST 实施详细信息

@@ -600,7 +600,6 @@
   <block id="c8e2277ecfb1427838c488c217f99466" category="doc">云</block>
   <block id="309e7aa37e1bfea74efcababb5902309" category="paragraph">您可以使用这些 API 调用管理与云中对象存储资源的连接。</block>
   <block id="42505ed890a81cb2bef8c94c82effedf" category="paragraph">目标表示云中的对象存储资源。每个目标都包含连接到存储资源所需的配置信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="3e25960a79dbc69b674cd4ec67a72c62" category="doc">大家好</block>
   <block id="a30f2db6f9a8c5629dc89b408b5d97e4" category="paragraph">您可以在命令行界面上问题描述一个简单的 cURL 命令，开始使用 ONTAP REST API 并确认其可用性。</block>
   <block id="f1d5e3ebc77f66e2befb5941d10019ee" category="paragraph">您的工作站必须具有 cURL 实用程序。此外，您还必须具备以下条件：</block>
   <block id="ec4f05f95246e64e1875be5ee79905b2" category="list-text">有权访问 ONTAP REST API （集群资源）的帐户的用户名和密码。</block>
@@ -1534,4 +1533,5 @@
   <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">从ONTAPI将自动化转变为ONTAP REST API</block>
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
   <block id="21aec37d095265f9895a6901a6c9b4be" category="paragraph-title">输入队列已满时、REST API请求被拒绝</block>
+  <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
 </blocks>
