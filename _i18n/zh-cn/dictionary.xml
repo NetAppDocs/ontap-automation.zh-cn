@@ -10,8 +10,6 @@
   <block id="47139a5580026883093b61e1de623719" category="section-title">使用 Ansible</block>
   <block id="a8f88f602880c7c7c74079d3f99ff931" category="inline-link-macro">ONTAP 和 Ansible 自动化</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
-  <block id="b2169c6a3a0ae080710868637b995ad7" category="paragraph">通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。下面简要介绍了每个资源的问题描述以及基本资源路径，并在适当情况下提供了其他使用注意事项。</block>
-  <block id="1d1927ef8ecb65f8a47a28bdaad73c8d" category="paragraph">本节介绍最新版本产品的 REST 资源。如果您需要了解对先前版本所做的更改，请参见 _Release Notes_。</block>
   <block id="d828aac2af8d57c06b48e251182e288b" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
   <block id="cdbbcb4acb019584472990be1e68660f" category="paragraph">在使用工作流流程之前，您应做好准备。</block>
@@ -1266,7 +1264,6 @@
   <block id="866a03d0e7b971bda163096bf0c8b27d" category="list-text"><block ref="866a03d0e7b971bda163096bf0c8b27d" category="inline-link-rx"></block></block>
   <block id="571a9281dc7d54056134d0ae9cebe097" category="list-text"><block ref="571a9281dc7d54056134d0ae9cebe097" category="inline-link-rx"></block></block>
   <block id="3eef15c3ebe6737054ec7fdccee59ef8" category="summary">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。</block>
-  <block id="a4b91b72885f9acc20754bbfdf70a0ba" category="paragraph">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。本节介绍可用资源、并重点介绍支持迁移的有用功能和工具。</block>
   <block id="b3a25dcbc5dbce2ff68dbfa04004bcf8" category="admonition">NetApp首次在ONTAP 9.6中推出了REST API。自此之后、API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它是ONTAPI的首选战略替代方案。</block>
   <block id="67aba80d01179bffdadcdf811b49cc44" category="summary">通过ONTAP 计数器管理器、ONTAP 用户可以访问性能计数器信息并导出许多不同的ONTAP 性能计数器指标。</block>
   <block id="6be98e5db6d305c8664913cfad46b09c" category="inline-link">ONTAP 9.12.1 ONTAPI到REST计数器管理器映射</block>
@@ -1534,4 +1531,8 @@
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
   <block id="21aec37d095265f9895a6901a6c9b4be" category="paragraph-title">输入队列已满时、REST API请求被拒绝</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
+  <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织、如ONTAP API联机文档中所示。下面简要介绍了每个资源的问题描述 、并根据需要提供其他使用注意事项。</block>
+  <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">ONTAP REST API的新增功能</block>
+  <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
+  <block id="4acb4d74fe00ae1c12d51ed7033cfe13" category="paragraph">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。您可以使用许多有用的资源和工具来支持迁移。</block>
 </blocks>
