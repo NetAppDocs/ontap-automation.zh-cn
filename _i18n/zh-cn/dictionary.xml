@@ -1535,4 +1535,7 @@
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">ONTAP REST API的新增功能</block>
   <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="4acb4d74fe00ae1c12d51ed7033cfe13" category="paragraph">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。您可以使用许多有用的资源和工具来支持迁移。</block>
+  <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。</block>
+  <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
+  <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
 </blocks>

@@ -26,6 +26,11 @@ https://netapp.io/2020/12/17/ontapi-to-rest-mapping/["netapp.io/2020/12/17/ontap
 
 https://www.netapp.com/blog/transform-automation-ontap-rest-api/["www.netapp.com/blog/transform-automation-ontap-rest-api"^]
 
+.将专用命令行界面直通与 ONTAP REST API 结合使用
+为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。
+
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api"^]
+
 .使用ONTAPI使用情况报告工具从ONTAPI过渡
 NetApp提供了一个工具、可帮助客户和合作伙伴过渡到ONTAP REST API。
 
