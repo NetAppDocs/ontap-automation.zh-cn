@@ -970,36 +970,10 @@
   <block id="6e6432511bc053d1916f5f8f0915598d" category="sidebar">迁移到REST API</block>
   <block id="9e7684bc06c1628bc838239d69633ef1" category="sidebar">ONTAPI到REST映射</block>
   <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">博客</block>
-  <block id="d2fe6ca70e862256ec5db4361e09d5b1" category="paragraph">在ONTAP 9.11.1之前的版本中、对全套ONTAP 计数器管理器对象的访问仅限于ONTAP 命令行界面和ONTAPI接口。</block>
-  <block id="36989422b5cc9879d4b033aff909b8d0" category="paragraph">从ONTAP 9.11.1开始、ONTAP 用户可以使用ONTAP REST API访问计数器管理器对象段。将自动化脚本从ONTAPI迁移到ONTAP REST API的用户需要了解如何向ONTAPI提供性能计数器数据与如何向REST API提供数据之间的差异。</block>
-  <block id="caf3ee040de28e9f6d46988870dece28" category="section-title">使用ONTAPI访问性能计数器</block>
-  <block id="acb7e7db7dc26e2ee7f0a6ca7889fc0e" category="paragraph">在ONTAPI使用时、性能计数器数据会分组到对象中。例如、在具有四个磁盘的节点中、磁盘性能计数器数据会分组为一个对象。系统中的每个物理磁盘都代表该对象的一个实例、您可以使用ONTAPI访问单个磁盘实例的各个性能计数器。</block>
-  <block id="3786be7650bb73d3aca4f15ae8918df6" category="section-title">使用ONTAP REST API访问性能计数器</block>
-  <block id="25a6f074faebcb689360e5a8ed4cb46d" category="paragraph">使用ONTAP REST API、您可以通过表(例如、`disk`)访问计数器管理器对象。这意味着、每个计数器管理器对象都表示为自己的表、而该计数器管理器对象的实例(例如系统中的各个磁盘)则可作为该表中的一行进行访问。每行都包含该实例的多个性能计数器。您可以将实例的单个性能计数器作为该表行中的一个字段来访问。</block>
-  <block id="b624cb182b45b8cd771b55f340bd48db" category="paragraph">在以下示例中、`host_adapter` counter manager对象以表格式表示、用于说明如何使用ONTAP REST API访问每个性能计数器。系统中有多个主机适配器、每个主机适配器都有自己的性能计数器：</block>
   <block id="8306b094d2e16f41079e29117db4bb23" category="cell">Instance name</block>
-  <block id="fbec7db93c11926b216977db525ae3ab" category="cell">REST计数器</block>
   <block id="f74fb34c9f03e41b8c43158d192c2d00" category="cell">host_adapter_1</block>
-  <block id="d8a7543b7dce739012bd345b5a03eccb" category="cell">总读取操作数</block>
-  <block id="e27bc9a2caed78fe1b2b968b85b1dfd9" category="cell">total_write_ops</block>
-  <block id="31057b5059a47701f78ecd9a1f74a071" category="cell">bytes_read</block>
-  <block id="477dba04d73005ccb3c67063b3a38723" category="cell">bytes_written</block>
-  <block id="cf0e377beaa1e7766c218fd657cbbbd2" category="cell">max_link_data_rate</block>
-  <block id="e1fe7012a83d918a6018ad433c5911c6" category="cell">RSCN_count</block>
   <block id="5179155001c9f520ffb99f72e2b20b26" category="cell">host_adapter_2</block>
   <block id="e963b19eb0f4d2b1cf056e63183513d8" category="cell">host_adapter_3.</block>
-  <block id="b8e21401d171e2074defa8652af924bd" category="section-title">使用REST API示例了解此结构</block>
-  <block id="31e2f56402a33c38bb51a024fb126484" category="paragraph">使用以下REST API示例帮助了解计数器管理器表的结构。这些示例还向您展示了如何使用REST API发现可用的端点、并使用它们深入了解系统的性能。这些示例将浏览`host_adapter` counter manager对象、并逐步显示有关该对象及其包含的计数器值的更详细信息。如果您在系统上尝试这些示例、请务必在所示位置用方括号&lt;&gt;提供相关信息的值。</block>
-  <block id="bec1d0d2213e6c86ce1d238db29c19d4" category="section-title">发现可用的性能计数器表</block>
-  <block id="f277ad098d40e91b5eb2ab7a35f6508e" category="paragraph">您可以使用此REST API调用来发现可以查询的所有计数器管理器表：</block>
-  <block id="5e15906e971267826a4f4e09b907e18d" category="listing-title">示例响应(截断以缩短时间)：</block>
-  <block id="50932c8d3176ea01109499bc172117ea" category="section-title">查询单个性能计数器表</block>
-  <block id="987e44df4701f85b99bed446c53704d0" category="paragraph">您可以使用此REST API调用查看一个特定表(计数器管理器对象)的问题描述 和元数据。输出说明了该表的用途、并说明了该表中每个性能计数器记录的信息类型。在此示例中、我们查询`host_adapter`表：</block>
-  <block id="8a651b733e43788e6c813c286a2ed976" category="listing-title">示例响应：</block>
-  <block id="76f44ea931b02455d8f2c37f92aafe27" category="section-title">查看性能计数器表中的行</block>
-  <block id="445271c2961902f1af016fe036a233ca" category="paragraph">您可以使用此REST API调用查看表中的行、该调用会告知您存在哪些计数器管理器对象实例：</block>
-  <block id="48cea788f1e546862ce3c6b34e79dd3d" category="section-title">查询特定的计数器管理器实例</block>
-  <block id="3fae5b493cbf17e185ee077370c17c3c" category="paragraph">您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、我们请求提供系统中某个电源的性能计数器信息：</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
   <block id="b5ec85c168694921a9de5eadfa6243a8" category="paragraph">ONTAP REST API具有某些限制、可能会影响您对API的使用和自动化代码的开发。下面介绍了这些限制。通常、每个适用场景 都支持REST API的所有ONTAP 版本。有关ONTAP 详细信息、请参见_RAID releases_字段。</block>
   <block id="3428b552896ca875d0afc0a87f353a49" category="admonition">REST API首次随ONTAP 9.6一起提供。</block>
@@ -1265,9 +1239,6 @@
   <block id="571a9281dc7d54056134d0ae9cebe097" category="list-text"><block ref="571a9281dc7d54056134d0ae9cebe097" category="inline-link-rx"></block></block>
   <block id="3eef15c3ebe6737054ec7fdccee59ef8" category="summary">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。</block>
   <block id="b3a25dcbc5dbce2ff68dbfa04004bcf8" category="admonition">NetApp首次在ONTAP 9.6中推出了REST API。自此之后、API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它是ONTAPI的首选战略替代方案。</block>
-  <block id="67aba80d01179bffdadcdf811b49cc44" category="summary">通过ONTAP 计数器管理器、ONTAP 用户可以访问性能计数器信息并导出许多不同的ONTAP 性能计数器指标。</block>
-  <block id="6be98e5db6d305c8664913cfad46b09c" category="inline-link">ONTAP 9.12.1 ONTAPI到REST计数器管理器映射</block>
-  <block id="9c05e54babc957a833ecc92ef2e75012" category="paragraph">请参见<block ref="73d740243a5716d9ce6f3044b00bac72" category="inline-link-rx"></block> 有关ONTAP 9.11.1中REST API可用的一组ONTAP 计数器的文档、以及有关ONTAPI和REST API使用量之间的计数器差异的信息。</block>
   <block id="85689804a28905b0c1195ff1c4debf5c" category="paragraph">计数器管理器子系统会捕获有关ONTAP 的各种统计信息。您可以访问此信息以评估系统性能。此资源类型是在ONTAP 9.11中引入的。</block>
   <block id="4ceab4a3abb75365d3643e7027283265" category="paragraph">您可以创建和管理 MetroCluster 部署，包括执行切换或切回操作。此资源类型是ONTAP 9.8中的新增资源、更新为9.11。</block>
   <block id="ef706b335d4d5abcae8612013f999056" category="paragraph">您可以使用这些端点检索有关所有平台环境传感器的详细信息。此资源类型是在ONTAP 9.11中引入的。</block>
@@ -1538,4 +1509,76 @@
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。</block>
   <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
   <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
+  <block id="7e9d549a6ae2d8edef3b2cbe603be866" category="summary">ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将这些数据导出为性能计数器、您可以使用这些计数器来评估ONTAP 系统的性能并帮助实现性能目标。</block>
+  <block id="f820365d9bff90a726b9e0e66581d39d" category="paragraph">ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将此数据导出为一组_performance计数器_、您可以使用这些计数器评估ONTAP 系统的性能并帮助实现性能目标。</block>
+  <block id="a47c181a1090073afb97b1f1a4307d7d" category="section-title">访问ONTAP 性能计数器</block>
+  <block id="cdbb9578a759a13c2c7134feb12a72ea" category="paragraph">您可以使用两个不同的API以及通过ONTAP 命令行界面访问ONTAP 性能计数器。</block>
+  <block id="0c6461c68e8a20bdf018fd0dbc7bc7a5" category="admonition">在自动化管理ONTAP 部署时、ONTAP REST API是首选的战略性选项。</block>
+  <block id="ce0b080944b4c8f4f5ea8092842dc74d" category="section-title">ONTAPI</block>
+  <block id="beae2ae79822078348590dc0ba8ce1b2" category="paragraph">NetApp网络易管理性SDK提供ONTAPI。使用ONTAPI时、性能计数器在一组对象中定义。每个对象对应于系统的一个物理或虚拟组件。根据系统配置、每个对象可以有一个或多个实例。</block>
+  <block id="f4e84d55cb14c2c5144d25f275bd9f3b" category="paragraph">例如、如果您的ONTAP 系统有四个物理磁盘、则会有四个实例<block ref="75688b0220ad16c4e02152b6c2b56424" prefix=" " category="inline-code"></block> 对象、每个对象都有自己的一组性能计数器。您可以使用ONTAPI访问每个磁盘实例的各个计数器。</block>
+  <block id="6d36845d186d3890b3067fbbdb46a807" category="paragraph">从ONTAP 9.11.1开始、您还可以通过REST API访问性能数据。在这种情况下、性能计数器按表进行组织、这些表相当于ONTAPI对象。每个表行都相当于ONTAPI对象的一个实例。</block>
+  <block id="769682f5d559ebcb9541e71fb574bef6" category="paragraph">例如、如果您的ONTAP 系统有四个物理磁盘、则为<block ref="75688b0220ad16c4e02152b6c2b56424" prefix=" " category="inline-code"></block> 表将包含四行。每一行都可以单独访问、并包含自己的一组性能计数器、这些计数器可作为行中的字段或列使用。</block>
+  <block id="14b8ecb81db2006a9a8b3cc58981aa9c" category="paragraph">在使用ONTAP REST API访问性能计数器之前、您应做好准备。</block>
+  <block id="167b969eaf908213a52bfc7d95b47339" category="section-title">性能计数器以表形式组织</block>
+  <block id="77ea505a85a8a1dfb8b77911558da1d3" category="paragraph">一组ONTAPI对象可通过ONTAP REST API访问、并显示为表。例如、ONTAPI * hostadapter*对象通过REST API显示为* host_adpater*表。系统中的每个主机适配器都是一行、其中包含自己的一组性能计数器。</block>
+  <block id="80ad75217d00ef2075eec658520cf5c9" category="cell">Total_Read_OPS_1</block>
+  <block id="7b733195b8d6f71526a1f37ebce6d184" category="cell">total_write_ops_1</block>
+  <block id="18245b17d333487b4ab2119f59717e24" category="cell">bytes_read_1</block>
+  <block id="6fec29bb26cfd8c777d3cb7841c1fd6f" category="cell">bytes_writed_1</block>
+  <block id="21990672a0af5fe35999ebaca07834a7" category="cell">max_link_data_rate_1</block>
+  <block id="ee72c0c0ba5867feec433ba7494cc0a4" category="cell">RSCN_count_1</block>
+  <block id="ada945e170e5b528dc821351ffa1ca14" category="cell">Total_Read_ops_2</block>
+  <block id="a24695010bf2913575b4e484c82362e4" category="cell">Total_write_ops_2</block>
+  <block id="49c7d988cd250ce82f5c163b31f4561b" category="cell">bytes_read_2</block>
+  <block id="5a9d32ef76b0dbca01cf7c966e72795b" category="cell">bytes_writed_2</block>
+  <block id="67362a66da910fea4f18a6599dd7a61e" category="cell">max_link_data_rate_2</block>
+  <block id="26515188ac6484810046ed30eb9ecc4f" category="cell">RSCN_count_2</block>
+  <block id="de38d39100fc7fee980a47fd37073bf9" category="cell">总读取操作数_3</block>
+  <block id="37388d8a3c10c070facd1451fc7c1d44" category="cell">total_write_ops_3.</block>
+  <block id="30410fbd489b0763b5e4bad491ed57f7" category="cell">bytes_read_3</block>
+  <block id="4f127818c5904ea49d8055d43a327c03" category="cell">bytes_writed_3.</block>
+  <block id="701b5588801318d9288bb78ea2e71583" category="cell">max_link_data_rate_3.</block>
+  <block id="11ac925c4de2f7be1785e44473d87be3" category="cell">RSCN_count_3</block>
+  <block id="63b8106cb2aa672ae3995c5d558d3296" category="section-title">REST端点摘要</block>
+  <block id="7744b29f6452d3e2eb95c503d0d07edf" category="paragraph">有四个主要端点可用于访问ONTAP 性能计数器和相关表。</block>
+  <block id="090ab1896a0449210d800ef238f4b5a6" category="admonition">每个REST端点都提供只读访问、并且仅支持*获取* HTTP方法。请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="dbba1a079a2db71002bfc2065fb3ea97" category="list-text">*集群/计数器/表*</block>
+  <block id="dfa3a3a64218018784f7e9436fe8fc6a" category="paragraph">返回计数器表及其架构定义的集合。</block>
+  <block id="cf4029871e69df9be8d03de70bed514c" category="list-text">*/集群/计数器/表/｛name｝*</block>
+  <block id="ada16b5e5eb31075579222dc02c39052" category="paragraph">返回有关单个命名计数器表的信息。</block>
+  <block id="32bc9a5de05d0316aa8cabd90fd9b85a" category="list-text">*/集群/计数器/表/｛counter_name｝/rows*</block>
+  <block id="77841d08a4b26aff7d4266e98154ce37" category="paragraph">返回命名计数器表中的行集合。</block>
+  <block id="769b471b30f38933e7b2102ece1306eb" category="list-text">*/集群/计数器/表/｛counter_name｝/行/｛id｝*</block>
+  <block id="a01a598346c8ee9e07f64ca8b3c6dfb3" category="paragraph">返回命名计数器表中的特定行。</block>
+  <block id="8754d12ba0d161651192001fada04f18" category="section-title">从ONTAPI迁移到REST API</block>
+  <block id="9cfb5bc4e6579f4ac50244e8b2931ed5" category="paragraph">NetApp广泛支持将自动化代码从ONTAPI迁移到ONTAP REST API。这包括将文档映射到身份标识在REST API中为给定ONTAPI对象提供的等效性能计数器表。</block>
+  <block id="38fa1dfa125f39c71e3841bb1a8acad8" category="paragraph">请根据您使用的ONTAP 版本查看相应的映射文档：</block>
+  <block id="69171af9658ef4af7c5718f77b0005ea" category="inline-link">ONTAP 9.12.1性能计数器映射</block>
+  <block id="d80bcff677f986fc21887a1d1191e247" category="list-text"><block ref="d80bcff677f986fc21887a1d1191e247" category="inline-link-rx"></block></block>
+  <block id="54f3a66937c05960457b35fe016ec878" category="inline-link">ONTAP 9.11.1性能计数器映射</block>
+  <block id="7406cf183a318ad72a9fcbd90c5efa56" category="list-text"><block ref="7406cf183a318ad72a9fcbd90c5efa56" category="inline-link-rx"></block></block>
+  <block id="0780850d56e52d88a8eaefb85c6c63bb" category="section-title">开始使用ONTAP REST API</block>
+  <block id="ae545f118384587cae56a2872c8f5b56" category="paragraph">以下示例说明了如何使用REST API访问ONTAP 性能计数器。其中包括检索可用表的列表以及浏览表结构。</block>
+  <block id="5d40b4d1c96be5f3ac1fce29c993e666" category="paragraph">在使用示例之前、请查看以下信息。</block>
+  <block id="823a6e1d7fe661be55dd3af05f972b11" category="paragraph-title">ONTAP 凭据</block>
+  <block id="d9406f35ebb4debde35d5724f54923b6" category="paragraph">您需要一个包含密码的ONTAP 管理员帐户。</block>
+  <block id="40800f2ceb1fadf0fb67562c1b95ca89" category="paragraph-title">集群管理IP</block>
+  <block id="88622e4ee60becc302d495a1fb82ef7a" category="paragraph">您需要为ONTAP 系统配置集群管理IP地址。</block>
+  <block id="0ba7651aa741c2a52c725e15b6609f90" category="paragraph-title">所有API调用均使用GET方法</block>
+  <block id="e9b76346cc46565647f0a3768c5e7a3c" category="paragraph">以下所有示例只能用于使用HTTP GET方法检索信息。</block>
+  <block id="8edb7db9b7ce12a91e5f7f328c4fd571" category="paragraph-title">变量替换</block>
+  <block id="842e9897d607f226bc07569db10801dc" category="paragraph">每个卷曲示例都包含一个或多个变量、以大写字母和带括号的文本表示。请务必根据您的环境情况将这些变量替换为实际值。</block>
+  <block id="ddfe305f362a09c7825cbb3a71606269" category="paragraph-title">示例与端点匹配</block>
+  <block id="d18abe51873853d22fe390c1932b7e68" category="paragraph">以下示例顺序说明了如何使用可用于检索性能计数器的REST端点。请参见 <block ref="1969dd68038c480c3d1e1caf4d6cac68" category="inline-xref-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="409153b432612c0c28d59068b4f722b2" category="section-title">示例1：所有性能计数器表</block>
+  <block id="ba60f1982500153039ce706a8490c8e9" category="paragraph">您可以使用此REST API调用来发现所有可用的计数器管理器表。</block>
+  <block id="e0da47631d6f2648f3a36bde7e269c3b" category="example-title">curl 示例</block>
+  <block id="bff6b273561ec6570215c14bdba13a26" category="example-title">JSON 输出示例</block>
+  <block id="2520cd8ad21213341252042d4ae11a70" category="section-title">示例2：有关特定表的高级信息</block>
+  <block id="4deeab1a43ea80fa57c532f7930d6577" category="paragraph">您可以使用此REST API调用来显示特定表的问题描述 和元数据。输出内容包括表的用途以及每个性能计数器包含的数据类型。本示例使用了*主机适配器*表。</block>
+  <block id="8edf37a446938beb909344829dcef098" category="section-title">示例3：特定表中的所有行</block>
+  <block id="4482877c1310ddfbbba9fb22dc7df61b" category="paragraph">您可以使用此REST API调用查看表中的所有行。这表示存在哪些计数器管理器对象实例。</block>
+  <block id="fcecf68c3a713225f78b4de16ac6df03" category="section-title">示例4：特定表中的单行</block>
+  <block id="0aeaf5f6b15f47a8487668e4d5e041f2" category="paragraph">您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、请求其中一个主机适配器的性能数据。</block>
 </blocks>
