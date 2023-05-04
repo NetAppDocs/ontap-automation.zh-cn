@@ -68,7 +68,7 @@ Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协
 通过这些端点，您可以检索和更新密钥管理器的配置。此资源类型是 ONTAP 9.10 中的新增资源。
 
 .密钥管理器
-密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。另外、还对ONTAP 9.12进行了更新、以支持身份验证密钥。
+密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。另外、还对ONTAP 9.12进行了更新、以支持身份验证密钥。ONTAP 9.13增加了还原功能。
 
 .密钥存储
 密钥存储用于描述密钥管理器的类型。此资源类型是 ONTAP 9.10 中的新增资源。
@@ -115,3 +115,6 @@ Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协
 
 .SSH SVMs
 通过这些端点，您可以检索所有 SVM 的 SSH 安全配置。此资源类型是在 ONTAP 9.10 中引入的。
+
+.TOTPS
+您可以使用REST API为使用SSH登录和访问ONTAP 的帐户配置基于时间的一次性密码(TOTP)配置文件。此资源类型是在ONTAP 9.13中引入的。

@@ -609,7 +609,6 @@
   <block id="a4273e3e312edbc9d5bd7c188aecc370" category="doc">名称服务</block>
   <block id="4cbf67c663a0aa1becab1170ca932173" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。</block>
   <block id="83df374f1b14e7e892413b9679071d0f" category="paragraph">您可以显示动态 DNS （ DDNS ）信息并管理 DDNS 子系统。此资源类型是 ONTAP 9.8 的新增功能。</block>
-  <block id="f97bb8cb9c33354ac4515053dad458e0" category="paragraph">DNS 支持将 ONTAP 集群集成到网络中。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="bf174dc4f6f36d6d0f560f114ed35af0" category="paragraph">LDAP 服务器可用于维护用户信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="8de221752bd6a162ef831c894ff99445" category="paragraph">通过名称映射，您可以将身份从一个名称域映射到另一个名称域。例如，您可以将身份从 CIFS 映射到 UNIX ，将 Kerberos 映射到 UNIX ，将 UNIX 映射到 CIFS 。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="29d694e39bf428e6908248736cf6c34b" category="paragraph">NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -674,7 +673,6 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="4c557aa1edc9db8b42f1265ae600f253" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见<block ref="3f8b8a296b98a2427cd0fe076ddc5c7d" category="inline-link-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
-  <block id="772ba71e6aaaa5e3a9d9cdecd907e2e2" category="paragraph">在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是 ONTAP 9.10 中的新增资源。</block>
   <block id="3f689cafff034d41de3da8f0516fe489" category="paragraph">通过这些端点，您可以显示和更新外部 FPolicy 服务器的连接状态信息。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="239f703364a5564124a3d68e8344a9c2" category="paragraph">锁定是一种同步机制，用于对同时访问多个客户端同时访问同一文件的文件实施限制。您可以使用这些端点检索和删除锁定。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="d096166c57e2b6d919e03cce85418d64" category="paragraph">对 S3 事件的审核是一项安全改进，可用于跟踪和记录某些 S3 事件。可以为每个存储分段的每个 SVM 设置 S3 审核事件选择器。此资源类型是在 ONTAP 9.10 中引入的。</block>
@@ -690,11 +688,7 @@
   <block id="6403a27a515eaf92633945f4270c6cc4" category="paragraph">自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="0ae2ed9e360218bc8a7361630749a37d" category="paragraph">您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="8159db13d1fb608175963a59674de159" category="list-text"><block ref="8159db13d1fb608175963a59674de159" category="inline-link-rx"></block></block>
-  <block id="09b968a9a3d2c3977d1e4ac1ccd11b75" category="inline-link">PyPI ： NetApp ONTAP 9.10.1</block>
-  <block id="4be092006953c35749a0846e4734167a" category="list-text"><block ref="4be092006953c35749a0846e4734167a" category="inline-link-rx"></block></block>
   <block id="3c7d0c806ed3155c89dbd1e259689a6c" category="paragraph">PyPI 上的 NetApp Python Client Library 软件包。</block>
-  <block id="52c1911015b514cf96a78c24068ce96a" category="inline-link">适用于 9.10.1 的 NetApp PCL-文档</block>
-  <block id="dd0ebea31107f6302bac45e38cca3b1d" category="list-text"><block ref="dd0ebea31107f6302bac45e38cca3b1d" category="inline-link-rx"></block></block>
   <block id="8f3b394b3596fb5977bc82383618f11f" category="paragraph">NetApp Python 客户端库的文档。</block>
   <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
   <block id="000c4dd933d539d502d855e482ad30ed" category="paragraph">您可以使用这些端点复制，创建一致性组的快照，并对其进行清单编制和还原。此资源类型是在 ONTAP 9.10 中引入的。</block>
@@ -940,7 +934,6 @@
   <block id="f60bce136c62f7ab3c73aa4f0d5fcae9" category="list-text">目录</block>
   <block id="91f3a2c0e4424c87689525da44c4db11" category="list-text">文件</block>
   <block id="06a467722471a55dde81911330523907" category="paragraph">您可以检索有关MetroCluster 配置中所有SVM对的信息。此资源类型是在ONTAP 9.11.1中引入的。</block>
-  <block id="67e3defb688be7685ce637d90e158565" category="paragraph">先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。此功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。此资源类型是在ONTAP 9.11.1中引入的。</block>
   <block id="292b052ce2719671eb57c58f83562861" category="paragraph">您可以检索已建立的CIFS连接的列表。此资源类型是在ONTAP 9.11.1中引入的。</block>
   <block id="4d6ac2d984cc413aff1fe87f7e0fa660" category="paragraph">在确定共享，文件和目录访问权限时， CIFS 服务器可以使用本地组进行授权。此资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中进行了显著扩展。</block>
   <block id="c775568e4d8c67f72b663a73cb197aba" category="paragraph">您可以显示有关集群的NetBIOS连接的信息。详细信息包括IP地址和已注册的NetBIOS名称。此信息可帮助您解决名称解析问题。此资源类型是在ONTAP 9.11.1中引入的。</block>
@@ -969,7 +962,6 @@
   <block id="9a602388f357467e0f50667f5767b094" category="paragraph"><block ref="9a602388f357467e0f50667f5767b094" category="inline-link-rx"></block></block>
   <block id="6e6432511bc053d1916f5f8f0915598d" category="sidebar">迁移到REST API</block>
   <block id="9e7684bc06c1628bc838239d69633ef1" category="sidebar">ONTAPI到REST映射</block>
-  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">博客</block>
   <block id="8306b094d2e16f41079e29117db4bb23" category="cell">Instance name</block>
   <block id="f74fb34c9f03e41b8c43158d192c2d00" category="cell">host_adapter_1</block>
   <block id="5179155001c9f520ffb99f72e2b20b26" category="cell">host_adapter_2</block>
@@ -994,7 +986,6 @@
   <block id="062c6b1332887634d0f4ba9bb07e2408" category="section-title">角色类型</block>
   <block id="b0ad3654895321cb1caaae438045af81" category="paragraph">角色有两种类型。随着ONTAP 的发展、它们会针对不同的环境进行介绍和定制。</block>
   <block id="506d78eb05f037a1ad45a240957b6c58" category="inline-link-macro">比较角色类型</block>
-  <block id="91298b899ea8ab62f0d96df3023adad0" category="admonition">使用每种类型的角色都有优缺点。请参见 <block ref="5d8cc8a3f0f5fa94fdd14f3d1499ea30" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Type</block>
   <block id="50780f47f6839d47d60bc4555ee00c3f" category="cell">REST</block>
   <block id="1bfbcce75c3c9a52a464d4cb0984488a" category="cell">传统</block>
@@ -1216,8 +1207,6 @@
   <block id="25f413c15047133feb7268cff95a6db2" category="paragraph">提供关键ONTAPI调用以及与等效REST API调用的映射。选择相应的ONTAP 版本。</block>
   <block id="8a931880f5b86cd8e245987c19c7acb1" category="inline-link">PyPI：NetApp ONTAP</block>
   <block id="f1414234dbf1c874f89997d3c54bcfbc" category="list-text"><block ref="f1414234dbf1c874f89997d3c54bcfbc" category="inline-link-rx"></block></block>
-  <block id="1cc0729e83919e90c575ff14c0fce5fc" category="inline-link">适用于9.12.1的NetApp PCL-文档</block>
-  <block id="84a1f9d4b229fd80b1a8e5bd8bf448f2" category="list-text"><block ref="84a1f9d4b229fd80b1a8e5bd8bf448f2" category="inline-link-rx"></block></block>
   <block id="d45d9e85cc7b83745a3636a19ac8b2bb" category="summary">ONTAP REST API具有某些限制、可能会影响您对API的使用和自动化代码的开发。</block>
   <block id="eb0cda77424e206695a7e1df680678f7" category="paragraph">ONTAP 9.12.1继续扩展ONTAP REST API的功能、新增了40多个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点介绍了安全性和NAS功能的改进。</block>
   <block id="5f6c185eb38c56187fc699dfbe62654b" category="list-text">安全性增强功能</block>
@@ -1238,7 +1227,6 @@
   <block id="866a03d0e7b971bda163096bf0c8b27d" category="list-text"><block ref="866a03d0e7b971bda163096bf0c8b27d" category="inline-link-rx"></block></block>
   <block id="571a9281dc7d54056134d0ae9cebe097" category="list-text"><block ref="571a9281dc7d54056134d0ae9cebe097" category="inline-link-rx"></block></block>
   <block id="3eef15c3ebe6737054ec7fdccee59ef8" category="summary">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。</block>
-  <block id="b3a25dcbc5dbce2ff68dbfa04004bcf8" category="admonition">NetApp首次在ONTAP 9.6中推出了REST API。自此之后、API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它是ONTAPI的首选战略替代方案。</block>
   <block id="85689804a28905b0c1195ff1c4debf5c" category="paragraph">计数器管理器子系统会捕获有关ONTAP 的各种统计信息。您可以访问此信息以评估系统性能。此资源类型是在ONTAP 9.11中引入的。</block>
   <block id="4ceab4a3abb75365d3643e7027283265" category="paragraph">您可以创建和管理 MetroCluster 部署，包括执行切换或切回操作。此资源类型是ONTAP 9.8中的新增资源、更新为9.11。</block>
   <block id="ef706b335d4d5abcae8612013f999056" category="paragraph">您可以使用这些端点检索有关所有平台环境传感器的详细信息。此资源类型是在ONTAP 9.11中引入的。</block>
@@ -1254,10 +1242,8 @@
   <block id="6a03698ef52f46c4a77e198a43a38112" category="paragraph">您可以检索或修改用于 ONTAP 集群或存储网络的以太网交换机的配置。此资源类型是ONTAP 9.8中的新增资源、更新为9.11。</block>
   <block id="24b8e2e199d26c8d4795b1e0066f0ade" category="paragraph">您可以使用光纤通道(FC)光纤REST API端点检索有关FC网络的信息。其中包括ONTAP 集群与FC网络结构之间的连接、构成网络结构的交换机以及活动区域集的分区。此资源类型是在ONTAP 9.11中引入的。</block>
   <block id="a26a18125d0bd911657d95ac2181c65d" category="paragraph">ONTAP 网络连接功能已进行扩展、可支持IP子网。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。此资源类型是在ONTAP 9.11中引入的。</block>
-  <block id="d00ae1caddb315563889c10b5aab0c13" category="paragraph">一致性组是指在执行快照等特定操作时组合在一起的一组卷。此功能可扩展单卷操作在一组卷中隐式的崩溃一致性和数据完整性。此资源类型是在ONTAP 9.10中引入的、并在9.12中进行了更新。</block>
   <block id="7f89e0943d9c0849a52f0db1412bed43" category="paragraph">Amazon Web Services包括一项密钥管理服务、可为密钥和其他机密提供安全存储。您可以通过REST API访问此服务、以使ONTAP 能够将其加密密钥安全地存储在云中。此外、您还可以创建和列出用于NetApp存储加密的身份验证密钥。此支持是ONTAP 9.12的新增功能。</block>
   <block id="00d9cb95eeaf06aed2c944d601467bab" category="paragraph">通过这组 API 调用，您可以使用 Azure 密钥存储来存储 ONTAP 加密密钥。此资源类型是 ONTAP 9.8 的新增功能。</block>
-  <block id="5457b382c48b43492d6c476d117cac17" category="paragraph">密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。另外、还对ONTAP 9.12进行了更新、以支持身份验证密钥。</block>
   <block id="20a5796507ad5434cd0a5cb89dabf3b5" category="paragraph">为多个管理员提供批准访问的选项可提高ONTAP 和IT环境的安全性。这些资源类型是在ONTAP 9.11中引入的。</block>
   <block id="64653610bb83e768ab10ed738c71d4f7" category="paragraph">独立应用程序可以通过发出POST请求在ONTAP 系统上记录EMS事件以及可选生成的AutoSupport 软件包。此资源类型是在ONTAP 9.11.1中引入的</block>
   <block id="1559c80340a3552e982d5443b26cb658" category="summary">通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。</block>
@@ -1505,7 +1491,6 @@
   <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织、如ONTAP API联机文档中所示。下面简要介绍了每个资源的问题描述 、并根据需要提供其他使用注意事项。</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">ONTAP REST API的新增功能</block>
   <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
-  <block id="4acb4d74fe00ae1c12d51ed7033cfe13" category="paragraph">如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。您可以使用许多有用的资源和工具来支持迁移。</block>
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。</block>
   <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
   <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
@@ -1581,4 +1566,67 @@
   <block id="4482877c1310ddfbbba9fb22dc7df61b" category="paragraph">您可以使用此REST API调用查看表中的所有行。这表示存在哪些计数器管理器对象实例。</block>
   <block id="fcecf68c3a713225f78b4de16ac6df03" category="section-title">示例4：特定表中的单行</block>
   <block id="0aeaf5f6b15f47a8487668e4d5e041f2" category="paragraph">您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、请求其中一个主机适配器的性能数据。</block>
+  <block id="19a9062545fe4aec02e4bb9d69d9e65d" category="inline-link">适用于9.13.1的NetApp PCL文档</block>
+  <block id="99984697846692a3881d97799a42681d" category="list-text"><block ref="99984697846692a3881d97799a42681d" category="inline-link-rx"></block></block>
+  <block id="963d435d638b3d71d80951dc73d9e301" category="paragraph">一致性组是指在执行快照等特定操作时组合在一起的一组卷。此功能可扩展单卷操作在一组卷中隐式的崩溃一致性和数据完整性。此资源类型是在ONTAP 9.10中引入的、并在9.12中进行了更新。ONTAP 9.13添加了一个用于检索指标性能和容量数据的端点。</block>
+  <block id="a8b23618c319cee164fb5e3f52338ae8" category="paragraph">密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。另外、还对ONTAP 9.12进行了更新、以支持身份验证密钥。ONTAP 9.13增加了还原功能。</block>
+  <block id="f677f9a733e2a55d249253e8ee3e8921" category="paragraph-title">TOTPS</block>
+  <block id="0e5fb54a649ae9d2dadb9308dc2d69b4" category="paragraph">您可以使用REST API为使用SSH登录和访问ONTAP 的帐户配置基于时间的一次性密码(TOTP)配置文件。此资源类型是在ONTAP 9.13中引入的。</block>
+  <block id="6f54f32be84451ac2f476ef54a9e35d8" category="paragraph">DNS 支持将 ONTAP 集群集成到网络中。此资源类型是在ONTAP 9.6中推出的、并在ONTAP 9.13中得到了增强。</block>
+  <block id="0268691e0c9875a7d64cf190b57d3c19" category="paragraph">在集群和 SVM 级别添加了对 CIFS 域的支持，其中包含多种类型的端点。您可以检索域配置以及创建和删除首选域控制器。此资源类型是在ONTAP 9.10中推出的、并在ONTAP 9.13中得到了增强。</block>
+  <block id="fc00b2aa4aec9f5df16272d4a62b16d0" category="paragraph-title">EMS角色配置</block>
+  <block id="25ee47e7f366103a7fb621883886a827" category="paragraph">通过EMS支持功能、可以管理角色以及分配给角色的访问控制配置。这样、便可根据角色配置限制或筛选事件和消息。此资源类型是在ONTAP 9.13中引入的。</block>
+  <block id="6fa0e3b9545e1804391d8a9ceffb4a38" category="paragraph">先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。此功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。此资源类型是在ONTAP 9.11中引入的。</block>
+  <block id="e277905409f479c9f7d224d59ca24ef1" category="paragraph-title">资源标记</block>
+  <block id="718f01f530b26a630c97ea9d3dabf463" category="paragraph">您可以使用标记对REST API资源进行分组。您可以执行此操作来关联特定项目或组织组中的相关资源。使用标记有助于更有效地组织和跟踪资源。此资源类型是在ONTAP 9.13中引入的。</block>
+  <block id="6e35f32cbbb6f9e4f935f3e9092771f0" category="paragraph-title">S3存储分段规则</block>
+  <block id="6bc2fc1d1d82b40d53835f8a9db33179" category="paragraph">S3分段可以包括规则定义。每个规则都是一个列表对象、用于定义要对存储分段中的对象执行的一组操作。此资源类型是在ONTAP 9.13中引入的。</block>
+  <block id="5f6bf2fac8af69fcf38f9b1b785e910e" category="inline-link">PyPI：NetApp ONTAP 9.13.1</block>
+  <block id="1d6690c7f751b90aee685c57c28ea355" category="list-text"><block ref="1d6690c7f751b90aee685c57c28ea355" category="inline-link-rx"></block></block>
+  <block id="3d1c384a3746b6aef27889dab20ca2a0" category="doc">工具和软件</block>
+  <block id="0a88f9e4d64baf56329012472f2f7f1c" category="paragraph">NetApp提供了Python示例脚本和其他相关软件、可支持您从ONTAP API迁移到ONTAP REST API。下面介绍了其中最重要的样本。</block>
+  <block id="2025f1a4ba0e95c1bd1bd27f08690087" category="inline-link">NetApp ONTAP REST Python</block>
+  <block id="122b5178f05cbf36001150787ae34516" category="admonition">所有Python代码示例均可从获取<block ref="e359793ef9022d56bacc77e70a2f7722" category="inline-link-rx"></block> GitHub存储库。</block>
+  <block id="5d22b30ce5603c5346d7b65cbcf3433f" category="paragraph-title">ONTAPI使用情况报告工具</block>
+  <block id="7842d4d8803b176c1b2259dec8456d2e" category="paragraph">ONTAPI使用情况报告工具旨在帮助NetApp专业服务人员、客户和合作伙伴确定其ONTAP 环境中的ONTAPI使用情况。下表介绍了针对三种不同使用情形提供的脚本。</block>
+  <block id="f907e651164789346ae0a1e257c462d8" category="cell">脚本</block>
+  <block id="acd8e1efb3d4b4812a351b944b20ca37" category="cell">apache_scraper.py</block>
+  <block id="d58b4e0daf558695b856954865d329b0" category="cell">一个Apache日志刷新程序、用于查找对ONTAP 节点发出的ONTAPI调用</block>
+  <block id="0efaaee27c17eb790ee7383ad12ff286" category="cell">session_stats.py</block>
+  <block id="95ec10ffbde5e94edc43ebffd44f7347" category="cell">一个命令行界面脚本、用于从ONTAP 检索会话统计信息数据</block>
+  <block id="3282e0ae607e974457c339eff19c2619" category="cell">zapi_to_rest.py</block>
+  <block id="72af54bf44f3d8ee9be1e4f34a09378e" category="cell">一个脚本、用于提取所传递的ONTAPI调用和属性的其余详细信息</block>
+  <block id="6d35e073768c520486a8f6583b2367dd" category="paragraph">请参见<block ref="10e3da19ba49cdfd167b1f3dae41bc1c" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="065b1ca8f53a1fbcdf87961fdd9cf9b2" category="paragraph-title">专用CLI直通</block>
+  <block id="0446fa4ca147c362e3712c199d31f607" category="paragraph">REST API广泛涵盖了ONTAP 提供的功能和工具。但是、在某些情况下、通过REST API直接访问ONTAP 命令行界面可能会很有用。</block>
+  <block id="4dee1eb90de4bde1248e4896c4dc4381" category="inline-link">REST命令行界面直通示例</block>
+  <block id="dfd00e91a832f40b6d730ced03aa0c44" category="paragraph">有关此功能的简介、请参见 <block ref="430c6d579ad9ddc178e54d66821e7597" category="inline-link-macro-rx"></block>。有关Python示例、请参见<block ref="93e4c8d6cc1dc72ab5e25d8c76e6620b" category="inline-link-rx"></block>。</block>
+  <block id="5b6f04d9b27dfe7b2a32885119050b9f" category="paragraph">Python客户端库是一个软件包、您可以安装它并使用它通过Python访问ONTAP REST API。它允许您快速开发强大的代码、以实现ONTAP 部署的自动化。</block>
+  <block id="c6b457514ae1938bb2d3532b1e2647dd" category="inline-link">Python客户端库示例</block>
+  <block id="a33bae430fa2ebfdc47724814a7caf8c" category="paragraph">有关Python客户端库的简介、请参见 <block ref="ac55708e9eb87a85b101cbb6f38b8a1d" category="inline-link-macro-rx"></block>。有关Python示例、请参见<block ref="7bcad7f4339ec59707ec4753e36168b7" category="inline-link-rx"></block>。</block>
+  <block id="7c3954a6c1ca76b5209bce67c8c332e8" category="doc">已取消ONTAPI</block>
+  <block id="7f2d7d67765d2784e59992625f3b9f8e" category="paragraph">ONTAP API (ZAPI)是NetApp ONTAP 软件附带的一组原始专有调用、用于支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果您使用的是ONTAPI、则应规划向ONTAP REST API的迁移。</block>
+  <block id="89bbd9a5e14ece77e8729df33cc56559" category="paragraph">NetApp首次在ONTAP 9.6中推出了REST API。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。您可以使用许多有用的资源和工具来支持迁移。</block>
+  <block id="d662068ac363663b595ce3a43cc70a12" category="inline-link">CCPC-00410终止提供：ONTAPI</block>
+  <block id="4985f6980a34153c58b9f31390f6ce91" category="list-text"><block ref="4985f6980a34153c58b9f31390f6ce91" category="inline-link-rx"></block></block>
+  <block id="43b4a2745f58846c59587466ca441f41" category="inline-link">NetApp DevNet：ONTAP REST API</block>
+  <block id="d5925e110eea01252505453208400570" category="list-text"><block ref="d5925e110eea01252505453208400570" category="inline-link-rx"></block></block>
+  <block id="6b9418a55963f7822ccea753684768bf" category="inline-link">ONTAP 9.13.1性能计数器映射</block>
+  <block id="8673c6516e8e00de96b96886974e6eb6" category="list-text"><block ref="8673c6516e8e00de96b96886974e6eb6" category="inline-link-rx"></block></block>
+  <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="inline-link">ONTAP 9.13.1</block>
+  <block id="b41840dcdd390cc23a6e04dde600cf7b" category="list-text"><block ref="b41840dcdd390cc23a6e04dde600cf7b" category="inline-link-rx"></block></block>
+  <block id="cbec0159857226b0512b2b18211eca44" category="paragraph">ONTAP 9.13.1通过20多个新的API调用不断扩展ONTAP REST API的功能。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点改进了安全性、资源管理、增强的SVM配置选项和性能指标。</block>
+  <block id="aecbf8e5ebbb6b089493eac6cb71ca69" category="list-text">资源标记</block>
+  <block id="593fee19f1d4b1b19620fdf80753a276" category="list-text">您可以使用标记对REST API资源进行分组。您可以执行此操作来关联特定项目或组织组中的相关资源。使用标记有助于更有效地组织和跟踪资源。</block>
+  <block id="6c8636b0093a2d3302f979cb09b7bd7d" category="list-text">ONTAP 9.13.1会继续扩展性能计数器数据的可用性。现在、您可以访问此类统计信息来跟踪一致性组的历史性能和容量。此外、还提供了一些增强功能、可用于配置和管理一致性组之间的父子关系。</block>
+  <block id="3910f0fe54e915b906f2c1c1b3fa478e" category="list-text">每个SVM的DNS配置</block>
+  <block id="a5c0a51954c4e8af84ce524380e56477" category="list-text">现有DNS端点已进行扩展、可对单个SVM执行DNS域和服务器配置。</block>
+  <block id="444e0808a8a39a0403934928133d05a6" category="list-text">现有的EMS支持功能已进行扩展、可用于管理角色以及分配给这些角色的访问控制配置。这样、便可根据角色配置限制或筛选事件和消息。</block>
+  <block id="526beab4a02389a85e7476e42b82f603" category="list-text">您可以使用REST API为使用SSH登录和访问ONTAP 的帐户配置基于时间的一次性密码(TOTP)配置文件。此外、密钥管理器端点已进行扩展、可从指定的密钥管理服务器执行还原操作。</block>
+  <block id="77e3b4a2a04eafcaa392a8fb92b8b98b" category="list-text">每个SVM的CIFS配置</block>
+  <block id="2a448fcc25cf428d2769919718ce218b" category="list-text">现有CIFS端点已进行扩展、可以更新特定SVM的配置。</block>
+  <block id="423daa27c59571ee80d9d7ca9cf5088e" category="list-text">现有S3存储分段端点已进行扩展、可包含规则定义。每个规则都是一个列表对象、用于定义要对存储分段中的对象执行的一组操作。这些规则可以让您更好地管理S3存储分段的生命周期。</block>
+  <block id="f9f9079f4f63047ab8997287078e8b41" category="admonition">使用每种类型的角色都有优缺点。请参见 <block ref="35c80ca1076cc300bab74e8699286675" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="6b6a02ad27b147c17d7a65dc825f0954" category="list-text"><block ref="6b6a02ad27b147c17d7a65dc825f0954" category="inline-link-rx"></block></block>
+  <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">博客文章</block>
 </blocks>

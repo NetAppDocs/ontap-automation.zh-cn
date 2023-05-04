@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: migrate/software.html 
+keywords:  
+summary:  
+---
+= 工具和软件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp提供了Python示例脚本和其他相关软件、可支持您从ONTAP API迁移到ONTAP REST API。下面介绍了其中最重要的样本。
+
+
+NOTE: 所有Python代码示例均可从获取 https://github.com/NetApp/ontap-rest-python["NetApp ONTAP REST Python"^] GitHub存储库。
+
+.ONTAPI使用情况报告工具
+ONTAPI使用情况报告工具旨在帮助NetApp专业服务人员、客户和合作伙伴确定其ONTAP 环境中的ONTAPI使用情况。下表介绍了针对三种不同使用情形提供的脚本。
+
+[cols="20,80"]
+|===
+| 脚本 | Description 
+
+
+| apache_scraper.py | 一个Apache日志刷新程序、用于查找对ONTAP 节点发出的ONTAPI调用 
+
+
+| session_stats.py | 一个命令行界面脚本、用于从ONTAP 检索会话统计信息数据 
+
+
+| zapi_to_rest.py | 一个脚本、用于提取所传递的ONTAPI调用和属性的其余详细信息 
+|===
+请参见 https://github.com/NetApp/ontap-rest-python/tree/master/ONTAPI-Usage-Reporting-Tool["ONTAPI使用情况报告工具"^] 有关详细信息 ...
+
+.专用CLI直通
+REST API广泛涵盖了ONTAP 提供的功能和工具。但是、在某些情况下、通过REST API直接访问ONTAP 命令行界面可能会很有用。
+
+有关此功能的简介、请参见 link:../rest/access_ontap_cli.html["通过 REST API 访问 ONTAP 命令行界面"]。有关Python示例、请参见 https://github.com/NetApp/ontap-rest-python/tree/master/examples/rest_api/cli_passthrough_samples["REST命令行界面直通示例"^]。
+
+.Python 客户端库
+Python客户端库是一个软件包、您可以安装它并使用它通过Python访问ONTAP REST API。它允许您快速开发强大的代码、以实现ONTAP 部署的自动化。
+
+有关Python客户端库的简介、请参见 link:../python/overview_pcl.html["Python 客户端库概述"]。有关Python示例、请参见 https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Python客户端库示例"^]。

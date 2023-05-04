@@ -32,7 +32,7 @@ NOTE: ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得�
 角色有两种类型。随着ONTAP 的发展、它们会针对不同的环境进行介绍和定制。
 
 
-NOTE: 使用每种类型的角色都有优缺点。请参见 link:../rest/work_roles_users.html#comparing-the-role-types["比较角色类型"] 有关详细信息 ...
+NOTE: 使用每种类型的角色都有优缺点。请参见 link:../rest/rbac_roles_users.html#comparing-the-role-types["比较角色类型"] 有关详细信息 ...
 
 [cols="20,80"]
 |===

@@ -46,7 +46,7 @@ summary: 您还可以访问其他几个资源，以获取有关如何自动部�
 +
 PyPI 上的 NetApp Python Client Library 软件包。
 
-* https://library.netapp.com/ecmdocs/ECMLP2884819/html/index.html["适用于9.12.1的NetApp PCL-文档"^]
+* https://library.netapp.com/ecmdocs/ECMLP2885777/html/index.html["适用于9.13.1的NetApp PCL文档"^]
 +
 NetApp Python 客户端库的文档。
 

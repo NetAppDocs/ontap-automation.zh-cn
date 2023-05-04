@@ -53,6 +53,16 @@ homepage:
       url: "/automate/ontap_ansible.html"
     - title: 自动化博客
       url: "/automate/blogs.html"
+  - title: 迁移到REST API
+    links:
+    - title: 已取消ONTAPI
+      url: "/migrate/overview.html"
+    - title: ONTAPI到REST映射
+      url: "/migrate/mapping.html"
+    - title: 性能计数器
+      url: "/migrate/performance-counters.html"
+    - title: 博客文章
+      url: "/migrate/blogs.html"
   - title: 更多资源
     links:
     - title: 获取更多信息

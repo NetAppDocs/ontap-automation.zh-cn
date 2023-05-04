@@ -34,7 +34,7 @@ Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关�
 有关文档和其他资源的链接，请参见 _NetApp 开发人员网络 _ 。
 
 .相关信息
-* https://pypi.org/project/netapp-ontap["PyPI ： NetApp ONTAP 9.10.1"^]
-* https://library.netapp.com/ecmdocs/ECMLP2879970/html/index.html["适用于 9.10.1 的 NetApp PCL-文档"^]
+* https://pypi.org/project/netapp-ontap["PyPI：NetApp ONTAP 9.13.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2885777/html/index.html["适用于9.13.1的NetApp PCL文档"^]
 * https://devnet.netapp.com/restapi.php["NetApp 开发人员网络： ONTAP RESTful API"^]
 
