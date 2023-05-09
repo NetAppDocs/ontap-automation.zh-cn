@@ -445,7 +445,6 @@
   <block id="e2578ec54f85b5b6333c94364b756a1c" category="list-text">节点管理 LIF</block>
   <block id="a954bd55e944d7b65a02512356ab0177" category="list-text">SVM 管理 LIF</block>
   <block id="3869128f90019baba527314ae533f075" category="paragraph">您选择使用的 LIF 必须配置为支持 HTTPS 管理协议。此外，网络中的防火墙配置必须允许 HTTPS 流量。</block>
-  <block id="45959e4341735c410aac6dadf11dd966" category="admonition">您应始终使用集群管理 LIF 。这样可以在所有节点之间对 API 请求进行负载平衡，并避免出现脱机或连接问题的节点。</block>
   <block id="649819179ab6bae8f5294207b4462523" category="section-title">ONTAP API 联机文档页面</block>
   <block id="af945751c0efb1d33830b48e2e17c2e6" category="paragraph">用于访问最新版本 API 的文档页面的 URL 格式为：</block>
   <block id="5577746582bcb9358092e3471e9dbcbb" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/docs/api`</block>
@@ -1629,4 +1628,5 @@
   <block id="f9f9079f4f63047ab8997287078e8b41" category="admonition">使用每种类型的角色都有优缺点。请参见 <block ref="35c80ca1076cc300bab74e8699286675" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="6b6a02ad27b147c17d7a65dc825f0954" category="list-text"><block ref="6b6a02ad27b147c17d7a65dc825f0954" category="inline-link-rx"></block></block>
   <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">博客文章</block>
+  <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。</block>
 </blocks>
