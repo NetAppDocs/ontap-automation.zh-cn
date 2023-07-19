@@ -210,7 +210,6 @@
   <block id="ad647e4ae904c7ed54ee93040d8298c7" category="cell">小于</block>
   <block id="cedf8da05466bb54708268b3c694a78f" category="cell">&gt;</block>
   <block id="05824b7be006782aaefd1fdb97c71e06" category="cell">大于</block>
-  <block id="a7eeaea90b4e8312b88abcd178019929" category="cell">&lt;=</block>
   <block id="28d1141142e2cbb29e657b69a044ddf4" category="cell">小于或等于</block>
   <block id="3a1e9b87c94b54dec1202b5ca6539806" category="cell">&gt;=</block>
   <block id="798fe01fcb2754a295b6937ed885a69a" category="cell">大于或等于</block>
@@ -252,7 +251,6 @@
   <block id="d803d2dd2f39605b0bc879d0532fc5ba" category="paragraph">实际返回的对象数量可以小于有效的最大数量，具体取决于对对象数量以及系统中对象总数的相关限制。</block>
   <block id="2dadc767979da8ab1576ee0aa8da5e21" category="list-text">缩小结果集的范围</block>
   <block id="317480d31248a2b7b399c7ddbecbf74a" category="list-text">如果需要，您可以将这两个参数与其他查询参数结合使用，以缩小结果集的范围。例如，以下内容最多返回在指定时间之后生成的 10 个 EMS 事件：</block>
-  <block id="89163f6e2498a9f894e7813e6de46b08" category="paragraph">`time=&gt;2018-04-04T15 ： 41 ： 29.140265Z&amp;max_records=10`</block>
   <block id="5394a0e51a0e30e195e0299ede162a02" category="paragraph">您可以通过问题描述发送多个请求来浏览各个对象。后续的每个 API 调用应根据最后一个结果集中的最新事件使用一个新的时间值。</block>
   <block id="050a8c11f48cd555f6e5e6bab96225d6" category="section-title">大小属性</block>
   <block id="721165b216d0f852ad3d9fd6e430dbe1" category="paragraph">某些 API 调用以及某些查询参数使用的输入值为数字。您可以选择使用下表所示的后缀，而不是提供以字节为单位的整数。</block>
@@ -1629,4 +1627,6 @@
   <block id="6b6a02ad27b147c17d7a65dc825f0954" category="list-text"><block ref="6b6a02ad27b147c17d7a65dc825f0954" category="inline-link-rx"></block></block>
   <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">博客文章</block>
   <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。</block>
+  <block id="9d755089336a033163e3d2d980b0a0c6" category="cell">&gt;=</block>
+  <block id="e62ced77ec600a0a48c6c84c38cf0e4e" category="paragraph"><block ref="b53150fedbbf0bd1cbc9f3f68a84f43c" prefix="" category="inline-code"></block></block>
 </blocks>
