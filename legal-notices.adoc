@@ -20,7 +20,7 @@ summary: 法律声明提供对版权声明、商标、专利等的访问。
 
 == 版权
 
-http://www.netapp.com/us/legal/copyright.aspx[]
+link:https://www.netapp.com/company/legal/copyright/["https://www.netapp.com/company/legal/copyright/"^]
 
 
 
@@ -28,7 +28,7 @@ http://www.netapp.com/us/legal/copyright.aspx[]
 
 NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。
 
-http://www.netapp.com/us/legal/netapptmlist.aspx[]
+link:https://www.netapp.com/company/legal/trademarks/["https://www.netapp.com/company/legal/trademarks/"^]
 
 
 
@@ -36,10 +36,10 @@ http://www.netapp.com/us/legal/netapptmlist.aspx[]
 
 有关 NetApp 拥有的专利的最新列表，请访问：
 
-https://www.netapp.com/us/media/patents-page.pdf[]
+link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf"^]
 
 
 
 == 隐私政策
 
-https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
+link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]

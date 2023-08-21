@@ -42,3 +42,9 @@ Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP 
 == 使用 Ansible
 
 Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。您应首先查看此站点上的文档，包括 link:../automate/ontap_ansible.html["ONTAP 和 Ansible 自动化"]。
+
+
+
+== BlueXP自动化目录
+
+NetApp https://console.bluexp.netapp.com/automationCatalog/["BlueXP自动化目录"^] 可通过BlueXP Web用户界面访问。通过该目录、您可以访问一些解决方案、这些解决方案可以帮助您自动部署和集成ONTAP及其他NetApp产品。请参见 https://docs.netapp.com/us-en/netapp-automation/["NetApp自动化"^] 自动化解决方案问题描述文档。

@@ -824,15 +824,11 @@
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="list-text">数据保护</block>
   <block id="4d3eb4b74688cbcce2793e7fa6452654" category="list-text">应用程序感知型数据管理</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c50ee9e545662286884e42e140649f09" category="doc">使用 ONTAP REST API 管理 DACL 和 SACL 文件权限</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">此处</block>
   <block id="7d455208ee42ecd7867fb39b027bcf1c" category="paragraph">ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从 ONTAP 9.1.1 开始， ONTAP REST API 包括用于为文件分配 SACL 和 DACL 权限以及自动执行文件安全权限的端点。（您可以了解有关在 ONTAP 9.9.1 之前自动执行 SACL 和 DACL 权限的选项的更多信息<block ref="9cac8aefabbfb93ff43b7791e34383b9" category="inline-link-rx"></block>）。</block>
@@ -1629,4 +1625,15 @@
   <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。</block>
   <block id="9d755089336a033163e3d2d980b0a0c6" category="cell">&gt;=</block>
   <block id="e62ced77ec600a0a48c6c84c38cf0e4e" category="paragraph"><block ref="b53150fedbbf0bd1cbc9f3f68a84f43c" prefix="" category="inline-code"></block></block>
+  <block id="2b86317cf346d1bf47abc8c04df6f353" category="section-title">BlueXP自动化目录</block>
+  <block id="cd36c9b3be9291a853cd6c8c14966c93" category="inline-link">NetApp自动化</block>
+  <block id="8e21735532a19050ed5ad15f3404f1c3" category="paragraph">NetApp<block ref="24f12c8cdb9e96aedf586081f8419901" category="inline-link-rx"></block> 可通过BlueXP Web用户界面访问。通过该目录、您可以访问一些解决方案、这些解决方案可以帮助您自动部署和集成ONTAP及其他NetApp产品。请参见<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> 自动化解决方案问题描述文档。</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
 </blocks>
