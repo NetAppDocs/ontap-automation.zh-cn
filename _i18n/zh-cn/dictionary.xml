@@ -1663,7 +1663,6 @@
   <block id="fe675d9d322274e9cc5a016dc13952d0" category="paragraph">使用Curl时的另一个选项是删除Authorization(授权)标头，而改用Curl *user*参数。例如：</block>
   <block id="2ce89c4ab048c9d719169c11cda31579" category="paragraph"><block ref="784832b5a8f97e143e4744b38ce2ea72" prefix="" category="inline-code"></block></block>
   <block id="64f444a853187a8c5bb3d8507d2ba64f" category="paragraph">您需要使用适用于您的环境的凭据进行替换。使用此参数执行CURL命令时、系统会为您生成Authorization.标题。</block>
-  <block id="76b8f173097880ead5a0f4cfd6e0618c" category="section-title">在bash shell中使用卷曲示例</block>
   <block id="70ce4cad9d30893dd103460ed8538167" category="paragraph">如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以按如下所述使用bash shell进行替换。</block>
   <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">使用"Bash"的一个优点是、您可以在shell会话中设置一次变量值、而不是在每个CURL命令中设置一次。</block>
   <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">打开随Linux或类似操作系统提供的bash shell。</block>
@@ -1676,10 +1675,8 @@
   <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">更新集群联系人并确认作业状态</block>
   <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">此工作流将更新集群联系信息。由于请求是异步处理的、因此还说明了如何确定关联的后台作业是否成功完成。</block>
   <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">第1步：更新集群联系信息</block>
-  <block id="5b65398d9afd1a14a452f4645c7fb774" category="paragraph">您可以通过问题描述调用来更新联系信息。</block>
   <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">HTTP方法和端点</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">此REST API调用使用以下方法和端点。</block>
-  <block id="75e17ff813d0ed4dba4fcb32abc673e6" category="paragraph">返回作业对象的标识符。您应将ID值保存为变量$job_ID、以便在下一步中使用。</block>
   <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">第2步：检索作业状态</block>
   <block id="be81401da9da70cf197e1449ca61043d" category="paragraph">您应检索作业状态以确定异步请求是否成功完成。</block>
   <block id="4044a674901deb07947f235775f9654d" category="paragraph">状态值和其他字段包括在返回的作业对象中。</block>
@@ -1696,7 +1693,6 @@
   <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">查询</block>
   <block id="a734854ee8bdd547b3a1a8eeee4f56a8" category="cell">选择要返回的值。示例包括<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block> 和<block ref="2af72f100c356273d46284f6fd1dfc08" prefix=" " category="inline-code"></block>。</block>
   <block id="d68c817e523bebfd3bb5d6e6aed3c2f7" category="paragraph-title">CURL示例：检索集群联系信息</block>
-  <block id="defb04d386d33eda3cf981695c9da0e8" category="paragraph">此示例说明了如何检索单个字段。要获取整个集群配置、您需要删除<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 查询参数。</block>
   <block id="361f902ffbf6412778b4224d2f0f31a2" category="section-title">路径变量</block>
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">每次REST API调用使用的端点路径可以包含各种标识符。每个ID对应于一个特定资源实例。例如、集群ID和SVM ID。</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。例如：</block>
@@ -1706,4 +1702,15 @@
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">获取集群配置</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">更新集群联系人</block>
   <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">列出SVM</block>
+  <block id="c17ef84c021b2307b064e8e24b8013a6" category="paragraph">您可以通过问题描述a Simple Curl命令开始使用ONTAP REST API并确认其可用性。</block>
+  <block id="a98b00db4ce1fec40c21222810430c05" category="section-title">JSON输入示例</block>
+  <block id="09e5af60e7e961d326ecb94915481554" category="paragraph">某些REST API调用(例如使用POST或PATCH)需要为请求正文输入JSON。为了清楚起见、JSON输入示例与CURL示例分开显示。您可以将JSON输入示例与下面所述的一种技术结合使用。</block>
+  <block id="4d8521855bcfebae2c0518f634b5dcbd" category="paragraph-title">保存到本地文件</block>
+  <block id="399feb8e89d476ceeca1f9a576fb97ef" category="paragraph">您可以将JSON示例复制到文件中并将其保存在本地。CURL命令引用使用的文件<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> 带有值的参数、用于指示带有的文件名<block ref="518ed29525738cebdac49c49e60ea9d3" prefix=" " category="inline-code"></block> 前缀。</block>
+  <block id="4ee40cd4d378b7de61905cb45f1009f5" category="paragraph-title">在卷曲示例后粘贴到终端中</block>
+  <block id="d44e4ebc435b8a720eca9d2dce5b7c87" category="paragraph">首先、您需要将CURL示例复制并粘贴到终端Shell中。然后编辑此示例以完全删除<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> 参数、并将其替换为<block ref="3165aa3b2ee77197f8cfd2cc80c7278f" prefix=" " category="inline-code"></block> 参数。最后、复制并粘贴JSON示例、使其遵循Curl命令和更新后的参数。</block>
+  <block id="12c6401fb02cab85d072b4b981f50e87" category="section-title">将示例与Bash结合使用</block>
+  <block id="b5cda5e8b7bc8b7e8457fef21d91230b" category="paragraph">您可以通过问题描述调用来更新集群联系信息。</block>
+  <block id="a8a1e002536d347b924b548b0ac40eaa" category="paragraph">此时将返回此作业对象。您应将作业标识符保存为变量$job_ID、以便在下一步中使用。</block>
+  <block id="8c95ed01afcec406b4d0570ec3d3ff18" category="paragraph">此示例说明了如何检索单个字段。要获取整个集群对象和配置、您需要删除<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 查询参数。</block>
 </blocks>

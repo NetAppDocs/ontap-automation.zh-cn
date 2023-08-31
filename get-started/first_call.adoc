@@ -14,7 +14,7 @@ summary: 您可以使用问题描述a CURL命令开始使用ONTAP REST API并确
 
 
 [role="lead"]
-您可以使用问题描述a CURL命令开始使用ONTAP REST API并确认其可用性。
+您可以通过问题描述a Simple Curl命令开始使用ONTAP REST API并确认其可用性。
 
 .开始之前
 除了在工作站上提供CURL实用程序之外，还需要以下各项：
