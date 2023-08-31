@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_update_cluster_contact.html 
+keywords: workflow, update cluster, cluster contact, job, job state 
+summary: 此工作流将更新集群联系信息。由于此请求是异步处理的，因此它还说明了如何确定后台作业是否成功完成。 
+---
+= 更新集群联系人并确认作业状态
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+此工作流将更新集群联系信息。由于请求是异步处理的、因此还说明了如何确定关联的后台作业是否成功完成。
+
+
+
+== 第1步：更新集群联系信息
+
+您可以通过问题描述调用来更新联系信息。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| patch | 集群 
+|===
+.处理类型
+异步
+
+.curl 示例
+[source, curl]
+----
+curl --location --include \
+--request PATCH "https://$FQDN_IP/api/cluster" \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON 输入示例
+[source, json]
+----
+{
+  "contact": "support@company-demo.com"
+}
+----
+.JSON 输出示例
+返回作业对象的标识符。您应将ID值保存为变量$job_ID、以便在下一步中使用。
+
+[source, json]
+----
+{ "job": {
+    "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+    "_links": {
+      "self": {
+        "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+      }
+    }
+  }
+}
+----
+
+
+== 第2步：检索作业状态
+
+您应检索作业状态以确定异步请求是否成功完成。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /cluster/Jobs/ ｛ uuid ｝ 
+|===
+.处理类型
+同步
+
+.curl 示例
+[source, curl]
+----
+curl --location --include \
+--request GET "https://$FQDN_IP/api/cluster/$JOB_ID" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+状态值和其他字段包括在返回的作业对象中。
+
+[listing]
+----
+{
+  "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+  "description": "PATCH /api/cluster",
+  "state": "success",
+  "message": "success",
+  "code": 0,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+    }
+  }
+}
+----

@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare_workflows.html 
+keywords: workflows, preparation, prepare to use workflows 
+summary: 在实时部署中使用ONTAP工作流之前、您应熟悉其结构和格式。 
+---
+= 准备使用这些工作流
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在实时部署中使用ONTAP工作流之前、您应熟悉其结构和格式。
+
+
+
+== 简介
+
+_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。ONTAP工作流包括完成每项任务所需的核心步骤和参数。它们为自定义ONTAP自动化环境提供了一个起点。
+
+.步骤类型
+ONTAP工作流中的每个步骤都属于以下类型之一：
+
+* REST API 调用（包含 curl 和 JSON 示例等详细信息）
+* 执行或调用其他ONTAP工作流
+* 其他相关任务(例如制定配置决策)
+
+
+.REST API调用
+大多数工作流步骤都是REST API调用。这些步骤使用通用格式、其中包括卷曲示例和其他信息。请参见 link:../reference/api_reference.html["API 参考"] 有关REST API调用的更多详细信息、请参见。
+
+.单步工作流
+一个工作流只能包含一个步骤。这些"单步工作流"的格式与包含多个步骤的工作流略有不同。例如、删除显式步骤名称。工作流操作应根据标题明确。
+
+
+
+== 输入变量
+
+这些工作流的设计尽可能通用、因此可以在任何ONTAP环境中使用。考虑到这一点、REST API调用会在cURL示例和其他输入中使用变量。然后、可以轻松地根据不同的ONTAP环境调整REST API调用。
+
+
+
+=== 基本URL格式
+
+您可以通过CURL或Python等编程语言直接访问ONTAP REST API。在这种情况下、基本URL与访问ONTAP联机文档或System Manager时使用的URL不同。
+
+直接访问API时，需要将*API*附加到域或IP地址。例如：
+
+`https://ontap.demo-example.com/api`
+
+请参见 link:../rest/access_rest_api.html["如何访问 ONTAP API"] 有关访问ONTAP REST API的详细信息、请参见。
+
+
+
+=== 通用输入参数
+
+大多数REST API调用通常使用多个输入参数。这些参数通常不会在各个工作流中进行介绍。您应熟悉这些参数。请参见 link:../rest/input_variables.html["控制 API 请求的输入变量"] 有关详细信息 ...
+
+如果特定的卷曲示例需要其他参数，请参见每个工作流的*卷曲示例的其他输入参数*一节。
+
+
+
+=== 可变格式
+
+这些工作流示例中使用的ID值和其他变量是不透明的、并且可能因每个ONTAP集群而异。为了提高示例的可读性、不使用实际值。而是使用变量。此方法基于一致的格式和一组保留名称、具有以下几个优势：
+
+* CURL和JSON示例更易读、更易于理解。
+* 由于所有关键字都使用相同的格式、因此您可以快速识别它们。
+* 不存在安全风险、因为这些值无法复制和重复使用。
+
+
+这些变量的格式设置为在Bash shell环境中使用。每个变量都以美元符号开头、并根据需要用双引号括起来。这使得他们可以被巴什所识别。名称始终使用大写。
+
+下面是一些常见的变量关键字。此列表并非详尽无遗，我们会根据需要使用其他关键字。根据具体情况，其含义应该是显而易见的。
+
+[cols="25,15,60"]
+|===
+| 关键字 | Type | Description 
+
+
+| $FQDN_IP | URL | ONTAP集群管理LIF的完全限定域名或IP地址。 
+
+
+| $cluster ID | 路径 | UUIDv4值、用于标识运行API操作的ONTAP集群。 
+
+
+| $BASIC AUT1. | 标题 | 用于HTTP基本身份验证的凭据字符串。 
+|===
+
+
+== 身份验证选项
+
+通过ONTAP 9.131、REST API可以使用的主要身份验证方法是基本身份验证。
+
+
+
+=== HTTP基本身份验证
+
+使用基本身份验证时、每个HTTP请求都必须包含用户凭据。有两种发送凭据的方法。
+
+.构建HTTP请求标头
+您可以手动构建授权标头并将其包含在HTTP请求中。如果在CLI中使用cURL命令或对自动化代码使用编程语言、则可以执行此操作。概括而言、这些步骤包括：
+
+. 将用户和密码值与冒号串联：
++
+`admin:david123`
+
+. 将整个字符串转换为base64：
++
+`YWRtaW46ZGF2aWQxMjM=`
+
+. 构建请求标头：
++
+`Authorization: Basic YWRtaW46ZGF2aWQxMjM=`
+
+
+
+工作流卷曲示例包含此标题以及变量*$BASIC _AUT*、使用前需要更新此标题。
+
+.使用Curl参数
+使用Curl时的另一个选项是删除Authorization(授权)标头，而改用Curl *user*参数。例如：
+
+`--user username:password`
+
+您需要使用适用于您的环境的凭据进行替换。使用此参数执行CURL命令时、系统会为您生成Authorization.标题。
+
+
+
+== 在bash shell中使用卷曲示例
+
+如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以按如下所述使用bash shell进行替换。
+
+
+NOTE: 使用"Bash"的一个优点是、您可以在shell会话中设置一次变量值、而不是在每个CURL命令中设置一次。
+
+.步骤
+. 打开随Linux或类似操作系统提供的bash shell。
+. 设置要运行的CURL示例中包含的变量值。例如：
++
+`CLUSTER_ID=ce559b75-4145-11ee-b51a-005056aee9fb`
+
+. 从工作流页面复制卷曲示例并将其粘贴到shell终端中。
+. 按*enter*，将执行以下操作：
++
+.. 替换您设置的变量值
+.. 执行Curl命令
+
+
+

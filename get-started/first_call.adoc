@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/first_call.html 
-keywords: simple API call 
-summary: 您可以在命令行界面上问题描述一个简单的 cURL 命令，开始使用 ONTAP REST API 并确认其可用性。 
+keywords: first REST API call, test REST API 
+summary: 您可以使用问题描述a CURL命令开始使用ONTAP REST API并确认其可用性。 
 ---
 = 您的第一次API调用
 :hardbreaks:
@@ -14,28 +14,32 @@ summary: 您可以在命令行界面上问题描述一个简单的 cURL 命令�
 
 
 [role="lead"]
-您可以在命令行界面上问题描述一个简单的 cURL 命令，开始使用 ONTAP REST API 并确认其可用性。
+您可以使用问题描述a CURL命令开始使用ONTAP REST API并确认其可用性。
 
 .开始之前
-您的工作站必须具有 cURL 实用程序。此外，您还必须具备以下条件：
+除了在工作站上提供CURL实用程序之外，还需要以下各项：
 
-* ONTAP 集群管理 LIF 的 IP 地址或主机名
-* 有权访问 ONTAP REST API （集群资源）的帐户的用户名和密码。
+* ONTAP集群管理LIF的IP地址或FQDN
+* 有权访问ONTAP REST API的帐户的ONTAP凭据
 
 
 
-NOTE: 如果您的凭据包含特殊字符，则您需要根据所使用的 shell 以 Curl 可接受的格式设置这些凭据。例如，您可以在每个特殊字符之前插入反斜杠，或者将整个 `username ： password` 字符串用单引号括起来。
+NOTE: 如果您的凭据包含特殊字符、则需要根据所使用的Shell以可接受的卷曲方式对其进行格式化。例如、您可以在每个特殊字符之前插入反斜杠、或者将整个凭据字符串用双引号括起来。
 
 .步骤
-. 在本地工作站的命令行界面中，检索 ONTAP 软件的版本：
+. 在本地工作站的命令行界面上、问题描述the following command：
 +
-`cURL -X get -u username ： password -k "https://<ip_address>/api/cluster?fields=version"`[]
-
+[source, curl]
+----
+curl --request GET \
+--user username:password \
+"https://$FQDN_IP/api/cluster?fields=version"
+----
 +
 * 示例 *
 
 +
-`cURL -X get -u admin：password -k "https://10.222.81.101/api/cluster?fields=version"`[]
+`curl --request GET --user admin:david123 "https://10.222.81.101/api/cluster?fields=version"`
 
 
 

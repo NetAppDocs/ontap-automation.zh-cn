@@ -49,13 +49,24 @@ NOTE: 并非所有 HTTP 方法都可在每个 REST 端点使用。此外，修�
 |===
 
 
+== 路径变量
+
+每次REST API调用使用的端点路径可以包含各种标识符。每个ID对应于一个特定资源实例。例如、集群ID和SVM ID。
+
+
+
 == 请求标题
 
 您必须在 HTTP 请求中包含多个标头。
 
 内容类型:: 如果请求正文包含 JSON ，则必须将此标头设置为 `application/json` 。
 接受:: 此标头应设置为 `application/hal+json` 。如果将其设置为 `application/json` ，则除了检索下一批记录所需的链接之外，不会返回任何 HAL 链接。如果标头与这两个值不同，则响应中的 `content-type` 标头的默认值将为 `application/hal+json` 。
-Authorization:: 必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。
+Authorization:: 必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。例如：
++
+--
+`Authorization: Basic YWRtaW46cGV0ZXJzb24=`。
+
+--
 
 
 

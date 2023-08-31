@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_list_svms.html 
+keywords: workflow, list SVMs 
+summary: '您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)。您可以在查找特定SVM的标识符时执行此操作、也可以在创建新SVM之前确保名称的唯一性。' 
+---
+= 列出SVM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)。您可以在查找特定SVM的标识符时执行此操作、也可以在创建新SVM之前确保名称的唯一性。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 获取 
+
+
+| 获取 | /svm/svm 
+|===
+.curl 示例
+[source, curl]
+----
+curl --location --include \
+--request GET "https://$FQDN_IP/api/svm/svms" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[listing]
+----
+{
+  "records": [
+    {
+      "uuid": "71bd74f8-40dc-11ee-b51a-005056aee9fa",
+      "name": "vs0",
+      "_links": {
+          "self": {
+            "href": "/api/svm/svms/71bd74f8-40dc-11ee-b51a-005056aee9fa"
+          }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/svm/svms"
+    }
+  }
+}
+----

@@ -12,18 +12,8 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="d828aac2af8d57c06b48e251182e288b" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
-  <block id="cdbbcb4acb019584472990be1e68660f" category="paragraph">在使用工作流流程之前，您应做好准备。</block>
-  <block id="4e9340308dca4d4fa10ce0a1c9d5c96a" category="section-title">了解工作流中使用的 API 调用</block>
-  <block id="ee7a9ae73028cfda6ec52c2a5e7c84f0" category="paragraph">ONTAP API 联机文档页面包含每个 REST API 调用的详细信息。工作流示例中使用的每个 API 调用都仅包含在文档页面上查找此调用所需的信息，而不是在此处重复这些详细信息。找到特定 API 调用后，您可以查看该调用的完整详细信息，包括输入参数，输出格式， HTTP 状态代码和请求处理类型。</block>
-  <block id="457726be17407daf1c955d43ea661695" category="paragraph">工作流中的每个 API 调用都包含以下信息，以帮助您在文档页面上查找此调用：</block>
-  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="list-text">类别</block>
-  <block id="765304ffcf8618a62227ccee634b1d12" category="paragraph">API 调用会在文档页面上按功能相关的区域或类别进行组织。要查找特定的 API 调用，请滚动到页面底部，然后单击相应的 API 类别。</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="list-text">HTTP 方法</block>
-  <block id="94e58690c162ba826800973567ad1063" category="paragraph">HTTP 方法用于标识对资源执行的操作。每个 API 调用都通过一种 HTTP 方法执行。</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">路径</block>
-  <block id="0564266fb62d9d7133097f1bae879dde" category="paragraph">路径用于确定在执行调用时操作适用场景所使用的特定资源。路径字符串会附加到核心 URL 中，以形成用于标识资源的完整 URL 。</block>
-  <block id="3af7790bee98254ae139d4927f1bb354" category="section-title">构建 URL 以直接访问 REST API</block>
-  <block id="cb9e0022deebe15c9fcf226449b0ffca" category="paragraph">除了 ONTAP 文档页面之外，您还可以通过 Python 等编程语言直接访问 ONTAP REST API 。在这种情况下，核心 URL 与访问联机文档页面时使用的 URL 稍有不同。直接访问 API 时，必须将 ` /API` 附加到域和端口字符串中。例如： `https://ontap.mycompany.com/api`</block>
   <block id="29fe0e3b021fed4ff52a274326d05c86" category="inline-link-macro">如何访问 ONTAP API</block>
   <block id="f9423483f907b342ce1d6b2a5646580f" category="doc">基本操作特征</block>
   <block id="d9ea677ef356bfa08eea805869f9eded" category="paragraph">虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。</block>
@@ -194,7 +184,6 @@
   <block id="c4408d335012a56ff58937d78050efad" category="list-text">接受</block>
   <block id="43e5eac57fb1fee548fbabb2345d61d5" category="list-text">此标头应设置为 `application/hal+json` 。如果将其设置为 `application/json` ，则除了检索下一批记录所需的链接之外，不会返回任何 HAL 链接。如果标头与这两个值不同，则响应中的 `content-type` 标头的默认值将为 `application/hal+json` 。</block>
   <block id="9cd8a2455b1839ff98ef70c05b9b5983" category="list-text">Authorization</block>
-  <block id="1ef8df17a9442d1f08a0df818861c5e5" category="list-text">必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。</block>
   <block id="a3ba8461439f7d0176ef3944696ea2ac" category="section-title">请求正文</block>
   <block id="973ab3cad185dec8eac7662330e49f1c" category="paragraph">请求正文的内容因具体调用而异。HTTP 请求正文包含以下内容之一：</block>
   <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">包含输入变量的 JSON 对象</block>
@@ -353,7 +342,6 @@
   <block id="51c033a34d63a2d1737e1b6bdf842d1f" category="list-text">获取作业的当前状态。</block>
   <block id="b281ec87e30bc1058b3173012f46c637" category="list-text">如果作业处于非终端状态，请重新执行环路。</block>
   <block id="6caaacff3c8abae5d9b2e02a5e4d0829" category="list-text">当作业达到终端状态（成功，失败）时停止。</block>
-  <block id="13d76f06d267496e8846be9e378c6df8" category="inline-link-macro">工作流 1 ：更新集群联系人并检查作业状态</block>
   <block id="f09943979dc3457d406cfb7e8205a032" category="paragraph">您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。</block>
   <block id="f372ae3b2fda116fe4b7463cbac902c0" category="section-title">ONTAP 9 资源</block>
   <block id="8574bd76a1428c3bf08d97dadd4ae77c" category="inline-link">ONTAP 和 ONTAP System Manager 资源</block>
@@ -595,12 +583,6 @@
   <block id="c8e2277ecfb1427838c488c217f99466" category="doc">云</block>
   <block id="309e7aa37e1bfea74efcababb5902309" category="paragraph">您可以使用这些 API 调用管理与云中对象存储资源的连接。</block>
   <block id="42505ed890a81cb2bef8c94c82effedf" category="paragraph">目标表示云中的对象存储资源。每个目标都包含连接到存储资源所需的配置信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="a30f2db6f9a8c5629dc89b408b5d97e4" category="paragraph">您可以在命令行界面上问题描述一个简单的 cURL 命令，开始使用 ONTAP REST API 并确认其可用性。</block>
-  <block id="f1d5e3ebc77f66e2befb5941d10019ee" category="paragraph">您的工作站必须具有 cURL 实用程序。此外，您还必须具备以下条件：</block>
-  <block id="ec4f05f95246e64e1875be5ee79905b2" category="list-text">有权访问 ONTAP REST API （集群资源）的帐户的用户名和密码。</block>
-  <block id="da932131b500d8e907961663d8ef346b" category="admonition">如果您的凭据包含特殊字符，则您需要根据所使用的 shell 以 Curl 可接受的格式设置这些凭据。例如，您可以在每个特殊字符之前插入反斜杠，或者将整个 `username ： password` 字符串用单引号括起来。</block>
-  <block id="58866791801e443554927396816c827c" category="list-text">在本地工作站的命令行界面中，检索 ONTAP 软件的版本：</block>
-  <block id="8a35977a6f21dff949427e42cf6d3999" category="paragraph">`cURL -X get -u username ： password -k <block ref="1f92f5c8813ca60ee841c4440a7f8600" category="inline-link-rx"></block></block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 示例 *</block>
   <block id="42ac9c1cc1752704f9d6980ce41b7ba3" category="paragraph">ONTAP 版本信息以 JSON 格式显示。</block>
   <block id="a4273e3e312edbc9d5bd7c188aecc370" category="doc">名称服务</block>
@@ -654,17 +636,10 @@
   <block id="6051810223d7d640e8104859ac825bf3" category="paragraph">异步和同步关系可建立所需的连接传输数据。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="c76837312025a879c77fbb723b7e215e" category="paragraph">您可以通过现有 SnapMirror 关系管理 SnapMirror 传输。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="7de269085c4e23e4ff26c31b7122144d" category="paragraph">此工作流将更新集群联系信息。由于此请求是异步处理的，因此它还说明了如何确定后台作业是否成功完成。</block>
-  <block id="530cddf0f41aa70491fa5a19e26768cb" category="section-title">1. 更新集群的联系信息</block>
-  <block id="4a79b9839f0a471eb4a2d3d7f2bf76f9" category="paragraph">您可以通过问题描述调用来更新联系信息。由于此请求异步运行，因此您必须确认关联作业是否成功。</block>
   <block id="e95402dceacd5260b74e758bf2e748ef" category="cell">集群</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">异步</block>
-  <block id="66b29b9f2bdc949a7545046fbe59fcef" category="listing-title">卷曲</block>
-  <block id="8f2622c34a0d14fa4c9c3a13011b9b6c" category="paragraph">返回具有关联标识符的作业对象。</block>
-  <block id="6f5089fd2df9f1fabec1177bfdc6290f" category="section-title">2. 检索作业状态</block>
-  <block id="82437d3826cc31eff7495baa268e454c" category="paragraph">您必须检索作业状态以确定异步请求是否已成功完成。</block>
   <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/cluster/Jobs/ ｛ uuid ｝</block>
   <block id="2fe4167817733fec8e6ba1afddf78f1b" category="paragraph">同步</block>
-  <block id="50ccf1eac00654a4ac10e12d843b2025" category="paragraph">返回状态为和其他字段的作业对象。</block>
   <block id="fa3072c5dcc3c24dc044383b1ee6e52d" category="sidebar">ONTAP 和 Ansible</block>
   <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
@@ -681,7 +656,6 @@
   <block id="c9fc87bcce85ba9b55c70c4a5a618d7b" category="paragraph">通过这些端点，您可以检索和更新密钥管理器的配置。此资源类型是 ONTAP 9.10 中的新增资源。</block>
   <block id="8e534dc2397390aadbe32ec748d96a3d" category="paragraph">密钥存储用于描述密钥管理器的类型。此资源类型是 ONTAP 9.10 中的新增资源。</block>
   <block id="04da7052ae3148365ddf3af010db695e" category="paragraph">通过这些端点，您可以检索所有 SVM 的 SSH 安全配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
-  <block id="bfed0b768d4205be491cf9aab9ef5bf1" category="list-text">ONTAP 9.6 到 ONTAP 9.10.1</block>
   <block id="6403a27a515eaf92633945f4270c6cc4" category="paragraph">自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="0ae2ed9e360218bc8a7361630749a37d" category="paragraph">您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="8159db13d1fb608175963a59674de159" category="list-text"><block ref="8159db13d1fb608175963a59674de159" category="inline-link-rx"></block></block>
@@ -723,12 +697,9 @@
   <block id="d63266d909698767690c10fa377a617c" category="doc">准备使用 Python 客户端库</block>
   <block id="cc64aef30dda7a27f1a668974ac1e3a8" category="doc">Python 客户端库概述</block>
   <block id="61f3e167c95c469dd90a86ddd901388f" category="paragraph">NetApp ONTAP Python 客户端库是一个软件包，您可以安装该软件包并使用它来编写访问 ONTAP REST API 的脚本。它支持多种底层服务，包括连接管理，异步处理，异常处理和错误消息。通过使用 Python 客户端库，您可以快速开发强大的代码来支持 ONTAP 部署的自动化。</block>
-  <block id="efa1dd0050ca05b6c44b7b778e28c93b" category="doc">工作流 1 ：更新集群联系人并检查作业状态</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">准备使用这些工作流</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">相关链接</block>
-  <block id="87d9604d2178e58e4d22b66dc74675f2" category="list-text"><block ref="87d9604d2178e58e4d22b66dc74675f2" category="inline-link-macro-rx"></block></block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">REST 资源摘要</block>
-  <block id="b04c0c0415c8329423a4dc5d04335c63" category="list-text"><block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block></block>
   <block id="64b6ec9f9d366c873d08fe8bc6ed4cff" category="section-title">访问 ONTAP API 文档页面</block>
   <block id="1273c6d3912948b5c61164da6ba4c3ab" category="paragraph">您可以快速开始使用 ONTAP REST API 和其他自动化技术。在准备并了解基本的请求响应流之后，您可以使用 curl 对简单的 API 调用进行问题描述 。此准备工作介绍了在实时系统上使用更复杂的工作流之前所需的简介和视角。</block>
   <block id="625c92078d49d59bd332d26752459a1c" category="doc">准备使用 ONTAP REST API</block>
@@ -759,7 +730,6 @@
   <block id="424fc80aa929edad9729b9b006049584" category="paragraph">使用 Web 浏览器时， ONTAP API 联机文档页面提供了一个访问点。除了提供直接执行单个 API 调用的方法之外，此页面还包括 API 的详细问题描述，包括每个调用的输入参数和其他选项。API 调用按功能类别进行组织。请参见 <block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="6427fa68aca1f0e647dc8dc6d6c6d323" category="doc">使用作业对象进行异步处理</block>
   <block id="aa5ed514388a44e4dc092690c451252e" category="paragraph">请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 确定要异步执行的 API 调用。</block>
-  <block id="5a683654a64ec8dd5cecf5ff4ead9469" category="paragraph"><block ref="5a683654a64ec8dd5cecf5ff4ead9469" category="inline-link-macro-rx"></block></block>
   <block id="b4cd15e8e24635e4a72a8cce25d314ca" category="sidebar">ONTAP 自动化文档</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
@@ -774,7 +744,6 @@
   <block id="5f6e122585e52ed38be95d84c84f7806" category="sidebar">自动化技术</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
   <block id="8cd67c079826033809b33b6f3ac2da9a" category="sidebar">用于检索集群配置的脚本</block>
-  <block id="57bf92c591d867814abf9287e2781651" category="sidebar">工作流 1 —更新集群联系人并检查状态</block>
   <block id="466b9c64436468f52860809312c8a835" category="sidebar">了解自动化选项</block>
   <block id="5201581c33f8ca3c8850ac4a788dbda3" category="sidebar">检索集群软件版本</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
@@ -1174,7 +1143,6 @@
   <block id="57ffddb99e11d6096024019ec78a7294" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。创建REST角色会自动创建传统的_MAPPING角色。</block>
   <block id="9c72cbdda2c8bbec859c44a2f9ca219c" category="admonition">您可以联机访问ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息的文档、包括如何使用API的示例。</block>
   <block id="0fdbfb1fe714496cb439bf652e454595" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="cf7871643c6e047cdf46579054e4d5c1" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="1620bfae18b24c9aeb26299384e3355d" category="paragraph">`cURL -X get -u admin：password -k <block ref="9b818800381d633e2ed9a126d3941682" category="inline-link-rx"></block></block>
   <block id="d1b92a4930d50c6ed1038655db0d2684" category="sidebar">所有ONTAP 产品文档</block>
   <block id="476bf6fc5e4a2d37b00403ec863106ac" category="inline-link">ONTAP 9产品文档</block>
   <block id="ea13735c00bcda944bfcad2caa280467" category="list-text"><block ref="ea13735c00bcda944bfcad2caa280467" category="inline-link-rx"></block></block>
@@ -1470,8 +1438,6 @@
   <block id="0a783c3ce00e8d3af4931704ca629ba3" category="paragraph-title">内置角色之一是否足以满足要求、或者是否需要自定义角色？</block>
   <block id="531201515c1ec0bfadb1f37e57c2222d" category="paragraph-title">需要什么类型的角色？</block>
   <block id="11678e3d67c685db9322ab4433f227a6" category="paragraph-title">处理类型</block>
-  <block id="11a1b77794af7e7ad738c9603dcf8730" category="paragraph-title">JSON输出</block>
-  <block id="29c2c02a361c9d7028472e5d92cd4a54" category="paragraph-title">输出</block>
   <block id="56aa3ed9dba484ac641c5247a15b1ed6" category="paragraph-title">基本要求</block>
   <block id="11593a40313671a88f29e6475859f238" category="paragraph-title">软件包名称和版本</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="paragraph-title">安装</block>
@@ -1636,4 +1602,108 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="4ab1add905aec7c143d5425426b1470e" category="summary">您可以使用问题描述a CURL命令开始使用ONTAP REST API并确认其可用性。</block>
+  <block id="78a7b7c7971a80951fd85f4b28e7518c" category="paragraph">除了在工作站上提供CURL实用程序之外，还需要以下各项：</block>
+  <block id="7bfe29215621deb70a47f902294281bf" category="list-text">ONTAP集群管理LIF的IP地址或FQDN</block>
+  <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">有权访问ONTAP REST API的帐户的ONTAP凭据</block>
+  <block id="21569412cc525b31a0c126598a680b86" category="admonition">如果您的凭据包含特殊字符、则需要根据所使用的Shell以可接受的卷曲方式对其进行格式化。例如、您可以在每个特殊字符之前插入反斜杠、或者将整个凭据字符串用双引号括起来。</block>
+  <block id="81c7a329d4f4793f536260d6cec23a04" category="list-text">在本地工作站的命令行界面上、问题描述the following command：</block>
+  <block id="b5b73d02b288e67898182f6b6f76e267" category="paragraph"><block ref="429d1cce820c881fb624c558f06b534f" prefix="" category="inline-code"></block></block>
+  <block id="f9c5f8c688d72b2f67cbb721eb8bd53e" category="summary">在实时部署中使用ONTAP工作流之前、您应熟悉其结构和格式。</block>
+  <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">简介</block>
+  <block id="f5d6d63dd550f378522648a645333f6d" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。ONTAP工作流包括完成每项任务所需的核心步骤和参数。它们为自定义ONTAP自动化环境提供了一个起点。</block>
+  <block id="122f0884abaeb43a4eccb0ddc5dbdbb8" category="paragraph-title">步骤类型</block>
+  <block id="4e91dc3707946c5fde9a76d95d86ab96" category="paragraph">ONTAP工作流中的每个步骤都属于以下类型之一：</block>
+  <block id="6f01c5142da7df41a4b71dc3f7570bda" category="list-text">REST API 调用（包含 curl 和 JSON 示例等详细信息）</block>
+  <block id="f0c298fa6a4d2b967cd3572a4ce8c34f" category="list-text">执行或调用其他ONTAP工作流</block>
+  <block id="45632949cdd1c5466795de61555ae0ca" category="list-text">其他相关任务(例如制定配置决策)</block>
+  <block id="b75a89b63647fdd9b09694c37ca63bf9" category="paragraph-title">REST API调用</block>
+  <block id="a8492c61ad8067f69139069d55e20ede" category="paragraph">大多数工作流步骤都是REST API调用。这些步骤使用通用格式、其中包括卷曲示例和其他信息。请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关REST API调用的更多详细信息、请参见。</block>
+  <block id="67159a63ec04dcd49136183d2862cd66" category="paragraph-title">单步工作流</block>
+  <block id="5570ed8b3997fd4a9427eb890ee775d9" category="paragraph">一个工作流只能包含一个步骤。这些"单步工作流"的格式与包含多个步骤的工作流略有不同。例如、删除显式步骤名称。工作流操作应根据标题明确。</block>
+  <block id="cc10a6127f01a14ee7d08690e5476c21" category="paragraph">这些工作流的设计尽可能通用、因此可以在任何ONTAP环境中使用。考虑到这一点、REST API调用会在cURL示例和其他输入中使用变量。然后、可以轻松地根据不同的ONTAP环境调整REST API调用。</block>
+  <block id="5e57b8d8be99da22a6cda01581fc3221" category="section-title">基本URL格式</block>
+  <block id="604fbbb8706e844b0b4aa2616a3a72ec" category="paragraph">您可以通过CURL或Python等编程语言直接访问ONTAP REST API。在这种情况下、基本URL与访问ONTAP联机文档或System Manager时使用的URL不同。</block>
+  <block id="b2e546a32c02144282fc626a17b4123a" category="paragraph">直接访问API时，需要将*API*附加到域或IP地址。例如：</block>
+  <block id="1130426d3f04c52f410ac60e6ce8b230" category="paragraph"><block ref="3fb09ca3875413da44a9832d2ed627b7" prefix="" category="inline-code"></block></block>
+  <block id="224416f5b5ef9ebeb4b9501a363a46a3" category="paragraph">请参见 <block ref="87d9604d2178e58e4d22b66dc74675f2" category="inline-link-macro-rx"></block> 有关访问ONTAP REST API的详细信息、请参见。</block>
+  <block id="3791b7d0d91a2238c40dbbfefa886cc7" category="section-title">通用输入参数</block>
+  <block id="42f67270fcba9fb260d596a38b564570" category="paragraph">大多数REST API调用通常使用多个输入参数。这些参数通常不会在各个工作流中进行介绍。您应熟悉这些参数。请参见 <block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="4cad1a5966d83b6ddc6a861ab5449fce" category="paragraph">如果特定的卷曲示例需要其他参数，请参见每个工作流的*卷曲示例的其他输入参数*一节。</block>
+  <block id="c7975313824cd849192810f63bcd9a1e" category="section-title">可变格式</block>
+  <block id="662081edc74f6dec8617a183354314a9" category="paragraph">这些工作流示例中使用的ID值和其他变量是不透明的、并且可能因每个ONTAP集群而异。为了提高示例的可读性、不使用实际值。而是使用变量。此方法基于一致的格式和一组保留名称、具有以下几个优势：</block>
+  <block id="6846bd19d3855d33378ece05b56de412" category="list-text">CURL和JSON示例更易读、更易于理解。</block>
+  <block id="89bd915fe5612063332c1abcee674fbb" category="list-text">由于所有关键字都使用相同的格式、因此您可以快速识别它们。</block>
+  <block id="d94ea72c6f873db4ad92c298e5f6c0b5" category="list-text">不存在安全风险、因为这些值无法复制和重复使用。</block>
+  <block id="262817c71879ed58754769cf3f684d4b" category="paragraph">这些变量的格式设置为在Bash shell环境中使用。每个变量都以美元符号开头、并根据需要用双引号括起来。这使得他们可以被巴什所识别。名称始终使用大写。</block>
+  <block id="d1970310ade44fffdc04c2b848f972f1" category="paragraph">下面是一些常见的变量关键字。此列表并非详尽无遗，我们会根据需要使用其他关键字。根据具体情况，其含义应该是显而易见的。</block>
+  <block id="220f3d3750583b9db48568a0b5b9a5f1" category="cell">关键字</block>
+  <block id="00fb17c50b70dc75802223ee442804c7" category="cell">$FQDN_IP</block>
+  <block id="e6b391a8d2c4d45902a23a8b6585703d" category="cell">URL</block>
+  <block id="f42332ef9ed7d9b54c78a421adffdd26" category="cell">ONTAP集群管理LIF的完全限定域名或IP地址。</block>
+  <block id="8422281c7f63b05015c4269e5d39d708" category="cell">$cluster ID</block>
+  <block id="d2888ae6c2336e3de9f327d87d6d6e8c" category="cell">UUIDv4值、用于标识运行API操作的ONTAP集群。</block>
+  <block id="4ed5b72e5a5b649b5d306892bfcb0f7d" category="cell">$BASIC AUT1.</block>
+  <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">标题</block>
+  <block id="7d8953ad437c7a74fa7c3eaa1037c286" category="cell">用于HTTP基本身份验证的凭据字符串。</block>
+  <block id="71d08941d68cdfdc2782675a59475359" category="section-title">身份验证选项</block>
+  <block id="189c9092755b5ec9acf4ef1fb0b54d46" category="paragraph">通过ONTAP 9.131、REST API可以使用的主要身份验证方法是基本身份验证。</block>
+  <block id="5f7f2e03d053c151ec8a08fd76564f5a" category="section-title">HTTP基本身份验证</block>
+  <block id="dc248dc9e4f71e5475b8cecc054f14d4" category="paragraph">使用基本身份验证时、每个HTTP请求都必须包含用户凭据。有两种发送凭据的方法。</block>
+  <block id="303374a8533b38fb7d98a5790a54237c" category="paragraph-title">构建HTTP请求标头</block>
+  <block id="1eb945a3e58fc6954932a5681f004ce7" category="paragraph">您可以手动构建授权标头并将其包含在HTTP请求中。如果在CLI中使用cURL命令或对自动化代码使用编程语言、则可以执行此操作。概括而言、这些步骤包括：</block>
+  <block id="de502eeb74b9db18547f010273db3a03" category="list-text">将用户和密码值与冒号串联：</block>
+  <block id="4f765dee7c913da188ec3feb5803b2eb" category="paragraph"><block ref="4a88e1f19c3245879ff3b041cf65f2c0" prefix="" category="inline-code"></block></block>
+  <block id="1320cf2b61c91bbb314f468cb1b3faac" category="list-text">将整个字符串转换为base64：</block>
+  <block id="3541da9612cccb446ac474f889742961" category="paragraph"><block ref="927aacc3bfdb5b911a7d032315797f39" prefix="" category="inline-code"></block></block>
+  <block id="942788e1858aada3519259908aefaa6e" category="list-text">构建请求标头：</block>
+  <block id="3329f37c2d3fbc845a99400ebeaccffa" category="paragraph"><block ref="ad7510dc039743abb39bd92fafca587a" prefix="" category="inline-code"></block></block>
+  <block id="8069d08f897b1eab0ae8b8e27b7c85d5" category="paragraph">工作流卷曲示例包含此标题以及变量*$BASIC _AUT*、使用前需要更新此标题。</block>
+  <block id="549a8ef894c94e44e0caa995eaef719f" category="paragraph-title">使用Curl参数</block>
+  <block id="fe675d9d322274e9cc5a016dc13952d0" category="paragraph">使用Curl时的另一个选项是删除Authorization(授权)标头，而改用Curl *user*参数。例如：</block>
+  <block id="2ce89c4ab048c9d719169c11cda31579" category="paragraph"><block ref="784832b5a8f97e143e4744b38ce2ea72" prefix="" category="inline-code"></block></block>
+  <block id="64f444a853187a8c5bb3d8507d2ba64f" category="paragraph">您需要使用适用于您的环境的凭据进行替换。使用此参数执行CURL命令时、系统会为您生成Authorization.标题。</block>
+  <block id="76b8f173097880ead5a0f4cfd6e0618c" category="section-title">在bash shell中使用卷曲示例</block>
+  <block id="70ce4cad9d30893dd103460ed8538167" category="paragraph">如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以按如下所述使用bash shell进行替换。</block>
+  <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">使用"Bash"的一个优点是、您可以在shell会话中设置一次变量值、而不是在每个CURL命令中设置一次。</block>
+  <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">打开随Linux或类似操作系统提供的bash shell。</block>
+  <block id="8fe545575762c5e2da996636397d8976" category="list-text">设置要运行的CURL示例中包含的变量值。例如：</block>
+  <block id="af3f9a43c563b71e1cb6eba057c67406" category="paragraph"><block ref="f17f552ff5676b0b95e7c1c4474e4a0e" prefix="" category="inline-code"></block></block>
+  <block id="a76ad0ce3b4ce85c64bbc3d3cd25bdd2" category="list-text">从工作流页面复制卷曲示例并将其粘贴到shell终端中。</block>
+  <block id="1eaec3fd5985d760443b0386d2ee593a" category="list-text">按*enter*，将执行以下操作：</block>
+  <block id="198b3154f73c4a62a05f7a0089ea4f3a" category="list-text">替换您设置的变量值</block>
+  <block id="9a6c9ba6963e8edb0564d74a05262568" category="list-text">执行Curl命令</block>
+  <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">更新集群联系人并确认作业状态</block>
+  <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">此工作流将更新集群联系信息。由于请求是异步处理的、因此还说明了如何确定关联的后台作业是否成功完成。</block>
+  <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">第1步：更新集群联系信息</block>
+  <block id="5b65398d9afd1a14a452f4645c7fb774" category="paragraph">您可以通过问题描述调用来更新联系信息。</block>
+  <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">HTTP方法和端点</block>
+  <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">此REST API调用使用以下方法和端点。</block>
+  <block id="75e17ff813d0ed4dba4fcb32abc673e6" category="paragraph">返回作业对象的标识符。您应将ID值保存为变量$job_ID、以便在下一步中使用。</block>
+  <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">第2步：检索作业状态</block>
+  <block id="be81401da9da70cf197e1449ca61043d" category="paragraph">您应检索作业状态以确定异步请求是否成功完成。</block>
+  <block id="4044a674901deb07947f235775f9654d" category="paragraph">状态值和其他字段包括在返回的作业对象中。</block>
+  <block id="1e6808f43cf2da1acd44c6e982792490" category="summary">您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)。您可以在查找特定SVM的标识符时执行此操作、也可以在创建新SVM之前确保名称的唯一性。</block>
+  <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">列出SVM</block>
+  <block id="e713e270523baa8c3aca351e280ceba0" category="cell">/svm/svm</block>
+  <block id="a3d2e020750395446da7d89e6da9765d" category="summary">您可以检索ONTAP集群的配置、包括特定字段。您可以在评估集群状态期间或更新配置之前执行此操作。</block>
+  <block id="a01b413c1a87a4e0b5a27f7477459347" category="doc">获取集群配置</block>
+  <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">CURL示例的其他输入参数</block>
+  <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
+  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">Required</block>
+  <block id="d05b6ed7d2345020440df396d6da7f73" category="cell">fields</block>
+  <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">查询</block>
+  <block id="a734854ee8bdd547b3a1a8eeee4f56a8" category="cell">选择要返回的值。示例包括<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block> 和<block ref="2af72f100c356273d46284f6fd1dfc08" prefix=" " category="inline-code"></block>。</block>
+  <block id="d68c817e523bebfd3bb5d6e6aed3c2f7" category="paragraph-title">CURL示例：检索集群联系信息</block>
+  <block id="defb04d386d33eda3cf981695c9da0e8" category="paragraph">此示例说明了如何检索单个字段。要获取整个集群配置、您需要删除<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 查询参数。</block>
+  <block id="361f902ffbf6412778b4224d2f0f31a2" category="section-title">路径变量</block>
+  <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">每次REST API调用使用的端点路径可以包含各种标识符。每个ID对应于一个特定资源实例。例如、集群ID和SVM ID。</block>
+  <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。例如：</block>
+  <block id="d4a75631c199e30063c5b55330d690dc" category="paragraph"><block ref="20e17731e08bc5284461439422e12e1a" prefix="" category="inline-code"></block>。</block>
+  <block id="8e69453af156d83ee85c0320efa52ea2" category="list-text"><block ref="8e69453af156d83ee85c0320efa52ea2" category="inline-link-macro-rx"></block></block>
+  <block id="29ca978338507bc932aabe7888d4b362" category="list-text">ONTAP 9.6至ONTAP 9.13.1.</block>
+  <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">获取集群配置</block>
+  <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">更新集群联系人</block>
+  <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">列出SVM</block>
 </blocks>

@@ -2,7 +2,13 @@
 section: workflows
 title: 工作流
 entries:
-- title: 准备使用这些工作流
-  url: "/workflows/prepare_workflows.html"
-- title: 工作流 1 —更新集群联系人并检查状态
-  url: "/workflows/wf_1_update_cluster_contact.html"
+- title: 集群
+  entries:
+  - title: 获取集群配置
+    url: "/workflows/wf_get_cluster.html"
+  - title: 更新集群联系人
+    url: "/workflows/wf_update_cluster_contact.html"
+- title: SVM
+  entries:
+  - title: 列出SVM
+    url: "/workflows/wf_list_svms.html"
