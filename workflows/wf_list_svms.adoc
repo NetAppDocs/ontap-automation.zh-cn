@@ -29,8 +29,9 @@ summary: '您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)
 .curl 示例
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/svm/svms" \
+curl --request GET \
+--location "https://$FQDN_IP/api/svm/svms" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----

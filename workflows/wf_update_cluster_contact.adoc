@@ -38,8 +38,9 @@ summary: 此工作流将更新集群联系信息。由于此请求是异步处�
 .curl 示例
 [source, curl]
 ----
-curl --location --include \
---request PATCH "https://$FQDN_IP/api/cluster" \
+curl --request PATCH \
+--location "https://$FQDN_IP/api/cluster" \
+--include \
 --header "Content-Type: application/json" \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
@@ -89,8 +90,9 @@ curl --location --include \
 .curl 示例
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/cluster/$JOB_ID" \
+curl --request GET \
+--location "https://$FQDN_IP/api/cluster/jobs/$JOB_ID" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -112,3 +114,8 @@ curl --location --include \
   }
 }
 ----
+
+
+== 第3步：确认集群联系信息
+
+执行工作流 link:../workflows/wf_get_cluster.html["获取集群配置"]。您应设置 `fields` 将参数查询到 `contact`。

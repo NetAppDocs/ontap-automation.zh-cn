@@ -41,8 +41,9 @@ summary: 您可以检索ONTAP集群的配置、包括特定字段。您可以在
 
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/cluster?fields=contact" \
+curl --request GET \
+--location "https://$FQDN_IP/api/cluster?fields=contact" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----

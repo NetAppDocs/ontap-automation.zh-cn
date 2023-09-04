@@ -14,7 +14,6 @@
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="list-text">HTTP 方法</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">路径</block>
-  <block id="29fe0e3b021fed4ff52a274326d05c86" category="inline-link-macro">如何访问 ONTAP API</block>
   <block id="f9423483f907b342ce1d6b2a5646580f" category="doc">基本操作特征</block>
   <block id="d9ea677ef356bfa08eea805869f9eded" category="paragraph">虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。</block>
   <block id="fc068ae597c9019f5d61b19badc39991" category="section-title">请求和响应 API 事务</block>
@@ -1608,7 +1607,6 @@
   <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">有权访问ONTAP REST API的帐户的ONTAP凭据</block>
   <block id="21569412cc525b31a0c126598a680b86" category="admonition">如果您的凭据包含特殊字符、则需要根据所使用的Shell以可接受的卷曲方式对其进行格式化。例如、您可以在每个特殊字符之前插入反斜杠、或者将整个凭据字符串用双引号括起来。</block>
   <block id="81c7a329d4f4793f536260d6cec23a04" category="list-text">在本地工作站的命令行界面上、问题描述the following command：</block>
-  <block id="b5b73d02b288e67898182f6b6f76e267" category="paragraph"><block ref="429d1cce820c881fb624c558f06b534f" prefix="" category="inline-code"></block></block>
   <block id="f9c5f8c688d72b2f67cbb721eb8bd53e" category="summary">在实时部署中使用ONTAP工作流之前、您应熟悉其结构和格式。</block>
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">简介</block>
   <block id="f5d6d63dd550f378522648a645333f6d" category="paragraph">_Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。ONTAP工作流包括完成每项任务所需的核心步骤和参数。它们为自定义ONTAP自动化环境提供了一个起点。</block>
@@ -1620,27 +1618,20 @@
   <block id="b75a89b63647fdd9b09694c37ca63bf9" category="paragraph-title">REST API调用</block>
   <block id="a8492c61ad8067f69139069d55e20ede" category="paragraph">大多数工作流步骤都是REST API调用。这些步骤使用通用格式、其中包括卷曲示例和其他信息。请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关REST API调用的更多详细信息、请参见。</block>
   <block id="67159a63ec04dcd49136183d2862cd66" category="paragraph-title">单步工作流</block>
-  <block id="5570ed8b3997fd4a9427eb890ee775d9" category="paragraph">一个工作流只能包含一个步骤。这些"单步工作流"的格式与包含多个步骤的工作流略有不同。例如、删除显式步骤名称。工作流操作应根据标题明确。</block>
   <block id="cc10a6127f01a14ee7d08690e5476c21" category="paragraph">这些工作流的设计尽可能通用、因此可以在任何ONTAP环境中使用。考虑到这一点、REST API调用会在cURL示例和其他输入中使用变量。然后、可以轻松地根据不同的ONTAP环境调整REST API调用。</block>
   <block id="5e57b8d8be99da22a6cda01581fc3221" category="section-title">基本URL格式</block>
-  <block id="604fbbb8706e844b0b4aa2616a3a72ec" category="paragraph">您可以通过CURL或Python等编程语言直接访问ONTAP REST API。在这种情况下、基本URL与访问ONTAP联机文档或System Manager时使用的URL不同。</block>
   <block id="b2e546a32c02144282fc626a17b4123a" category="paragraph">直接访问API时，需要将*API*附加到域或IP地址。例如：</block>
   <block id="1130426d3f04c52f410ac60e6ce8b230" category="paragraph"><block ref="3fb09ca3875413da44a9832d2ed627b7" prefix="" category="inline-code"></block></block>
-  <block id="224416f5b5ef9ebeb4b9501a363a46a3" category="paragraph">请参见 <block ref="87d9604d2178e58e4d22b66dc74675f2" category="inline-link-macro-rx"></block> 有关访问ONTAP REST API的详细信息、请参见。</block>
   <block id="3791b7d0d91a2238c40dbbfefa886cc7" category="section-title">通用输入参数</block>
   <block id="42f67270fcba9fb260d596a38b564570" category="paragraph">大多数REST API调用通常使用多个输入参数。这些参数通常不会在各个工作流中进行介绍。您应熟悉这些参数。请参见 <block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="4cad1a5966d83b6ddc6a861ab5449fce" category="paragraph">如果特定的卷曲示例需要其他参数，请参见每个工作流的*卷曲示例的其他输入参数*一节。</block>
   <block id="c7975313824cd849192810f63bcd9a1e" category="section-title">可变格式</block>
-  <block id="662081edc74f6dec8617a183354314a9" category="paragraph">这些工作流示例中使用的ID值和其他变量是不透明的、并且可能因每个ONTAP集群而异。为了提高示例的可读性、不使用实际值。而是使用变量。此方法基于一致的格式和一组保留名称、具有以下几个优势：</block>
   <block id="6846bd19d3855d33378ece05b56de412" category="list-text">CURL和JSON示例更易读、更易于理解。</block>
   <block id="89bd915fe5612063332c1abcee674fbb" category="list-text">由于所有关键字都使用相同的格式、因此您可以快速识别它们。</block>
   <block id="d94ea72c6f873db4ad92c298e5f6c0b5" category="list-text">不存在安全风险、因为这些值无法复制和重复使用。</block>
   <block id="262817c71879ed58754769cf3f684d4b" category="paragraph">这些变量的格式设置为在Bash shell环境中使用。每个变量都以美元符号开头、并根据需要用双引号括起来。这使得他们可以被巴什所识别。名称始终使用大写。</block>
-  <block id="d1970310ade44fffdc04c2b848f972f1" category="paragraph">下面是一些常见的变量关键字。此列表并非详尽无遗，我们会根据需要使用其他关键字。根据具体情况，其含义应该是显而易见的。</block>
   <block id="220f3d3750583b9db48568a0b5b9a5f1" category="cell">关键字</block>
   <block id="00fb17c50b70dc75802223ee442804c7" category="cell">$FQDN_IP</block>
   <block id="e6b391a8d2c4d45902a23a8b6585703d" category="cell">URL</block>
-  <block id="f42332ef9ed7d9b54c78a421adffdd26" category="cell">ONTAP集群管理LIF的完全限定域名或IP地址。</block>
   <block id="8422281c7f63b05015c4269e5d39d708" category="cell">$cluster ID</block>
   <block id="d2888ae6c2336e3de9f327d87d6d6e8c" category="cell">UUIDv4值、用于标识运行API操作的ONTAP集群。</block>
   <block id="4ed5b72e5a5b649b5d306892bfcb0f7d" category="cell">$BASIC AUT1.</block>
@@ -1651,7 +1642,6 @@
   <block id="5f7f2e03d053c151ec8a08fd76564f5a" category="section-title">HTTP基本身份验证</block>
   <block id="dc248dc9e4f71e5475b8cecc054f14d4" category="paragraph">使用基本身份验证时、每个HTTP请求都必须包含用户凭据。有两种发送凭据的方法。</block>
   <block id="303374a8533b38fb7d98a5790a54237c" category="paragraph-title">构建HTTP请求标头</block>
-  <block id="1eb945a3e58fc6954932a5681f004ce7" category="paragraph">您可以手动构建授权标头并将其包含在HTTP请求中。如果在CLI中使用cURL命令或对自动化代码使用编程语言、则可以执行此操作。概括而言、这些步骤包括：</block>
   <block id="de502eeb74b9db18547f010273db3a03" category="list-text">将用户和密码值与冒号串联：</block>
   <block id="4f765dee7c913da188ec3feb5803b2eb" category="paragraph"><block ref="4a88e1f19c3245879ff3b041cf65f2c0" prefix="" category="inline-code"></block></block>
   <block id="1320cf2b61c91bbb314f468cb1b3faac" category="list-text">将整个字符串转换为base64：</block>
@@ -1662,11 +1652,9 @@
   <block id="549a8ef894c94e44e0caa995eaef719f" category="paragraph-title">使用Curl参数</block>
   <block id="fe675d9d322274e9cc5a016dc13952d0" category="paragraph">使用Curl时的另一个选项是删除Authorization(授权)标头，而改用Curl *user*参数。例如：</block>
   <block id="2ce89c4ab048c9d719169c11cda31579" category="paragraph"><block ref="784832b5a8f97e143e4744b38ce2ea72" prefix="" category="inline-code"></block></block>
-  <block id="64f444a853187a8c5bb3d8507d2ba64f" category="paragraph">您需要使用适用于您的环境的凭据进行替换。使用此参数执行CURL命令时、系统会为您生成Authorization.标题。</block>
   <block id="70ce4cad9d30893dd103460ed8538167" category="paragraph">如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以按如下所述使用bash shell进行替换。</block>
   <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">使用"Bash"的一个优点是、您可以在shell会话中设置一次变量值、而不是在每个CURL命令中设置一次。</block>
   <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">打开随Linux或类似操作系统提供的bash shell。</block>
-  <block id="8fe545575762c5e2da996636397d8976" category="list-text">设置要运行的CURL示例中包含的变量值。例如：</block>
   <block id="af3f9a43c563b71e1cb6eba057c67406" category="paragraph"><block ref="f17f552ff5676b0b95e7c1c4474e4a0e" prefix="" category="inline-code"></block></block>
   <block id="a76ad0ce3b4ce85c64bbc3d3cd25bdd2" category="list-text">从工作流页面复制卷曲示例并将其粘贴到shell终端中。</block>
   <block id="1eaec3fd5985d760443b0386d2ee593a" category="list-text">按*enter*，将执行以下操作：</block>
@@ -1704,13 +1692,27 @@
   <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">列出SVM</block>
   <block id="c17ef84c021b2307b064e8e24b8013a6" category="paragraph">您可以通过问题描述a Simple Curl命令开始使用ONTAP REST API并确认其可用性。</block>
   <block id="a98b00db4ce1fec40c21222810430c05" category="section-title">JSON输入示例</block>
-  <block id="09e5af60e7e961d326ecb94915481554" category="paragraph">某些REST API调用(例如使用POST或PATCH)需要为请求正文输入JSON。为了清楚起见、JSON输入示例与CURL示例分开显示。您可以将JSON输入示例与下面所述的一种技术结合使用。</block>
   <block id="4d8521855bcfebae2c0518f634b5dcbd" category="paragraph-title">保存到本地文件</block>
-  <block id="399feb8e89d476ceeca1f9a576fb97ef" category="paragraph">您可以将JSON示例复制到文件中并将其保存在本地。CURL命令引用使用的文件<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> 带有值的参数、用于指示带有的文件名<block ref="518ed29525738cebdac49c49e60ea9d3" prefix=" " category="inline-code"></block> 前缀。</block>
   <block id="4ee40cd4d378b7de61905cb45f1009f5" category="paragraph-title">在卷曲示例后粘贴到终端中</block>
-  <block id="d44e4ebc435b8a720eca9d2dce5b7c87" category="paragraph">首先、您需要将CURL示例复制并粘贴到终端Shell中。然后编辑此示例以完全删除<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> 参数、并将其替换为<block ref="3165aa3b2ee77197f8cfd2cc80c7278f" prefix=" " category="inline-code"></block> 参数。最后、复制并粘贴JSON示例、使其遵循Curl命令和更新后的参数。</block>
   <block id="12c6401fb02cab85d072b4b981f50e87" category="section-title">将示例与Bash结合使用</block>
   <block id="b5cda5e8b7bc8b7e8457fef21d91230b" category="paragraph">您可以通过问题描述调用来更新集群联系信息。</block>
   <block id="a8a1e002536d347b924b548b0ac40eaa" category="paragraph">此时将返回此作业对象。您应将作业标识符保存为变量$job_ID、以便在下一步中使用。</block>
   <block id="8c95ed01afcec406b4d0570ec3d3ff18" category="paragraph">此示例说明了如何检索单个字段。要获取整个集群对象和配置、您需要删除<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 查询参数。</block>
+  <block id="e84f1016162859b425bf19a20c585781" category="paragraph"><block ref="0073b77e7a081cdc093bac4d7301bcd9" prefix="" category="inline-code"></block></block>
+  <block id="39b13b297edf030e2a6f8316d1a33f56" category="paragraph">在实时ONTAP部署中使用工作流之前、您应熟悉这些工作流的结构和格式。</block>
+  <block id="0ee204047e3ff10a0e6d606b38224615" category="paragraph">一个工作流只能包含一个步骤。这些"单步工作流"的格式与包含多个步骤的工作流略有不同。例如、删除显式步骤名称。操作或操作应根据工作流标题明确。</block>
+  <block id="8d197ea17b19bf5b877d0bca6b13aa1c" category="paragraph">您可以直接通过CURL或编程语言访问ONTAP REST API。在这种情况下、基本URL与访问ONTAP联机文档或System Manager时使用的URL不同。</block>
+  <block id="96dc946163c536a828ef3f6ac5ab199d" category="paragraph">请参见 <block ref="fd12ec3737d055cdf76a7f06b5b60e9a" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="8b601595dec3f885a40ef9fec71f259d" category="paragraph">如果特定REST API调用需要其他参数、请参见每个工作流的* cURL示例的其他输入参数*一节。</block>
+  <block id="dc9f325cca41d07c0fa65042753d1c30" category="paragraph">工作流示例中使用的ID值和其他变量是不透明的、并且可能因每个ONTAP集群而异。为了提高示例的可读性、不使用实际值。而是使用变量。此方法基于一致的格式和一组保留名称、具有以下几个优势：</block>
+  <block id="5fdcf5dc19660a9231d7bb52846ce0da" category="paragraph">下面是一些常见的变量关键字。此列表并非详尽无遗、需要时可使用其他变量。根据具体情况，其含义应该是显而易见的。</block>
+  <block id="d756fcda47f15b15654659976d926844" category="cell">ONTAP管理LIF的完全限定域名或IP地址。</block>
+  <block id="4ed41f44ebd6b55c9188b2a4e9d3a9d6" category="paragraph">某些REST API调用(例如使用POST或PATCH)的调用需要在请求正文中输入JSON。为了清楚起见、JSON输入示例与CURL示例分开显示。您可以将JSON输入示例与下面所述的一种技术结合使用。</block>
+  <block id="2c6af158c642908d68661703a7ccb9a2" category="paragraph">您可以将JSON输入示例复制到文件并将其保存在本地。CURL命令引用使用的文件<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> 带有值的参数、用于指示带有的文件名<block ref="518ed29525738cebdac49c49e60ea9d3" prefix=" " category="inline-code"></block> 前缀。</block>
+  <block id="38226c06e253f6675842109366b6a5ac" category="paragraph">首先、您需要将CURL示例复制并粘贴到终端Shell中。然后编辑此示例以完全删除<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> 参数、并将其替换为<block ref="3165aa3b2ee77197f8cfd2cc80c7278f" prefix=" " category="inline-code"></block> 参数。最后、复制并粘贴JSON示例、使其遵循带有更新参数的URL命令。您应使用单引号将JSON输入示例包装起来。</block>
+  <block id="e3296c1de306965b7ce8c8d91cfdae69" category="paragraph">您可以手动构建授权标头并将其包含在HTTP请求中。如果在CLI中使用cURL命令或对自动化代码使用编程语言、则可以执行此操作。高级别步骤包括：</block>
+  <block id="8bf3778ef40518b21cade909ac39bb88" category="paragraph">您需要使用适用于您的环境的凭据进行替换。这些凭据不会在base64中进行编码。使用此参数执行URL命令时、系统会对字符串进行编码、并为您生成Authorization.标题。</block>
+  <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">设置要运行的CURL示例中包含的变量值。例如：</block>
+  <block id="88c3404621959196699b6d5e21481f01" category="section-title">第3步：确认集群联系信息</block>
+  <block id="d6e97a74db077b800b27092e142ea420" category="paragraph">执行工作流 <block ref="7fc6abcb7d64eb85778fdfad2da4ab1a" category="inline-link-macro-rx"></block>。您应设置<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 将参数查询到<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>。</block>
 </blocks>
