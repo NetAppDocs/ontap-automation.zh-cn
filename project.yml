@@ -41,7 +41,7 @@ homepage:
       url: "/rest/rest_web_services_foundation.html"
     - title: 其他注意事项
       url: "/rest/object_references_and_access.html"
-    - title: REST 资源摘要
+    - title: REST资源摘要
       url: "/resources/overview_categories.html"
     - title: API 参考
       url: "/reference/api_reference.html"
