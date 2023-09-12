@@ -118,4 +118,4 @@ curl --request GET \
 
 == 第3步：确认集群联系信息
 
-执行工作流 link:../workflows/wf_get_cluster.html["获取集群配置"]。您应设置 `fields` 将参数查询到 `contact`。
+执行工作流 link:../workflows/wf_cls_get_cluster.html["获取集群配置"]。您应设置 `fields` 将参数查询到 `contact`。

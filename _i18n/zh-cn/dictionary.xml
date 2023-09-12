@@ -1669,7 +1669,6 @@
   <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">列出SVM</block>
   <block id="e713e270523baa8c3aca351e280ceba0" category="cell">/svm/svm</block>
   <block id="a3d2e020750395446da7d89e6da9765d" category="summary">您可以检索ONTAP集群的配置、包括特定字段。您可以在评估集群状态期间或更新配置之前执行此操作。</block>
-  <block id="a01b413c1a87a4e0b5a27f7477459347" category="doc">获取集群配置</block>
   <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">CURL示例的其他输入参数</block>
   <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
@@ -1710,9 +1709,9 @@
   <block id="8bf3778ef40518b21cade909ac39bb88" category="paragraph">您需要使用适用于您的环境的凭据进行替换。这些凭据不会在base64中进行编码。使用此参数执行URL命令时、系统会对字符串进行编码、并为您生成Authorization.标题。</block>
   <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">设置要运行的CURL示例中包含的变量值。例如：</block>
   <block id="88c3404621959196699b6d5e21481f01" category="section-title">第3步：确认集群联系信息</block>
-  <block id="d6e97a74db077b800b27092e142ea420" category="paragraph">执行工作流 <block ref="7fc6abcb7d64eb85778fdfad2da4ab1a" category="inline-link-macro-rx"></block>。您应设置<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 将参数查询到<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>。</block>
   <block id="3522d2e743ab2fd440e2280ea09b6946" category="inline-link-macro">更新集群联系人并确认作业状态</block>
   <block id="3c2bc619ddaef1bedada529634c6826d" category="list-text"><block ref="3c2bc619ddaef1bedada529634c6826d" category="inline-link-macro-rx"></block></block>
   <block id="1adca2e27b8e8a9864351adf6119bafb" category="summary">您可以更新集群的联系信息。由于请求是异步处理的、因此此工作流还说明了如何确定关联的后台作业是否成功完成。</block>
   <block id="3a434b661b7a5e9113a6b4de74efe1a0" category="sidebar">REST资源摘要</block>
+  <block id="3cf1284c45d0adfeed6003bf3d9bfe2e" category="paragraph">执行工作流 <block ref="f8ef83534bba2e0fcad9a980050577d2" category="inline-link-macro-rx"></block>。您应设置<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 将参数查询到<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>。</block>
 </blocks>
