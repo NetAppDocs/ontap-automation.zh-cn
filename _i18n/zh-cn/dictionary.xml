@@ -3,7 +3,6 @@
   <block id="09b61c4c135233e31eb7b12d4a296b18" category="paragraph">从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。您可以直接或通过 NetApp Python 客户端库访问 REST API 。此外， NetApp 还支持使用 Ansible 以及其他高级软件抽象技术实现 ONTAP 自动化。</block>
   <block id="7510bbb3e3ce7994c1993c8698e3169e" category="admonition">ONTAPI （也称为网络易管理性 SDK 或 ZAPI ）是一种传统技术，用于以编程方式访问和管理 ONTAP 存储系统。ONTAP REST API 现已成为一项战略技术，应尽可能选择它。</block>
   <block id="15e78d6a83c3d71d5182a7da2df9e39e" category="section-title">本机访问 ONTAP REST API</block>
-  <block id="17332aa1fd5861b55b1cfe91240e73d1" category="inline-link-macro">REST API 入门</block>
   <block id="e0a486c1db61aeef50827b2a95dbb216" category="section-title">调整原有 ONTAPI 代码以使用 REST</block>
   <block id="ec99af624b0dd923250ecbec162bcc59" category="inline-link">ONTAPI 到 REST API 映射信息</block>
   <block id="8d7959a7c68ad22c23c0308240cea7ad" category="section-title">使用 NetApp Python 客户端库</block>
@@ -281,11 +280,6 @@
   <block id="a131529b4b9e76bc39353ef1aa209dd9" category="paragraph">ONTAP 9 附带的 REST API 分配有一个版本号，该版本号与 ONTAP 版本号无关。您应了解您的 ONTAP 版本附带的 API 版本，以及此版本可能会对您的 API 使用产生何种影响。</block>
   <block id="8797a71e8a89cb9c915f588f435aa882" category="admonition">所有版本的 ONTAP 9 都使用相同版本的 REST API 。</block>
   <block id="d4b36e25c7ff304278d8f8203382ad65" category="list-text">版本 1</block>
-  <block id="b3d01b53079f4b9fbda29e6a55f54947" category="paragraph">要准备使用 ONTAP REST API ，您应执行几个步骤。</block>
-  <block id="edca3acbd939d4adbc6fd1775e2aa7d0" category="inline-link">ONTAP 9 概念</block>
-  <block id="7f22baf1d1c4dbcf7e51a6ce50ea7bcb" category="paragraph">您应具备使用 ONTAP 9 的经验。其中包括了解基本概念和术语，以及在系统管理方面的一些经验。请参见<block ref="fe839e5e9dcf42e7a7beb586cd30f140" category="inline-link-rx"></block> 开始使用。</block>
-  <block id="a02beec7b8a899e8a4e50ec1d2df453e" category="paragraph">在软件开发技术和流程方面拥有一些经验非常有用，包括一种或多种编程语言以及一些通用实用程序，例如 curl 。</block>
-  <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="section-title">获取更多信息</block>
   <block id="70d9e3c68d42d6ec42ab792e06c44357" category="doc">NVMe</block>
   <block id="26480427f609b5d339095df99aa09f7c" category="paragraph">您可以使用这些 API 调用来管理支持非易失性内存快速（ NVMe ）的资源。</block>
   <block id="2935855efa69a27eefb72573bc4066e1" category="paragraph">光纤通道登录表示由登录到 ONTAP 的光纤通道启动程序构成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -699,11 +693,7 @@
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">相关链接</block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">REST 资源摘要</block>
   <block id="64b6ec9f9d366c873d08fe8bc6ed4cff" category="section-title">访问 ONTAP API 文档页面</block>
-  <block id="1273c6d3912948b5c61164da6ba4c3ab" category="paragraph">您可以快速开始使用 ONTAP REST API 和其他自动化技术。在准备并了解基本的请求响应流之后，您可以使用 curl 对简单的 API 调用进行问题描述 。此准备工作介绍了在实时系统上使用更复杂的工作流之前所需的简介和视角。</block>
-  <block id="625c92078d49d59bd332d26752459a1c" category="doc">准备使用 ONTAP REST API</block>
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="inline-link-macro">ONTAP REST API</block>
-  <block id="be156535e85658a14f21eed0945afff8" category="paragraph">请务必查看 <block ref="ccb6647c24ffc2522d48edc97b2b7273" category="inline-link-macro-rx"></block> 有关 REST 概念的信息以及有关如何设计 ONTAP REST API 的详细信息。</block>
-  <block id="2bb2ed6116b46f438fbcd4a9a0bad6fd" category="paragraph">您应了解中建议的追加信息资源 <block ref="91f6d3295d7ae30385e2f3285f307e42" category="inline-link-macro-rx"></block>。</block>
   <block id="f5b0a8cfa60a7e477b09b70b9c77ee98" category="doc">了解 ONTAP 自动化选项</block>
   <block id="ae77e4f93e27bd095e1158ccc1bb27f8" category="paragraph">您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。您应首先查看此站点上的所有文档。</block>
   <block id="5a0dcab393f624ccdcf664bede74e9b2" category="inline-link-macro">Python 客户端库</block>
@@ -735,7 +725,6 @@
   <block id="ec8bc6c5f8fe5dc6045b9edfffae614a" category="sidebar">准备使用 REST API</block>
   <block id="015f8c34f52b6ef8a3361958660f5e88" category="sidebar">其他注意事项</block>
   <block id="caea8340e2d186a540518d08602aa065" category="sidebar">自动化</block>
-  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">更多资源</block>
   <block id="16761f90ea92726a06e16dfb23549c0a" category="sidebar">NetApp DevNet</block>
   <block id="98bf123aa3933daaa4019109c98c08eb" category="sidebar">ONTAP 9 文档</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 文档</block>
@@ -1147,7 +1136,6 @@
   <block id="c68677933ee8c7cbe8b88c055e440e45" category="paragraph">提供ONTAP 9产品系列的文档。</block>
   <block id="31817b4bbc4ed43fb341069fc6561074" category="summary">您可以使用ONTAP REST API管理DACL和SACL文件权限。</block>
   <block id="ad9f7732b9d0e85f76fbaca84e9328ae" category="summary">您可以使用REST API管理ONTAP EMS配置。</block>
-  <block id="4ede72f0f2827c7ddcbfe1866b200a34" category="summary">您可以快速开始使用 ONTAP REST API 和其他自动化技术。在准备并了解基本的请求响应流之后，您可以使用 curl 对简单的 API 调用进行问题描述 。</block>
   <block id="166d9995800bde3bddfef3d2294b5aa9" category="summary">有几篇博客文章可帮助您更好地了解自动化ONTAP 部署时的不同技术和方法。</block>
   <block id="146b7b24c2b30a9357470549802fee41" category="summary">ONTAPI 是通过网络易管理性 SDK 提供的一组 API 调用，可用于管理 ONTAP 存储系统。REST API 和 ONTAPI 调用之间以及 REST API 和 ONTAP 命令行界面之间存在差异。</block>
   <block id="8ac01f6d772ed92eb16c7e67bbf562e3" category="paragraph">REST API 是自动化 ONTAP 系统管理的主要战略选择。如果您当前正在使用 ONTAPI ，则应考虑迁移到 REST API 。NetApp 提供了映射文档，可帮助您从 ONTAPI 迁移到 REST 。请参见 <block ref="a60f928eab9c8ac4756a146853b7b27e" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
@@ -1418,9 +1406,6 @@
   <block id="f4a4d3f8e378d11233851c0c7c1aeda7" category="paragraph-title">NetApp 和 Ansible 入门：安装 Ansible</block>
   <block id="34aebac80a78170f96dfd325c4320501" category="paragraph-title">HTTP请求</block>
   <block id="0d5a371e0c92f43305354a7ca5481105" category="paragraph-title">HTTP响应</block>
-  <block id="59382e918ffb6e6d1580a8b17e6e1e2c" category="paragraph-title">ONTAP 9 的使用经验</block>
-  <block id="0182974655f974e8429fb64bb3d15eb2" category="paragraph-title">查看 REST 概念和实施</block>
-  <block id="848c9ae1e7e981016f6df28d16d2cedd" category="paragraph-title">软件开发背景</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">完成后</block>
   <block id="a4ed418f7517459e684626971cd74fba" category="paragraph-title">ONTAP 9.7到9.10.1</block>
@@ -1714,4 +1699,8 @@
   <block id="1adca2e27b8e8a9864351adf6119bafb" category="summary">您可以更新集群的联系信息。由于请求是异步处理的、因此此工作流还说明了如何确定关联的后台作业是否成功完成。</block>
   <block id="3a434b661b7a5e9113a6b4de74efe1a0" category="sidebar">REST资源摘要</block>
   <block id="3cf1284c45d0adfeed6003bf3d9bfe2e" category="paragraph">执行工作流 <block ref="f8ef83534bba2e0fcad9a980050577d2" category="inline-link-macro-rx"></block>。您应设置<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 将参数查询到<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>。</block>
+  <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="doc">其他资源</block>
+  <block id="d70430e3ce6fd2f61524c5b7b9d27cb4" category="list-text"><block ref="d70430e3ce6fd2f61524c5b7b9d27cb4" category="inline-link-rx"></block></block>
+  <block id="3f5e5352c860872dbfb2b2a52bd08d4c" category="paragraph">ONTAP 9发行说明、其中包含有关当前版本的信息。</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
 </blocks>

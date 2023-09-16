@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: additional/get_more_information.html 
+permalink: additional/resources.html 
 keywords: more information, additional resources 
 summary: 您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。 
 ---
-= 获取更多信息
+= 其他资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,6 +23,10 @@ summary: 您还可以访问其他几个资源，以获取有关如何自动部�
 * https://docs.netapp.com/us-en/ontap-family/["ONTAP 9产品文档"^]
 +
 提供ONTAP 9产品系列的文档。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]
++
+ONTAP 9发行说明、其中包含有关当前版本的信息。
 
 * https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["ONTAP 和 ONTAP System Manager 资源"^]
 +

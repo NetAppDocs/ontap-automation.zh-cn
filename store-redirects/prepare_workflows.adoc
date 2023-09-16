@@ -1,0 +1,8 @@
+---
+permalink: get-started/prepare_workflows.html 
+redirect: ontap-automation/workflows/prepare_workflows.html 
+---
+= 
+:allow-uri-read: 
+
+

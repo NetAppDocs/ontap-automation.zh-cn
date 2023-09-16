@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: get-started/prepare_workflows.html 
+permalink: workflows/prepare_workflows.html 
 keywords: workflows, preparation, prepare to use workflows 
 summary: 在实时部署中使用ONTAP工作流之前、您应熟悉其结构和格式。 
 ---

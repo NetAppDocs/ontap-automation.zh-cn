@@ -2,6 +2,8 @@
 section: workflows
 title: 工作流
 entries:
+- title: 准备使用这些工作流
+  url: "/workflows/prepare_workflows.html"
 - title: 集群
   entries:
   - title: 获取集群配置
