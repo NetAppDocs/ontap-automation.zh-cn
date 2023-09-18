@@ -4,6 +4,8 @@ title: 入门
 entries:
 - title: 了解自动化选项
   url: "/get-started/ontap_automation_options.html"
+- title: 如何访问 REST API
+  url: "/get-started/access_rest_api.html"
 - title: 检索集群软件版本
   url: "/get-started/retrieve_cluster_software_version.html"
 - title: 您的第一次API调用

@@ -6,10 +6,6 @@ entries:
   entries:
   - title: REST Web 服务基础
     url: "/rest/rest_web_services_foundation.html"
-  - title: ONTAP REST API 版本控制
-    url: "/rest/rest_api_versioning.html"
-  - title: 如何访问 REST API
-    url: "/rest/access_rest_api.html"
   - title: 基本操作特征
     url: "/rest/operational_characteristics.html"
   - title: 输入变量

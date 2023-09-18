@@ -52,7 +52,7 @@ ONTAP工作流中的每个步骤都属于以下类型之一：
 
 `https://ontap.demo-example.com/api`
 
-请参见 link:../rest/access_rest_api.html["如何访问ONTAP REST API"] 有关详细信息 ...
+请参见 link:../get-started/access_rest_api.html["如何访问ONTAP REST API"] 有关详细信息 ...
 
 
 

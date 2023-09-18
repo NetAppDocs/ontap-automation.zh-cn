@@ -276,10 +276,6 @@
   <block id="ee0b0b92be7dced35b0607c73807d3ea" category="paragraph">角色的特定实例。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="726766d18432f47239ac755ac8fce078" category="paragraph">管理特定角色的特权。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="77c81798920a42ea55801b67d1902e16" category="paragraph">通过这些调用，您可以设置 SSH 配置。此资源类型是在 ONTAP 9.7 中引入的。</block>
-  <block id="645796c14f90a49c10fe89ef0d9036f0" category="doc">ONTAP REST API 版本控制</block>
-  <block id="a131529b4b9e76bc39353ef1aa209dd9" category="paragraph">ONTAP 9 附带的 REST API 分配有一个版本号，该版本号与 ONTAP 版本号无关。您应了解您的 ONTAP 版本附带的 API 版本，以及此版本可能会对您的 API 使用产生何种影响。</block>
-  <block id="8797a71e8a89cb9c915f588f435aa882" category="admonition">所有版本的 ONTAP 9 都使用相同版本的 REST API 。</block>
-  <block id="d4b36e25c7ff304278d8f8203382ad65" category="list-text">版本 1</block>
   <block id="70d9e3c68d42d6ec42ab792e06c44357" category="doc">NVMe</block>
   <block id="26480427f609b5d339095df99aa09f7c" category="paragraph">您可以使用这些 API 调用来管理支持非易失性内存快速（ NVMe ）的资源。</block>
   <block id="2935855efa69a27eefb72573bc4066e1" category="paragraph">光纤通道登录表示由登录到 ONTAP 的光纤通道启动程序构成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -704,7 +700,6 @@
   <block id="84cd295cbbbd691b40d7d06df51912a3" category="list-text"><block ref="84cd295cbbbd691b40d7d06df51912a3" category="inline-link-macro-rx"></block></block>
   <block id="10fd548eb0773eced2b1f8455835ae29" category="list-text"><block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block></block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">《 ONTAP 发行说明》</block>
-  <block id="fa229fc458ab35ecd4519d4dcca0e7bb" category="list-text"><block ref="fa229fc458ab35ecd4519d4dcca0e7bb" category="inline-link-macro-rx"></block></block>
   <block id="e9019ae8c9c4fb4acd7eba0895e32433" category="doc">ONTAP REST API 和自动化的新增功能</block>
   <block id="b5ad0fadac714409796245d1b58f5199" category="paragraph">NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。</block>
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="section-title">ONTAP 9.10.1</block>
@@ -1666,7 +1661,6 @@
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">每次REST API调用使用的端点路径可以包含各种标识符。每个ID对应于一个特定资源实例。例如、集群ID和SVM ID。</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">必须使用用户名和密码设置基本身份验证，并将其编码为 base64 字符串。例如：</block>
   <block id="d4a75631c199e30063c5b55330d690dc" category="paragraph"><block ref="20e17731e08bc5284461439422e12e1a" prefix="" category="inline-code"></block>。</block>
-  <block id="29ca978338507bc932aabe7888d4b362" category="list-text">ONTAP 9.6至ONTAP 9.13.1.</block>
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">获取集群配置</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">更新集群联系人</block>
   <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">列出SVM</block>
@@ -1682,7 +1676,6 @@
   <block id="39b13b297edf030e2a6f8316d1a33f56" category="paragraph">在实时ONTAP部署中使用工作流之前、您应熟悉这些工作流的结构和格式。</block>
   <block id="0ee204047e3ff10a0e6d606b38224615" category="paragraph">一个工作流只能包含一个步骤。这些"单步工作流"的格式与包含多个步骤的工作流略有不同。例如、删除显式步骤名称。操作或操作应根据工作流标题明确。</block>
   <block id="8d197ea17b19bf5b877d0bca6b13aa1c" category="paragraph">您可以直接通过CURL或编程语言访问ONTAP REST API。在这种情况下、基本URL与访问ONTAP联机文档或System Manager时使用的URL不同。</block>
-  <block id="96dc946163c536a828ef3f6ac5ab199d" category="paragraph">请参见 <block ref="fd12ec3737d055cdf76a7f06b5b60e9a" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="8b601595dec3f885a40ef9fec71f259d" category="paragraph">如果特定REST API调用需要其他参数、请参见每个工作流的* cURL示例的其他输入参数*一节。</block>
   <block id="dc9f325cca41d07c0fa65042753d1c30" category="paragraph">工作流示例中使用的ID值和其他变量是不透明的、并且可能因每个ONTAP集群而异。为了提高示例的可读性、不使用实际值。而是使用变量。此方法基于一致的格式和一组保留名称、具有以下几个优势：</block>
   <block id="5fdcf5dc19660a9231d7bb52846ce0da" category="paragraph">下面是一些常见的变量关键字。此列表并非详尽无遗、需要时可使用其他变量。根据具体情况，其含义应该是显而易见的。</block>
@@ -1703,4 +1696,5 @@
   <block id="d70430e3ce6fd2f61524c5b7b9d27cb4" category="list-text"><block ref="d70430e3ce6fd2f61524c5b7b9d27cb4" category="inline-link-rx"></block></block>
   <block id="3f5e5352c860872dbfb2b2a52bd08d4c" category="paragraph">ONTAP 9发行说明、其中包含有关当前版本的信息。</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
+  <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">请参见 <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
 </blocks>
