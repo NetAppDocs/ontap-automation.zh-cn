@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_ontap_reports.html 
+keywords:  
+summary: XXX 
+---
+= 允许生成ONTAP报告
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以创建REST角色、使用户能够生成ONTAP 报告。
+
+.关于此工作流
+创建的角色具有以下特征：
+
+* 能够检索与容量和性能相关的所有存储对象信息(例如卷、qtree、LUN、聚合、节点、 和SnapMirror关系)
+* 无法创建或修改更高级别的对象(例如卷或SVM)
+
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /api/安全性/角色 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON 输入示例
+[source, curl]
+----
+{
+  "name": "rest_role1",
+  "owner": {
+    "name": "cluster-1",
+    "uuid": "852d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      {"path": "/api/storage/volumes", "access": "readonly"},
+      {"path": "/api/storage/qtrees", "access": "readonly"},
+      {"path": "/api/storage/luns", "access": "readonly"},
+      {"path": "/api/storage/aggregates", "access": "readonly"},
+      {"path": "/api/cluster/nodes", "access": "readonly"},
+      {"path": "/api/snapmirror/relationships", "access": "readonly"},
+      {"path": "/api/svm/svms", "access": "readonly"}
+  ]
+}
+----

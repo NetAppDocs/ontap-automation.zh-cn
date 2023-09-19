@@ -624,9 +624,7 @@
   <block id="74f525d06ddb24dba72494718d6a778f" category="paragraph">SnapMirror 策略将应用于关系，并控制每个关系的配置属性和行为。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="6051810223d7d640e8104859ac825bf3" category="paragraph">异步和同步关系可建立所需的连接传输数据。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="c76837312025a879c77fbb723b7e215e" category="paragraph">您可以通过现有 SnapMirror 关系管理 SnapMirror 传输。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="e95402dceacd5260b74e758bf2e748ef" category="cell">集群</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">异步</block>
-  <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/cluster/Jobs/ ｛ uuid ｝</block>
   <block id="2fe4167817733fec8e6ba1afddf78f1b" category="paragraph">同步</block>
   <block id="fa3072c5dcc3c24dc044383b1ee6e52d" category="sidebar">ONTAP 和 Ansible</block>
   <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
@@ -1055,61 +1053,33 @@
   <block id="51a9e3c779f1be0a43354b1da5831ba0" category="cell">您可以创建传统角色。</block>
   <block id="2dcd39fd89691d20d107d37e822309c0" category="section-title">访问路径的精度</block>
   <block id="8dcea28ae0e36ecb9fb7a7682e6c8323" category="paragraph">为REST角色定义的访问路径基于REST端点。传统角色的访问路径基于命令行界面命令或命令目录。此外、您还可以包括具有传统角色的可选查询参数、以便根据命令参数值进一步限制访问。</block>
-  <block id="1fbfc491e444abd15b879cf0b296f868" category="doc">角色定义示例</block>
-  <block id="ca10180cdf4edf15996acffd8fddb307" category="paragraph">根据您的环境、ONTAP RBAC功能可以采用不同的方式使用。下面介绍了一些常见情形。在每种情况下、重点关注特定的安全和管理目标、并提供相应角色定义的示例。</block>
-  <block id="c1489037f7a15d27fe055dbc42244578" category="admonition">所有示例均使用`/API/security/roles`和派生的REST端点创建和修改角色。为清晰起见、每个cURL命令都引用一个单独的JSON输入文件。</block>
   <block id="6e4ad51ed0c9f59ca29ccce216f868b1" category="section-title">限制对SVM卷操作的访问</block>
-  <block id="ceb8d53ccfbc6f286a28418188fb0b36" category="paragraph">您可能希望限制SVM中的存储卷管理。下面的示例说明了这一点、其中一个角色首先创建、然后根据需要进行更新。</block>
-  <block id="b63872fa53e17ff08ed6b0991c97a083" category="section-title">创建初始角色</block>
-  <block id="e01c59d9614a8f8bfe415754e544d4c2" category="paragraph">创建了一个传统角色、最初允许访问除克隆之外的所有主要卷管理功能。下面介绍的角色具有以下特定特征：</block>
   <block id="44b825cf5bc9349a15a7ed51954ce076" category="list-text">能够执行所有CRUD卷操作、包括获取、创建、修改和删除</block>
   <block id="0a98788f622c9b8a786424f59d6f073f" category="list-text">无法创建卷克隆</block>
-  <block id="dc9f2e350dc3b2372ce00503e56fe71d" category="listing-title">curl 示例</block>
   <block id="0577bbabd0439eea401a8ec18491d1a6" category="listing-title">JSON 输入示例</block>
-  <block id="65c74070d0b2394b81c796bb60240324" category="section-title">更新角色</block>
-  <block id="add6cb38f2c78e28a0302df3df6de165" category="paragraph">可以修改同一角色、以便用户也可以创建卷克隆。</block>
-  <block id="7f8d84e7d0adb2682a7102214e49dee2" category="section-title">数据保护管理</block>
-  <block id="b3698327f3342304d1a28edbf87cf3d4" category="paragraph">在某些情况下、您可能希望为用户提供有限的数据保护功能。下面介绍的传统角色具有以下特征：</block>
   <block id="91b8fb1bf628880e8b9a3976c3a032ab" category="list-text">能够创建和删除快照以及更新SnapMirror关系</block>
   <block id="76a4694d3323882a13252de3b8c66853" category="list-text">无法创建或修改更高级别的对象、例如卷或SVM</block>
-  <block id="b36e61796997ee2c786f4fa3ed101f1c" category="section-title">生成ONTAP 报告</block>
-  <block id="b35f8291d357a94153e63c0665fa6521" category="paragraph">您可以创建REST角色、使用户能够生成ONTAP 报告。下面介绍的角色具有以下特征：</block>
   <block id="3afdfc4bb62414921598f2f4531aaca1" category="list-text">能够检索与容量和性能相关的所有存储对象信息(例如卷、qtree、LUN、聚合、节点、 和SnapMirror关系)</block>
   <block id="9a97a4c8ef433f35c821ef57f10aa45d" category="list-text">无法创建或修改更高级别的对象(例如卷或SVM)</block>
   <block id="7341eaad1796dcd6268b71a308240243" category="doc">创建具有角色的用户</block>
-  <block id="80f5621e734bd116c58617e6c799fd18" category="paragraph">您可以使用下面所述的工作流创建具有关联REST角色的用户。在查看工作流之前、您应熟悉一般准备步骤。</block>
-  <block id="4615b675487f476dd46329e196d46e0b" category="section-title">准备创建具有已分配角色的ONTAP 用户</block>
-  <block id="d725670416fda4a95c9a41cae84b3730" category="paragraph">在创建角色并将其分配给ONTAP 用户帐户之前、您应先查看主要安全要求和选项来做好准备。</block>
   <block id="379385ed06cff6b981e905026b8488d8" category="paragraph">ONTAP 版本可确定可用的REST端点和RBAC功能。</block>
   <block id="7a1d01c8bf21e8d2524e97aacc31c321" category="paragraph">您需要确定要保护的资源或命令以及范围(集群或SVM)。</block>
   <block id="6d1c7815a7f642c3359cf36570ffac64" category="paragraph">确定资源和范围后、您需要确定要授予的访问级别。</block>
   <block id="6748cc799bdab9dd5cc6400176d66cda" category="paragraph">用户可以通过REST API或CLI访问ONTAP 、也可以同时使用这两者。</block>
   <block id="cd749c0b40175f0f7a3e7f752af73d13" category="paragraph">使用现有内置角色更方便、但您可以根据需要创建新的自定义角色。</block>
   <block id="e3a373c3aac05fcefd1b150a9d565c2a" category="paragraph">根据安全要求和ONTAP 访问、您需要选择是创建REST角色还是传统角色。</block>
-  <block id="b09037a5d82613adb22bd86bae1b60d5" category="section-title">创建具有自定义角色的用户</block>
-  <block id="3182bd07058520c0846c3336ad09822d" category="paragraph">下面介绍的工作流包括创建自定义REST角色并将其与新用户帐户关联所需的典型步骤。用户和角色都具有SVM范围、并与特定数据SVM关联。</block>
-  <block id="004e30de2ba3d00309416614b821bc90" category="admonition">此工作流旨在说明整个过程。某些步骤可能是可选的、也可能需要根据您的环境进行更改。</block>
-  <block id="c8a5cb28fdf2598f85711cd98aaf6739" category="section-title">1.列出集群中的数据SVM</block>
-  <block id="c67d7f573196794910d284fa2b59abec" category="paragraph">执行以下REST API调用以列出集群中的SVM。输出中提供了每个SVM的UUID和名称。</block>
   <block id="9c52661d131f07face38ff3baa271d09" category="cell">/apI/SVM/SVM</block>
   <block id="65dc659f4320656f47afc3226f3349b1" category="paragraph">从要创建新用户和角色的列表中选择所需的SVM。</block>
-  <block id="77dc514382ed988f07bcd3331cb777ce" category="section-title">2.列出为SVM定义的用户</block>
   <block id="545f01dc5fb27b5a00252c1ab276b8f4" category="paragraph">执行以下REST API调用以列出在选定SVM中定义的用户。您可以通过owner参数来标识SVM。</block>
   <block id="137ef7229d434ea827c18ad48fbf2401" category="cell">/api/安全性/帐户</block>
   <block id="d28041a03685d6dbdc892dce400d3d28" category="paragraph">根据SVM中已定义的用户、为新用户选择一个唯一名称。</block>
-  <block id="5f992f28a3b95601a69cc4fd3acdef79" category="section-title">3.列出为SVM定义的REST角色</block>
   <block id="79848c3f39849323eb07dde9ce0b5b68" category="paragraph">执行以下REST API调用以列出在选定SVM中定义的角色。您可以通过owner参数来标识SVM。</block>
   <block id="d2163229a8bdac1e61c4788472dbacd3" category="cell">/api/安全性/角色</block>
   <block id="f8b939ec213ead9efd60e86f833e8fbf" category="paragraph">根据SVM中已定义的角色、为新角色选择一个唯一名称。</block>
-  <block id="28e273c48ad039c702e69f06f8455422" category="section-title">4.创建自定义REST角色</block>
   <block id="55fe93e61e9a7bd2f633f326a5e96290" category="paragraph">对SVM中的创建自定义REST角色执行以下REST API调用。此角色最初只有一个权限、用于建立默认访问权限*无*、以拒绝所有访问。</block>
   <block id="13914e64af0bb44e86cd3e7e8a6db903" category="paragraph">(可选)再次执行步骤3以显示新角色。您还可以在ONTAP 命令行界面中显示角色。</block>
-  <block id="9f47490b035163018ad57664ebd4231e" category="section-title">5.通过添加更多权限来更新角色</block>
   <block id="3556b68f25f496c1b49d7a04a2b8db5a" category="paragraph">执行以下REST API调用、以便根据需要添加权限来修改角色。</block>
   <block id="44616b081f16df6bb249edd608d22f26" category="cell">/api/安全性/角色/｛owner.uuid｝/｛name｝/权限</block>
-  <block id="425449fc9249e100beb709a52ce09d93" category="section-title">6.创建用户</block>
-  <block id="ddb5039e238e533f2698aca2a0cad69a" category="paragraph">对创建用户帐户执行以下REST API调用。上述创建的角色`dprole1`与新用户关联。</block>
-  <block id="41840c66a2790635e8d2e99b8901a85e" category="admonition">您可以包括没有角色的用户。在这种情况下、您需要修改用户以分配角色。</block>
   <block id="1836147908927f819bbfefefacc2bf08" category="paragraph">您可以使用新用户的凭据登录到SVM管理界面。</block>
   <block id="2496b3f288a81c8c923f8c9c19fe6ed4" category="sidebar">RBAC 安全性</block>
   <block id="80164c28762060fa56d042df66e7553d" category="sidebar">创建具有角色的用户</block>
@@ -1647,7 +1617,6 @@
   <block id="4044a674901deb07947f235775f9654d" category="paragraph">状态值和其他字段包括在返回的作业对象中。</block>
   <block id="1e6808f43cf2da1acd44c6e982792490" category="summary">您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)。您可以在查找特定SVM的标识符时执行此操作、也可以在创建新SVM之前确保名称的唯一性。</block>
   <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">列出SVM</block>
-  <block id="e713e270523baa8c3aca351e280ceba0" category="cell">/svm/svm</block>
   <block id="a3d2e020750395446da7d89e6da9765d" category="summary">您可以检索ONTAP集群的配置、包括特定字段。您可以在评估集群状态期间或更新配置之前执行此操作。</block>
   <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">CURL示例的其他输入参数</block>
   <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。</block>
@@ -1697,4 +1666,48 @@
   <block id="3f5e5352c860872dbfb2b2a52bd08d4c" category="paragraph">ONTAP 9发行说明、其中包含有关当前版本的信息。</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">请参见 <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="9b516c95369c98e15389e58383128a9e" category="inline-link-macro">RBAC工作流</block>
+  <block id="d0ae4474b926ded595a7a12cdb4fa9ca" category="admonition">请参见 <block ref="08b1cfcbf90aa340f0ccb33fbb4649b8" category="inline-link-macro-rx"></block> 有关如何在ONTAP REST API中创建和使用角色的示例。</block>
+  <block id="f561aaf6ef0bf14d4208bb46a4ccb3ad" category="summary">XXX</block>
+  <block id="e5811d257020368f5a717692e3698c8c" category="doc">启用数据保护管理</block>
+  <block id="869ae78f992efbe089f3f3904e3d608e" category="paragraph">在某些情况下、您可能希望为用户提供有限的数据保护功能。</block>
+  <block id="a6812db2442ae325a9ccd39373bbd9dd" category="paragraph-title">关于此工作流</block>
+  <block id="daba4fa4643f88029966b062423e8d20" category="paragraph">创建的传统角色具有以下特征：</block>
+  <block id="d48b8c7902dee00442e14d9b1af3af1b" category="cell">/API/cluster</block>
+  <block id="55f6ed7d3e8d7db85cce4c886f3636b4" category="summary">您可以使用此工作流创建具有关联REST角色的用户。</block>
+  <block id="cc18f325069725989c0b6751dcbafc4d" category="paragraph">此工作流包括创建自定义REST角色并将其与新用户帐户关联所需的典型步骤。用户和角色都具有SVM范围、并与特定数据SVM关联。某些步骤可能是可选的、也可能需要根据您的环境进行更改。</block>
+  <block id="b8803ca7df0b1c82bf7f1fcaacb12965" category="section-title">第1步：列出集群中的数据SVM</block>
+  <block id="e374d53eafbeb5c15d2f988954ade623" category="paragraph">执行以下REST API调用以列出集群中的SVM。输出中提供了每个SVM的UUID和名称。</block>
+  <block id="af095be4e13f22db1a07d4eb788be96e" category="section-title">第2步：列出为SVM定义的用户</block>
+  <block id="19e7b3c36d47d11e1766b54090999067" category="section-title">第3步：列出为SVM定义的REST角色</block>
+  <block id="8d3cd1f07e4df9a16901577bda7c0a05" category="section-title">第4步：创建自定义REST角色</block>
+  <block id="76cc78c80e26dbc1516ea13f39f9add7" category="section-title">第5步：通过添加更多权限来更新角色</block>
+  <block id="ad59b6c3ca840c6480f634b7f404bdf8" category="cell">$SVM_ID</block>
+  <block id="e6c69c4e7432d43764aec8233cf6b257" category="cell">包含角色定义的SVM的UUID。</block>
+  <block id="81b635ea7a8ab9f00d576d064f11f04b" category="cell">$Role_name</block>
+  <block id="18a5ea643c715c0e45aa53077e8f1429" category="cell">要更新的SVM中的角色名称。</block>
+  <block id="4fa346713b0e13aa5afd8dc51d0ddecb" category="section-title">第6步：创建用户</block>
+  <block id="3c597ed3165c87f6539fd81a53a11876" category="paragraph">对创建用户帐户执行以下REST API调用。上面创建的角色*dprole1*与新用户关联。</block>
+  <block id="a2268d991f8aa28dc9e9d9d830cfcd50" category="admonition">您可以包括没有角色的用户。在这种情况下、您需要修改用户以分配角色。</block>
+  <block id="e3abdda2fcce71a97b7507b852418cf4" category="doc">允许生成ONTAP报告</block>
+  <block id="c6ef9b731f6fad8f77a915b2ed739e76" category="paragraph">您可以创建REST角色、使用户能够生成ONTAP 报告。</block>
+  <block id="fddc78544f7292e6a6fd31d26110db0d" category="paragraph">创建的角色具有以下特征：</block>
+  <block id="05da6cc99ce87a708e1db8445633412e" category="doc">准备使用RBAC</block>
+  <block id="e0c54c558fb0d0e86e14533cede69e31" category="paragraph">根据您的环境、您可以通过多种不同的方式使用ONTAP RBAC功能。本节将以工作流的形式介绍一些常见情形。在每种情况下、重点都放在特定的安全和管理目标上。</block>
+  <block id="566834f64494da40ac7fe1e125279b26" category="paragraph">在创建任何角色并将角色分配给ONTAP用户帐户之前、您应查看下面介绍的主要安全要求和选项、以做好准备。此外、请务必查看中的常规工作流概念 <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>。</block>
+  <block id="b7e08313ce4a135773e5f8729bb3668e" category="summary">您可以定义一个角色来限制SVM中的存储卷管理。</block>
+  <block id="e4971dcab563bd01ed439526b8da3d6c" category="paragraph">首先创建一个传统角色、以便最初允许访问除克隆以外的所有主要卷管理功能。此角色具有以下特征：</block>
+  <block id="9258fb6c7073990636544dc25689b463" category="paragraph">然后、您可以根据需要更新此角色。在此工作流中、角色在第二步中进行了更改、以允许用户创建卷克隆。</block>
+  <block id="6423937e50f8c189d611fa1f0bca2119" category="section-title">第1步：创建角色</block>
+  <block id="1b48a082cdbde8619ef5f3ad9e0d6c49" category="paragraph">您可以通过问题描述调用来创建RBAC角色。</block>
+  <block id="72900513d2cddc3e0dd2b34b49f51c89" category="section-title">第2步：更新角色</block>
+  <block id="6356dddf694491834509bb76e9460668" category="paragraph">您可以通过问题描述调用来更新现有角色。</block>
+  <block id="f6e41e2ad42fbeff1733bde2c6b28581" category="cell">这是包含角色定义的SVM的UUID。</block>
+  <block id="10cb9641d08bd45a4a16a11d04b33d5d" category="cell">这是要更新的SVM中的角色名称。</block>
+  <block id="00ba69a4d8d18761b937f8c79517ded2" category="cell">/api/cluster-Jobs/｛UUID｝</block>
+  <block id="fad878b0757bccd8aab5fd94e81ff694" category="sidebar">RBAC</block>
+  <block id="b48ab7db016af5a706fed2257dca5317" category="sidebar">创建角色</block>
+  <block id="79a64e91efbdc6837abaf1d324269070" category="sidebar">限制SVM卷操作</block>
+  <block id="5379ed2904fea688a27b53224909e1fe" category="sidebar">启用数据保护</block>
+  <block id="58bd5f4d333ce0475b1c1a65bffe5bda" category="sidebar">允许生成ONTAP报告</block>
 </blocks>

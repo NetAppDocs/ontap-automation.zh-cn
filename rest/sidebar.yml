@@ -30,8 +30,4 @@ entries:
     url: "/rest/rbac_overview.html"
   - title: 使用角色和用户
     url: "/rest/rbac_roles_users.html"
-  - title: 角色定义示例
-    url: "/rest/rbac_sample_roles.html"
-  - title: 创建具有角色的用户
-    url: "/rest/rbac_wf_create_user.html"
 - section: resources

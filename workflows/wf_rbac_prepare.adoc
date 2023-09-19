@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_prepare.html 
+keywords:  
+summary: XXX 
+---
+= 准备使用RBAC
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+根据您的环境、您可以通过多种不同的方式使用ONTAP RBAC功能。本节将以工作流的形式介绍一些常见情形。在每种情况下、重点都放在特定的安全和管理目标上。
+
+在创建任何角色并将角色分配给ONTAP用户帐户之前、您应查看下面介绍的主要安全要求和选项、以做好准备。此外、请务必查看中的常规工作流概念 link:../workflows/prepare_workflows.html["准备使用这些工作流"]。
+
+.您使用的是哪个ONTAP 版本？
+ONTAP 版本可确定可用的REST端点和RBAC功能。
+
+.确定受保护的资源和范围
+您需要确定要保护的资源或命令以及范围(集群或SVM)。
+
+.用户应具有哪些访问权限？
+确定资源和范围后、您需要确定要授予的访问级别。
+
+.用户将如何访问ONTAP ？
+用户可以通过REST API或CLI访问ONTAP 、也可以同时使用这两者。
+
+.内置角色之一是否足以满足要求、或者是否需要自定义角色？
+使用现有内置角色更方便、但您可以根据需要创建新的自定义角色。
+
+.需要什么类型的角色？
+根据安全要求和ONTAP 访问、您需要选择是创建REST角色还是传统角色。

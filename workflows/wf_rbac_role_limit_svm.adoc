@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_limit_svm.html 
+keywords:  
+summary: 您可以定义一个角色来限制SVM中的存储卷管理。 
+---
+= 限制对SVM卷操作的访问
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以定义一个角色来限制SVM中的存储卷管理。
+
+.关于此工作流
+首先创建一个传统角色、以便最初允许访问除克隆以外的所有主要卷管理功能。此角色具有以下特征：
+
+* 能够执行所有CRUD卷操作、包括获取、创建、修改和删除
+* 无法创建卷克隆
+
+
+然后、您可以根据需要更新此角色。在此工作流中、角色在第二步中进行了更改、以允许用户创建卷克隆。
+
+
+
+== 第1步：创建角色
+
+您可以通过问题描述调用来创建RBAC角色。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /api/安全性/角色 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON 输入示例
+[source, curl]
+----
+{
+  "name": "role1",
+  "owner": {
+    "name": "cluster-1",
+    "uuid": "852d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      { "path": "volume create", "access": "all" },
+      { "path": "volume delete", "access": "all" }
+    ]
+}
+----
+
+
+== 第2步：更新角色
+
+您可以通过问题描述调用来更新现有角色。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /api/安全性/角色 
+|===
+.CURL示例的其他输入参数
+除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| $SVM_ID | 路径 | 是的。 | 这是包含角色定义的SVM的UUID。 
+
+
+| $Role_name | 路径 | 是的。 | 这是要更新的SVM中的角色名称。 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON 输入示例
+[source, curl]
+----
+{
+  "path": "volume clone",
+  "access": "all"
+}
+----
