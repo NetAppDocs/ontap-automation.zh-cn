@@ -4,6 +4,10 @@ title: 工作流
 entries:
 - title: 准备使用这些工作流
   url: "/workflows/prepare_workflows.html"
+- title: 证书和密钥
+  entries:
+  - title: 列出证书
+    url: "/workflows/wf_cert_list_certificates.html"
 - title: 集群
   entries:
   - title: 获取集群配置

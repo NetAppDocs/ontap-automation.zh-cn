@@ -17,6 +17,9 @@ summary: 在实时部署中使用ONTAP工作流之前、您应熟悉其结构和
 在实时ONTAP部署中使用工作流之前、您应熟悉这些工作流的结构和格式。
 
 
+TIP: 您应确保您的ONTAP版本支持您计划使用的工作流中的所有API调用。请参见 link:../reference/api_reference.html["API 参考"] 有关详细信息 ...
+
+
 
 == 简介
 

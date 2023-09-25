@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_cert_list_certificates.html 
+keywords: workflow, list certificates 
+summary: 您可以列出ONTAP集群中安装的证书。您可以执行此操作来查看特定证书是否可用、或者获取特定证书的ID以检索整个证书。 
+---
+= 列出证书
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以列出ONTAP集群中安装的证书。您可以执行此操作来查看特定证书是否可用或获取特定证书的ID。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /API/secury/certificates 
+|===
+.CURL示例：返回三个证书
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/security/certificates?max_records=3" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[listing]
+----
+{
+  "records": [
+    {
+      "uuid": "dad822c2-573c-11ee-a310-005056aecc29",
+      "name": "vs0_17866DB5C933E2EA",
+      "_links": {
+        "self": {
+          "href": "/api/security/certificates/dad822c2-573c-11ee-a310-005056aecc29"
+        }
+      }
+    },
+    {
+      "uuid": "7d8e5570-573c-11ee-a310-005056aecc29",
+      "name": "BuypassClass3RootCA",
+      "_links": {
+        "self": {
+          "href": "/api/security/certificates/7d8e5570-573c-11ee-a310-005056aecc29"
+        }
+      }
+    },
+    {
+      "uuid": "7dbb2191-573c-11ee-a310-005056aecc29",
+      "name": "EntrustRootCertificationAuthority",
+      "_links": {
+        "self": {
+          "href": "/api/security/certificates/7dbb2191-573c-11ee-a310-005056aecc29"
+        }
+      }
+    }
+  ],
+  "num_records": 3,
+  "_links": {
+    "self": {
+      "href": "/api/security/certificates?max_records=3"
+    },
+    "next": {
+      "href": "/api/security/certificates?start.svm_id=sti214nscluster-1&start.uuid=7dbb2191-573c-11ee-a310-005056aecc29&max_records=3"
+    }
+  }
+}
+
+----

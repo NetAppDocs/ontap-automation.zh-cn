@@ -40,7 +40,7 @@ summary: 您可以使用此工作流创建具有关联REST角色的用户。
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/svm/svms?order_by=name" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -68,7 +68,7 @@ curl --request GET \
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/security/accounts?owner.name=dmp" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -96,7 +96,7 @@ curl --request GET \
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/security/roles?owner.name=dmp" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -125,7 +125,7 @@ curl --request GET \
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/roles" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -180,8 +180,8 @@ curl --request POST \
 [source, curl]
 ----
 curl --request POST \
---location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
--- include \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/privileges" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -204,7 +204,7 @@ curl --request POST \
 对创建用户帐户执行以下REST API调用。上面创建的角色*dprole1*与新用户关联。
 
 
-TIP: 您可以包括没有角色的用户。在这种情况下、您需要修改用户以分配角色。
+TIP: 您可以创建没有角色的用户。在这种情况下、系统会为用户分配一个默认角色( `admin` 或 `vsadmin`)、具体取决于用户是使用集群还是SVM范围定义的。您需要修改用户以分配其他角色。
 
 .HTTP方法和端点
 此REST API调用使用以下方法和端点。
@@ -221,7 +221,7 @@ TIP: 您可以包括没有角色的用户。在这种情况下、您需要修改
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/accounts" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
