@@ -1711,11 +1711,11 @@
   <block id="58bd5f4d333ce0475b1c1a65bffe5bda" category="sidebar">允许生成ONTAP报告</block>
   <block id="0819bf309b404c2690cae22900701126" category="admonition">您可以创建没有角色的用户。在这种情况下、系统会为用户分配一个默认角色(<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> 或<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block>)、具体取决于用户是使用集群还是SVM范围定义的。您需要修改用户以分配其他角色。</block>
   <block id="d5e0a7e21dd7c4bd9ee909a636487786" category="summary">您可以列出ONTAP集群中安装的证书。您可以执行此操作来查看特定证书是否可用、或者获取特定证书的ID以检索整个证书。</block>
-  <block id="85dc6bfe81f58a9d2d9fdae56a1e1032" category="doc">列出证书</block>
   <block id="b6902213d797ad7a6157aee6a1fc91fb" category="paragraph">您可以列出ONTAP集群中安装的证书。您可以执行此操作来查看特定证书是否可用或获取特定证书的ID。</block>
   <block id="b98bcec013a122e0040cd6f6e8f3de6a" category="cell">/API/secury/certificates</block>
   <block id="1f1b6cbe92673a03d06060259142dbc4" category="listing-title">CURL示例：返回三个证书</block>
   <block id="cf441294e2d78d04b4374f90141413f6" category="admonition">您应确保您的ONTAP版本支持您计划使用的工作流中的所有API调用。请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="010b2cb4a9a7014437b7b05617f3e98e" category="sidebar">证书和密钥</block>
   <block id="3002e63504efe4acf7cd736f92c22ec0" category="sidebar">列出证书</block>
+  <block id="b74cf40de9fee3f0ba4a3b37a59ed082" category="doc">列出已安装的证书</block>
 </blocks>
