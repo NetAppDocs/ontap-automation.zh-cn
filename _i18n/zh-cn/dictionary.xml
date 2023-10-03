@@ -1095,7 +1095,6 @@
   <block id="57ffddb99e11d6096024019ec78a7294" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。创建REST角色会自动创建传统的_MAPPING角色。</block>
   <block id="9c72cbdda2c8bbec859c44a2f9ca219c" category="admonition">您可以联机访问ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息的文档、包括如何使用API的示例。</block>
   <block id="0fdbfb1fe714496cb439bf652e454595" category="list-text">ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 <block ref="cf7871643c6e047cdf46579054e4d5c1" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="d1b92a4930d50c6ed1038655db0d2684" category="sidebar">所有ONTAP 产品文档</block>
   <block id="476bf6fc5e4a2d37b00403ec863106ac" category="inline-link">ONTAP 9产品文档</block>
   <block id="ea13735c00bcda944bfcad2caa280467" category="list-text"><block ref="ea13735c00bcda944bfcad2caa280467" category="inline-link-rx"></block></block>
   <block id="c68677933ee8c7cbe8b88c055e440e45" category="paragraph">提供ONTAP 9产品系列的文档。</block>
@@ -1718,4 +1717,6 @@
   <block id="010b2cb4a9a7014437b7b05617f3e98e" category="sidebar">证书和密钥</block>
   <block id="3002e63504efe4acf7cd736f92c22ec0" category="sidebar">列出证书</block>
   <block id="b74cf40de9fee3f0ba4a3b37a59ed082" category="doc">列出已安装的证书</block>
+  <block id="f69688cd7802eb62a67f6a56384b3d93" category="cell">max_记录</block>
+  <block id="09548bddb5b6b060a8ff9db149caf9b5" category="cell">指定要返回的记录数。</block>
 </blocks>

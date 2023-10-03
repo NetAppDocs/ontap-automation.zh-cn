@@ -26,6 +26,16 @@ summary: 您可以列出ONTAP集群中安装的证书。您可以执行此操作
 
 | 获取 | /API/secury/certificates 
 |===
+.CURL示例的其他输入参数
+除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| max_记录 | 查询 | 否 | 指定要返回的记录数。 
+|===
 .CURL示例：返回三个证书
 [source, curl]
 ----
