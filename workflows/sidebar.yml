@@ -8,6 +8,8 @@ entries:
   entries:
   - title: 列出证书
     url: "/workflows/wf_cert_list_certificates.html"
+  - title: 安装证书
+    url: "/workflows/wf_cert_install_certificate.html"
 - title: 集群
   entries:
   - title: 获取集群配置
