@@ -40,7 +40,7 @@ TIP: 您应始终使用集群管理LIF。这将对所有节点上的API请求进
 
 用于访问最新版本 API 的文档页面的 URL 格式为：
 
-`https://<cluster_mgmt_ip_address>/docs/api`
+`\https://<cluster_mgmt_ip_address>/docs/api`
 
 
 
@@ -50,8 +50,8 @@ TIP: 您应始终使用集群管理LIF。这将对所有节点上的API请求进
 
 用于直接访问最新版本 API 的基本 URL 格式为：
 
-`https://<cluster_mgmt_ip_address>/api`
+`\https://<cluster_mgmt_ip_address>/api`
 
 要访问支持多个版本的特定 API 版本， URL 的格式为：
 
-`https://<cluster_mgmt_ip_address>/api/v1`
+`\https://<cluster_mgmt_ip_address>/api/v1`

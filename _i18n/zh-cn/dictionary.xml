@@ -422,13 +422,10 @@
   <block id="3869128f90019baba527314ae533f075" category="paragraph">您选择使用的 LIF 必须配置为支持 HTTPS 管理协议。此外，网络中的防火墙配置必须允许 HTTPS 流量。</block>
   <block id="649819179ab6bae8f5294207b4462523" category="section-title">ONTAP API 联机文档页面</block>
   <block id="af945751c0efb1d33830b48e2e17c2e6" category="paragraph">用于访问最新版本 API 的文档页面的 URL 格式为：</block>
-  <block id="5577746582bcb9358092e3471e9dbcbb" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/docs/api`</block>
   <block id="26af4f060203125bc0739a38e9ddfa2b" category="section-title">自定义软件和工具</block>
   <block id="6e70b7cc1cd3e6a65b37dbcdde8ecd4a" category="paragraph">您可以使用多种不同的编程语言和工具访问 ONTAP API 。常见选项包括 Python ， Java ， Curl 和 PowerShell 。使用 API 的程序，脚本或工具充当 REST Web 服务客户端。使用编程语言可以加深对 API 的了解，并提供自动化 ONTAP 管理的机会。</block>
   <block id="9670d5b867b93341fdec8b7aadfdba79" category="paragraph">用于直接访问最新版本 API 的基本 URL 格式为：</block>
-  <block id="eb58b311b3cd61c57c1148d0c5ba0129" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/api`</block>
   <block id="433c12a33fdba27dd646123b380a2c4e" category="paragraph">要访问支持多个版本的特定 API 版本， URL 的格式为：</block>
-  <block id="8b27cc8fdbb4b1dea164580b7fa49b37" category="paragraph">`https://&lt;cluster_mgmt_ip_address&gt;/api/v1`</block>
   <block id="249694a485fc5d3289c38986b4f8e887" category="doc">集群</block>
   <block id="53cb0643f3f1046c67b92faf9e6e0cf3" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 集群和相关资源。</block>
   <block id="c374efd8a5043c884177979a9179dd43" category="paragraph">通过容量池许可模式，您可以从共享池中为每个集群节点授予存储容量许可。此资源类型是 ONTAP 9.8 的新增功能。</block>
@@ -1729,4 +1726,7 @@
   <block id="f6c0383d899dc40b8c8d016d4b5f85de" category="section-title">第2步：确认证书已安装</block>
   <block id="5b3cfccbac20b0363f1d4e2d4431ab0e" category="paragraph">执行工作流 <block ref="cf365ce6cd35c6dbd8b87fe3303f2226" category="inline-link-macro-rx"></block> 并确认证书可用。</block>
   <block id="1346018f60bf3711f3e704204dc2db96" category="sidebar">安装证书</block>
+  <block id="453c37c8e9a76deb2b13d5a2c2c4be7b" category="paragraph"><block ref="71e2add861ef98d4019f3cebd53921c4" prefix="" category="inline-code"></block></block>
+  <block id="c22e9379c891fca636de58b50cf46bc3" category="paragraph"><block ref="e27598c7184d00cb3ee9f87da21a55c5" prefix="" category="inline-code"></block></block>
+  <block id="adbde3ab61ea5b6041902022caaaeddc" category="paragraph"><block ref="c07b7bd445e059f84d0bc076867fcd31" prefix="" category="inline-code"></block></block>
 </blocks>
