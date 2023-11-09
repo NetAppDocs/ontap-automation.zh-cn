@@ -700,7 +700,6 @@
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="section-title">ONTAP 9.10.1</block>
   <block id="ec033dcf5fdadae0c2ee4fad5b7980ac" category="doc">ONTAP 自动化文档</block>
   <block id="a91c898dc88158a371c7ff70b0baa9e0" category="paragraph">ONTAP REST API 和命令行界面的设计截然不同。CLI 命令和参数不会直接映射到 REST API 调用。即使存在相似之处，输入参数的详细信息也可能有所不同。例如，可以使用字节或后缀（例如 KB ）来指定数字单位。您应查看 <block ref="3715d1b1602da53d0f380910b6dd9205" category="inline-link-macro-rx"></block> 以及 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
-  <block id="e5adab4baa780b014bfe7130066b2a36" category="paragraph">有关详细信息，请参见 <block ref="fa229fc458ab35ecd4519d4dcca0e7bb" category="inline-link-macro-rx"></block>。</block>
   <block id="430e01911dcacc88e4a83d838ae504e2" category="paragraph"><block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block></block>
   <block id="54a05230a9d83fc20a3024afd1148c81" category="doc">通过 REST API 访问 ONTAP 命令行界面</block>
   <block id="c0aefd46729e17daeac7adf6c79cc100" category="paragraph">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。</block>
@@ -905,14 +904,6 @@
   <block id="f74fb34c9f03e41b8c43158d192c2d00" category="cell">host_adapter_1</block>
   <block id="5179155001c9f520ffb99f72e2b20b26" category="cell">host_adapter_2</block>
   <block id="e963b19eb0f4d2b1cf056e63183513d8" category="cell">host_adapter_3.</block>
-  <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
-  <block id="b5ec85c168694921a9de5eadfa6243a8" category="paragraph">ONTAP REST API具有某些限制、可能会影响您对API的使用和自动化代码的开发。下面介绍了这些限制。通常、每个适用场景 都支持REST API的所有ONTAP 版本。有关ONTAP 详细信息、请参见_RAID releases_字段。</block>
-  <block id="3428b552896ca875d0afc0a87f353a49" category="admonition">REST API首次随ONTAP 9.6一起提供。</block>
-  <block id="3a7bd150a3b127f640a55f3e4295ae12" category="paragraph">ONTAP 版本：所有受支持的版本</block>
-  <block id="3806b2980e70701200d32d0a7249795f" category="paragraph">ONTAP 会收到每个REST API客户端请求、并将其置于输入队列中、然后再进行处理。在到达率极高的情况下、保留这些API请求的输入等待队列可能会暂时填满。如果发生这种情况、则会拒绝每个额外的溢出请求。在这些情况下：</block>
-  <block id="b313d34412fbec083537488efb6a7265" category="list-text">ONTAP 会识别传入连接超过等待队列深度、并记录一条消息、指出其连接失败。</block>
-  <block id="b497355f60941f025ea8887fd49f2692" category="list-text">REST客户端会观察到连接失败、但具体行为可能取决于客户端。例如、对于NMSDK客户端、将显示消息"Failed to connect to SSL"。</block>
-  <block id="ba9b38c8f7abd73c0e9a44d75391a449" category="paragraph">REST API输入等待队列填充是一个极少的事件。但是、拒绝多余的请求可以防止受到DOS攻击。</block>
   <block id="8df9e8f24b204c91ad0a9031f9c09a16" category="cell">由于授权错误，访问被拒绝。</block>
   <block id="806c6eb26fec67050c86278775f0a3ff" category="list-text">SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。</block>
   <block id="9047fe19c5c01912bf0c89c78bd42103" category="list-text">ONTAPI报告工具</block>
@@ -1103,7 +1094,6 @@
   <block id="2f652c73d7c77f77ad56e43e82a5a33c" category="summary">为了帮助命令行界面和 ONTAPI 用户过渡到 ONTAP REST API ， ONTAP 提供了一个 REST 端点来访问命令行界面。您可以使用此直通功能执行任何命令行界面命令。</block>
   <block id="5c1a8f35406088e0d21c8beb1a46d2c4" category="summary">表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。</block>
   <block id="783fed6bd9b06a289bc35d1ce6d3e28c" category="summary">发出设计为异步运行的 API 请求后，始终会创建一个作业对象并将其返回给调用方。作业将描述并固定处理请求的后台任务。</block>
-  <block id="f06d994dc2c76601280d13d092043991" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="5c7637441553bbdd364a0c84153850ad" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="0a9491f69a61e4af806e090fdb7f64e0" category="doc">如何访问ONTAP REST API</block>
   <block id="b1999685ab0c81075d0f943a5d06a018" category="summary">每个API事务都包含一个HTTP请求和关联的响应。</block>
   <block id="a198ee594703276bc71a03301b58b8a2" category="paragraph">每个API事务都包含一个HTTP请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。</block>
@@ -1115,7 +1105,6 @@
   <block id="25f413c15047133feb7268cff95a6db2" category="paragraph">提供关键ONTAPI调用以及与等效REST API调用的映射。选择相应的ONTAP 版本。</block>
   <block id="8a931880f5b86cd8e245987c19c7acb1" category="inline-link">PyPI：NetApp ONTAP</block>
   <block id="f1414234dbf1c874f89997d3c54bcfbc" category="list-text"><block ref="f1414234dbf1c874f89997d3c54bcfbc" category="inline-link-rx"></block></block>
-  <block id="d45d9e85cc7b83745a3636a19ac8b2bb" category="summary">ONTAP REST API具有某些限制、可能会影响您对API的使用和自动化代码的开发。</block>
   <block id="eb0cda77424e206695a7e1df680678f7" category="paragraph">ONTAP 9.12.1继续扩展ONTAP REST API的功能、新增了40多个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点介绍了安全性和NAS功能的改进。</block>
   <block id="5f6c185eb38c56187fc699dfbe62654b" category="list-text">安全性增强功能</block>
   <block id="02225fa77795933e713b9af48999c77d" category="list-text">Amazon Web Services包括一项密钥管理服务、可为密钥和其他机密提供安全存储。您可以通过REST API访问此服务、以使ONTAP 能够将其加密密钥安全地存储在云中。此外、您还可以创建和列出用于NetApp存储加密的身份验证密钥。</block>
@@ -1389,11 +1378,9 @@
   <block id="2e02e4fcb54e6e1277182e7dcc734294" category="paragraph-title">ONTAPI 到 REST 的映射</block>
   <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">从ONTAPI将自动化转变为ONTAP REST API</block>
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
-  <block id="21aec37d095265f9895a6901a6c9b4be" category="paragraph-title">输入队列已满时、REST API请求被拒绝</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
   <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织、如ONTAP API联机文档中所示。下面简要介绍了每个资源的问题描述 、并根据需要提供其他使用注意事项。</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">ONTAP REST API的新增功能</block>
-  <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。</block>
   <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
   <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
@@ -1729,4 +1716,8 @@
   <block id="453c37c8e9a76deb2b13d5a2c2c4be7b" category="paragraph"><block ref="71e2add861ef98d4019f3cebd53921c4" prefix="" category="inline-code"></block></block>
   <block id="c22e9379c891fca636de58b50cf46bc3" category="paragraph"><block ref="e27598c7184d00cb3ee9f87da21a55c5" prefix="" category="inline-code"></block></block>
   <block id="adbde3ab61ea5b6041902022caaaeddc" category="paragraph"><block ref="c07b7bd445e059f84d0bc076867fcd31" prefix="" category="inline-code"></block></block>
+  <block id="3b4eb2c2464d0801cad28a2ce6319a1c" category="paragraph">本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 <block ref="eea437b9922115b60f36debdfc0ed4d0" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
+  <block id="47c25bc89f41cb229d9f5a0f8cc43df0" category="admonition">您还应查看<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> 适用于追加信息、包括已知限制或问题。</block>
+  <block id="72679fae292d57bf767f718c146bf6a1" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="44134cd34c398895e571223ccabdd386" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="f3b85d23635afa201e61913278969401" category="paragraph">有关详细信息，请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
 </blocks>

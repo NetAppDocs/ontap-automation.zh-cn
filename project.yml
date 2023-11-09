@@ -11,7 +11,8 @@ sidebar:
   entries:
   - title: ONTAP 自动化文档
     url: "/index.html"
-  - section: rn
+  - title: 新增功能
+    url: "/whats_new.html"
   - section: get-started
   - section: rest
   - section: workflows

@@ -1,0 +1,8 @@
+---
+permalink: rn/whats_new.html 
+redirect: ontap-automation/whats_new.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -16,7 +16,7 @@ summary: 通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP 
 [role="lead"]
 通过ONTAP REST API提供的资源按类别进行组织、如ONTAP API联机文档中所示。下面简要介绍了每个资源的问题描述 、并根据需要提供其他使用注意事项。
 
-本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 link:../rn/whats_new.html["ONTAP REST API的新增功能"] 以及 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]。
+本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 link:../whats_new.html["ONTAP REST API的新增功能"] 以及 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]。
 
 
 TIP: 对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。

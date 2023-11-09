@@ -47,7 +47,7 @@ ONTAP 版本中的 SnapDiff API 可用性定义如下：
 * ONTAP 9.10.1 ：仅限 v3 （仅限 REST API ）
 
 
-有关详细信息，请参见 link:../rn/whats_new.html["《 ONTAP 发行说明》"]。
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]。
 
 .相关信息
 * link:../rest/input_variables.html["控制 API 请求的输入变量"]
