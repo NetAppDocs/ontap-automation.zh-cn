@@ -80,20 +80,23 @@ NOTE: `return_timeout` query 参数可用于异步 API 调用，并且可以将�
 
 REST API 提供的安全性主要基于 ONTAP 提供的现有安全功能。API 使用以下安全性：
 
-* 传输层安全性
+传输层安全性:: 客户端与ONTAP LIF之间通过网络发送的所有流量通常会根据ONTAP配置设置使用TLS进行加密。
+客户端身份验证:: ONTAP System Manager 和网络易管理性 SDK 提供的相同身份验证选项也可用于 ONTAP REST API 。
+HTTP 身份验证:: 在HTTP级别、例如直接访问ONTAP REST API时、有两种身份验证选项、如下所述。在每种情况下、您都需要创建HTTP授权标头并将其包含在每个请求中。
 +
-ONTAP LIF 与客户端之间通过网络发送的所有流量通常会根据 ONTAP 配置设置使用 TLS 进行加密。
+--
+[cols="25,75"]
+|===
+| 选项 | Description 
 
-* 客户端身份验证
-+
-ONTAP System Manager 和网络易管理性 SDK 提供的相同身份验证选项也可用于 ONTAP REST API 。
 
-* HTTP 身份验证
-+
-在 HTTP 级别， API 事务使用基本身份验证。每个请求都会添加一个 HTTP 标头，其中用户名和密码包含在 base64 字符串中。
+| HTTP基本身份验证 | ONTAP用户名和密码与冒号连在一起。该字符串将转换为base64并包含在请求标头中。 
 
-* ONTAP 授权
-+
-ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。
 
+| OAuth2.0 | 从ONTAP 9.14开始、您可以从外部授权服务器请求访问令牌、并将其作为承载令牌包含在请求标头中。 
+|===
+有关OAuth2.0以及如何在ONTAP中实施的详细信息、请参见 https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["ONTAP OAuth2.0实施概述"^]。另请参见 link:../workflows/prepare_workflows.html["准备使用这些工作流"] 。
+
+--
+ONTAP 授权:: ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。
 

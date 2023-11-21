@@ -50,7 +50,7 @@ ONTAP 9发行说明、其中包含有关当前版本的信息。
 +
 PyPI 上的 NetApp Python Client Library 软件包。
 
-* https://library.netapp.com/ecmdocs/ECMLP2885777/html/index.html["适用于9.13.1的NetApp PCL文档"^]
+* https://library.netapp.com/ecmdocs/ECMLP2886776/html/index.html["9.14.1版NetApp PCL文档"^]
 +
 NetApp Python 客户端库的文档。
 

@@ -41,11 +41,9 @@
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">安全性</block>
   <block id="a0c340ff7c895ce6a1d571f1f55df890" category="paragraph">REST API 提供的安全性主要基于 ONTAP 提供的现有安全功能。API 使用以下安全性：</block>
   <block id="14a55e8a26db2705a0ffd20ba0427338" category="list-text">传输层安全性</block>
-  <block id="efe99011e665b49448af280693e74e6c" category="paragraph">ONTAP LIF 与客户端之间通过网络发送的所有流量通常会根据 ONTAP 配置设置使用 TLS 进行加密。</block>
   <block id="234b7702b17d750d0199947820d83481" category="list-text">客户端身份验证</block>
   <block id="e3f07bfd552c9d40285bc289e8e95e1a" category="paragraph">ONTAP System Manager 和网络易管理性 SDK 提供的相同身份验证选项也可用于 ONTAP REST API 。</block>
   <block id="b19cfdc6ba6a94190ea654a5c325673c" category="list-text">HTTP 身份验证</block>
-  <block id="fba54022e3b47aa328af3bc5b2fd6c5b" category="paragraph">在 HTTP 级别， API 事务使用基本身份验证。每个请求都会添加一个 HTTP 标头，其中用户名和密码包含在 base64 字符串中。</block>
   <block id="022958270d2e89acef5cfe895ac4a5a4" category="list-text">ONTAP 授权</block>
   <block id="ecada31be49896665065d57659291715" category="paragraph">ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。</block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="doc">NDMP</block>
@@ -280,11 +278,9 @@
   <block id="26480427f609b5d339095df99aa09f7c" category="paragraph">您可以使用这些 API 调用来管理支持非易失性内存快速（ NVMe ）的资源。</block>
   <block id="2935855efa69a27eefb72573bc4066e1" category="paragraph">光纤通道登录表示由登录到 ONTAP 的光纤通道启动程序构成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="574ab269e7caa83c4f904627c177d111" category="paragraph">NVMe 接口是指配置为支持基于网络结构的 NVMe （ NVMe-oF ）协议的网络接口。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="d7135e19354e1577f81ff90fca13afcd" category="paragraph">NVMe 服务定义 SVM 的 NVMe 控制器目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
   <block id="055c2c82f5f90d21db7da7a6ed60c13e" category="paragraph">NVMe 子系统控制器表示主机与存储解决方案之间的动态连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="816c0720f92a2711cb0cd082d1076aa6" category="paragraph">NVMe 子系统映射是 NVMe 命名空间与 NVMe 子系统的关联。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="fb8f24dc4fe86e198d8b55ea44102fe4" category="paragraph">NVMe 子系统可为一组连接 NVMe 的主机维护配置状态和命名空间访问控制。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="ce9f5c2bc40cd88e3ff682c6b88a8186" category="paragraph">NVMe 命名空间是一组可寻址逻辑块，这些逻辑块提供给使用基于网络结构的 NVMe 协议连接到 SVM 的主机。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="doc">支持</block>
   <block id="19e28f133d3f6f61397443b9a434bda8" category="paragraph">您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。</block>
   <block id="f0d5ad06fbd80e449410ccfbaa33addd" category="paragraph">AutoSupport 会收集配置和状态详细信息以及错误，并向 NetApp 报告这些信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -400,13 +396,10 @@
   <block id="d026d48ac10030a378a0074cde689bc7" category="paragraph">您可以使用这些 API 调用来管理存储区域网络（ Storage Area Networking ， SAN ）资源。</block>
   <block id="21b818347e867034bff06df47c6638ed" category="paragraph">光纤通道登录表示已登录到 ONTAP 的光纤通道启动程序所形成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="bec2206da79fc1b03bfc7f4f6c7bda42" category="paragraph">全球通用端口名称（ WWPN ）是一个 64 位值，用于唯一标识光纤通道端口。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="b125a3961f250d22b3eed929040d8e9a" category="paragraph">光纤通道协议（ FCP ）服务定义 SVM 的光纤通道目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
   <block id="68c0fd93c2b023ed4f45e053c2c0475e" category="paragraph">启动程序组（ igroup ）是一组光纤通道 WWPN （全球通用端口名称）， iSCSI IQN （限定名称）和 iSCSI EUI （扩展唯一标识符），用于标识主机启动程序。此资源类型最初是在 ONTAP 9.6 中推出的。</block>
   <block id="ff405aa42851c6e5daf11546e79e3980" category="paragraph">iSCSI 凭据对象包含启动程序和 ONTAP 使用的身份验证凭据。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="1dfd42e3c5ed950e1ad51c88566f0777" category="paragraph">iSCSI 服务定义 SVM 的 iSCSI 目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
   <block id="4ec7a22296b883954f318da87ad08cf3" category="paragraph">iSCSI 会话是指将 iSCSI 启动程序与 iSCSI 目标链接在一起的一个或多个 TCP 连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="c1899d8ac0f131825213c510da4ad1d1" category="paragraph">LUN 映射是指 LUN 与启动程序组之间的关联。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="cf304f8d071581c8a16443a669547c31" category="paragraph">LUN 是存储区域网络（ SAN ）中存储的逻辑表示形式。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
   <block id="5d3a296c76ec21766a0b62dfec5b3611" category="paragraph">端口集是与 _portset_ Storage VM 关联的一组光纤通道或 iSCSI 网络接口。虽然先前版本的 ONTAP 中已存在此功能，但现在已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
   <block id="0b7e67b6cdcf0432b624d53588d520fb" category="doc">SVM</block>
   <block id="5782655b9fc988fc3096ea1fe0953ee6" category="paragraph">您可以使用这些 API 调用来管理 Storage Virtual Machine （ SVM ）。</block>
@@ -557,8 +550,6 @@
   <block id="c16737a4e599bb09d061c55a7ecad532" category="paragraph">以太网广播域是一组物理端口，这些端口似乎属于同一物理网络。当从域中的一个端口广播时，所有端口都会收到一个数据包。每个广播域都属于一个 IP 空间。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="af23f5cf37eca36a088ece4df6d53de0" category="paragraph">以太网端口是物理或虚拟网络端点。这些端口可以组合成链路聚合组（ Link Aggregate Group ， LAG ），也可以使用虚拟 LAN （ Virtual LAN ， VLAN ）进行分隔。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
   <block id="9d47789045e3c6c4eea55da48da63763" category="paragraph">您可以检索以太网交换机的端口信息。此资源类型是 ONTAP 9.8 的新增功能。</block>
-  <block id="1fbb0cc82af906c09c88b2ff07a9af6b" category="paragraph">光纤通道接口是与 SVM 关联的逻辑端点。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
-  <block id="9491a7372139acacd450acd17119ed0a" category="paragraph">光纤通道端口是 ONTAP 节点上用于连接到光纤通道网络的物理适配器。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
   <block id="75bbbcd48175f605a8ab4e577fb5834d" category="paragraph">您可以为 SVM 或集群 IP 空间配置 HTTP 代理。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="59ebb6ef1a0a1fc8f946c90ef14db7ae" category="paragraph">您可以创建和管理边界网关协议对等组。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="3db65e1e11eace7de9f98bf448ab6551" category="paragraph">逻辑接口（ LIF ）是一个具有其他配置属性的 IP 地址。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
@@ -637,7 +628,6 @@
   <block id="d7741d8eafdec4ae992161e15c2ae508" category="paragraph">ONTAP 会检测可能包含勒索软件威胁的文件。端点有多种类别。您可以检索这些可疑文件的列表并将其从卷中删除。此资源类型是在 ONTAP 9.10.1 中引入的。</block>
   <block id="49594609d9f640b0c454c45b305cb943" category="paragraph">您可以添加，删除和检索 IPsec CA 证书。此资源类型是 ONTAP 9.10 中的新增资源。</block>
   <block id="c9fc87bcce85ba9b55c70c4a5a618d7b" category="paragraph">通过这些端点，您可以检索和更新密钥管理器的配置。此资源类型是 ONTAP 9.10 中的新增资源。</block>
-  <block id="8e534dc2397390aadbe32ec748d96a3d" category="paragraph">密钥存储用于描述密钥管理器的类型。此资源类型是 ONTAP 9.10 中的新增资源。</block>
   <block id="04da7052ae3148365ddf3af010db695e" category="paragraph">通过这些端点，您可以检索所有 SVM 的 SSH 安全配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="6403a27a515eaf92633945f4270c6cc4" category="paragraph">自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="0ae2ed9e360218bc8a7361630749a37d" category="paragraph">您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</block>
@@ -1570,9 +1560,7 @@
   <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">标题</block>
   <block id="7d8953ad437c7a74fa7c3eaa1037c286" category="cell">用于HTTP基本身份验证的凭据字符串。</block>
   <block id="71d08941d68cdfdc2782675a59475359" category="section-title">身份验证选项</block>
-  <block id="189c9092755b5ec9acf4ef1fb0b54d46" category="paragraph">通过ONTAP 9.131、REST API可以使用的主要身份验证方法是基本身份验证。</block>
   <block id="5f7f2e03d053c151ec8a08fd76564f5a" category="section-title">HTTP基本身份验证</block>
-  <block id="dc248dc9e4f71e5475b8cecc054f14d4" category="paragraph">使用基本身份验证时、每个HTTP请求都必须包含用户凭据。有两种发送凭据的方法。</block>
   <block id="303374a8533b38fb7d98a5790a54237c" category="paragraph-title">构建HTTP请求标头</block>
   <block id="de502eeb74b9db18547f010273db3a03" category="list-text">将用户和密码值与冒号串联：</block>
   <block id="4f765dee7c913da188ec3feb5803b2eb" category="paragraph"><block ref="4a88e1f19c3245879ff3b041cf65f2c0" prefix="" category="inline-code"></block></block>
@@ -1720,4 +1708,59 @@
   <block id="47c25bc89f41cb229d9f5a0f8cc43df0" category="admonition">您还应查看<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> 适用于追加信息、包括已知限制或问题。</block>
   <block id="72679fae292d57bf767f718c146bf6a1" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="44134cd34c398895e571223ccabdd386" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="f3b85d23635afa201e61913278969401" category="paragraph">有关详细信息，请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
+  <block id="bfc2f11bae632428ff628103902f574d" category="inline-link">9.14.1版NetApp PCL文档</block>
+  <block id="445f6e03b4e783a323d451f16c8806b1" category="list-text"><block ref="445f6e03b4e783a323d451f16c8806b1" category="inline-link-rx"></block></block>
+  <block id="02e64515407e12e7e47189d43e3d39a5" category="paragraph-title">QoS选项</block>
+  <block id="c3b594acaa0d2b7973545bc9cb6b6045" category="paragraph">通过引入端点、您可以检索和设置集群的QoS选项。例如、您可以为后台任务预留一定百分比的可用系统处理资源。此资源类型是在ONTAP 9.14中引入的。</block>
+  <block id="ab5d89910deed604b9cb2e757ec2b2e1" category="paragraph">光纤通道协议（ FCP ）服务定义 SVM 的光纤通道目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="6430db21988dbbdfca7783c89a7710df" category="paragraph-title">启动程序</block>
+  <block id="e3d33d6f93f2da7210eecf1bf47f611a" category="paragraph">启动程序是用于标识主机端点的光纤通道(FC)全球通用端口名称(WWPN)、iSCSI限定名称(IQN)或iSCSI EUI (扩展唯一标识符)。您可以检索集群或特定SVM的启动程序。此资源类型是在ONTAP 9.14中引入的。</block>
+  <block id="131003e164df711c2c8b54e9164645ce" category="paragraph">iSCSI 服务定义 SVM 的 iSCSI 目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="824ff803a2e59191d84de2a5883e3817" category="paragraph">LUN 是存储区域网络（ SAN ）中存储的逻辑表示形式。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="d88d836b0f6abd268649d467ed5ed4a0" category="paragraph-title">Cisco Duo</block>
+  <block id="7dff8926a1636f9c9eb5aafc4933fb51" category="paragraph">Duo为SSH登录提供双重身份验证。您可以将Duo配置为在ONTAP集群或SVM级别运行。此资源类型是在ONTAP 9.14中引入的。</block>
+  <block id="2f857b00dd40b78c001830e145e6e9ed" category="paragraph">密钥存储用于描述密钥管理器的类型。此资源类型是 ONTAP 9.10 中的新增资源。ONTAP 9.14增加了支持增强控制的其他端点。</block>
+  <block id="81965b7bd1ea175b46252dfed91f5375" category="paragraph-title">OAuth2.0</block>
+  <block id="3e1b68a51cd18c85f6633a372eaa47d5" category="paragraph">开放式授权(OAuth2.0)是一种基于令牌的框架、可用于限制对ONTAP存储资源的访问。您可以将其用于通过REST API访问ONTAP的客户端。可以使用任何ONTAP管理界面(包括REST API)执行配置。此资源类型是在ONTAP 9.14中引入的。</block>
+  <block id="27702643aae403db95bb8d5766d42ba2" category="paragraph">光纤通道接口是与 SVM 关联的逻辑端点。此资源类型是在ONTAP 9.6中引入的、并在ONTAP 9.8中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="47232f83862f7c73f2dc299c2cb2a804" category="paragraph">光纤通道端口是 ONTAP 节点上用于连接到光纤通道网络的物理适配器。此资源类型是在ONTAP 9.6中引入的、并在ONTAP 9.8中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="e9460f386e193d8153ce3a30cbeae0a2" category="paragraph">NVMe 命名空间是一组可寻址逻辑块，这些逻辑块提供给使用基于网络结构的 NVMe 协议连接到 SVM 的主机。此资源类型是在ONTAP 9.6中引入的、并在ONTAP 9.8中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="e1212fe9c627f41d39c2fb26db4535c9" category="paragraph">NVMe 服务定义 SVM 的 NVMe 控制器目标的属性。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。ONTAP 9.14增加了对检索性能指标数据的支持。</block>
+  <block id="a51892b5a4bcf216a56450a792184174" category="paragraph-title">FPolicy持久存储</block>
+  <block id="ecfa04d0e47a1a9e2cf0144187c21054" category="paragraph">您可以为ONTAP FPolicy配置和事件配置和管理永久性存储。每个SVM都可以有一个永久性存储、该存储可供SVM中的多个策略共享。此资源类型是在ONTAP 9.14中引入的。</block>
+  <block id="8020ad245e7cbc2ac49c84b7f4ace684" category="inline-link">ONTAP 9.14.1</block>
+  <block id="b7c3bd1301d054c8520873802dd18cfb" category="list-text"><block ref="b7c3bd1301d054c8520873802dd18cfb" category="inline-link-rx"></block></block>
+  <block id="19040d6ab7164538566763cb6e559f8a" category="paragraph">REST API可用的主要身份验证技术是HTTP基本身份验证。从ONTAP 9.14开始、您还可以选择使用开放式授权(OAuth2.0)框架以及基于令牌的身份验证和授权。</block>
+  <block id="a1780de7da7bbe961dafcd25f2acce5f" category="paragraph">使用基本身份验证时、每个HTTP请求都必须包含用户凭据。有两种发送凭据的方法。</block>
+  <block id="71c946f737aae822b9ee4169f06b784f" category="inline-link">ONTAP OAuth2.0实施概述</block>
+  <block id="1b0b903a9566a5744a2b1ac1619f7022" category="paragraph">使用OAuth2.0时、您需要从外部授权服务器请求访问令牌、并将其包含在每个HTTP请求中。下面将介绍基本的高级步骤。另请参见<block ref="5bb8a5528675151a3bb0019caff877ea" category="inline-link-rx"></block> 有关OAuth2.0以及如何将其与ONTAP结合使用的详细信息。</block>
+  <block id="d514d2b0ea875e281a924be2987193f2" category="paragraph-title">准备ONTAP环境</block>
+  <block id="1eca2aa236ac231cec489235624a47b7" category="paragraph">在使用REST API访问ONTAP之前、您需要准备和配置ONTAP环境。概括地说、这些步骤包括：</block>
+  <block id="734782d9ddec20aa61a423604d65ef26" category="list-text">确定受ONTAP保护的资源和客户端</block>
+  <block id="de1b191de53683ea60d6ae5c3650295b" category="list-text">查看现有ONTAP REST角色和用户定义</block>
+  <block id="6cbcddd9ef9c2fcdff112cb0b74aa030" category="list-text">安装和配置授权服务器</block>
+  <block id="354b069b0f18efe2843f5e3cb7dcae65" category="list-text">设计和配置客户端授权定义</block>
+  <block id="f32bc251d7ca8430717b0c2283a718b2" category="list-text">配置ONTAP并启用OAuth2.0</block>
+  <block id="3e55f8cb6c3c62549dbefbe26c15a020" category="paragraph-title">请求访问令牌</block>
+  <block id="0753972aea61365eef6badd463bd2e43" category="paragraph">在ONTAP以及授权服务器已定义且处于活动状态的情况下、您可以使用OAuth2.0令牌进行REST API调用。第一步是从授权服务器请求访问令牌。这是在ONTAP之外使用基于服务器的几种不同技术之一完成的。ONTAP不会通过问题描述访问令牌或执行重定向。</block>
+  <block id="77447de57e7dbcfde744823200577fe6" category="paragraph">获取访问令牌后、您可以构建授权标头并将其包含在HTTP请求中。无论使用CURL还是编程语言访问REST API、都必须在每个客户端请求中包含标头。您可以按如下所示构建报头：</block>
+  <block id="51296595424b33101155651a10564387" category="paragraph"><block ref="53f780ac405331a2fbd496e5b643b5ba" prefix="" category="inline-code"></block></block>
+  <block id="35f3790d46f0259d732abe98f2b0bdd4" category="paragraph">ONTAP 9.14.1版包含超过30个新的API调用、这些调用继续扩展ONTAP REST API的功能。这些端点支持多项新的ONTAP功能以及对现有功能的更新。此版本主要侧重于安全性增强功能、但也包括对NAS、QoS和性能指标的改进。</block>
+  <block id="641555d3d770ea22835d8832f7b5abc8" category="list-text">ONTAP 9.14.1中引入了两项主要的安全功能。开放式授权(OAuth2.0)是一种基于令牌的框架、可用于限制对ONTAP存储资源的访问。您可以将其用于通过REST API访问ONTAP的客户端。可以使用任何ONTAP管理界面(包括REST API)执行配置。ONTAP 9.14.1版还支持Cisco Duo、可为SSH登录提供双因素身份验证。您可以将Duo配置为在ONTAP集群或SVM级别运行。除了这两项新功能之外、还添加了多个端点、以提高对密钥存储库的控制力。</block>
+  <block id="d1da20b888223de4d787257b0ae5aa46" category="list-text">FPolicy永久性存储</block>
+  <block id="d5daf86a515bbfa343f46bd91a5d7305" category="list-text">FPolicy为ONTAP策略管理提供了一个平台。它为各种组件或元素(例如事件和策略引擎)提供了一个容器。现在、您可以使用REST API为ONTAP FPolicy配置和事件配置和管理永久性存储。每个SVM都可以有一个永久性存储、该存储可供SVM中的多个策略共享。</block>
+  <block id="3fad336057e3a048c877232a639dee5d" category="list-text">引入了两个端点、可用于检索和设置集群的QoS选项。例如、您可以为后台任务预留一定百分比的可用系统处理资源。</block>
+  <block id="e2e6f514a423f7cfe97845b24dae97b3" category="list-text">性能指标</block>
+  <block id="1b924770cbb530a95f9a4b37ebe44510" category="list-text">ONTAP维护有关系统运行特征的统计信息。此信息以表格和行组成的数据库格式显示。在ONTAP 9.14.1中、还会在多个资源类别中添加其他指标数据、包括光纤通道、iSCSI、LUN和NVMe。这些附加指标数据继续使ONTAP REST API与Data ONTAP API (ONTAPI或ZAPI)更接近。</block>
+  <block id="cd2cdc53f29e0d1cb7f1d3bdd0513782" category="list-text">其他增强功能</block>
+  <block id="1b3fb59c31316efb7c8c3e6f1d3591d9" category="list-text">根据您的环境、还有一些其他增强功能可能会很有用。这些新的端点改进了对SAN启动程序的访问、并控制了主机缓存设置、还支持访问各个AutoSupport消息。</block>
+  <block id="967410f03c47bdd33958d361e0817573" category="list-text">客户端与ONTAP LIF之间通过网络发送的所有流量通常会根据ONTAP配置设置使用TLS进行加密。</block>
+  <block id="c1b4860e30e5f16fbbaa10a97391e5fa" category="list-text">在HTTP级别、例如直接访问ONTAP REST API时、有两种身份验证选项、如下所述。在每种情况下、您都需要创建HTTP授权标头并将其包含在每个请求中。</block>
+  <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">选项</block>
+  <block id="5cbeb623c773120c62a805165bcb60c8" category="cell">ONTAP用户名和密码与冒号连在一起。该字符串将转换为base64并包含在请求标头中。</block>
+  <block id="e9732853ae6c10d2977789c3027f6be2" category="cell">从ONTAP 9.14开始、您可以从外部授权服务器请求访问令牌、并将其作为承载令牌包含在请求标头中。</block>
+  <block id="d7c448e959284e2bd2b21fe2375fe20c" category="paragraph">有关OAuth2.0以及如何在ONTAP中实施的详细信息、请参见<block ref="5bb8a5528675151a3bb0019caff877ea" category="inline-link-rx"></block>。另请参见 <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block> 。</block>
+  <block id="f393f584e27f669b011040984c1c9496" category="inline-link">ONTAP 9.14.1性能计数器映射</block>
+  <block id="49ffd7a8d8266844e2ec7c32f18e5cb1" category="list-text"><block ref="49ffd7a8d8266844e2ec7c32f18e5cb1" category="inline-link-rx"></block></block>
+  <block id="61a5cb9aa0d74d026e5b2a2811ac5856" category="list-text"><block ref="61a5cb9aa0d74d026e5b2a2811ac5856" category="inline-link-rx"></block></block>
 </blocks>
