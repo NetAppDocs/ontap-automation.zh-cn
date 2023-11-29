@@ -1446,8 +1446,6 @@
   <block id="4482877c1310ddfbbba9fb22dc7df61b" category="paragraph">您可以使用此REST API调用查看表中的所有行。这表示存在哪些计数器管理器对象实例。</block>
   <block id="fcecf68c3a713225f78b4de16ac6df03" category="section-title">示例4：特定表中的单行</block>
   <block id="0aeaf5f6b15f47a8487668e4d5e041f2" category="paragraph">您可以使用此REST API调用查看表中特定计数器管理器实例的性能计数器值。在此示例中、请求其中一个主机适配器的性能数据。</block>
-  <block id="19a9062545fe4aec02e4bb9d69d9e65d" category="inline-link">适用于9.13.1的NetApp PCL文档</block>
-  <block id="99984697846692a3881d97799a42681d" category="list-text"><block ref="99984697846692a3881d97799a42681d" category="inline-link-rx"></block></block>
   <block id="963d435d638b3d71d80951dc73d9e301" category="paragraph">一致性组是指在执行快照等特定操作时组合在一起的一组卷。此功能可扩展单卷操作在一组卷中隐式的崩溃一致性和数据完整性。此资源类型是在ONTAP 9.10中引入的、并在9.12中进行了更新。ONTAP 9.13添加了一个用于检索指标性能和容量数据的端点。</block>
   <block id="a8b23618c319cee164fb5e3f52338ae8" category="paragraph">密钥管理器允许 ONTAP 中的客户端模块安全地存储密钥。此资源类型是在 ONTAP 9.6 中引入的，并针对 ONTAP 9.7 进行了更新。另外、还对ONTAP 9.12进行了更新、以支持身份验证密钥。ONTAP 9.13增加了还原功能。</block>
   <block id="f677f9a733e2a55d249253e8ee3e8921" category="paragraph-title">TOTPS</block>
@@ -1461,8 +1459,6 @@
   <block id="718f01f530b26a630c97ea9d3dabf463" category="paragraph">您可以使用标记对REST API资源进行分组。您可以执行此操作来关联特定项目或组织组中的相关资源。使用标记有助于更有效地组织和跟踪资源。此资源类型是在ONTAP 9.13中引入的。</block>
   <block id="6e35f32cbbb6f9e4f935f3e9092771f0" category="paragraph-title">S3存储分段规则</block>
   <block id="6bc2fc1d1d82b40d53835f8a9db33179" category="paragraph">S3分段可以包括规则定义。每个规则都是一个列表对象、用于定义要对存储分段中的对象执行的一组操作。此资源类型是在ONTAP 9.13中引入的。</block>
-  <block id="5f6bf2fac8af69fcf38f9b1b785e910e" category="inline-link">PyPI：NetApp ONTAP 9.13.1</block>
-  <block id="1d6690c7f751b90aee685c57c28ea355" category="list-text"><block ref="1d6690c7f751b90aee685c57c28ea355" category="inline-link-rx"></block></block>
   <block id="3d1c384a3746b6aef27889dab20ca2a0" category="doc">工具和软件</block>
   <block id="0a88f9e4d64baf56329012472f2f7f1c" category="paragraph">NetApp提供了Python示例脚本和其他相关软件、可支持您从ONTAP API迁移到ONTAP REST API。下面介绍了其中最重要的样本。</block>
   <block id="2025f1a4ba0e95c1bd1bd27f08690087" category="inline-link">NetApp ONTAP REST Python</block>
@@ -1763,4 +1759,6 @@
   <block id="f393f584e27f669b011040984c1c9496" category="inline-link">ONTAP 9.14.1性能计数器映射</block>
   <block id="49ffd7a8d8266844e2ec7c32f18e5cb1" category="list-text"><block ref="49ffd7a8d8266844e2ec7c32f18e5cb1" category="inline-link-rx"></block></block>
   <block id="61a5cb9aa0d74d026e5b2a2811ac5856" category="list-text"><block ref="61a5cb9aa0d74d026e5b2a2811ac5856" category="inline-link-rx"></block></block>
+  <block id="2cea11979f1d383a5921860d201ed868" category="inline-link">PyPI：NetApp ONTAP 9.14.1</block>
+  <block id="90412d82652a0008df94a427a205c033" category="list-text"><block ref="90412d82652a0008df94a427a205c033" category="inline-link-rx"></block></block>
 </blocks>
