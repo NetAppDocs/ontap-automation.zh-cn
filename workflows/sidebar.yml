@@ -16,6 +16,8 @@ entries:
     url: "/workflows/wf_cls_get_cluster.html"
   - title: 更新集群联系人
     url: "/workflows/wf_cls_update_contact.html"
+  - title: 获取作业实例
+    url: "/workflows/wf_jobs_get_job.html"
 - title: RBAC
   entries:
   - title: 准备使用RBAC

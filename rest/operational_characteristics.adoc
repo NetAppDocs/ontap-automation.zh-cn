@@ -69,7 +69,7 @@ ONTAP 可通过两种方式执行从客户端收到的 HTTP 请求。
 如果使用 POST ，修补和删除方法的请求预计需要超过两秒才能完成，则这些请求会异步运行。
 
 
-NOTE: `return_timeout` query 参数可用于异步 API 调用，并且可以将异步调用同步转换为完成。有关详细信息，请参见 `如何使用作业对象进行异步处理` 。
+NOTE: 。 `return_timeout` 查询参数可用于异步API调用、并且可以将异步调用转换为同步完成。请参见 link:../rest/asynchronous_processing.html["使用作业对象进行异步处理"] 有关详细信息 ...
 
 --
 

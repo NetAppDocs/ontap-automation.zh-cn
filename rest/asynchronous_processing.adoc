@@ -78,5 +78,6 @@ HTTP 响应中返回的作业对象包含多个属性。您可以在后续 API �
 
 
 .相关信息
-* link:../workflows/wf_cls_update_contact.html["更新集群联系人并确认作业状态"]
+* link:../workflows/wf_cls_update_contact.html["更新集群联系人"]
+* link:../workflows/wf_jobs_get_job.html["获取作业实例"]
 
