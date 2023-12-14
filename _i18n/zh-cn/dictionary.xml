@@ -197,8 +197,6 @@
   <block id="28d1141142e2cbb29e657b69a044ddf4" category="cell">小于或等于</block>
   <block id="3a1e9b87c94b54dec1202b5ca6539806" category="cell">&gt;=</block>
   <block id="798fe01fcb2754a295b6937ed885a69a" category="cell">大于或等于</block>
-  <block id="15a8022d0ed9cd9c2a2e756822703eb4" category="cell">更新</block>
-  <block id="3a2d5fe857d8f9541136a124c2edec6c" category="cell">或</block>
   <block id="9033e0e305f247c0c3c80d0c7848c8b3" category="cell">！</block>
   <block id="9bc7de899cf1c0d3ada046cd81f96aff" category="cell">不等于</block>
   <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
@@ -1764,4 +1762,19 @@
   <block id="7eb5ea99f4c7bd16c8867413d8a273bf" category="summary">您可以检索特定ONTAP作业的实例。通常、您可以执行此操作来确定作业和关联操作是否成功完成。</block>
   <block id="05535988b76700172a5beb898c23b17d" category="admonition">您需要作业对象的UUID、此UUID通常在发出异步请求后提供。另请查看 <block ref="3d4ef1c177baef5f85bab307e88d3980" category="inline-link-macro-rx"></block> 在处理ONTAP内部作业之前。</block>
   <block id="faec30107399ded67748fbc85ea21f3f" category="paragraph">状态值和其他字段包括在返回的作业对象中。此示例中的作业是在更新ONTAP集群过程中运行的。</block>
+  <block id="5b238b062b2dcc574fc3b0cb08104bbc" category="doc">列出IP接口</block>
+  <block id="1c6adf46eca226877c802f6585be28ec" category="paragraph">您可以检索分配给集群和SVM的IP SVM。您可以执行此操作来确认网络配置或计划添加另一个LIF。</block>
+  <block id="a00c50b90749f90a36742b8673eb5362" category="cell">/API/network/IP/接口</block>
+  <block id="0b741905860f34a10d74010f462f6dab" category="paragraph-title">Curl示例的其他输入参数</block>
+  <block id="8ad1007adda12ebaacc83f24d677e5e6" category="paragraph">除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。</block>
+  <block id="dfcd3526cb1256fb8b0242048ce8f6fe" category="cell">返回相关配置值的有限列表。</block>
+  <block id="c7d3a12d9cd219818b942ce7b79635d9" category="listing-title">CURL示例：返回具有默认配置值的所有LI</block>
+  <block id="533043f9cd78f3216839a884ba0b162b" category="listing-title">CURL示例：返回具有四个特定配置值的所有LI</block>
+  <block id="5060abb5e8980122d0dc1c35e9f85efd" category="doc">列出磁盘</block>
+  <block id="9e414eeae313ebca6ec1a78d41b6aa68" category="paragraph">您可以检索集群中的磁盘列表。您可以执行此操作来查找要在创建聚合过程中使用的一个或多个备用磁盘。</block>
+  <block id="ffd7c2897f8ba9366722a4ded3eaff6c" category="cell">/API/storage/disks</block>
+  <block id="9ed39e2ea931586b6a985a6942ef573e" category="cell">state</block>
+  <block id="6e5a184a338e990223b90751d5dce3fa" category="cell">可用于标识可用于新聚合的备用磁盘。</block>
+  <block id="9c049e1832aad88667dcc17e261acc9c" category="listing-title">CURL示例：返回所有磁盘</block>
+  <block id="2f16f01d47fc5581920b2b69e5a6cdc2" category="listing-title">CURL示例：返回备用磁盘</block>
 </blocks>

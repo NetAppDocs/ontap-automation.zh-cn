@@ -1,0 +1,320 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_net_list_ip_lifs.html 
+keywords: workflow, job, job state 
+summary:  
+---
+= 列出IP接口
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以检索分配给集群和SVM的IP SVM。您可以执行此操作来确认网络配置或计划添加另一个LIF。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /API/network/IP/接口 
+|===
+.处理类型
+同步
+
+.Curl示例的其他输入参数
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| fields | 查询 | 否 | 返回相关配置值的有限列表。 
+|===
+.CURL示例：返回具有默认配置值的所有LI
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/network/ip/interfaces" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.CURL示例：返回具有四个特定配置值的所有LI
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/network/ip/interfaces?fields=name,scope,svm.name,ip.address" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[%collapsible]
+====
+[listing]
+----
+{
+  "records": [
+    {
+      "uuid": "5ded9e38-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_mgmt1",
+      "ip": {
+        "address": "172.29.151.116"
+      },
+      "scope": "cluster",
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/5ded9e38-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "bb03c162-999e-11ee-acad-005056ae6bd8",
+      "name": "cluster_mgmt",
+      "ip": {
+        "address": "172.29.186.156"
+      },
+      "scope": "cluster",
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/bb03c162-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "c5ffbd03-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data1",
+      "ip": {
+        "address": "172.29.186.150"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/c5ffbd03-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "c6612abe-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data2",
+      "ip": {
+        "address": "172.29.186.151"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/c6612abe-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "c6b21b94-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data3",
+      "ip": {
+        "address": "172.29.186.152"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/c6b21b94-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "c7025322-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data4",
+      "ip": {
+        "address": "172.29.186.153"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/c7025322-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "c752cc66-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data5",
+      "ip": {
+        "address": "172.29.186.154"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/c752cc66-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "c7a03719-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data6",
+      "ip": {
+        "address": "172.29.186.155"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/c7a03719-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "ccd4c59c-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data4_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac5"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/ccd4c59c-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "d9144c30-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data6_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac7"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/d9144c30-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "d961c13b-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data1_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac2"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/d961c13b-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "d9ac8d6a-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data5_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac6"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/d9ac8d6a-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "d9fce1a3-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data2_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac3"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/d9fce1a3-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "da4995a0-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_data3_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac4"
+      },
+      "scope": "svm",
+      "svm": {
+        "name": "vs0"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/da4995a0-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "da9e7afd-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_cluster_mgmt_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:300f::ac8"
+      },
+      "scope": "cluster",
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/da9e7afd-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    },
+    {
+      "uuid": "e6db58b4-999e-11ee-acad-005056ae6bd8",
+      "name": "sti214-vsim-sr027o_mgmt1_inet6",
+      "ip": {
+        "address": "fd20:8b1e:b255:3008::1a0"
+      },
+      "scope": "cluster",
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/e6db58b4-999e-11ee-acad-005056ae6bd8"
+        }
+      }
+    }
+  ],
+  "num_records": 16,
+  "_links": {
+    "self": {
+      "href": "/api/network/ip/interfaces?fields=name,scope,svm.name,ip.address"
+    }
+  }
+}
+----
+====

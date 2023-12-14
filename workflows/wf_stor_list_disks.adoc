@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_stor_list_disks.html 
+keywords: workflow, storage, disks, list disks 
+summary:  
+---
+= 列出磁盘
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以检索集群中的磁盘列表。您可以执行此操作来查找要在创建聚合过程中使用的一个或多个备用磁盘。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /API/storage/disks 
+|===
+.处理类型
+同步
+
+.Curl示例的其他输入参数
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| state | 查询 | 否 | 可用于标识可用于新聚合的备用磁盘。 
+|===
+.CURL示例：返回所有磁盘
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/storage/disks" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.CURL示例：返回备用磁盘
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/storage/disks?state=spare" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[%collapsible]
+====
+[listing]
+----
+{
+  "records": [
+    {
+      "name": "NET-1.20",
+      "state": "spare",
+      "_links": {
+        "self": {
+          "href": "/api/storage/disks/NET-1.20"
+        }
+      }
+    },
+    {
+      "name": "NET-1.12",
+      "state": "spare",
+      "_links": {
+        "self": {
+          "href": "/api/storage/disks/NET-1.12"
+        }
+      }
+    },
+    {
+      "name": "NET-1.7",
+      "state": "spare",
+      "_links": {
+        "self": {
+          "href": "/api/storage/disks/NET-1.7"
+        }
+      }
+    }
+  ],
+  "num_records": 3,
+  "_links": {
+    "self": {
+      "href": "/api/storage/disks?state=spare"
+    }
+  }
+}
+----
+====
