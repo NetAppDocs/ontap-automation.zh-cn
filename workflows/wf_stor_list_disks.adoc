@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_stor_list_disks.html 
 keywords: workflow, storage, disks, list disks 
-summary:  
+summary: 您可以检索集群中的磁盘列表。您可以执行此操作来查找要在创建聚合过程中使用的一个或多个备用磁盘。 
 ---
 = 列出磁盘
 :hardbreaks:

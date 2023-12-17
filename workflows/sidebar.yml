@@ -18,6 +18,10 @@ entries:
     url: "/workflows/wf_net_list_ip_lifs.html"
 - title: 安全性
   entries:
+  - title: "—帐户"
+    entries:
+    - title: 列出帐户
+      url: "/workflows/wf_sec_list_accounts.html"
   - title: 证书和密钥
     entries:
     - title: 列出证书
@@ -40,6 +44,8 @@ entries:
       url: "/workflows/wf_rbac_user_role.html"
 - title: 存储
   entries:
+  - title: 列出聚合
+    url: "/workflows/wf_stor_list_aggrs.html"
   - title: 列出磁盘
     url: "/workflows/wf_stor_list_disks.html"
 - title: SVM

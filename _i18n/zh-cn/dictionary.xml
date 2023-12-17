@@ -184,9 +184,6 @@
   <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">包含输入变量的 JSON 对象</block>
   <block id="dc51df2cdcd7759fe85ea304591b7327" category="list-text">空 JSON 对象</block>
   <block id="ac860c2e604ebd01436860da72828954" category="section-title">筛选对象</block>
-  <block id="0438b035fcfcfd3b3c333dd8d993e532" category="paragraph">发出使用 GET 的 API 调用时，您可以根据任何属性限制或筛选返回的对象。例如，您可以指定一个要匹配的精确值：</block>
-  <block id="1fc998fba92eac6c354078a63d749232" category="paragraph">` &lt;field&gt;=&lt; 查询值 &gt;`</block>
-  <block id="7d306d43ad9025b540f138ad516bc09f" category="paragraph">除了精确匹配之外，还可以使用其他运算符返回一组值范围内的对象。ONTAP REST API 支持下表所示的筛选运算符。</block>
   <block id="e1b3ec89ead7f83a9245ed5c9cacfdbf" category="cell">运算符</block>
   <block id="43ec3e5dee6e706af7766fffea512721" category="cell">=</block>
   <block id="495c04002891bebf41bc3b56507f6d6b" category="cell">等于</block>
@@ -1768,7 +1765,6 @@
   <block id="0b741905860f34a10d74010f462f6dab" category="paragraph-title">Curl示例的其他输入参数</block>
   <block id="8ad1007adda12ebaacc83f24d677e5e6" category="paragraph">除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。</block>
   <block id="dfcd3526cb1256fb8b0242048ce8f6fe" category="cell">返回相关配置值的有限列表。</block>
-  <block id="c7d3a12d9cd219818b942ce7b79635d9" category="listing-title">CURL示例：返回具有默认配置值的所有LI</block>
   <block id="533043f9cd78f3216839a884ba0b162b" category="listing-title">CURL示例：返回具有四个特定配置值的所有LI</block>
   <block id="5060abb5e8980122d0dc1c35e9f85efd" category="doc">列出磁盘</block>
   <block id="9e414eeae313ebca6ec1a78d41b6aa68" category="paragraph">您可以检索集群中的磁盘列表。您可以执行此操作来查找要在创建聚合过程中使用的一个或多个备用磁盘。</block>
@@ -1777,4 +1773,32 @@
   <block id="6e5a184a338e990223b90751d5dce3fa" category="cell">可用于标识可用于新聚合的备用磁盘。</block>
   <block id="9c049e1832aad88667dcc17e261acc9c" category="listing-title">CURL示例：返回所有磁盘</block>
   <block id="2f16f01d47fc5581920b2b69e5a6cdc2" category="listing-title">CURL示例：返回备用磁盘</block>
+  <block id="2a11f21f5d4741d58b7d14923d4e08f9" category="doc">列出帐户</block>
+  <block id="4394c7ebecc609175a50f72d74a0557f" category="paragraph">您可以检索帐户列表。您可以在评估安全环境或创建新帐户之前执行此操作。</block>
+  <block id="47a8ff2921d745ff1e85c78a7811f188" category="doc">列出聚合</block>
+  <block id="490c2fcb0f7a2efc0e882e344265c316" category="paragraph">您可以检索集群中的聚合列表。您可以执行此操作来评估利用率和性能。</block>
+  <block id="6edce6e6c5993cbcc3356de83eed68df" category="cell">node.name</block>
+  <block id="586ba6b164fb68d2e277e5509c3d920e" category="cell">可用于标识每个聚合连接到的节点。</block>
+  <block id="d77215a29f7c4c57074e8278a01cb44d" category="listing-title">CURL示例：返回具有默认配置值的所有聚合</block>
+  <block id="3d13cd0551da6b0edbb329a4192f28a3" category="listing-title">CURL示例：返回具有特定配置值的所有聚合</block>
+  <block id="902758a99886ee9a4b12dd38cc667f95" category="doc">列出IP接口</block>
+  <block id="1220a442fc15fd5c171980b6a6315040" category="listing-title">CURL示例：返回具有默认配置值的所有LI</block>
+  <block id="36e958b717916175c77e1c0a9bd8a51d" category="doc">列出磁盘</block>
+  <block id="c4acc246007fa7e427ad78bab2246d93" category="cell">$job_ID</block>
+  <block id="e62ba1f7e88de861aba828d64f793b2f" category="cell">用于标识所请求的作业。</block>
+  <block id="542fcd84c10c6cf94d17a2aec683b3f3" category="paragraph">使用GET方法发出API调用时、您可以使用查询参数根据任何属性限制或筛选返回的对象。</block>
+  <block id="955b7d9243f52aec4fa2071a7e7ad288" category="paragraph-title">解析和解释查询参数</block>
+  <block id="9450bd9053706a256157ab8cc92adf52" category="paragraph">可以将一个或多个参数的集合附加到以后面开头的URL字符串中<block ref="d1457b72c3fb323a2671125aef3eab5d" prefix=" " category="inline-code"></block> 字符。如果提供了多个参数、则查询参数将根据进行拆分<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block> 字符。参数中的每个键和值都在中拆分<block ref="43ec3e5dee6e706af7766fffea512721" prefix=" " category="inline-code"></block> 字符。</block>
+  <block id="95fa08f73714767c61e4cea7b8a20379" category="paragraph">例如、您可以使用等号指定要匹配的确切值：</block>
+  <block id="74f6abd0177ccf8e12b99c549ea3b6d9" category="paragraph"><block ref="be5382cb5b9ec38c8c64155f50b2673c" prefix="" category="inline-code"></block></block>
+  <block id="3d0d077df6fbc6a8dacd58d0e3a43157" category="paragraph">对于更复杂的查询、附加运算符放置在等号后面。例如、要根据大于或等于某个值的特定字段选择对象集、查询将为：</block>
+  <block id="1b978b08d514ad8048572a85cc260aaa" category="paragraph"><block ref="5ab924ec7238940346c80a48f8d1f72a" prefix="" category="inline-code"></block></block>
+  <block id="a2d3029446b19abc06285a2799e13be1" category="paragraph-title">筛选运算符</block>
+  <block id="13b6a9b0d5425b920127d4f9acaf22a8" category="paragraph">除了上面提供的示例之外、还可以使用其他运算符来返回值范围内的对象。下表汇总了ONTAP REST API支持的筛选运算符。</block>
+  <block id="d67829f213cbca0faa82b58361450353" category="paragraph-title">工作流示例</block>
+  <block id="dc131215a5de282bcdc24d4b9a1a79c0" category="paragraph">下面列出了此站点的REST API工作流中的一些示例。</block>
+  <block id="2a47586adb0d57af3895f5a0dd2cebc4" category="list-text"><block ref="2a47586adb0d57af3895f5a0dd2cebc4" category="inline-link-macro-rx"></block></block>
+  <block id="b9fa03b6deb6ff800a98be430195fdf0" category="paragraph">根据进行筛选<block ref="9ed39e2ea931586b6a985a6942ef573e" prefix=" " category="inline-code"></block> 用于选择备用磁盘的变量。</block>
+  <block id="a095881e994974280881b1e5dd2a89a9" category="sidebar">列出帐户</block>
+  <block id="075cb19bc679ad9261b9031c5f0c7d2f" category="sidebar">列出聚合</block>
 </blocks>
