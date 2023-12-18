@@ -612,7 +612,6 @@
   <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">自动化博客</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
-  <block id="4c557aa1edc9db8b42f1265ae600f253" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见<block ref="3f8b8a296b98a2427cd0fe076ddc5c7d" category="inline-link-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
   <block id="3f689cafff034d41de3da8f0516fe489" category="paragraph">通过这些端点，您可以显示和更新外部 FPolicy 服务器的连接状态信息。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="239f703364a5564124a3d68e8344a9c2" category="paragraph">锁定是一种同步机制，用于对同时访问多个客户端同时访问同一文件的文件实施限制。您可以使用这些端点检索和删除锁定。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="d096166c57e2b6d919e03cce85418d64" category="paragraph">对 S3 事件的审核是一项安全改进，可用于跟踪和记录某些 S3 事件。可以为每个存储分段的每个 SVM 设置 S3 审核事件选择器。此资源类型是在 ONTAP 9.10 中引入的。</block>
@@ -1801,4 +1800,5 @@
   <block id="b9fa03b6deb6ff800a98be430195fdf0" category="paragraph">根据进行筛选<block ref="9ed39e2ea931586b6a985a6942ef573e" prefix=" " category="inline-code"></block> 用于选择备用磁盘的变量。</block>
   <block id="a095881e994974280881b1e5dd2a89a9" category="sidebar">列出帐户</block>
   <block id="075cb19bc679ad9261b9031c5f0c7d2f" category="sidebar">列出聚合</block>
+  <block id="9cebbf9729f76658642974e19c057421" category="paragraph">如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见 <block ref="a60f928eab9c8ac4756a146853b7b27e" category="inline-link-macro-rx"></block> 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。</block>
 </blocks>
