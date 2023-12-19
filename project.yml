@@ -20,7 +20,6 @@ sidebar:
   - section: python
   - section: migrate
   - section: reference
-  - section: automate
   - section: additional
   - title: 法律声明
     url: "/legal-notices.html"
@@ -48,10 +47,6 @@ homepage:
     links:
     - title: Python 客户端库
       url: "/python/overview_pcl.html"
-    - title: ONTAP 和 Ansible
-      url: "/automate/ontap_ansible.html"
-    - title: 自动化博客
-      url: "/automate/blogs.html"
   - title: 迁移到REST API
     links:
     - title: 已取消ONTAPI

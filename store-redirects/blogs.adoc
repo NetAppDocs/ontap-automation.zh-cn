@@ -1,0 +1,8 @@
+---
+permalink: automate/blogs.html 
+redirect: ontap-automation/additional/resources.html 
+---
+= 
+:allow-uri-read: 
+
+

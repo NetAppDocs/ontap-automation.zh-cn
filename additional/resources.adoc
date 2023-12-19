@@ -14,27 +14,27 @@ summary: 您还可以访问其他几个资源，以获取有关如何自动部�
 
 
 [role="lead"]
-您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。
+您还可以使用其他几种资源来帮助自动部署和管理ONTAP存储系统。
 
 
 
 == ONTAP 9 资源
 
-* https://docs.netapp.com/us-en/ontap-family/["ONTAP 9产品文档"^]
+* 提供ONTAP 9产品系列的文档。
 +
-提供ONTAP 9产品系列的文档。
+https://docs.netapp.com/us-en/ontap-family/["ONTAP 9产品文档"^]
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]
+* ONTAP 9发行说明、其中包含有关当前版本的信息。
 +
-ONTAP 9发行说明、其中包含有关当前版本的信息。
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]
 
-* https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["ONTAP 和 ONTAP System Manager 资源"^]
+* 包括规划、管理和支持ONTAP 9所需的文档和其他有用链接。
 +
-包括规划、管理和支持ONTAP 9所需的文档和其他有用链接。
+https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["ONTAP 和 ONTAP System Manager 资源"^]
 
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["ONTAP 9 产品库"^]
+* 访问先前ONTAP 版本的发行说明和其他文档。
 +
-访问先前ONTAP 版本的发行说明和其他文档。
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["ONTAP 9 产品库"^]
 
 
 
@@ -42,21 +42,39 @@ ONTAP 9发行说明、其中包含有关当前版本的信息。
 
 == ONTAP 9 开发人员资源
 
-* link:../migrate/mapping.html["ONTAPI 到 REST API 映射"]
+* 有助于在DevOps环境中开始使用Ans得。
 +
-提供关键ONTAPI调用以及与等效REST API调用的映射。选择相应的ONTAP 版本。
+https://www.netapp.com/devops-solutions/ansible/["NetApp Ansible DevOps 解决方案"^]
 
-* https://pypi.org/project/netapp-ontap["PyPI：NetApp ONTAP"^]
+* 提供关键ONTAPI调用以及与等效REST API调用的映射。选择相应的ONTAP 版本。
 +
-PyPI 上的 NetApp Python Client Library 软件包。
+link:../migrate/mapping.html["ONTAPI 到 REST API 映射"]
 
-* https://library.netapp.com/ecmdocs/ECMLP2886776/html/index.html["9.14.1版NetApp PCL文档"^]
+* PyPI 上的 NetApp Python Client Library 软件包。
 +
-NetApp Python 客户端库的文档。
+https://pypi.org/project/netapp-ontap["PyPI：NetApp ONTAP"^]
 
-* https://devnet.netapp.com/restapi.php["NetApp 开发人员网络： ONTAP RESTful API"^]
+* NetApp Python 客户端库的文档。
 +
-提供使用 ONTAP REST API 所需的资源和文档，包括 ONTAP Python 客户端库。
+https://library.netapp.com/ecmdocs/ECMLP2886776/html/index.html["9.14.1版NetApp PCL文档"^]
+
+* 提供使用ONTAP REST API所需的资源和文档。
++
+https://devnet.netapp.com/restapi.php["NetApp 开发人员网络： ONTAP RESTful API"^]
+
+
+
+
+
+== 博客文章
+
+* CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。
++
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api["将专用命令行界面直通与 ONTAP REST API 结合使用"^]
+
+* 如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。
++
+https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["NetApp 和 Ansible 入门：安装 Ansible"^]
 
 
 
@@ -64,26 +82,32 @@ NetApp Python 客户端库的文档。
 
 == 视频
 
-* https://www.youtube.com/watch?v=Wws3SB5d9Ss["NetApp ONTAP Python 客户端库入门"^]
+* 很好地介绍了NetApp Python客户端库以及如何开始使用该库编写代码。
 +
-很好地介绍了 NetApp Python 客户端库以及如何开始使用该库编写代码。
+https://www.youtube.com/watch?v=Wws3SB5d9Ss["NetApp ONTAP Python 客户端库入门"^]
 
+* 此视频也可通过NetApp TV获取，网址为 link:https://tv.netapp.com/detail/video/6217195551001["Ansible 认证模块"^]。
++
+video::L5DZBV_Sg9E[youtube,width=848,height=480]
+* 了解一下经Ans负责人 认证的模块。
++
+video::ZlmQ5IuVZD8[youtube,width=848,height=480]
 
 
 
 
 == NetApp 资源
 
-* https://mysupport.netapp.com/["NetApp 支持"^]
+* 访问故障排除工具，文档和技术支持帮助。
 +
-访问故障排除工具，文档和技术支持帮助。
+https://mysupport.netapp.com/["NetApp 支持"^]
 
-* https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]
+* 与使用 ONTAP 9 和 ONTAP REST API 相关的访问要求和兼容性信息。
 +
-与使用 ONTAP 9 和 ONTAP REST API 相关的访问要求和兼容性信息。
+https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]
 
-* http://www.netapp.com/us/library/index.aspx["NetApp 技术报告和白皮书库"^]
+* 访问技术报告，白皮书和其他文档。
 +
-访问技术报告，白皮书和其他文档。
+http://www.netapp.com/us/library/index.aspx["NetApp 技术报告和白皮书库"^]
 
 

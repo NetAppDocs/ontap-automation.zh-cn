@@ -41,7 +41,7 @@ Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP 
 
 == 使用 Ansible
 
-Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。您应首先查看此站点上的文档，包括 link:../automate/ontap_ansible.html["ONTAP 和 Ansible 自动化"]。
+Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。首先、您应查看此站点上的文档。
 
 
 

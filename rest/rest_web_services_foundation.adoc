@@ -10,7 +10,7 @@ summary: 表述性状态传输（ Representational State Transfer ， REST ）�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

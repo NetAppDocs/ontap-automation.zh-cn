@@ -1,0 +1,8 @@
+---
+permalink: automate/ontap_ansible.html 
+redirect: ontap-automation/additional/resources.html 
+---
+= 
+:allow-uri-read: 
+
+
