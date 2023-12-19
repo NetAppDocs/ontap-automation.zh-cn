@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest/rest_web_services_foundation.html 
-keywords: REST, web services 
-summary: 表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。 
+keywords: REST, web services, transaction, API transaction, request, response 
+summary: 表述性状态传输（ Representational State Transfer ， REST ）是一种用于创建分布式 Web 应用程序的模式。在设计 Web 服务 API 时，它会建立一组技术，用于公开基于服务器的资源并管理其状态。它使用主流协议和标准为管理 ONTAP 集群提供了灵活的基础。 
 ---
 = REST Web 服务基础
 :hardbreaks:
@@ -52,3 +52,28 @@ NOTE: 虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 
 == JSON 格式化
 
 虽然可以通过多种方式在 Web 服务客户端和服务器之间构建和传输信息，但最受欢迎的选项是 JavaScript 对象表示法（ JSON ）。JSON 是一种行业标准，用于以纯文本形式表示简单数据结构，并用于传输描述资源的状态信息。ONTAP REST API 使用 JSON 格式化每个 HTTP 请求和响应正文中包含的数据。
+
+
+
+== 典型的REST API事务
+
+每个API事务都包含一个HTTP请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。
+
+image:rest_call_01.png["简单 REST API 调用的图示"]
+
+.HTTP请求
+从客户端发送到服务器的请求包括以下内容：
+
+* GET 动词
+* 集群的 URL 路径
+* 查询参数（字段）
+* 请求标头，包括授权
+
+
+.HTTP响应
+从服务器发送到客户端的响应包括以下内容：
+
+* 状态代码 200
+* 响应标头
+* 包含集群软件版本的响应正文
+

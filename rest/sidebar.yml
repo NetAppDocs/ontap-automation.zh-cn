@@ -14,8 +14,6 @@ entries:
     url: "/rest/interpret_api_response.html"
   - title: 使用作业对象进行异步处理
     url: "/rest/asynchronous_processing.html"
-- title: 其他注意事项
-  entries:
   - title: 对象引用和访问
     url: "/rest/object_references_and_access.html"
   - title: ONTAPI 和 ONTAP 命令行界面的用户
