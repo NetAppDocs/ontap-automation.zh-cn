@@ -51,5 +51,5 @@ ONTAP 版本中的 SnapDiff API 可用性定义如下：
 
 .相关信息
 * link:../rest/input_variables.html["控制 API 请求的输入变量"]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI 到 REST API 映射信息"^]
+* link:../migrate/mapping.html["ONTAPI 到 REST API 映射"]
 

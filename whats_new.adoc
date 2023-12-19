@@ -64,7 +64,7 @@ CIFS组策略:: REST API已进行了增强、可支持创建和管理CIFS组策�
 
 ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。
 
-粒度RBAC:: ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。可以为REST角色提供新的访问级别、例如`reAD_CREATE`和`reAD_MODIT`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 link:../rest/rbac_overview.html["RBAC 安全性"] 有关详细信息 ...
+粒度RBAC:: ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。为REST角色提供了新的访问级别、例如 `read_create` 和 `read_modify`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 link:rest/rbac_overview.html["RBAC 安全性"] 有关详细信息 ...
 性能计数器:: 先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。管理员或自动化流程可以访问数据以确定系统性能。计数器管理器子系统维护的统计信息以数据库格式使用表和行显示。此增强功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。
 聚合管理:: ONTAP 存储聚合的管理已得到增强。您可以使用更新后的REST端点联机和脱机移动聚合、以及管理备用磁盘。
 IP子网功能:: ONTAP 网络功能已扩展、包括对IP子网的支持。通过REST API、您可以配置和管理ONTAP 集群中的IP子网。
@@ -98,7 +98,7 @@ CIFS 域和本地组:: 已在集群和 SVM 级别添加对 CIFS 域的支持。�
 
 ONTAP 9.9.1 将继续扩展 ONTAP REST API 的功能。现有 ONTAP 功能具有新的 API 端点，包括 SAN 端口集和 SVM 文件目录安全性。此外，还添加了端点来支持新的 ONTAP 9.9.1 功能和增强功能。相关文档也进行了改进。下面简要介绍了这些增强功能。
 
-将 ONTAPI 映射到 ONTAP 9 REST API:: 为了帮助您将 ONTAP 自动化代码过渡到 REST API ， NetApp 提供了 API 映射文档。此参考包括 ONTAPI 调用列表以及每个调用的 REST API 等效项。此映射文档已进行更新，以包含新的 ONTAP 9.9.1 API 端点。请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2876895["ONTAPI 到 REST API 映射"^] 有关详细信息 ...
+将 ONTAPI 映射到 ONTAP 9 REST API:: 为了帮助您将 ONTAP 自动化代码过渡到 REST API ， NetApp 提供了 API 映射文档。此参考包括 ONTAPI 调用列表以及每个调用的 REST API 等效项。此映射文档已进行更新，以包含新的 ONTAP 9.9.1 API 端点。请参见 link:migrate/mapping.html["ONTAPI 到 REST API 映射"] 有关详细信息 ...
 API 端点，用于新的 ONTAP 9.9.1 核心功能:: REST API 中增加了对通过 ONTAPI 不可用的新 ONTAP 9.9.1 功能的支持。其中包括对嵌套 igroup 和 Google Cloud 密钥管理服务的支持。
 改进了从 ONTAPI 过渡到 REST 的支持:: 现在，更多传统 ONTAPI 调用都具有相应的 REST API 等效项。其中包括本地 Unix 用户和组，无需客户端即可管理 NTFS 文件安全性， SAN 端口集以及卷空间属性。更新后的 ONTAPI to REST 映射文档也会包含这些更改。
 增强的联机文档:: 现在， ONTAP 联机文档参考页面包含一些标签，用于指示引入每个 REST 端点或参数时的 ONTAP 版本，包括 ONTAP 9.1.1 中的新端点或参数。
@@ -110,7 +110,7 @@ API 端点，用于新的 ONTAP 9.9.1 核心功能:: REST API 中增加了对通
 
 ONTAP 9.8 极大地扩展了 ONTAP REST API 的广度和深度。它包括多项新功能，可增强您自动部署和管理 ONTAP 存储系统的能力。此外，我们还改进了对帮助从原有 ONTAPI 过渡到 REST 的支持。
 
-将 ONTAPI 映射到 ONTAP 9 REST API:: 为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2874886["ONTAPI 到 REST API 映射"^] 有关详细信息 ...
+将 ONTAPI 映射到 ONTAP 9 REST API:: 为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见 link:migrate/mapping.html["ONTAPI 到 REST API 映射"] 有关详细信息 ...
 API 端点，用于新的 ONTAP 9.8 核心功能:: REST API 中增加了对通过 ONTAPI 无法提供的新核心 ONTAP 9.8 功能的支持。其中包括对 ONTAP S3 分段和服务， SnapMirror 业务连续性和文件系统分析的 REST API 支持。
 扩展了对增强安全性的支持:: 通过支持 Azure 密钥存储， Google Cloud 密钥管理服务， IPsec 和证书签名请求等多种服务和协议，安全性得到了增强。
 增强功能可提高精简性:: ONTAP 9.8 可使用 REST API 提供更高效，更现代化的工作流。例如，现在可以对多种不同类型的固件进行一次性固件更新。
