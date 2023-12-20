@@ -20,5 +20,5 @@ NetApp首次在ONTAP 9.6中推出了REST API。此后、REST API不断扩展和�
 
 .相关信息
 * https://mysupport.netapp.com/info/communications/ECMLP2880232.html["CCPC-00410终止提供：ONTAPI"^]
-* https://devnet.netapp.com/restapi.php["NetApp DevNet：ONTAP REST API"^]
+* https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答"^]
 

@@ -678,9 +678,7 @@
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="0c5518b5db3a9e2425db3b5de6d30634" category="sidebar">ONTAP 自动化选项</block>
   <block id="ec8bc6c5f8fe5dc6045b9edfffae614a" category="sidebar">准备使用 REST API</block>
-  <block id="015f8c34f52b6ef8a3361958660f5e88" category="sidebar">其他注意事项</block>
   <block id="caea8340e2d186a540518d08602aa065" category="sidebar">自动化</block>
-  <block id="16761f90ea92726a06e16dfb23549c0a" category="sidebar">NetApp DevNet</block>
   <block id="98bf123aa3933daaa4019109c98c08eb" category="sidebar">ONTAP 9 文档</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 文档</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
@@ -1445,8 +1443,6 @@
   <block id="89bbd9a5e14ece77e8729df33cc56559" category="paragraph">NetApp首次在ONTAP 9.6中推出了REST API。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。您可以使用许多有用的资源和工具来支持迁移。</block>
   <block id="d662068ac363663b595ce3a43cc70a12" category="inline-link">CCPC-00410终止提供：ONTAPI</block>
   <block id="4985f6980a34153c58b9f31390f6ce91" category="list-text"><block ref="4985f6980a34153c58b9f31390f6ce91" category="inline-link-rx"></block></block>
-  <block id="43b4a2745f58846c59587466ca441f41" category="inline-link">NetApp DevNet：ONTAP REST API</block>
-  <block id="d5925e110eea01252505453208400570" category="list-text"><block ref="d5925e110eea01252505453208400570" category="inline-link-rx"></block></block>
   <block id="6b9418a55963f7822ccea753684768bf" category="inline-link">ONTAP 9.13.1性能计数器映射</block>
   <block id="8673c6516e8e00de96b96886974e6eb6" category="list-text"><block ref="8673c6516e8e00de96b96886974e6eb6" category="inline-link-rx"></block></block>
   <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="inline-link">ONTAP 9.13.1</block>
@@ -1789,4 +1785,7 @@
   <block id="16109e56f76ab0efaf7b92775cbe1b12" category="list-text">此视频也可通过NetApp TV获取，网址为 <block ref="0fbd1fba292ef7e8dc7c843e65ec1153" category="inline-link-macro-rx"></block>。</block>
   <block id="c481c55f899fe826c43a53c975e485f0" category="list-text">了解一下经Ans负责人 认证的模块。</block>
   <block id="47df15a6cd9dfe893d2aabb6bbfb82d6" category="paragraph">Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。首先、您应查看此站点上的文档。</block>
+  <block id="80ea4b005fd9d89a5db44b1a4c02962a" category="inline-link">有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答</block>
+  <block id="383b172302e7a0ad8e5f63e801347592" category="list-text"><block ref="383b172302e7a0ad8e5f63e801347592" category="inline-link-rx"></block></block>
+  <block id="ef3f9b4af9353a465dd6a94d006c73a7" category="sidebar">软件工具</block>
 </blocks>
