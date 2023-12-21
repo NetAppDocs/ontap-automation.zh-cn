@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/ontap_automation_options.html 
-keywords: ontap automation, rest rest api, python client library, ansible 
-summary: 从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。您可以直接或通过 NetApp Python 客户端库访问 REST API 。 
+keywords: ontap automation, rest api, python client library, powershell, ansible, bluexp automation catalog 
+summary: 您可以通过多种方法自动部署和管理ONTAP存储系统。 
 ---
 = 了解 ONTAP 自动化选项
 :hardbreaks:
@@ -14,37 +14,37 @@ summary: 从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为�
 
 
 [role="lead"]
-从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。您可以直接或通过 NetApp Python 客户端库访问 REST API 。此外， NetApp 还支持使用 Ansible 以及其他高级软件抽象技术实现 ONTAP 自动化。
-
-
-NOTE: ONTAPI （也称为网络易管理性 SDK 或 ZAPI ）是一种传统技术，用于以编程方式访问和管理 ONTAP 存储系统。ONTAP REST API 现已成为一项战略技术，应尽可能选择它。
+您可以通过多种方法自动部署和管理ONTAP存储系统。
 
 
 
-== 本机访问 ONTAP REST API
+== ONTAP REST API
 
-您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。您应首先查看此站点上的所有文档。
+从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。使用ONTAP REST API时、需要注意几个事项。
 
+.本机访问REST API
+您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。
 
-
-== 调整原有 ONTAPI 代码以使用 REST
-
-如果您已有使用 ONTAPI 的代码，则 NetApp 支持将代码转换为使用较新的 ONTAP REST API 。请参见 link:../migrate/mapping.html["ONTAPI 到 REST API 映射"] 有关将 ONTAPI 调用映射到等效 REST API 调用的信息。
-
-
-
-== 使用 NetApp Python 客户端库
-
-Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。您应首先查看此站点上的文档，包括 link:../python/overview_pcl.html["Python 客户端库"]。
+.正在迁移旧版ONTAPI代码以使用REST
+ONTAP API (ZAPI)是NetApp ONTAP 软件附带的一组原始专有调用、用于支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 link:../migrate/overview.html["迁移到REST API"] 有关详细信息 ...
 
 
 
-== 使用 Ansible
+== 客户端软件工具包
 
-Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。首先、您应查看此站点上的文档。
+NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创建自动化代码变得更加轻松。您应选择一种适合您的开发语言和环境的解决方案。
+
+.Python 客户端库
+Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。请参见 link:../python/overview_pcl.html["Python 客户端库"] 有关详细信息 ...
 
 
 
-== BlueXP自动化目录
+== 自动化框架
 
-NetApp https://console.bluexp.netapp.com/automationCatalog/["BlueXP自动化目录"^] 可通过BlueXP Web用户界面访问。通过该目录、您可以访问一些解决方案、这些解决方案可以帮助您自动部署和集成ONTAP及其他NetApp产品。请参见 https://docs.netapp.com/us-en/netapp-automation/["NetApp自动化"^] 自动化解决方案问题描述文档。
+您可以使用多个框架之一创建和部署自动化代码
+
+.Ansible
+Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。请参见 link:../additional/resources.html["其他资源"] 有关详细信息 ...
+
+.BlueXP自动化目录
+NetApp https://console.bluexp.netapp.com/automationCatalog/["BlueXP自动化目录"^] 可通过BlueXP Web用户界面访问。通过该目录、您可以访问打包的解决方案、这些解决方案有助于自动部署ONTAP并将其与其他产品集成。请参见 https://docs.netapp.com/us-en/netapp-automation/["NetApp自动化"^] 有关文档和详细信息、请参见。

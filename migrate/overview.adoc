@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/overview.html 
-keywords: ONTAPI, migrate, migrate to REST API 
-summary: 如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。 
+keywords: ONTAPI, ONTAPI disablement, migrate, migrate to REST API 
+summary: 未来版本的ONTAP 将禁用ONTAP接口。如果您使用的是ONTAPI、则应规划向ONTAP REST API的迁移。 
 ---
 = 已取消ONTAPI
 :hardbreaks:
@@ -14,11 +14,10 @@ summary: 如果您使用的是ONTAPI、建议您开始迁移到ONTAP REST API。
 
 
 [role="lead"]
-ONTAP API (ZAPI)是NetApp ONTAP 软件附带的一组原始专有调用、用于支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果您使用的是ONTAPI、则应规划向ONTAP REST API的迁移。
-
-NetApp首次在ONTAP 9.6中推出了REST API。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。您可以使用许多有用的资源和工具来支持迁移。
+ONTAP API (ZAPI)是NetApp ONTAP软件附带的原始专有调用集。API通过网络易管理性SDK提供、支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果您使用的是ONTAPI、则应规划向ONTAP REST API的迁移。
 
 .相关信息
+* link:../get-started/ontap_automation_options.html["了解 ONTAP 自动化选项"]
 * https://mysupport.netapp.com/info/communications/ECMLP2880232.html["CCPC-00410终止提供：ONTAPI"^]
 * https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答"^]
 

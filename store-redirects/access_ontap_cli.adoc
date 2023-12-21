@@ -1,0 +1,8 @@
+---
+permalink: rest/access_ontap_cli.html 
+redirect: ontap-automation/migrate/migration-considerations.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -4,6 +4,8 @@ title: 迁移到REST API
 entries:
 - title: 已取消ONTAPI
   url: "/migrate/overview.html"
+- title: 迁移注意事项
+  url: "/migrate/migration-considerations.html"
 - title: ONTAPI到REST映射
   url: "/migrate/mapping.html"
 - title: 性能计数器

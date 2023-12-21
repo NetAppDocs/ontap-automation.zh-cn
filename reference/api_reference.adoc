@@ -52,7 +52,7 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 [role="lead"]
 您可以通过以下链接访问ONTAP REST API参考文档的副本。API参考文档由ONTAP 版本维护。
 
-* https://docs.netapp.com/us-en/ontap-restapi-9141/["ONTAP 9.14.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi/["ONTAP 9.14.1"^]
 * https://docs.netapp.com/us-en/ontap-restapi-9131/["ONTAP 9.13.1"^]
 * https://docs.netapp.com/us-en/ontap-restapi-9121/["ONTAP 9.12.1"^]
 * https://docs.netapp.com/us-en/ontap-restapi-9111/["ONTAP 9.11.1"^]

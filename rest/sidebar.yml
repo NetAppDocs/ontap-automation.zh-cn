@@ -16,10 +16,6 @@ entries:
     url: "/rest/asynchronous_processing.html"
   - title: 对象引用和访问
     url: "/rest/object_references_and_access.html"
-  - title: ONTAPI 和 ONTAP 命令行界面的用户
-    url: "/rest/users_ontapi_api_ontap_cli.html"
-  - title: 访问 ONTAP 命令行界面
-    url: "/rest/access_ontap_cli.html"
   - title: 存储资源的性能指标
     url: "/rest/performance_metrics.html"
 - title: RBAC 安全性

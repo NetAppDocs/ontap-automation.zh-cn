@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: migrate/migration-considerations.html 
+keywords: migrate, mirgate to rest api, snapdiff 
+summary: '在从ONTAPI API (ZAPI)或ONTAP命令行界面迁移到ONTAP REST API之前、您应考虑以下几个问题。' 
+---
+= 迁移注意事项
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+在从ONTAPI API (ZAPI)或ONTAP命令行界面迁移到ONTAP REST API之前、您应考虑以下几个问题。
+
+
+
+== 一般设计差异
+
+ONTAP REST API 和命令行界面的设计截然不同。CLI 命令和参数不会直接映射到 REST API 调用。即使存在相似之处，输入参数的详细信息也可能有所不同。例如，可以使用字节或后缀（例如 KB ）来指定数字单位。请参见 link:../rest/input_variables.html["控制 API 请求的输入变量"] 和 link:../reference/api_reference.html["API 参考"] 有关详细信息 ...
+
+
+
+== 通过 REST API 公开的数据 SVM
+
+ONTAP 支持多种类型的 Storage Virtual Machine （ SVM ）。但是，只有数据 SVM 才会通过 ONTAP REST API 直接公开。描述集群和节点的配置信息可通过 REST API 获得，但集群和节点不会被视为单独的 SVM 。
+
+
+
+== 通过 REST API 访问 ONTAP 命令行界面
+
+为了帮助ONTAPI API和命令行界面用户过渡到ONTAP REST API、ONTAP提供了一个REST端点来访问ONTAP命令行界面。您可以使用此直通功能执行任何命令行界面命令。  在AutoSupport数据中返回对REST端点的使用、以便NetApp可以识别REST API中的差距、并在未来的ONTAP版本中进行改进。
+
+要对命令行界面命令执行问题描述、必须根据以下规则正确格式执行REST API调用：
+
+* 资源路径
+* 字段名称
+* HTTP 方法
+
+
+CLI访问的基本资源路径为 `/private/cli`。有关通过 REST API 访问命令行界面的详细信息，请参见 ONTAP API 联机文档页面。NetApp还维护一个GitHub存储库、其中包含代码示例和其他有用信息。请参见 https://github.com/NetApp/ontap-rest-python/tree/master/examples/rest_api/cli_passthrough_samples["ONTAP REST Python GitHub 存储库— CLI 直通示例"^] 有关详细信息 ...
+
+
+
+== 在 ONTAPI 中更改 SnapDiff 可用性
+
+从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。
+
+ONTAP 版本中的 SnapDiff API 可用性定义如下：
+
+* ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）
+* ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）
+* ONTAP 9.10.1 ：仅限 v3 （仅限 REST API ）
+
+
+另请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^] 有关详细信息 ...
