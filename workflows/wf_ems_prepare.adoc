@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_ems_prepare.html 
+keywords: support, ems, event management system, event notifications, notifications 
+summary: '您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据需要检索EMS消息。' 
+---
+= 准备管理EMS支持服务
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据需要检索EMS消息。
+
+
+
+=== 概述
+
+您可以通过多个示例工作流来说明如何使用ONTAP EMS服务。在使用工作流并发出任何REST API调用之前、请务必查看 link:../workflows/prepare_workflows.html["准备使用这些工作流"]。
+
+如果您使用Python、还可以参见"py" https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py["events.py"^] 有关如何自动执行某些EMS相关活动的示例。
+
+
+
+=== ONTAP REST API 与 ONTAP 命令行界面命令
+
+对于许多任务、使用ONTAP REST API所需的调用比等效的ONTAP命令行界面命令少。下表列出了API调用以及每项任务所需的等效命令行界面命令。
+
+[cols="30,70"]
+|===
+| ONTAP REST API | ONTAP 命令行界面 
+
+
+| 获取/support/ems | `event config show` 
+
+
+| POST /support/EMS/目标  a| 
+. `事件通知目标创建`
+. `事件通知创建`
+
+
+
+
+| `GET /support/EMS/Events` | `事件日志显示` 
+
+
+| `POST /support/EMS/filters`  a| 
+. `event filter create -filter-name <FilterName>`
+. `event filter rule add -filter-name <FilterName>`
+
+
+|===
+.相关信息
+* https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py["用于展示EMS的Python脚本"^]
+* https://blog.netapp.com/ontap-rest-apis-automate-notification["ONTAP REST API ：自动通知高严重性事件"^]
+

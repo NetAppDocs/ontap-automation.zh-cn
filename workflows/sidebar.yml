@@ -48,6 +48,18 @@ entries:
     url: "/workflows/wf_stor_list_aggrs.html"
   - title: 列出磁盘
     url: "/workflows/wf_stor_list_disks.html"
+- title: 支持
+  entries:
+  - title: EMS
+    entries:
+    - title: 准备使用EMS
+      url: "/workflows/wf_ems_prepare.html"
+    - title: 列出日志事件
+      url: "/workflows/wf_ems_list_log_events.html"
+    - title: 获取EMS配置
+      url: "/workflows/wf_ems_get_configuration.html"
+    - title: 创建EMS通知
+      url: "/workflows/wf_ems_create_notification.html"
 - title: SVM
   entries:
   - title: 列出SVM

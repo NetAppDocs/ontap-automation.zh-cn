@@ -1,0 +1,8 @@
+---
+permalink: manage/ems-rest-api.html 
+redirect: ontap-automation/workflows/wf_ems_prepare.html 
+---
+= 
+:allow-uri-read: 
+
+

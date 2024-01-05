@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_ems_list_log_events.html 
+keywords: support, ems, event management system, get events, get notifications, retrieve events 
+summary: 您可以检索所有事件通知消息或具有特定特征的消息。 
+---
+= 列出EMS日志事件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以检索所有事件通知消息、也可以仅检索具有特定特征的消息。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /API/support/EMS/Events 
+|===
+.处理类型
+同步
+
+.Curl示例的其他输入参数
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| fields | 查询 | 否 | 用于请求将特定字段包括在响应中。 
+
+
+| max_记录 | 查询 | 否 | 可用于限制单个请求中返回的记录数。 
+
+
+| log_message | 查询 | 否 | 用于搜索特定文本值、并仅返回匹配的消息。 
+
+
+| message.severity | 查询 | 否 | 将返回的消息限制为具有特定严重性的消息、例如 `alert`。 
+|===
+.CURL示例：返回最新消息和名称值
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/support/ems/events?fields=message.name&max_records=1" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.CURL示例：返回包含特定文本和严重性的消息
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/support/ems/events?log_message=*disk*&message.severity=alert" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[listing]
+----
+{
+  "records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 4602,
+      "time": "2022-03-18T06:37:46-04:00",
+      "message": {
+        "severity": "alert",
+        "name": "raid.autoPart.disabled"
+      },
+      "log_message": "raid.autoPart.disabled: Disk auto-partitioning is disabled on this system: the system needs a minimum of 4 usable internal hard disks.",
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/4602"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?log_message=*disk*&message.severity=alert&max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-18T06%3A37%3A46-04%3A00&start.node.name=malha-vsim1&start.index=4602&log_message=*disk*&message.severity=alert"
+    }
+  }
+}
+----

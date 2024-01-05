@@ -1,0 +1,156 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_ems_create_notification.html 
+keywords: support, ems, event management system, create ems, create ems notification 
+summary: 您可以使用以下工作流创建新的EMS通知目标以接收选定事件消息。 
+---
+= 创建EMS通知
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用以下工作流创建新的EMS通知目标以接收选定事件消息。
+
+
+
+== 第1步：配置系统范围的电子邮件设置
+
+您可以通过问题描述执行以下API调用来配置系统范围的电子邮件设置。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| patch | /API/support/ems 
+|===
+.处理类型
+同步
+
+.Curl示例的其他输入参数
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| mail_from | 查询 | 是的。 | 设置 `from` 字段。 
+
+
+| mail_server | 查询 | 是的。 | 配置目标SMTP邮件服务器。 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request PATCH \
+--location "https://$FQDN_IP/api/support/ems?mail_from=administrator@mycompany.com&mail_server=mail@mycompany.com" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+
+
+== 第2步：定义邮件过滤器
+
+您可以对API调用进行问题描述、以定义与消息匹配的筛选器规则。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /API/support/EMS/筛选器 
+|===
+.处理类型
+同步
+
+.Curl示例的其他输入参数
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| 筛选器 | body | 是的。 | 包括筛选器配置的值。 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/support/ems/filters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON 输入示例
+[source, json]
+----
+{
+  "name": "test-filter",
+  "rules.type": ["include"],
+  "rules.message_criteria.severities": ["emergency"]
+}
+----
+
+
+== 第3步：创建消息目标
+
+您可以通过问题描述调用来创建消息目标。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 发布 | /API/support/EMS/目标 
+|===
+.处理类型
+同步
+
+.Curl示例的其他输入参数
+除了所有 REST API 调用通用的参数之外，此步骤的 curl 示例还使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| 目标配置 | body | 是的。 | 包括事件目标的值。 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/support/ems/destinations" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON 输入示例
+[source, curl]
+----
+{
+  "name": "test-destination",
+  "type": "email",
+  "destination": "administrator@mycompany.com",
+  "filters.name": ["important-events"]
+}
+----

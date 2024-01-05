@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_ems_get_configuration.html 
+keywords: support, ems, event management system, ems configuration 
+summary: 您可以检索ONTAP集群的当前EMS配置。您可以在更新配置或创建新EMS通知之前执行此操作。 
+---
+= 获取EMS配置
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以检索ONTAP集群的当前EMS配置。您可以在更新配置或创建新EMS通知之前执行此操作。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /API/support/ems 
+|===
+.处理类型
+同步
+
+.curl 示例
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/support/ems" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[listing]
+----
+{
+  "proxy_url": "https://proxyserver.mycompany.com",
+  "proxy_user": "proxy_user",
+  "mail_server": "mail@mycompany.com",
+  "_links": {
+    "self": {
+      "href": "/api/resourcelink"
+    }
+  },
+  "pubsub_enabled": "1",
+  "mail_from": "administrator@mycompany.com"
+}
+----
