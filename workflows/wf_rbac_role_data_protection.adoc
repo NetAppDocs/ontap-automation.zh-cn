@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: workflows/wf_rbac_data_protection.html 
-keywords:  
-summary: XXX 
+permalink: workflows/wf_rbac_role_data_protection.html 
+keywords: rbac, role, data protection, limited data protection 
+summary: 您可以为用户提供有限的数据保护功能。 
 ---
 = 启用数据保护管理
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: XXX
 
 
 [role="lead"]
-在某些情况下、您可能希望为用户提供有限的数据保护功能。
+您可以为用户提供有限的数据保护功能。
 
 .关于此工作流
 创建的传统角色具有以下特征：

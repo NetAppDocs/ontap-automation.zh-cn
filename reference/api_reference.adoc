@@ -23,7 +23,6 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 
 == 访问 ONTAP API 文档页面
 
-[role="lead"]
 您可以在本地 ONTAP 系统上访问 ONTAP API 联机文档页面。
 
 .开始之前
@@ -49,7 +48,6 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 
 == 访问ONTAP REST API参考文档的副本
 
-[role="lead"]
 您可以通过以下链接访问ONTAP REST API参考文档的副本。API参考文档由ONTAP 版本维护。
 
 * https://docs.netapp.com/us-en/ontap-restapi/["ONTAP 9.14.1"^]
