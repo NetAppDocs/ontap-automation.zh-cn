@@ -715,27 +715,8 @@
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
-  <block id="c50ee9e545662286884e42e140649f09" category="doc">使用 ONTAP REST API 管理 DACL 和 SACL 文件权限</block>
-  <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">此处</block>
-  <block id="7d455208ee42ecd7867fb39b027bcf1c" category="paragraph">ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从 ONTAP 9.1.1 开始， ONTAP REST API 包括用于为文件分配 SACL 和 DACL 权限以及自动执行文件安全权限的端点。（您可以了解有关在 ONTAP 9.9.1 之前自动执行 SACL 和 DACL 权限的选项的更多信息<block ref="9cac8aefabbfb93ff43b7791e34383b9" category="inline-link-rx"></block>）。</block>
-  <block id="bf2066acabfd343a809da20949dc54e0" category="paragraph">从 ONTAP 9.1.1 开始，您可以使用单个 REST API 调用来代替多个 CLI 命令或 ONTAPI 调用。以下示例显示了如何使用 ONTAP REST API 处理文件权限。在每个示例中，请务必在所示位置用方括号 &lt;&gt; 提供信息值。</block>
-  <block id="1099d399c75060b79e3ad383bf9aaaca" category="inline-link">Python 脚本</block>
-  <block id="52c2a6d4c018d7d1bf8a8eb602e46e7e" category="paragraph">您也可以引用示例<block ref="0177ee26baf5ba4c15becf2582f3ab08" category="inline-link-rx"></block> 该演示了如何自动执行许多与 SACL 和 DACL 相关的活动。</block>
-  <block id="19f7b4a4dbcb6361568e48dfa0435a6c" category="section-title">查看有效权限</block>
-  <block id="428084c0000a04b8e91d28436016ef1a" category="paragraph">使用 `get /protocols/file-security/effective-permissions/` API 调用，您可以检索特定文件或目录的当前权限。</block>
-  <block id="20090a7c19d3f16ea7ce066b8b9f031e" category="listing-title">请求示例：</block>
-  <block id="8b395980037bcca82c69c1da89a28918" category="listing-title">响应示例</block>
-  <block id="ebc2d9d98f6a4f7b344429c8411e0dab" category="section-title">查看所有审核信息</block>
-  <block id="d2a0c57c327ad35c037b4e63fc912893" category="paragraph">使用 `get /protocols/file-security/permissions/` API 调用，您可以检索特定文件或目录的所有审核信息。</block>
-  <block id="62119ab02b7f5c5c6d8698c4ec962f3e" category="section-title">应用新权限</block>
-  <block id="d56a84695518a1643241bb70bcfd22dc" category="paragraph">使用 `POST /protocols/file-security/permissions/` API 调用，您可以将新的安全描述符应用于文件或目录。</block>
-  <block id="6f76c699e041eacfac4485d0f16323e1" category="listing-title">请求示例</block>
   <block id="7d986aa6827f53816cefdf1f0049c38b" category="section-title">更新安全描述符信息</block>
-  <block id="0b22253d9f6241bf0350ec66f24bfa31" category="paragraph">使用 `patch /protocols/file-security/permissions/` API 调用，您可以更新文件或目录的特定安全描述符信息，例如主所有者，组或控制标志。</block>
-  <block id="50c9441280e27d3ff54a612e499e063b" category="section-title">删除现有 SACL/DACL 访问控制条目（ ACE ）</block>
-  <block id="d33bccaf67eae3c8f65c012f20973eba" category="paragraph">使用 `Delete /protocols/file-security/permissions/` API 调用，您可以从目录的文件中删除现有 ACE 。此示例将此更改传播到任何子对象。</block>
   <block id="411009bbd509e2b00a1f4543b3c1ca74" category="section-title">ONTAP REST API 与 ONTAP 命令行界面命令</block>
-  <block id="931f6691d15d77b0e0fe9fc70de2b615" category="paragraph">与 ONTAP 命令行界面相比， ONTAP REST API 可以使用更少的命令自动执行许多任务。例如，您可以使用一种 POST API 方法来修改文件的安全描述符，而不是使用多个 CLI 命令。下表显示了完成常见文件系统权限任务与相应的 REST API 调用所需的命令行界面命令：</block>
   <block id="de134183bea5df515a6756a539ce6f18" category="cell">ONTAP 命令行界面</block>
   <block id="f778c6da6bf9a458b710a39182352949" category="cell">`get /protocols/file-security/effective-permissions/`</block>
   <block id="5f7113a4943de281bc5047f65e391330" category="paragraph">`vserver security file-directory show-effective-permissions`</block>
@@ -752,12 +733,8 @@
   <block id="9a85c4ed4aea58b5cf2264e55823074c" category="list-text">`vserver security file-directory ntfs dacl remove`</block>
   <block id="7faf05b9e4d90529c54562f216bfb2d6" category="list-text">`vserver security file-directory ntfs sacl remove`</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">相关信息</block>
-  <block id="be37d97521654067f502ca21542fc23e" category="inline-link">ONTAP REST API DACL/SACL 权限示例 Python 脚本</block>
-  <block id="5085ad1bbb70dc377ddd4434496cf250" category="list-text"><block ref="5085ad1bbb70dc377ddd4434496cf250" category="inline-link-rx"></block></block>
   <block id="673cd1c7bc219dafd3ab44f7789c7963" category="inline-link">使用 ONTAP REST API 简化文件安全权限的管理</block>
   <block id="6f49384b8a99fec44a7cd1d6ed52add4" category="list-text"><block ref="6f49384b8a99fec44a7cd1d6ed52add4" category="inline-link-rx"></block></block>
-  <block id="e27a275b9610ff6148df553179ccf77f" category="inline-link">将专用命令行界面直通与 ONTAP REST API 结合使用（适用于 ONTAP 9.1.1 之前的版本）</block>
-  <block id="194ed1689d54a84f11e8266e9e92d197" category="list-text"><block ref="194ed1689d54a84f11e8266e9e92d197" category="inline-link-rx"></block></block>
   <block id="8b64f73d0c930b953467d71771168fcb" category="cell">`event config show`</block>
   <block id="2130e4445c18121e61a0496381717d89" category="list-text">`事件通知目标创建`</block>
   <block id="b0f540062794ffac7297b2f00a005457" category="list-text">`事件通知创建`</block>
@@ -768,8 +745,6 @@
   <block id="42d9b7d3455dfaa83fb3e81bad6cce7c" category="list-text">`event filter rule add -filter-name &lt;FilterName&gt;`</block>
   <block id="04a23c4efdbd2046f23f7897eaf905ba" category="inline-link">ONTAP REST API ：自动通知高严重性事件</block>
   <block id="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="list-text"><block ref="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="inline-link-rx"></block></block>
-  <block id="f543ca5c2e4e8371b14327b0c907dce3" category="sidebar">使用 REST API 管理 ONTAP</block>
-  <block id="31be5a65a5bd0c7e64b5cc0f6b8790c7" category="sidebar">DACL 和 SACL 权限</block>
   <block id="7f96f0bc5330ed5d9909cdd2f6f0d480" category="paragraph">包括规划、管理和支持ONTAP 9所需的文档和其他有用链接。</block>
   <block id="623d61e11a58f706cc63211cbeef400b" category="inline-link">ONTAP 9 产品库</block>
   <block id="c2d5813d8be4192f243cf259ee486461" category="list-text"><block ref="c2d5813d8be4192f243cf259ee486461" category="inline-link-rx"></block></block>
@@ -999,7 +974,6 @@
   <block id="476bf6fc5e4a2d37b00403ec863106ac" category="inline-link">ONTAP 9产品文档</block>
   <block id="ea13735c00bcda944bfcad2caa280467" category="list-text"><block ref="ea13735c00bcda944bfcad2caa280467" category="inline-link-rx"></block></block>
   <block id="c68677933ee8c7cbe8b88c055e440e45" category="paragraph">提供ONTAP 9产品系列的文档。</block>
-  <block id="31817b4bbc4ed43fb341069fc6561074" category="summary">您可以使用ONTAP REST API管理DACL和SACL文件权限。</block>
   <block id="783fed6bd9b06a289bc35d1ce6d3e28c" category="summary">发出设计为异步运行的 API 请求后，始终会创建一个作业对象并将其返回给调用方。作业将描述并固定处理请求的后台任务。</block>
   <block id="0a9491f69a61e4af806e090fdb7f64e0" category="doc">如何访问ONTAP REST API</block>
   <block id="a198ee594703276bc71a03301b58b8a2" category="paragraph">每个API事务都包含一个HTTP请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。</block>
@@ -1808,4 +1782,38 @@
   <block id="a518180b1666983f22dffbfc9e53cab8" category="sidebar">获取EMS配置</block>
   <block id="0e0109505c34b65099fc5f28788f80c2" category="sidebar">创建EMS通知</block>
   <block id="62e79f1e2a16917d7b811343757eede5" category="summary">您可以为用户提供有限的数据保护功能。</block>
+  <block id="542f0dae2bb6d52eba2a6242f8f9bbb4" category="summary">您可以检索特定文件或文件夹的当前有效权限。</block>
+  <block id="ca8b310152c3cdbf0b209d0af018c2db" category="doc">获取文件的有效权限</block>
+  <block id="eb8b558a40765e93b8be653d5fb7656c" category="cell">/api/protocols文件安全性/有效权限/｛svm.unid｝/｛path｝</block>
+  <block id="d4f560c2cc4c11c467693af3a4c697fb" category="cell">这是包含该文件的SVM的UUID。</block>
+  <block id="a0da37dfc114065048cd3b5de2ff66a6" category="cell">$file_path</block>
+  <block id="bae6d4bef4e1697b5dfae7f9202e2499" category="cell">这是文件或文件夹的路径。</block>
+  <block id="6abb58e21232fa67ee94875bd5f72d26" category="summary">您可以将新的安全描述符应用于特定文件或文件夹。</block>
+  <block id="28a11b3673dcd0e091505156efd803f3" category="doc">将新权限应用于文件</block>
+  <block id="350becfaa43a05e99267c2c4700bf2f4" category="section-title">第1步：应用新权限</block>
+  <block id="a624b6656737d2c783691ba33fc23197" category="cell">/api/protocols /文件安全性/权限/｛svm.unid｝/｛path｝</block>
+  <block id="db7bd3219c8001e5e6cdbc7e71916c02" category="summary">您可以检索特定文件或文件夹的所有审核信息。</block>
+  <block id="420c6b28da357f4a659ab47453e63f4e" category="doc">获取文件的审核信息</block>
+  <block id="0751d56a6f57c4680d1dfea528fbf8d3" category="paragraph">您可以检索特定文件或文件夹的审核信息。</block>
+  <block id="59acc03c473e764ed04cb83fde18f389" category="summary">您可以从特定文件或文件夹中删除现有访问控制条目(ACE)。更改会传播到任何子对象。</block>
+  <block id="3560dff4f0f31db694c608a2ebc06e85" category="doc">删除访问控制条目</block>
+  <block id="b49fb5134601d8312d76cc01166576a2" category="paragraph">您可以从特定文件或文件夹中删除现有访问控制条目(ACE)。更改会传播到任何子对象。</block>
+  <block id="a2ec471f92f85173e4ba00d9da0db114" category="summary">您可以将特定安全描述符更新到特定文件或文件夹、包括主所有者、组或控制标志。</block>
+  <block id="bb059379feb749c05906d3ac23b4816d" category="section-title">第1步：更新安全描述符</block>
+  <block id="698f9eb192e6aa6224d8848f98d6a530" category="summary">您可以管理ONTAP集群中通过SVM提供的文件的权限和审核策略。</block>
+  <block id="09cd38efbd2c8fdbc8c6175ec9176ea8" category="doc">准备管理文件安全性和审核策略</block>
+  <block id="7e2e1102b90cfd81da1a2e5002c37c9c" category="paragraph">ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从ONTAP 9.9.1开始、REST API支持管理SACL和DACL权限。您可以使用API自动管理文件安全权限。在许多情况下、您可以使用单个REST API调用、而不是多个命令行界面命令或ONTAP PI (ZAPI)调用。</block>
+  <block id="3c4e118c8471cd86da2e54560f34234b" category="admonition">对于9.9.1之前的ONTAP版本、您可以使用命令行界面直通功能自动管理SACL和DACL权限。请参见 <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block> 和<block ref="cc458ed66c48b12b86281fe13e008c20" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="5a4c76b14341d9a5432b024437f965d1" category="paragraph">我们提供了几个示例工作流来说明如何使用REST API管理ONTAP文件安全服务。在使用工作流并发出任何REST API调用之前、请务必查看 <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>。</block>
+  <block id="f13ddbbf96dbd385b6b39bedaac4e6f7" category="inline-link">file_security_permissions.py</block>
+  <block id="b3b08c8a5c5a09ffbe1430bb1e019e74" category="paragraph">如果您使用Python、另请参见脚本<block ref="3ccddfdb1872f5bc3b7f054cd270fc1b" category="inline-link-rx"></block> 有关如何自动执行某些文件安全活动的示例。</block>
+  <block id="0207c62847caaa4c5ffaeaf4b00552d6" category="paragraph">对于许多任务、使用ONTAP REST API所需的调用比等效的ONTAP命令行界面命令或ONTAP API (ZAPI)调用更少。下表列出了API调用以及每项任务所需的等效命令行界面命令。</block>
+  <block id="3d1a91a3f9c08c95df6cb1eff36db464" category="inline-link">展示文件权限的Python脚本</block>
+  <block id="bd9e252fe191d999eeb79daa2d91b6a8" category="list-text"><block ref="bd9e252fe191d999eeb79daa2d91b6a8" category="inline-link-rx"></block></block>
+  <block id="0c30cc0a8be3231b1496649b8f111c07" category="list-text"><block ref="0c30cc0a8be3231b1496649b8f111c07" category="inline-link-rx"></block></block>
+  <block id="a58cf8beb5e4ede8e197f2cc371725fe" category="sidebar">准备管理文件安全性</block>
+  <block id="22b4fdae10b975d500f499f9cd7d2659" category="sidebar">获得有效权限</block>
+  <block id="f520e25b29f7e72fdce54450ea759fc8" category="sidebar">获取审核信息</block>
+  <block id="a0b064f87e86d15d09bd439eeac8859d" category="sidebar">应用权限</block>
+  <block id="982b873024de716ae33d5ad3f5fc8e1a" category="sidebar">更新安全描述符</block>
 </blocks>

@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_nas_fs_get_permissions.html 
+keywords: nas, file security, effective permissions 
+summary: 您可以检索特定文件或文件夹的当前有效权限。 
+---
+= 获取文件的有效权限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以检索特定文件或文件夹的当前有效权限。
+
+.HTTP方法和端点
+此REST API调用使用以下方法和端点。
+
+[cols="25,75"]
+|===
+| HTTP 方法 | 路径 
+
+
+| 获取 | /api/protocols文件安全性/有效权限/｛svm.unid｝/｛path｝ 
+|===
+.处理类型
+同步
+
+.CURL示例的其他输入参数
+除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。
+
+[cols="25,10,10,55"]
+|===
+| 参数 | Type | Required | Description 
+
+
+| $SVM_ID | 路径 | 是的。 | 这是包含该文件的SVM的UUID。 
+
+
+| $file_path | 路径 | 是的。 | 这是文件或文件夹的路径。 
+|===
+.curl 示例
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/protocols/file-security/effective-permissions/$SVM_ID/$FILE_PATH" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.JSON 输出示例
+[listing]
+----
+{
+  "svm": {
+    "uuid": "cf5f271a-1beb-11ea-8fad-005056bb645e",
+    "name": "vs1"
+  },
+  "user": "administrator",
+  "type": "windows",
+  "path": "/",
+  "share": {
+    "path": "/"
+  },
+  "file_permission": [
+    "read",
+    "write",
+    "append",
+    "read_ea",
+    "write_ea",
+    "execute",
+    "delete_child",
+    "read_attributes",
+    "write_attributes",
+    "delete",
+    "read_control",
+    "write_dac",
+    "write_owner",
+    "synchronize",
+    "system_security"
+  ],
+  "share_permission": [
+    "read",
+    "read_ea",
+    "execute",
+    "read_attributes",
+    "read_control",
+    "synchronize"
+  ]
+}
+----

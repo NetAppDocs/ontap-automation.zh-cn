@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_nas_fs_prepare.html 
+keywords: nas, file security, sacl, dacl, prepare 
+summary: 您可以管理ONTAP集群中通过SVM提供的文件的权限和审核策略。 
+---
+= 准备管理文件安全性和审核策略
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以管理ONTAP集群中通过SVM提供的文件的权限和审核策略。
+
+
+
+=== 概述
+
+ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从ONTAP 9.9.1开始、REST API支持管理SACL和DACL权限。您可以使用API自动管理文件安全权限。在许多情况下、您可以使用单个REST API调用、而不是多个命令行界面命令或ONTAP PI (ZAPI)调用。
+
+
+NOTE: 对于9.9.1之前的ONTAP版本、您可以使用命令行界面直通功能自动管理SACL和DACL权限。请参见 link:../migrate/migration-considerations.html["迁移注意事项"] 和 https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["将专用命令行界面直通与 ONTAP REST API 结合使用"^] 有关详细信息 ...
+
+我们提供了几个示例工作流来说明如何使用REST API管理ONTAP文件安全服务。在使用工作流并发出任何REST API调用之前、请务必查看 link:../workflows/prepare_workflows.html["准备使用这些工作流"]。
+
+如果您使用Python、另请参见脚本 https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/file_security_permissions.py["file_security_permissions.py"^] 有关如何自动执行某些文件安全活动的示例。
+
+
+
+=== ONTAP REST API 与 ONTAP 命令行界面命令
+
+对于许多任务、使用ONTAP REST API所需的调用比等效的ONTAP命令行界面命令或ONTAP API (ZAPI)调用更少。下表列出了API调用以及每项任务所需的等效命令行界面命令。
+
+[cols="40,60"]
+|===
+| ONTAP REST API | ONTAP 命令行界面 
+
+
+| `get /protocols/file-security/effective-permissions/`  a| 
+`vserver security file-directory show-effective-permissions`
+
+
+
+| `POST /protocols/file-security/permissions/`  a| 
+. `vserver security file-directory ntfs create`
+. `vserver security file-directory ntfs dacl add`
+. `vserver security file-directory ntfs sacl add`
+. `vserver security file-directory policy create`
+. `vserver security file-directory policy task add`
+. `Vserver security file-directory apply`
+
+
+
+
+| `patch /protocols/file-security/permissions/`  a| 
+`vserver security file-directory ntfs modify`
+
+
+
+| `delete /protocols/file-security/permissions/`  a| 
+. `vserver security file-directory ntfs dacl remove`
+. `vserver security file-directory ntfs sacl remove`
+
+
+|===
+.相关信息
+* https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/file_security_permissions.py["展示文件权限的Python脚本"^]
+* https://netapp.io/2021/06/28/simplified-management-of-file-security-permissions-with-ontap-rest-apis/["使用 ONTAP REST API 简化文件安全权限的管理"^]
+* https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["将专用命令行界面直通与 ONTAP REST API 结合使用"^]
+

@@ -12,6 +12,22 @@ entries:
     url: "/workflows/wf_cls_update_contact.html"
   - title: 获取作业实例
     url: "/workflows/wf_jobs_get_job.html"
+- title: NAS
+  entries:
+  - title: 文件安全权限
+    entries:
+    - title: 准备管理文件安全性
+      url: "/workflows/wf_nas_fs_prepare.html"
+    - title: 获得有效权限
+      url: "/workflows/wf_nas_fs_get_permissions.html"
+    - title: 获取审核信息
+      url: "/workflows/wf_nas_fs_get_audit_info.html"
+    - title: 应用权限
+      url: "/workflows/wf_nas_fs_apply_permissions.html"
+    - title: 更新安全描述符
+      url: "/workflows/wf_nas_fs_update_sd.html"
+    - title: 删除访问控制条目
+      url: "/workflows/wf_nas_fs_delete_ace.html"
 - title: 网络
   entries:
   - title: 列出IP接口
