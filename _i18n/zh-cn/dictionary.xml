@@ -1816,4 +1816,5 @@
   <block id="f520e25b29f7e72fdce54450ea759fc8" category="sidebar">获取审核信息</block>
   <block id="a0b064f87e86d15d09bd439eeac8859d" category="sidebar">应用权限</block>
   <block id="982b873024de716ae33d5ad3f5fc8e1a" category="sidebar">更新安全描述符</block>
+  <block id="db5695cffdc658d54a90f935d7e8495e" category="section-title">第1步：删除ACE</block>
 </blocks>
