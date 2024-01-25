@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference/api_reference.html 
-keywords: reference, API reference, ONTAP API documentation 
-summary: API参考包含有关所有ONTAP REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。 
+keywords: reference, API reference, ONTAP API documentation, online reference, swagger 
+summary: API参考包含有关ONTAP REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。 
 ---
 = API 参考
 :hardbreaks:
@@ -14,16 +14,33 @@ summary: API参考包含有关所有ONTAP REST API调用的详细信息、包括
 
 
 [role="lead"]
-API参考包含有关所有ONTAP REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
+API参考包含有关ONTAP REST API调用的详细信息、包括HTTP方法、输入参数和响应。在使用 REST API 开发自动化应用程序时，此完整参考非常有用。
 
 
-NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以访问NetApp维护的文档的静态副本。
+NOTE: 您可以根据ONTAP版本在多个站点之一访问REST API参考文档。您还可以通过本地ONTAP系统上的Swagger UI获得等效文档的副本。
 
 
 
-== 访问 ONTAP API 文档页面
+== 联机访问ONTAP API参考文档
 
-您可以在本地 ONTAP 系统上访问 ONTAP API 联机文档页面。
+您可以通过以下链接访问ONTAP REST API参考文档的副本。本文档由ONTAP版本维护。
+
+* https://docs.netapp.com/us-en/ontap-restapi/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.14.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi-9131/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.13.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi-9121/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.12.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi-9111/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.11.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi-9101/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.10.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi-991/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.9.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi-98/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.8"^]
+* https://docs.netapp.com/us-en/ontap-restapi-97/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.7"^]
+* https://docs.netapp.com/us-en/ontap-restapi-96/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.6"^]
+
+
+
+
+== 通过Swagger UI访问ONTAP API参考文档
+
+您可以通过本地ONTAP系统上的Swagger UI访问ONTAP REST API文档。
 
 .开始之前
 您必须具备以下条件：
@@ -43,23 +60,3 @@ NOTE: 您可以在本地ONTAP 系统上访问联机API参考内容、也可以�
 
 . 作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。
 
-
-
-
-== 访问ONTAP REST API参考文档的副本
-
-您可以通过以下链接访问ONTAP REST API参考文档的副本。API参考文档由ONTAP 版本维护。
-
-* https://docs.netapp.com/us-en/ontap-restapi/["ONTAP 9.14.1"^]
-* https://docs.netapp.com/us-en/ontap-restapi-9131/["ONTAP 9.13.1"^]
-* https://docs.netapp.com/us-en/ontap-restapi-9121/["ONTAP 9.12.1"^]
-* https://docs.netapp.com/us-en/ontap-restapi-9111/["ONTAP 9.11.1"^]
-* https://docs.netapp.com/us-en/ontap-restapi-9101/["ONTAP 9.10.1"^]
-* https://docs.netapp.com/us-en/ontap-restapi-991/["ONTAP 9.9.1"^]
-* https://docs.netapp.com/us-en/ontap-restapi-98/["ONTAP 9.8"^]
-* https://docs.netapp.com/us-en/ontap-restapi-97/["ONTAP 9.7"^]
-* https://docs.netapp.com/us-en/ontap-restapi-96/["ONTAP 9.6"^]
-
-
-.相关信息
-https://devnet.netapp.com/restapi.php["NetApp DevNet ： ONTAP REST API"^]
