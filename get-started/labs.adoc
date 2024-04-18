@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: get-started/labs.html 
+keywords:  
+summary:  
+---
+= NetApp实验室资源
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp提供了一个实验室环境、用于测试ONTAP REST API和其他相关自动化技术。
+
+。 https://labondemand.netapp.com["Lab on Demand"^] 适用于NetApp客户和合作伙伴。您需要有效的凭据才能登录并开始使用实验室资源。您可以根据需要在实验室中搜索_REST或其他技术。
+
+另请查看 https://github.com/NetApp/ontap-rest-python/tree/master/lod["准备Lab on Demand以运行示例脚本"^] 开始使用。

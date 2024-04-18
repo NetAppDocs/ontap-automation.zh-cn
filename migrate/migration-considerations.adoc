@@ -57,3 +57,9 @@ ONTAP 版本中的 SnapDiff API 可用性定义如下：
 
 
 另请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^] 有关详细信息 ...
+
+
+
+== 提交您的ONTAPI以填补API空缺
+
+NetApp致力于支持客户从ONTAPI迁移到ONTAP REST API。如果您发现REST API中缺少某些内容、请告知我们。您可以在上提交这些差距以及任何其他想法 https://forms.office.com/Pages/ResponsePage.aspx?id=oBEJS5uSFUeUS8A3RRZbOtlEKM3rNwBHjLH8dubcgOVURVM2UzIzTkQzSzdTU0pQRVFFRENZWlAxNi4u["从ONTAPI到REST API"^] 页面。

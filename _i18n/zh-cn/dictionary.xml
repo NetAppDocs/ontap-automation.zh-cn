@@ -74,7 +74,6 @@
   <block id="b493da72818f74a4523850f1316fabdc" category="list-text">对集合中的每个对象执行的修补或删除调用的序列</block>
   <block id="d42ef5aeeeac3bae2faf89cff30ba1b2" category="paragraph">操作超时可通过 `return_timeout` 设置，默认值为 15 秒。如果在超时之前未完成，则响应将包含指向下一个对象的链接。您必须使用下一个链接重新发出相同的 HTTP 方法才能继续此操作。</block>
   <block id="554cfab3938e21d9270bd6b75931f96f" category="section-title">视频</block>
-  <block id="039792ff8ff6ac357ed8f4a13b3345c2" category="inline-link-macro">Ansible 认证模块</block>
   <block id="488449a83a7af94bacba6d31023a0ace" category="inline-link-macro">NetApp Ansible DevOps 解决方案</block>
   <block id="1b3d9b05305989cf6898b061409738ed" category="section-title">一般设计差异</block>
   <block id="ee083ff11ffc430b7230624e8985e88c" category="inline-link-macro">控制 API 请求的输入变量</block>
@@ -302,22 +301,6 @@
   <block id="b281ec87e30bc1058b3173012f46c637" category="list-text">如果作业处于非终端状态，请重新执行环路。</block>
   <block id="6caaacff3c8abae5d9b2e02a5e4d0829" category="list-text">当作业达到终端状态（成功，失败）时停止。</block>
   <block id="f09943979dc3457d406cfb7e8205a032" category="paragraph">您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。</block>
-  <block id="f372ae3b2fda116fe4b7463cbac902c0" category="section-title">ONTAP 9 资源</block>
-  <block id="8574bd76a1428c3bf08d97dadd4ae77c" category="inline-link">ONTAP 和 ONTAP System Manager 资源</block>
-  <block id="ef6786259f693365fcfb0cc5f63f3f4e" category="list-text"><block ref="ef6786259f693365fcfb0cc5f63f3f4e" category="inline-link-rx"></block></block>
-  <block id="1d5be002ec12a8cee5e18879d77b8f22" category="section-title">ONTAP 9 开发人员资源</block>
-  <block id="b597994ba1223810c3ac8977cffacb37" category="inline-link">NetApp 开发人员网络： ONTAP RESTful API</block>
-  <block id="e6d9d2044073b02a5ea64a67b46c528d" category="inline-link">NetApp ONTAP Python 客户端库入门</block>
-  <block id="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="list-text"><block ref="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="inline-link-rx"></block></block>
-  <block id="ed08ca4078374e76c6df3f1999af7274" category="section-title">NetApp 资源</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">NetApp 支持</block>
-  <block id="3d32fc1a126e880a8ed715ad4b9c42f5" category="paragraph">访问故障排除工具，文档和技术支持帮助。</block>
-  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
-  <block id="29c81145f8df4c302d2a5db797d28b64" category="list-text"><block ref="29c81145f8df4c302d2a5db797d28b64" category="inline-link-rx"></block></block>
-  <block id="f921b580843ecb0435df878ae2c6c51e" category="paragraph">与使用 ONTAP 9 和 ONTAP REST API 相关的访问要求和兼容性信息。</block>
-  <block id="5528d45d676e7b5e4b5f82591b52d795" category="inline-link">NetApp 技术报告和白皮书库</block>
-  <block id="8d4056bb7e1987655b2aad3e78b46bc4" category="list-text"><block ref="8d4056bb7e1987655b2aad3e78b46bc4" category="inline-link-rx"></block></block>
-  <block id="e996b4c3d79a1e2689fba6ba27c0372f" category="paragraph">访问技术报告，白皮书和其他文档。</block>
   <block id="62e19745c2e31bc4e7e9e3351516716c" category="summary">欢迎使用 ONTAP 自动化文档门户。</block>
   <block id="e498749f3c42246d50b15c81c101d988" category="doc">应用程序</block>
   <block id="e126569377e0b2c42e1f2b3f1f4a111c" category="paragraph">您可以使用这些 API 调用来管理 ONTAP 应用程序资源。</block>
@@ -485,14 +468,8 @@
   <block id="5e952c79470abe484528aaaf836add9e" category="cell">拒绝执行请求的权限。</block>
   <block id="c9f0f895fb98ab9159f51fd0297e236d" category="cell">8.</block>
   <block id="cdb0d512cc3fdc0adc8795b79f91c40f" category="cell">资源正在使用中。</block>
-  <block id="6b7a8efcc6df45bbea2b4aa419b1787c" category="paragraph">您必须使用 Python 3.5 或更高版本。此外，还需要以下软件包：</block>
-  <block id="7a7a2588855c417f37bd7fd01abaeddb" category="list-text">请求 2.22.1 或更高版本</block>
-  <block id="3e257ffb35bcf31e076fe4e166d80a61" category="list-text">requests-toolbelt 0.9.1 或更高版本</block>
-  <block id="eb93ca3be958adb37c694d6232204f5b" category="list-text">marshmallow 3.2.1 或更高版本</block>
   <block id="364c42d2725eeecf011214a366b6186d" category="paragraph">Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的 ONTAP 主要版本号和次要版本号的组合，以及 ONTAP 版本中客户端的次要版本。例如，有效版本号包括： 9.2.1 ， 9.6.2 和 9.1.1 。</block>
   <block id="85ca39724867fb05bf4fd74b5fcac448" category="paragraph">您必须使用 pip 从 Python Package Index （ Pypi ）网站安装 NetApp_ONTAP 软件包。</block>
-  <block id="eed64ccdcc26c24adc6af0459bcbd582" category="paragraph">有关文档和其他资源的链接，请参见 _NetApp 开发人员网络 _ 。</block>
-  <block id="6228139d56297e6f87b517feae45bc99" category="paragraph"><block ref="6228139d56297e6f87b517feae45bc99" category="inline-link-rx"></block></block>
   <block id="6353689d5872d03a15424fcc44ff9a38" category="admonition">NetApp 维护一个 GitHub 存储库，其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。</block>
   <block id="e5a1747d44133108641b2ef511e802b0" category="inline-link">ONTAP REST Python GitHub 存储库</block>
   <block id="62277cb84205b149ab77912513497f3a" category="paragraph"><block ref="62277cb84205b149ab77912513497f3a" category="inline-link-rx"></block></block>
@@ -592,9 +569,6 @@
   <block id="04da7052ae3148365ddf3af010db695e" category="paragraph">通过这些端点，您可以检索所有 SVM 的 SSH 安全配置。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="6403a27a515eaf92633945f4270c6cc4" category="paragraph">自动更新功能可通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。支持此功能的端点类别有多种，包括状态，配置和更新。这些资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="0ae2ed9e360218bc8a7361630749a37d" category="paragraph">您可以使用这些端点检索和管理集群或节点生成的内存核心转储。此资源类型是在 ONTAP 9.10 中引入的。</block>
-  <block id="3c7d0c806ed3155c89dbd1e259689a6c" category="paragraph">PyPI 上的 NetApp Python Client Library 软件包。</block>
-  <block id="8f3b394b3596fb5977bc82383618f11f" category="paragraph">NetApp Python 客户端库的文档。</block>
-  <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
   <block id="000c4dd933d539d502d855e482ad30ed" category="paragraph">您可以使用这些端点复制，创建一致性组的快照，并对其进行清单编制和还原。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="2b77121b57a073f6a912696b1d7a31d8" category="paragraph">嵌套 igroup 是 ONTAP 9.9 的一项新功能，也已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
   <block id="5863e0f99ad1402d808798b272c35423" category="paragraph">LUN 属性是由调用方定义的名称 / 值对，可以选择随 LUN 一起存储。属性可用于保存少量应用程序专用元数据，不会被 ONTAP 解释。通过这些端点，您可以创建，更新，删除和发现 LUN 的属性。此资源类型是在 ONTAP 9.10 中引入的。</block>
@@ -631,7 +605,6 @@
   <block id="cc64aef30dda7a27f1a668974ac1e3a8" category="doc">Python 客户端库概述</block>
   <block id="61f3e167c95c469dd90a86ddd901388f" category="paragraph">NetApp ONTAP Python 客户端库是一个软件包，您可以安装该软件包并使用它来编写访问 ONTAP REST API 的脚本。它支持多种底层服务，包括连接管理，异步处理，异常处理和错误消息。通过使用 Python 客户端库，您可以快速开发强大的代码来支持 ONTAP 部署的自动化。</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">准备使用这些工作流</block>
-  <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">相关链接</block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">REST 资源摘要</block>
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="inline-link-macro">ONTAP REST API</block>
   <block id="f5b0a8cfa60a7e477b09b70b9c77ee98" category="doc">了解 ONTAP 自动化选项</block>
@@ -736,10 +709,6 @@
   <block id="42d9b7d3455dfaa83fb3e81bad6cce7c" category="list-text">`event filter rule add -filter-name &lt;FilterName&gt;`</block>
   <block id="04a23c4efdbd2046f23f7897eaf905ba" category="inline-link">ONTAP REST API ：自动通知高严重性事件</block>
   <block id="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="list-text"><block ref="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="inline-link-rx"></block></block>
-  <block id="7f96f0bc5330ed5d9909cdd2f6f0d480" category="paragraph">包括规划、管理和支持ONTAP 9所需的文档和其他有用链接。</block>
-  <block id="623d61e11a58f706cc63211cbeef400b" category="inline-link">ONTAP 9 产品库</block>
-  <block id="c2d5813d8be4192f243cf259ee486461" category="list-text"><block ref="c2d5813d8be4192f243cf259ee486461" category="inline-link-rx"></block></block>
-  <block id="314c9b4dff5f24c292fa071348953ece" category="paragraph">访问先前ONTAP 版本的发行说明和其他文档。</block>
   <block id="b59cced8914a5ae4b2997c54c8cfeb8d" category="section-title">ONTAP 9.11.1</block>
   <block id="fed998214be47115214a92dcb94e441c" category="paragraph">ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。</block>
   <block id="d6e857e52e070e2d7dc74670d30f4681" category="list-text">粒度RBAC</block>
@@ -775,7 +744,6 @@
   <block id="3d2e7e9224f83f4694b1be45b9e158ba" category="list-text">批准组</block>
   <block id="b728900a222dcfb25f698d581d9e8863" category="paragraph">ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。</block>
   <block id="0b3de81010176abb2584daa05d6aa0c1" category="paragraph">API映射文档取决于ONTAP 版本：</block>
-  <block id="9f7558c50053f5f3c517edc21e6e7af0" category="doc">有关迁移到ONTAP REST API的博客</block>
   <block id="cb92722e64f82db47ee23f2328dab4f8" category="paragraph">有几篇博客文章可帮助您更好地了解如何从ONTAPI迁移到ONTAP REST API。</block>
   <block id="934e5799967276baeea05569ba62d8bf" category="paragraph">NetApp支持通过映射文档从专有的ONTAPI迁移到ONTAP REST API。</block>
   <block id="2ed29ad200a6fbf15d4f57d753e35d13" category="paragraph">有几种技术可帮助您基于REST API实现ONTAP 自动化环境转型。</block>
@@ -959,17 +927,10 @@
   <block id="80164c28762060fa56d042df66e7553d" category="sidebar">创建具有角色的用户</block>
   <block id="57ffddb99e11d6096024019ec78a7294" category="cell">REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP 的用户。创建REST角色会自动创建传统的_MAPPING角色。</block>
   <block id="9c72cbdda2c8bbec859c44a2f9ca219c" category="admonition">您可以联机访问ONTAP <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息的文档、包括如何使用API的示例。</block>
-  <block id="476bf6fc5e4a2d37b00403ec863106ac" category="inline-link">ONTAP 9产品文档</block>
-  <block id="ea13735c00bcda944bfcad2caa280467" category="list-text"><block ref="ea13735c00bcda944bfcad2caa280467" category="inline-link-rx"></block></block>
-  <block id="c68677933ee8c7cbe8b88c055e440e45" category="paragraph">提供ONTAP 9产品系列的文档。</block>
   <block id="783fed6bd9b06a289bc35d1ce6d3e28c" category="summary">发出设计为异步运行的 API 请求后，始终会创建一个作业对象并将其返回给调用方。作业将描述并固定处理请求的后台任务。</block>
   <block id="0a9491f69a61e4af806e090fdb7f64e0" category="doc">如何访问ONTAP REST API</block>
   <block id="a198ee594703276bc71a03301b58b8a2" category="paragraph">每个API事务都包含一个HTTP请求和关联的响应。此图显示了如何检索集群使用的 ONTAP 软件版本。</block>
   <block id="594e1ec3daa27e540baa061f731f028f" category="inline-link">ONTAP 9.12.1</block>
-  <block id="a60f928eab9c8ac4756a146853b7b27e" category="list-text"><block ref="a60f928eab9c8ac4756a146853b7b27e" category="inline-link-macro-rx"></block></block>
-  <block id="25f413c15047133feb7268cff95a6db2" category="paragraph">提供关键ONTAPI调用以及与等效REST API调用的映射。选择相应的ONTAP 版本。</block>
-  <block id="8a931880f5b86cd8e245987c19c7acb1" category="inline-link">PyPI：NetApp ONTAP</block>
-  <block id="f1414234dbf1c874f89997d3c54bcfbc" category="list-text"><block ref="f1414234dbf1c874f89997d3c54bcfbc" category="inline-link-rx"></block></block>
   <block id="eb0cda77424e206695a7e1df680678f7" category="paragraph">ONTAP 9.12.1继续扩展ONTAP REST API的功能、新增了40多个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点介绍了安全性和NAS功能的改进。</block>
   <block id="5f6c185eb38c56187fc699dfbe62654b" category="list-text">安全性增强功能</block>
   <block id="02225fa77795933e713b9af48999c77d" category="list-text">Amazon Web Services包括一项密钥管理服务、可为密钥和其他机密提供安全存储。您可以通过REST API访问此服务、以使ONTAP 能够将其加密密钥安全地存储在云中。此外、您还可以创建和列出用于NetApp存储加密的身份验证密钥。</block>
@@ -1235,10 +1196,8 @@
   <block id="0a783c3ce00e8d3af4931704ca629ba3" category="paragraph-title">内置角色之一是否足以满足要求、或者是否需要自定义角色？</block>
   <block id="531201515c1ec0bfadb1f37e57c2222d" category="paragraph-title">需要什么类型的角色？</block>
   <block id="11678e3d67c685db9322ab4433f227a6" category="paragraph-title">处理类型</block>
-  <block id="56aa3ed9dba484ac641c5247a15b1ed6" category="paragraph-title">基本要求</block>
   <block id="11593a40313671a88f29e6475859f238" category="paragraph-title">软件包名称和版本</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="paragraph-title">安装</block>
-  <block id="9526c4af8cb7f4cacf6131573eda8be8" category="paragraph-title">文档和其他资源</block>
   <block id="2e02e4fcb54e6e1277182e7dcc734294" category="paragraph-title">ONTAPI 到 REST 的映射</block>
   <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">从ONTAPI将自动化转变为ONTAP REST API</block>
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
@@ -1346,7 +1305,6 @@
   <block id="95ec10ffbde5e94edc43ebffd44f7347" category="cell">一个命令行界面脚本、用于从ONTAP 检索会话统计信息数据</block>
   <block id="3282e0ae607e974457c339eff19c2619" category="cell">zapi_to_rest.py</block>
   <block id="72af54bf44f3d8ee9be1e4f34a09378e" category="cell">一个脚本、用于提取所传递的ONTAPI调用和属性的其余详细信息</block>
-  <block id="6d35e073768c520486a8f6583b2367dd" category="paragraph">请参见<block ref="10e3da19ba49cdfd167b1f3dae41bc1c" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="065b1ca8f53a1fbcdf87961fdd9cf9b2" category="paragraph-title">专用CLI直通</block>
   <block id="0446fa4ca147c362e3712c199d31f607" category="paragraph">REST API广泛涵盖了ONTAP 提供的功能和工具。但是、在某些情况下、通过REST API直接访问ONTAP 命令行界面可能会很有用。</block>
   <block id="4dee1eb90de4bde1248e4896c4dc4381" category="inline-link">REST命令行界面直通示例</block>
@@ -1489,9 +1447,6 @@
   <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">设置要运行的CURL示例中包含的变量值。例如：</block>
   <block id="88c3404621959196699b6d5e21481f01" category="section-title">第3步：确认集群联系信息</block>
   <block id="3cf1284c45d0adfeed6003bf3d9bfe2e" category="paragraph">执行工作流 <block ref="f8ef83534bba2e0fcad9a980050577d2" category="inline-link-macro-rx"></block>。您应设置<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 将参数查询到<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>。</block>
-  <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="doc">其他资源</block>
-  <block id="d70430e3ce6fd2f61524c5b7b9d27cb4" category="list-text"><block ref="d70430e3ce6fd2f61524c5b7b9d27cb4" category="inline-link-rx"></block></block>
-  <block id="3f5e5352c860872dbfb2b2a52bd08d4c" category="paragraph">ONTAP 9发行说明、其中包含有关当前版本的信息。</block>
   <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">请参见 <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="9b516c95369c98e15389e58383128a9e" category="inline-link-macro">RBAC工作流</block>
   <block id="d0ae4474b926ded595a7a12cdb4fa9ca" category="admonition">请参见 <block ref="08b1cfcbf90aa340f0ccb33fbb4649b8" category="inline-link-macro-rx"></block> 有关如何在ONTAP REST API中创建和使用角色的示例。</block>
@@ -1616,7 +1571,6 @@
   <block id="49ffd7a8d8266844e2ec7c32f18e5cb1" category="list-text"><block ref="49ffd7a8d8266844e2ec7c32f18e5cb1" category="inline-link-rx"></block></block>
   <block id="61a5cb9aa0d74d026e5b2a2811ac5856" category="list-text"><block ref="61a5cb9aa0d74d026e5b2a2811ac5856" category="inline-link-rx"></block></block>
   <block id="2cea11979f1d383a5921860d201ed868" category="inline-link">PyPI：NetApp ONTAP 9.14.1</block>
-  <block id="90412d82652a0008df94a427a205c033" category="list-text"><block ref="90412d82652a0008df94a427a205c033" category="inline-link-rx"></block></block>
   <block id="e696d796f06ca3cca4df2aa968f7d80c" category="admonition">。<block ref="25da76d23d15f841b09a860ea321146d" prefix=" " category="inline-code"></block> 查询参数可用于异步API调用、并且可以将异步调用转换为同步完成。请参见 <block ref="3d4ef1c177baef5f85bab307e88d3980" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="1dc5084911d3204af98942fa6d181c14" category="list-text"><block ref="1dc5084911d3204af98942fa6d181c14" category="inline-link-macro-rx"></block></block>
   <block id="0014615eb6ce34daf3cb39048cc454d3" category="inline-link-macro">获取作业实例</block>
@@ -1674,13 +1628,9 @@
   <block id="8cdc96bc9ea6b47bb91dc9a53923dd2c" category="list-text">为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见 <block ref="9a78e4571d9a7f8312d61713dd66ccf3" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="a45cab230f2297dd4eb30fef224dd154" category="section-title">典型的REST API事务</block>
   <block id="f53d66bdb1fa04bbb3f2f929505e7427" category="paragraph">您还可以使用其他几种资源来帮助自动部署和管理ONTAP存储系统。</block>
-  <block id="4c88e81e8e2f62a8d9cfedb968114f86" category="list-text">有助于在DevOps环境中开始使用Ans得。</block>
-  <block id="05917f5547f49546f295db785e86d3c2" category="paragraph"><block ref="05917f5547f49546f295db785e86d3c2" category="inline-link-rx"></block></block>
-  <block id="7dc68bd8bccd5cc5398d5245bc9e9c6e" category="list-text">提供使用ONTAP REST API所需的资源和文档。</block>
   <block id="7c4309c7347e40c4e823d0bc8c4d6c52" category="paragraph"><block ref="7c4309c7347e40c4e823d0bc8c4d6c52" category="inline-link-rx"></block></block>
   <block id="940b33dd3ba3d167b07b98a018af32be" category="paragraph"><block ref="940b33dd3ba3d167b07b98a018af32be" category="inline-link-rx"></block></block>
   <block id="0937dacc143a9ef9a8e961bb05d706cb" category="list-text">很好地介绍了NetApp Python客户端库以及如何开始使用该库编写代码。</block>
-  <block id="16109e56f76ab0efaf7b92775cbe1b12" category="list-text">此视频也可通过NetApp TV获取，网址为 <block ref="0fbd1fba292ef7e8dc7c843e65ec1153" category="inline-link-macro-rx"></block>。</block>
   <block id="c481c55f899fe826c43a53c975e485f0" category="list-text">了解一下经Ans负责人 认证的模块。</block>
   <block id="80ea4b005fd9d89a5db44b1a4c02962a" category="inline-link">有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答</block>
   <block id="383b172302e7a0ad8e5f63e801347592" category="list-text"><block ref="383b172302e7a0ad8e5f63e801347592" category="inline-link-rx"></block></block>
@@ -1700,14 +1650,12 @@
   <block id="a72eaae2582a47c88e517d12584cddf1" category="paragraph-title">本机访问REST API</block>
   <block id="1e32e29797138920931a43f857fe4b9d" category="paragraph">您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。</block>
   <block id="dd95513a6bbe255b9283c48df37da163" category="paragraph-title">正在迁移旧版ONTAPI代码以使用REST</block>
-  <block id="a0e425fb99eecdee631601b89aaa1b63" category="paragraph">ONTAP API (ZAPI)是NetApp ONTAP 软件附带的一组原始专有调用、用于支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 <block ref="4966a0ddcca12bd1d32ac36af70623a8" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="efea648fde82cca9a59a6c5e90f3d617" category="section-title">客户端软件工具包</block>
   <block id="9d344c4d689635bee0d71b95de7b0c04" category="paragraph">NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创建自动化代码变得更加轻松。您应选择一种适合您的开发语言和环境的解决方案。</block>
   <block id="8d5ff34376065bd3b5b8beab5c2a0a8f" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。请参见 <block ref="a9a8739a57e07a475c98045ed71a9c60" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="978685ea07530013be4ee7935a3a51c0" category="section-title">自动化框架</block>
   <block id="045c9b234c3f9802c9287b1b0cd9cebf" category="paragraph">您可以使用多个框架之一创建和部署自动化代码</block>
   <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="paragraph-title">Ansible</block>
-  <block id="1654311dbef1756ea54a3a10080ed337" category="paragraph">Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。请参见 <block ref="c23236ff2a6fe1c72a62ffc77c7c00ed" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="74e4ec1fd7e7ec388822465aeff417c4" category="paragraph">NetApp<block ref="24f12c8cdb9e96aedf586081f8419901" category="inline-link-rx"></block> 可通过BlueXP Web用户界面访问。通过该目录、您可以访问打包的解决方案、这些解决方案有助于自动部署ONTAP并将其与其他产品集成。请参见<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> 有关文档和详细信息、请参见。</block>
   <block id="6896ceb4698b2c86775b4d891be243d5" category="summary">您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据需要检索EMS消息。</block>
   <block id="90aef0d7524722ffd0dc0cb8fa364d96" category="doc">准备管理EMS支持服务</block>
@@ -1808,4 +1756,144 @@
   <block id="804b12a0b7232fc26053b6e4ef6143e9" category="list-text"><block ref="804b12a0b7232fc26053b6e4ef6143e9" category="inline-link-rx"></block></block>
   <block id="39d2726aa93bd430df52956407b809b4" category="section-title">通过Swagger UI访问ONTAP API参考文档</block>
   <block id="527df4f1ccd81173595bb685c8266938" category="paragraph">您可以通过本地ONTAP系统上的Swagger UI访问ONTAP REST API文档。</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="doc">了解更多信息。</block>
+  <block id="e874bfe48b1932682eea5f15cdac547d" category="list-text">对当前的ONTAP自动化技术进行了很好的总结。</block>
+  <block id="0dd46819f1e5a6578f91522b3ccce0d5" category="inline-link">自动化的新常态</block>
+  <block id="2459315257ccea8fa6d62e2fb4393e71" category="paragraph"><block ref="2459315257ccea8fa6d62e2fb4393e71" category="inline-link-rx"></block></block>
+  <block id="60b0a2f4de372813ce0c25e3f42a92d7" category="list-text">介绍如何在GitHub上访问和使用ONTAP REST API的Python示例脚本。</block>
+  <block id="14e4b8ad2412579270cd2cebdea092a3" category="inline-link">在GitHub上开始使用示例脚本</block>
+  <block id="7ef78cb3e5e9a6eb7e9b12ce6b631862" category="paragraph"><block ref="7ef78cb3e5e9a6eb7e9b12ce6b631862" category="inline-link-rx"></block></block>
+  <block id="fa835357fbfbf43ac89809a345631107" category="list-text">您可以探索如何使用ONTAP REST API管理文件安全性和权限。</block>
+  <block id="91a2d97cb1dce93a24a0e1d4e0fccd05" category="paragraph"><block ref="91a2d97cb1dce93a24a0e1d4e0fccd05" category="inline-link-rx"></block></block>
+  <block id="e79e715e42c36e10134f5afe5466361c" category="list-text">您可以监控ONTAP事件以随时了解系统活动。可以使用REST API自动配置和管理这些事件。</block>
+  <block id="798ae5c6621da1def7dfe9ad86f985f2" category="list-text">在RBAC安全环境中、您可以使用REST API配置角色和访问级别。</block>
+  <block id="0ca9887d7651aa13af35dedfbc7ff232" category="inline-link">使用ONTAP REST API的基于角色的访问控制(Role-Based Access Control、RBAC)</block>
+  <block id="372901dd8cca763e7c848d950ad9aa2a" category="paragraph"><block ref="372901dd8cca763e7c848d950ad9aa2a" category="inline-link-rx"></block></block>
+  <block id="f62a1193e5d6157ad520784d503dd173" category="list-text">NetApp提供了使用ONTAP REST API的Python示例脚本。</block>
+  <block id="5feaaa740aecb867a44dd31f2ad57c95" category="inline-link">ONTAP REST API Python示例脚本现已在GitHub上提供！</block>
+  <block id="8672380e8a084cc66d295882a9470f26" category="paragraph"><block ref="8672380e8a084cc66d295882a9470f26" category="inline-link-rx"></block></block>
+  <block id="fe0b675f6971f659beff04cec0058cbf" category="list-text">休息时喝咖啡(6集)。</block>
+  <block id="ababb8b6a8734f386dea1560ea9db197" category="inline-link">ONTAP REST API基础知识</block>
+  <block id="1ba0e6e215c953e85183c8495eb322fb" category="list-text"><block ref="1ba0e6e215c953e85183c8495eb322fb" category="inline-link-rx"></block></block>
+  <block id="4da480e8a798230788926916a5db51aa" category="inline-link">ONTAP REST API的功能</block>
+  <block id="75a48db4ad5fd07ff37e2f0007523486" category="list-text"><block ref="75a48db4ad5fd07ff37e2f0007523486" category="inline-link-rx"></block></block>
+  <block id="f646d2cb2fda1c6b34acaa5e731ab12f" category="inline-link">使用Postman实际操作ONTAP REST</block>
+  <block id="d9ec0115647901c026b4b25d5186750c" category="list-text"><block ref="d9ec0115647901c026b4b25d5186750c" category="inline-link-rx"></block></block>
+  <block id="60d56c776e0fc4182e5a8fc0c267eaf8" category="inline-link">ONTAPI (ZAPI)报告工具</block>
+  <block id="be64247c13876c76979a0ac7029a0c9c" category="list-text"><block ref="be64247c13876c76979a0ac7029a0c9c" category="inline-link-rx"></block></block>
+  <block id="f5ff54b001a11fae145564ca2ad89b7c" category="inline-link">专用命令行界面直通</block>
+  <block id="a24ef8f75e40f582202031c6a76380b6" category="list-text"><block ref="a24ef8f75e40f582202031c6a76380b6" category="inline-link-rx"></block></block>
+  <block id="89debf66c848f16816b571fd093c33f9" category="inline-link">让ONTAP存储自动化变得简单的5大神奇功能！</block>
+  <block id="f247df03c8b8c2ec22f6a48189c0d818" category="list-text"><block ref="f247df03c8b8c2ec22f6a48189c0d818" category="inline-link-rx"></block></block>
+  <block id="b14f0823ef1919b70916eb917808d544" category="list-text">NetApp Techcomm TV上的视频集。</block>
+  <block id="f25cc755b082b3ec873045ff971fda14" category="inline-link">自动化NetApp ONTAP管理</block>
+  <block id="411d667e28e2d91b38e4ffea1e9a1620" category="paragraph"><block ref="411d667e28e2d91b38e4ffea1e9a1620" category="inline-link-rx"></block></block>
+  <block id="bfe5d32b02621a0adb06ef0719b339f9" category="section-title">技术培训和活动</block>
+  <block id="0e58850b3d57f50238400b261118a678" category="list-text">Insight 2022演示文稿(26分钟)。</block>
+  <block id="b2b8de6a3c3bf80d8c2caabcb4925413" category="inline-link">利用ONTAP REST API打造现代化的ONTAP存储管理</block>
+  <block id="e19c44cb32d93cadb9615cce84b02ebf" category="paragraph"><block ref="e19c44cb32d93cadb9615cce84b02ebf" category="inline-link-rx"></block></block>
+  <block id="e9930ef688b9c712d956fe54c341824d" category="list-text">Insight 2021演示文稿(31分钟)。</block>
+  <block id="d179249207be943a8870bd6215e63e34" category="inline-link">NetApp ONTAP：节省时间并简化REST API的使用</block>
+  <block id="07132e4f3463e79d28225b3205678d4d" category="paragraph"><block ref="07132e4f3463e79d28225b3205678d4d" category="inline-link-rx"></block></block>
+  <block id="5da2d15e5ed96882dfddf6695345366f" category="list-text">NetApp学习服务。</block>
+  <block id="ff0e39f8c14072a133c51dcb06ebf74c" category="inline-link">使用ONTAP REST API和Ans可 实现存储管理自动化</block>
+  <block id="31b6ea8a88845f72f0b8acf957d34bf2" category="paragraph"><block ref="31b6ea8a88845f72f0b8acf957d34bf2" category="inline-link-rx"></block></block>
+  <block id="668e2078ef1b1722c77cdb5c523a4463" category="section-title">NetApp 知识库</block>
+  <block id="5df88274e14e903651820773d3e86455" category="list-text">如果您遇到使用ONTAP REST API的问题描述、可以将其报告给NetApp。</block>
+  <block id="8c794f15d1374d6b379ce22239afcae7" category="inline-link">如何报告有关ONTAP REST API和ONTAP REST API Python客户端库的问题</block>
+  <block id="37373ccfa53d25ad1035c1d3dae271f2" category="paragraph"><block ref="37373ccfa53d25ad1035c1d3dae271f2" category="inline-link-rx"></block></block>
+  <block id="5cd76801bc70b25fab5348133fbeaaff" category="list-text">如果您发现ONTAP REST API存在功能差距、则可以为此API请求一项新功能。</block>
+  <block id="2d808b90a1137a1a9fb1f2a6b8aab8eb" category="inline-link">如何为ONTAP REST API请求功能</block>
+  <block id="2f25f340fb53d4017b182c6b51020451" category="paragraph"><block ref="2f25f340fb53d4017b182c6b51020451" category="inline-link-rx"></block></block>
+  <block id="f954d54d4b0a7e9ea5cf236808483a7c" category="summary">NetApp支持使用PowerShell管理ONTAP存储系统。</block>
+  <block id="c79fa3b95a882a4d5a7a0e5e00100e39" category="doc">PowerShell工具包概述</block>
+  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="paragraph-title">PowerShell</block>
+  <block id="501fd8414e2cb7ea1f33c45defefd651" category="paragraph">PowerShell是Microsoft提供的一个程序、可用于任务自动化和配置管理。它包括命令行Shell环境以及脚本语言。</block>
+  <block id="c714c2b9a4fb9d44e4562afa883f47ea" category="paragraph-title">NetApp ONTAP PowerShell工具包</block>
+  <block id="2824bab8832a0ba6a00dcfa6fe1a811d" category="paragraph">NetApp.ONTAP PowerShell工具包包括适用于NetApp ONTAP的PowerShell模块。该工具包支持在各种环境中运行ONTAP、包括NetApp AFF和FAS系统、商用硬件和云。该模块包含2、400多个cmdlet、这些cmdlet共同支持在Windows主机上进行存储管理。</block>
+  <block id="58e663c52068f671ebd2ded87406b54b" category="doc">下载并安装PowerShell工具包</block>
+  <block id="7d908c3b8b26af09f296e971b3eb24ef" category="paragraph">您可以通过两种方法下载和安装NetApp ONTAP PowerShell工具包。</block>
+  <block id="0659d428df833a806e29e65e632d380a" category="paragraph-title">NetApp 支持</block>
+  <block id="abbe6086a8dd2213ec443ee7529470ed" category="paragraph">您可以从NetApp 支持站点 下载PowerShell工具包：</block>
+  <block id="35b4e347a5f9044d1a2f8b0b36f86a4b" category="paragraph"><block ref="35b4e347a5f9044d1a2f8b0b36f86a4b" category="inline-link-rx"></block></block>
+  <block id="1904aecd859f7f23f24c1be156dc343b" category="paragraph-title">PowerShell图库</block>
+  <block id="4c6410f017732f17e33613aeeb023d8d" category="paragraph">您可以从PowerShell库下载PowerShell工具包：</block>
+  <block id="482315644c67d0facaf402353e1996b3" category="paragraph"><block ref="482315644c67d0facaf402353e1996b3" category="inline-link-rx"></block></block>
+  <block id="25485dfbe21d8fd63164750c78164890" category="section-title">提交您的ONTAPI以填补API空缺</block>
+  <block id="eba6ac0de111e13d8f1a5cb185892a15" category="inline-link">从ONTAPI到REST API</block>
+  <block id="212a2f3ffae779c6d3e6513e6c77e49d" category="paragraph">NetApp致力于支持客户从ONTAPI迁移到ONTAP REST API。如果您发现REST API中缺少某些内容、请告知我们。您可以在上提交这些差距以及任何其他想法<block ref="bfaa967fbc75e842a7348bf0a8e34215" category="inline-link-rx"></block> 页面。</block>
+  <block id="f0258b6685684c113bad94d91b8fa02a" category="inline-link">演示</block>
+  <block id="2c2d289066c19b061fa5051110ce72bc" category="paragraph">您可以访问<block ref="10e3da19ba49cdfd167b1f3dae41bc1c" category="inline-link-rx"></block> 开始使用。另请参见<block ref="ef075c0fbc68ce59cce02cf136cb7c91" category="inline-link-rx"></block> 关于报告工具及其使用方法。</block>
+  <block id="18e808da68bb719b1204b8c83712fac3" category="section-title">ONTAP PowerShell工具包</block>
+  <block id="a44d5f089327249c77efb12dd65462af" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="c3cab3c4ac16333d767da4a7df87c248" category="inline-link-macro-rx"></block>。</block>
+  <block id="619f7d72d7d52167fd99a9d226984632" category="doc">NetApp实验室资源</block>
+  <block id="b2e736bcffbb818aa5d8853b16957107" category="paragraph">NetApp提供了一个实验室环境、用于测试ONTAP REST API和其他相关自动化技术。</block>
+  <block id="e41eeb18c8b1c48d8645aac00cd5d0da" category="inline-link">Lab on Demand</block>
+  <block id="42b5bbee3175a5d253bf7e5909af0734" category="paragraph">。<block ref="d0ac576a8894e6f13fb4390a137a168e" category="inline-link-rx"></block> 适用于NetApp客户和合作伙伴。您需要有效的凭据才能登录并开始使用实验室资源。您可以根据需要在实验室中搜索_REST或其他技术。</block>
+  <block id="14e68e201b8f0e56ae0d9578c982a27e" category="inline-link">准备Lab on Demand以运行示例脚本</block>
+  <block id="44285685546e8a285061253138136305" category="paragraph">另请查看<block ref="5a0195c863eb934ee5e5002fb412c453" category="inline-link-rx"></block> 开始使用。</block>
+  <block id="62b62b5b89a8d624da1a25057caa9652" category="paragraph">ONTAP API (ZAPI)是NetApp ONTAP 软件附带的一组原始专有调用、用于支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 <block ref="45e0fd62b8256c1ad378661a57b74568" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
+  <block id="895d9f6334617339bb786f62f4a5c67f" category="paragraph-title">PowerShell工具包</block>
+  <block id="600c764bdcc8f9d03c6a1f6ddeb1eb60" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。请参见<block ref="a392538979ff10b567cebfb1b03839f9" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="b2ee0232c3d3f9b1b42c01b23f2304c4" category="paragraph">Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。请参见 <block ref="8e7a6d97666e30efff2393bbc1610342" category="inline-link-macro-rx"></block> 和<block ref="1b4969cc73ff961c9b216f73f676bf04" category="inline-link-rx"></block> 适用于追加信息 。</block>
+  <block id="3bf379567e5ff2ee0ebd31f7d516b365" category="summary">我们提供了多篇博客文章和视频、帮助您更好地了解如何使用Python客户端库。</block>
+  <block id="86670b28b0a0c13eeda3cbeec2b6362d" category="paragraph">我们提供了几篇博客文章、帮助您更好地了解如何使用Python客户端库。</block>
+  <block id="e6979ee7f5a6d9111fa5704e882d44b3" category="paragraph-title">利用Python客户端库简化ONTAP REST API的使用</block>
+  <block id="fb370e018bd573b7f61e8a3ee3eac836" category="paragraph">本博客很好地介绍了ONTAP Python客户端库的功能。</block>
+  <block id="323ea4c0945153e3df0ff4e8435a6484" category="inline-link">www.netapp.com/blog/simplify-ontap-rest-api-consumption</block>
+  <block id="cd5bb5c12dffd9e08ed24efc3c708c87" category="paragraph"><block ref="cd5bb5c12dffd9e08ed24efc3c708c87" category="inline-link-rx"></block></block>
+  <block id="dd81fb49af5a569debc17c94c6e143f6" category="paragraph-title">ONTAP REST API Python客户端库入门</block>
+  <block id="d40594433775c44239cdb1be6c2145dc" category="paragraph">这是一个由三部分组成的系列博客、其中涵盖了有关Python客户端库的更多详细信息。</block>
+  <block id="72ac1e17860ab83140bee5f8b63ab3b5" category="inline-link">NetApp.io/2020-06/09/ONTAP - REST - API - pyPython -客户端-库- pt1</block>
+  <block id="6ce15c3400f2e95cd0f8f03dc9e181b1" category="paragraph">第1部分：<block ref="621451882a122e45c1ea129fd2febf12" category="inline-link-rx"></block></block>
+  <block id="476672cb8735d01fb3d8edf30fa2009a" category="inline-link">NetApp.io/2020-06/09/ONTAP -rest-aI-pyyPython客户端库-pt2/</block>
+  <block id="490e2dee1b4d1da33a1ba638e5861b68" category="paragraph">第2部分：<block ref="0e829edfac15b600e5db829e0dbcae43" category="inline-link-rx"></block></block>
+  <block id="a9adf5e105b5d632566d99bb7f32a6f9" category="inline-link">NetApp.io/2020-06/09/ONTAP - REST - API-pyPython -客户端-库-PT3</block>
+  <block id="e22079c2317a1e68e469eede383260df" category="paragraph">第3部分：<block ref="f97052e0926ab7c2261472d6fa9ba8c2" category="inline-link-rx"></block></block>
+  <block id="82285d8d320aa0ca532320803369535d" category="inline-link">ONTAP REST Python客户端库示例</block>
+  <block id="5ba737ef4be217f04eef26090cbae251" category="list-text"><block ref="5ba737ef4be217f04eef26090cbae251" category="inline-link-rx"></block></block>
+  <block id="e7847c34369de18fbc7a45ef5f19f0b9" category="doc">软件包和文档</block>
+  <block id="b4d70452d65da9fcd38a4b8098a88b3d" category="paragraph">从9.6开始的每个ONTAP版本都提供了Python客户端库。您应根据所使用的ONTAP版本访问PyPI软件包和文档。</block>
+  <block id="9fc11a41fe68e489096a222c7c265dec" category="list-text"><block ref="9fc11a41fe68e489096a222c7c265dec" category="inline-link-rx"></block></block>
+  <block id="5f6bf2fac8af69fcf38f9b1b785e910e" category="inline-link">PyPI：NetApp ONTAP 9.13.1.</block>
+  <block id="319c0b86b933606552d8b765ac942409" category="list-text"><block ref="319c0b86b933606552d8b765ac942409" category="inline-link-rx"></block></block>
+  <block id="19a9062545fe4aec02e4bb9d69d9e65d" category="inline-link">适用于9.13.1的NetApp PCL文档</block>
+  <block id="99984697846692a3881d97799a42681d" category="list-text"><block ref="99984697846692a3881d97799a42681d" category="inline-link-rx"></block></block>
+  <block id="dd68a6bc4ceb7f9cc144ec90805a34f6" category="inline-link">PyPI：NetApp ONTAP 9.12.1</block>
+  <block id="1f022cd0f362226a7cc5e6c00374f9e6" category="list-text"><block ref="1f022cd0f362226a7cc5e6c00374f9e6" category="inline-link-rx"></block></block>
+  <block id="1cc0729e83919e90c575ff14c0fce5fc" category="inline-link">9.12.1的NetApp PCL文档</block>
+  <block id="84a1f9d4b229fd80b1a8e5bd8bf448f2" category="list-text"><block ref="84a1f9d4b229fd80b1a8e5bd8bf448f2" category="inline-link-rx"></block></block>
+  <block id="33a07a0afe4c29ca167bde428e9fb425" category="inline-link">PyPI：NetApp ONTAP 9.11.1</block>
+  <block id="736df8026795fed5bcde95268c35726c" category="list-text"><block ref="736df8026795fed5bcde95268c35726c" category="inline-link-rx"></block></block>
+  <block id="f7767badbb46d1a4a4915155353f9c42" category="inline-link">适用于9.11.1的NetApp PCL-文档</block>
+  <block id="7b01c72e488a8e4ff65c413ac0e94286" category="list-text"><block ref="7b01c72e488a8e4ff65c413ac0e94286" category="inline-link-rx"></block></block>
+  <block id="09b968a9a3d2c3977d1e4ac1ccd11b75" category="inline-link">PyPI ： NetApp ONTAP 9.10.1</block>
+  <block id="ac6b9759d1999ee28da3d87bc17b158d" category="list-text"><block ref="ac6b9759d1999ee28da3d87bc17b158d" category="inline-link-rx"></block></block>
+  <block id="52c1911015b514cf96a78c24068ce96a" category="inline-link">适用于 9.10.1 的 NetApp PCL-文档</block>
+  <block id="dd0ebea31107f6302bac45e38cca3b1d" category="list-text"><block ref="dd0ebea31107f6302bac45e38cca3b1d" category="inline-link-rx"></block></block>
+  <block id="9f150aa15a329385317549ef70f8c2a3" category="inline-link">PyPI：NetApp ONTAP 9.9.1</block>
+  <block id="143411d2b33db1881b7f93f78c65a980" category="list-text"><block ref="143411d2b33db1881b7f93f78c65a980" category="inline-link-rx"></block></block>
+  <block id="223834b45b90a153af45fd69805e1869" category="inline-link">9.9.1的NetApp PCL文档</block>
+  <block id="4cae27352f60dd07e3726e5de090d7db" category="list-text"><block ref="4cae27352f60dd07e3726e5de090d7db" category="inline-link-rx"></block></block>
+  <block id="19b4e97f017c6f50718b95c0aedf4526" category="inline-link">PyPI：NetApp ONTAP 9.8</block>
+  <block id="fcb331a58c7579c2e3d96a588977e736" category="list-text"><block ref="fcb331a58c7579c2e3d96a588977e736" category="inline-link-rx"></block></block>
+  <block id="1f600143f682214c29d58cc86d66949b" category="inline-link">9.8的NetApp PCL文档</block>
+  <block id="7df4f61f429dfe035ade13f23593690d" category="list-text"><block ref="7df4f61f429dfe035ade13f23593690d" category="inline-link-rx"></block></block>
+  <block id="cafcfd2bbba9649bc033aa924868767d" category="inline-link">PyPI：NetApp ONTAP 9.7</block>
+  <block id="7061462e4c5af75dae9fec805c19d310" category="list-text"><block ref="7061462e4c5af75dae9fec805c19d310" category="inline-link-rx"></block></block>
+  <block id="4a016f93abb3530f8ed414a0faef1e34" category="inline-link">9.7版NetApp PCL文档</block>
+  <block id="df721fe5c033cf8dcd3b0b86a184eb90" category="list-text"><block ref="df721fe5c033cf8dcd3b0b86a184eb90" category="inline-link-rx"></block></block>
+  <block id="55d378fcd79432047784bea3ab8f4d31" category="inline-link">PyPI：NetApp ONTAP 9.6</block>
+  <block id="4c421ca686c08a2f5117b9c8cac019a0" category="list-text"><block ref="4c421ca686c08a2f5117b9c8cac019a0" category="inline-link-rx"></block></block>
+  <block id="f358359db0f64d4f6246e5efe7bf61cd" category="inline-link">NetApp PCL 9.6文档</block>
+  <block id="c6b6406d472f50178a7d6d34c51c2828" category="list-text"><block ref="c6b6406d472f50178a7d6d34c51c2828" category="inline-link-rx"></block></block>
+  <block id="7f2ab26d3f83b0c07dfcecd8c4e4d730" category="paragraph-title">ONTAP版本的软件包和文档</block>
+  <block id="fe89184d8cb9195c1086f74c6b4d0d8b" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。请参见 <block ref="75af8f7877b901b5fed8d9ea10b7425b" category="inline-link-macro-rx"></block> 有关详细信息 ...安装要求随每个软件包一起提供、并包括以下各项的不同版本：</block>
+  <block id="23eeeb4347bdd26bfc6b7ee9a3b755dd" category="list-text">Python</block>
+  <block id="3298f13049d19cffaa37ca931dd4d421" category="list-text">请求</block>
+  <block id="4f11865970671ba7b86c9b6eda8a46ed" category="list-text">Requests-toolbelt</block>
+  <block id="104004214ebf2a9e7840ed8d280a887d" category="list-text">棉花糖</block>
+  <block id="6c271a07c1fe500a9af8e4bb8e005441" category="sidebar">从ONTAPI迁移到REST API</block>
+  <block id="336165a88740b33476f13e8f41666771" category="sidebar">PowerShell工具包</block>
+  <block id="326737de1766f7c8b80a5acde0f18651" category="sidebar">下载并安装</block>
 </blocks>

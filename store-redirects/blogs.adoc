@@ -1,6 +1,6 @@
 ---
 permalink: automate/blogs.html 
-redirect: ontap-automation/additional/resources.html 
+redirect: ontap-automation/additional/learn_more.html 
 ---
 = 
 :allow-uri-read: 

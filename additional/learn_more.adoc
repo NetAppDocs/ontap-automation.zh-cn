@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: additional/learn_more.html 
+keywords: learn, learn more, more information, additional resources 
+summary: 您还可以访问其他几个资源，以获取有关如何自动部署和管理 ONTAP 存储系统的帮助和详细信息。 
+---
+= 了解更多信息。
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您还可以使用其他几种资源来帮助自动部署和管理ONTAP存储系统。
+
+
+
+== 博客文章
+
+* 对当前的ONTAP自动化技术进行了很好的总结。
++
+https://www.netapp.com/blog/new-normal-for-automation["自动化的新常态"^]
+
+* 介绍如何在GitHub上访问和使用ONTAP REST API的Python示例脚本。
++
+https://netapp.io/2020/04/23/ontap-rest-apis["在GitHub上开始使用示例脚本"^]
+
+* CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。
++
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api["将专用命令行界面直通与 ONTAP REST API 结合使用"^]
+
+* 如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。
++
+https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["NetApp 和 Ansible 入门：安装 Ansible"^]
+
+* 您可以探索如何使用ONTAP REST API管理文件安全性和权限。
++
+https://netapp.io/2021/06/28/simplified-management-of-file-security-permissions-with-ontap-rest-apis["使用 ONTAP REST API 简化文件安全权限的管理"^]
+
+* 您可以监控ONTAP事件以随时了解系统活动。可以使用REST API自动配置和管理这些事件。
++
+https://blog.netapp.com/ontap-rest-apis-automate-notification["ONTAP REST API ：自动通知高严重性事件"^]
+
+* 在RBAC安全环境中、您可以使用REST API配置角色和访问级别。
++
+https://netapp.io/2022/06/26/rbac-using-ontap-rest-apis["使用ONTAP REST API的基于角色的访问控制(Role-Based Access Control、RBAC)"^]
+
+* NetApp提供了使用ONTAP REST API的Python示例脚本。
++
+https://netapp.io/2020/04/23/ontap-rest-apis["ONTAP REST API Python示例脚本现已在GitHub上提供！"^]
+
+* 休息时喝咖啡(6集)。
++
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-1-Basics-of-ONTAP-REST-APIs/m-p/167852["ONTAP REST API基础知识"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-2-Features-of-ONTAP-REST-APIs/m-p/168168/highlight/true#M208["ONTAP REST API的功能"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-3-Getting-Hands-on-with-ONTAP-REST-using-Postman/m-p/431965/highlight/true#M283["使用Postman实际操作ONTAP REST"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-4-ONTAPI-ZAPI-Reporting-tool/m-p/433200["ONTAPI (ZAPI)报告工具"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-5-Private-CLI-Passthrough/m-p/435293["专用命令行界面直通"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-6-5-magical-features-that-make-ONTAP-storage/m-p/435604["让ONTAP存储自动化变得简单的5大神奇功能！"^]
+
+
+
+
+
+
+== 视频
+
+* 很好地介绍了NetApp Python客户端库以及如何开始使用该库编写代码。
++
+video::Wws3SB5d9Ss[youtube,width=848,height=480]
+* 了解一下经Ans负责人 认证的模块。
++
+video::ZlmQ5IuVZD8[youtube,width=848,height=480]
++
+video::L5DZBV_Sg9E[youtube,width=848,height=480]
+* NetApp Techcomm TV上的视频集。
++
+https://www.youtube.com/playlist?list=PLHSh2r3A9gQRG1kkAcx1MmtVYPimyxOp_["自动化NetApp ONTAP管理"^]
+
+
+
+
+
+== 技术培训和活动
+
+* Insight 2022演示文稿(26分钟)。
++
+https://www.netapp.tv/details/29670["利用ONTAP REST API打造现代化的ONTAP存储管理"^]
+
+* Insight 2021演示文稿(31分钟)。
++
+https://www.netapp.tv/details/28343["NetApp ONTAP：节省时间并简化REST API的使用"^]
+
+* NetApp学习服务。
++
+https://netapp.sabacloud.com/Saba/Web_spf/NA1PRD0047/app/shared;spf-url=common%2Fledetail%2FSTRSW-ILT-RSTAPI["使用ONTAP REST API和Ans可 实现存储管理自动化"^]
+
+
+
+
+
+== NetApp 知识库
+
+* 如果您遇到使用ONTAP REST API的问题描述、可以将其报告给NetApp。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_report_REST_API_and_NetApp_Python_Module_(REST_API_via_python_module)_issues["如何报告有关ONTAP REST API和ONTAP REST API Python客户端库的问题"^]
+
+* 如果您发现ONTAP REST API存在功能差距、则可以为此API请求一项新功能。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_request_a_feature_for_ONTAP_REST_API["如何为ONTAP REST API请求功能"^]
+
+

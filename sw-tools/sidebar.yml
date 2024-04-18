@@ -8,5 +8,15 @@ entries:
     url: "/python/overview_pcl.html"
   - title: 准备使用 Python 客户端库
     url: "/python/prepare_pcl.html"
+  - title: 软件包和文档
+    url: "/python/packages.html"
   - title: 用于检索集群配置的脚本
     url: "/python/script_retrieve_cluster_configuration.html"
+  - title: 博客文章
+    url: "/python/blogs_pcl.html"
+- title: PowerShell工具包
+  entries:
+  - title: 概述
+    url: "/pstk/overview_pstk.html"
+  - title: 下载并安装
+    url: "/pstk/install_pstk.html"
