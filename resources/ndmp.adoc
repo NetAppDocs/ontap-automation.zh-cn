@@ -14,7 +14,7 @@ summary: 您可以使用这些 API 调用来管理 NDMP 服务。
 
 
 [role="lead"]
-网络数据管理协议为备份 NAS 设备提供了一个标准。您可以使用这些 API 调用来管理 NDMP 服务。
+您可以使用这些 API 调用来管理 NDMP 服务。
 
 .NDMP 模式
 NDMP 操作模式可以是 SVM 范围或节点范围。此资源类型是在 ONTAP 9.7 中引入的。

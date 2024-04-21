@@ -14,7 +14,7 @@ summary: 您可以使用这些 API 调用来管理 SnapLock 功能。
 
 
 [role="lead"]
-SnapLock 是一种基于存储的传统 WORM （一次写入，多次读取）光纤解决方案实施方案，可长期保留数据。您可以使用这些 API 调用来管理 SnapLock 功能。
+您可以使用这些API调用来管理ONTAP SnapLock功能。
 
 .日志
 SnapLock 日志结构基于包含日志记录的特定卷上的目录和文件。日志文件将根据最大日志大小进行填充和归档。此资源类型是在 ONTAP 9.7 中引入的。

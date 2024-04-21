@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
-  <block id="d828aac2af8d57c06b48e251182e288b" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是，您也可以使用查询参数上的属性值访问对象。</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="list-text">HTTP 方法</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">路径</block>
@@ -38,7 +37,6 @@
   <block id="022958270d2e89acef5cfe895ac4a5a4" category="list-text">ONTAP 授权</block>
   <block id="ecada31be49896665065d57659291715" category="paragraph">ONTAP 实施基于角色的授权模式。访问 ONTAP REST API 或 API 文档页面时使用的帐户应具有适当的权限。</block>
   <block id="aae155889087fca42368d9fab8b54ee6" category="doc">NDMP</block>
-  <block id="ddcc73c0369a0b65c748dc3e5194759a" category="paragraph">网络数据管理协议为备份 NAS 设备提供了一个标准。您可以使用这些 API 调用来管理 NDMP 服务。</block>
   <block id="e78d7ab79adaa44183fd6bddec381b9e" category="paragraph">NDMP 操作模式可以是 SVM 范围或节点范围。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="e2c8cf4362fd8da934b960c0838f7f52" category="paragraph">您可以管理节点的 NDMP 配置。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="9dfd95a51120838c5f0411955b6b8ee0" category="paragraph">您可以检索和删除特定 SVM 或节点的 NDMP 会话详细信息。此资源类型是在 ONTAP 9.7 中引入的。</block>
@@ -224,7 +222,6 @@
   <block id="cd203ccd68b84de1c5df8fd890e104e0" category="cell">PB</block>
   <block id="e96c6ce30fc02655f5156ad7f43abeb2" category="cell">PB PB PB PB （ TB x 1024 字节）或对等字节</block>
   <block id="4d89f3083454f3531f41ee418943d490" category="paragraph"><block ref="4d89f3083454f3531f41ee418943d490" category="inline-link-macro-rx"></block></block>
-  <block id="5b601547f8aa3a93b2be784742d56f50" category="paragraph">这些 API 调用可用于管理集群和 SVM 安全设置。</block>
   <block id="73466d1f59642e03b8c81d0b1875b437" category="paragraph">您可以检索集群范围安全性的详细信息并更新某些参数。此资源类型是在 ONTAP 9.7 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
   <block id="24e7cd4ec777036322f32b55a87d5bce" category="paragraph">集群和 SVM 有一组用户帐户。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="ec3e5f0707efe5d62c929bd9fd725078" category="paragraph">范围内的用户帐户的配置。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -389,7 +386,6 @@
   <block id="62ab609b605a05f43f98599818f46170" category="paragraph">计划可用于自动执行任务。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="cb32862c2302b4cbb3b8a44e2226df17" category="paragraph">ONTAP 集群包括集群软件配置文件，软件包收集和软件历史记录收集。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="doc">SnapLock</block>
-  <block id="b4ad45acb73dc252050e525d981a2d6d" category="paragraph">SnapLock 是一种基于存储的传统 WORM （一次写入，多次读取）光纤解决方案实施方案，可长期保留数据。您可以使用这些 API 调用来管理 SnapLock 功能。</block>
   <block id="03aaf72a36d8a4b49208da200f94b4cf" category="paragraph">SnapLock 日志结构基于包含日志记录的特定卷上的目录和文件。日志文件将根据最大日志大小进行填充和归档。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="02c81912a7634089043ac791429c0c06" category="paragraph">Compliance 时钟用于确定 SnapLock 对象的到期时间。时钟必须在 REST API 之外进行初始化，并且无法更改。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="21632c1548a44b25024b7b882a17cac7" category="paragraph">您可以使用 SnapLock 基于事件的保留（ EBR ）功能定义事件发生后文件的保留时间。此资源类型是在 ONTAP 9.7 中引入的。</block>
@@ -610,8 +606,6 @@
   <block id="f5b0a8cfa60a7e477b09b70b9c77ee98" category="doc">了解 ONTAP 自动化选项</block>
   <block id="5a0dcab393f624ccdcf664bede74e9b2" category="inline-link-macro">Python 客户端库</block>
   <block id="4e04bad1fd3bbdb3c69e856ffc49ff73" category="doc">资源类别概述</block>
-  <block id="35ddd64ed03dd1579ce39e6e82ff721f" category="inline-link-macro">其他 REST 注意事项</block>
-  <block id="84cd295cbbbd691b40d7d06df51912a3" category="list-text"><block ref="84cd295cbbbd691b40d7d06df51912a3" category="inline-link-macro-rx"></block></block>
   <block id="10fd548eb0773eced2b1f8455835ae29" category="list-text"><block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block></block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">《 ONTAP 发行说明》</block>
   <block id="e9019ae8c9c4fb4acd7eba0895e32433" category="doc">ONTAP REST API 和自动化的新增功能</block>
@@ -968,7 +962,6 @@
   <block id="00d9cb95eeaf06aed2c944d601467bab" category="paragraph">通过这组 API 调用，您可以使用 Azure 密钥存储来存储 ONTAP 加密密钥。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="20a5796507ad5434cd0a5cb89dabf3b5" category="paragraph">为多个管理员提供批准访问的选项可提高ONTAP 和IT环境的安全性。这些资源类型是在ONTAP 9.11中引入的。</block>
   <block id="64653610bb83e768ab10ed738c71d4f7" category="paragraph">独立应用程序可以通过发出POST请求在ONTAP 系统上记录EMS事件以及可选生成的AutoSupport 软件包。此资源类型是在ONTAP 9.11.1中引入的</block>
-  <block id="1559c80340a3552e982d5443b26cb658" category="summary">通过 ONTAP REST API 提供的资源按类别进行组织，如 ONTAP API 文档页面上所示。</block>
   <block id="0242de1421b2dbbb8285300eae69f9fc" category="summary">您可以使用这些API调用来管理支持NVMe的资源。</block>
   <block id="50f3a24b94f9f178410d7708def5ebde" category="summary">您可以使用这些 API 调用来管理 SnapLock 功能。</block>
   <block id="9250e564d64f55011e433f17ac824f44" category="paragraph-title">NDMP 模式</block>
@@ -1202,7 +1195,6 @@
   <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">从ONTAPI将自动化转变为ONTAP REST API</block>
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
-  <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织、如ONTAP API联机文档中所示。下面简要介绍了每个资源的问题描述 、并根据需要提供其他使用注意事项。</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">ONTAP REST API的新增功能</block>
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。</block>
   <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
@@ -1513,7 +1505,6 @@
   <block id="453c37c8e9a76deb2b13d5a2c2c4be7b" category="paragraph"><block ref="71e2add861ef98d4019f3cebd53921c4" prefix="" category="inline-code"></block></block>
   <block id="c22e9379c891fca636de58b50cf46bc3" category="paragraph"><block ref="e27598c7184d00cb3ee9f87da21a55c5" prefix="" category="inline-code"></block></block>
   <block id="adbde3ab61ea5b6041902022caaaeddc" category="paragraph"><block ref="c07b7bd445e059f84d0bc076867fcd31" prefix="" category="inline-code"></block></block>
-  <block id="3b4eb2c2464d0801cad28a2ce6319a1c" category="paragraph">本摘要中介绍的REST资源基于最新版本的产品。如果您需要了解对先前版本所做的更改、请参见 <block ref="eea437b9922115b60f36debdfc0ed4d0" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="47c25bc89f41cb229d9f5a0f8cc43df0" category="admonition">您还应查看<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> 适用于追加信息、包括已知限制或问题。</block>
   <block id="72679fae292d57bf767f718c146bf6a1" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="44134cd34c398895e571223ccabdd386" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="bfc2f11bae632428ff628103902f574d" category="inline-link">9.14.1版NetApp PCL文档</block>
@@ -1896,4 +1887,9 @@
   <block id="6c271a07c1fe500a9af8e4bb8e005441" category="sidebar">从ONTAPI迁移到REST API</block>
   <block id="336165a88740b33476f13e8f41666771" category="sidebar">PowerShell工具包</block>
   <block id="326737de1766f7c8b80a5acde0f18651" category="sidebar">下载并安装</block>
+  <block id="10c96e88b9c4e92d1c2ae63f9eade937" category="paragraph">您可以使用这些API调用来管理ONTAP SnapLock功能。</block>
+  <block id="4e8316643e7aaa485e54110d73c76f12" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织。每个资源类别都包含一个简短的问题描述、并在适当情况下提供了其他使用注意事项。</block>
+  <block id="6bfd79fe477653dcbe9240cddc1bff7e" category="paragraph">摘要中所述的其余资源均基于最新版本的产品。如果您需要更详细地了解先前版本中所做的更改、请参见 <block ref="eea437b9922115b60f36debdfc0ed4d0" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
+  <block id="0ea16c1b878b2cbbbc3d0b12297d9b11" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是、在许多情况下、您也可以使用查询参数上的属性值来访问对象。</block>
+  <block id="72cb412397232628600f03c53da4faf9" category="paragraph">您可以使用这些API调用来管理集群和SVM安全设置。</block>
 </blocks>
