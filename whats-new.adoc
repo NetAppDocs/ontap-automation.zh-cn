@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: whats_new.html 
+permalink: whats-new.html 
 keywords: new features, new in release 
 summary: NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。 
 ---
@@ -18,6 +18,18 @@ NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和
 
 
 TIP: 您还应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^] 适用于追加信息、包括已知限制或问题。
+
+
+
+== ONTAP 9.15.1.
+
+ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、有三个新端点支持一项新功能。
+
+基于TLS的NFS:: 此功能提供了三个新端点。您可以通过问题描述这些API调用检索基于TLS的所有NFS接口、通过UUID检索特定接口以及更新TLS接口的配置属性。这些API调用共同提供了一组等效的 `vserver nfs tls interface` CLI命令。
+
+
+
+CAUTION: 基于TLS的NFS在ONTAP 9.151中提供公开预览版。作为预览选项、使用ONTAP 9.15.1的生产工作负载不支持此功能。
 
 
 

@@ -18,6 +18,7 @@ ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供
 
 API映射文档取决于ONTAP 版本：
 
+* https://docs.netapp.com/us-en/ontap-restmap["ONTAP 9.15.1."^]
 * https://docs.netapp.com/us-en/ontap-restmap-9141["ONTAP 9.14.1"^]
 * https://docs.netapp.com/us-en/ontap-restmap-9131["ONTAP 9.13.1"^]
 * https://docs.netapp.com/us-en/ontap-restmap-9121["ONTAP 9.12.1"^]

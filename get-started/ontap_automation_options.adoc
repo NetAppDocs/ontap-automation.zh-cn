@@ -20,13 +20,13 @@ summary: 您可以通过多种方法自动部署和管理ONTAP存储系统。
 
 == ONTAP REST API
 
-从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。使用ONTAP REST API时、需要注意几个事项。
+从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。
 
 .本机访问REST API
 您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。
 
 .正在迁移旧版ONTAPI代码以使用REST
-ONTAP API (ZAPI)是NetApp ONTAP 软件附带的一组原始专有调用、用于支持自动化执行数据存储管理任务。未来版本的ONTAP 将禁用ONTAP接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 link:../migrate/ontapi_disablement.html["迁移到REST API"] 有关详细信息 ...
+ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调用、用于支持数据存储管理任务的自动化。API是的一部分 link:../sw-tools/nmsdk.html["NetApp 易管理性 SDK"]。在ONTAP的未来版本中、应禁用ONTAP PI接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 link:../migrate/ontapi_disablement.html["从ONTAPI迁移到REST API"] 有关详细信息 ...
 
 
 

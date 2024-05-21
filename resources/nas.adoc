@@ -109,6 +109,9 @@ Kerberos 接口的配置设置。此资源类型是在 ONTAP 9.6 中引入的。
 .NFS Kerberos 域
 Kerberos 域的配置设置。此资源类型是在 ONTAP 9.6 中引入的。
 
+.基于TLS的NFS
+使用基于TLS的NFS时、您可以通过此资源检索和更新接口配置。此资源类型是在ONTAP 9.15中引入的。
+
 .NFS 服务
 NFS 服务器的核心配置。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。
 

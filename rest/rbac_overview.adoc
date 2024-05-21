@@ -17,7 +17,7 @@ summary: 'ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Base
 ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Based Access Control、RBAC)功能。您可以为每个帐户分配不同的角色、以控制用户对通过REST API和CLI公开的资源的访问。这些角色为各种ONTAP 用户定义了不同的管理访问级别。
 
 
-NOTE: ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 link:../rest/rbac_overview.html#summary-of-rbac-evolution["RBAC演变概述"] 和 link:../whats_new.html["ONTAP REST API 和自动化的新增功能"] 有关详细信息 ...
+NOTE: ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 link:../rest/rbac_overview.html#summary-of-rbac-evolution["RBAC演变概述"] 和 link:../whats-new.html["ONTAP REST API 和自动化的新增功能"] 有关详细信息 ...
 
 
 

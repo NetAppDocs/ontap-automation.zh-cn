@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: sw-tools/nmsdk.html 
+keywords: netapp manageability sdk, oncommand workflow automation, oncommand wfa, ontapi, ontap rest api 
+summary: NetApp易管理性SDK提供了一组ONTAPI API调用、用于开发用于监控和管理ONTAP存储的应用程序。SDK与OnCommand Workflow Automation软件包一起支持您自动管理ONTAP系统。 
+---
+= NetApp 易管理性 SDK
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp易管理性SDK提供了一组ONTAPI API调用、用于开发用于监控和管理ONTAP存储的应用程序。SDK与OnCommand Workflow Automation软件包一起支持您自动管理ONTAP系统。
+
+
+NOTE: 虽然NetApp易管理性SDK和OnCommand Workflow Automation仍受支持、但ONTAP REST API是自动化ONTAP系统时要使用的首选战略技术。请参见 link:../migrate/ontapi_disablement.html["已取消ONTAPI"] 有关详细信息 ...
+
+.下载SDK
+您可以从NetApp 支持站点 下载NetApp易管理性SDK。SDK在客户端上支持多种语言、包括：Python、PowerShell、C、C++、 Java、C#、vb。 NET和Ruby。请务必查看互操作性表工具、了解有关NetApp易管理性SDK以及您的ONTAP版本如何支持它的信息。
+
+.使用OnCommand Workflow Automation
+您还可以使用SDK提供的API自动执行管理任务、而无需编写任何脚本。OnCommand Workflow Automation (OnCommand WFA)提供了多个预打包的工作流来部署和运行管理任务。您可以从NetApp存储自动化商店下载OnCommand WFA软件包。
+
+.相关信息
+* https://mysupport.netapp.com/site/["NetApp 支持站点"^]
+* https://www.netapp.com/company/interoperability/["NetApp 互操作性表工具"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63638&language=en-US["NetApp易管理性SDK文档"^]
+* https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["OnCommand Workflow Automation文档资源"^]
+* https://automationstore.netapp.com/home.shtml["NetApp 自动化商店"^]
+

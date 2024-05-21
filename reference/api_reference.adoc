@@ -25,7 +25,8 @@ NOTE: 您可以根据ONTAP版本在多个站点之一访问REST API参考文档�
 
 您可以通过以下链接访问ONTAP REST API参考文档的副本。本文档由ONTAP版本维护。
 
-* https://docs.netapp.com/us-en/ontap-restapi/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.14.1"^]
+* https://docs.netapp.com/us-en/ontap-restapi/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.15.1."^]
+* https://docs.netapp.com/us-en/ontap-restapi-9141/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.14.1"^]
 * https://docs.netapp.com/us-en/ontap-restapi-9131/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.13.1"^]
 * https://docs.netapp.com/us-en/ontap-restapi-9121/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.12.1"^]
 * https://docs.netapp.com/us-en/ontap-restapi-9111/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP 9.11.1"^]

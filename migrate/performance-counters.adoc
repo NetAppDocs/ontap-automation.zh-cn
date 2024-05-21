@@ -100,6 +100,7 @@ NetApp广泛支持将自动化代码从ONTAPI迁移到ONTAP REST API。这包括
 
 请根据您使用的ONTAP 版本查看相应的映射文档：
 
+* https://docs.netapp.com/us-en/ontap-pcmap/["ONTAP 9.151性能计数器映射"^]
 * https://docs.netapp.com/us-en/ontap-pcmap-9141/["ONTAP 9.14.1性能计数器映射"^]
 * https://docs.netapp.com/us-en/ontap-pcmap-9131/["ONTAP 9.13.1性能计数器映射"^]
 * https://docs.netapp.com/us-en/ontap-pcmap-9121/["ONTAP 9.12.1性能计数器映射"^]

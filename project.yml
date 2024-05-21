@@ -12,7 +12,7 @@ sidebar:
   - title: ONTAP 自动化文档
     url: "/index.html"
   - title: 新增功能
-    url: "/whats_new.html"
+    url: "/whats-new.html"
   - section: get-started
   - section: rest
   - section: workflows
@@ -22,6 +22,3 @@ sidebar:
   - section: additional
   - title: 法律声明
     url: "/legal-notices.html"
-product-family:
-  name: ONTAP
-  repo: ontap-family
