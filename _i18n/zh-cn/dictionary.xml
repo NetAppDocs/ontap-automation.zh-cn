@@ -1796,9 +1796,7 @@
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="paragraph-title">PowerShell</block>
   <block id="501fd8414e2cb7ea1f33c45defefd651" category="paragraph">PowerShell是Microsoft提供的一个程序、可用于任务自动化和配置管理。它包括命令行Shell环境以及脚本语言。</block>
   <block id="c714c2b9a4fb9d44e4562afa883f47ea" category="paragraph-title">NetApp ONTAP PowerShell工具包</block>
-  <block id="2824bab8832a0ba6a00dcfa6fe1a811d" category="paragraph">NetApp.ONTAP PowerShell工具包包括适用于NetApp ONTAP的PowerShell模块。该工具包支持在各种环境中运行ONTAP、包括NetApp AFF和FAS系统、商用硬件和云。该模块包含2、400多个cmdlet、这些cmdlet共同支持在Windows主机上进行存储管理。</block>
   <block id="58e663c52068f671ebd2ded87406b54b" category="doc">下载并安装PowerShell工具包</block>
-  <block id="7d908c3b8b26af09f296e971b3eb24ef" category="paragraph">您可以通过两种方法下载和安装NetApp ONTAP PowerShell工具包。</block>
   <block id="0659d428df833a806e29e65e632d380a" category="paragraph-title">NetApp 支持</block>
   <block id="abbe6086a8dd2213ec443ee7529470ed" category="paragraph">您可以从NetApp 支持站点 下载PowerShell工具包：</block>
   <block id="35b4e347a5f9044d1a2f8b0b36f86a4b" category="paragraph"><block ref="35b4e347a5f9044d1a2f8b0b36f86a4b" category="inline-link-rx"></block></block>
@@ -1879,7 +1877,6 @@
   <block id="4f11865970671ba7b86c9b6eda8a46ed" category="list-text">Requests-toolbelt</block>
   <block id="104004214ebf2a9e7840ed8d280a887d" category="list-text">棉花糖</block>
   <block id="6c271a07c1fe500a9af8e4bb8e005441" category="sidebar">从ONTAPI迁移到REST API</block>
-  <block id="336165a88740b33476f13e8f41666771" category="sidebar">PowerShell工具包</block>
   <block id="326737de1766f7c8b80a5acde0f18651" category="sidebar">下载并安装</block>
   <block id="10c96e88b9c4e92d1c2ae63f9eade937" category="paragraph">您可以使用这些API调用来管理ONTAP SnapLock功能。</block>
   <block id="4e8316643e7aaa485e54110d73c76f12" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织。每个资源类别都包含一个简短的问题描述、并在适当情况下提供了其他使用注意事项。</block>
@@ -1932,4 +1929,6 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="98bf123aa3933daaa4019109c98c08eb" category="sidebar">ONTAP 9 文档</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 文档</block>
+  <block id="9a48142f39a67f56da7343e45f9a5f6a" category="paragraph">您可以通过两种方法下载和安装NetApp ONTAP PowerShell工具包。</block>
+  <block id="d61a36a5306e6c21551315a0807bb00a" category="paragraph">NetApp。 ONTAP PowerShell工具包包括适用于NetApp ONTAP的PowerShell模块。该工具包支持在各种环境中运行ONTAP、包括NetApp AFF和FAS系统、商用硬件和云。该模块包含2、400多个cmdlet、这些cmdlet共同支持在Windows主机上进行存储管理。</block>
 </blocks>
