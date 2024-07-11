@@ -23,13 +23,16 @@ TIP: 您还应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP24925
 
 == ONTAP 9.15.1.
 
-ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、有三个新端点支持一项新功能。
+ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、支持两项新功能。
 
 基于TLS的NFS:: 此功能提供了三个新端点。您可以通过问题描述这些API调用检索基于TLS的所有NFS接口、通过UUID检索特定接口以及更新TLS接口的配置属性。这些API调用共同提供了一组等效的 `vserver nfs tls interface` CLI命令。
 
 
 
 CAUTION: 基于TLS的NFS在ONTAP 9.151中提供公开预览版。作为预览选项、使用ONTAP 9.15.1的生产工作负载不支持此功能。
+
+Windows备份应用程序和Unix模式符号链接:: 当Windows备份应用程序遇到Unix模式的符号链接(符号链接)时、将遍历该链接、ONTAP将返回数据并进行备份。从ONTAP 9.15.1开始、您还可以选择备份符号链接、而不是其所指向的数据。这可以提供多种优势、包括提高备份应用程序的性能。已更新此端点 `/protocols/cifs/services/{svm.uuid}` 、以便在对象中包含新参数 `backup-symlink-enabled` `options` 。
+
 
 
 

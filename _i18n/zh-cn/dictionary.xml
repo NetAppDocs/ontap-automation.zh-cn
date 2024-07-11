@@ -81,7 +81,6 @@
   <block id="7e70a3f5fe5680525cb2b864b84dd895" category="paragraph">您可以使用这些 API 调用来管理集群和 SVM 的 CIFS 和 NFS 设置。</block>
   <block id="7f10c6261c4b6c29a47a7c3f7a01e279" category="paragraph">您可以将 NAS 审核事件重定向到特定 SVM 。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="8e6ea104d132bd3ac592317ab098eb8b" category="paragraph">可以在 CIFS 服务器上为 SMB 用户创建主目录，而无需为每个用户创建单独的 SMB 共享。主目录搜索路径是从 SVM 根目录开始的一组绝对路径。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="55b828992334f8fd2faac07a1d3c6e1e" category="paragraph">CIFS 服务器的核心配置。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 中进行了更新。</block>
   <block id="71a26588e1c1d8e12094fdd21dc0d287" category="paragraph">您可以使用此 API 检索有关 CIFS 会话的详细信息。此资源类型是在 ONTAP 9.8 REST API 中引入的，并在 ONTAP 9.9 中进行了增强。</block>
   <block id="d5f4fec8a6c653ca7e90ff237d4a4316" category="paragraph">在 CIFS 服务器上定义的 SMB 共享。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="f0f651567e26868dafe0ee9cc161686c" category="paragraph">访问控制列表（ ACL ）用于控制对 CIFS 共享上的文件夹和文件的访问。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -1915,7 +1914,6 @@
   <block id="f3d744cfa0520002045d6f43144f6d48" category="list-text"><block ref="f3d744cfa0520002045d6f43144f6d48" category="inline-link-rx"></block></block>
   <block id="430f1c1df2cd64a3c4f965b8d9c49566" category="list-text"><block ref="430f1c1df2cd64a3c4f965b8d9c49566" category="inline-link-rx"></block></block>
   <block id="35edae61aca91aae4cbd46b48209e29c" category="list-text"><block ref="35edae61aca91aae4cbd46b48209e29c" category="inline-link-rx"></block></block>
-  <block id="6a7c5e7366ffed370462b891c0a9ae2c" category="paragraph">ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、有三个新端点支持一项新功能。</block>
   <block id="f503cec406370353472f2af8bffc177d" category="list-text">此功能提供了三个新端点。您可以通过问题描述这些API调用检索基于TLS的所有NFS接口、通过UUID检索特定接口以及更新TLS接口的配置属性。这些API调用共同提供了一组等效的<block ref="e06252ee7104d7c63fe9612305d61ed2" prefix=" " category="inline-code"></block> CLI命令。</block>
   <block id="9fca2ad29082aa8ea692f5764bcc5371" category="admonition">基于TLS的NFS在ONTAP 9.151中提供公开预览版。作为预览选项、使用ONTAP 9.15.1的生产工作负载不支持此功能。</block>
   <block id="b302321652be9f7bc5eab2d6b2eb58f6" category="sidebar">您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API为自动化技术提供了主要基础。</block>
@@ -1931,4 +1929,8 @@
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select 文档</block>
   <block id="9a48142f39a67f56da7343e45f9a5f6a" category="paragraph">您可以通过两种方法下载和安装NetApp ONTAP PowerShell工具包。</block>
   <block id="d61a36a5306e6c21551315a0807bb00a" category="paragraph">NetApp。 ONTAP PowerShell工具包包括适用于NetApp ONTAP的PowerShell模块。该工具包支持在各种环境中运行ONTAP、包括NetApp AFF和FAS系统、商用硬件和云。该模块包含2、400多个cmdlet、这些cmdlet共同支持在Windows主机上进行存储管理。</block>
+  <block id="7e20d550033609efe814483eaca98482" category="paragraph">CIFS 服务器的核心配置。此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.7 和 9.15 中进行了更新。</block>
+  <block id="25c2f3f417194f8a4327550b96839461" category="paragraph">ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、支持两项新功能。</block>
+  <block id="df1b9eeca7fff049392b594c09b8d79c" category="list-text">Windows备份应用程序和Unix模式符号链接</block>
+  <block id="a2edd73d4869c496dcb1c490b5fbe188" category="list-text">当Windows备份应用程序遇到Unix模式的符号链接(符号链接)时、将遍历该链接、ONTAP将返回数据并进行备份。从ONTAP 9.15.1开始、您还可以选择备份符号链接、而不是其所指向的数据。这可以提供多种优势、包括提高备份应用程序的性能。已更新此端点<block ref="232f6f2dc030d628eaaa90ce3e0c958c" prefix=" " category="inline-code"></block> 、以便在对象中包含新参数<block ref="4d13b3f008fbbaa256c8235439cea789" prefix=" " category="inline-code"></block><block ref="93da65a9fd0004d9477aeac024e08e15" prefix=" " category="inline-code"></block> 。</block>
 </blocks>
