@@ -606,7 +606,6 @@
   <block id="4e04bad1fd3bbdb3c69e856ffc49ff73" category="doc">资源类别概述</block>
   <block id="10fd548eb0773eced2b1f8455835ae29" category="list-text"><block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block></block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">《 ONTAP 发行说明》</block>
-  <block id="e9019ae8c9c4fb4acd7eba0895e32433" category="doc">ONTAP REST API 和自动化的新增功能</block>
   <block id="b5ad0fadac714409796245d1b58f5199" category="paragraph">NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。</block>
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="section-title">ONTAP 9.10.1</block>
   <block id="54a05230a9d83fc20a3024afd1148c81" category="doc">通过 REST API 访问 ONTAP 命令行界面</block>
@@ -1879,7 +1878,6 @@
   <block id="4e8316643e7aaa485e54110d73c76f12" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织。每个资源类别都包含一个简短的问题描述、并在适当情况下提供了其他使用注意事项。</block>
   <block id="0ea16c1b878b2cbbbc3d0b12297d9b11" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是、在许多情况下、您也可以使用查询参数上的属性值来访问对象。</block>
   <block id="72cb412397232628600f03c53da4faf9" category="paragraph">您可以使用这些API调用来管理集群和SVM安全设置。</block>
-  <block id="12149ef13bbca8b5b9ef6c7969b51bdb" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="719fb5b8ac08da8fa53ff24d277d30a0" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="8cd7d5cbedf290a9b729cc263d9b289c" category="list-title">ONTAP 9.15.1.</block>
   <block id="75d0655a3007155c5cee6673326640b8" category="inline-link">PyPI：NetApp ONTAP 9.15.1.</block>
   <block id="88f0364b032c766b6224cbd9e9d86861" category="list-text"><block ref="88f0364b032c766b6224cbd9e9d86861" category="inline-link-rx"></block></block>
@@ -1933,5 +1931,6 @@
   <block id="a2edd73d4869c496dcb1c490b5fbe188" category="list-text">当Windows备份应用程序遇到Unix模式的符号链接(符号链接)时、将遍历该链接、ONTAP将返回数据并进行备份。从ONTAP 9.15.1开始、您还可以选择备份符号链接、而不是其所指向的数据。这可以提供多种优势、包括提高备份应用程序的性能。已更新此端点<block ref="232f6f2dc030d628eaaa90ce3e0c958c" prefix=" " category="inline-code"></block> 、以便在对象中包含新参数<block ref="4d13b3f008fbbaa256c8235439cea789" prefix=" " category="inline-code"></block><block ref="93da65a9fd0004d9477aeac024e08e15" prefix=" " category="inline-code"></block> 。</block>
   <block id="d239da172f3ae62623c76921d1e69cef" category="paragraph"><block ref="d239da172f3ae62623c76921d1e69cef" category="inline-link-rx"></block></block>
   <block id="26b14521138b1a45cc04a8b552b937c3" category="paragraph"><block ref="26b14521138b1a45cc04a8b552b937c3" category="inline-link-rx"></block></block>
-  <block id="a6fd48ff460bdb9f9b5bd42c615526ae" category="sidebar">ONTAP REST API的新增功能</block>
+  <block id="b61d835a52b302e3c0dbeedac89aecec" category="inline-link-macro">ONTAP REST API的新增功能</block>
+  <block id="f617bf9bf27979ddd862da656c1ac630" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。有关详细信息、请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="1d53a2f90038290ad464bebe3ee5abe5" category="inline-link-macro-rx"></block> 。</block>
 </blocks>

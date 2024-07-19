@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: new features, new in release 
 summary: NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。 
 ---
-= ONTAP REST API 和自动化的新增功能
+= ONTAP REST API的新增功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
