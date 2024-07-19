@@ -12,7 +12,9 @@ sidebar:
   - title: ONTAP 自动化文档
     url: "/index.html"
   - title: 新增功能
-    url: "/whats-new.html"
+    entries:
+    - title: ONTAP REST API的新增功能
+      url: "/whats-new.html"
   - section: get-started
   - section: rest
   - section: workflows

@@ -88,11 +88,15 @@ https://www.youtube.com/playlist?list=PLHSh2r3A9gQRG1kkAcx1MmtVYPimyxOp_["自动
 
 * Insight 2022演示文稿(26分钟)。
 +
-https://www.netapp.tv/details/29670["利用ONTAP REST API打造现代化的ONTAP存储管理"^]
+https://media.netapp.com/video-detail/152137a0-4153-59dc-ad7d-232af1785dd5/modernize-your-ontap-storage-management-with-ontap-rest-apis-1837["利用ONTAP REST API打造现代化的ONTAP存储管理"^]
+
+
 
 * Insight 2021演示文稿(31分钟)。
 +
-https://www.netapp.tv/details/28343["NetApp ONTAP：节省时间并简化REST API的使用"^]
+https://media.netapp.com/video-detail/f353c28a-2364-5e5e-bf86-5d7ef66360fe/netapp-ontap-save-time-and-simplify-using-rest-apis-brk-1103-3["NetApp ONTAP：节省时间并简化REST API的使用"^]
+
+
 
 * NetApp学习服务。
 +

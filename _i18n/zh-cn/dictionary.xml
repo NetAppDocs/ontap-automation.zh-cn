@@ -1776,10 +1776,8 @@
   <block id="bfe5d32b02621a0adb06ef0719b339f9" category="section-title">技术培训和活动</block>
   <block id="0e58850b3d57f50238400b261118a678" category="list-text">Insight 2022演示文稿(26分钟)。</block>
   <block id="b2b8de6a3c3bf80d8c2caabcb4925413" category="inline-link">利用ONTAP REST API打造现代化的ONTAP存储管理</block>
-  <block id="e19c44cb32d93cadb9615cce84b02ebf" category="paragraph"><block ref="e19c44cb32d93cadb9615cce84b02ebf" category="inline-link-rx"></block></block>
   <block id="e9930ef688b9c712d956fe54c341824d" category="list-text">Insight 2021演示文稿(31分钟)。</block>
   <block id="d179249207be943a8870bd6215e63e34" category="inline-link">NetApp ONTAP：节省时间并简化REST API的使用</block>
-  <block id="07132e4f3463e79d28225b3205678d4d" category="paragraph"><block ref="07132e4f3463e79d28225b3205678d4d" category="inline-link-rx"></block></block>
   <block id="5da2d15e5ed96882dfddf6695345366f" category="list-text">NetApp学习服务。</block>
   <block id="ff0e39f8c14072a133c51dcb06ebf74c" category="inline-link">使用ONTAP REST API和Ans可 实现存储管理自动化</block>
   <block id="31b6ea8a88845f72f0b8acf957d34bf2" category="paragraph"><block ref="31b6ea8a88845f72f0b8acf957d34bf2" category="inline-link-rx"></block></block>
@@ -1933,4 +1931,7 @@
   <block id="25c2f3f417194f8a4327550b96839461" category="paragraph">ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、支持两项新功能。</block>
   <block id="df1b9eeca7fff049392b594c09b8d79c" category="list-text">Windows备份应用程序和Unix模式符号链接</block>
   <block id="a2edd73d4869c496dcb1c490b5fbe188" category="list-text">当Windows备份应用程序遇到Unix模式的符号链接(符号链接)时、将遍历该链接、ONTAP将返回数据并进行备份。从ONTAP 9.15.1开始、您还可以选择备份符号链接、而不是其所指向的数据。这可以提供多种优势、包括提高备份应用程序的性能。已更新此端点<block ref="232f6f2dc030d628eaaa90ce3e0c958c" prefix=" " category="inline-code"></block> 、以便在对象中包含新参数<block ref="4d13b3f008fbbaa256c8235439cea789" prefix=" " category="inline-code"></block><block ref="93da65a9fd0004d9477aeac024e08e15" prefix=" " category="inline-code"></block> 。</block>
+  <block id="d239da172f3ae62623c76921d1e69cef" category="paragraph"><block ref="d239da172f3ae62623c76921d1e69cef" category="inline-link-rx"></block></block>
+  <block id="26b14521138b1a45cc04a8b552b937c3" category="paragraph"><block ref="26b14521138b1a45cc04a8b552b937c3" category="inline-link-rx"></block></block>
+  <block id="a6fd48ff460bdb9f9b5bd42c615526ae" category="sidebar">ONTAP REST API的新增功能</block>
 </blocks>
