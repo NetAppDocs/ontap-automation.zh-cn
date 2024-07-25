@@ -6,7 +6,7 @@ entries:
   url: "/get-started/ontap_automation_options.html"
 - title: 如何访问 REST API
   url: "/get-started/access_rest_api.html"
-- title: 您的第一次API调用
+- title: 您的第一次ONTAP REST API调用
   url: "/get-started/first_call.html"
-- title: NetApp实验室资源
+- title: ONTAP REST API实验室资源
   url: "/get-started/labs.html"

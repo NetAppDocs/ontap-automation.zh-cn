@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: get-started/labs.html 
-keywords:  
-summary:  
+keywords: ONTAP REST API labs, lab resources 
+summary: NetApp提供了一个实验室环境、用于测试ONTAP REST API和其他相关自动化技术。 
 ---
-= NetApp实验室资源
+= ONTAP REST API实验室资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

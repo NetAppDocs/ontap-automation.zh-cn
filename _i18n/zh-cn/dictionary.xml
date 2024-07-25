@@ -1792,13 +1792,10 @@
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="paragraph-title">PowerShell</block>
   <block id="501fd8414e2cb7ea1f33c45defefd651" category="paragraph">PowerShell是Microsoft提供的一个程序、可用于任务自动化和配置管理。它包括命令行Shell环境以及脚本语言。</block>
   <block id="c714c2b9a4fb9d44e4562afa883f47ea" category="paragraph-title">NetApp ONTAP PowerShell工具包</block>
-  <block id="58e663c52068f671ebd2ded87406b54b" category="doc">下载并安装PowerShell工具包</block>
   <block id="0659d428df833a806e29e65e632d380a" category="paragraph-title">NetApp 支持</block>
   <block id="abbe6086a8dd2213ec443ee7529470ed" category="paragraph">您可以从NetApp 支持站点 下载PowerShell工具包：</block>
-  <block id="35b4e347a5f9044d1a2f8b0b36f86a4b" category="paragraph"><block ref="35b4e347a5f9044d1a2f8b0b36f86a4b" category="inline-link-rx"></block></block>
   <block id="1904aecd859f7f23f24c1be156dc343b" category="paragraph-title">PowerShell图库</block>
   <block id="4c6410f017732f17e33613aeeb023d8d" category="paragraph">您可以从PowerShell库下载PowerShell工具包：</block>
-  <block id="482315644c67d0facaf402353e1996b3" category="paragraph"><block ref="482315644c67d0facaf402353e1996b3" category="inline-link-rx"></block></block>
   <block id="25485dfbe21d8fd63164750c78164890" category="section-title">提交您的ONTAPI以填补API空缺</block>
   <block id="eba6ac0de111e13d8f1a5cb185892a15" category="inline-link">从ONTAPI到REST API</block>
   <block id="212a2f3ffae779c6d3e6513e6c77e49d" category="paragraph">NetApp致力于支持客户从ONTAPI迁移到ONTAP REST API。如果您发现REST API中缺少某些内容、请告知我们。您可以在上提交这些差距以及任何其他想法<block ref="bfaa967fbc75e842a7348bf0a8e34215" category="inline-link-rx"></block> 页面。</block>
@@ -1806,7 +1803,6 @@
   <block id="2c2d289066c19b061fa5051110ce72bc" category="paragraph">您可以访问<block ref="10e3da19ba49cdfd167b1f3dae41bc1c" category="inline-link-rx"></block> 开始使用。另请参见<block ref="ef075c0fbc68ce59cce02cf136cb7c91" category="inline-link-rx"></block> 关于报告工具及其使用方法。</block>
   <block id="18e808da68bb719b1204b8c83712fac3" category="section-title">ONTAP PowerShell工具包</block>
   <block id="a44d5f089327249c77efb12dd65462af" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="c3cab3c4ac16333d767da4a7df87c248" category="inline-link-macro-rx"></block>。</block>
-  <block id="619f7d72d7d52167fd99a9d226984632" category="doc">NetApp实验室资源</block>
   <block id="b2e736bcffbb818aa5d8853b16957107" category="paragraph">NetApp提供了一个实验室环境、用于测试ONTAP REST API和其他相关自动化技术。</block>
   <block id="e41eeb18c8b1c48d8645aac00cd5d0da" category="inline-link">Lab on Demand</block>
   <block id="42b5bbee3175a5d253bf7e5909af0734" category="paragraph">。<block ref="d0ac576a8894e6f13fb4390a137a168e" category="inline-link-rx"></block> 适用于NetApp客户和合作伙伴。您需要有效的凭据才能登录并开始使用实验室资源。您可以根据需要在实验室中搜索_REST或其他技术。</block>
@@ -1933,4 +1929,10 @@
   <block id="26b14521138b1a45cc04a8b552b937c3" category="paragraph"><block ref="26b14521138b1a45cc04a8b552b937c3" category="inline-link-rx"></block></block>
   <block id="b61d835a52b302e3c0dbeedac89aecec" category="inline-link-macro">ONTAP REST API的新增功能</block>
   <block id="f617bf9bf27979ddd862da656c1ac630" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。有关详细信息、请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="1d53a2f90038290ad464bebe3ee5abe5" category="inline-link-macro-rx"></block> 。</block>
+  <block id="fe6ccd0a0c871758ba9563377db86e13" category="doc">您的第一次ONTAP REST API调用</block>
+  <block id="e02870eb3d03aec6ab03fa4fa4f87b65" category="doc">ONTAP REST API实验室资源</block>
+  <block id="b5ca69b3b3ee6f013fa4a87b8fdd4fb5" category="doc">下载并安装ONTAP PowerShell工具包</block>
+  <block id="940f4511f0af1bd466600a8213691360" category="inline-link">NetApp。 ONTAP PowerShell工具包</block>
+  <block id="4028e751d6613e2ade147d59afdd8a50" category="paragraph"><block ref="4028e751d6613e2ade147d59afdd8a50" category="inline-link-rx"></block></block>
+  <block id="7aa552dc681d656a7dca492830d13523" category="paragraph"><block ref="7aa552dc681d656a7dca492830d13523" category="inline-link-rx"></block></block>
 </blocks>
