@@ -1,0 +1,44 @@
+---
+permalink: api-changes.html 
+sidebar: sidebar 
+keywords: rest api, api changes, parameters, default values, breaking changes, documentation errors 
+summary: NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有时、这些更新可能会包括对现有API调用的更改、例如使用的参数和默认值。这些更改可能会影响访问REST API的软件。 
+---
+= 对ONTAP REST API调用进行的更改
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有时、这些更新可能会包括对现有API调用的更改、例如使用的参数和默认值。这些更改可能会影响访问REST API的软件。
+
+
+
+== 对现有ONTAP REST API调用进行的更改
+
+对现有API调用进行任何更改都可能会影响访问REST API的软件。您应查看下表中的更改列表、以确定是否会对您的ONTAP自动化环境造成影响。每个条目都包括适用的API端点、变更说明以及所推出的ONTAP版本。
+
+[cols="40%,50%,10%"]
+|===
+| 端点 | 更改说明 | ONTAP 版本 
+
+
+| `/security/authentication/duo/groups`
+`/security/authentication/duo/profiles` | 已从这些端点的双组中删除响应中的字段*_links*。没有建议的客户操作或解决方法。该字段应在未来的ONTAP版本中添加回。 | 9.15.1 
+|===
+
+
+== ONTAP REST API参考文档错误
+
+随着NetApp对ONTAP REST API的增强和更新、有时可能会在联机参考文档中引入错误。这些错误可能会在使用API时造成混淆、但通常不会影响或中断ONTAP自动化软件或环境。
+
+您应查看下表中的错误列表。这将帮助您更好地了解和浏览ONTAP REST API参考文档。每个条目都包括适用的API端点、错误说明以及引入的ONTAP版本。
+
+[cols="40%,50%,10%"]
+|===
+| 端点 | 更改说明 | ONTAP 版本 
+
+
+| `/storage/quota/reports` | 端点的REST API文档指示*specifier*为有效字段。但是、此端点不支持配额说明符。没有建议的客户操作或解决方法。在未来的ONTAP版本中、此字段将从API文档中删除。 | 9.6 
+|===
+.相关信息
+link:whats-new.html["ONTAP REST API的新增功能"]

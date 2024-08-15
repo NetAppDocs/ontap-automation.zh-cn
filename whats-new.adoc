@@ -17,7 +17,7 @@ summary: NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强
 NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。
 
 
-TIP: 您还应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^] 适用于追加信息、包括已知限制或问题。
+TIP: 此外、您还应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^] 以了解其他信息、包括已知限制或问题。另请参见 link:api-changes.html["对ONTAP REST API调用进行的更改"] 、了解可能影响自动化软件的任何更改。
 
 
 
