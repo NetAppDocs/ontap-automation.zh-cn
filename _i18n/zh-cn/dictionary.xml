@@ -1301,8 +1301,6 @@
   <block id="c6b457514ae1938bb2d3532b1e2647dd" category="inline-link">Python客户端库示例</block>
   <block id="a33bae430fa2ebfdc47724814a7caf8c" category="paragraph">有关Python客户端库的简介、请参见 <block ref="ac55708e9eb87a85b101cbb6f38b8a1d" category="inline-link-macro-rx"></block>。有关Python示例、请参见<block ref="7bcad7f4339ec59707ec4753e36168b7" category="inline-link-rx"></block>。</block>
   <block id="7c3954a6c1ca76b5209bce67c8c332e8" category="doc">已取消ONTAPI</block>
-  <block id="d662068ac363663b595ce3a43cc70a12" category="inline-link">CCPC-00410终止提供：ONTAPI</block>
-  <block id="4985f6980a34153c58b9f31390f6ce91" category="list-text"><block ref="4985f6980a34153c58b9f31390f6ce91" category="inline-link-rx"></block></block>
   <block id="6b9418a55963f7822ccea753684768bf" category="inline-link">ONTAP 9.13.1性能计数器映射</block>
   <block id="8673c6516e8e00de96b96886974e6eb6" category="list-text"><block ref="8673c6516e8e00de96b96886974e6eb6" category="inline-link-rx"></block></block>
   <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="inline-link">ONTAP 9.13.1</block>
@@ -1949,4 +1947,6 @@
   <block id="79d1f0bd73ced50c557a63343981d432" category="cell">端点的REST API文档指示*specifier*为有效字段。但是、此端点不支持配额说明符。没有建议的客户操作或解决方法。在未来的ONTAP版本中、此字段将从API文档中删除。</block>
   <block id="4fa32eb56fb8ae063a3c75b36cb19a62" category="paragraph"><block ref="4fa32eb56fb8ae063a3c75b36cb19a62" category="inline-link-macro-rx"></block></block>
   <block id="aa23dd032f1fc4a5a95d9eb732608f33" category="admonition">此外、您还应查看<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> 以了解其他信息、包括已知限制或问题。另请参见 <block ref="edc7b83fd666812e33623acd898a41ba" category="inline-link-macro-rx"></block> 、了解可能影响自动化软件的任何更改。</block>
+  <block id="d22eb7366a95f4b359ba96e0653153f2" category="inline-link">CP-00410推迟ONTAPI (ZAPI)终止提供公告</block>
+  <block id="ea53ecb52450e46f8a6a0fb33b6e191a" category="list-text"><block ref="ea53ecb52450e46f8a6a0fb33b6e191a" category="inline-link-rx"></block></block>
 </blocks>
