@@ -10,7 +10,7 @@ summary: 您可以列出ONTAP集群中安装的证书。您可以执行此操作
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

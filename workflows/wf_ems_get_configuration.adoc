@@ -10,7 +10,7 @@ summary: 您可以检索ONTAP集群的当前EMS配置。您可以在更新配置
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

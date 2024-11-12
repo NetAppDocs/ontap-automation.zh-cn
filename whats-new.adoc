@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: new features, new in release 
-summary: NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。 
+summary: 每个ONTAP版本都会更新ONTAP REST API、为您提供新功能、增强功能和错误修复。 
 ---
 = ONTAP REST API的新增功能
 :hardbreaks:
@@ -14,16 +14,41 @@ summary: NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强
 
 
 [role="lead"]
-NetApp 会定期更新 ONTAP REST API ，为您提供新功能，增强功能和错误修复。
+每个ONTAP版本都会更新ONTAP REST API、为您提供新功能、增强功能和错误修复。
 
 
-TIP: 此外、您还应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^] 以了解其他信息、包括已知限制或问题。另请参见 link:api-changes.html["对ONTAP REST API调用进行的更改"] 、了解可能影响自动化软件的任何更改。
+TIP: 您应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]以了解其他信息、包括已知限制或问题。另请参见 link:api-changes.html["对ONTAP REST API调用进行的更改"] 、了解可能影响自动化软件的任何更改。
+
+
+
+== ONTAP 9.16.1.
+
+API.16.1包含20多个新的ONTAP 9调用、这些调用将继续扩展ONTAP REST API的功能。这些增强功能主要侧重于安全性、但也包括对指标和存储分段管理的改进。
+
+
+NOTE: 公开给NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)用户的ONTAP REST API与所有其他FAS、AFF和ASA系统提供的REST API不同。有关详细信息、请参见 https://docs.netapp.com/us-en/asa-r2/learn-more/rest-api-support.html["ASA R2系统的REST API支持"^] 。
+
+Microsoft Entra ID的OAuth2.0支持:: OAuth.14.1首次引入了ONTAP 9 2.0支持。OAuth.16.1增强了ONTAP 9 2.0功能、可支持具有标准OAuth2.0声明的Microsoft Entra ID授权服务器(以前称为Azure AD)。包括两个主要功能、如下所述。
+使用组作为UUID的OAuth2.0:: 通过两项新功能和十个新API调用、可支持基于UUID模式值的Entra ID标准组声明：
++
+--
+* 组UUID到组名称映射(`/security/groups`)
+* UUID组到角色映射(`/security/group/role-mapping`()
+
+
+--
+具有外部角色的OAuth2.0:: 外部角色在定义给ONTAP的OAuth2.0标识提供程序中定义。您可以创建和管理这些外部角色与ONTAP角色之间的映射关系。添加了五个新的API调用。
+Web身份验证:: Web身份验证(WebAuthn)是一种Web标准、用于根据公共密钥加密对用户进行安全身份验证。借助ONTAP、它支持通过System Manager和ONTAP REST API管理防钓鱼的MFA。在多个端点添加了七个新的API调用。
+自主的防兰软件保护版本控制和更新:: 添加了两个API调用以及一个新端点、用于管理ONTAP使用的自主防兰软件包。您可以显示的版本并更新自主防兰软件包。
+qtree指标:: ONTAP 9 16.1提供了一个可选的qtree扩展性能监控功能。启用此功能后、ONTAP会捕获其他数据、包括延迟指标和历史数据。添加了一个新端点、可用于检索此性能数据。
+S3存储分段快照:: 添加了四个新的API调用、用于创建和管理S3存储分段的快照。每个快照都是创建快照时存储分段的映像。
+
 
 
 
 == ONTAP 9.15.1.
 
-ONTAP 9.15.1将继续扩展ONTAP REST API的功能。此版本的更新相对较小、支持两项新功能。
+API.15.1将继续扩展ONTAP REST ONTAP 9的功能、包括支持两项新功能。
 
 基于TLS的NFS:: 此功能提供了三个新端点。您可以通过问题描述这些API调用检索基于TLS的所有NFS接口、通过UUID检索特定接口以及更新TLS接口的配置属性。这些API调用共同提供了一组等效的 `vserver nfs tls interface` CLI命令。
 
@@ -77,7 +102,7 @@ CIFS组策略:: REST API已进行了增强、可支持创建和管理CIFS组策�
 
 == ONTAP 9.11.1
 
-ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点支持客户从ONTAP API (ONTAPI或ZAPI)迁移到Data ONTAP REST API。
+ONTAP 9.11.1继续扩展ONTAP REST API的功能、新增了近100个API调用。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。
 
 粒度RBAC:: ONTAP 基于角色的访问控制(Role-Based Access Control、RBAC)功能已得到增强、可提供更多粒度。您可以根据需要通过REST API使用传统角色或创建新的自定义角色。每个角色都与一个或多个权限相关联、每个权限都标识一个REST API调用或命令行界面命令以及访问级别。为REST角色提供了新的访问级别、例如 `read_create` 和 `read_modify`。此增强功能可与Data ONTAP API (ONTAPI或ZAPI)实现奇偶校验、并支持客户迁移到REST API。请参见 link:rest/rbac_overview.html["RBAC 安全性"] 有关详细信息 ...
 性能计数器:: 先前版本的ONTAP 保留了有关系统运行特征的统计信息。在9.11.1版中、此信息已得到增强、现在可通过REST API获得。管理员或自动化流程可以访问数据以确定系统性能。计数器管理器子系统维护的统计信息以数据库格式使用表和行显示。此增强功能使ONTAP REST API更接近与Data ONTAP API (ONTAPI或ZAPI)的奇偶校验。
@@ -86,8 +111,8 @@ IP子网功能:: ONTAP 网络功能已扩展、包括对IP子网的支持。通�
 多个管理员验证:: 多管理员验证功能提供了一个灵活的授权框架、用于保护对ONTAP 命令或操作的访问。您可以定义用于标识受限命令的规则。当用户请求访问特定命令时、可以根据需要由多个ONTAP 管理员授予批准权限。
 SnapMirror增强功能:: SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。
 存储池:: 添加了多个端点、用于访问ONTAP 存储池。支持在集群中创建和列出存储池、以及按ID更新和删除特定池。
-名称服务缓存支持:: ONTAP 名称服务已得到增强、可支持缓存、从而提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括：主机、UNIX用户、UNIX组和网络组。
-ONTAPI报告工具:: ONTAPI报告工具可帮助客户和合作伙伴确定其环境中的ONTAPI使用情况。除了Python软件之外、NetApp Lab on Demand还提供视频和不断发展的支持。在从ONTAPI迁移到ONTAP REST API时、此工具可提供另一种资源。
+名称服务缓存支持:: ONTAP 名称服务已得到增强、可支持缓存、从而提高性能和故障恢复能力。现在、可以通过REST API访问名称服务缓存的配置。可以在多个级别应用设置、包括主机、UNIX用户、UNIX组和网络组。
+ONTAPI报告工具:: ONTAPI报告工具可帮助客户和合作伙伴确定其环境中的ONTAPI使用情况。此工具可为计划从ONTAPI迁移到ONTAP REST API的客户提供有价值的见解。
 
 
 
@@ -104,7 +129,7 @@ SVM 迁移:: 您可以将 SVM 从源集群迁移到目标集群。新端点可�
 其他安全增强功能:: 有几项常规的安全增强功能可扩展现有协议并引入新功能。已对 IPsec ，密钥管理， SSH 配置和文件权限进行了改进。
 CIFS 域和本地组:: 已在集群和 SVM 级别添加对 CIFS 域的支持。您可以检索域配置以及创建和删除首选域控制器。
 扩展了卷分析:: 卷分析和指标已通过其他端点进行扩展，以支持顶级文件，目录和用户。
-支持增强功能:: 通过多项新功能增强了支持。自动更新可以通过下载并应用最新的软件更新来使 ONTAP 系统保持最新。您还可以检索和管理节点生成的内存核心转储。
+支持增强功能:: 通过多项新功能增强了支持。自动更新可以通过下载并应用最新的软件更新来使您的ONTAP系统保持最新。您还可以检索和管理节点生成的内存核心转储。
 
 
 
@@ -123,13 +148,13 @@ API 端点，用于新的 ONTAP 9.9.1 核心功能:: REST API 中增加了对通
 
 == ONTAP 9.8
 
-ONTAP 9.8 极大地扩展了 ONTAP REST API 的广度和深度。它包括多项新功能，可增强您自动部署和管理 ONTAP 存储系统的能力。此外，我们还改进了对帮助从原有 ONTAPI 过渡到 REST 的支持。
+ONTAP 9™8提供了多种新功能，可增强您自动部署和管理ONTAP存储系统的能力。此外，我们还改进了对帮助从原有 ONTAPI 过渡到 REST 的支持。
 
 将 ONTAPI 映射到 ONTAP 9 REST API:: 为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见 link:migrate/mapping.html["ONTAPI 到 REST API 映射"] 有关详细信息 ...
-API 端点，用于新的 ONTAP 9.8 核心功能:: REST API 中增加了对通过 ONTAPI 无法提供的新核心 ONTAP 9.8 功能的支持。其中包括对 ONTAP S3 分段和服务， SnapMirror 业务连续性和文件系统分析的 REST API 支持。
+用于新ONTAP 9 8功能的API端点:: REST API增加了对不能通过ONTAPI获得的新ONTAP 9 8功能的支持。其中包括对ONTAP S3存储分段和服务、SnapMirror主动同步(以前称为SnapMirror业务连续性)和文件系统分析的REST API支持。
 扩展了对增强安全性的支持:: 通过支持 Azure 密钥存储， Google Cloud 密钥管理服务， IPsec 和证书签名请求等多种服务和协议，安全性得到了增强。
-增强功能可提高精简性:: ONTAP 9.8 可使用 REST API 提供更高效，更现代化的工作流。例如，现在可以对多种不同类型的固件进行一次性固件更新。
-增强的联机文档:: 现在， ONTAP 联机文档页面包含一些标签，用于指示引入了每个 REST 端点或参数的 ONTAP 版本，包括 9.8 中的新版本。
+增强功能可提高精简性:: ONTAP 9.8 可使用 REST API 提供更高效，更现代化的工作流。例如、现在可以为多种不同类型的固件提供一键式固件更新。
+增强的联机文档:: ONTAP联机文档页面包含一些标签、用于指示ONTAP发行版中引入的每个REST端点或参数、包括9.8中的新增功能。
 改进了从 ONTAPI 过渡到 REST 的支持:: 现在，更多传统 ONTAPI 调用具有相应的 REST API 等效项。此外，我们还提供了一些文档来帮助您确定应使用哪个 REST 端点来取代现有的 ONTAPI 调用。
 扩展了性能指标:: REST API 的性能指标已扩展，包括多个新的存储和网络对象。
 

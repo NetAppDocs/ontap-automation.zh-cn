@@ -10,7 +10,7 @@ summary: 您可以使用此工作流创建具有关联REST角色的用户。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

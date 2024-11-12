@@ -10,7 +10,7 @@ summary: 您可以检索特定文件或文件夹的当前有效权限。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

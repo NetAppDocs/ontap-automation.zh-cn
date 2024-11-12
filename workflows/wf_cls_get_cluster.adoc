@@ -10,7 +10,7 @@ summary: 您可以检索ONTAP集群的配置、包括特定字段。您可以在
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

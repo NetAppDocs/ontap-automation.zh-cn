@@ -10,7 +10,7 @@ summary: 您可以为用户提供有限的数据保护功能。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

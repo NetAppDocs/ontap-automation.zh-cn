@@ -10,7 +10,7 @@ summary: 您可以定义一个角色来限制SVM中的存储卷管理。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

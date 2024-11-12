@@ -10,7 +10,7 @@ summary: NetApp支持使用PowerShell管理ONTAP存储系统。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

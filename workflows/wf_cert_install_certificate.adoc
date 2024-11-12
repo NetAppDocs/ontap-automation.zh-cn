@@ -10,7 +10,7 @@ summary: 您可以在ONTAP集群中安装签名的X.509证书。您可以在配�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

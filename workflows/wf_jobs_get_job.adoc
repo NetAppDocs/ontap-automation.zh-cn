@@ -10,7 +10,7 @@ summary: 您可以检索特定ONTAP作业的实例。通常、您可以执行此
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

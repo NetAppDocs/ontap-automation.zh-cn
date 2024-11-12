@@ -10,7 +10,7 @@ summary: 您可以创建REST角色、使用户能够生成ONTAP 报告。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

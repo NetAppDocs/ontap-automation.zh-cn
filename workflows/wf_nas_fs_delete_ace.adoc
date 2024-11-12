@@ -10,7 +10,7 @@ summary: '您可以从特定文件或文件夹中删除现有访问控制条目(
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

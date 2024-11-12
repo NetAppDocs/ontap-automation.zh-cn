@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/mapping.html 
-keywords: ONTAPI, REST API, mapping, mapping documentation 
-summary: NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。 
+keywords: ontapi, rest api, mapping, mapping documentation, zapi 
+summary: ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。 
 ---
 = ONTAPI 到 REST API 映射
 :hardbreaks:
@@ -16,14 +16,4 @@ summary: NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的
 [role="lead"]
 ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。
 
-API映射文档取决于ONTAP 版本：
-
-* https://docs.netapp.com/us-en/ontap-restmap["ONTAP 9.15.1."^]
-* https://docs.netapp.com/us-en/ontap-restmap-9141["ONTAP 9.14.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9131["ONTAP 9.13.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9121["ONTAP 9.12.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9111["ONTAP 9.11.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9101["ONTAP 9.10.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-991["ONTAP 9.9.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-98["ONTAP 9.8"^]
-
+您可以联机访问当前 https://docs.netapp.com/us-en/ontap-restmap/["ONTAP ONTAPI到REST的映射"^]文档。此外、还提供了一个版本选择器、用于访问基于ONTAP版本的早期文档版本。

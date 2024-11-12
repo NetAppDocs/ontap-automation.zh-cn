@@ -10,7 +10,7 @@ summary: 您可以在命令行界面中使用 Python 3 运行此脚本，以检�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

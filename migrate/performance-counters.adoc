@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: migrate/performance-counters.html 
 keywords: performance, performance counters, mapping 
-summary: ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将这些数据导出为性能计数器、您可以使用这些计数器来评估ONTAP 系统的性能并帮助实现性能目标。 
+summary: ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将此数据导出为一组性能计数器、您可以使用这些计数器来评估ONTAP系统的性能并帮助实现性能目标。 
 ---
 = 性能计数器
 :hardbreaks:
@@ -98,14 +98,7 @@ NOTE: 每个REST端点都提供只读访问、并且仅支持*获取* HTTP方法
 
 NetApp广泛支持将自动化代码从ONTAPI迁移到ONTAP REST API。这包括将文档映射到身份标识在REST API中为给定ONTAPI对象提供的等效性能计数器表。
 
-请根据您使用的ONTAP 版本查看相应的映射文档：
-
-* https://docs.netapp.com/us-en/ontap-pcmap/["ONTAP 9.151性能计数器映射"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9141/["ONTAP 9.14.1性能计数器映射"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9131/["ONTAP 9.13.1性能计数器映射"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9121/["ONTAP 9.12.1性能计数器映射"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9111/["ONTAP 9.11.1性能计数器映射"^]
-
+您可以联机访问当前 https://docs.netapp.com/us-en/ontap-pcmap/["ONTAP性能计数器映射"^]文档。此外、还提供了一个版本选择器、用于访问基于ONTAP版本的早期文档版本。
 
 
 

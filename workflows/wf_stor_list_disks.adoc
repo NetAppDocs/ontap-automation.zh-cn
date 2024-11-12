@@ -10,7 +10,7 @@ summary: 您可以检索集群中的磁盘列表。您可以执行此操作来�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: '您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

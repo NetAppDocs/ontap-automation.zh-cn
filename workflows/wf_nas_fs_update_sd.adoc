@@ -10,7 +10,7 @@ summary: 您可以将特定安全描述符更新到特定文件或文件夹、�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

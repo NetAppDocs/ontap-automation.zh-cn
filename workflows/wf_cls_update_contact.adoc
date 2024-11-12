@@ -10,7 +10,7 @@ summary: 您可以更新集群的联系信息。由于此请求是异步处理�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

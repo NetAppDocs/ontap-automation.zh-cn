@@ -10,7 +10,7 @@ summary: 您可以管理ONTAP集群中通过SVM提供的文件的权限和审核
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

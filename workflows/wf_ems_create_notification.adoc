@@ -10,7 +10,7 @@ summary: 您可以使用以下工作流创建新的EMS通知目标以接收选�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

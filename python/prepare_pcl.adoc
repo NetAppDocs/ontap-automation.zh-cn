@@ -10,7 +10,7 @@ summary: 在使用Python客户端库之前、您应准备本地运行时环境�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

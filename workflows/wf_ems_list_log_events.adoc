@@ -10,7 +10,7 @@ summary: 您可以检索所有事件通知消息或具有特定特征的消息�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

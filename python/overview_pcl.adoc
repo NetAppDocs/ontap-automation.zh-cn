@@ -10,7 +10,7 @@ summary: NetApp ONTAP Python 客户端库是一个软件包，您可以安装该
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

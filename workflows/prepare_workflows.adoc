@@ -10,7 +10,7 @@ summary: 在实时部署中使用ONTAP工作流之前、您应熟悉其结构和
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 根据您的环境、您可以通过多种不同的方式使用ONTAP RB
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
