@@ -590,9 +590,6 @@
   <block id="4921daa1d1156e8a0f7fe7b45dfc92fb" category="section-title">在 ONTAPI 中更改 SnapDiff 可用性</block>
   <block id="e5e32a25be86538826bb7ce943294815" category="paragraph">从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。</block>
   <block id="d96bdb3acb68ad565307604365b57f70" category="paragraph">ONTAP 版本中的 SnapDiff API 可用性定义如下：</block>
-  <block id="c731207305059b4146b7b02e506607f9" category="list-text">ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）</block>
-  <block id="a7fc2881def06d9d5d2e90252bccd071" category="list-text">ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）</block>
-  <block id="1a7f82d18a27e10799e90edeb79d7ff5" category="list-text">ONTAP 9.10.1 ：仅限 v3 （仅限 REST API ）</block>
   <block id="d63266d909698767690c10fa377a617c" category="doc">准备使用 Python 客户端库</block>
   <block id="cc64aef30dda7a27f1a668974ac1e3a8" category="doc">Python 客户端库概述</block>
   <block id="61f3e167c95c469dd90a86ddd901388f" category="paragraph">NetApp ONTAP Python 客户端库是一个软件包，您可以安装该软件包并使用它来编写访问 ONTAP REST API 的脚本。它支持多种底层服务，包括连接管理，异步处理，异常处理和错误消息。通过使用 Python 客户端库，您可以快速开发强大的代码来支持 ONTAP 部署的自动化。</block>
@@ -1954,4 +1951,7 @@
   <block id="5002d79d77c997408c96270b3cd46237" category="list-text">REST API增加了对不能通过ONTAPI获得的新ONTAP 9 8功能的支持。其中包括对ONTAP S3存储分段和服务、SnapMirror主动同步(以前称为SnapMirror业务连续性)和文件系统分析的REST API支持。</block>
   <block id="982a944cf7d3a2f28ae7bfcc8755ec2c" category="list-text">ONTAP 9.8 可使用 REST API 提供更高效，更现代化的工作流。例如、现在可以为多种不同类型的固件提供一键式固件更新。</block>
   <block id="c408f623f341094b81899c67b52a1051" category="list-text">ONTAP联机文档页面包含一些标签、用于指示ONTAP发行版中引入的每个REST端点或参数、包括9.8中的新增功能。</block>
+  <block id="3ae9565cf3f15d0b18e64848bf75114f" category="list-text">ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）</block>
+  <block id="87fa2e5a8b05545afa808741d9743b82" category="list-text">ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）</block>
+  <block id="12f58f465df2b1ae3ddb0a5303288c2d" category="list-text">API.10.1及更高版本：仅限v3 (仅限ONTAP 9)</block>
 </blocks>
