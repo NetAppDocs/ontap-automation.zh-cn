@@ -38,7 +38,7 @@ NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创
 Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。请参见 link:../python/overview_pcl.html["Python 客户端库"] 有关详细信息 ...
 
 .PowerShell工具包
-您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。请参见 https://review.docs.netapp.com/us-en/ontap-automation_devnet-update/pstk/overview_pstk.html["PowerShell工具包概述"^] 有关详细信息 ...
+您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 link:../pstk/overview_pstk.html["PowerShell工具包概述"] 。
 
 
 
