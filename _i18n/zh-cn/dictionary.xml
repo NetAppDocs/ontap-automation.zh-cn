@@ -1953,5 +1953,5 @@
   <block id="12f58f465df2b1ae3ddb0a5303288c2d" category="list-text">API.10.1及更高版本：仅限v3 (仅限ONTAP 9)</block>
   <block id="973c87360e5799b65d34a6ed39aa97fa" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="c3cab3c4ac16333d767da4a7df87c248" category="inline-link-macro-rx"></block> 。</block>
   <block id="32a3b0f895ce3b2bab0fd75296a6d7f7" category="inline-link">OnCommand Workflow Automation文档</block>
-  <block id="ad717655f6134a7a7b1257cccf5f85ba" category="list-text"><block ref="ad717655f6134a7a7b1257cccf5f85ba" category="inline-link-rx"></block></block>
+  <block id="a370e7923c07d85d87e81fefb3ea1979" category="list-text"><block ref="a370e7923c07d85d87e81fefb3ea1979" category="inline-link-rx"></block></block>
 </blocks>

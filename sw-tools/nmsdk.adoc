@@ -29,5 +29,5 @@ NOTE: 虽然NetApp易管理性SDK和OnCommand Workflow Automation仍受支持、
 * https://mysupport.netapp.com/site/["NetApp 支持站点"^]
 * https://www.netapp.com/company/interoperability/["NetApp 互操作性表工具"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63638&language=en-US["NetApp易管理性SDK文档"^]
-* https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["OnCommand Workflow Automation文档"^]
+* https://docs.netapp.com/us-en/workflow-automation/["OnCommand Workflow Automation文档"^]
 
