@@ -461,9 +461,6 @@
   <block id="5e952c79470abe484528aaaf836add9e" category="cell">拒绝执行请求的权限。</block>
   <block id="c9f0f895fb98ab9159f51fd0297e236d" category="cell">8.</block>
   <block id="cdb0d512cc3fdc0adc8795b79f91c40f" category="cell">资源正在使用中。</block>
-  <block id="364c42d2725eeecf011214a366b6186d" category="paragraph">Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的 ONTAP 主要版本号和次要版本号的组合，以及 ONTAP 版本中客户端的次要版本。例如，有效版本号包括： 9.2.1 ， 9.6.2 和 9.1.1 。</block>
-  <block id="85ca39724867fb05bf4fd74b5fcac448" category="paragraph">您必须使用 pip 从 Python Package Index （ Pypi ）网站安装 NetApp_ONTAP 软件包。</block>
-  <block id="6353689d5872d03a15424fcc44ff9a38" category="admonition">NetApp 维护一个 GitHub 存储库，其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。</block>
   <block id="e5a1747d44133108641b2ef511e802b0" category="inline-link">ONTAP REST Python GitHub 存储库</block>
   <block id="62277cb84205b149ab77912513497f3a" category="paragraph"><block ref="62277cb84205b149ab77912513497f3a" category="inline-link-rx"></block></block>
   <block id="8ed6428212b41847f33c5db651c2aa70" category="doc">REST Web 服务基础</block>
@@ -590,9 +587,6 @@
   <block id="4921daa1d1156e8a0f7fe7b45dfc92fb" category="section-title">在 ONTAPI 中更改 SnapDiff 可用性</block>
   <block id="e5e32a25be86538826bb7ce943294815" category="paragraph">从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。</block>
   <block id="d96bdb3acb68ad565307604365b57f70" category="paragraph">ONTAP 版本中的 SnapDiff API 可用性定义如下：</block>
-  <block id="d63266d909698767690c10fa377a617c" category="doc">准备使用 Python 客户端库</block>
-  <block id="cc64aef30dda7a27f1a668974ac1e3a8" category="doc">Python 客户端库概述</block>
-  <block id="61f3e167c95c469dd90a86ddd901388f" category="paragraph">NetApp ONTAP Python 客户端库是一个软件包，您可以安装该软件包并使用它来编写访问 ONTAP REST API 的脚本。它支持多种底层服务，包括连接管理，异步处理，异常处理和错误消息。通过使用 Python 客户端库，您可以快速开发强大的代码来支持 ONTAP 部署的自动化。</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">准备使用这些工作流</block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">REST 资源摘要</block>
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="inline-link-macro">ONTAP REST API</block>
@@ -915,8 +909,6 @@
   <block id="209360388d2327cf0da8f0db9d83d822" category="list-text">存储池</block>
   <block id="d70c1c333f3dd79f029de6a7f21196cc" category="list-text">添加了多个端点、用于访问ONTAP 存储池。支持在集群中创建和列出存储池、以及按ID更新和删除特定池。</block>
   <block id="93100500d8b18f60a692c67b62fe3e68" category="summary">您可以在命令行界面中使用 Python 3 运行此脚本，以检索 ONTAP 集群配置。</block>
-  <block id="0b34effe852a73597e152fe2e5523f1e" category="summary">在使用Python客户端库之前、您应准备本地运行时环境。</block>
-  <block id="1c1bc2e99a3cb180530f75cfed772539" category="summary">NetApp ONTAP Python 客户端库是一个软件包，您可以安装该软件包并使用它来编写访问 ONTAP REST API 的脚本。通过使用 Python 客户端库，您可以快速开发强大的代码来支持 ONTAP 部署的自动化。</block>
   <block id="85689804a28905b0c1195ff1c4debf5c" category="paragraph">计数器管理器子系统会捕获有关ONTAP 的各种统计信息。您可以访问此信息以评估系统性能。此资源类型是在ONTAP 9.11中引入的。</block>
   <block id="4ceab4a3abb75365d3643e7027283265" category="paragraph">您可以创建和管理 MetroCluster 部署，包括执行切换或切回操作。此资源类型是ONTAP 9.8中的新增资源、更新为9.11。</block>
   <block id="ef706b335d4d5abcae8612013f999056" category="paragraph">您可以使用这些端点检索有关所有平台环境传感器的详细信息。此资源类型是在ONTAP 9.11中引入的。</block>
@@ -1269,9 +1261,6 @@
   <block id="0446fa4ca147c362e3712c199d31f607" category="paragraph">REST API广泛涵盖了ONTAP 提供的功能和工具。但是、在某些情况下、通过REST API直接访问ONTAP 命令行界面可能会很有用。</block>
   <block id="4dee1eb90de4bde1248e4896c4dc4381" category="inline-link">REST命令行界面直通示例</block>
   <block id="dfd00e91a832f40b6d730ced03aa0c44" category="paragraph">有关此功能的简介、请参见 <block ref="430c6d579ad9ddc178e54d66821e7597" category="inline-link-macro-rx"></block>。有关Python示例、请参见<block ref="93e4c8d6cc1dc72ab5e25d8c76e6620b" category="inline-link-rx"></block>。</block>
-  <block id="5b6f04d9b27dfe7b2a32885119050b9f" category="paragraph">Python客户端库是一个软件包、您可以安装它并使用它通过Python访问ONTAP REST API。它允许您快速开发强大的代码、以实现ONTAP 部署的自动化。</block>
-  <block id="c6b457514ae1938bb2d3532b1e2647dd" category="inline-link">Python客户端库示例</block>
-  <block id="a33bae430fa2ebfdc47724814a7caf8c" category="paragraph">有关Python客户端库的简介、请参见 <block ref="ac55708e9eb87a85b101cbb6f38b8a1d" category="inline-link-macro-rx"></block>。有关Python示例、请参见<block ref="7bcad7f4339ec59707ec4753e36168b7" category="inline-link-rx"></block>。</block>
   <block id="7c3954a6c1ca76b5209bce67c8c332e8" category="doc">已取消ONTAPI</block>
   <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="inline-link">ONTAP 9.13.1</block>
   <block id="cbec0159857226b0512b2b18211eca44" category="paragraph">ONTAP 9.13.1通过20多个新的API调用不断扩展ONTAP REST API的功能。这些端点支持新的ONTAP 功能以及对现有功能的增强功能。此版本重点改进了安全性、资源管理、增强的SVM配置选项和性能指标。</block>
@@ -1599,7 +1588,6 @@
   <block id="dd95513a6bbe255b9283c48df37da163" category="paragraph-title">正在迁移旧版ONTAPI代码以使用REST</block>
   <block id="efea648fde82cca9a59a6c5e90f3d617" category="section-title">客户端软件工具包</block>
   <block id="9d344c4d689635bee0d71b95de7b0c04" category="paragraph">NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创建自动化代码变得更加轻松。您应选择一种适合您的开发语言和环境的解决方案。</block>
-  <block id="8d5ff34376065bd3b5b8beab5c2a0a8f" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。请参见 <block ref="a9a8739a57e07a475c98045ed71a9c60" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="978685ea07530013be4ee7935a3a51c0" category="section-title">自动化框架</block>
   <block id="045c9b234c3f9802c9287b1b0cd9cebf" category="paragraph">您可以使用多个框架之一创建和部署自动化代码</block>
   <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="paragraph-title">Ansible</block>
@@ -1815,7 +1803,6 @@
   <block id="f358359db0f64d4f6246e5efe7bf61cd" category="inline-link">NetApp PCL 9.6文档</block>
   <block id="c6b6406d472f50178a7d6d34c51c2828" category="list-text"><block ref="c6b6406d472f50178a7d6d34c51c2828" category="inline-link-rx"></block></block>
   <block id="7f2ab26d3f83b0c07dfcecd8c4e4d730" category="paragraph-title">ONTAP版本的软件包和文档</block>
-  <block id="fe89184d8cb9195c1086f74c6b4d0d8b" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。请参见 <block ref="75af8f7877b901b5fed8d9ea10b7425b" category="inline-link-macro-rx"></block> 有关详细信息 ...安装要求随每个软件包一起提供、并包括以下各项的不同版本：</block>
   <block id="23eeeb4347bdd26bfc6b7ee9a3b755dd" category="list-text">Python</block>
   <block id="3298f13049d19cffaa37ca931dd4d421" category="list-text">请求</block>
   <block id="4f11865970671ba7b86c9b6eda8a46ed" category="list-text">Requests-toolbelt</block>
@@ -1954,4 +1941,19 @@
   <block id="973c87360e5799b65d34a6ed39aa97fa" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="c3cab3c4ac16333d767da4a7df87c248" category="inline-link-macro-rx"></block> 。</block>
   <block id="32a3b0f895ce3b2bab0fd75296a6d7f7" category="inline-link">OnCommand Workflow Automation文档</block>
   <block id="a370e7923c07d85d87e81fefb3ea1979" category="list-text"><block ref="a370e7923c07d85d87e81fefb3ea1979" category="inline-link-rx"></block></block>
+  <block id="4194600c450cd5967951e54d38f6d438" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。有关详细信息、请参见 <block ref="816918ba5e9c5f6dcac33de8016d4ab9" category="inline-link-macro-rx"></block> 。</block>
+  <block id="c05717e9174f828651b78317f146b66b" category="paragraph">Python客户端库是一个软件包、您可以安装它并使用它通过Python访问ONTAP REST API。它允许您快速开发强大的代码、以实现ONTAP 部署的自动化。要了解有关Python客户端库的更多信息，请参见<block ref="816918ba5e9c5f6dcac33de8016d4ab9" category="inline-link-macro-rx"></block>。</block>
+  <block id="cca5d0ba9969f6743317e980adb3c9e1" category="summary">NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。</block>
+  <block id="460a180d16bdae0c968e9ef22e4c7936" category="doc">了解ONTAP Python客户端库</block>
+  <block id="13ce983c03db476a78e9bb2eaaa5cdcc" category="paragraph-title">优势和功能</block>
+  <block id="95b1610941323127f65cb3db6cff1ca1" category="paragraph">您可以使用Python客户端库快速开发强大的代码、以自动管理ONTAP部署。它提供多种底层服务、包括：</block>
+  <block id="35a07dde4cdfcf3565f03875ee748ac6" category="list-text">连接管理</block>
+  <block id="8fe3bb19a244ccfeddfe93062360622d" category="list-text">异常处理</block>
+  <block id="06856d0d21cf25fed37bf8f01dd8e070" category="list-text">统一错误消息</block>
+  <block id="4eabbfd21dbe2c323da49bedb2a5c62c" category="paragraph">Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。</block>
+  <block id="472bdbf647fdfc94078ab6f39ba1a11e" category="paragraph">必须使用*pip*实用程序ONTAP从NetApp软件包索引(PyPI)站点安装Pypon_Python软件包。</block>
+  <block id="5316c1611ca1b378546362193d538427" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。有关详细信息、请参见 <block ref="75af8f7877b901b5fed8d9ea10b7425b" category="inline-link-macro-rx"></block> 。每个软件包都包含安装要求、并指定以下各项的不同版本：</block>
+  <block id="05ccfbea6601dcca671775f24a6b14d3" category="paragraph-title">代码示例</block>
+  <block id="2284945e609b7e5c75ffeed3e93b30dc" category="paragraph">NetApp维护着一个GitHub存储库、其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。有关详细信息、请参见GitHub上的以下位置：</block>
+  <block id="a9672c1d2a17caa13c69c68927db925b" category="sidebar">了解Python客户端库</block>
 </blocks>

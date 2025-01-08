@@ -4,10 +4,8 @@ title: 软件工具
 entries:
 - title: Python 客户端库
   entries:
-  - title: 概述
-    url: "/python/overview_pcl.html"
-  - title: 准备使用 Python 客户端库
-    url: "/python/prepare_pcl.html"
+  - title: 了解Python客户端库
+    url: "/python/learn-about-pcl.html"
   - title: 软件包和文档
     url: "/python/packages.html"
   - title: 用于检索集群配置的脚本

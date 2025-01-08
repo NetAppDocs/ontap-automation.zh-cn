@@ -35,7 +35,7 @@ ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调�
 NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创建自动化代码变得更加轻松。您应选择一种适合您的开发语言和环境的解决方案。
 
 .Python 客户端库
-Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。请参见 link:../python/overview_pcl.html["Python 客户端库"] 有关详细信息 ...
+Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。有关详细信息、请参见 link:../python/learn-about-pcl.html["Python 客户端库"] 。
 
 .PowerShell工具包
 您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 link:../pstk/overview_pstk.html["PowerShell工具包概述"] 。

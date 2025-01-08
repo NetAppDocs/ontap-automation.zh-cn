@@ -52,9 +52,7 @@ REST API广泛涵盖了ONTAP 提供的功能和工具。但是、在某些情况
 
 == Python 客户端库
 
-Python客户端库是一个软件包、您可以安装它并使用它通过Python访问ONTAP REST API。它允许您快速开发强大的代码、以实现ONTAP 部署的自动化。
-
-有关Python客户端库的简介、请参见 link:../python/overview_pcl.html["Python 客户端库概述"]。有关Python示例、请参见 https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Python客户端库示例"^]。
+Python客户端库是一个软件包、您可以安装它并使用它通过Python访问ONTAP REST API。它允许您快速开发强大的代码、以实现ONTAP 部署的自动化。要了解有关Python客户端库的更多信息，请参见link:../python/learn-about-pcl.html["Python 客户端库"]。
 
 
 
