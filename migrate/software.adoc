@@ -17,7 +17,7 @@ summary:
 NetApp提供了Python示例脚本和其他相关软件、可支持您从ONTAP API迁移到ONTAP REST API。下面介绍了其中最重要的样本。
 
 
-NOTE: 所有Python代码示例均可从获取 https://github.com/NetApp/ontap-rest-python["NetApp ONTAP REST Python"^] GitHub存储库。
+NOTE: 所有Python代码示例均可从GitHub存储库获得 https://github.com/NetApp/ontap-rest-python["NetApp ONTAP REST Python"^]。您还应查看中提供的资源link:../additional/learn_more.html["详细了解ONTAP REST API"]。
 
 
 

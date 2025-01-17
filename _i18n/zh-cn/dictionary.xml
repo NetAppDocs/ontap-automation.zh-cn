@@ -320,9 +320,6 @@
   <block id="d294313e121bfbd45fa5b55ca0e3324d" category="paragraph">您可以创建 S3 策略并将其与资源关联以定义各种权限。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="section-title">用户</block>
   <block id="fcb4876473d3ad9e68e00cb94089cd42" category="paragraph">S3 用户帐户在 S3 服务器上维护。用户帐户基于一对密钥，并与其控制的存储分段相关联。此资源类型是在 ONTAP 9.7 中引入的。</block>
-  <block id="66678bc28616cb8b07e14e87fe993fc3" category="inline-link">netapp.io/2020/12/17/ontapi-rest-mapping</block>
-  <block id="62bed9184b42d07dbb453a2b1a516b44" category="paragraph"><block ref="62bed9184b42d07dbb453a2b1a516b44" category="inline-link-rx"></block></block>
-  <block id="4561b01a73d4a9676d22f56757f49ab2" category="paragraph">CLI 直通提供了一种使用 REST API 执行 ONTAP 命令行界面命令的技术。</block>
   <block id="3232acac3eec8e3d87880c5b41ab690d" category="paragraph">如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
   <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">ONTAP 集群管理 LIF 的 IP 地址或主机名</block>
@@ -713,14 +710,9 @@
   <block id="b134a801a1a3888498968fc4ea760cf7" category="list-text">请求</block>
   <block id="3d2e7e9224f83f4694b1be45b9e158ba" category="list-text">批准组</block>
   <block id="b728900a222dcfb25f698d581d9e8863" category="paragraph">ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。</block>
-  <block id="cb92722e64f82db47ee23f2328dab4f8" category="paragraph">有几篇博客文章可帮助您更好地了解如何从ONTAPI迁移到ONTAP REST API。</block>
   <block id="934e5799967276baeea05569ba62d8bf" category="paragraph">NetApp支持通过映射文档从专有的ONTAPI迁移到ONTAP REST API。</block>
   <block id="2ed29ad200a6fbf15d4f57d753e35d13" category="paragraph">有几种技术可帮助您基于REST API实现ONTAP 自动化环境转型。</block>
-  <block id="8d86b95caa5436677bd35f7cc5d37007" category="inline-link">www.netapp.com/blog/transform-automation-ontap-rest-api</block>
-  <block id="bac1aa7d8c1a68d24cd17b24f39e06b0" category="paragraph"><block ref="bac1aa7d8c1a68d24cd17b24f39e06b0" category="inline-link-rx"></block></block>
   <block id="a744a6f8fd15a39f0d95ce77ce3db16c" category="paragraph">NetApp提供了一个工具、可帮助客户和合作伙伴过渡到ONTAP REST API。</block>
-  <block id="e69e5f7f3b9067e533a0c848ce387094" category="inline-link">netapp.io/2022/21/Sovering-from-ontapizapi-using-ontapi-use-reporting-tool</block>
-  <block id="9a602388f357467e0f50667f5767b094" category="paragraph"><block ref="9a602388f357467e0f50667f5767b094" category="inline-link-rx"></block></block>
   <block id="6e6432511bc053d1916f5f8f0915598d" category="sidebar">迁移到REST API</block>
   <block id="9e7684bc06c1628bc838239d69633ef1" category="sidebar">ONTAPI到REST映射</block>
   <block id="8306b094d2e16f41079e29117db4bb23" category="cell">Instance name</block>
@@ -1158,13 +1150,9 @@
   <block id="11593a40313671a88f29e6475859f238" category="paragraph-title">软件包名称和版本</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="paragraph-title">安装</block>
   <block id="2e02e4fcb54e6e1277182e7dcc734294" category="paragraph-title">ONTAPI 到 REST 的映射</block>
-  <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">从ONTAPI将自动化转变为ONTAP REST API</block>
-  <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">使用ONTAPI使用情况报告工具从ONTAPI过渡</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">您的第一次API调用</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">ONTAP REST API的新增功能</block>
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">为了帮助命令行界面和ONTAP 用户过渡到ONTAP REST API、ONTAP 提供了一个专用REST API端点、可用于访问任何命令行界面命令。</block>
-  <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
-  <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
   <block id="f820365d9bff90a726b9e0e66581d39d" category="paragraph">ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将此数据导出为一组_performance计数器_、您可以使用这些计数器评估ONTAP 系统的性能并帮助实现性能目标。</block>
   <block id="a47c181a1090073afb97b1f1a4307d7d" category="section-title">访问ONTAP 性能计数器</block>
   <block id="cdbb9578a759a13c2c7134feb12a72ea" category="paragraph">您可以使用两个不同的API以及通过ONTAP 命令行界面访问ONTAP 性能计数器。</block>
@@ -1247,7 +1235,6 @@
   <block id="3d1c384a3746b6aef27889dab20ca2a0" category="doc">工具和软件</block>
   <block id="0a88f9e4d64baf56329012472f2f7f1c" category="paragraph">NetApp提供了Python示例脚本和其他相关软件、可支持您从ONTAP API迁移到ONTAP REST API。下面介绍了其中最重要的样本。</block>
   <block id="2025f1a4ba0e95c1bd1bd27f08690087" category="inline-link">NetApp ONTAP REST Python</block>
-  <block id="122b5178f05cbf36001150787ae34516" category="admonition">所有Python代码示例均可从获取<block ref="e359793ef9022d56bacc77e70a2f7722" category="inline-link-rx"></block> GitHub存储库。</block>
   <block id="5d22b30ce5603c5346d7b65cbcf3433f" category="paragraph-title">ONTAPI使用情况报告工具</block>
   <block id="7842d4d8803b176c1b2259dec8456d2e" category="paragraph">ONTAPI使用情况报告工具旨在帮助NetApp专业服务人员、客户和合作伙伴确定其ONTAP 环境中的ONTAPI使用情况。下表介绍了针对三种不同使用情形提供的脚本。</block>
   <block id="f907e651164789346ae0a1e257c462d8" category="cell">脚本</block>
@@ -1565,7 +1552,6 @@
   <block id="8cdc96bc9ea6b47bb91dc9a53923dd2c" category="list-text">为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见 <block ref="9a78e4571d9a7f8312d61713dd66ccf3" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="a45cab230f2297dd4eb30fef224dd154" category="section-title">典型的REST API事务</block>
   <block id="f53d66bdb1fa04bbb3f2f929505e7427" category="paragraph">您还可以使用其他几种资源来帮助自动部署和管理ONTAP存储系统。</block>
-  <block id="7c4309c7347e40c4e823d0bc8c4d6c52" category="paragraph"><block ref="7c4309c7347e40c4e823d0bc8c4d6c52" category="inline-link-rx"></block></block>
   <block id="940b33dd3ba3d167b07b98a018af32be" category="paragraph"><block ref="940b33dd3ba3d167b07b98a018af32be" category="inline-link-rx"></block></block>
   <block id="0937dacc143a9ef9a8e961bb05d706cb" category="list-text">很好地介绍了NetApp Python客户端库以及如何开始使用该库编写代码。</block>
   <block id="c481c55f899fe826c43a53c975e485f0" category="list-text">了解一下经Ans负责人 认证的模块。</block>
@@ -1685,19 +1671,14 @@
   <block id="e874bfe48b1932682eea5f15cdac547d" category="list-text">对当前的ONTAP自动化技术进行了很好的总结。</block>
   <block id="0dd46819f1e5a6578f91522b3ccce0d5" category="inline-link">自动化的新常态</block>
   <block id="2459315257ccea8fa6d62e2fb4393e71" category="paragraph"><block ref="2459315257ccea8fa6d62e2fb4393e71" category="inline-link-rx"></block></block>
-  <block id="60b0a2f4de372813ce0c25e3f42a92d7" category="list-text">介绍如何在GitHub上访问和使用ONTAP REST API的Python示例脚本。</block>
-  <block id="14e4b8ad2412579270cd2cebdea092a3" category="inline-link">在GitHub上开始使用示例脚本</block>
-  <block id="7ef78cb3e5e9a6eb7e9b12ce6b631862" category="paragraph"><block ref="7ef78cb3e5e9a6eb7e9b12ce6b631862" category="inline-link-rx"></block></block>
   <block id="fa835357fbfbf43ac89809a345631107" category="list-text">您可以探索如何使用ONTAP REST API管理文件安全性和权限。</block>
   <block id="91a2d97cb1dce93a24a0e1d4e0fccd05" category="paragraph"><block ref="91a2d97cb1dce93a24a0e1d4e0fccd05" category="inline-link-rx"></block></block>
   <block id="e79e715e42c36e10134f5afe5466361c" category="list-text">您可以监控ONTAP事件以随时了解系统活动。可以使用REST API自动配置和管理这些事件。</block>
   <block id="798ae5c6621da1def7dfe9ad86f985f2" category="list-text">在RBAC安全环境中、您可以使用REST API配置角色和访问级别。</block>
   <block id="0ca9887d7651aa13af35dedfbc7ff232" category="inline-link">使用ONTAP REST API的基于角色的访问控制(Role-Based Access Control、RBAC)</block>
   <block id="372901dd8cca763e7c848d950ad9aa2a" category="paragraph"><block ref="372901dd8cca763e7c848d950ad9aa2a" category="inline-link-rx"></block></block>
-  <block id="f62a1193e5d6157ad520784d503dd173" category="list-text">NetApp提供了使用ONTAP REST API的Python示例脚本。</block>
   <block id="5feaaa740aecb867a44dd31f2ad57c95" category="inline-link">ONTAP REST API Python示例脚本现已在GitHub上提供！</block>
   <block id="8672380e8a084cc66d295882a9470f26" category="paragraph"><block ref="8672380e8a084cc66d295882a9470f26" category="inline-link-rx"></block></block>
-  <block id="fe0b675f6971f659beff04cec0058cbf" category="list-text">休息时喝咖啡(6集)。</block>
   <block id="ababb8b6a8734f386dea1560ea9db197" category="inline-link">ONTAP REST API基础知识</block>
   <block id="1ba0e6e215c953e85183c8495eb322fb" category="list-text"><block ref="1ba0e6e215c953e85183c8495eb322fb" category="inline-link-rx"></block></block>
   <block id="4da480e8a798230788926916a5db51aa" category="inline-link">ONTAP REST API的功能</block>
@@ -1751,20 +1732,7 @@
   <block id="44285685546e8a285061253138136305" category="paragraph">另请查看<block ref="5a0195c863eb934ee5e5002fb412c453" category="inline-link-rx"></block> 开始使用。</block>
   <block id="895d9f6334617339bb786f62f4a5c67f" category="paragraph-title">PowerShell工具包</block>
   <block id="b2ee0232c3d3f9b1b42c01b23f2304c4" category="paragraph">Ansible 是一款开源软件工具，支持配置，配置管理和应用程序部署。自 RedHat 发布并随后获得该软件以来，该软件的受欢迎程度不断提高。NetApp 提供了 Ansible 认证模块，客户可以使用这些模块自动管理 ONTAP 存储系统。请参见 <block ref="8e7a6d97666e30efff2393bbc1610342" category="inline-link-macro-rx"></block> 和<block ref="1b4969cc73ff961c9b216f73f676bf04" category="inline-link-rx"></block> 适用于追加信息 。</block>
-  <block id="3bf379567e5ff2ee0ebd31f7d516b365" category="summary">我们提供了多篇博客文章和视频、帮助您更好地了解如何使用Python客户端库。</block>
-  <block id="86670b28b0a0c13eeda3cbeec2b6362d" category="paragraph">我们提供了几篇博客文章、帮助您更好地了解如何使用Python客户端库。</block>
-  <block id="e6979ee7f5a6d9111fa5704e882d44b3" category="paragraph-title">利用Python客户端库简化ONTAP REST API的使用</block>
   <block id="fb370e018bd573b7f61e8a3ee3eac836" category="paragraph">本博客很好地介绍了ONTAP Python客户端库的功能。</block>
-  <block id="323ea4c0945153e3df0ff4e8435a6484" category="inline-link">www.netapp.com/blog/simplify-ontap-rest-api-consumption</block>
-  <block id="cd5bb5c12dffd9e08ed24efc3c708c87" category="paragraph"><block ref="cd5bb5c12dffd9e08ed24efc3c708c87" category="inline-link-rx"></block></block>
-  <block id="dd81fb49af5a569debc17c94c6e143f6" category="paragraph-title">ONTAP REST API Python客户端库入门</block>
-  <block id="d40594433775c44239cdb1be6c2145dc" category="paragraph">这是一个由三部分组成的系列博客、其中涵盖了有关Python客户端库的更多详细信息。</block>
-  <block id="72ac1e17860ab83140bee5f8b63ab3b5" category="inline-link">NetApp.io/2020-06/09/ONTAP - REST - API - pyPython -客户端-库- pt1</block>
-  <block id="6ce15c3400f2e95cd0f8f03dc9e181b1" category="paragraph">第1部分：<block ref="621451882a122e45c1ea129fd2febf12" category="inline-link-rx"></block></block>
-  <block id="476672cb8735d01fb3d8edf30fa2009a" category="inline-link">NetApp.io/2020-06/09/ONTAP -rest-aI-pyyPython客户端库-pt2/</block>
-  <block id="490e2dee1b4d1da33a1ba638e5861b68" category="paragraph">第2部分：<block ref="0e829edfac15b600e5db829e0dbcae43" category="inline-link-rx"></block></block>
-  <block id="a9adf5e105b5d632566d99bb7f32a6f9" category="inline-link">NetApp.io/2020-06/09/ONTAP - REST - API-pyPython -客户端-库-PT3</block>
-  <block id="e22079c2317a1e68e469eede383260df" category="paragraph">第3部分：<block ref="f97052e0926ab7c2261472d6fa9ba8c2" category="inline-link-rx"></block></block>
   <block id="82285d8d320aa0ca532320803369535d" category="inline-link">ONTAP REST Python客户端库示例</block>
   <block id="5ba737ef4be217f04eef26090cbae251" category="list-text"><block ref="5ba737ef4be217f04eef26090cbae251" category="inline-link-rx"></block></block>
   <block id="e7847c34369de18fbc7a45ef5f19f0b9" category="doc">软件包和文档</block>
@@ -1956,4 +1924,26 @@
   <block id="05ccfbea6601dcca671775f24a6b14d3" category="paragraph-title">代码示例</block>
   <block id="2284945e609b7e5c75ffeed3e93b30dc" category="paragraph">NetApp维护着一个GitHub存储库、其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。有关详细信息、请参见GitHub上的以下位置：</block>
   <block id="a9672c1d2a17caa13c69c68927db925b" category="sidebar">了解Python客户端库</block>
+  <block id="71b7850b814b7b3f6a252f8b1388d29c" category="doc">详细了解ONTAP REST API</block>
+  <block id="a02290eb5e813cedf47247b3adf306c8" category="paragraph">博客文章根据主题分为几个部分。</block>
+  <block id="0db377921f4ce762c62526131097968f" category="section-title">常规</block>
+  <block id="a8f7f4170b418c4edcd8ff5a4c735cf9" category="list-text">休息时喝咖啡(6集)：</block>
+  <block id="189695f6b233799c22edeae9ef743a5e" category="list-text">介绍如何使用NetApp在GitHub上提供的Python示例脚本来访问ONTAP REST API。</block>
+  <block id="f790901c0bd3db94c97c95372da93eba" category="inline-link">利用Python客户端库简化ONTAP REST API的使用</block>
+  <block id="c1daf9700f6d042dec0127ce0de95f43" category="paragraph"><block ref="c1daf9700f6d042dec0127ce0de95f43" category="inline-link-rx"></block></block>
+  <block id="c7e50ae6f1278232800cf396d2473ff5" category="list-text">下面是有关Python客户端库入门的三部分系列博客：</block>
+  <block id="f3353b172c62b25c5b5749c72b138281" category="inline-link">第1部分</block>
+  <block id="9a63c9de19a8eb52690f451f08d98966" category="list-text"><block ref="9a63c9de19a8eb52690f451f08d98966" category="inline-link-rx"></block></block>
+  <block id="6417c68d02736b9d6bbccd60d0e3bd39" category="inline-link">第2部分</block>
+  <block id="abbc3d8dfab1ac762a8c74871f8d356d" category="list-text"><block ref="abbc3d8dfab1ac762a8c74871f8d356d" category="inline-link-rx"></block></block>
+  <block id="09acdc2204c9ba42a05804a7a4ed4f76" category="inline-link">第3部分</block>
+  <block id="68abb8ef58d33d29d013d34fa31e3f9f" category="list-text"><block ref="68abb8ef58d33d29d013d34fa31e3f9f" category="inline-link-rx"></block></block>
+  <block id="be7a051497b75c91b2ec91ffdbdb5cc3" category="section-title">正在迁移到REST API</block>
+  <block id="a67b7864a36cd08cc608eba2720d18f7" category="paragraph"><block ref="a67b7864a36cd08cc608eba2720d18f7" category="inline-link-rx"></block></block>
+  <block id="e0e8eb9fa6a9c4b6836a42b5f9badc22" category="inline-link">从ONTAPI将自动化转变为ONTAP REST API</block>
+  <block id="a8229f2e627898671ea5ee497a4c5489" category="paragraph"><block ref="a8229f2e627898671ea5ee497a4c5489" category="inline-link-rx"></block></block>
+  <block id="15cf2f6738a770890a0ba990f1543d8d" category="inline-link">使用ONTAPI使用情况报告工具从ONTAPI (ZAPI)过渡</block>
+  <block id="2718df1a2d0085e67f1f9cfb09960b20" category="paragraph"><block ref="2718df1a2d0085e67f1f9cfb09960b20" category="inline-link-rx"></block></block>
+  <block id="6f44ad18926a737f5583547164ea23a6" category="admonition">所有Python代码示例均可从GitHub存储库获得<block ref="e359793ef9022d56bacc77e70a2f7722" category="inline-link-rx"></block>。您还应查看中提供的资源<block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>。</block>
+  <block id="afadfcc5e8834b85c88b2a5e94fdf7bc" category="admonition">您还应查看中提供的资源<block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>。</block>
 </blocks>

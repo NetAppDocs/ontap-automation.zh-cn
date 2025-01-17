@@ -41,8 +41,6 @@ indexpage:
       url: "/migrate/mapping.html"
     - title: 性能计数器
       url: "/migrate/performance-counters.html"
-    - title: 博客文章
-      url: "/migrate/blogs_migrate.html"
   - title: 知识和支持
     links:
     - title: 了解更多信息。

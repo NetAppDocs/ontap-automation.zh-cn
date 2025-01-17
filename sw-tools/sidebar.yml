@@ -10,8 +10,6 @@ entries:
     url: "/python/packages.html"
   - title: 用于检索集群配置的脚本
     url: "/python/script_retrieve_cluster_configuration.html"
-  - title: 博客文章
-    url: "/python/blogs_pcl.html"
 - title: PowerShell工具包
   entries:
   - title: 概述

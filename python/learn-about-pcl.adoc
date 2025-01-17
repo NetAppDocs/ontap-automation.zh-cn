@@ -16,6 +16,9 @@ summary: NetApp ONTAP Python客户端库是一个软件包、您可以安装它�
 [role="lead"]
 NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。
 
+
+NOTE: 您还应查看中提供的资源link:../additional/learn_more.html["详细了解ONTAP REST API"]。
+
 .优势和功能
 您可以使用Python客户端库快速开发强大的代码、以自动管理ONTAP部署。它提供多种底层服务、包括：
 

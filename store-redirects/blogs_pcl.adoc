@@ -1,5 +1,5 @@
 ---
-permalink: migrate/blogs.html 
+permalink: python/blogs_pcl.html 
 redirect: ontap-automation/additional/learn_more.html 
 ---
 = 
