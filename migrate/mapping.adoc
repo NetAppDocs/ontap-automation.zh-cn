@@ -4,7 +4,7 @@ permalink: migrate/mapping.html
 keywords: ontapi, rest api, mapping, mapping documentation, zapi 
 summary: ONTAP REST API在大多数领域都包含与ONTAPI等效的功能。NetApp提供的文档介绍了从ONTAPI调用到等效REST API调用的映射。 
 ---
-= ONTAPI 到 REST API 映射
+= ONTAPI到ONTAP REST API映射
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

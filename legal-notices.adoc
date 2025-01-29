@@ -4,7 +4,7 @@ permalink: legal-notices.html
 keywords: copyrights, notice, trademarks, patents, privacy, open source 
 summary: 法律声明提供对版权声明、商标、专利等的访问。 
 ---
-= 法律声明
+= ONTAP REST API的法律声明
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: migrate/software.html
 keywords:  
 summary:  
 ---
-= 工具和软件
+= 支持ONTAP REST API的工具和软件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

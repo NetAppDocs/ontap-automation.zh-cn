@@ -4,7 +4,7 @@ permalink: workflows/prepare_workflows.html
 keywords: workflows, preparation, prepare to use workflows 
 summary: 在实时部署中使用ONTAP工作流之前、您应熟悉其结构和格式。 
 ---
-= 准备使用这些工作流
+= 准备使用ONTAP REST API工作流
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

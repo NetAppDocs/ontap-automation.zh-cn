@@ -4,7 +4,7 @@ permalink: migrate/performance-counters.html
 keywords: performance, performance counters, mapping 
 summary: ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将此数据导出为一组性能计数器、您可以使用这些计数器来评估ONTAP系统的性能并帮助实现性能目标。 
 ---
-= 性能计数器
+= 在ONTAP REST API中使用性能计数器
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

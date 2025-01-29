@@ -4,7 +4,7 @@ permalink: migrate/ontapi_disablement.html
 keywords: ONTAPI, ONTAPI disablement, migrate, migrate to REST API 
 summary: 未来版本的ONTAP 将禁用ONTAP接口。如果您使用的是ONTAPI、则应规划向ONTAP REST API的迁移。 
 ---
-= 已取消ONTAPI
+= ONTAPI已停用和ONTAP REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
