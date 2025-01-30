@@ -4,7 +4,7 @@ permalink: rest/asynchronous_processing.html
 keywords: asynchronous, asynchronous processing, job, job object 
 summary: 发出设计为异步运行的 API 请求后，始终会创建一个作业对象并将其返回给调用方。作业将描述并固定处理请求的后台任务。 
 ---
-= 使用作业对象进行异步处理
+= 使用ONTAP REST API进行异步处理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

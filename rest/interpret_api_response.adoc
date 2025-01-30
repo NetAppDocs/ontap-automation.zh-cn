@@ -4,7 +4,7 @@ permalink: rest/interpret_api_response.html
 keywords: response, api response, status codes 
 summary: 每个 API 请求都会生成对客户端的响应。您应检查响应以确定其是否成功，并根据需要检索其他数据。 
 ---
-= 解释 API 响应
+= 解释ONTAP REST API响应
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

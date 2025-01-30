@@ -4,7 +4,6 @@
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 参考</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="list-text">HTTP 方法</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">路径</block>
-  <block id="f9423483f907b342ce1d6b2a5646580f" category="doc">基本操作特征</block>
   <block id="d9ea677ef356bfa08eea805869f9eded" category="paragraph">虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。</block>
   <block id="fc068ae597c9019f5d61b19badc39991" category="section-title">请求和响应 API 事务</block>
   <block id="52cbf28bd4927df9cf59c3544b5ae581" category="paragraph">每个 REST API 调用都作为 HTTP 请求执行给 ONTAP 系统，该系统会向客户端生成关联的响应。此请求 / 响应对被视为 API 事务。在使用 API 之前，您应熟悉可用于控制请求的输入变量以及响应输出的内容。</block>
@@ -387,7 +386,6 @@
   <block id="fb00578ec9d3fa400747c530aa16a46b" category="admonition">唯一有权执行删除操作的内置角色是 vsadmin-SnapLock 。</block>
   <block id="bbada9713c694fc554c600df104fea52" category="paragraph">您可以查看和管理描述文件和卷的核心信息，例如类型和到期日期。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="c8affb4b638fb272e9f0ea2b1c6af6fe" category="paragraph">您可以使用这些 API 调用来管理属于诉讼流程的文件。此资源类型是在 ONTAP 9.7 中引入的。</block>
-  <block id="32bab1cda6687d8af3648df1b3e2f763" category="doc">解释 API 响应</block>
   <block id="6fc21adbf0e55cc3da583314e4540308" category="paragraph">每个 API 请求都会生成对客户端的响应。您应检查响应以确定其是否成功，并根据需要检索其他数据。</block>
   <block id="0a289f551402f1b0bba7f13be5d7fdc4" category="section-title">HTTP 状态代码</block>
   <block id="9cc7f2c4c4cb3a083eaa0fa002427217" category="paragraph">下面介绍了 ONTAP REST API 使用的 HTTP 状态代码。</block>
@@ -496,7 +494,6 @@
   <block id="bf174dc4f6f36d6d0f560f114ed35af0" category="paragraph">LDAP 服务器可用于维护用户信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="8de221752bd6a162ef831c894ff99445" category="paragraph">通过名称映射，您可以将身份从一个名称域映射到另一个名称域。例如，您可以将身份从 CIFS 映射到 UNIX ，将 Kerberos 映射到 UNIX ，将 UNIX 映射到 CIFS 。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="29d694e39bf428e6908248736cf6c34b" category="paragraph">NIS 服务器可用于对用户和客户端工作站进行身份验证。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="cae712fa1badd396170b95946efaaab8" category="doc">存储资源的性能指标</block>
   <block id="fb561ab31583e301eb08f35a50a87c44" category="paragraph">ONTAP 收集有关选定 SVM 存储对象和协议的性能指标，并通过 REST API 报告此信息。您可以使用此数据监控 ONTAP 系统的性能。</block>
   <block id="59bd18a80f293dee3954f314ed6e11af" category="paragraph">对于给定的存储对象或协议，性能数据分为三类：</block>
   <block id="79073619fba8242703524f16870ff858" category="list-text">IOPS</block>
@@ -589,7 +586,6 @@
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="inline-link-macro">ONTAP REST API</block>
   <block id="f5b0a8cfa60a7e477b09b70b9c77ee98" category="doc">了解 ONTAP 自动化选项</block>
   <block id="5a0dcab393f624ccdcf664bede74e9b2" category="inline-link-macro">Python 客户端库</block>
-  <block id="4e04bad1fd3bbdb3c69e856ffc49ff73" category="doc">资源类别概述</block>
   <block id="10fd548eb0773eced2b1f8455835ae29" category="list-text"><block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block></block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">《 ONTAP 发行说明》</block>
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="section-title">ONTAP 9.10.1</block>
@@ -609,7 +605,6 @@
   <block id="45cd4354f07a1ab359a1cc263ed79868" category="sidebar">如何访问 REST API</block>
   <block id="a02956d1e8bd45f8818a7c63426eceba" category="sidebar">输入变量</block>
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="sidebar">解释 API 响应</block>
-  <block id="8f4fc3addf595e93ce580272da612827" category="sidebar">使用作业对象进行异步处理</block>
   <block id="cfe5635d91cfb6abed08c3ae78515315" category="list-text">扩展了卷分析</block>
   <block id="6495a298c2a1a26b997ca9bbb99ef7ef" category="list-text">卷分析和指标已通过其他端点进行扩展，以支持顶级文件，目录和用户。</block>
   <block id="faa07c048822900bcf8537b1c474345f" category="list-text">支持增强功能</block>
@@ -722,7 +717,6 @@
   <block id="8df9e8f24b204c91ad0a9031f9c09a16" category="cell">由于授权错误，访问被拒绝。</block>
   <block id="806c6eb26fec67050c86278775f0a3ff" category="list-text">SnapMirror功能在计划等多个方面得到了增强。SnapVault 关系奇偶校验已添加到与ONTAP 9.11.1的DP关系中。此外、REST API提供的限制功能已与Data ONTAP API (ONTAPI或ZAPI)达到奇偶校验。与此相关、可支持创建和管理批量Snapshot副本。</block>
   <block id="9047fe19c5c01912bf0c89c78bd42103" category="list-text">ONTAPI报告工具</block>
-  <block id="40631aef1c7a95be86710dae30e73e3d" category="doc">RBAC安全性概述</block>
   <block id="58722e059e2f5bb0441a986407122c33" category="paragraph">ONTAP 具有强大且可扩展的基于角色的访问控制(Role-Based Access Control、RBAC)功能。您可以为每个帐户分配不同的角色、以控制用户对通过REST API和CLI公开的资源的访问。这些角色为各种ONTAP 用户定义了不同的管理访问级别。</block>
   <block id="fb40fe81e6f182515c987233a6044be5" category="inline-link-macro">RBAC演变概述</block>
   <block id="8964641d12d0ef111bd01efe34f212c2" category="section-title">ONTAP 角色</block>
@@ -1954,4 +1948,16 @@
   <block id="f96e7d2ed62f1d1dbbd27c415dfa237d" category="doc">支持ONTAP REST API的工具和软件</block>
   <block id="426bacf234f4a8f3095a2847314d55b0" category="doc">ONTAP REST API参考</block>
   <block id="a2201ab0fd73e897fe98bd45ca71061d" category="doc">准备使用ONTAP REST API工作流</block>
+  <block id="bcc9a2132297815fc027add5a436948a" category="doc">ONTAP REST API中的应用程序资源</block>
+  <block id="eec2cbc696ccc578df798a96160bf183" category="doc">ONTAP REST API中的资源类别概述</block>
+  <block id="efcb5f574c1de0467f4e66c4a07add5f" category="doc">使用ONTAP REST API进行异步处理</block>
+  <block id="9b2df43e4bec630fa4504501800e1b6b" category="doc">ONTAP REST API请求的输入变量</block>
+  <block id="1b0bd65580a152f66ee09f993666fc14" category="doc">解释ONTAP REST API响应</block>
+  <block id="f5e837ffcba4ed9f59e55e708b69b4b2" category="doc">ONTAP REST API对象引用和访问</block>
+  <block id="ea29eadd59b6ae07ee97408fb3e9d88c" category="doc">ONTAP REST API的操作特征</block>
+  <block id="fd59abbb2badcd8fdfa670e39e0c6619" category="doc">使用ONTAP REST API访问性能指标</block>
+  <block id="79f078dac9397adc5e4d383ab0f49eea" category="doc">ONTAP REST API的RBAC安全性概述</block>
+  <block id="98dce57b0664e78870d257a648e96612" category="doc">在ONTAP REST API中使用角色和用户</block>
+  <block id="8e7104f8cdaf55507f25e0b9a816f34b" category="doc">使用ONTAP REST API获取集群配置</block>
+  <block id="19ca54acf953a715866f203d447d92ef" category="sidebar">操作特性</block>
 </blocks>

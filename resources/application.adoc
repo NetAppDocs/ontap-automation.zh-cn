@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: resources/application.html 
-keywords: application resources 
+keywords: rest, rest api, applications, application resources 
 summary: 您可以使用这些 API 调用来管理 ONTAP 应用程序资源。 
 ---
-= 应用程序
+= ONTAP REST API中的应用程序资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

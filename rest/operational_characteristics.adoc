@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: rest/operational_characteristics.html 
-keywords: operation, request and response, crud 
-summary: 您可以通过多种不同方式访问 ONTAP REST API 。 
+keywords: rest, rest api, operation, request, response, crud 
+summary: 虽然 REST 建立了一组通用的技术和最佳实践，但每个 API 的详细信息可能因设计选择而异。 
 ---
-= 基本操作特征
+= ONTAP REST API的操作特征
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

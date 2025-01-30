@@ -6,17 +6,17 @@ entries:
   entries:
   - title: REST Web 服务基础
     url: "/rest/rest_web_services_foundation.html"
-  - title: 基本操作特征
+  - title: 操作特性
     url: "/rest/operational_characteristics.html"
   - title: 输入变量
     url: "/rest/input_variables.html"
   - title: 解释 API 响应
     url: "/rest/interpret_api_response.html"
-  - title: 使用作业对象进行异步处理
+  - title: 异步处理
     url: "/rest/asynchronous_processing.html"
   - title: 对象引用和访问
     url: "/rest/object_references_and_access.html"
-  - title: 存储资源的性能指标
+  - title: 性能指标
     url: "/rest/performance_metrics.html"
 - title: RBAC 安全性
   entries:

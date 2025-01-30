@@ -4,7 +4,7 @@ permalink: rest/object_references_and_access.html
 keywords: objects, access paths, uuid, uuidv4, collections, object collection 
 summary: 通过 ONTAP REST API 公开的资源实例或对象可以通过多种不同的方式进行引用和访问。 
 ---
-= 对象引用和访问
+= ONTAP REST API对象引用和访问
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

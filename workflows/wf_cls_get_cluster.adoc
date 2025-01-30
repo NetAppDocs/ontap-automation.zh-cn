@@ -4,7 +4,7 @@ permalink: workflows/wf_cls_get_cluster.html
 keywords: workflow, get cluster, cluster configuration 
 summary: 您可以检索ONTAP集群的配置、包括特定字段。您可以在评估集群状态期间或更新配置之前执行此操作。 
 ---
-= 获取集群配置
+= 使用ONTAP REST API获取集群配置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
