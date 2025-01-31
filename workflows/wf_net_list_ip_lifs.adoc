@@ -4,7 +4,7 @@ permalink: workflows/wf_net_list_ip_lifs.html
 keywords: workflow, job, job state 
 summary:  
 ---
-= 列出IP接口
+= 列出使用ONTAP REST API的IP接口
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

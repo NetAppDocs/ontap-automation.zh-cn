@@ -1,6 +1,6 @@
 ---
 settings:
-  name: ONTAP Automation
+  name: ONTAP automation
   internal:
     pdf_enabled: true
   prod:
@@ -9,7 +9,7 @@ settings:
   langs: zh-cn,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-tw
 sidebar:
   entries:
-  - title: ONTAP 自动化文档
+  - title: ONTAP自动化文档
     url: "/index.html"
   - title: 新增功能
     entries:
@@ -26,3 +26,6 @@ sidebar:
   - section: additional
   - title: 法律声明
     url: "/legal-notices.html"
+product-family:
+  name: ONTAP
+  repo: ontap-family

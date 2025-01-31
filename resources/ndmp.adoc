@@ -4,7 +4,7 @@ permalink: resources/ndmp.html
 keywords: ndmp resources 
 summary: 您可以使用这些 API 调用来管理 NDMP 服务。 
 ---
-= NDMP
+= ONTAP REST API中的NDMP资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

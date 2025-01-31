@@ -4,7 +4,7 @@ permalink: workflows/wf_cls_update_contact.html
 keywords: workflow, update cluster, cluster contact 
 summary: 您可以更新集群的联系信息。由于此请求是异步处理的、因此您还需要确定关联的后台作业是否已成功完成。 
 ---
-= 更新集群联系人
+= 使用ONTAP REST API更新集群联系人
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

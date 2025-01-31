@@ -4,7 +4,7 @@ permalink: workflows/wf_ems_prepare.html
 keywords: support, ems, event management system, event notifications, notifications 
 summary: '您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据需要检索EMS消息。' 
 ---
-= 准备管理EMS支持服务
+= 准备使用ONTAP REST API管理EMS支持服务
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

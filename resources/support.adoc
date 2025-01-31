@@ -4,7 +4,7 @@ permalink: resources/support.html
 keywords: support resources 
 summary: 您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。 
 ---
-= 支持
+= ONTAP REST API中的支持资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

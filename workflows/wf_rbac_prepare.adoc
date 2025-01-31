@@ -4,7 +4,7 @@ permalink: workflows/wf_rbac_prepare.html
 keywords: security, rbac, prepare rbac, rbac workflows 
 summary: 根据您的环境、您可以通过多种不同的方式使用ONTAP RBAC功能。本节将以工作流的形式介绍一些常见情形。在每种情况下、重点都放在特定的安全和管理目标上。 
 ---
-= 准备使用RBAC
+= 准备使用ONTAP REST API使用RBAC
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

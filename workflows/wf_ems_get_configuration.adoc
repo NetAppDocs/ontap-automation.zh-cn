@@ -4,7 +4,7 @@ permalink: workflows/wf_ems_get_configuration.html
 keywords: support, ems, event management system, ems configuration 
 summary: 您可以检索ONTAP集群的当前EMS配置。您可以在更新配置或创建新EMS通知之前执行此操作。 
 ---
-= 获取EMS配置
+= 使用ONTAP REST API获取EMS配置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: workflows/wf_nas_fs_delete_ace.html
 keywords: nas, file security, access control entry, ace, delete ace 
 summary: '您可以从特定文件或文件夹中删除现有访问控制条目(ACE)。更改会传播到任何子对象。' 
 ---
-= 删除访问控制条目
+= 使用ONTAP REST API删除访问控制条目
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

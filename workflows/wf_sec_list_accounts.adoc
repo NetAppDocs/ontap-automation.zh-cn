@@ -4,7 +4,7 @@ permalink: workflows/wf_sec_list_accounts.html
 keywords: workflow, security, accounts, list accounts 
 summary:  
 ---
-= 列出帐户
+= 使用ONTAP REST API列出帐户
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

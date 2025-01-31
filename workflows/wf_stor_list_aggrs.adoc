@@ -4,7 +4,7 @@ permalink: workflows/wf_stor_list_aggrs.html
 keywords: workflow, storage, aggregates, list aggregates 
 summary:  
 ---
-= 列出聚合
+= 列出使用ONTAP REST API的聚合
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

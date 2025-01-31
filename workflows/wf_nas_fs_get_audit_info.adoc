@@ -4,7 +4,7 @@ permalink: workflows/wf_nas_fs_get_audit_info.html
 keywords: nas, file security, sacl, dacl, get auditing 
 summary: 您可以检索特定文件或文件夹的所有审核信息。 
 ---
-= 获取文件的审核信息
+= 使用ONTAP REST API获取文件的审核信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

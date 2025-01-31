@@ -4,7 +4,7 @@ permalink: workflows/wf_nas_fs_get_permissions.html
 keywords: nas, file security, effective permissions 
 summary: 您可以检索特定文件或文件夹的当前有效权限。 
 ---
-= 获取文件的有效权限
+= 使用ONTAP REST API获取文件的有效权限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

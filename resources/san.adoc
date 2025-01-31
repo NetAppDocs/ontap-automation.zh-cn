@@ -4,7 +4,7 @@ permalink: resources/san.html
 keywords: san resources 
 summary: 您可以使用这些API调用来管理SAN资源。 
 ---
-= SAN
+= ONTAP REST API中的SAN资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: resources/name_services.html
 keywords: name services resources 
 summary: 您可以使用这些 API 调用来管理 ONTAP 支持的名称服务。 
 ---
-= 名称服务
+= ONTAP REST API中的名称服务资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

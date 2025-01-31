@@ -4,7 +4,7 @@ permalink: workflows/wf_jobs_get_job.html
 keywords: workflow, job, job state 
 summary: 您可以检索特定ONTAP作业的实例。通常、您可以执行此操作来确定作业和关联操作是否成功完成。 
 ---
-= 获取作业实例
+= 使用ONTAP REST API获取作业实例
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

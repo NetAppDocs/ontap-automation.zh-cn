@@ -595,7 +595,6 @@
   <block id="424fc80aa929edad9729b9b006049584" category="paragraph">使用 Web 浏览器时， ONTAP API 联机文档页面提供了一个访问点。除了提供直接执行单个 API 调用的方法之外，此页面还包括 API 的详细问题描述，包括每个调用的输入参数和其他选项。API 调用按功能类别进行组织。请参见 <block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="6427fa68aca1f0e647dc8dc6d6c6d323" category="doc">使用作业对象进行异步处理</block>
   <block id="aa5ed514388a44e4dc092690c451252e" category="paragraph">请参见 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 确定要异步执行的 API 调用。</block>
-  <block id="b4cd15e8e24635e4a72a8cce25d314ca" category="sidebar">ONTAP 自动化文档</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="ec8bc6c5f8fe5dc6045b9edfffae614a" category="sidebar">准备使用 REST API</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
@@ -643,7 +642,6 @@
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
-  <block id="7d986aa6827f53816cefdf1f0049c38b" category="section-title">更新安全描述符信息</block>
   <block id="411009bbd509e2b00a1f4543b3c1ca74" category="section-title">ONTAP REST API 与 ONTAP 命令行界面命令</block>
   <block id="de134183bea5df515a6756a539ce6f18" category="cell">ONTAP 命令行界面</block>
   <block id="f778c6da6bf9a458b710a39182352949" category="cell">`get /protocols/file-security/effective-permissions/`</block>
@@ -849,7 +847,6 @@
   <block id="51a9e3c779f1be0a43354b1da5831ba0" category="cell">您可以创建传统角色。</block>
   <block id="2dcd39fd89691d20d107d37e822309c0" category="section-title">访问路径的精度</block>
   <block id="8dcea28ae0e36ecb9fb7a7682e6c8323" category="paragraph">为REST角色定义的访问路径基于REST端点。传统角色的访问路径基于命令行界面命令或命令目录。此外、您还可以包括具有传统角色的可选查询参数、以便根据命令参数值进一步限制访问。</block>
-  <block id="6e4ad51ed0c9f59ca29ccce216f868b1" category="section-title">限制对SVM卷操作的访问</block>
   <block id="44b825cf5bc9349a15a7ed51954ce076" category="list-text">能够执行所有CRUD卷操作、包括获取、创建、修改和删除</block>
   <block id="0a98788f622c9b8a786424f59d6f073f" category="list-text">无法创建卷克隆</block>
   <block id="0577bbabd0439eea401a8ec18491d1a6" category="listing-title">JSON 输入示例</block>
@@ -857,7 +854,6 @@
   <block id="76a4694d3323882a13252de3b8c66853" category="list-text">无法创建或修改更高级别的对象、例如卷或SVM</block>
   <block id="3afdfc4bb62414921598f2f4531aaca1" category="list-text">能够检索与容量和性能相关的所有存储对象信息(例如卷、qtree、LUN、聚合、节点、 和SnapMirror关系)</block>
   <block id="9a97a4c8ef433f35c821ef57f10aa45d" category="list-text">无法创建或修改更高级别的对象(例如卷或SVM)</block>
-  <block id="7341eaad1796dcd6268b71a308240243" category="doc">创建具有角色的用户</block>
   <block id="379385ed06cff6b981e905026b8488d8" category="paragraph">ONTAP 版本可确定可用的REST端点和RBAC功能。</block>
   <block id="7a1d01c8bf21e8d2524e97aacc31c321" category="paragraph">您需要确定要保护的资源或命令以及范围(集群或SVM)。</block>
   <block id="6d1c7815a7f642c3359cf36570ffac64" category="paragraph">确定资源和范围后、您需要确定要授予的访问级别。</block>
@@ -1332,7 +1328,6 @@
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">此REST API调用使用以下方法和端点。</block>
   <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">第2步：检索作业状态</block>
   <block id="1e6808f43cf2da1acd44c6e982792490" category="summary">您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)。您可以在查找特定SVM的标识符时执行此操作、也可以在创建新SVM之前确保名称的唯一性。</block>
-  <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">列出SVM</block>
   <block id="a3d2e020750395446da7d89e6da9765d" category="summary">您可以检索ONTAP集群的配置、包括特定字段。您可以在评估集群状态期间或更新配置之前执行此操作。</block>
   <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">CURL示例的其他输入参数</block>
   <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">除了所有REST API调用通用的参数之外、此步骤中的cURL示例还会使用以下参数。</block>
@@ -1375,7 +1370,6 @@
   <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">请参见 <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="9b516c95369c98e15389e58383128a9e" category="inline-link-macro">RBAC工作流</block>
   <block id="d0ae4474b926ded595a7a12cdb4fa9ca" category="admonition">请参见 <block ref="08b1cfcbf90aa340f0ccb33fbb4649b8" category="inline-link-macro-rx"></block> 有关如何在ONTAP REST API中创建和使用角色的示例。</block>
-  <block id="e5811d257020368f5a717692e3698c8c" category="doc">启用数据保护管理</block>
   <block id="a6812db2442ae325a9ccd39373bbd9dd" category="paragraph-title">关于此工作流</block>
   <block id="daba4fa4643f88029966b062423e8d20" category="paragraph">创建的传统角色具有以下特征：</block>
   <block id="d48b8c7902dee00442e14d9b1af3af1b" category="cell">/API/cluster</block>
@@ -1393,7 +1387,6 @@
   <block id="18a5ea643c715c0e45aa53077e8f1429" category="cell">要更新的SVM中的角色名称。</block>
   <block id="4fa346713b0e13aa5afd8dc51d0ddecb" category="section-title">第6步：创建用户</block>
   <block id="3c597ed3165c87f6539fd81a53a11876" category="paragraph">对创建用户帐户执行以下REST API调用。上面创建的角色*dprole1*与新用户关联。</block>
-  <block id="e3abdda2fcce71a97b7507b852418cf4" category="doc">允许生成ONTAP报告</block>
   <block id="c6ef9b731f6fad8f77a915b2ed739e76" category="paragraph">您可以创建REST角色、使用户能够生成ONTAP 报告。</block>
   <block id="fddc78544f7292e6a6fd31d26110db0d" category="paragraph">创建的角色具有以下特征：</block>
   <block id="05da6cc99ce87a708e1db8445633412e" category="doc">准备使用RBAC</block>
@@ -1426,7 +1419,6 @@
   <block id="f69688cd7802eb62a67f6a56384b3d93" category="cell">max_记录</block>
   <block id="09548bddb5b6b060a8ff9db149caf9b5" category="cell">指定要返回的记录数。</block>
   <block id="b933168f11c5a1fef62b427e5c4faba9" category="summary">您可以在ONTAP集群中安装签名的X.509证书。您可以在配置需要强身份验证的ONTAP功能或协议时执行此操作。</block>
-  <block id="86ba127d49846ec207c19190730b16ac" category="doc">安装证书</block>
   <block id="5c88f057b69ff938c461962eab9693dc" category="paragraph">您必须具有要安装的证书。您还应确保根据需要安装任何中间证书。</block>
   <block id="6a9cd64c223b26e7117c3bc5cd084d43" category="admonition">在使用下面提供的JSON输入示例之前、请确保更新<block ref="d73414ceb92d4d043000a5e640fd38a8" prefix=" " category="inline-code"></block> 价值。</block>
   <block id="bc81a95e520df56e073aa3da00713e6b" category="section-title">第1步：安装证书</block>
@@ -1513,17 +1505,13 @@
   <block id="6e5a184a338e990223b90751d5dce3fa" category="cell">可用于标识可用于新聚合的备用磁盘。</block>
   <block id="9c049e1832aad88667dcc17e261acc9c" category="listing-title">CURL示例：返回所有磁盘</block>
   <block id="2f16f01d47fc5581920b2b69e5a6cdc2" category="listing-title">CURL示例：返回备用磁盘</block>
-  <block id="2a11f21f5d4741d58b7d14923d4e08f9" category="doc">列出帐户</block>
   <block id="4394c7ebecc609175a50f72d74a0557f" category="paragraph">您可以检索帐户列表。您可以在评估安全环境或创建新帐户之前执行此操作。</block>
-  <block id="47a8ff2921d745ff1e85c78a7811f188" category="doc">列出聚合</block>
   <block id="490c2fcb0f7a2efc0e882e344265c316" category="paragraph">您可以检索集群中的聚合列表。您可以执行此操作来评估利用率和性能。</block>
   <block id="6edce6e6c5993cbcc3356de83eed68df" category="cell">node.name</block>
   <block id="586ba6b164fb68d2e277e5509c3d920e" category="cell">可用于标识每个聚合连接到的节点。</block>
   <block id="d77215a29f7c4c57074e8278a01cb44d" category="listing-title">CURL示例：返回具有默认配置值的所有聚合</block>
   <block id="3d13cd0551da6b0edbb329a4192f28a3" category="listing-title">CURL示例：返回具有特定配置值的所有聚合</block>
-  <block id="902758a99886ee9a4b12dd38cc667f95" category="doc">列出IP接口</block>
   <block id="1220a442fc15fd5c171980b6a6315040" category="listing-title">CURL示例：返回具有默认配置值的所有LI</block>
-  <block id="36e958b717916175c77e1c0a9bd8a51d" category="doc">列出磁盘</block>
   <block id="c4acc246007fa7e427ad78bab2246d93" category="cell">$job_ID</block>
   <block id="e62ba1f7e88de861aba828d64f793b2f" category="cell">用于标识所请求的作业。</block>
   <block id="542fcd84c10c6cf94d17a2aec683b3f3" category="paragraph">使用GET方法发出API调用时、您可以使用查询参数根据任何属性限制或筛选返回的对象。</block>
@@ -1573,7 +1561,6 @@
   <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="paragraph-title">Ansible</block>
   <block id="74e4ec1fd7e7ec388822465aeff417c4" category="paragraph">NetApp<block ref="24f12c8cdb9e96aedf586081f8419901" category="inline-link-rx"></block> 可通过BlueXP Web用户界面访问。通过该目录、您可以访问打包的解决方案、这些解决方案有助于自动部署ONTAP并将其与其他产品集成。请参见<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> 有关文档和详细信息、请参见。</block>
   <block id="6896ceb4698b2c86775b4d891be243d5" category="summary">您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据需要检索EMS消息。</block>
-  <block id="90aef0d7524722ffd0dc0cb8fa364d96" category="doc">准备管理EMS支持服务</block>
   <block id="af129edd8d2b529838378e328200ea64" category="paragraph">您可以通过多个示例工作流来说明如何使用ONTAP EMS服务。在使用工作流并发出任何REST API调用之前、请务必查看 <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>。</block>
   <block id="f3bd9688dec070eec4b4332373791cf4" category="inline-link">events.py</block>
   <block id="85215b1290359f4664d37f38216d2256" category="paragraph">如果您使用Python、还可以参见"py"<block ref="643db497504332dea05c67888bb57b20" category="inline-link-rx"></block> 有关如何自动执行某些EMS相关活动的示例。</block>
@@ -1583,7 +1570,6 @@
   <block id="882aca4326d752010b772b8158e8baa0" category="inline-link">用于展示EMS的Python脚本</block>
   <block id="cece6a40b70715f2a63bbd9c0b1372bd" category="list-text"><block ref="cece6a40b70715f2a63bbd9c0b1372bd" category="inline-link-rx"></block></block>
   <block id="eb230b030eac22517ebd137fbd7025a9" category="summary">您可以使用以下工作流创建新的EMS通知目标以接收选定事件消息。</block>
-  <block id="b4d8401916bcfe9d487b43317e141180" category="doc">创建EMS通知</block>
   <block id="4b6b43bf6462be74bc77a76514b73254" category="section-title">第1步：配置系统范围的电子邮件设置</block>
   <block id="1186c8ad3d5fa7fe5bc14196b7869208" category="paragraph">您可以通过问题描述执行以下API调用来配置系统范围的电子邮件设置。</block>
   <block id="ef891763ba7048887e2e72131878e76c" category="cell">/API/support/ems</block>
@@ -1603,9 +1589,7 @@
   <block id="5af5cc7f9522d6ed61830a95fdd63cae" category="cell">目标配置</block>
   <block id="cfbbc7b9438bc32708cb12da6986b172" category="cell">包括事件目标的值。</block>
   <block id="49d9b762ced33c4a64540c0502fa12ae" category="summary">您可以检索ONTAP集群的当前EMS配置。您可以在更新配置或创建新EMS通知之前执行此操作。</block>
-  <block id="bf68501f440a0b26f1bce42df8f87f61" category="doc">获取EMS配置</block>
   <block id="321af4d0ee1843b9eb21c75179cd5a5a" category="summary">您可以检索所有事件通知消息或具有特定特征的消息。</block>
-  <block id="13a19e32980ac43fd75e6a9645a8b411" category="doc">列出EMS日志事件</block>
   <block id="077c58e0d7282761a97c6c03fcd5f677" category="paragraph">您可以检索所有事件通知消息、也可以仅检索具有特定特征的消息。</block>
   <block id="b098fa166f68e99b9f901b465347c595" category="cell">/API/support/EMS/Events</block>
   <block id="51f996d6bdce27d5d9c364daf9452884" category="cell">用于请求将特定字段包括在响应中。</block>
@@ -1622,17 +1606,14 @@
   <block id="0e0109505c34b65099fc5f28788f80c2" category="sidebar">创建EMS通知</block>
   <block id="62e79f1e2a16917d7b811343757eede5" category="summary">您可以为用户提供有限的数据保护功能。</block>
   <block id="542f0dae2bb6d52eba2a6242f8f9bbb4" category="summary">您可以检索特定文件或文件夹的当前有效权限。</block>
-  <block id="ca8b310152c3cdbf0b209d0af018c2db" category="doc">获取文件的有效权限</block>
   <block id="eb8b558a40765e93b8be653d5fb7656c" category="cell">/api/protocols文件安全性/有效权限/｛svm.unid｝/｛path｝</block>
   <block id="d4f560c2cc4c11c467693af3a4c697fb" category="cell">这是包含该文件的SVM的UUID。</block>
   <block id="a0da37dfc114065048cd3b5de2ff66a6" category="cell">$file_path</block>
   <block id="bae6d4bef4e1697b5dfae7f9202e2499" category="cell">这是文件或文件夹的路径。</block>
   <block id="6abb58e21232fa67ee94875bd5f72d26" category="summary">您可以将新的安全描述符应用于特定文件或文件夹。</block>
-  <block id="28a11b3673dcd0e091505156efd803f3" category="doc">将新权限应用于文件</block>
   <block id="350becfaa43a05e99267c2c4700bf2f4" category="section-title">第1步：应用新权限</block>
   <block id="a624b6656737d2c783691ba33fc23197" category="cell">/api/protocols /文件安全性/权限/｛svm.unid｝/｛path｝</block>
   <block id="db7bd3219c8001e5e6cdbc7e71916c02" category="summary">您可以检索特定文件或文件夹的所有审核信息。</block>
-  <block id="420c6b28da357f4a659ab47453e63f4e" category="doc">获取文件的审核信息</block>
   <block id="0751d56a6f57c4680d1dfea528fbf8d3" category="paragraph">您可以检索特定文件或文件夹的审核信息。</block>
   <block id="59acc03c473e764ed04cb83fde18f389" category="summary">您可以从特定文件或文件夹中删除现有访问控制条目(ACE)。更改会传播到任何子对象。</block>
   <block id="3560dff4f0f31db694c608a2ebc06e85" category="doc">删除访问控制条目</block>
@@ -1640,7 +1621,6 @@
   <block id="a2ec471f92f85173e4ba00d9da0db114" category="summary">您可以将特定安全描述符更新到特定文件或文件夹、包括主所有者、组或控制标志。</block>
   <block id="bb059379feb749c05906d3ac23b4816d" category="section-title">第1步：更新安全描述符</block>
   <block id="698f9eb192e6aa6224d8848f98d6a530" category="summary">您可以管理ONTAP集群中通过SVM提供的文件的权限和审核策略。</block>
-  <block id="09cd38efbd2c8fdbc8c6175ec9176ea8" category="doc">准备管理文件安全性和审核策略</block>
   <block id="7e2e1102b90cfd81da1a2e5002c37c9c" category="paragraph">ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从ONTAP 9.9.1开始、REST API支持管理SACL和DACL权限。您可以使用API自动管理文件安全权限。在许多情况下、您可以使用单个REST API调用、而不是多个命令行界面命令或ONTAP PI (ZAPI)调用。</block>
   <block id="3c4e118c8471cd86da2e54560f34234b" category="admonition">对于9.9.1之前的ONTAP版本、您可以使用命令行界面直通功能自动管理SACL和DACL权限。请参见 <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block> 和<block ref="cc458ed66c48b12b86281fe13e008c20" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="5a4c76b14341d9a5432b024437f965d1" category="paragraph">我们提供了几个示例工作流来说明如何使用REST API管理ONTAP文件安全服务。在使用工作流并发出任何REST API调用之前、请务必查看 <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>。</block>
@@ -1703,10 +1683,8 @@
   <block id="5cd76801bc70b25fab5348133fbeaaff" category="list-text">如果您发现ONTAP REST API存在功能差距、则可以为此API请求一项新功能。</block>
   <block id="2d808b90a1137a1a9fb1f2a6b8aab8eb" category="inline-link">如何为ONTAP REST API请求功能</block>
   <block id="2f25f340fb53d4017b182c6b51020451" category="paragraph"><block ref="2f25f340fb53d4017b182c6b51020451" category="inline-link-rx"></block></block>
-  <block id="f954d54d4b0a7e9ea5cf236808483a7c" category="summary">NetApp支持使用PowerShell管理ONTAP存储系统。</block>
   <block id="c79fa3b95a882a4d5a7a0e5e00100e39" category="doc">PowerShell工具包概述</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="paragraph-title">PowerShell</block>
-  <block id="501fd8414e2cb7ea1f33c45defefd651" category="paragraph">PowerShell是Microsoft提供的一个程序、可用于任务自动化和配置管理。它包括命令行Shell环境以及脚本语言。</block>
   <block id="c714c2b9a4fb9d44e4562afa883f47ea" category="paragraph-title">NetApp ONTAP PowerShell工具包</block>
   <block id="0659d428df833a806e29e65e632d380a" category="paragraph-title">NetApp 支持</block>
   <block id="abbe6086a8dd2213ec443ee7529470ed" category="paragraph">您可以从NetApp 支持站点 下载PowerShell工具包：</block>
@@ -1800,7 +1778,6 @@
   <block id="f503cec406370353472f2af8bffc177d" category="list-text">此功能提供了三个新端点。您可以通过问题描述这些API调用检索基于TLS的所有NFS接口、通过UUID检索特定接口以及更新TLS接口的配置属性。这些API调用共同提供了一组等效的<block ref="e06252ee7104d7c63fe9612305d61ed2" prefix=" " category="inline-code"></block> CLI命令。</block>
   <block id="9fca2ad29082aa8ea692f5764bcc5371" category="admonition">基于TLS的NFS在ONTAP 9.151中提供公开预览版。作为预览选项、使用ONTAP 9.15.1的生产工作负载不支持此功能。</block>
   <block id="b302321652be9f7bc5eab2d6b2eb58f6" category="sidebar">您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API为自动化技术提供了主要基础。</block>
-  <block id="391aea2b8a642f755fa9fc56deaf7f9d" category="sidebar">ONTAP 自动化</block>
   <block id="617c66d87497684f35f56ae2cec21d23" category="sidebar">您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="0c5518b5db3a9e2425db3b5de6d30634" category="sidebar">ONTAP 自动化选项</block>
@@ -1821,7 +1798,6 @@
   <block id="f617bf9bf27979ddd862da656c1ac630" category="admonition">ONTAP RBAC功能继续扩展、并在ONTAP 9.11.1 (及后续版本)中得到了显著增强。有关详细信息、请参见 <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> 和 <block ref="1d53a2f90038290ad464bebe3ee5abe5" category="inline-link-macro-rx"></block> 。</block>
   <block id="fe6ccd0a0c871758ba9563377db86e13" category="doc">您的第一次ONTAP REST API调用</block>
   <block id="e02870eb3d03aec6ab03fa4fa4f87b65" category="doc">ONTAP REST API实验室资源</block>
-  <block id="b5ca69b3b3ee6f013fa4a87b8fdd4fb5" category="doc">下载并安装ONTAP PowerShell工具包</block>
   <block id="940f4511f0af1bd466600a8213691360" category="inline-link">NetApp。 ONTAP PowerShell工具包</block>
   <block id="4028e751d6613e2ade147d59afdd8a50" category="paragraph"><block ref="4028e751d6613e2ade147d59afdd8a50" category="inline-link-rx"></block></block>
   <block id="0220d9b548f6fab03e4a4e2d9ca818fe" category="summary">NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有时、这些更新可能会包括对现有API调用的更改、例如使用的参数和默认值。这些更改可能会影响访问REST API的软件。</block>
@@ -1960,4 +1936,50 @@
   <block id="98dce57b0664e78870d257a648e96612" category="doc">在ONTAP REST API中使用角色和用户</block>
   <block id="8e7104f8cdaf55507f25e0b9a816f34b" category="doc">使用ONTAP REST API获取集群配置</block>
   <block id="19ca54acf953a715866f203d447d92ef" category="sidebar">操作特性</block>
+  <block id="773636ecc39ec5e888c33fed3471ca6a" category="summary">NetApp支持PowerShell、可用于管理ONTAP存储系统。</block>
+  <block id="2fa251c44aacb71e26d10444ef2c35d7" category="doc">了解NetApp PowerShell工具包</block>
+  <block id="f1f7a58e7fbfd1ed521da099492f9928" category="paragraph">PowerShell是自动管理ONTAP集群的另一个选项。</block>
+  <block id="a96db3613c36742398cc9d0c8e5e717a" category="paragraph">PowerShell是Microsoft提供的一种编程语言、可用于任务自动化和配置管理。它包括命令行Shell环境以及脚本语言。</block>
+  <block id="b4042b6243fb82748c12f0b5e64e126b" category="doc">ONTAP REST API中的云资源</block>
+  <block id="43d680669ba6d4e64886d6e371703971" category="doc">ONTAP REST API中的集群资源</block>
+  <block id="23e06eb64b67c34e02cdf1c333fb39e1" category="doc">ONTAP REST API中的名称服务资源</block>
+  <block id="fbfe672bafe1799a64f8b844cbf51200" category="doc">ONTAP REST API中的NAS资源</block>
+  <block id="bf96d7232b1569f7f974f84313712582" category="doc">ONTAP REST API中的NDMP资源</block>
+  <block id="5bfb1971c3845672a0927996621ab7c8" category="doc">ONTAP REST API中的网络资源</block>
+  <block id="4da2072299f85c020ad205af08ed4d70" category="doc">ONTAP REST API中的NVMe资源</block>
+  <block id="b85ca351f297a958cc3a56ffe6513379" category="doc">ONTAP REST API中的对象存储资源</block>
+  <block id="fcb3c24f0a82777a9189784dd009798e" category="doc">ONTAP REST API中的SAN资源</block>
+  <block id="5becf2b8ac4936c5ba1447d230808356" category="doc">ONTAP REST API中的安全资源</block>
+  <block id="c8cf67503220d2badea000e3d11e99b4" category="doc">ONTAP REST API中的SnapLock资源</block>
+  <block id="c086e13d0bf1486e94e003705ba9c004" category="doc">ONTAP REST API中的SnapMirror资源</block>
+  <block id="b9f209b0cb8741dc1516366752eeeb99" category="doc">ONTAP REST API中的存储资源</block>
+  <block id="49a1afb43fc7c1159041fb51ac2ca83d" category="doc">ONTAP REST API中的支持资源</block>
+  <block id="115fa475ca65d7cc65ec0795dfa7f351" category="doc">ONTAP REST API中的SVM资源</block>
+  <block id="f8769a3b6c00e170fce8e2d7779f5f7c" category="doc">了解NetApp易管理性SDK</block>
+  <block id="fb388d9c8e5b3913e52ecd5af61590fa" category="doc">使用ONTAP REST API安装证书</block>
+  <block id="5c1899ae11da3b65cc9747f3b5a0e3e6" category="doc">使用ONTAP REST API列出已安装的证书</block>
+  <block id="ff75e734b8e348f7fbc58a45a62c3d2a" category="doc">使用ONTAP REST API更新集群联系人</block>
+  <block id="20b2b927bbd47b1299d71368f43a9c05" category="doc">使用ONTAP REST API创建EMS通知</block>
+  <block id="382cc4ffaee151c9b027efc50735214d" category="doc">使用ONTAP REST API获取EMS配置</block>
+  <block id="16b8abca450f596dee5f67d45a9be46a" category="doc">使用ONTAP REST API列出EMS日志事件</block>
+  <block id="a859ee6e31a48c21f78b533bb9b22b91" category="doc">准备使用ONTAP REST API管理EMS支持服务</block>
+  <block id="8f6acc43151cdfde9ac685d19b85c9e4" category="doc">使用ONTAP REST API获取作业实例</block>
+  <block id="d1464563dfce19f45744880723e72289" category="doc">使用ONTAP REST API将新权限应用于文件</block>
+  <block id="08afd7b193f9841a00bc826625e9367e" category="doc">使用ONTAP REST API删除访问控制条目</block>
+  <block id="5abfa0830c06ff193aad808d42a5ad6f" category="doc">使用ONTAP REST API获取文件的审核信息</block>
+  <block id="f38d0a3a68b1a29e0f8271bd663ce1c2" category="doc">使用ONTAP REST API获取文件的有效权限</block>
+  <block id="24825bd5411d630c335647de8203bbeb" category="doc">准备使用ONTAP REST API管理文件安全和审核策略</block>
+  <block id="304f7db2f7ba5f9087bf7857f5ef378d" category="doc">使用ONTAP REST API更新安全描述符信息</block>
+  <block id="df4c268dde27ccdcf1230d4e17c68985" category="doc">列出使用ONTAP REST API的IP接口</block>
+  <block id="e6b44c79dfa7350257328764150e644b" category="doc">准备使用ONTAP REST API使用RBAC</block>
+  <block id="e44265ccdfdc2f520b02d27496844c14" category="doc">使用ONTAP REST API启用数据保护管理</block>
+  <block id="27ead5fadf54405407c84b4a439bfd72" category="doc">使用ONTAP REST API限制对SVM卷操作的访问</block>
+  <block id="be7e00cbd41a4e9dc719b0c8d1883009" category="doc">允许使用ONTAP REST API生成ONTAP报告</block>
+  <block id="efb197e274661cc09589a68cfb64ba0b" category="doc">使用ONTAP REST API创建具有某个角色的用户</block>
+  <block id="91af67596c66905a5013dd5a8db3f2d0" category="doc">使用ONTAP REST API列出帐户</block>
+  <block id="cfe6eeb0469ddb026288aadf548610bd" category="doc">列出使用ONTAP REST API的聚合</block>
+  <block id="a5bbc27835a218995809409c292f40ed" category="doc">列出使用ONTAP REST API的磁盘</block>
+  <block id="598efe1689990327c62503c7c48dbd74" category="doc">列出使用ONTAP REST API的SVM</block>
+  <block id="3a77755c4eaf7897cda1f7db8e722428" category="sidebar">ONTAP自动化</block>
+  <block id="47ac2234b10a714bdea293d370ad2ce1" category="sidebar">ONTAP自动化文档</block>
 </blocks>

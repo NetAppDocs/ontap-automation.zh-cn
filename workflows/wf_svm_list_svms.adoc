@@ -4,7 +4,7 @@ permalink: workflows/wf_svm_list_svms.html
 keywords: workflow, list SVMs 
 summary: '您可以列出在ONTAP集群中定义的Storage Virtual Machine (SVM)。您可以在查找特定SVM的标识符时执行此操作、也可以在创建新SVM之前确保名称的唯一性。' 
 ---
-= 列出SVM
+= 列出使用ONTAP REST API的SVM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

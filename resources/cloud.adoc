@@ -4,7 +4,7 @@ permalink: resources/cloud.html
 keywords: cloud resources 
 summary: 您可以使用这些 API 调用管理与云中对象存储资源的连接。 
 ---
-= 云
+= ONTAP REST API中的云资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

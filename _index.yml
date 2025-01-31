@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: ONTAP 自动化
+  title: ONTAP自动化
   summary: 您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。
   keywords: automation, ontap automation, rest, rest api, migrate, migration
   lead: 您可以使用多个可用选项之一自动部署和管理 ONTAP 存储系统。ONTAP REST API为自动化技术提供了主要基础。

@@ -4,7 +4,7 @@ permalink: resources/networking.html
 keywords: networking resources 
 summary: 您可以使用这些 API 调用来管理与集群一起使用的物理和逻辑网络资源。 
 ---
-= 网络
+= ONTAP REST API中的网络资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

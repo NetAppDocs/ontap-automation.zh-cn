@@ -4,7 +4,7 @@ permalink: workflows/wf_nas_fs_update_sd.html
 keywords: nas, file security, security descriptor, sd, update security descriptor 
 summary: 您可以将特定安全描述符更新到特定文件或文件夹、包括主所有者、组或控制标志。 
 ---
-= 更新安全描述符信息
+= 使用ONTAP REST API更新安全描述符信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: workflows/wf_cert_install_certificate.html
 keywords: workflow, install certificate, x509, x.509 
 summary: 您可以在ONTAP集群中安装签名的X.509证书。您可以在配置需要强身份验证的ONTAP功能或协议时执行此操作。 
 ---
-= 安装证书
+= 使用ONTAP REST API安装证书
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

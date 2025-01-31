@@ -4,7 +4,7 @@ permalink: resources/cluster.html
 keywords: cluster resources 
 summary: 您可以使用这些 API 调用来管理 ONTAP 集群和相关资源。 
 ---
-= 集群
+= ONTAP REST API中的集群资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

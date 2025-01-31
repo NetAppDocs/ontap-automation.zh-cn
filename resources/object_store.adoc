@@ -4,7 +4,7 @@ permalink: resources/object_store.html
 keywords: object store resources 
 summary: 您可以使用这些 API 调用访问基于 S3 的对象存储。 
 ---
-= 对象存储
+= ONTAP REST API中的对象存储资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: workflows/wf_rbac_role_ontap_reports.html
 keywords: rbac, role, ontap reports, allow generation ontap reports 
 summary: 您可以创建REST角色、使用户能够生成ONTAP 报告。 
 ---
-= 允许生成ONTAP报告
+= 允许使用ONTAP REST API生成ONTAP报告
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: resources/security.html
 keywords:  
 summary:  
 ---
-= 安全性
+= ONTAP REST API中的安全资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

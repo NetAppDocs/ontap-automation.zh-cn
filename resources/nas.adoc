@@ -4,7 +4,7 @@ permalink: resources/nas.html
 keywords: nas resources 
 summary: 您可以使用这些 API 调用来管理集群和 SVM 的 CIFS 和 NFS 设置。 
 ---
-= NAS
+= ONTAP REST API中的NAS资源
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

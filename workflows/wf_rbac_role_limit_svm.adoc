@@ -4,7 +4,7 @@ permalink: workflows/wf_rbac_role_limit_svm.html
 keywords: rbac, role, storage volume, limited storage volume administration 
 summary: 您可以定义一个角色来限制SVM中的存储卷管理。 
 ---
-= 限制对SVM卷操作的访问
+= 使用ONTAP REST API限制对SVM卷操作的访问
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

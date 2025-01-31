@@ -4,7 +4,7 @@ permalink: workflows/wf_nas_fs_prepare.html
 keywords: nas, file security, sacl, dacl, prepare 
 summary: 您可以管理ONTAP集群中通过SVM提供的文件的权限和审核策略。 
 ---
-= 准备管理文件安全性和审核策略
+= 准备使用ONTAP REST API管理文件安全和审核策略
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

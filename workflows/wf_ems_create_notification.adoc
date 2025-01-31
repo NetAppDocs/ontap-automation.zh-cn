@@ -4,7 +4,7 @@ permalink: workflows/wf_ems_create_notification.html
 keywords: support, ems, event management system, create ems, create ems notification 
 summary: 您可以使用以下工作流创建新的EMS通知目标以接收选定事件消息。 
 ---
-= 创建EMS通知
+= 使用ONTAP REST API创建EMS通知
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

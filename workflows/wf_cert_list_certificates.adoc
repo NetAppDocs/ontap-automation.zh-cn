@@ -4,7 +4,7 @@ permalink: workflows/wf_cert_list_certificates.html
 keywords: workflow, list certificates 
 summary: 您可以列出ONTAP集群中安装的证书。您可以执行此操作来查看特定证书是否可用、或者获取特定证书的ID以检索整个证书。 
 ---
-= 列出已安装的证书
+= 使用ONTAP REST API列出已安装的证书
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
