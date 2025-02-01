@@ -458,7 +458,6 @@
   <block id="cdb0d512cc3fdc0adc8795b79f91c40f" category="cell">资源正在使用中。</block>
   <block id="e5a1747d44133108641b2ef511e802b0" category="inline-link">ONTAP REST Python GitHub 存储库</block>
   <block id="62277cb84205b149ab77912513497f3a" category="paragraph"><block ref="62277cb84205b149ab77912513497f3a" category="inline-link-rx"></block></block>
-  <block id="8ed6428212b41847f33c5db651c2aa70" category="doc">REST Web 服务基础</block>
   <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="section-title">资源和状态表示</block>
   <block id="d2d07b32aecf22c6a25dc91e4b898e5e" category="paragraph">资源是基于 Web 的系统的基本组件。创建 REST Web 服务应用程序时，早期设计任务包括：</block>
   <block id="c73e999111ecc4cc9c48709542105db9" category="list-text">识别系统或基于服务器的资源</block>
@@ -1982,4 +1981,5 @@
   <block id="598efe1689990327c62503c7c48dbd74" category="doc">列出使用ONTAP REST API的SVM</block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="sidebar">ONTAP自动化</block>
   <block id="47ac2234b10a714bdea293d370ad2ce1" category="sidebar">ONTAP自动化文档</block>
+  <block id="40165cda75e3c737682e919501eec98c" category="doc">了解REST Web服务</block>
 </blocks>

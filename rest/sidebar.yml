@@ -4,8 +4,6 @@ title: ONTAP REST API
 entries:
 - title: REST 实施详细信息
   entries:
-  - title: REST Web 服务基础
-    url: "/rest/rest_web_services_foundation.html"
   - title: 操作特性
     url: "/rest/operational_characteristics.html"
   - title: 输入变量
