@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: python/learn-about-pcl.html 
 keywords: learn about python client library, learn about pcl, pcl overview, pcl 
-summary: NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。 
+summary: 'NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您需要使用_pip_实用程序ONTAP从NetApp软件包索引(PyPi)站点安装Pypon_Python软件包。' 
 ---
 = 了解ONTAP Python客户端库
 :hardbreaks:
@@ -14,12 +14,16 @@ summary: NetApp ONTAP Python客户端库是一个软件包、您可以安装它�
 
 
 [role="lead"]
-NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。
+NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您需要使用_pip_实用程序ONTAP从NetApp软件包索引(PyPi)站点安装Pypon_Python软件包。
+
+.相关信息
+* link:../additional/learn_more.html["详细了解ONTAP REST API"](英文)
 
 
-NOTE: 您还应查看中提供的资源link:../additional/learn_more.html["详细了解ONTAP REST API"]。
 
-.优势和功能
+
+== 功能和优势
+
 您可以使用Python客户端库快速开发强大的代码、以自动管理ONTAP部署。它提供多种底层服务、包括：
 
 * 连接管理
@@ -28,22 +32,81 @@ NOTE: 您还应查看中提供的资源link:../additional/learn_more.html["详�
 * 统一错误消息
 
 
-.软件包名称和版本
+
+
+== 按ONTAP版本分开软件包
+
 Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。
 
-.安装
-必须使用*pip*实用程序ONTAP从NetApp软件包索引(PyPI)站点安装Pypon_Python软件包。
-
-.ONTAP版本的软件包和文档
-从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。有关详细信息、请参见 link:../python/packages.html["软件包和文档"] 。每个软件包都包含安装要求、并指定以下各项的不同版本：
-
-* Python
-* 请求
-* Requests-toolbelt
-* 棉花糖
 
 
-.代码示例
+=== 软件包和文档
+
+从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。每个软件包都包含安装要求、并指定了不同的版本：Python、Requests、Requests-toolbelt和marshmallow。
+
+.软件包和文档列表
+[%collapsible]
+====
+.ONTAP 9.16.1.
+* https://pypi.org/project/netapp-ontap/9.16.1.0/["PyPI：NetApp ONTAP 9.16.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP3331665/html/index.html["NetApp PCL 9.16.1."^]
+
+
+.ONTAP 9.15.1.
+* https://pypi.org/project/netapp-ontap/9.15.1.0/["PyPI：NetApp ONTAP 9.15.1."^]
+* https://library.netapp.com/ecmdocs/ECMLP3319064/html/index.html["NetApp PCL 9.15.1."^]
+
+
+.ONTAP 9.14.1
+* https://pypi.org/project/netapp-ontap/9.14.1.0/["PyPI：NetApp ONTAP 9.14.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2886776/html/index.html["9.14.1版NetApp PCL文档"^]
+
+
+.ONTAP 9.13.1
+* https://pypi.org/project/netapp-ontap/9.13.1.0/["PyPI：NetApp ONTAP 9.13.1."^]
+* https://library.netapp.com/ecmdocs/ECMLP2885777/html/index.html["适用于9.13.1的NetApp PCL文档"^]
+
+
+.ONTAP 9.12.1
+* https://pypi.org/project/netapp-ontap/9.12.1.0/["PyPI：NetApp ONTAP 9.12.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2884819/html/index.html["9.12.1的NetApp PCL文档"^]
+
+
+.ONTAP 9.11.1
+* https://pypi.org/project/netapp-ontap/9.11.1.0/["PyPI：NetApp ONTAP 9.11.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2882316/html/index.html["适用于9.11.1的NetApp PCL-文档"^]
+
+
+.ONTAP 9.10.1
+* https://pypi.org/project/netapp-ontap/9.10.1.0/["PyPI ： NetApp ONTAP 9.10.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2879970/html/index.html["适用于 9.10.1 的 NetApp PCL-文档"^]
+
+
+.ONTAP 9.9.1
+* https://pypi.org/project/netapp-ontap/9.9.1/["PyPI：NetApp ONTAP 9.9.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2876965/html/index.html["9.9.1的NetApp PCL文档"^]
+
+
+.ONTAP 9.8
+* https://pypi.org/project/netapp-ontap/9.8.0/["PyPI：NetApp ONTAP 9.8"^]
+* https://library.netapp.com/ecmdocs/ECMLP2874673/html/index.html["9.8的NetApp PCL文档"^]
+
+
+.ONTAP 9.7
+* https://pypi.org/project/netapp-ontap/9.7.3/["PyPI：NetApp ONTAP 9.7"^]
+* https://library.netapp.com/ecmdocs/ECMLP2858435/html/index.html["9.7版NetApp PCL文档"^]
+
+
+.ONTAP 9.6
+* https://pypi.org/project/netapp-ontap/9.6.0/["PyPI：NetApp ONTAP 9.6"^]
+* https://library.netapp.com/ecmdocs/ECMLP2870387/html/index.html["NetApp PCL 9.6文档"^]
+
+
+====
+
+
+== 代码示例
+
 NetApp维护着一个GitHub存储库、其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。有关详细信息、请参见GitHub上的以下位置：
 
 * https://github.com/NetApp/ontap-rest-python["ONTAP REST Python GitHub 存储库"^]

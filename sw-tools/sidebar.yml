@@ -6,8 +6,6 @@ entries:
   entries:
   - title: 了解Python客户端库
     url: "/python/learn-about-pcl.html"
-  - title: 软件包和文档
-    url: "/python/packages.html"
   - title: 用于检索集群配置的脚本
     url: "/python/script_retrieve_cluster_configuration.html"
 - title: PowerShell工具包
