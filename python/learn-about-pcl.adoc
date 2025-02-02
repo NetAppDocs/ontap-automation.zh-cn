@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: python/learn-about-pcl.html 
 keywords: learn about python client library, learn about pcl, pcl overview, pcl 
-summary: 'NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您需要使用_pip_实用程序ONTAP从NetApp软件包索引(PyPi)站点安装Pypon_Python软件包。' 
+summary: 'NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您可以使用_pip_实用程序从Python软件包索引(PyPI)站点安装软件包。' 
 ---
 = 了解ONTAP Python客户端库
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'NetApp ONTAP Python客户端库是一个软件包、您可以安装它
 
 
 [role="lead"]
-NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您需要使用_pip_实用程序ONTAP从NetApp软件包索引(PyPi)站点安装Pypon_Python软件包。
+NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您可以使用_pip_实用程序从Python软件包索引(PyPI)站点安装软件包。
 
 .相关信息
 * link:../additional/learn_more.html["详细了解ONTAP REST API"](英文)
@@ -34,15 +34,11 @@ NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用�
 
 
 
-== 按ONTAP版本分开软件包
+== 软件包和文档
 
-Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。
+Python客户端库包的名称为_Python NetApp - ONTAP。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。
 
-
-
-=== 软件包和文档
-
-从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。每个软件包都包含安装要求、并指定了不同的版本：Python、Requests、Requests-toolbelt和marshmallow。
+从9.6开始的每个ONTAP版本都有一个PyPI软件包以及相关文档。安装要求包含在每个软件包中、并指定支持库的版本、例如pyPython、Requests、requests-toolbelt和marshmallow。
 
 .软件包和文档列表
 [%collapsible]

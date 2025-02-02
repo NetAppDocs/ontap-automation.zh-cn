@@ -1876,7 +1876,6 @@
   <block id="35a07dde4cdfcf3565f03875ee748ac6" category="list-text">连接管理</block>
   <block id="8fe3bb19a244ccfeddfe93062360622d" category="list-text">异常处理</block>
   <block id="06856d0d21cf25fed37bf8f01dd8e070" category="list-text">统一错误消息</block>
-  <block id="4eabbfd21dbe2c323da49bedb2a5c62c" category="paragraph">Python 客户端库软件包的名称是 * 。 netapp-ontap* 。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。</block>
   <block id="05ccfbea6601dcca671775f24a6b14d3" category="paragraph-title">代码示例</block>
   <block id="2284945e609b7e5c75ffeed3e93b30dc" category="paragraph">NetApp维护着一个GitHub存储库、其中包含代码示例和其他有用信息。您可以导航到 _examples_ 文件夹以使用 Python 客户端库访问示例。有关详细信息、请参见GitHub上的以下位置：</block>
   <block id="a9672c1d2a17caa13c69c68927db925b" category="sidebar">了解Python客户端库</block>
@@ -1968,11 +1967,11 @@
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="sidebar">ONTAP自动化</block>
   <block id="47ac2234b10a714bdea293d370ad2ce1" category="sidebar">ONTAP自动化文档</block>
   <block id="40165cda75e3c737682e919501eec98c" category="doc">了解REST Web服务</block>
-  <block id="4c720a0398276ed3f84fdbaf97711b7d" category="summary">NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您需要使用_pip_实用程序ONTAP从NetApp软件包索引(PyPi)站点安装Pypon_Python软件包。</block>
   <block id="7bafad8d0c182e2b6b31ac4018784823" category="list-text"><block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="35ae08a314ffffc02580e3c3fbfad924" category="section-title">功能和优势</block>
-  <block id="b310094d4525ad8d1f7d1dab174a4148" category="section-title">按ONTAP版本分开软件包</block>
-  <block id="4411cc32563b58d1d479aff384140f24" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包和相关文档。每个软件包都包含安装要求、并指定了不同的版本：Python、Requests、Requests-toolbelt和marshmallow。</block>
   <block id="075eb829f6ad7e0f3047f5e1b0db251b" category="example-title">软件包和文档列表</block>
   <block id="04e844fe21e462953e1fe26128de4115" category="doc">使用Python客户端库检索集群配置的脚本</block>
+  <block id="408720b5ef7b85489771db314855817a" category="summary">NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您可以使用_pip_实用程序从Python软件包索引(PyPI)站点安装软件包。</block>
+  <block id="45cbb31cae972c198bf60a227158efb0" category="paragraph">Python客户端库包的名称为_Python NetApp - ONTAP。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。</block>
+  <block id="cfa5daa2060894d0e2b77ee5e70e0e94" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包以及相关文档。安装要求包含在每个软件包中、并指定支持库的版本、例如pyPython、Requests、requests-toolbelt和marshmallow。</block>
 </blocks>
