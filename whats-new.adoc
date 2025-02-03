@@ -10,7 +10,7 @@ summary: 每个ONTAP版本都会更新ONTAP REST API、为您提供新功能、�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

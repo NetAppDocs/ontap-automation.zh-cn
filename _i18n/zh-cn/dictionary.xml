@@ -1679,7 +1679,6 @@
   <block id="5cd76801bc70b25fab5348133fbeaaff" category="list-text">如果您发现ONTAP REST API存在功能差距、则可以为此API请求一项新功能。</block>
   <block id="2d808b90a1137a1a9fb1f2a6b8aab8eb" category="inline-link">如何为ONTAP REST API请求功能</block>
   <block id="2f25f340fb53d4017b182c6b51020451" category="paragraph"><block ref="2f25f340fb53d4017b182c6b51020451" category="inline-link-rx"></block></block>
-  <block id="c79fa3b95a882a4d5a7a0e5e00100e39" category="doc">PowerShell工具包概述</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="paragraph-title">PowerShell</block>
   <block id="c714c2b9a4fb9d44e4562afa883f47ea" category="paragraph-title">NetApp ONTAP PowerShell工具包</block>
   <block id="0659d428df833a806e29e65e632d380a" category="paragraph-title">NetApp 支持</block>
@@ -1692,7 +1691,6 @@
   <block id="f0258b6685684c113bad94d91b8fa02a" category="inline-link">演示</block>
   <block id="2c2d289066c19b061fa5051110ce72bc" category="paragraph">您可以访问<block ref="10e3da19ba49cdfd167b1f3dae41bc1c" category="inline-link-rx"></block> 开始使用。另请参见<block ref="ef075c0fbc68ce59cce02cf136cb7c91" category="inline-link-rx"></block> 关于报告工具及其使用方法。</block>
   <block id="18e808da68bb719b1204b8c83712fac3" category="section-title">ONTAP PowerShell工具包</block>
-  <block id="a44d5f089327249c77efb12dd65462af" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="c3cab3c4ac16333d767da4a7df87c248" category="inline-link-macro-rx"></block>。</block>
   <block id="b2e736bcffbb818aa5d8853b16957107" category="paragraph">NetApp提供了一个实验室环境、用于测试ONTAP REST API和其他相关自动化技术。</block>
   <block id="e41eeb18c8b1c48d8645aac00cd5d0da" category="inline-link">Lab on Demand</block>
   <block id="42b5bbee3175a5d253bf7e5909af0734" category="paragraph">。<block ref="d0ac576a8894e6f13fb4390a137a168e" category="inline-link-rx"></block> 适用于NetApp客户和合作伙伴。您需要有效的凭据才能登录并开始使用实验室资源。您可以根据需要在实验室中搜索_REST或其他技术。</block>
@@ -1750,7 +1748,6 @@
   <block id="b220d699be7fd0932b3c304fd8648407" category="list-text"><block ref="b220d699be7fd0932b3c304fd8648407" category="inline-link-rx"></block></block>
   <block id="03496c1105d6ada9b9d9120127a0577c" category="paragraph">从 ONTAP 9.6 开始， ONTAP 提供了一个扩展的 REST API ，为存储系统的自动部署和管理奠定了基础。此后、REST API不断扩展和成熟。现在、在自动化管理ONTAP 部署时、它提供了一个首选的战略选项。</block>
   <block id="c84c0f9609be66cee0d77e9666118367" category="inline-link-macro">NetApp 易管理性 SDK</block>
-  <block id="b2ab6282b00e5d530566496ef231d5a6" category="paragraph">ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调用、用于支持数据存储管理任务的自动化。API是的一部分 <block ref="6dc7f4d5441674df665a6aaa0cfc034f" category="inline-link-macro-rx"></block>。在ONTAP的未来版本中、应禁用ONTAP PI接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 <block ref="3d7fa22cc3253a8ea2b8dc3e58c1e284" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="3df33987b53f76052b03396d19f4cb71" category="paragraph">摘要中所述的其余资源均基于最新版本的产品。如果您需要更详细地了解先前版本中所做的更改、请参见 <block ref="364c4ee8563aaa25f3410cba7aa49bfa" category="inline-link-macro-rx"></block> 以及<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="4ade1e690485ace608877ec90f1e5fbc" category="paragraph-title">基于TLS的NFS</block>
   <block id="e2f136c9b4c07ac93b9d6011ce9b2135" category="paragraph">使用基于TLS的NFS时、您可以通过此资源检索和更新接口配置。此资源类型是在ONTAP 9.15中引入的。</block>
@@ -1866,7 +1863,6 @@
   <block id="3ae9565cf3f15d0b18e64848bf75114f" category="list-text">ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）</block>
   <block id="87fa2e5a8b05545afa808741d9743b82" category="list-text">ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）</block>
   <block id="12f58f465df2b1ae3ddb0a5303288c2d" category="list-text">API.10.1及更高版本：仅限v3 (仅限ONTAP 9)</block>
-  <block id="973c87360e5799b65d34a6ed39aa97fa" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="c3cab3c4ac16333d767da4a7df87c248" category="inline-link-macro-rx"></block> 。</block>
   <block id="32a3b0f895ce3b2bab0fd75296a6d7f7" category="inline-link">OnCommand Workflow Automation文档</block>
   <block id="a370e7923c07d85d87e81fefb3ea1979" category="list-text"><block ref="a370e7923c07d85d87e81fefb3ea1979" category="inline-link-rx"></block></block>
   <block id="4194600c450cd5967951e54d38f6d438" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。有关详细信息、请参见 <block ref="816918ba5e9c5f6dcac33de8016d4ab9" category="inline-link-macro-rx"></block> 。</block>
@@ -1974,4 +1970,7 @@
   <block id="408720b5ef7b85489771db314855817a" category="summary">NetApp ONTAP Python客户端库是一个软件包、您可以安装它并使用它来快速编写访问ONTAP REST API的脚本。在使用本地运行时环境之前、您需要对其进行准备。您可以使用_pip_实用程序从Python软件包索引(PyPI)站点安装软件包。</block>
   <block id="45cbb31cae972c198bf60a227158efb0" category="paragraph">Python客户端库包的名称为_Python NetApp - ONTAP。与软件包关联的版本是生成库时使用的ONTAP主要版本号和次要版本号的组合、以及ONTAP发行版中客户端库的次要版本。例如、有效版本号包括9.5.1、9.7.2和9.7.2。</block>
   <block id="cfa5daa2060894d0e2b77ee5e70e0e94" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包以及相关文档。安装要求包含在每个软件包中、并指定支持库的版本、例如pyPython、Requests、requests-toolbelt和marshmallow。</block>
+  <block id="f2885cad6169924223c504ffd3639f43" category="paragraph">ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调用、用于支持数据存储管理任务的自动化。API是的一部分<block ref="4465a4dcb9477c65b8928fca416c5a7a" category="inline-link-macro-rx"></block>。在ONTAP的未来版本中、应禁用ONTAP PI接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。有关详细信息、请参见 <block ref="3d7fa22cc3253a8ea2b8dc3e58c1e284" category="inline-link-macro-rx"></block> 。</block>
+  <block id="094ae048e28df3a12a5e4fedaf56a886" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block> 。</block>
+  <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>。</block>
 </blocks>

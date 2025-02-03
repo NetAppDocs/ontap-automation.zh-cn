@@ -58,4 +58,4 @@ Python客户端库是一个软件包、您可以安装它并使用它通过Pytho
 
 == ONTAP PowerShell工具包
 
-NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 link:../pstk/overview_pstk.html["PowerShell工具包概述"]。
+NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 link:../pstk/learn-about-pstk.html["了解NetApp PowerShell工具包"]。

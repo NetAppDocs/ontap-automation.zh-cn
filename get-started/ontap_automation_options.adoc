@@ -26,7 +26,7 @@ summary: 您可以通过多种方法自动部署和管理ONTAP存储系统。
 您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。
 
 .正在迁移旧版ONTAPI代码以使用REST
-ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调用、用于支持数据存储管理任务的自动化。API是的一部分 link:../sw-tools/nmsdk.html["NetApp 易管理性 SDK"]。在ONTAP的未来版本中、应禁用ONTAP PI接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。请参见 link:../migrate/ontapi_disablement.html["从ONTAPI迁移到REST API"] 有关详细信息 ...
+ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调用、用于支持数据存储管理任务的自动化。API是的一部分link:../sw-tools/learn-about-nmsdk.html["NetApp 易管理性 SDK"]。在ONTAP的未来版本中、应禁用ONTAP PI接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。有关详细信息、请参见 link:../migrate/ontapi_disablement.html["从ONTAPI迁移到REST API"] 。
 
 
 
@@ -38,7 +38,7 @@ NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创
 Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。有关详细信息、请参见 link:../python/learn-about-pcl.html["Python 客户端库"] 。
 
 .PowerShell工具包
-您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 link:../pstk/overview_pstk.html["PowerShell工具包概述"] 。
+您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 link:../pstk/learn-about-pstk.html["了解NetApp PowerShell工具包"] 。
 
 
 

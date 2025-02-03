@@ -10,7 +10,7 @@ summary: NetApp会继续在每个主要产品版本中增强和更新ONTAP REST 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
