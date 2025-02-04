@@ -1545,7 +1545,6 @@
   <block id="359aa321b2af8c1841936c471ac5028a" category="paragraph">为了帮助ONTAPI API和命令行界面用户过渡到ONTAP REST API、ONTAP提供了一个REST端点来访问ONTAP命令行界面。您可以使用此直通功能执行任何命令行界面命令。  在AutoSupport数据中返回对REST端点的使用、以便NetApp可以识别REST API中的差距、并在未来的ONTAP版本中进行改进。</block>
   <block id="74b014305892305348ed02c92ab2a761" category="paragraph">要对命令行界面命令执行问题描述、必须根据以下规则正确格式执行REST API调用：</block>
   <block id="e0b913796ef82dfab8c683cb3688ea8a" category="paragraph">CLI访问的基本资源路径为<block ref="2481cfdbf7d50cf62e7bd1952cb20448" prefix=" " category="inline-code"></block>。有关通过 REST API 访问命令行界面的详细信息，请参见 ONTAP API 联机文档页面。NetApp还维护一个GitHub存储库、其中包含代码示例和其他有用信息。请参见<block ref="dc2d27bf2003d8059fdb638718a2f7e5" category="inline-link-rx"></block> 有关详细信息 ...</block>
-  <block id="b3dc3759cbac62ce0e64726643b40958" category="paragraph">另请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="d6631ef35bb40cd64a9a7e6045544867" category="summary">您可以通过多种方法自动部署和管理ONTAP存储系统。</block>
   <block id="a72eaae2582a47c88e517d12584cddf1" category="paragraph-title">本机访问REST API</block>
   <block id="1e32e29797138920931a43f857fe4b9d" category="paragraph">您可以使用支持 REST 客户端的任何编程语言直接访问 ONTAP REST API 。常见语言选项包括 Python ， PowerShell 和 Java 。</block>
@@ -1973,4 +1972,5 @@
   <block id="f2885cad6169924223c504ffd3639f43" category="paragraph">ONTAP API (Zehyr API或ZAPI)是NetApp ONTAP软件附带的一组原始专有调用、用于支持数据存储管理任务的自动化。API是的一部分<block ref="4465a4dcb9477c65b8928fca416c5a7a" category="inline-link-macro-rx"></block>。在ONTAP的未来版本中、应禁用ONTAP PI接口。如果现有代码使用的是ONTAPI API、则应计划从ONTAPI迁移。NetApp支持将代码转换为使用较新的ONTAP REST API。有关详细信息、请参见 <block ref="3d7fa22cc3253a8ea2b8dc3e58c1e284" category="inline-link-macro-rx"></block> 。</block>
   <block id="094ae048e28df3a12a5e4fedaf56a886" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block> 。</block>
   <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>。</block>
+  <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">在每个版本中、支持会在不同的时间点撤消。其中包括9.10.1 9.10.1 P11及更高版本9.11.1 P7及更高版本、9.12.1 GA及更高版本。有关详细信息、请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
 </blocks>
