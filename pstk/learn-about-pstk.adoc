@@ -42,4 +42,4 @@ https://mysupport.netapp.com/site/tools/tool-eula/ontap-powershell-toolkit["NetA
 .PowerShell图库
 您可以从PowerShell库下载PowerShell工具包：
 
-https://www.powershellgallery.com/packages/NetApp.ONTAP/9.15.1.2410["NetApp。 ONTAP PowerShell工具包"^]
+https://www.powershellgallery.com/packages/NetApp.ONTAP/["NetApp。 ONTAP PowerShell工具包"^]

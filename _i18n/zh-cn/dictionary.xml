@@ -1808,7 +1808,6 @@
   <block id="68d26d1aac1d90ae670aa8a5fe3415f3" category="summary">ONTAP 计数器管理器可维护有关每个ONTAP 系统性能的大量信息。它会将此数据导出为一组性能计数器、您可以使用这些计数器来评估ONTAP系统的性能并帮助实现性能目标。</block>
   <block id="08d2a25d52e092c6c253545968ce5bb5" category="inline-link">ONTAP性能计数器映射</block>
   <block id="91b54891dd280b62b83af7ec4c8e3979" category="paragraph">您可以联机访问当前<block ref="9d8aae4b84eb6e74ade1e0afd2ee1664" category="inline-link-rx"></block>文档。此外、还提供了一个版本选择器、用于访问基于ONTAP版本的早期文档版本。</block>
-  <block id="d9c24a6b276d26b3ed8aa4df515da6c8" category="paragraph"><block ref="d9c24a6b276d26b3ed8aa4df515da6c8" category="inline-link-rx"></block></block>
   <block id="31272abf1c9209ab4acd0bf10f129338" category="list-title">ONTAP 9.16.1.</block>
   <block id="0c06f2efbe678ca8c3e4cd68189cf2ae" category="inline-link">PyPI：NetApp ONTAP 9.16.1</block>
   <block id="8f3ad8f9a04fe39c8fd1b3e0ba9e3dd2" category="list-text"><block ref="8f3ad8f9a04fe39c8fd1b3e0ba9e3dd2" category="inline-link-rx"></block></block>
@@ -1973,4 +1972,5 @@
   <block id="094ae048e28df3a12a5e4fedaf56a886" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block> 。</block>
   <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>。</block>
   <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">在每个版本中、支持会在不同的时间点撤消。其中包括9.10.1 9.10.1 P11及更高版本9.11.1 P7及更高版本、9.12.1 GA及更高版本。有关详细信息、请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
+  <block id="2d173dfa208c5028d536c08827a33be8" category="paragraph"><block ref="2d173dfa208c5028d536c08827a33be8" category="inline-link-rx"></block></block>
 </blocks>
