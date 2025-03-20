@@ -1914,7 +1914,6 @@
   <block id="98dce57b0664e78870d257a648e96612" category="doc">在ONTAP REST API中使用角色和用户</block>
   <block id="8e7104f8cdaf55507f25e0b9a816f34b" category="doc">使用ONTAP REST API获取集群配置</block>
   <block id="19ca54acf953a715866f203d447d92ef" category="sidebar">操作特性</block>
-  <block id="773636ecc39ec5e888c33fed3471ca6a" category="summary">NetApp支持PowerShell、可用于管理ONTAP存储系统。</block>
   <block id="2fa251c44aacb71e26d10444ef2c35d7" category="doc">了解NetApp PowerShell工具包</block>
   <block id="f1f7a58e7fbfd1ed521da099492f9928" category="paragraph">PowerShell是自动管理ONTAP集群的另一个选项。</block>
   <block id="a96db3613c36742398cc9d0c8e5e717a" category="paragraph">PowerShell是Microsoft提供的一种编程语言、可用于任务自动化和配置管理。它包括命令行Shell环境以及脚本语言。</block>
@@ -1973,4 +1972,5 @@
   <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>。</block>
   <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">在每个版本中、支持会在不同的时间点撤消。其中包括9.10.1 9.10.1 P11及更高版本9.11.1 P7及更高版本、9.12.1 GA及更高版本。有关详细信息、请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="2d173dfa208c5028d536c08827a33be8" category="paragraph"><block ref="2d173dfa208c5028d536c08827a33be8" category="inline-link-rx"></block></block>
+  <block id="55f8a02846727817cdfe8e0382917362" category="summary">NetApp为PowerShell应用程序提供了一个工具包、可用于管理ONTAP存储系统。该工具包由NetApp开发人员创建、并由客户社区提供支持。</block>
 </blocks>
