@@ -246,7 +246,6 @@
   <block id="574ab269e7caa83c4f904627c177d111" category="paragraph">NVMe 接口是指配置为支持基于网络结构的 NVMe （ NVMe-oF ）协议的网络接口。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="055c2c82f5f90d21db7da7a6ed60c13e" category="paragraph">NVMe 子系统控制器表示主机与存储解决方案之间的动态连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="816c0720f92a2711cb0cd082d1076aa6" category="paragraph">NVMe 子系统映射是 NVMe 命名空间与 NVMe 子系统的关联。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="fb8f24dc4fe86e198d8b55ea44102fe4" category="paragraph">NVMe 子系统可为一组连接 NVMe 的主机维护配置状态和命名空间访问控制。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="doc">支持</block>
   <block id="19e28f133d3f6f61397443b9a434bda8" category="paragraph">您可以使用这些 API 调用来管理用于支持集群的 ONTAP 功能。</block>
   <block id="f0d5ad06fbd80e449410ccfbaa33addd" category="paragraph">AutoSupport 会收集配置和状态详细信息以及错误，并向 NetApp 报告这些信息。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -365,7 +364,6 @@
   <block id="b369b16e92f996e00351db6e130a541d" category="paragraph">您可以管理与 ONTAP 集群关联的每个许可证管理器实例相关的配置和其他信息。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="0d600f41a8266499c57370c6800ad857" category="paragraph">通过这些许可证，您可以实施特定的 ONTAP 特性和功能。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="71b47385ee618a2fae2664a10e7b792e" category="paragraph">每个许可证都可以作为一个单独的软件包进行管理。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="daa83199ce876d3906471f4305486d9b" category="paragraph">您可以管理与 MetroCluster 关联的调解器，包括添加或删除调解器实例。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="a9137e9b0f9b61df9e234a600351501e" category="paragraph">您可以对 MetroCluster 部署执行诊断操作并检索结果。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="1ee7729933ef643d54d0e99b88ecb1be" category="paragraph">您可以执行与 MetroCluster DR 组相关的操作。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="6e9a92f1a47bed9d13132a992dd338e0" category="paragraph">您可以检索 MetroCluster 互连状态。此资源类型是 ONTAP 9.8 的新增功能。</block>
@@ -1739,7 +1737,6 @@
   <block id="10c96e88b9c4e92d1c2ae63f9eade937" category="paragraph">您可以使用这些API调用来管理ONTAP SnapLock功能。</block>
   <block id="4e8316643e7aaa485e54110d73c76f12" category="paragraph">通过ONTAP REST API提供的资源按类别进行组织。每个资源类别都包含一个简短的问题描述、并在适当情况下提供了其他使用注意事项。</block>
   <block id="0ea16c1b878b2cbbbc3d0b12297d9b11" category="admonition">对于许多 REST 端点，您可以在路径字符串中包含 UUID 密钥以访问特定对象实例。但是、在许多情况下、您也可以使用查询参数上的属性值来访问对象。</block>
-  <block id="72cb412397232628600f03c53da4faf9" category="paragraph">您可以使用这些API调用来管理集群和SVM安全设置。</block>
   <block id="8cd7d5cbedf290a9b729cc263d9b289c" category="list-title">ONTAP 9.15.1.</block>
   <block id="75d0655a3007155c5cee6673326640b8" category="inline-link">PyPI：NetApp ONTAP 9.15.1.</block>
   <block id="88f0364b032c766b6224cbd9e9d86861" category="list-text"><block ref="88f0364b032c766b6224cbd9e9d86861" category="inline-link-rx"></block></block>
@@ -1973,4 +1970,26 @@
   <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">在每个版本中、支持会在不同的时间点撤消。其中包括9.10.1 9.10.1 P11及更高版本9.11.1 P7及更高版本、9.12.1 GA及更高版本。有关详细信息、请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="2d173dfa208c5028d536c08827a33be8" category="paragraph"><block ref="2d173dfa208c5028d536c08827a33be8" category="inline-link-rx"></block></block>
   <block id="55f8a02846727817cdfe8e0382917362" category="summary">NetApp为PowerShell应用程序提供了一个工具包、可用于管理ONTAP存储系统。该工具包由NetApp开发人员创建、并由客户社区提供支持。</block>
+  <block id="cabfdd624e257c6296d46c502ec2f6a0" category="paragraph-title">应用程序容器</block>
+  <block id="e3d82ad928c10915b5da10a7c2bf0872" category="paragraph">您可以使用应用程序容器来配置一个或多个存储对象。此资源类型是在ONTAP 9.17.1 中引入的。</block>
+  <block id="9c424f7f4918552c31a894007522bb4e" category="paragraph-title">中介 ping</block>
+  <block id="b9efdb36bec1d33ab7d17f3e375de2b8" category="paragraph">您可以 ping 通BlueXP云服务。此资源类型是ONTAP 9.17.1 中的新增资源类型。</block>
+  <block id="93034c68d43c2524bb937202e781ac56" category="paragraph">您可以管理与MetroCluster关联的调解器，包括添加或删除调解器实例。此资源类型是ONTAP 9.8 中的新增资源类型，并在 9.17.1 中进行了更新。</block>
+  <block id="ab0f4cf2d83c70d8508791234093e655" category="paragraph">NVMe 子系统负责维护一组连接 NVMe 的主机的配置状态和命名空间访问控制。此资源类型在ONTAP 9.6 中引入，并在 9.17.1 中进行了更新。</block>
+  <block id="3fc600c61245dc46b87bd9c350414b72" category="summary">您可以使用这些 API 调用来管理集群和 SVM 的安全设置。</block>
+  <block id="a81bc2dbbcd90acaa70973c80b9af6d1" category="paragraph-title">反勒索软件熵统计</block>
+  <block id="3a9c5e847bdf5017440f7264fcd205b8" category="paragraph">针对自主勒索软件防护 (ARP) 功能的运行，提供了详细的熵统计信息。此资源类型已在ONTAP 9.17.1 中添加。</block>
+  <block id="b52870af11611d1b126cef0fa3f5a1a9" category="paragraph-title">巴比肯 KMS</block>
+  <block id="3ed95d49b9e1e8478609204805319da9" category="paragraph">已添加对 OpenStack Barbican 密钥管理器的支持，以维护NetApp卷加密 (NVE) 的密钥。此资源类型已在ONTAP 9.17.1 中添加。</block>
+  <block id="21bd41f6b862d27b6178db85e133ded2" category="paragraph-title">即时 (JIT) 权限提升</block>
+  <block id="46c04062cd8ec434ce71264ec13d8ea2" category="paragraph">(JIT) 权限提升是对基于角色的访问控制 (RBAC) 的增强。集群管理员可以请求临时提升到现有角色。此资源类型已在ONTAP 9.17.1 中添加。</block>
+  <block id="23b93b23693b07683825cd2456713bf6" category="paragraph-title">SAML 服务提供商默认元数据</block>
+  <block id="665a0414cabade6ca0464111ee644210" category="paragraph">您可以管理集群的 SAML 默认元数据配置。此资源类型是在ONTAP 9.17.1 中添加的。</block>
+  <block id="ea1ad38d91c2e87ef2e9571bd55654fd" category="section-title">ONTAP 9.17.1</block>
+  <block id="0539b97752cd6597c7111fdfb3c977f4" category="paragraph">ONTAP 9.17.1 版本继续扩展ONTAP REST API 的功能，新增了近二十个 API 调用。此版本主要侧重于安全性增强，并对中介处理、NMVe 子系统和应用程序容器进行了额外更新。</block>
+  <block id="945f2bfba8db8115fbb5aa8d5ef40dac" category="list-text">ONTAP 9.17.1 REST API 引入了四项主要安全功能。ONTAPONTAP(JIT) 权限提升是对基于角色的访问控制 (RBAC) 的增强。集群管理员可以请求临时提升现有角色权限，从而允许访问特权命令。该功能包含一组强大的配置选项。新增了对 OpenStack Barbican 密钥管理器的支持。此 KMS 用于维护NetApp卷加密 (NVE) 的密钥。ONTAPONTAP包含针对 SAN 卷的自主勒索软件防护 (ARP)。详细的 ARP 熵统计信息可通过 REST API 获取。此外，还添加了多个 API 调用来管理集群的 SAML 默认元数据配置。</block>
+  <block id="b356fd7d5369361a7cb9bed5ffd8badd" category="list-text">集群中介</block>
+  <block id="c5967fcc5e5da6af86d8bc90aef6f9e3" category="list-text">您可以使用ONTAP REST API 对BlueXP云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。</block>
+  <block id="7534862fabc5c0180ec3f7a8a2dbc22f" category="list-text">NVMe 子系统维护一组 NVMe 连接主机的配置状态和命名空间访问控制。使用ONTAP 9.17.1，您可以使用现有端点的 PATCH 方法修改 NVMe 子系统。</block>
+  <block id="fda0d96218952424d26fce1f1247ec68" category="list-text">应用程序容器是ONTAP 9.17.1 中的新功能，支持配置一个或多个存储对象。您可以配置客户端访问存储所需的策略和规则。此外，还可以配置FlexCache卷。</block>
 </blocks>
