@@ -17,7 +17,7 @@ summary: NetApp易管理性SDK提供了一组ONTAPI API调用、用于开发用�
 NetApp易管理性SDK提供了一组ONTAPI API调用、用于开发用于监控和管理ONTAP存储的应用程序。SDK与OnCommand Workflow Automation软件包一起支持您自动管理ONTAP系统。
 
 
-NOTE: 虽然NetApp易管理性SDK和OnCommand Workflow Automation仍受支持、但ONTAP REST API是自动化ONTAP系统时要使用的首选战略技术。请参见 link:../migrate/ontapi_disablement.html["已取消ONTAPI"] 有关详细信息 ...
+NOTE: 虽然NetApp Manageability SDK 和OnCommand Workflow Automation继续受到支持，但ONTAP REST API 是自动化ONTAP系统时首选的战略技术。看link:../migrate/migration-considerations.html["从ONTAPI迁移到REST API"]了解更多信息。
 
 .下载SDK
 您可以从NetApp 支持站点 下载NetApp易管理性SDK。SDK在客户端上支持多种语言、包括：Python、PowerShell、C、C++、 Java、C#、vb。 NET和Ruby。请务必查看互操作性表工具、了解有关NetApp易管理性SDK以及您的ONTAP版本如何支持它的信息。
