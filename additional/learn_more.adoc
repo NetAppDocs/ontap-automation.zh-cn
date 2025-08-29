@@ -107,7 +107,7 @@ https://netapp.io/2022/03/21/transitioning-from-ontapizapi-using-ontapi-usage-re
 
 * 很好地介绍了NetApp Python客户端库以及如何开始使用该库编写代码。
 +
-video::Wws3SB5d9Ss[youtube,width=848,height=480]
+video::pg5ls1Ol6uw[youtube,width=848,height=480]
 * 了解一下经Ans负责人 认证的模块。
 +
 video::ZlmQ5IuVZD8[youtube,width=848,height=480]
