@@ -1249,7 +1249,6 @@
   <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。</block>
   <block id="9d755089336a033163e3d2d980b0a0c6" category="cell">&gt;=</block>
   <block id="e62ced77ec600a0a48c6c84c38cf0e4e" category="paragraph"><block ref="b53150fedbbf0bd1cbc9f3f68a84f43c" prefix="" category="inline-code"></block></block>
-  <block id="2b86317cf346d1bf47abc8c04df6f353" category="section-title">BlueXP自动化目录</block>
   <block id="cd36c9b3be9291a853cd6c8c14966c93" category="inline-link">NetApp自动化</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
@@ -1548,7 +1547,6 @@
   <block id="9d344c4d689635bee0d71b95de7b0c04" category="paragraph">NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创建自动化代码变得更加轻松。您应选择一种适合您的开发语言和环境的解决方案。</block>
   <block id="978685ea07530013be4ee7935a3a51c0" category="section-title">自动化框架</block>
   <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="paragraph-title">Ansible</block>
-  <block id="74e4ec1fd7e7ec388822465aeff417c4" category="paragraph">NetApp<block ref="24f12c8cdb9e96aedf586081f8419901" category="inline-link-rx"></block> 可通过BlueXP Web用户界面访问。通过该目录、您可以访问打包的解决方案、这些解决方案有助于自动部署ONTAP并将其与其他产品集成。请参见<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> 有关文档和详细信息、请参见。</block>
   <block id="6896ceb4698b2c86775b4d891be243d5" category="summary">您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据需要检索EMS消息。</block>
   <block id="af129edd8d2b529838378e328200ea64" category="paragraph">您可以通过多个示例工作流来说明如何使用ONTAP EMS服务。在使用工作流并发出任何REST API调用之前、请务必查看 <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>。</block>
   <block id="f3bd9688dec070eec4b4332373791cf4" category="inline-link">events.py</block>
@@ -1962,7 +1960,6 @@
   <block id="cabfdd624e257c6296d46c502ec2f6a0" category="paragraph-title">应用程序容器</block>
   <block id="e3d82ad928c10915b5da10a7c2bf0872" category="paragraph">您可以使用应用程序容器来配置一个或多个存储对象。此资源类型是在ONTAP 9.17.1 中引入的。</block>
   <block id="9c424f7f4918552c31a894007522bb4e" category="paragraph-title">中介 ping</block>
-  <block id="b9efdb36bec1d33ab7d17f3e375de2b8" category="paragraph">您可以 ping 通BlueXP云服务。此资源类型是ONTAP 9.17.1 中的新增资源类型。</block>
   <block id="93034c68d43c2524bb937202e781ac56" category="paragraph">您可以管理与MetroCluster关联的调解器，包括添加或删除调解器实例。此资源类型是ONTAP 9.8 中的新增资源类型，并在 9.17.1 中进行了更新。</block>
   <block id="ab0f4cf2d83c70d8508791234093e655" category="paragraph">NVMe 子系统负责维护一组连接 NVMe 的主机的配置状态和命名空间访问控制。此资源类型在ONTAP 9.6 中引入，并在 9.17.1 中进行了更新。</block>
   <block id="3fc600c61245dc46b87bd9c350414b72" category="summary">您可以使用这些 API 调用来管理集群和 SVM 的安全设置。</block>
@@ -1978,7 +1975,6 @@
   <block id="0539b97752cd6597c7111fdfb3c977f4" category="paragraph">ONTAP 9.17.1 版本继续扩展ONTAP REST API 的功能，新增了近二十个 API 调用。此版本主要侧重于安全性增强，并对中介处理、NMVe 子系统和应用程序容器进行了额外更新。</block>
   <block id="945f2bfba8db8115fbb5aa8d5ef40dac" category="list-text">ONTAP 9.17.1 REST API 引入了四项主要安全功能。ONTAPONTAP(JIT) 权限提升是对基于角色的访问控制 (RBAC) 的增强。集群管理员可以请求临时提升现有角色权限，从而允许访问特权命令。该功能包含一组强大的配置选项。新增了对 OpenStack Barbican 密钥管理器的支持。此 KMS 用于维护NetApp卷加密 (NVE) 的密钥。ONTAPONTAP包含针对 SAN 卷的自主勒索软件防护 (ARP)。详细的 ARP 熵统计信息可通过 REST API 获取。此外，还添加了多个 API 调用来管理集群的 SAML 默认元数据配置。</block>
   <block id="b356fd7d5369361a7cb9bed5ffd8badd" category="list-text">集群中介</block>
-  <block id="c5967fcc5e5da6af86d8bc90aef6f9e3" category="list-text">您可以使用ONTAP REST API 对BlueXP云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。</block>
   <block id="7534862fabc5c0180ec3f7a8a2dbc22f" category="list-text">NVMe 子系统维护一组 NVMe 连接主机的配置状态和命名空间访问控制。使用ONTAP 9.17.1，您可以使用现有端点的 PATCH 方法修改 NVMe 子系统。</block>
   <block id="fda0d96218952424d26fce1f1247ec68" category="list-text">应用程序容器是ONTAP 9.17.1 中的新功能，支持配置一个或多个存储对象。您可以配置客户端访问存储所需的策略和规则。此外，还可以配置FlexCache卷。</block>
   <block id="697a9cf1a7fb8de1bc8fa46284d6e0b1" category="paragraph">从ONTAP 9.6 开始， ONTAP包含一个强大的 REST API，为自动部署和管理存储系统奠定了基础。从那时起，REST API 不断扩展和成熟。现在，它在自动化ONTAP部署管理时提供了首选和战略性的选择。</block>
@@ -1986,4 +1982,8 @@
   <block id="e4b59daa9d219e983c04920265feb123" category="paragraph">您可以使用多个框架之一来创建和部署自动化代码。</block>
   <block id="f78eadeb4930b974373908234c567a7e" category="paragraph">ONTAPI API（ZAPI）是NetApp ONTAP软件中包含的原始专有调用集。该 API 通过网络可管理性 SDK 提供，支持数据存储管理和管理任务的自动化。如果您正在使用 ONTAPI，则应该计划迁移到ONTAP REST API，以利用 REST API 提供的扩展ONTAP功能集。</block>
   <block id="7548b7673e2b60de6d879d6ea446f09b" category="admonition">虽然NetApp Manageability SDK 和OnCommand Workflow Automation继续受到支持，但ONTAP REST API 是自动化ONTAP系统时首选的战略技术。看<block ref="4cdee464b402508aee95b27a583991b8" category="inline-link-macro-rx"></block>了解更多信息。</block>
+  <block id="af6996486b8caeb30bbea84944993b2c" category="paragraph-title">NetApp控制台自动化目录</block>
+  <block id="e0174d9f7e751b49d54489f48cf32123" category="paragraph">NetApp<block ref="4a12798fe83cd7214eaeb76b3be372fa" category="inline-link-rx"></block>可通过控制台 Web 用户界面访问。该目录提供对打包解决方案的访问，可帮助您自动部署ONTAP并将其与其他产品集成。看<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block>以获取文档和更多信息。</block>
+  <block id="e1cd9757f6c7ba13839e049e31754104" category="paragraph">您可以 ping NetApp控制台云服务。此资源类型是ONTAP 9.17.1 中的新增资源类型。</block>
+  <block id="a224eaaf0639b3174470575f152d95fa" category="list-text">您可以使用ONTAP REST API 对NetApp控制台云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。</block>
 </blocks>

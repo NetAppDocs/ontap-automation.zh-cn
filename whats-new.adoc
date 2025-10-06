@@ -26,7 +26,7 @@ TIP: 您应查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508[
 ONTAP 9.17.1 版本继续扩展ONTAP REST API 的功能，新增了近二十个 API 调用。此版本主要侧重于安全性增强，并对中介处理、NMVe 子系统和应用程序容器进行了额外更新。
 
 安全性:: ONTAP 9.17.1 REST API 引入了四项主要安全功能。ONTAPONTAP(JIT) 权限提升是对基于角色的访问控制 (RBAC) 的增强。集群管理员可以请求临时提升现有角色权限，从而允许访问特权命令。该功能包含一组强大的配置选项。新增了对 OpenStack Barbican 密钥管理器的支持。此 KMS 用于维护NetApp卷加密 (NVE) 的密钥。ONTAPONTAP包含针对 SAN 卷的自主勒索软件防护 (ARP)。详细的 ARP 熵统计信息可通过 REST API 获取。此外，还添加了多个 API 调用来管理集群的 SAML 默认元数据配置。
-集群中介:: 您可以使用ONTAP REST API 对BlueXP云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。
+集群中介:: 您可以使用ONTAP REST API 对NetApp控制台云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。
 NVMe:: NVMe 子系统维护一组 NVMe 连接主机的配置状态和命名空间访问控制。使用ONTAP 9.17.1，您可以使用现有端点的 PATCH 方法修改 NVMe 子系统。
 应用程序容器:: 应用程序容器是ONTAP 9.17.1 中的新功能，支持配置一个或多个存储对象。您可以配置客户端访问存储所需的策略和规则。此外，还可以配置FlexCache卷。
 
