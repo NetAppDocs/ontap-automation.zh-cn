@@ -1800,7 +1800,6 @@
   <block id="51a272535291837663b9d29ca43d1aec" category="inline-link">NetApp PCL 9.16.1.</block>
   <block id="7bb622625faf5a5e7c3f1cbdc8630d38" category="list-text"><block ref="7bb622625faf5a5e7c3f1cbdc8630d38" category="inline-link-rx"></block></block>
   <block id="8162203e3ec38c896e5f6d688115d731" category="inline-link">ONTAP REST API参考</block>
-  <block id="7fa54c481eb8ad78d44f6e504e7b4169" category="paragraph">您可以联机访问当前<block ref="ef2ba38b04f0d7157a7cd156ad8c1827" category="inline-link-rx"></block>文档。此外、还提供了一个版本选择器、用于访问基于ONTAP版本的早期文档版本。</block>
   <block id="129b5712fd60415907d5e6cd819422a0" category="paragraph-title">存储分段快照</block>
   <block id="b7dea6f3fb95fba3243ff8dffff88d5f" category="paragraph">您可以创建和管理S3存储分段的快照。此功能是在ONTAP 9 16.1中添加的。</block>
   <block id="335fbde7fdce25596a01b2a19aa07279" category="paragraph">ONTAP 会检测可能包含勒索软件威胁的文件。端点有多种类别。您可以检索这些可疑文件的列表并将其从卷中删除。此资源类型是在ONTAP 9.10.1中引入的。ONTAP 9 .16增加了对显示版本和更新反勒索软件包的支持。</block>
@@ -1986,4 +1985,5 @@
   <block id="e0174d9f7e751b49d54489f48cf32123" category="paragraph">NetApp<block ref="4a12798fe83cd7214eaeb76b3be372fa" category="inline-link-rx"></block>可通过控制台 Web 用户界面访问。该目录提供对打包解决方案的访问，可帮助您自动部署ONTAP并将其与其他产品集成。看<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block>以获取文档和更多信息。</block>
   <block id="e1cd9757f6c7ba13839e049e31754104" category="paragraph">您可以 ping NetApp控制台云服务。此资源类型是ONTAP 9.17.1 中的新增资源类型。</block>
   <block id="a224eaaf0639b3174470575f152d95fa" category="list-text">您可以使用ONTAP REST API 对NetApp控制台云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。</block>
+  <block id="f04dab284dad2dc94bb0467cf87dbc58" category="paragraph">您可以访问当前<block ref="a6269724e00b43d37f924c69c86e7e19" category="inline-link-rx"></block> 在线文档。还有一个版本选择器可用于访问基于ONTAP版本的文档的先前版本。</block>
 </blocks>

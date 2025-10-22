@@ -23,7 +23,7 @@ NOTE: 您可以根据ONTAP版本在多个站点之一访问REST API参考文档�
 
 == 联机访问ONTAP API参考文档
 
-您可以联机访问当前 https://docs.netapp.com/us-en/ontap-restapi/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP REST API参考"^]文档。此外、还提供了一个版本选择器、用于访问基于ONTAP版本的早期文档版本。
+您可以访问当前 https://docs.netapp.com/us-en/ontap-restapi/getting_started_with_the_ontap_rest_api.html["ONTAP REST API参考"^] 在线文档。还有一个版本选择器可用于访问基于ONTAP版本的文档的先前版本。
 
 
 
