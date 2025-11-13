@@ -40,6 +40,9 @@ summary: 您可以使用这些 API 调用来管理物理和逻辑存储。
 .FlexCache
 此资源类型是在 ONTAP 9.6 中引入的，并在 ONTAP 9.8 中进行了更新。
 
+.FlexCache连接状态
+您可以获取FlexCache连接状态。该资源类型是在ONTAP 9.18 中引入的。
+
 .FlexCache 起源
 FlexCache 是原始卷的永久性缓存。此资源类型最初是在 ONTAP 9.6 中推出的。ONTAP 9.9 REST API 增强了支持，支持通过 HTTP 修补方法进行修改。
 
