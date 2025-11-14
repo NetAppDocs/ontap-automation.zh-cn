@@ -317,7 +317,6 @@
   <block id="d294313e121bfbd45fa5b55ca0e3324d" category="paragraph">您可以创建 S3 策略并将其与资源关联以定义各种权限。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="section-title">用户</block>
   <block id="fcb4876473d3ad9e68e00cb94089cd42" category="paragraph">S3 用户帐户在 S3 服务器上维护。用户帐户基于一对密钥，并与其控制的存储分段相关联。此资源类型是在 ONTAP 9.7 中引入的。</block>
-  <block id="3232acac3eec8e3d87880c5b41ab690d" category="paragraph">如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">您必须具备以下条件：</block>
   <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">ONTAP 集群管理 LIF 的 IP 地址或主机名</block>
   <block id="4c00680cb601dcd1be164318ed4c2a88" category="list-text">有权访问 ONTAP REST API 的帐户的用户名和密码</block>
@@ -1115,7 +1114,6 @@
   <block id="8acc0dc5cdc4a547b0826578b2a98b48" category="paragraph-title">S3 组</block>
   <block id="29c67008363344d9ca92cd75f29fe2c9" category="paragraph-title">S3 策略</block>
   <block id="bc00f7a5406f8f98848784d25ca2e573" category="paragraph-title">将专用命令行界面直通与 ONTAP REST API 结合使用</block>
-  <block id="f4a4d3f8e378d11233851c0c7c1aeda7" category="paragraph-title">NetApp 和 Ansible 入门：安装 Ansible</block>
   <block id="34aebac80a78170f96dfd325c4320501" category="paragraph-title">HTTP请求</block>
   <block id="0d5a371e0c92f43305354a7ca5481105" category="paragraph-title">HTTP响应</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
@@ -1526,7 +1524,6 @@
   <block id="8cdc96bc9ea6b47bb91dc9a53923dd2c" category="list-text">为了帮助您更新 ONTAPI 自动化， NetApp 提供了一个需要一个或多个输入参数的 ONTAPI 调用列表，以及这些调用与等效的 ONTAP 9 REST API 调用的映射。请参见 <block ref="9a78e4571d9a7f8312d61713dd66ccf3" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="a45cab230f2297dd4eb30fef224dd154" category="section-title">典型的REST API事务</block>
   <block id="f53d66bdb1fa04bbb3f2f929505e7427" category="paragraph">您还可以使用其他几种资源来帮助自动部署和管理ONTAP存储系统。</block>
-  <block id="940b33dd3ba3d167b07b98a018af32be" category="paragraph"><block ref="940b33dd3ba3d167b07b98a018af32be" category="inline-link-rx"></block></block>
   <block id="0937dacc143a9ef9a8e961bb05d706cb" category="list-text">很好地介绍了NetApp Python客户端库以及如何开始使用该库编写代码。</block>
   <block id="c481c55f899fe826c43a53c975e485f0" category="list-text">了解一下经Ans负责人 认证的模块。</block>
   <block id="80ea4b005fd9d89a5db44b1a4c02962a" category="inline-link">有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答</block>
@@ -1996,4 +1993,8 @@
   <block id="98480199e938c1b0182ce374c8874655" category="paragraph">ONTAP 9.18.1 版本继续扩展ONTAP REST API 的功能，新增了 11 个 API 调用。此次改进主要集中在安全性方面，但也包括与存储管理相关的改进。</block>
   <block id="d36ba93814bec12a880acf6b6dbf29e3" category="list-text">ONTAP 9.18.1 REST API 引入了两项主要的安全增强功能。您可以使用新的集群网络 API 端点来显示和更新集群网络安全配置。集群网络证书管理功能强大。此外，您还可以显示和更新 NVLog 流量的 HA 网络的安全配置。</block>
   <block id="c7358a24d3b2dba34beefab7cc925d5d" category="list-text">NetApp FlexCache是源卷的持久缓存。它支持扇出，因此可以从单个源卷创建多个FlexCache 。REST API 支持检索缓存实例和源卷之间的连接状态。</block>
+  <block id="7b650aee25731b28a4a26e1237de6717" category="inline-link">PyPI： NetApp ONTAP 9.17.1</block>
+  <block id="5ebb87aae4f7e8c0fda80f126a8bf511" category="list-text"><block ref="5ebb87aae4f7e8c0fda80f126a8bf511" category="inline-link-rx"></block></block>
+  <block id="75b2bbb70260967ef570af8d23db0285" category="inline-link">NetApp PCL 9.17.1 版文档</block>
+  <block id="d086e4fa900ed41930da384119898669" category="list-text"><block ref="d086e4fa900ed41930da384119898669" category="inline-link-rx"></block></block>
 </blocks>

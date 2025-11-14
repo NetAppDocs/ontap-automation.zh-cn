@@ -30,9 +30,7 @@ summary: 您还可以访问其他几个资源，以获取有关如何自动部�
 +
 https://www.netapp.com/blog/new-normal-for-automation["自动化的新常态"^]
 
-* 如果您是首次使用 Ansible for ONTAP 自动化，这是一个很好的起点。
-+
-https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["NetApp 和 Ansible 入门：安装 Ansible"^]
+
 
 * 您可以探索如何使用ONTAP REST API管理文件安全性和权限。
 +

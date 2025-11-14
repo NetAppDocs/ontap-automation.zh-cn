@@ -43,6 +43,11 @@ Python客户端库包的名称为_Python NetApp - ONTAP。与软件包关联的�
 .软件包和文档列表
 [%collapsible]
 ====
+.ONTAP 9.17.1
+* https://pypi.org/project/netapp-ontap/9.17.1.0/["PyPI： NetApp ONTAP 9.17.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP3351667/html/index.html["NetApp PCL 9.17.1 版文档"^]
+
+
 .ONTAP 9.16.1.
 * https://pypi.org/project/netapp-ontap/9.16.1.0/["PyPI：NetApp ONTAP 9.16.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP3331665/html/index.html["NetApp PCL 9.16.1."^]
