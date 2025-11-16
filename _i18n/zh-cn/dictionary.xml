@@ -342,11 +342,9 @@
   <block id="96586887fdfb43d20f718252d1593e59" category="paragraph">您可以管理绑定到集群的 SVM 。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="3c09024082538b393ae85161883b78ab" category="paragraph">您可以通过多种不同方式访问 ONTAP REST API 。</block>
   <block id="1391ec09425a9a140a4aef306e42d0cb" category="section-title">网络注意事项</block>
-  <block id="480df78a66061b5c3b61f69d89342d23" category="paragraph">您可以通过以下接口连接到 REST API ：</block>
   <block id="15a4d902a9e2eeb56724bdb94f9d1977" category="list-text">集群管理 LIF</block>
   <block id="e2578ec54f85b5b6333c94364b756a1c" category="list-text">节点管理 LIF</block>
   <block id="a954bd55e944d7b65a02512356ab0177" category="list-text">SVM 管理 LIF</block>
-  <block id="3869128f90019baba527314ae533f075" category="paragraph">您选择使用的 LIF 必须配置为支持 HTTPS 管理协议。此外，网络中的防火墙配置必须允许 HTTPS 流量。</block>
   <block id="649819179ab6bae8f5294207b4462523" category="section-title">ONTAP API 联机文档页面</block>
   <block id="af945751c0efb1d33830b48e2e17c2e6" category="paragraph">用于访问最新版本 API 的文档页面的 URL 格式为：</block>
   <block id="26af4f060203125bc0739a38e9ddfa2b" category="section-title">自定义软件和工具</block>
@@ -1244,7 +1242,6 @@
   <block id="423daa27c59571ee80d9d7ca9cf5088e" category="list-text">现有S3存储分段端点已进行扩展、可包含规则定义。每个规则都是一个列表对象、用于定义要对存储分段中的对象执行的一组操作。这些规则可以让您更好地管理S3存储分段的生命周期。</block>
   <block id="f9f9079f4f63047ab8997287078e8b41" category="admonition">使用每种类型的角色都有优缺点。请参见 <block ref="35c80ca1076cc300bab74e8699286675" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">博客文章</block>
-  <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。</block>
   <block id="9d755089336a033163e3d2d980b0a0c6" category="cell">&gt;=</block>
   <block id="e62ced77ec600a0a48c6c84c38cf0e4e" category="paragraph"><block ref="b53150fedbbf0bd1cbc9f3f68a84f43c" prefix="" category="inline-code"></block></block>
   <block id="cd36c9b3be9291a853cd6c8c14966c93" category="inline-link">NetApp自动化</block>
@@ -1997,4 +1994,6 @@
   <block id="5ebb87aae4f7e8c0fda80f126a8bf511" category="list-text"><block ref="5ebb87aae4f7e8c0fda80f126a8bf511" category="inline-link-rx"></block></block>
   <block id="75b2bbb70260967ef570af8d23db0285" category="inline-link">NetApp PCL 9.17.1 版文档</block>
   <block id="d086e4fa900ed41930da384119898669" category="list-text"><block ref="d086e4fa900ed41930da384119898669" category="inline-link-rx"></block></block>
+  <block id="7457b2724d298830c8cd4519df6c4264" category="paragraph">您可以使用多种类型的接口之一连接到ONTAP REST API。您选择的 LIF 需要配置为支持 HTTPS 管理协议。此外，您网络中的防火墙配置必须允许 HTTPS 流量。支持以下接口：</block>
+  <block id="213f95a0c2380efc295db05b4d8410d0" category="paragraph">虽然您可以使用这些 LIF 中的任何一个，但推荐的最佳实践是使用集群管理 LIF。这样一来，集群就可以作为一个单一的逻辑单元进行寻址，从而提供最高级别的弹性和负载均衡。集群 LIF 可以根据需要重新定位到集群中，以处理计划内的升级、仲裁事件和其他连接问题。如果配置了多个集群管理 LIF，它们在访问 REST API 方面都是等效的。SVM 管理 LIF 也进行了负载均衡，但发送到节点级别 LIF 的请求会在本地处理。</block>
 </blocks>

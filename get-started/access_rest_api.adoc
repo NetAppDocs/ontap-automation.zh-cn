@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/access_rest_api.html 
-keywords: accessing the rest api, lif 
+keywords: access rest api, lif, cluster lif, svm lif, node lif 
 summary: 您可以通过多种不同方式访问 ONTAP REST API 。 
 ---
 = 如何访问ONTAP REST API
@@ -20,17 +20,14 @@ summary: 您可以通过多种不同方式访问 ONTAP REST API 。
 
 == 网络注意事项
 
-您可以通过以下接口连接到 REST API ：
+您可以使用多种类型的接口之一连接到ONTAP REST API。您选择的 LIF 需要配置为支持 HTTPS 管理协议。此外，您网络中的防火墙配置必须允许 HTTPS 流量。支持以下接口：
 
 * 集群管理 LIF
 * 节点管理 LIF
 * SVM 管理 LIF
 
 
-您选择使用的 LIF 必须配置为支持 HTTPS 管理协议。此外，网络中的防火墙配置必须允许 HTTPS 流量。
-
-
-TIP: 您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。
+虽然您可以使用这些 LIF 中的任何一个，但推荐的最佳实践是使用集群管理 LIF。这样一来，集群就可以作为一个单一的逻辑单元进行寻址，从而提供最高级别的弹性和负载均衡。集群 LIF 可以根据需要重新定位到集群中，以处理计划内的升级、仲裁事件和其他连接问题。如果配置了多个集群管理 LIF，它们在访问 REST API 方面都是等效的。SVM 管理 LIF 也进行了负载均衡，但发送到节点级别 LIF 的请求会在本地处理。
 
 
 
