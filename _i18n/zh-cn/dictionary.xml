@@ -1975,8 +1975,6 @@
   <block id="e4b59daa9d219e983c04920265feb123" category="paragraph">您可以使用多个框架之一来创建和部署自动化代码。</block>
   <block id="f78eadeb4930b974373908234c567a7e" category="paragraph">ONTAPI API（ZAPI）是NetApp ONTAP软件中包含的原始专有调用集。该 API 通过网络可管理性 SDK 提供，支持数据存储管理和管理任务的自动化。如果您正在使用 ONTAPI，则应该计划迁移到ONTAP REST API，以利用 REST API 提供的扩展ONTAP功能集。</block>
   <block id="7548b7673e2b60de6d879d6ea446f09b" category="admonition">虽然NetApp Manageability SDK 和OnCommand Workflow Automation继续受到支持，但ONTAP REST API 是自动化ONTAP系统时首选的战略技术。看<block ref="4cdee464b402508aee95b27a583991b8" category="inline-link-macro-rx"></block>了解更多信息。</block>
-  <block id="af6996486b8caeb30bbea84944993b2c" category="paragraph-title">NetApp控制台自动化目录</block>
-  <block id="e0174d9f7e751b49d54489f48cf32123" category="paragraph">NetApp<block ref="4a12798fe83cd7214eaeb76b3be372fa" category="inline-link-rx"></block>可通过控制台 Web 用户界面访问。该目录提供对打包解决方案的访问，可帮助您自动部署ONTAP并将其与其他产品集成。看<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block>以获取文档和更多信息。</block>
   <block id="e1cd9757f6c7ba13839e049e31754104" category="paragraph">您可以 ping NetApp控制台云服务。此资源类型是ONTAP 9.17.1 中的新增资源类型。</block>
   <block id="a224eaaf0639b3174470575f152d95fa" category="list-text">您可以使用ONTAP REST API 对NetApp控制台云服务执行 ping 操作。您还可以使用现有端点的 PATCH 方法修改特定中介器的配置。</block>
   <block id="f04dab284dad2dc94bb0467cf87dbc58" category="paragraph">您可以访问当前<block ref="a6269724e00b43d37f924c69c86e7e19" category="inline-link-rx"></block> 在线文档。还有一个版本选择器可用于访问基于ONTAP版本的文档的先前版本。</block>
@@ -1996,4 +1994,6 @@
   <block id="d086e4fa900ed41930da384119898669" category="list-text"><block ref="d086e4fa900ed41930da384119898669" category="inline-link-rx"></block></block>
   <block id="7457b2724d298830c8cd4519df6c4264" category="paragraph">您可以使用多种类型的接口之一连接到ONTAP REST API。您选择的 LIF 需要配置为支持 HTTPS 管理协议。此外，您网络中的防火墙配置必须允许 HTTPS 流量。支持以下接口：</block>
   <block id="213f95a0c2380efc295db05b4d8410d0" category="paragraph">虽然您可以使用这些 LIF 中的任何一个，但推荐的最佳实践是使用集群管理 LIF。这样一来，集群就可以作为一个单一的逻辑单元进行寻址，从而提供最高级别的弹性和负载均衡。集群 LIF 可以根据需要重新定位到集群中，以处理计划内的升级、仲裁事件和其他连接问题。如果配置了多个集群管理 LIF，它们在访问 REST API 方面都是等效的。SVM 管理 LIF 也进行了负载均衡，但发送到节点级别 LIF 的请求会在本地处理。</block>
+  <block id="5d5d8414d96fc428f736ae2f6fa3ada7" category="paragraph-title">NetApp Console自动化中心</block>
+  <block id="e250d9825e173c1f8f38848dad857fa0" category="paragraph">这<block ref="dc3bfae542b9e4cc3361fc7eb5625d17" category="inline-link-rx"></block> 可通过控制台 Web 用户界面访问。自动化中心提供对打包解决方案的访问，可以帮助您自动部署ONTAP并将其与其他产品集成。看<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> 有关文档和更多信息，请参阅相关文件。</block>
 </blocks>
