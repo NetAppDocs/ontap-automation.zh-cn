@@ -119,28 +119,6 @@ https://www.youtube.com/playlist?list=PLHSh2r3A9gQRG1kkAcx1MmtVYPimyxOp_["自动
 
 
 
-== 技术培训和活动
-
-* Insight 2022演示文稿(26分钟)。
-+
-https://media.netapp.com/video-detail/152137a0-4153-59dc-ad7d-232af1785dd5/modernize-your-ontap-storage-management-with-ontap-rest-apis-1837["利用ONTAP REST API打造现代化的ONTAP存储管理"^]
-
-
-
-* Insight 2021演示文稿(31分钟)。
-+
-https://media.netapp.com/video-detail/f353c28a-2364-5e5e-bf86-5d7ef66360fe/netapp-ontap-save-time-and-simplify-using-rest-apis-brk-1103-3["NetApp ONTAP：节省时间并简化REST API的使用"^]
-
-
-
-* NetApp学习服务。
-+
-https://netapp.sabacloud.com/Saba/Web_spf/NA1PRD0047/app/shared;spf-url=common%2Fledetail%2FSTRSW-ILT-RSTAPI["使用ONTAP REST API和Ans可 实现存储管理自动化"^]
-
-
-
-
-
 == NetApp 知识库
 
 * 如果您遇到使用ONTAP REST API的问题描述、可以将其报告给NetApp。
