@@ -1969,5 +1969,5 @@
   <block id="4d0c0700e788305f919db46d1de4d0c6" category="paragraph-title">反勒索软件支持</block>
   <block id="8decbf8aa6be13f4f523f23aac8e2e6a" category="paragraph">您可以控制自主勒索软件防护 (ARP) 启用功能的操作。这包括检索和修改配置设置。此资源类型是在 ONTAP 9.18.1 中引入的。</block>
   <block id="4f51f80a409afbda03654a8b1a0d7478" category="paragraph">ONTAP 9.18.1 版本通过十三个新的 API 调用继续扩展 ONTAP REST API 的功能。这些增强功能主要侧重于安全性，但也包括与存储管理相关的改进。</block>
-  <block id="2b6417c7e24c5efdcdbe136fac22e8b2" category="list-text">ONTAP 9.18.1 REST API 引入了多项安全增强功能。您可以使用新的群集网络终结点来显示和更新群集网络安全配置，包括证书管理。此外，您可以管理 NVLog 流量的 HA 网络的安全配置。自主勒索软件防护 (ARP) 已得到增强，使您能够显示和更新启用功能。</block>
+  <block id="b21adb6984316fe52e38ac05c428930c" category="list-text">ONTAP 9.18.1 REST API 引入了多项安全增强功能。您可以使用新的群集网络终结点来显示和更新群集网络安全配置，包括证书管理。此外，您可以管理 NVLog 流量的 HA 网络的安全配置。自主勒索软件防护 (ARP) 已得到增强，以支持自动启用配置的显示和更新。</block>
 </blocks>
