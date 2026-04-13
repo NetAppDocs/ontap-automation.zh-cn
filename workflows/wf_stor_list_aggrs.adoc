@@ -24,7 +24,7 @@ summary:
 | HTTP 方法 | 路径 
 
 
-| 获取 | /API/storage/disks 
+| 获取 | /api/storage/aggregates 
 |===
 .处理类型
 同步
