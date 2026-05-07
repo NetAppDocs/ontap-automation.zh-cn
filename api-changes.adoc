@@ -2,7 +2,7 @@
 permalink: api-changes.html 
 sidebar: sidebar 
 keywords: rest api, api changes, parameters, default values, breaking changes, documentation errors 
-summary: NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有时、这些更新可能会包括对现有API调用的更改、例如使用的参数和默认值。这些更改可能会影响访问REST API的软件。 
+summary: NetApp 继续在每个主要产品版本中增强和更新 ONTAP REST API。这些更新偶尔会包括对现有 API 调用的更改，从而中断对 ONTAP 功能的访问。使用 API 时还有其他注意事项，以及一些文档错误。 
 ---
 = 对ONTAP REST API调用进行的更改
 :hardbreaks:
@@ -14,17 +14,20 @@ summary: NetApp会继续在每个主要产品版本中增强和更新ONTAP REST 
 
 
 [role="lead"]
-NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有时、这些更新可能会包括对现有API调用的更改、例如使用的参数和默认值。这些更改可能会影响访问REST API的软件。
+NetApp 继续在每个主要产品版本中增强和更新 ONTAP REST API。这些更新偶尔会包括对现有 API 调用的更改，从而中断对 ONTAP 功能的访问。使用 API 时还有其他注意事项，以及一些文档错误。
 
 
 
 == 对现有ONTAP REST API调用进行的更改
 
-对现有API调用进行任何更改都可能会影响访问REST API的软件。您应查看下表中的更改列表、以确定是否会对您的ONTAP自动化环境造成影响。每个条目都包括适用的API端点、变更说明以及所推出的ONTAP版本。
+对现有 ONTAP REST API 调用（例如端点和参数）的更改可能会影响使用该 API 的软件。在大多数情况下，根据您的环境，这些被认为是_重大更改_。您应该查看下表中的列表，以确定是否会对您的自动化环境产生影响。每个条目都包括适用的 API 端点或区域、更改的描述以及引入的 ONTAP 版本。
 
 [cols="40%,50%,10%"]
 |===
-| 端点 | 更改说明 | ONTAP 版本 
+| API 端点或区域 | 行为描述 | ONTAP 版本 
+
+
+| Azure 密钥存储 | 用于启用和禁用 Azure Key Vault (AKV) 的 REST API 端点现在以异步方式执行，而不是同步方式执行。这会影响启用 AKV 的 POST 操作和禁用 AKV 的 DELETE 操作。使用这些 API 调用的客户端应更新其代码以处理异步响应，这涉及检查作业状态而不仅仅是 HTTP 状态代码。此更改主要影响通过 ONTAP REST API 管理 Azure Key Vault 配置的 Azure NetApp Files (ANF) 环境。 | 9.19.1 
 
 
 | `/security/authentication/duo/groups`
@@ -32,15 +35,29 @@ NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有
 |===
 
 
-== ONTAP REST API参考文档错误
+== 其他 REST API 使用注意事项
 
-随着NetApp对ONTAP REST API的增强和更新、有时可能会在联机参考文档中引入错误。这些错误可能会在使用API时造成混淆、但通常不会影响或中断ONTAP自动化软件或环境。
-
-您应查看下表中的错误列表。这将帮助您更好地了解和浏览ONTAP REST API参考文档。每个条目都包括适用的API端点、错误说明以及引入的ONTAP版本。
+除了中断或破坏性更改外，使用 ONTAP REST API 时还有几个其他注意事项。存在不同类型的问题，包括引入新的或替代的 API 调用以及对 ONTAP 内部处理的更改。每个条目都包括适用的 API 端点或区域、行为的描述以及引入该功能的 ONTAP 版本。
 
 [cols="40%,50%,10%"]
 |===
-| 端点 | 更改说明 | ONTAP 版本 
+| API 端点或区域 | 行为描述 | ONTAP 版本 
+
+
+| `/api/application/containers` | 用于创建容器的端点已得到增强，以支持以前仅通过 `/api/storage/volumes`提供的几个卷配置参数。这使客户，特别是那些使用 NetApp Trident 进行 Kubernetes 存储编排的客户，在配置持久卷时能够利用 ONTAP 的平衡放置功能。卷可以自动分布在集群节点之间，以实现最佳性能和容量利用率。在部署需要对卷放置、QoS 策略或容量管理进行精细控制的容器化应用程序时，应使用更新的端点。这对于大规模的 Kubernetes 环境尤其有用，在这些环境中，跨存储资源的自动负载平衡至关重要。 | 9.19.1 
+
+
+| `/api/cluster/licensing/licenses` | 当通过 REST API 检索超大型 ONTAP 集群（32 个节点或更多）的许可证信息时，您可能会遇到响应时间缓慢的问题。此问题会影响同时查询所有许可证的 System Manager 许可选项卡和自动化工作流。为了减少影响，您可以使用查询参数一次获取一个特定功能的许可证，或者使用 CLI 命令 `system license show`，而不是在单个 API 调用中检索所有许可证。 | 9.19.1 
+|===
+
+
+== ONTAP REST API参考文档错误
+
+随着 NetApp 增强和更新 ONTAP REST API，有时可能会在在线参考文档中引入错误。这些错误可能会在使用 API 时造成混乱，但通常不会影响或破坏您的 ONTAP 自动化软件或环境。您应该查看下表中的错误列表。这将帮助您更好地理解和浏览 ONTAP REST API 参考文档。每个条目都包括适用的 API 端点或区域、错误描述以及引入的 ONTAP 版本。
+
+[cols="40%,50%,10%"]
+|===
+| API 端点或区域 | 更改说明 | ONTAP 版本 
 
 
 | `/storage/quota/reports` | 端点的REST API文档指示*specifier*为有效字段。但是、此端点不支持配额说明符。没有建议的客户操作或解决方法。在未来的ONTAP版本中、此字段将从API文档中删除。 | 9.6 

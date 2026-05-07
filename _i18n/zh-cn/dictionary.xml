@@ -333,7 +333,6 @@
   <block id="68c0fd93c2b023ed4f45e053c2c0475e" category="paragraph">启动程序组（ igroup ）是一组光纤通道 WWPN （全球通用端口名称）， iSCSI IQN （限定名称）和 iSCSI EUI （扩展唯一标识符），用于标识主机启动程序。此资源类型最初是在 ONTAP 9.6 中推出的。</block>
   <block id="ff405aa42851c6e5daf11546e79e3980" category="paragraph">iSCSI 凭据对象包含启动程序和 ONTAP 使用的身份验证凭据。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="4ec7a22296b883954f318da87ad08cf3" category="paragraph">iSCSI 会话是指将 iSCSI 启动程序与 iSCSI 目标链接在一起的一个或多个 TCP 连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
-  <block id="c1899d8ac0f131825213c510da4ad1d1" category="paragraph">LUN 映射是指 LUN 与启动程序组之间的关联。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="5d3a296c76ec21766a0b62dfec5b3611" category="paragraph">端口集是与 _portset_ Storage VM 关联的一组光纤通道或 iSCSI 网络接口。虽然先前版本的 ONTAP 中已存在此功能，但现在已向 REST API 添加了支持。此 REST 资源类型是在 ONTAP 9.9 中引入的。</block>
   <block id="0b7e67b6cdcf0432b624d53588d520fb" category="doc">SVM</block>
   <block id="5782655b9fc988fc3096ea1fe0953ee6" category="paragraph">您可以使用这些 API 调用来管理 Storage Virtual Machine （ SVM ）。</block>
@@ -1745,17 +1744,13 @@
   <block id="e02870eb3d03aec6ab03fa4fa4f87b65" category="doc">ONTAP REST API实验室资源</block>
   <block id="940f4511f0af1bd466600a8213691360" category="inline-link">NetApp。 ONTAP PowerShell工具包</block>
   <block id="4028e751d6613e2ade147d59afdd8a50" category="paragraph"><block ref="4028e751d6613e2ade147d59afdd8a50" category="inline-link-rx"></block></block>
-  <block id="0220d9b548f6fab03e4a4e2d9ca818fe" category="summary">NetApp会继续在每个主要产品版本中增强和更新ONTAP REST API。有时、这些更新可能会包括对现有API调用的更改、例如使用的参数和默认值。这些更改可能会影响访问REST API的软件。</block>
   <block id="9edc7f95e01deb6ba7b3322cd44aded4" category="doc">对ONTAP REST API调用进行的更改</block>
   <block id="cdfb2103aa97d64dff8d54de4cce7a03" category="section-title">对现有ONTAP REST API调用进行的更改</block>
-  <block id="c54d88e796967d1b66714295a3511fe0" category="paragraph">对现有API调用进行任何更改都可能会影响访问REST API的软件。您应查看下表中的更改列表、以确定是否会对您的ONTAP自动化环境造成影响。每个条目都包括适用的API端点、变更说明以及所推出的ONTAP版本。</block>
   <block id="c46f7e527391f67f3805bf7d784fc003" category="cell">更改说明</block>
   <block id="b15340b33a8b3cfed1967fb759a31d3a" category="cell"><block ref="653abe1298f355e168ee1393257c84cd" prefix="" category="inline-code"></block><block ref="8b19fc37f7c6865add16f7d29be42f8e" prefix=" " category="inline-code"></block></block>
   <block id="32ad5449f355fd85efafb34fde71a1a6" category="cell">已从这些端点的双组中删除响应中的字段*_links*。没有建议的客户操作或解决方法。该字段应在未来的ONTAP版本中添加回。</block>
   <block id="120ae360daecd24b580b71f9f2766bbc" category="cell">9.15.1</block>
   <block id="8b5316cbd81290ae3e906370a7f93751" category="section-title">ONTAP REST API参考文档错误</block>
-  <block id="06da39e83216b4cbe300f130aae4c4f2" category="paragraph">随着NetApp对ONTAP REST API的增强和更新、有时可能会在联机参考文档中引入错误。这些错误可能会在使用API时造成混淆、但通常不会影响或中断ONTAP自动化软件或环境。</block>
-  <block id="df8a5d4721acfa7407625ef7e4c36dc6" category="paragraph">您应查看下表中的错误列表。这将帮助您更好地了解和浏览ONTAP REST API参考文档。每个条目都包括适用的API端点、错误说明以及引入的ONTAP版本。</block>
   <block id="37b6d443585283b17a6c4bb5dcd6e38f" category="cell"><block ref="33829ee32ee08b76bc7ed5eeada2cd50" prefix="" category="inline-code"></block></block>
   <block id="79d1f0bd73ced50c557a63343981d432" category="cell">端点的REST API文档指示*specifier*为有效字段。但是、此端点不支持配额说明符。没有建议的客户操作或解决方法。在未来的ONTAP版本中、此字段将从API文档中删除。</block>
   <block id="4fa32eb56fb8ae063a3c75b36cb19a62" category="paragraph"><block ref="4fa32eb56fb8ae063a3c75b36cb19a62" category="inline-link-macro-rx"></block></block>
@@ -1784,7 +1779,6 @@
   <block id="9456c82d4c2ff3d63d795770ea0a6835" category="paragraph">您可以创建和管理组和角色之间的映射关系。此资源类型是在ONTAP 9.16中引入的。</block>
   <block id="b2d7d79fb0f7b257dcdb51106acc5598" category="paragraph">开放式授权(OAuth2.0)是一种基于令牌的框架、可用于限制对ONTAP存储资源的访问。您可以将其用于通过REST API访问ONTAP的客户端。此资源类型是在ONTAP 9.14中引入的。通过支持具有标准OAuth2.0声明的Microsoft Entra ID授权服务器(以前称为Azure AD)，它在ONTAP 9™16中得到了增强。此外、还可以通过新的组和角色映射功能支持基于UUID样式值的Entra ID标准组声明。还引入了一项新的外部角色映射功能。另请参见*外部角色*、*组*和*组角色映射*。</block>
   <block id="6c2bedd693b0a3278c427d71a3daceef" category="paragraph-title">Web身份验证</block>
-  <block id="bfbaef85d5b976da22129ab320702015" category="paragraph">Web身份验证(WebAuthn)是一种Web标准、用于根据公共密钥加密对用户进行安全身份验证。借助ONTAP、它支持通过System Manager和ONTAP REST API管理可抵御网络钓鱼的MSA。此功能是在ONTAP 9 16中添加的。</block>
   <block id="11d592db3e1d98d2daf37961c9dbf17c" category="paragraph">您可以使用这些 API 调用来管理 qtree ， qtree 是一种按逻辑划分的文件系统。此资源类型是在ONTAP 9.6中引入的。qtree扩展性能监控功能是在ONTAP 9 16.1中添加的。</block>
   <block id="c344b894d7706b83c51639c719e2e442" category="summary">每个ONTAP版本都会更新ONTAP REST API、为您提供新功能、增强功能和错误修复。</block>
   <block id="75a05751d550bce275fb1c4f49e75a9f" category="admonition">您应查看<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>以了解其他信息、包括已知限制或问题。另请参见 <block ref="edc7b83fd666812e33623acd898a41ba" category="inline-link-macro-rx"></block> 、了解可能影响自动化软件的任何更改。</block>
@@ -1971,4 +1965,26 @@
   <block id="4f51f80a409afbda03654a8b1a0d7478" category="paragraph">ONTAP 9.18.1 版本通过十三个新的 API 调用继续扩展 ONTAP REST API 的功能。这些增强功能主要侧重于安全性，但也包括与存储管理相关的改进。</block>
   <block id="b21adb6984316fe52e38ac05c428930c" category="list-text">ONTAP 9.18.1 REST API 引入了多项安全增强功能。您可以使用新的群集网络终结点来显示和更新群集网络安全配置，包括证书管理。此外，您可以管理 NVLog 流量的 HA 网络的安全配置。自主勒索软件防护 (ARP) 已得到增强，以支持自动启用配置的显示和更新。</block>
   <block id="9c00c4c82590637bd6e1c6cc201ec33f" category="cell">/api/storage/aggregates</block>
+  <block id="9ce1ca34a32be8906a075d996d66e8cd" category="summary">NetApp 继续在每个主要产品版本中增强和更新 ONTAP REST API。这些更新偶尔会包括对现有 API 调用的更改，从而中断对 ONTAP 功能的访问。使用 API 时还有其他注意事项，以及一些文档错误。</block>
+  <block id="eadbb24dc77b921050380c054bf22efd" category="paragraph">对现有 ONTAP REST API 调用（例如端点和参数）的更改可能会影响使用该 API 的软件。在大多数情况下，根据您的环境，这些被认为是_重大更改_。您应该查看下表中的列表，以确定是否会对您的自动化环境产生影响。每个条目都包括适用的 API 端点或区域、更改的描述以及引入的 ONTAP 版本。</block>
+  <block id="57441870942a5b83f6cc992928731e73" category="cell">API 端点或区域</block>
+  <block id="ee1ccb3b4f7ef6fe740b460659eaaa38" category="cell">行为描述</block>
+  <block id="4afc449216cf41ab44e3307e3f4e9be6" category="cell">用于启用和禁用 Azure Key Vault (AKV) 的 REST API 端点现在以异步方式执行，而不是同步方式执行。这会影响启用 AKV 的 POST 操作和禁用 AKV 的 DELETE 操作。使用这些 API 调用的客户端应更新其代码以处理异步响应，这涉及检查作业状态而不仅仅是 HTTP 状态代码。此更改主要影响通过 ONTAP REST API 管理 Azure Key Vault 配置的 Azure NetApp Files (ANF) 环境。</block>
+  <block id="aaf58e5a5445d876b8f7b0fe22b5afbf" category="cell">9.19.1</block>
+  <block id="85287325f6954a7b7335b21c3ee03778" category="section-title">其他 REST API 使用注意事项</block>
+  <block id="85153dda37bcb3ebf4fd5092ca8cb077" category="paragraph">除了中断或破坏性更改外，使用 ONTAP REST API 时还有几个其他注意事项。存在不同类型的问题，包括引入新的或替代的 API 调用以及对 ONTAP 内部处理的更改。每个条目都包括适用的 API 端点或区域、行为的描述以及引入该功能的 ONTAP 版本。</block>
+  <block id="3f4b23ff05ffa4100bd684dc46a7ffee" category="cell"><block ref="b5610b53ff763cfa1cd19607dc37b9e2" prefix="" category="inline-code"></block></block>
+  <block id="24f1fcb467834643525982ccb137d5b6" category="cell">用于创建容器的端点已得到增强，以支持以前仅通过<block ref="e4bda0100c995f1a022b02958516473a" prefix=" " category="inline-code"></block>提供的几个卷配置参数。这使客户，特别是那些使用 NetApp Trident 进行 Kubernetes 存储编排的客户，在配置持久卷时能够利用 ONTAP 的平衡放置功能。卷可以自动分布在集群节点之间，以实现最佳性能和容量利用率。在部署需要对卷放置、QoS 策略或容量管理进行精细控制的容器化应用程序时，应使用更新的端点。这对于大规模的 Kubernetes 环境尤其有用，在这些环境中，跨存储资源的自动负载平衡至关重要。</block>
+  <block id="71c05fa8077a773e095376bb567cd291" category="cell"><block ref="56d408287fc247401a306f946d8667db" prefix="" category="inline-code"></block></block>
+  <block id="131e71b08dd73776358a31f5b869388f" category="cell">当通过 REST API 检索超大型 ONTAP 集群（32 个节点或更多）的许可证信息时，您可能会遇到响应时间缓慢的问题。此问题会影响同时查询所有许可证的 System Manager 许可选项卡和自动化工作流。为了减少影响，您可以使用查询参数一次获取一个特定功能的许可证，或者使用 CLI 命令<block ref="684590f66f47755afa88d3f70f9f25ad" prefix=" " category="inline-code"></block>，而不是在单个 API 调用中检索所有许可证。</block>
+  <block id="cc420b198b8f8ad3d8233549a925dced" category="paragraph">随着 NetApp 增强和更新 ONTAP REST API，有时可能会在在线参考文档中引入错误。这些错误可能会在使用 API 时造成混乱，但通常不会影响或破坏您的 ONTAP 自动化软件或环境。您应该查看下表中的错误列表。这将帮助您更好地理解和浏览 ONTAP REST API 参考文档。每个条目都包括适用的 API 端点或区域、错误描述以及引入的 ONTAP 版本。</block>
+  <block id="265b7201a1a1b0248d25d88bde5d5b3d" category="paragraph">LUN 映射是 LUN 和启动程序组之间的关联。此资源类型在 ONTAP 9.6 中引入，并在 ONTAP 9.19.1 中更新。</block>
+  <block id="d466bf08db43e32247cf12faafc07c3e" category="paragraph">Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理防钓鱼 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19.1 中更新。</block>
+  <block id="b5905e09f21d5864e3d35c42e06cc891" category="paragraph-title">Whoami</block>
+  <block id="99bd4fa5b8d549d8817c7c1fd47f1a07" category="paragraph">端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19.1 中引入的。</block>
+  <block id="ea7f38fbe84ac28be0f7c90cca730a69" category="section-title">ONTAP 9.19.1</block>
+  <block id="aea50297ce3c7b46d330df439a818aad" category="paragraph">ONTAP 9.19.1 版本包括几个更新，这些更新继续增强和改进 ONTAP REST API。</block>
+  <block id="7c152b2ce344c1d6fc432fba33fc71cf" category="list-text">已添加<block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block>新功能以检索已登录用户的用户名、角色和权限信息。Web 身份验证（WebAuthn）功能也得到了增强。</block>
+  <block id="50627d24ccfbf3209a01226c32f4208c" category="list-text">LUN 映射管理已更新，具有改进的更新功能。</block>
+  <block id="92d15479dd92b1e555eec98a86d59c71" category="sidebar">ONTAP REST API 更改和注意事项</block>
 </blocks>

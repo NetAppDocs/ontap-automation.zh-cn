@@ -156,4 +156,7 @@ Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协
 您可以使用REST API为使用SSH登录和访问ONTAP 的帐户配置基于时间的一次性密码(TOTP)配置文件。此资源类型是在ONTAP 9.13中引入的。
 
 .Web身份验证
-Web身份验证(WebAuthn)是一种Web标准、用于根据公共密钥加密对用户进行安全身份验证。借助ONTAP、它支持通过System Manager和ONTAP REST API管理可抵御网络钓鱼的MSA。此功能是在ONTAP 9 16中添加的。
+Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理防钓鱼 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19.1 中更新。
+
+.Whoami
+端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19.1 中引入的。
