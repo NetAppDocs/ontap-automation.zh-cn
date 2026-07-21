@@ -27,6 +27,7 @@ summary: 您可以定义一个角色来限制SVM中的存储卷管理。
 
 
 
+[[step-1-create-the-role]]
 == 第1步：创建角色
 
 您可以通过问题描述调用来创建RBAC角色。
@@ -68,6 +69,7 @@ curl --request POST \
 ----
 
 
+[[step-2-update-the-role]]
 == 第2步：更新角色
 
 您可以通过问题描述调用来更新现有角色。

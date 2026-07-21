@@ -24,6 +24,7 @@ CAUTION: 在使用下面提供的JSON输入示例之前、请确保更新 `publi
 
 
 
+[[step-1-install-the-certificate]]
 == 第1步：安装证书
 
 您可以通过问题描述调用来安装证书。
@@ -82,6 +83,7 @@ IpYuBcuKXLwAarhDEacXttVjC+Bq
 ----
 
 
+[[step-2-confirm-the-certificate-has-been-installed]]
 == 第2步：确认证书已安装
 
 执行工作流 link:../workflows/wf_cert_list_certificates.html["列出已安装的证书"] 并确认证书可用。

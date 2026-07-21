@@ -18,6 +18,7 @@ summary: 您可以将新的安全描述符应用于特定文件或文件夹。
 
 
 
+[[step-1-apply-the-new-permissions]]
 == 第1步：应用新权限
 
 .HTTP方法和端点
@@ -67,6 +68,7 @@ curl --request POST --location "https://$FQDN_IP/api/protocols/file-security/per
 ----
 
 
+[[step-2-retrieve-the-status-of-the-job]]
 == 第2步：检索作业状态
 
 执行工作流 link:../workflows/wf_jobs_get_job.html["获取作业实例"] 并确认 `state` 值为 `success`。

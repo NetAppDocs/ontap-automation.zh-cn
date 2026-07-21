@@ -21,6 +21,7 @@ TIP: 您应确保您的ONTAP版本支持您计划使用的工作流中的所有A
 
 
 
+[[introduction]]
 == 简介
 
 _Workflow _ 是完成特定管理任务或目标所需的一个或多个步骤的序列。ONTAP工作流包括完成每项任务所需的核心步骤和参数。它们为自定义ONTAP自动化环境提供了一个起点。
@@ -41,12 +42,14 @@ ONTAP工作流中的每个步骤都属于以下类型之一：
 
 
 
+[[input-variables]]
 == 输入变量
 
 这些工作流的设计尽可能通用、因此可以在任何ONTAP环境中使用。考虑到这一点、REST API调用会在cURL示例和其他输入中使用变量。然后、可以轻松地根据不同的ONTAP环境调整REST API调用。
 
 
 
+[[base-url-format]]
 === 基本URL格式
 
 您可以直接通过CURL或编程语言访问ONTAP REST API。在这种情况下、基本URL与访问ONTAP联机文档或System Manager时使用的URL不同。
@@ -59,6 +62,7 @@ ONTAP工作流中的每个步骤都属于以下类型之一：
 
 
 
+[[common-input-parameters]]
 === 通用输入参数
 
 大多数REST API调用通常使用多个输入参数。这些参数通常不会在各个工作流中进行介绍。您应熟悉这些参数。请参见 link:../rest/input_variables.html["控制 API 请求的输入变量"] 有关详细信息 ...
@@ -67,6 +71,7 @@ ONTAP工作流中的每个步骤都属于以下类型之一：
 
 
 
+[[variable-format]]
 === 可变格式
 
 工作流示例中使用的ID值和其他变量是不透明的、并且可能因每个ONTAP集群而异。为了提高示例的可读性、不使用实际值。而是使用变量。此方法基于一致的格式和一组保留名称、具有以下几个优势：
@@ -95,6 +100,7 @@ ONTAP工作流中的每个步骤都属于以下类型之一：
 |===
 
 
+[[json-input-examples]]
 === JSON输入示例
 
 某些REST API调用(例如使用POST或PATCH)的调用需要在请求正文中输入JSON。为了清楚起见、JSON输入示例与CURL示例分开显示。您可以将JSON输入示例与下面所述的一种技术结合使用。
@@ -107,12 +113,14 @@ ONTAP工作流中的每个步骤都属于以下类型之一：
 
 
 
+[[authentication-options]]
 == 身份验证选项
 
 REST API可用的主要身份验证技术是HTTP基本身份验证。从ONTAP 9.14开始、您还可以选择使用开放式授权(OAuth2.0)框架以及基于令牌的身份验证和授权。
 
 
 
+[[http-basic-authentication]]
 === HTTP基本身份验证
 
 使用基本身份验证时、每个HTTP请求都必须包含用户凭据。有两种发送凭据的方法。
@@ -145,6 +153,7 @@ REST API可用的主要身份验证技术是HTTP基本身份验证。从ONTAP 9.
 
 
 
+[[oauth-2-0]]
 === OAuth2.0
 
 使用OAuth2.0时、您需要从外部授权服务器请求访问令牌、并将其包含在每个HTTP请求中。下面将介绍基本的高级步骤。另请参见 https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["ONTAP OAuth2.0实施概述"^] 有关OAuth2.0以及如何将其与ONTAP结合使用的详细信息。
@@ -169,6 +178,7 @@ REST API可用的主要身份验证技术是HTTP基本身份验证。从ONTAP 9.
 
 
 
+[[using-the-examples-with-bash]]
 == 将示例与Bash结合使用
 
 如果您直接使用工作流卷曲示例、则必须使用适合您环境的值更新其包含的变量。您可以手动编辑这些示例、也可以按如下所述使用bash shell进行替换。

@@ -18,6 +18,7 @@ summary: 您可以通过多种方法自动部署和管理ONTAP存储系统。
 
 
 
+[[ontap-rest-api]]
 == ONTAP REST API
 
 从ONTAP 9.6 开始， ONTAP包含一个强大的 REST API，为自动部署和管理存储系统奠定了基础。从那时起，REST API 不断扩展和成熟。现在，它在自动化ONTAP部署管理时提供了首选和战略性的选择。
@@ -30,6 +31,7 @@ ONTAPI API（Zephyr API 或 ZAPI）是NetApp ONTAP软件中包含的原始专有
 
 
 
+[[client-software-toolkits]]
 == 客户端软件工具包
 
 NetApp提供的客户端工具包可对ONTAP REST API进行抽象化、并使创建自动化代码变得更加轻松。您应选择一种适合您的开发语言和环境的解决方案。
@@ -42,6 +44,7 @@ Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP 
 
 
 
+[[automation-frameworks]]
 == 自动化框架
 
 您可以使用多个框架之一来创建和部署自动化代码。

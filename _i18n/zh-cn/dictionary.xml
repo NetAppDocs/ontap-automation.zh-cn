@@ -233,8 +233,6 @@
   <block id="2e0ee80929bfbc4dd08313ae001e7f52" category="paragraph">API 调用可用于安装，显示和删除 ONTAP 使用的证书。此资源类型是在 ONTAP 9.7 中引入的。</block>
   <block id="ad9b161528b083800d5054d4feb9ec8a" category="paragraph">通过这组 API 调用，您可以使用 Google 云平台密钥管理服务来存储和管理 ONTAP 加密密钥。此资源类型最初是在 ONTAP 9.8 REST API 中引入的。但是，此功能已经过重新设计，因此在 ONTAP 9.9 中被视为新增资源类型。</block>
   <block id="c78f0d76ddea2a641c1fd047b64d3b75" category="paragraph">Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协议，可通过底层 IP 网络在两个端点之间提供安全性。此资源类型是 ONTAP 9.8 的新增功能。</block>
-  <block id="28ce73d536ecffee09317e2b063905dc" category="paragraph">您可以使用这组 API 调用来管理对 IPsec 部署有效的策略。此资源类型是 ONTAP 9.8 的新增功能。</block>
-  <block id="ef19ac6a1e5ee7e640a48a20d2ea90d2" category="paragraph">您可以使用这组 API 调用来管理对 IPsec 部署有效的安全关联。此资源类型是 ONTAP 9.8 的新增功能。</block>
   <block id="71a48cbb31530fcbeefc8897151884fc" category="paragraph">用于显示和管理 ONTAP 使用的登录消息。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="73f3c293e004a376520d3734e8e0476f" category="paragraph">这些角色提供了一种向用户帐户分配权限的方法。此资源类型是在 ONTAP 9.6 中引入的。</block>
   <block id="ee0b0b92be7dced35b0607c73807d3ea" category="paragraph">角色的特定实例。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -325,7 +323,6 @@
   <block id="b112c8c17f296b55ffc035363cc1cac3" category="paragraph">`https://&lt;ip_address&gt;/docs/api`</block>
   <block id="86537fad07b98a84cd28189507075143" category="list-text">使用 ONTAP 帐户登录。</block>
   <block id="4a7f5568d4707b4e4a381d4a753ed791" category="paragraph">此时将显示 ONTAP API 文档页面，其中 API 调用会按主要资源类别组织在底部。</block>
-  <block id="b7998fdfa579757468dfd6407b7df0e3" category="list-text">作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。</block>
   <block id="62a0282d39568be094470486eaf70c4f" category="doc">SAN</block>
   <block id="d026d48ac10030a378a0074cde689bc7" category="paragraph">您可以使用这些 API 调用来管理存储区域网络（ Storage Area Networking ， SAN ）资源。</block>
   <block id="21b818347e867034bff06df47c6638ed" category="paragraph">光纤通道登录表示已登录到 ONTAP 的光纤通道启动程序所形成的连接。此资源类型是在 ONTAP 9.6 中引入的。</block>
@@ -1952,7 +1949,6 @@
   <block id="5d5d8414d96fc428f736ae2f6fa3ada7" category="paragraph-title">NetApp Console自动化中心</block>
   <block id="e250d9825e173c1f8f38848dad857fa0" category="paragraph">这<block ref="dc3bfae542b9e4cc3361fc7eb5625d17" category="inline-link-rx"></block> 可通过控制台 Web 用户界面访问。自动化中心提供对打包解决方案的访问，可以帮助您自动部署ONTAP并将其与其他产品集成。看<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> 有关文档和更多信息，请参阅相关文件。</block>
   <block id="29b6d9e80417ebf4ac723dd56e4f6322" category="inline-link">PyPI：NetApp ONTAP 9.18.1</block>
-  <block id="ad4162572ca44b98fde9ffd6f23c426d" category="list-text"><block ref="ad4162572ca44b98fde9ffd6f23c426d" category="inline-link-rx"></block></block>
   <block id="90e2aef8589fa5b53a7c288f4dee47c8" category="inline-link">NetApp PCL 9.18.1 文档</block>
   <block id="c7dcdb34a106576d21e7bce6b5b431e5" category="list-text"><block ref="c7dcdb34a106576d21e7bce6b5b431e5" category="inline-link-rx"></block></block>
   <block id="4d0c0700e788305f919db46d1de4d0c6" category="paragraph-title">反勒索软件支持</block>
@@ -1973,14 +1969,22 @@
   <block id="71c05fa8077a773e095376bb567cd291" category="cell"><block ref="56d408287fc247401a306f946d8667db" prefix="" category="inline-code"></block></block>
   <block id="131e71b08dd73776358a31f5b869388f" category="cell">当通过 REST API 检索超大型 ONTAP 集群（32 个节点或更多）的许可证信息时，您可能会遇到响应时间缓慢的问题。此问题会影响同时查询所有许可证的 System Manager 许可选项卡和自动化工作流。为了减少影响，您可以使用查询参数一次获取一个特定功能的许可证，或者使用 CLI 命令<block ref="684590f66f47755afa88d3f70f9f25ad" prefix=" " category="inline-code"></block>，而不是在单个 API 调用中检索所有许可证。</block>
   <block id="cc420b198b8f8ad3d8233549a925dced" category="paragraph">随着 NetApp 增强和更新 ONTAP REST API，有时可能会在在线参考文档中引入错误。这些错误可能会在使用 API 时造成混乱，但通常不会影响或破坏您的 ONTAP 自动化软件或环境。您应该查看下表中的错误列表。这将帮助您更好地理解和浏览 ONTAP REST API 参考文档。每个条目都包括适用的 API 端点或区域、错误描述以及引入的 ONTAP 版本。</block>
-  <block id="265b7201a1a1b0248d25d88bde5d5b3d" category="paragraph">LUN 映射是 LUN 和启动程序组之间的关联。此资源类型在 ONTAP 9.6 中引入，并在 ONTAP 9.19.1 中更新。</block>
-  <block id="d466bf08db43e32247cf12faafc07c3e" category="paragraph">Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理防钓鱼 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19.1 中更新。</block>
   <block id="b5905e09f21d5864e3d35c42e06cc891" category="paragraph-title">Whoami</block>
-  <block id="99bd4fa5b8d549d8817c7c1fd47f1a07" category="paragraph">端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19.1 中引入的。</block>
   <block id="ea7f38fbe84ac28be0f7c90cca730a69" category="section-title">ONTAP 9.19.1</block>
   <block id="aea50297ce3c7b46d330df439a818aad" category="paragraph">ONTAP 9.19.1 版本包括几个更新，这些更新继续增强和改进 ONTAP REST API。</block>
-  <block id="7c152b2ce344c1d6fc432fba33fc71cf" category="list-text">已添加<block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block>新功能以检索已登录用户的用户名、角色和权限信息。Web 身份验证（WebAuthn）功能也得到了增强。</block>
   <block id="50627d24ccfbf3209a01226c32f4208c" category="list-text">LUN 映射管理已更新，具有改进的更新功能。</block>
   <block id="92d15479dd92b1e555eec98a86d59c71" category="sidebar">ONTAP REST API 更改和注意事项</block>
   <block id="5c7f695288b6d2a3f37f4f2e098cf200" category="admonition">对于 9.9.1 之前的 ONTAP 版本，您可以使用 CLI 直通功能自动管理 SACL 和 DACL 权限。有关详细信息，请参见 <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block>。</block>
+  <block id="930f6e309ea31ddf8913bc2743474206" category="inline-link">PyPI：NetApp ONTAP 9.19.1</block>
+  <block id="fc079a70c22d237bf5ba1cb37fd321ed" category="list-text"><block ref="fc079a70c22d237bf5ba1cb37fd321ed" category="inline-link-rx"></block></block>
+  <block id="ed9d9bda2b176aa2a1f17944b6d4a5b8" category="inline-link">NetApp PCL 9.19.1 文档</block>
+  <block id="7203ae9325dee2a32f00ac70dd5380eb" category="list-text"><block ref="7203ae9325dee2a32f00ac70dd5380eb" category="inline-link-rx"></block></block>
+  <block id="f2b97056166d6335cc220aa8ed571bd5" category="list-text"><block ref="f2b97056166d6335cc220aa8ed571bd5" category="inline-link-rx"></block></block>
+  <block id="7396427871824f6e3ab00adb004f3863" category="list-text">作为单个 API 调用的示例，向下滚动到 *cluster* 类别并选择 *GET /cluster*。</block>
+  <block id="2cd51d1ef50a2fdcfcd54b6bd7545da6" category="paragraph">LUN 映射是 LUN 和启动程序组之间的关联。此资源类型在 ONTAP 9.6 中引入，并在 ONTAP 9.19 中更新。</block>
+  <block id="5143cbd37fee11e20d0f08ba1a56ffe3" category="paragraph">您可以使用此 API 调用集来管理对 IPSec 部署有效的策略。此资源类型是 ONTAP 9.8 的新增资源。它们已在 9.19 中更新，以检索用于集群网络的策略。</block>
+  <block id="534aa7412e40ee98329aa6cbf7e73921" category="paragraph">您可以使用此 API 调用集来管理对 IPSec 部署有效的安全关联。此资源类型是 ONTAP 9.8 的新增资源。它们已在 9.19 中更新，以检索用于集群网络的安全关联。</block>
+  <block id="1e546dde5ec48b72b17c80c9fd9a4326" category="paragraph">Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理抗网络钓鱼的 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19 中更新。</block>
+  <block id="552a4b441f2408a18f59e549d17ab486" category="paragraph">端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19 中引入的。</block>
+  <block id="d9eb7c3d944a1a4dbd6e7c30275c219a" category="list-text">已添加一项<block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block>新功能，用于检索已登录用户的用户名、角色和权限信息。Web 身份验证（WebAuthn）功能也得到了增强。IPsec 已更新，可检索与集群网络一起使用的策略和安全关联。</block>
 </blocks>

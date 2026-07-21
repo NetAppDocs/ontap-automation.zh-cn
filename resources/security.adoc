@@ -86,10 +86,10 @@ Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协
 您可以添加，删除和检索 IPsec CA 证书。此资源类型是 ONTAP 9.10 中的新增资源。
 
 .IPsec 策略
-您可以使用这组 API 调用来管理对 IPsec 部署有效的策略。此资源类型是 ONTAP 9.8 的新增功能。
+您可以使用此 API 调用集来管理对 IPSec 部署有效的策略。此资源类型是 ONTAP 9.8 的新增资源。它们已在 9.19 中更新，以检索用于集群网络的策略。
 
 .IPsec 安全关联
-您可以使用这组 API 调用来管理对 IPsec 部署有效的安全关联。此资源类型是 ONTAP 9.8 的新增功能。
+您可以使用此 API 调用集来管理对 IPSec 部署有效的安全关联。此资源类型是 ONTAP 9.8 的新增资源。它们已在 9.19 中更新，以检索用于集群网络的安全关联。
 
 .即时 (JIT) 权限提升
 (JIT) 权限提升是对基于角色的访问控制 (RBAC) 的增强。集群管理员可以请求临时提升到现有角色。此资源类型已在ONTAP 9.17.1 中添加。
@@ -156,7 +156,7 @@ Internet 协议安全性（ Internet Protocol Security ， IPsec ）是一套协
 您可以使用REST API为使用SSH登录和访问ONTAP 的帐户配置基于时间的一次性密码(TOTP)配置文件。此资源类型是在ONTAP 9.13中引入的。
 
 .Web身份验证
-Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理防钓鱼 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19.1 中更新。
+Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理抗网络钓鱼的 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19 中更新。
 
 .Whoami
-端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19.1 中引入的。
+端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19 中引入的。

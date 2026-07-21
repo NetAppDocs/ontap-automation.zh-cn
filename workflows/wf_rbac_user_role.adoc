@@ -21,6 +21,7 @@ summary: 您可以使用此工作流创建具有关联REST角色的用户。
 
 
 
+[[step-1-list-the-data-svms-in-the-cluster]]
 == 第1步：列出集群中的数据SVM
 
 执行以下REST API调用以列出集群中的SVM。输出中提供了每个SVM的UUID和名称。
@@ -49,6 +50,7 @@ curl --request GET \
 
 
 
+[[step-2-list-the-users-defined-to-the-svm]]
 == 第2步：列出为SVM定义的用户
 
 执行以下REST API调用以列出在选定SVM中定义的用户。您可以通过owner参数来标识SVM。
@@ -77,6 +79,7 @@ curl --request GET \
 
 
 
+[[step-3-list-the-rest-roles-defined-to-the-svm]]
 == 第3步：列出为SVM定义的REST角色
 
 执行以下REST API调用以列出在选定SVM中定义的角色。您可以通过owner参数来标识SVM。
@@ -106,6 +109,7 @@ curl --request GET \
 
 
 
+[[step-4-create-a-custom-rest-role]]
 == 第4步：创建自定义REST角色
 
 对SVM中的创建自定义REST角色执行以下REST API调用。此角色最初只有一个权限、用于建立默认访问权限*无*、以拒绝所有访问。
@@ -149,6 +153,7 @@ curl --request POST \
 
 
 
+[[step-5-update-the-role-by-adding-more-privileges]]
 == 第5步：通过添加更多权限来更新角色
 
 执行以下REST API调用、以便根据需要添加权限来修改角色。
@@ -199,6 +204,7 @@ curl --request POST \
 
 
 
+[[step-6-create-a-user]]
 == 第6步：创建用户
 
 对创建用户帐户执行以下REST API调用。上面创建的角色*dprole1*与新用户关联。

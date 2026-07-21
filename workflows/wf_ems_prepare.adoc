@@ -18,6 +18,7 @@ summary: '您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据
 
 
 
+[[overview]]
 === 概述
 
 您可以通过多个示例工作流来说明如何使用ONTAP EMS服务。在使用工作流并发出任何REST API调用之前、请务必查看 link:../workflows/prepare_workflows.html["准备使用这些工作流"]。
@@ -26,6 +27,7 @@ summary: '您可以为ONTAP集群配置事件管理系统(EMS)处理、并根据
 
 
 
+[[ontap-rest-api-versus-ontap-cli-commands]]
 === ONTAP REST API 与 ONTAP 命令行界面命令
 
 对于许多任务、使用ONTAP REST API所需的调用比等效的ONTAP命令行界面命令少。下表列出了API调用以及每项任务所需的等效命令行界面命令。
