@@ -191,8 +191,6 @@
   <block id="8b2e720a58accc143187322487b6638a" category="list-text">如果指定了排序字段，但未提供方向，则这些值将按升序排序。</block>
   <block id="35f47ff7e3cab9069eae76509c43183a" category="list-text">如果包含多个参数，则必须使用逗号分隔各个字段。</block>
   <block id="245272e0c4968634df98eb3e43fe7188" category="section-title">检索集合中的对象时分页</block>
-  <block id="dc509c391146df8e9a9de44e0a0d97b0" category="paragraph">使用 GET 发出 API 调用以访问同一类型的一组对象时， ONTAP 会根据两个限制尝试返回尽可能多的对象。您可以对请求使用其他查询参数来控制其中的每个限制。特定 GET 请求达到的第一个限制将终止该请求，因此会限制返回的记录数。</block>
-  <block id="77f9234bccd7df3df5de9766fc1ee88a" category="admonition">如果请求在迭代所有对象之前结束，则响应将包含检索下一批记录所需的链接。</block>
   <block id="9b694e5a19d32713635e80d596a204af" category="list-text">限制对象数量</block>
   <block id="9495391a0bd527b86b989c35cf92b08d" category="list-text">默认情况下， ONTAP 最多为 GET 请求返回 10 ， 000 个对象。您可以使用 `max_records` query 参数更改此限制。例如：</block>
   <block id="ca70aeac050e5deeb2d294566c856b35" category="paragraph">`max_records=20`</block>
@@ -1987,4 +1985,6 @@
   <block id="1e546dde5ec48b72b17c80c9fd9a4326" category="paragraph">Web 身份验证（WebAuthn）是基于公钥加密技术对用户进行安全身份验证的 Web 标准。借助 ONTAP，它支持通过 System Manager 和 ONTAP REST API 管理抗网络钓鱼的 MFA。此功能在 ONTAP 9.16 中添加，并在 ONTAP 9.19 中更新。</block>
   <block id="552a4b441f2408a18f59e549d17ab486" category="paragraph">端点可用于显示已验证用户的详细信息，包括用户名、角色和权限。此资源类型是在 ONTAP 9.19 中引入的。</block>
   <block id="d9eb7c3d944a1a4dbd6e7c30275c219a" category="list-text">已添加一项<block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block>新功能，用于检索已登录用户的用户名、角色和权限信息。Web 身份验证（WebAuthn）功能也得到了增强。IPsec 已更新，可检索与集群网络一起使用的策略和安全关联。</block>
+  <block id="004ce315c7fe174848e8698d9ab0331c" category="paragraph">当使用 GET 发出 API 调用以访问相同类型的对象集合时，ONTAP 会根据两个约束条件（对象的最大数量、检索对象所用的时间）尝试返回尽可能多的对象。您可以使用请求上的其他查询参数来控制其中的每个约束条件。针对特定 GET 请求达到的第一个约束条件将终止该请求，从而限制返回的记录数。如果请求在遍历所有对象之前结束，则响应包含检索下一批记录所需的链接。</block>
+  <block id="fe2491a3e9df98303b4fc686684774b5" category="admonition">如果 API 调用返回零条记录，且没有下一个链接，则这可能表明在获取任何记录之前发生了超时。在此情况下，您可以使用较大的<block ref="25da76d23d15f841b09a860ea321146d" prefix=" " category="inline-code"></block>值或较小的<block ref="f69688cd7802eb62a67f6a56384b3d93" prefix=" " category="inline-code"></block>值（或两者）重试请求。</block>
 </blocks>
