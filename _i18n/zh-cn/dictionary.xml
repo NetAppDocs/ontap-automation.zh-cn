@@ -566,8 +566,6 @@
   <block id="6d5bdff627ee96fb9a3d1ce46d18fe48" category="paragraph">您可以使用这些端点显示和管理主机名的本地映射。此资源类型是在 ONTAP 9.10 中引入的。</block>
   <block id="b4e81f372193d464553e67bfc6e6a475" category="paragraph">本地 UNIX 用户和组已加入到先前的 ONTAP 版本中。但是，现在已向 REST API 添加了支持，使您可以显示和管理用户和组。这些 REST 资源类型是在 ONTAP 9.9 中引入的，并在 ONTAP 9.10 中得到了显著增强。</block>
   <block id="4921daa1d1156e8a0f7fe7b45dfc92fb" category="section-title">在 ONTAPI 中更改 SnapDiff 可用性</block>
-  <block id="e5e32a25be86538826bb7ce943294815" category="paragraph">从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。</block>
-  <block id="d96bdb3acb68ad565307604365b57f70" category="paragraph">ONTAP 版本中的 SnapDiff API 可用性定义如下：</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">准备使用这些工作流</block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">REST 资源摘要</block>
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="inline-link-macro">ONTAP REST API</block>
@@ -1801,8 +1799,6 @@
   <block id="982a944cf7d3a2f28ae7bfcc8755ec2c" category="list-text">ONTAP 9.8 可使用 REST API 提供更高效，更现代化的工作流。例如、现在可以为多种不同类型的固件提供一键式固件更新。</block>
   <block id="c408f623f341094b81899c67b52a1051" category="list-text">ONTAP联机文档页面包含一些标签、用于指示ONTAP发行版中引入的每个REST端点或参数、包括9.8中的新增功能。</block>
   <block id="3ae9565cf3f15d0b18e64848bf75114f" category="list-text">ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）</block>
-  <block id="87fa2e5a8b05545afa808741d9743b82" category="list-text">ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）</block>
-  <block id="12f58f465df2b1ae3ddb0a5303288c2d" category="list-text">API.10.1及更高版本：仅限v3 (仅限ONTAP 9)</block>
   <block id="32a3b0f895ce3b2bab0fd75296a6d7f7" category="inline-link">OnCommand Workflow Automation文档</block>
   <block id="a370e7923c07d85d87e81fefb3ea1979" category="list-text"><block ref="a370e7923c07d85d87e81fefb3ea1979" category="inline-link-rx"></block></block>
   <block id="4194600c450cd5967951e54d38f6d438" category="paragraph">Python 客户端库是一个软件包，您可以在编写脚本以访问 ONTAP REST API 时使用。它支持多种底层服务，包括连接管理，异步请求处理和异常处理。通过使用 Python 客户端库，您可以快速开发强大的代码来支持您的 ONTAP 自动化目标。有关详细信息、请参见 <block ref="816918ba5e9c5f6dcac33de8016d4ab9" category="inline-link-macro-rx"></block> 。</block>
@@ -1899,7 +1895,6 @@
   <block id="cfa5daa2060894d0e2b77ee5e70e0e94" category="paragraph">从9.6开始的每个ONTAP版本都有一个PyPI软件包以及相关文档。安装要求包含在每个软件包中、并指定支持库的版本、例如pyPython、Requests、requests-toolbelt和marshmallow。</block>
   <block id="094ae048e28df3a12a5e4fedaf56a886" category="paragraph">您可以使用NetApp.ONTAP PowerShell工具包从Windows主机自动管理ONTAP集群。有关详细信息、请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block> 。</block>
   <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">NetApp.ONTAP PowerShell工具包通过一个包含2、400多个cmdlet的模块增强了您的本地PowerShell环境。它允许您快速为Windows主机开发代码、以自动执行ONTAP部署。有关详细信息，请参见 <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>。</block>
-  <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">在每个版本中、支持会在不同的时间点撤消。其中包括9.10.1 9.10.1 P11及更高版本9.11.1 P7及更高版本、9.12.1 GA及更高版本。有关详细信息、请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="2d173dfa208c5028d536c08827a33be8" category="paragraph"><block ref="2d173dfa208c5028d536c08827a33be8" category="inline-link-rx"></block></block>
   <block id="55f8a02846727817cdfe8e0382917362" category="summary">NetApp为PowerShell应用程序提供了一个工具包、可用于管理ONTAP存储系统。该工具包由NetApp开发人员创建、并由客户社区提供支持。</block>
   <block id="cabfdd624e257c6296d46c502ec2f6a0" category="paragraph-title">应用程序容器</block>
@@ -1987,4 +1982,9 @@
   <block id="d9eb7c3d944a1a4dbd6e7c30275c219a" category="list-text">已添加一项<block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block>新功能，用于检索已登录用户的用户名、角色和权限信息。Web 身份验证（WebAuthn）功能也得到了增强。IPsec 已更新，可检索与集群网络一起使用的策略和安全关联。</block>
   <block id="004ce315c7fe174848e8698d9ab0331c" category="paragraph">当使用 GET 发出 API 调用以访问相同类型的对象集合时，ONTAP 会根据两个约束条件（对象的最大数量、检索对象所用的时间）尝试返回尽可能多的对象。您可以使用请求上的其他查询参数来控制其中的每个约束条件。针对特定 GET 请求达到的第一个约束条件将终止该请求，从而限制返回的记录数。如果请求在遍历所有对象之前结束，则响应包含检索下一批记录所需的链接。</block>
   <block id="fe2491a3e9df98303b4fc686684774b5" category="admonition">如果 API 调用返回零条记录，且没有下一个链接，则这可能表明在获取任何记录之前发生了超时。在此情况下，您可以使用较大的<block ref="25da76d23d15f841b09a860ea321146d" prefix=" " category="inline-code"></block>值或较小的<block ref="f69688cd7802eb62a67f6a56384b3d93" prefix=" " category="inline-code"></block>值（或两者）重试请求。</block>
+  <block id="81c0f35545aecb43d0b1d8698fdfddd0" category="paragraph">SnapDiff v1 和 v2 基于 ONTAPI（ZAPI）管理框架，并且某些版本的 ONTAP 存在一些可用性限制。SnapDiff v3 API 不使用 ONTAPI，并且受 ONTAP 9.8 及更高版本的支持。SnapDiff API 在各 ONTAP 版本中的可用性定义如下：</block>
+  <block id="81e49f8f5a10210ac490dec6f253d68d" category="inline-link">常见问题：ONTAP 中的 SnapDiff 支持</block>
+  <block id="b0d162570d0a9520ca3afc5310f1b35c" category="list-text">ONTAP 9.8 及更高版本：v1、v2 和 v3。存在一些限制；有关基于 ONTAP 版本的 SnapDiff 支持的更多详细信息，请参见<block ref="cfd2bb0293335b7703f8ab0ba06aed6b" category="inline-link-rx"></block>。</block>
+  <block id="1194f043b69756352d85295bd0560859" category="paragraph">您应该验证您的备份应用程序是否支持 SnapDiff，并了解基于您所使用的 ONTAP 版本的任何互操作性限制。另请参见<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>以了解更多信息。</block>
+  <block id="b3010b51b71ecf40957b5f39b4beabb1" category="list-text"><block ref="b3010b51b71ecf40957b5f39b4beabb1" category="inline-link-rx"></block></block>
 </blocks>

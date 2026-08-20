@@ -16,12 +16,6 @@ summary: '在从ONTAPI API (ZAPI)或ONTAP命令行界面迁移到ONTAP REST API�
 [role="lead"]
 ONTAPI API（ZAPI）是NetApp ONTAP软件中包含的原始专有调用集。该 API 通过网络可管理性 SDK 提供，支持数据存储管理和管理任务的自动化。如果您正在使用 ONTAPI，则应该计划迁移到ONTAP REST API，以利用 REST API 提供的扩展ONTAP功能集。
 
-.相关信息
-* link:../get-started/ontap_automation_options.html["了解 ONTAP 自动化选项"]
-* https://mysupport.netapp.com/info/communications/ECMLP2880232.html["CP-00410推迟ONTAPI (ZAPI)终止提供公告"^]
-* https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答"^]
-
-
 
 
 [[general-design-differences]]
@@ -57,13 +51,21 @@ CLI访问的基本资源路径为 `/private/cli`。有关通过 REST API 访问�
 [[changes-to-snapdiff-availability-in-ontapi]]
 == 在 ONTAPI 中更改 SnapDiff 可用性
 
-从 ONTAP 9.10.1 开始，无法调用 SnapDiff v1 和 v2 ONTAPI 调用。从 ONTAP 9.10.1 开始，调用 SnapDiff v1 或 v2 ONTAPI 调用的任何第三方应用程序都将无法正常运行。在升级到 ONTAP 9.10.1 之前， ONTAP 用户应验证其备份应用程序是否支持 SnapDiff v3 REST 调用。
-
-ONTAP 版本中的 SnapDiff API 可用性定义如下：
+SnapDiff v1 和 v2 基于 ONTAPI（ZAPI）管理框架，并且某些版本的 ONTAP 存在一些可用性限制。SnapDiff v3 API 不使用 ONTAPI，并且受 ONTAP 9.8 及更高版本的支持。SnapDiff API 在各 ONTAP 版本中的可用性定义如下：
 
 * ONTAP 9.7 及更早版本： V1 和 v2 （仅限 ONTAPI ）
-* ONTAP 9.8 – 9.1.1 ： V1 ， v2 和 v3 （ ONTAPI 和 REST API ）
-* API.10.1及更高版本：仅限v3 (仅限ONTAP 9)
+* ONTAP 9.8 及更高版本：v1、v2 和 v3。存在一些限制；有关基于 ONTAP 版本的 SnapDiff 支持的更多详细信息，请参见 https://kb.netapp.com/on-prem/ontap/DP/SnapDiff/SnapDiff-KBs/FAQ_SnapDiff_Support_in_ONTAP["常见问题：ONTAP 中的 SnapDiff 支持"^]。
 
 
-在每个版本中、支持会在不同的时间点撤消。其中包括9.10.1 9.10.1 P11及更高版本9.11.1 P7及更高版本、9.12.1 GA及更高版本。有关详细信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]。
+您应该验证您的备份应用程序是否支持 SnapDiff，并了解基于您所使用的 ONTAP 版本的任何互操作性限制。另请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 发行说明》"^]以了解更多信息。
+
+
+
+[[related-information]]
+== 相关信息
+
+* link:../get-started/ontap_automation_options.html["了解 ONTAP 自动化选项"]
+* https://mysupport.netapp.com/info/communications/ECMLP2880232.html["CP-00410推迟ONTAPI (ZAPI)终止提供公告"^]
+* https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["有关适用于CPC的ZAPI到ONTAP REST API转换的常见问题解答"^]
+* https://kb.netapp.com/on-prem/ontap/DP/SnapDiff/SnapDiff-KBs/FAQ_SnapDiff_Support_in_ONTAP["常见问题：ONTAP 中的 SnapDiff 支持"^]
+
