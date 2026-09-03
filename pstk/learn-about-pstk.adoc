@@ -4,7 +4,7 @@ permalink: pstk/learn-about-pstk.html
 keywords: overview, powershell, powershell toolkit, install powershell toolkit 
 summary: NetApp为PowerShell应用程序提供了一个工具包、可用于管理ONTAP存储系统。该工具包由NetApp开发人员创建、并由客户社区提供支持。 
 ---
-= 了解NetApp PowerShell工具包
+= 了解 NetApp ONTAP PowerShell 工具包
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
