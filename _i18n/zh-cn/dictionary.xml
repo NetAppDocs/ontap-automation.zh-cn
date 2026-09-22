@@ -586,7 +586,6 @@
   <block id="8cd67c079826033809b33b6f3ac2da9a" category="sidebar">用于检索集群配置的脚本</block>
   <block id="466b9c64436468f52860809312c8a835" category="sidebar">了解自动化选项</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
-  <block id="45cd4354f07a1ab359a1cc263ed79868" category="sidebar">如何访问 REST API</block>
   <block id="a02956d1e8bd45f8818a7c63426eceba" category="sidebar">输入变量</block>
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="sidebar">解释 API 响应</block>
   <block id="cfe5635d91cfb6abed08c3ae78515315" category="list-text">扩展了卷分析</block>
@@ -1513,7 +1512,6 @@
   <block id="ef3f9b4af9353a465dd6a94d006c73a7" category="sidebar">软件工具</block>
   <block id="e22a3298a5f97f4069fc3abbf0054a78" category="list-text"><block ref="e22a3298a5f97f4069fc3abbf0054a78" category="inline-link-macro-rx"></block></block>
   <block id="e6a021828131c610a8d1434615483b06" category="summary">在从ONTAPI API (ZAPI)或ONTAP命令行界面迁移到ONTAP REST API之前、您应考虑以下几个问题。</block>
-  <block id="f130aae767c73fd9684158ccdddb8f15" category="doc">迁移注意事项</block>
   <block id="b7c1ba4e54d3934ebbbfba6a29963dbe" category="paragraph">ONTAP REST API 和命令行界面的设计截然不同。CLI 命令和参数不会直接映射到 REST API 调用。即使存在相似之处，输入参数的详细信息也可能有所不同。例如，可以使用字节或后缀（例如 KB ）来指定数字单位。请参见 <block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block> 和 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 有关详细信息 ...</block>
   <block id="359aa321b2af8c1841936c471ac5028a" category="paragraph">为了帮助ONTAPI API和命令行界面用户过渡到ONTAP REST API、ONTAP提供了一个REST端点来访问ONTAP命令行界面。您可以使用此直通功能执行任何命令行界面命令。  在AutoSupport数据中返回对REST端点的使用、以便NetApp可以识别REST API中的差距、并在未来的ONTAP版本中进行改进。</block>
   <block id="74b014305892305348ed02c92ab2a761" category="paragraph">要对命令行界面命令执行问题描述、必须根据以下规则正确格式执行REST API调用：</block>
@@ -1988,4 +1986,8 @@
   <block id="b6d0a2a842f978459f1bd6e49da11974" category="doc">了解有关迁移到 ONTAP REST API 的信息</block>
   <block id="249dde32b5b3415eea7043c85ab74e06" category="admonition">对于 9.9.1 之前的 ONTAP 版本，您可以使用 CLI 直通功能自动管理 SACL 和 DACL 权限。有关详细信息，请参见 <block ref="4cdee464b402508aee95b27a583991b8" category="inline-link-macro-rx"></block>。</block>
   <block id="76372f20d2a63611bf93c8514dcab6f2" category="sidebar">了解迁移</block>
+  <block id="2bba6f8cd1f39e40fa1f0d47e2b47620" category="doc">访问 ONTAP REST API 的方法</block>
+  <block id="3c3bee5464454cc8c3e907834e3d4fda" category="doc">进行首次 ONTAP REST API 调用</block>
+  <block id="bda838b652b88a842b6842d75ef9fd57" category="sidebar">访问 REST API 的方式</block>
+  <block id="fe0515a8af283239225745febd13b5b5" category="sidebar">了解迁移</block>
 </blocks>

@@ -2,7 +2,7 @@
 section: migrate
 title: 从ONTAPI迁移到REST API
 entries:
-- title: 迁移注意事项
+- title: 了解迁移
   url: "/migrate/migration-considerations.html"
 - title: ONTAPI到REST映射
   url: "/migrate/mapping.html"
