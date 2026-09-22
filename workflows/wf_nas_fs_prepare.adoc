@@ -24,7 +24,7 @@ summary: 您可以管理ONTAP集群中通过SVM提供的文件的权限和审核
 ONTAP 使用系统访问控制列表（ SACL ）和随机访问控制列表（ DACL ）为文件对象分配权限。从ONTAP 9.9.1开始、REST API支持管理SACL和DACL权限。您可以使用API自动管理文件安全权限。在许多情况下、您可以使用单个REST API调用、而不是多个命令行界面命令或ONTAP PI (ZAPI)调用。
 
 
-NOTE: 对于 9.9.1 之前的 ONTAP 版本，您可以使用 CLI 直通功能自动管理 SACL 和 DACL 权限。有关详细信息，请参见 link:../migrate/migration-considerations.html["迁移注意事项"]。
+NOTE: 对于 9.9.1 之前的 ONTAP 版本，您可以使用 CLI 直通功能自动管理 SACL 和 DACL 权限。有关详细信息，请参见 link:../migrate/migration-considerations.html["从ONTAPI迁移到REST API"]。
 
 我们提供了几个示例工作流来说明如何使用REST API管理ONTAP文件安全服务。在使用工作流并发出任何REST API调用之前、请务必查看 link:../workflows/prepare_workflows.html["准备使用这些工作流"]。
 
