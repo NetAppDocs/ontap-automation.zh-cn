@@ -1990,4 +1990,5 @@
   <block id="3c3bee5464454cc8c3e907834e3d4fda" category="doc">进行首次 ONTAP REST API 调用</block>
   <block id="bda838b652b88a842b6842d75ef9fd57" category="sidebar">访问 REST API 的方式</block>
   <block id="fe0515a8af283239225745febd13b5b5" category="sidebar">了解迁移</block>
+  <block id="f84e398074d51e73de507e79d4754e19" category="doc">ONTAP REST API 的其他资源</block>
 </blocks>
