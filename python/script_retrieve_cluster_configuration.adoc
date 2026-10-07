@@ -4,7 +4,7 @@ permalink: python/script_retrieve_cluster_configuration.html
 keywords: Python, sample script, Python example 
 summary: 您可以在命令行界面中使用 Python 3 运行此脚本，以检索 ONTAP 集群配置。 
 ---
-= 使用Python客户端库检索集群配置的脚本
+= 使用 ONTAP Python 客户端库检索集群配置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
