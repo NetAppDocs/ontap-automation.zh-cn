@@ -1823,10 +1823,8 @@
   <block id="0d2211154e74dec09269bf1111f07b01" category="doc">ONTAPI到ONTAP REST API映射</block>
   <block id="7736cc9045eca4ab635dbdd3296019b8" category="doc">在ONTAP REST API中使用性能计数器</block>
   <block id="f96e7d2ed62f1d1dbbd27c415dfa237d" category="doc">支持ONTAP REST API的工具和软件</block>
-  <block id="426bacf234f4a8f3095a2847314d55b0" category="doc">ONTAP REST API参考</block>
   <block id="a2201ab0fd73e897fe98bd45ca71061d" category="doc">准备使用ONTAP REST API工作流</block>
   <block id="bcc9a2132297815fc027add5a436948a" category="doc">ONTAP REST API中的应用程序资源</block>
-  <block id="eec2cbc696ccc578df798a96160bf183" category="doc">ONTAP REST API中的资源类别概述</block>
   <block id="efcb5f574c1de0467f4e66c4a07add5f" category="doc">使用ONTAP REST API进行异步处理</block>
   <block id="9b2df43e4bec630fa4504501800e1b6b" category="doc">ONTAP REST API请求的输入变量</block>
   <block id="1b0bd65580a152f66ee09f993666fc14" category="doc">解释ONTAP REST API响应</block>
@@ -1991,4 +1989,6 @@
   <block id="fe0515a8af283239225745febd13b5b5" category="sidebar">了解迁移</block>
   <block id="f84e398074d51e73de507e79d4754e19" category="doc">ONTAP REST API 的其他资源</block>
   <block id="1ead7860d2e1f85551e49767e066d13c" category="doc">使用 ONTAP Python 客户端库检索集群配置</block>
+  <block id="e987836733c74672e63da5daa667b250" category="doc">访问 ONTAP REST API 文档</block>
+  <block id="d4a3578830ab7018ca26d315bfdf9496" category="doc">ONTAP REST API 中的资源类别</block>
 </blocks>
